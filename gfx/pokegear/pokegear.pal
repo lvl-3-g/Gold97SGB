@@ -1,0 +1,30 @@
+; border
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00
+; earth
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00
+; mountain
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00
+; city (boy)
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00
+; point of interest
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00
+; mountain point of interest
+	RGB 31, 31, 31
+	RGB 29, 26, 19
+	RGB 27, 20, 14
+	RGB 00, 00, 00

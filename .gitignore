@@ -1,0 +1,55 @@
+# generated
+*.tx
+*.o
+
+# precompiled python
+*.pyc
+*$py.class
+
+# no binaries
+*.exe
+
+# roms
+*.gbc
+*.gb
+
+# for any of the poor souls with save game files in their working directory
+*.sgm
+*.sav
+*.rtc
+*.sn*
+*.sa*
+*.sg1
+
+# rgbds extras
+*.map
+*.sym
+
+# compare.sh
+baserom-gold.txt
+baserom-silver.txt
+pokegold.txt
+pokesilver.txt
+
+# used_space.py
+used_space.png
+
+# for vim configuration
+# url: http://www.vim.org/scripts/script.php?script_id=441
+.lvimrc
+# swap files for vim
+.*.swp
+# swap files for gedit
+*~
+# for vscode
+.vscode
+# osx files
+.DS_STORE
+
+# compiled graphics
+*.1bpp
+*.2bpp
+*.lz
+*.gbcpal
+*.dimensions
+*.sgb.tilemap
