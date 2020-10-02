@@ -194,7 +194,7 @@ SunpointCity_MapEvents:
 	warp_event 17, 22, SUNPOINT_MART, 1
 	warp_event 33, 23, SUNPOINT_PHOTO_STUDIO, 1
 	warp_event 33, 11, ROUTE_118_SUNPOINT_GATE, 1
-	warp_event 24, 10, SKATEBOARDER_HOUSE, 1
+	warp_event 22, 10, SKATEBOARDER_HOUSE, 1
 	warp_event 26,  5, SUNPOINT_DOCKS_GATE, 3
 	warp_event 27,  5, SUNPOINT_DOCKS_GATE, 4
 	warp_event 28, 30, ROUTE_119_SUNPOINT_GATE, 1

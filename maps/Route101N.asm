@@ -115,7 +115,7 @@ SilverAtTheGateText:
 	done
 	
 FledglingHugoSeenText:
-	text "Um..."
+	text "Um…"
 	para "Are you a new"
 	line "trainer too?"
 	done

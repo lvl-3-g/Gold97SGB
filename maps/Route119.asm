@@ -368,7 +368,7 @@ Route119_MapEvents:
 	bg_event 12, 44, BGEVENT_READ, Route119CrownPathSign
 	bg_event  8, 10, BGEVENT_READ, Route119LockedDoor
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event  7, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherJustin, -1
 	object_event 10, 41, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherChris, -1
 	object_event 10, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route119Rocket1Script, EVENT_103_SLOWPOKE_SALESMAN

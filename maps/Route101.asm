@@ -151,6 +151,11 @@ DebugSign:
 ;	giveitem TM_FLASH
 ;	giveitem HM_ROCK_SMASH
 	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
 	giveitem MASTER_BALL, 99
 ;	giveitem HELIX_FOSSIL
 ;	giveitem DOME_FOSSIL
@@ -173,6 +178,11 @@ DebugSign:
 ;	giveitem ENERGY_WALL
 ;	giveitem STEEL_SHELL
 ;	giveitem POWER_WINGS
+	givepoke CRUISEAL, 5
+	givepoke HAPPA, 5
+	givepoke FARFETCH_D, 5
+	givepoke KOTORA, 5
+	givepoke WOLFAN, 5
 	jumptext DebugSignText
 	end
 

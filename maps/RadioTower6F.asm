@@ -233,9 +233,9 @@ GiovanniExitingText:
 GiovanniWinText:
 	text "No! Not again!"
 	
-	para "My plans..."
+	para "My plans…"
 	
-	para "My efforts..."
+	para "My efforts…"
 	
 	para "Was it all for"
 	line "naught!?"
@@ -261,7 +261,7 @@ GiovanniGreeting:
 	para "I know why."
 	
 	para "It is because you"
-	line "are very brave..."
+	line "are very brave…"
 	para "Or very foolish."
 	
 	para "I am the leader of"
@@ -270,7 +270,7 @@ GiovanniGreeting:
 	para "I have endured"
 	line "much to restore"
 	cont "my organization to"
-	cont "it's former glory."
+	cont "its former glory."
 	
 	para "And you, remind me"
 	line "of another certain"

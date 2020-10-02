@@ -36,29 +36,29 @@ SwarmGrassWildMons:
 
 	IF DEF(_GOLD)
 	; morn
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
+	db 18, PARAS
+	db 18, EEVEE
+	db 16, HOPPIP
+	db 18, EEVEE
+	db 18, EEVEE
+	db 16, PIKACHU
+	db 18, EEVEE
 	; day
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
+	db 18, PARAS
+	db 18, EEVEE
+	db 16, HOPPIP
+	db 18, EEVEE
+	db 18, EEVEE
+	db 16, PIKACHU
+	db 18, EEVEE
 	; nite
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
-	db 15, EEVEE
-	db 14, EEVEE
-	db 15, EEVEE
+	db 18, PARAS
+	db 18, EEVEE
+	db 16, HOPPIP
+	db 18, EEVEE
+	db 18, EEVEE
+	db 16, PIKACHU
+	db 18, EEVEE
 
 	ELIF DEF(_SILVER)
 	; morn

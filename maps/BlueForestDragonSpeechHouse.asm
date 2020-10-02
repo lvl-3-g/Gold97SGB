@@ -59,5 +59,5 @@ BlueForestDragonSpeechHouse_MapEvents:
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  2,  3, SPRITE_BLAINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlueForestDragonSpeechHouseGrannyScript, -1
+	object_event  2,  3, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BlueForestDragonSpeechHouseGrannyScript, -1
 	object_event  5,  5, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BlueForestDragonSpeechHouseDratiniScript, -1

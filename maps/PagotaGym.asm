@@ -96,7 +96,7 @@ FalknerRematchText:
 	para "here at the"
 	line "PAGOTA GYM."
 	
-	para "Lets see if you"
+	para "Let's see if you"
 	line "can still beat"
 	cont "me!"
 	done
