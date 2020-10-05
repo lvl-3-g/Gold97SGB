@@ -173,7 +173,7 @@ TatsugoPath_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 3 ; bg events
 	bg_event 21,  7, BGEVENT_READ, HeartPondSign
 	bg_event 52, 10, BGEVENT_READ, KikaiStraitSign
 	bg_event  4, 15, BGEVENT_ITEM, TatsugoPathHiddenPPUP

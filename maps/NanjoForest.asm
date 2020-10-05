@@ -49,11 +49,16 @@ WisdomOrbYoungsterScript:
 	writetext HeresWisdomOrbText
 	waitbutton
 	verbosegiveitem WISDOM_ORB
+	iffalse .NoOrbFull
 	writetext WhatDoesWisdomOrbDoText
 	waitbutton
 	closetext
 	setevent EVENT_EXPLODING_TRAP_12
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
+	end
+	
+.NoOrbFull
+	closetext
 	end
 	
 .SetUpWisdomOrb
