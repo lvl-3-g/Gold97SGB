@@ -308,24 +308,24 @@ SWIslandsGrassWildMons:
 	db 45, PIDGEOTTO
 	db 48, PIDGEOT
 	db 44, JUMPLUFF
-	db 46, BELLOSSOM
-	db 48, BELLOSSOM
+	db 46, GLOOM
+	db 48, GLOOM
 	; day
 	db 44, SKIPLOOM
 	db 45, FEAROW
 	db 45, PIDGEOTTO
 	db 48, PIDGEOT
 	db 44, JUMPLUFF
-	db 46, BELLOSSOM
-	db 48, BELLOSSOM
+	db 46, GLOOM
+	db 48, GLOOM
 	; nite
 	db 44, GLOOM
 	db 45, MURKROW
 	db 45, GOLBAT
 	db 48, NOCTOWL
 	db 44, POLIWHIRL
-	db 46, VILEPLUME
-	db 48, VILEPLUME
+	db 46, WEEPINBELL
+	db 48, WEEPINBELL
 
 	map_id KIKAI_CALDERA_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

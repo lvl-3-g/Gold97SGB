@@ -68,6 +68,10 @@ IejimaTown_MapScripts:
 	return
 	
 IejimaTownPokecenterSign:
+;	setevent EVENT_IEJIMA_TOWN_NOT_FIXED
+;	clearevent EVENT_IEJIMA_TOWN_FIXED
+;	clearevent EVENT_DAM_IS_OPEN
+;	setevent EVENT_IEJIMA_TOWN_TRI_WING; COME_BACK2
 	jumpstd PokecenterSignScript
 	
 IejimaTownGrampsBefore:

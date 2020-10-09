@@ -70,17 +70,18 @@ MountFujiPokecenter1FCooltrainerMText:
 MountFujiPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  5, 13, FUJI_SUMMIT, 1
-	warp_event  6, 13, FUJI_SUMMIT, 2
+	db 5 ; warp events
+	warp_event  8, 13, FUJI_SUMMIT, 1
+	warp_event  9, 13, FUJI_SUMMIT, 2
 	warp_event  0, 13, POKECENTER_2F, 1
-	warp_event 14,  3, WILLS_ROOM, 1
+	warp_event  8,  0, WILLS_ROOM, 1
+	warp_event  9,  0, WILLS_ROOM, 4
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  3,  7, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FNurseScript, -1
-	object_event 11,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FClerkScript, -1
-	object_event 11, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FCooltrainerMScript, -1
+	object_event  3,  9, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FNurseScript, -1
+	object_event 14,  9, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FClerkScript, -1
+	object_event 16, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FCooltrainerMScript, -1

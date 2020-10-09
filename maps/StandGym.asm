@@ -196,13 +196,13 @@ LightSwitch:
 	iffalse .no
 	closetext
 	special FadeOutPalettes
-	changeblock   23,  31, $3D ; water
-	changeblock   21,  31, $3D ; water
+	changeblock   23,  31, $3D ; floor
+	changeblock   21,  31, $3D ; floor
 	reloadmappart
 	special FadeInPalettes
 	special FadeOutPalettes
-	changeblock   23,  31, $39 ; water
-	changeblock   21,  31, $39 ; water
+	changeblock   23,  31, $39 ; floor
+	changeblock   21,  31, $39 ; floor
 	reloadmappart
 	special FadeInPalettes
 	opentext
@@ -221,19 +221,19 @@ LightSwitch2:
 	iffalse .no
 	closetext
 	special FadeOutPalettes
-	changeblock   19,  27, $3F ; water
-	changeblock   25,  23, $3D ; water
-	changeblock   27,  23, $19 ; water
-	changeblock   27,  21, $19 ; water
-	changeblock   27,  19, $19 ; water
+	changeblock   19,  27, $3F ; floor
+	changeblock   25,  23, $3D ; floor
+	changeblock   27,  23, $19 ; floor
+	changeblock   27,  21, $19 ; floor
+	changeblock   27,  19, $19 ; floor
 	reloadmappart
 	special FadeInPalettes
 	special FadeOutPalettes
-	changeblock   19,  27, $3B ; water
-	changeblock   25,  23, $39 ; water
-	changeblock   27,  23, $10 ; water
-	changeblock   27,  21, $10 ; water
-	changeblock   27,  19, $10 ; water
+	changeblock   19,  27, $3B ; floor
+	changeblock   25,  23, $39 ; floor
+	changeblock   27,  23, $10 ; floor
+	changeblock   27,  21, $10 ; floor
+	changeblock   27,  19, $10 ; floor
 	reloadmappart
 	special FadeInPalettes
 	opentext
@@ -252,11 +252,11 @@ LightSwitch3:
 	iffalse .no
 	closetext
 	special FadeOutPalettes
-	changeblock   21,  13, $19 ; water
+	changeblock   21,  13, $19 ; floor
 	reloadmappart
 	special FadeInPalettes
 	special FadeOutPalettes
-	changeblock   21,  13, $10 ; water
+	changeblock   21,  13, $10 ; floor
 	reloadmappart
 	special FadeInPalettes
 	opentext
@@ -275,17 +275,17 @@ LightSwitch4:
 	iffalse .no
 	closetext
 	special FadeOutPalettes
-	changeblock   7,  13, $3F ; water
-	changeblock   7,  11, $3F ; water
-	changeblock   7,   9, $3F ; water
-	changeblock  13,  15, $3D ; water
+	changeblock   7,  13, $3F ; floor
+	changeblock   7,  11, $3F ; floor
+	changeblock   7,   9, $3F ; floor
+	changeblock  13,  15, $3D ; floor
 	reloadmappart
 	special FadeInPalettes
 	special FadeOutPalettes
-	changeblock   7,  13, $3B ; water
-	changeblock   7,  11, $3B ; water
-	changeblock   7,   9, $3B ; water
-	changeblock  13,  15, $39 ; water
+	changeblock   7,  13, $3B ; floor
+	changeblock   7,  11, $3B ; floor
+	changeblock   7,   9, $3B ; floor
+	changeblock  13,  15, $39 ; floor
 	reloadmappart
 	special FadeInPalettes
 	opentext
@@ -304,15 +304,15 @@ LightSwitch5:
 	iffalse .no
 	closetext
 	special FadeOutPalettes
-	changeblock    3,  7, $3F ; water
-	changeblock    3,  9, $3F ; water
-	changeblock    7,  9, $3F ; water
+	changeblock    3,  7, $3F ; floor
+	changeblock    3,  9, $3F ; floor
+	changeblock    7,  9, $3F ; floor
 	reloadmappart
 	special FadeInPalettes
 	special FadeOutPalettes
-	changeblock    3,  7, $3B ; water
-	changeblock    3,  9, $3B ; water
-	changeblock    7,  9, $3B ; water
+	changeblock    3,  7, $3B ; floor
+	changeblock    3,  9, $3B ; floor
+	changeblock    7,  9, $3B ; floor
 	reloadmappart
 	special FadeInPalettes
 	opentext

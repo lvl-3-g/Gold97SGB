@@ -217,6 +217,7 @@ CHRIS EQU __enum__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const LIAM
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -495,6 +496,7 @@ CHRIS EQU __enum__
 	const RAFAEL
 	const COLTON
 	const JERMAINE
+	const SWANSON
 
 	trainerclass BLAINE ; 2e
 	const BLAINE1
