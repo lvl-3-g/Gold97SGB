@@ -328,7 +328,7 @@ NationalPark_MapEvents:
 	bg_event  8, 48, BGEVENT_READ, NationalParkRelaxationSquareSign
 	bg_event 12, 24, BGEVENT_READ, NationalParkBattleNoticeSign
 	bg_event 24, 53, BGEVENT_ITEM, NationalParkHiddenFullHeal
-	bg_event 26, 38, BGEVENT_READ, NationalParkTrainerTipsSign
+	bg_event 34, 38, BGEVENT_READ, NationalParkTrainerTipsSign
 
 	db 12 ; object events
 	object_event 14, 33, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NationalParkLassScript, -1

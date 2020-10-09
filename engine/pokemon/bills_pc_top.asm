@@ -83,7 +83,7 @@ _BillsPC:
 	db "WITHDRAW <PK><MN>@"
 	db "DEPOSIT <PK><MN>@"
 	db "CHANGE BOX@"
-	db "MOVE <PK><MN> W/O MAIL@"
+	db "MOVE <PK><MN>@"
 	db "SEE YA!@"
 
 .Jumptable:

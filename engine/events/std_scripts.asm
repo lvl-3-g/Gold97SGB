@@ -802,7 +802,8 @@ HappinessCheckScript:
 	end
 
 Movement_ContestResults_WalkAfterWarp:
+	step UP
+	step UP
 	step RIGHT
-	step DOWN
 	turn_head UP
 	step_end

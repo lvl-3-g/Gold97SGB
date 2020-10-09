@@ -213,9 +213,10 @@ NationalParkBugContestBattleNoticeText:
 NationalParkBugContestTrainerTipsText:
 	text "TRAINER TIPS"
 
-	para "Print out MAIL by"
-	line "opening it then"
-	cont "pressing START."
+	para "Different #MON"
+	line "appear during"
+	para "different times of"
+	line "the day."
 	done
 
 NationalParkBugContest_MapEvents:
@@ -233,7 +234,7 @@ NationalParkBugContest_MapEvents:
 	bg_event  8, 48, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
 	bg_event 12, 24, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
 	bg_event 24, 53, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
-	bg_event 26, 38, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
+	bg_event 34, 38, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
 
 	db 12 ; object events
 	object_event 16, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant1AScript, EVENT_BUG_CATCHING_CONTESTANT_1A
