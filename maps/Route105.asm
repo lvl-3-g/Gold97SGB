@@ -37,23 +37,11 @@ Route105CooltrainerFScript:
 Route105Sign:
 	jumptext Route105SignText
 
-MrPokemonsHouseDirectionsSign:
-	jumptext MrPokemonsHouseDirectionsSignText
-
-MrPokemonsHouseSign:
-	jumptext MrPokemonsHouseSignText
-
-Route105TrainerTips:
-	jumptext Route105TrainerTipsText
 
 Route105Antidote:
 	itemball ANTIDOTE
 
-Route105FruitTree1:
-	fruittree FRUITTREE_ROUTE_105_1
 
-Route105FruitTree2:
-	fruittree FRUITTREE_ROUTE_105_2
 
 Route105HiddenPotion:
 	hiddenitem POTION, EVENT_ROUTE_105_HIDDEN_POTION
@@ -114,26 +102,6 @@ Route105SignText:
 	line "just up ahead!"
 	done
 
-MrPokemonsHouseDirectionsSignText:
-	text "MR.#MON'S HOUSE"
-	line "STRAIGHT AHEAD!"
-	done
-
-MrPokemonsHouseSignText:
-	text "MR.#MON'S HOUSE"
-	done
-
-Route105TrainerTipsText:
-	text "TRAINER TIPS"
-
-	para "No stealing other"
-	line "people's #MON!"
-
-	para "# BALLS are to"
-	line "be thrown only at"
-	cont "wild #MON!"
-	done
-
 
 
 Route105_MapEvents:
@@ -145,17 +113,12 @@ Route105_MapEvents:
 
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 2 ; bg events
 	bg_event  6, 28, BGEVENT_READ, Route105Sign
-	bg_event 13, 21, BGEVENT_READ, MrPokemonsHouseDirectionsSign
-	bg_event 12, 21, BGEVENT_READ, MrPokemonsHouseSign
-	bg_event 11, 21, BGEVENT_READ, Route105TrainerTips
 	bg_event 13, 30, BGEVENT_ITEM, Route105HiddenPotion
 
 	db 4 ; object events
 	object_event  8, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterMikey, -1
 	object_event  7, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route105YoungsterScript, -1
-	;object_event 14,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree1, -1
-	;object_event 12,  2, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree2, -1
 	object_event 10,  6, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105CooltrainerFScript, -1
 	object_event 14,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route105Antidote, EVENT_ROUTE_105_ANTIDOTE

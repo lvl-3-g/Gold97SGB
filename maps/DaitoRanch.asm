@@ -71,33 +71,31 @@ AppleOrchardSignText:
 	done
 
 Appletree1:
-;	fruittree FRUITTREE_STAND_CITY
 	fruittree FRUITTREE_ORCHARD1
 	
 Appletree2:
-;	fruittree FRUITTREE_STAND_CITY
 	fruittree FRUITTREE_ORCHARD2
 	
 Appletree3:
-;	fruittree FRUITTREE_STAND_CITY
 	fruittree FRUITTREE_ORCHARD3
 	
 Appletree4:
-;	fruittree FRUITTREE_STAND_CITY
-	fruittree FRUITTREE_ORCHARD4
+	fruittree FRUITTREE_ORCHARD4; not used because doesn't respawn?
 	
 Appletree5:
-;	fruittree FRUITTREE_STAND_CITY
-	fruittree FRUITTREE_ORCHARD5
+	fruittree FRUITTREE_ORCHARD5; not used because doesn't respawn?
 	
 Appletree6:
-;	fruittree FRUITTREE_STAND_CITY
 	fruittree FRUITTREE_ORCHARD6
 	
 Appletree7:
-;	fruittree FRUITTREE_STAND_CITY
 	fruittree FRUITTREE_ORCHARD7
 
+Route105FruitTree1:
+	fruittree FRUITTREE_ROUTE_105_1
+
+Route105FruitTree2:
+	fruittree FRUITTREE_ROUTE_105_2
 
 
 DaitoRanchMiltankText:
@@ -244,7 +242,7 @@ DaitoRanch_MapEvents:
 	object_event 14,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree1, -1
 	object_event 15, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree2, -1
 	object_event 16,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree3, -1
-	object_event 17, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree4, -1
-	object_event 18,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree5, -1
+	object_event 18,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree1, -1
+	object_event 17, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route105FruitTree2, -1
 	object_event 19, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree6, -1
 	object_event 20,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Appletree7, -1

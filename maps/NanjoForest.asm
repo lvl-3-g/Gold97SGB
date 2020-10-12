@@ -6,6 +6,8 @@
 	const NANJO_FOREST_ITEMBALL_2
 	const NANJO_FOREST_ITEMBALL_3
 	const NANJO_FOREST_ITEMBALL_4
+	const NANJO_FOREST_TREE_1
+	const NANJO_FOREST_TREE_2
 
 NanjoForest_MapScripts:
 	db 0 ; scene scripts
@@ -87,6 +89,12 @@ WisdomOrbBugCatcherScript:
 	closetext
 	turnobject NANJO_FOREST_BUG_CATCHER, RIGHT
 	end
+	
+NanjoFruitTree1:
+	fruittree FRUITTREE_KIKAI_STRAIT
+	
+NanjoFruitTree2:
+	fruittree FRUITTREE_TROPICAL_ISLAND_JUNGLE
 	
 NanjoForestSilverScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
@@ -283,7 +291,7 @@ NanjoForest_MapEvents:
 	bg_event 29, 21, BGEVENT_READ, NanjoForestSign
 	bg_event 37,  7, BGEVENT_READ, NanjoForestSign2
 
-	db 7 ; object events
+	db 9 ; object events
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WisdomOrbYoungsterScript, -1
 	object_event 23,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WisdomOrbBugCatcherScript, -1
 	object_event  6,  8, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_EXPLODING_TRAP_15
@@ -291,3 +299,5 @@ NanjoForest_MapEvents:
 	object_event 12,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
 	object_event  8, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
 	object_event 16, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullRestore, EVENT_PICKED_UP_ENERGYPOWDER_FROM_KABUTO_ITEM_ROOM
+	object_event 27, 28, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree1, -1
+	object_event 10, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree1, -1

@@ -4,6 +4,7 @@
 	const ROUTE113_POKEFAN_M
 	const ROUTE113_POKE_BALL
 	const ROUTE113_OFFICER2
+	const ROUTE113_TREE
 
 Route113_MapScripts:
 	db 0 ; scene scripts
@@ -32,6 +33,9 @@ SoldierGeraldScript:
 	waitbutton
 	closetext
 	end
+
+Route113Tree:
+	fruittree FRUITTREE_GREAT_EAST_STRAIT_2
 
 
 OfficerKeithScript:
@@ -229,12 +233,10 @@ Route113_MapEvents:
 	bg_event  3, 39, BGEVENT_ITEM, Route113HiddenRareCandy
 	bg_event 17, 19, BGEVENT_ITEM, Route113HiddenSuperPotion
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 13, 22, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperTodd1, -1
 	object_event  6,  6, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerKeithScript, -1
 	object_event 14, 47, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerPokefanmBrandon, -1
-;	object_event 17, 48, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerCooltrainerfIrene, -1
-;	object_event 18, 42, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJenn, -1
-;	object_event 14, 46, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKate, -1
 	object_event 19, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route113Nugget, EVENT_ROUTE_113_NUGGET
 	object_event 17, 44, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, SoldierGeraldScript, -1
+	object_event 12, 13, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route113Tree, -1

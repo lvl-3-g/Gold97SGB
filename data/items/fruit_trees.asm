@@ -1,10 +1,10 @@
 FruitTreeItems:
 ; entries correspond to FRUITTREE_* constants
 	db BERRY        ; ROUTE_101
-	db BERRY        ; ROUTE_105_1
+	db APPLE        ; ROUTE_105_1
 	db BERRY        ; ROUTE_108
 	db BERRY        ; GREAT_EAST_STRAIT_1
-	db PSNCUREBERRY ; ROUTE_105_2
+	db APPLE ; ROUTE_105_2
 	db PSNCUREBERRY ; ROUTE_104
 	db BITTER_BERRY ; ROUTE_106
 	db BITTER_BERRY ; BOARDWALK

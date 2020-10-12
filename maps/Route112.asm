@@ -9,6 +9,7 @@
 	const ROUTE112_WORKER1
 	const ROUTE112_WORKER2
 	const ROUTE112_LASS
+	const ROUTE112_TREE
 
 Route112_MapScripts:
 	db 3 ; scene scripts
@@ -272,6 +273,9 @@ FriedaScript:
 Route112GreatBall:
 	itemball GREAT_BALL
 
+Route112Tree:
+	fruittree FRUITTREE_BOARDWALK
+
 Route112Repel:
 	itemball REPEL
 
@@ -487,7 +491,7 @@ Route112_MapEvents:
 	bg_event 15, 48, BGEVENT_ITEM, Route112HiddenGreatBall
 	bg_event 14,  4, BGEVENT_ITEM, Route112HiddenSuperPotion
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 10, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterGordon, -1
 	object_event  8, 41, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperRoland, -1
 	object_event  6, 30, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
@@ -498,3 +502,4 @@ Route112_MapEvents:
 	object_event 11, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker1Script, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
 	object_event 13, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker2Script, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
 	object_event  4,  9, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerGina1, -1
+	object_event  4, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route112Tree, -1

@@ -1108,7 +1108,7 @@ Copyright:
 	ld hl, vTiles2 tile $60
 	lb bc, BANK(CopyrightGFX), 30
 	call Request2bpp
-	hlcoord 2, 7
+	hlcoord 0, 7
 	ld de, CopyrightString
 	jp PlaceString
 
