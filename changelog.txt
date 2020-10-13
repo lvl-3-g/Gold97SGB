@@ -1,0 +1,37 @@
+Changelog
+
+1.00
+- Initial release
+
+1.01
+- Changed color of Pokegear to match map design from beta
+
+1.02
+- fixed Rocket NPC to block National Park entrance
+- fixed encounter rates during Eevee swarm
+
+1.03
+- Fixed issue where NPC in Nanjo forest wouldn't give you Wisdom Orb if your bag was full
+- Fixed issue that caused NPCs to not appear on Tatsugo Path
+
+1.04
+- Updated League pokecenter design
+- Fixed dialoge in Prince City trainer house to match Elite Four trainer types
+- New NPCs on motobu path
+- Extended cutscene in Hydro Plant
+
+1.05
+- removed Mail options from PC (mail is not in game)
+- fixed some bugs related to bug catching contest
+
+1.06
+- Added more fruit trees
+- Adjusted copyright intro positioning
+- Adjusted mountain tile corners to be more consistent across tilesets
+- changed fruit tree sprite to match older version
+- adjusted final rival battle in Nanjo forest
+- fixed collision issue in Teknos gym
+
+1.07
+- Adjusted NPC trainer rosters so more pokemon will be seen for pokedex if all trainers are battled
+- Slight adjustments to Blue Forest and Nihon tilesets

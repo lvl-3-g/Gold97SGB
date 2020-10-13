@@ -830,6 +830,7 @@ LassGroup:
 	db "KRISE@", TRAINERTYPE_NORMAL
 	db 31, WEEPINBELL
 	db 32, BIPETAL
+	db 32, VICTREEBEL
 	db -1 ; end
 
 	; LASS (5)
@@ -848,6 +849,7 @@ LassGroup:
 	db 43, BIPETAL
 	db 46, PIDGEOT
 	db 48, BELLOSSOM
+	db 47, VILEPLUME
 	db -1 ; end
 
 	; LASS (8)
@@ -946,6 +948,7 @@ CooltrainerMGroup:
 	db "CODY@", TRAINERTYPE_NORMAL; used, victory road 1f
 	db 42, ANCHORAGE
 	db 40, SCIZOR
+	db 40, CHANSEY
 	db 40, BLISSEY
 	db -1 ; end
 
@@ -1520,7 +1523,7 @@ GruntMGroup:
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
 	db 31, PLUCKROSS
 	db 32, TURBAN
-	db 34, GOLBAT
+	db 34, PERSIAN
 	db -1 ; end
 
 	; GRUNTM (22)
@@ -1690,7 +1693,8 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (7)
 	db "JOSH@", TRAINERTYPE_NORMAL ;used, birdon gym
-	db 14, SCYTHER
+	db 13, SCYTHER
+	db 13, PINSIR
 	db -1 ; end
 
 	; BUG_CATCHER (8)
@@ -3436,7 +3440,7 @@ BoarderGroup:
 	db "DOUGLAS@", TRAINERTYPE_NORMAL ; used, blue forest gym
 	db 26, SHELLDER
 	db 27, CLOYSTER
-	db 26, SHELLDER
+	db 26, SNEASEL
 	db -1 ; end
 
 PokefanMGroup:
