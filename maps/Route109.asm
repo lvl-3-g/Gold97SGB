@@ -5,12 +5,24 @@
 	const ROUTE109_PSYCHIC_NORMAN
 	const ROUTE109_FRUIT_TREE
 	const ROUTE109_POKEFAN_F2
+	const ROUTE109_BUGCATCHER
 
 Route109_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
+
+TrainerBugCatcherEd:
+	trainer BUG_CATCHER, ED, EVENT_BEAT_BUG_CATCHER_ED, BugCatcherEdSeenText, BugCatcherEdBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherEdAfterBattleText
+	waitbutton
+	closetext
+	end
 
 TrainerPokefanfRuth:
 	trainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanfRuthSeenText, PokefanfRuthBeatenText, 0, .Script
@@ -95,10 +107,24 @@ Route109FruitTree:
 
 Route109HiddenNugget:
 	hiddenitem NUGGET, EVENT_ROUTE_109_HIDDEN_NUGGET
+	
 
-Route109ChixText:
-	text "CHIX: Mooo!"
+BugCatcherEdSeenText:
+	text "You use any bug"
+	line "#MON?"
 	done
+
+BugCatcherEdBeatenText:
+	text "Bugs are all I"
+	line "use!"
+	done
+
+BugCatcherEdAfterBattleText:
+	text "Every trainer"
+	line "should have some"
+	cont "bug #MON!"
+	done
+
 
 PokefanmDerekSeenText:
 	text "This is a good"
@@ -272,10 +298,11 @@ Route109_MapEvents:
 	bg_event  1, 79, BGEVENT_READ, Route109Sign
 	bg_event  4, 35, BGEVENT_ITEM, Route109HiddenNugget
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event  4, 63, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyValerie, -1
 ;	object_event  9, 52, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerPokefanmDerek, -1
 	object_event 14, 36, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerPokefanfRuth, -1
 	object_event  5, 31, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPsychicNorman, -1
 	object_event 10, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route109FruitTree, -1
 	object_event  4, 49, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerPokefanfJaime, -1
+	object_event  9, 84, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherEd, -1

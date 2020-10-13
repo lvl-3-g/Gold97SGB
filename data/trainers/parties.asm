@@ -1660,16 +1660,16 @@ BugCatcherGroup:
 	db -1 ; end
 
 	; BUG_CATCHER (2)
-	db "ROB@", TRAINERTYPE_NORMAL ;unused
-	db 38, BEEDRILL
-	db 38, BUTTERFREE
+	db "ROB@", TRAINERTYPE_NORMAL ;used, route 106
+	db 23, PINSIR
+	db 24, LEDIAN
 	db -1 ; end
 
 	; BUG_CATCHER (3)
-	db "ED@", TRAINERTYPE_NORMAL ;unused
-	db 36, BEEDRILL
-	db 36, BEEDRILL
-	db 36, BEEDRILL
+	db "ED@", TRAINERTYPE_NORMAL ;used, route 109
+	db 26, BEEDRILL
+	db 25, BUTTERFREE
+	db 27, SCYTHER
 	db -1 ; end
 
 	; BUG_CATCHER (4)
@@ -1950,20 +1950,20 @@ SwimmerMGroup:
 	db -1 ; end
 
 	; SWIMMERM (4)
-	db "CHARLIE@", TRAINERTYPE_NORMAL;unused, in sailorhuey
+	db "CHARLIE@", TRAINERTYPE_NORMAL;used, route 107
 	db 25, SHELLDER
-	db 22, TENTACOOL
-	db 22, TENTACRUEL
+	db 24, TENTACOOL
+	db 26, TENTACRUEL
 	db -1 ; end
 
 	; SWIMMERM (5)
-	db "GEORGE@", TRAINERTYPE_NORMAL;unused, in sailorhuey
-	db 19, TENTACOOL
-	db 20, TENTACOOL
-	db 19, TENTACOOL
-	db 22, STARYU
-	db 20, TENTACOOL
-	db 22, REMORAID
+	db "GEORGE@", TRAINERTYPE_NORMAL;used, route 107
+	db 35, TENTACRUEL
+	db 33, TENTACOOL
+	db 37, REMORAID
+	db 35, STARYU
+	db 35, QWILFISH
+	db 38, OCTILLERY
 	db -1 ; end
 
 	; SWIMMERM (6)
@@ -3756,8 +3756,10 @@ EngineerGroup:; use super nerd sprite
 	db -1 ; end
 	
 	; ENGINEER (4)
-	db "MARKSON@", TRAINERTYPE_NORMAL ;unused
-	db 20, GROWLITHE
+	db "MARKSON@", TRAINERTYPE_MOVES ;unused
+	db 20, PICHU,	THUNDERSHOCK, CHARM, SWEET_KISS, THUNDER_WAVE
+	db 20, PIKACHU,	THUNDERSHOCK, QUICK_ATTACK, DOUBLE_TEAM, THUNDER_WAVE
+	db 22, MAGNEMITE, THUNDERSHOCK, SUPERSONIC, TACKLE, SONICBOOM
 	db -1 ; end
 
 SportsmanGroup:; use cooltrainer m sprite

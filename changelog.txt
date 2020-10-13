@@ -35,3 +35,7 @@ Changelog
 1.07
 - Adjusted NPC trainer rosters so more pokemon will be seen for pokedex if all trainers are battled
 - Slight adjustments to Blue Forest and Nihon tilesets
+
+1.08
+- added new NPC to Alloy City
+- added new trainers to routes 106, 107, 109, 117

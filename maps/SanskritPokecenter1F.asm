@@ -13,7 +13,20 @@ SanskritPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 SanskritPokecenter1FPokefanMScript:
-	jumptextfaceplayer SanskritPokecenter1FPokefanMText
+	faceplayer
+	opentext
+	checkevent EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	iffalse .SanskritPokecenterRocketsInTown
+	writetext SanskritPokecenter1FPokefanMText
+	waitbutton
+	closetext
+	end
+	
+.SanskritPokecenterRocketsInTown
+	writetext SanskritPokecenter1FPokefanMText2
+	waitbutton
+	closetext
+	end
 
 SanskritPokecenter1FYoungsterScript:
 	jumptextfaceplayer SanskritPokecenter1FYoungsterText
@@ -22,6 +35,13 @@ SanskritPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer SanskritPokecenter1FCooltrainerFText
 
 SanskritPokecenter1FPokefanMText:
+	text "Good riddance to"
+	line "TEAM ROCKET!"
+	para "They have no place"
+	line "in our town!"
+	done
+	
+SanskritPokecenter1FPokefanMText2:
 	text "What's this? TEAM"
 	line "ROCKET has come"
 	cont "back?"

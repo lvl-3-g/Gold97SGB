@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	;const ROUTE106_FISHER
 	const ROUTE106_YOUNGSTER
-;	const ROUTE106_BUG_CATCHER
+	const ROUTE106_BUG_CATCHER
 	const ROUTE106_COOLTRAINER_M
 	const ROUTE106_FRUIT_TREE
 	const ROUTE106_POKE_BALL1
@@ -183,6 +183,17 @@ TrainerFledglingPaulson:
 	end
 
 
+TrainerBugCatcherRob:
+	trainer BUG_CATCHER, ROB, EVENT_BEAT_BUG_CATCHER_ROB, BugCatcherRobSeenText, BugCatcherRobBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherRobAfterBattleText
+	waitbutton
+	closetext
+	end
+
 Route106YoungsterScript:
 	jumptextfaceplayer Route106YoungsterText
 
@@ -223,6 +234,22 @@ Route113MovementData_DayCareManWalksBackInside_WalkAroundPlayer:
 	slow_step UP
 	slow_step UP
 	step_end
+	
+BugCatcherRobSeenText:
+	text "Did you see any"
+	line "cool bugs in the"
+	cont "FOREST?"
+	done
+	
+BugCatcherRobBeatenText:
+	text "My bugs are down!"
+	done
+	
+BugCatcherRobAfterBattleText:
+	text "That was a trick"
+	line "question."
+	para "All bugs are cool."
+	done
 
 
 SchoolboyChad1SeenText:
@@ -381,10 +408,10 @@ Route106_MapEvents:
 	bg_event 12, 12, BGEVENT_READ, JadeSign
 	bg_event 10, 10, BGEVENT_READ, Route106PokecenterSign
 
-	db 10 ; object events
+	db 11 ; object events
 	;object_event 52, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route106MailRecipientScript, -1
 	object_event  7, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route106YoungsterScript, -1
-;	object_event 24,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherWade1, -1
+	object_event 24,  5, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherRob, -1
 	object_event 42, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route106CooltrainerMScript, -1
 	object_event  4, 11, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route106FruitTree, -1
 	object_event 11,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route106Potion, EVENT_ROUTE_106_POTION

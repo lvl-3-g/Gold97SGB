@@ -3,6 +3,7 @@
 	const ALLOYCITY_STANDING_YOUNGSTER
 	const ALLOYCITY_SAILOR2
 	const ALLOYCITY_ALLOY_RIVAL
+	const ALLOYCITY_GRAMPS
 
 AlloyCity_MapScripts:
 	db 2 ; scene scripts
@@ -95,6 +96,9 @@ AlloyCityStandingYoungsterScript:
 	closetext
 	end
 
+AlloyCityGrampsScript:
+	jumptextfaceplayer AlloyCityGrampsText
+
 AlloyCitySailor2Script:
 	jumptextfaceplayer AlloyCitySailor2Text
 
@@ -159,6 +163,18 @@ MovementData_0x1a88f7:
 	step UP
 	turn_head DOWN
 	step_end
+
+AlloyCityGrampsText:
+	text "Ohohoho!"
+	para "You ever battle"
+	line "with the steel"
+	cont "type?"
+	para "They have high"
+	line "defenses!"
+	para "Know this if you"
+	line "plan to take on"
+	cont "JASMINE!"
+	done
 
 AlloyCityRivalText:
 	text "<PLAYER>!"
@@ -272,8 +288,9 @@ AlloyCity_MapEvents:
 	bg_event  8,  8, BGEVENT_READ, AlloyCityPokecenterSign
 	bg_event  8, 14, BGEVENT_READ, AlloyCityMartSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 10, 31, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCitySailor1Script, -1
 	object_event 24,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AlloyCityStandingYoungsterScript, -1
 	object_event 26, 25, SPRITE_ALLOY_RIVAL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCitySailor2Script, -1
 	object_event  7,  8, SPRITE_ALLOY_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_ALLOY_CITY
+	object_event  8, 17, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyCityGrampsScript, -1

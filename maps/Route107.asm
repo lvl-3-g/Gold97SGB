@@ -1,6 +1,8 @@
 	object_const_def ; object_event constants
 	const ROUTE107_SWIMMER_GIRL
 	const ROUTE107_SWIMMER_GUY
+	const ROUTE107_SWIMMER_GUY2
+	const ROUTE107_SWIMMER_GUY3
 	const ROUTE107_FISHER
 
 Route107_MapScripts:
@@ -18,6 +20,19 @@ TrainerSwimmermSeth:
 	waitbutton
 	closetext
 	end
+	
+
+TrainerSwimmermCharlie:
+	trainer SWIMMERM, CHARLIE, EVENT_BEAT_SWIMMERM_CHARLIE, SwimmermCharlieSeenText, SwimmermCharlieBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermCharlieAfterBattleText
+	waitbutton
+	closetext
+	end
+
 
 TrainerSwimmerfNikki:
 	trainer SWIMMERF, NIKKI, EVENT_BEAT_SWIMMERF_NIKKI, SwimmerfNikkiSeenText, SwimmerfNikkiBeatenText, 0, .Script
@@ -40,6 +55,34 @@ TrainerFisherArnold:
 	waitbutton
 	closetext
 	end
+	
+	
+TrainerSwimmermGeorge:
+	trainer SWIMMERM, GEORGE, EVENT_BEAT_SWIMMERM_GEORGE, SwimmermGeorgeSeenText, SwimmermGeorgeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermGeorgeAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+SwimmermGeorgeSeenText:
+	text "Go! My all-star"
+	line "water team!"
+	done
+
+SwimmermGeorgeBeatenText:
+	text "The stars have"
+	line "fallen!"
+	done
+
+SwimmermGeorgeAfterBattleText:
+	text "Your team is"
+	line "clearly an all-"
+	cont "star ensemble!"
+	done
 
 SwimmermSethSeenText:
 	text "Land ho! Gotta"
@@ -55,6 +98,21 @@ SwimmermSethAfterBattleText:
 	line "to train with the"
 	para "DRAGON MASTER in"
 	line "KOBAN ISLAND."
+	done
+	
+SwimmermCharlieSeenText:
+	text "Are you not"
+	line "strong enough to"
+	cont "swim on your own?"
+	done
+
+SwimmermCharlieBeatenText:
+	text "I was wrong!"
+	done
+
+SwimmermCharlieAfterBattleText:
+	text "Your #MON are"
+	line "definitely strong!"
 	done
 
 SwimmerfNikkiSeenText:
@@ -99,7 +157,9 @@ Route107_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 6 ; object events
 	object_event 11, 34, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfNikki, -1
 	object_event  8, 40, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermSeth, -1
+	object_event  4, 29, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermCharlie, -1
+	object_event 12,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermGeorge, -1
 	object_event 12, 28, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherArnold, -1

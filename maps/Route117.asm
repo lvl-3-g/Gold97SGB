@@ -2,6 +2,7 @@
 	const ROUTE117_FISHER1
 	const ROUTE117_YOUNGSTER1
 	const ROUTE117_YOUNGSTER2
+	const ROUTE117_SUPERNERD
 	const ROUTEU6U_FRUIT_TREE
 	const ROUTE117_ITEMBALL_1
 	const ROUTE117_ITEMBALL_2
@@ -72,6 +73,17 @@ Route116HiddenRevive:
 	hiddenitem REVIVE, EVENT_ROUTE_116_HIDDEN_REVIVE
 
 
+TrainerEngineerMarkson:
+	trainer ENGINEER, MARKSON, EVENT_BEAT_ENGINEER_MARKSON, EngineerMarksonSeenText, EngineerMarksonBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext EngineerMarksonAfterText
+	waitbutton
+	closetext
+	end
+
 FirebreatherOtisSeenText:
 	text "Ah! The weather's"
 	line "as fine as ever."
@@ -123,6 +135,20 @@ YoungsterJimmyAfterBattleText:
 
 
 
+EngineerMarksonSeenText:
+	text "Have you seen"
+	line "my wrench?"
+	done
+
+EngineerMarksonBeatenText:
+	text "Oh! It's right"
+	line "here!"
+	done
+
+EngineerMarksonAfterText:
+	text "That was"
+	line "embarassing…"
+	done
 
 Route117_MapEvents:
 	db 0, 0 ; filler
@@ -140,10 +166,11 @@ Route117_MapEvents:
 	bg_event 35,  8, BGEVENT_ITEM, Route116HiddenFullRestore
 	bg_event 15, 13, BGEVENT_ITEM, Route116HiddenRevive
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event 43, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerFirebreatherOtis, -1
 	object_event  8, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterWarren, -1
 	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterJimmy, -1
+	object_event 47,  9, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerEngineerMarkson, -1
 	object_event 29,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RouteU6UFruitTree, -1
 	object_event 31,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route116DireHit, EVENT_ROUTE_116_DIRE_HIT
 	object_event 24,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route116Carbos, EVENT_ROUTE_116_CARBOS
