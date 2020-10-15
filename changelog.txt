@@ -43,3 +43,6 @@ Changelog
 1.09
 - Minor dialogue changes for Okera
 - Mart updates, added new items to some more marts
+
+1.10
+- fixed tile issue in Kanto region
