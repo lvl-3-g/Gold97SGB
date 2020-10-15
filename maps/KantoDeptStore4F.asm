@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const KANTODEPTSTORE4F_CLERK
+	const KANTODEPTSTORE4F_CLERK2
 	const KANTODEPTSTORE4F_SUPER_NERD
 	const KANTODEPTSTORE4F_YOUNGSTER
 
@@ -12,6 +13,13 @@ KantoDeptStore4FClerkScript:
 	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_KANTO_3F_2; yes 3f, this is stone salesman
+	closetext
+	end
+	
+KantoDeptStore4FClerkScript2:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_WESTPORT_NEW; yes 3f, this is stone salesman
 	closetext
 	end
 
@@ -62,7 +70,8 @@ KantoDeptStore4F_MapEvents:
 	bg_event 14,  0, BGEVENT_READ, KantoDeptStore4FDirectory
 	bg_event  3,  0, BGEVENT_READ, KantoDeptStore4FElevatorButton
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 13,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoDeptStore4FClerkScript, -1
+	object_event 14,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoDeptStore4FClerkScript2, -1
 	object_event  7,  6, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, KantoDeptStore4FSuperNerdScript, -1
 	object_event  8,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoDeptStore4FYoungsterScript, -1

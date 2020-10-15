@@ -376,6 +376,7 @@ SilverLetsGoDownThere:
 	line "ROCKET is up to"
 	para "is starting to"
 	line "make them sick!"
+	para "…"
 	para "Show me that it"
 	line "wasn't a fluke"
 	para "that I lost to"

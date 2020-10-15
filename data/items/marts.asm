@@ -72,7 +72,7 @@ MartPagota:
 	db -1 ; end
 
 MartBirdon:
-	db 7 ; # items
+	db 10 ; # items
 	db POKE_BALL
 	db POTION
 	db SUPER_POTION
@@ -80,6 +80,9 @@ MartBirdon:
 	db REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
+	db SHARP_HORNS
+	db STEEL_SHELL
+	db POWER_WINGS
 	db -1 ; end
 
 MartSunpoint:
@@ -249,7 +252,7 @@ MartViridian:
 	db -1 ; end
 
 MartKume:
-	db 7 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
 	db SUPER_REPEL
@@ -257,6 +260,9 @@ MartKume:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
+	db WISDOM_ORB
+	db ENERGY_WALL
+	db DETECT_ORB
 	db -1 ; end
 
 MartNago:
@@ -376,7 +382,7 @@ MartStand:
 	db -1 ; end
 
 MartRyukyu:
-	db 7 ; # items
+	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db HYPER_POTION
@@ -384,6 +390,8 @@ MartRyukyu:
 	db FULL_HEAL
 	db X_ATTACK
 	db X_DEFEND
+	db SHARP_HORNS
+	db FOCUS_ORB
 	db -1 ; end
 
 MartMtMoon:

@@ -548,9 +548,10 @@ ChuckExplainBadgeText:
 
 	para "when you're not in"
 	line "a battle."
-
-	para "Here, have this as"
-	line "well."
+	
+	para "I guess I'm in a"
+	line "good mood, so you"
+	cont "can have this too."
 	done
 
 ChuckExplainTMText:

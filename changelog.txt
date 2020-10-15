@@ -39,3 +39,7 @@ Changelog
 1.08
 - added new NPC to Alloy City
 - added new trainers to routes 106, 107, 109, 117
+
+1.09
+- Minor dialogue changes for Okera
+- Mart updates, added new items to some more marts
