@@ -114,7 +114,7 @@ SportsmanJacobAfterBattleText:
 
 CamperDeanSeenText:
 	text "Have you ever been"
-	line "to SWISLANDS?"
+	line "to KANTO?"
 	done
 
 CamperDeanBeatenText:

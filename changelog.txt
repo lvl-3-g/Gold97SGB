@@ -46,3 +46,7 @@ Changelog
 
 1.10
 - fixed tile issue in Kanto region
+
+1.11
+- minor tileset fixes
+- minor dialogue fixes
