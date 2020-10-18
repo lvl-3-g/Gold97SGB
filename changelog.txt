@@ -50,3 +50,7 @@ Changelog
 1.11
 - minor tileset fixes
 - minor dialogue fixes
+
+1.12
+- added swimmer trainers to route 118
+- fixed player fishing sprite to match main sprite

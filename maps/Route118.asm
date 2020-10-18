@@ -6,6 +6,9 @@
 	const SANSKRIT_ROUTE_TRAINER
 	const SANSKRIT_ROUTE_MON
 	const ROUTE118_FRUIT_TREE
+	const ROUTE118_SWIMMERM
+	const ROUTE118_SWIMMERM2
+	const ROUTE118_SWIMMERM3
 
 Route118_MapScripts:
 	db 0 ; scene scripts
@@ -66,6 +69,28 @@ TrainerSwimmermRandall:
 	end
 	
 
+TrainerSwimmermBerke:
+	trainer SWIMMERM, BERKE, EVENT_BEAT_SWIMMERM_BERKE, SwimmermBerkeSeenText, SwimmermBerkeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermBerkeAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerSwimmermHal:
+	trainer SWIMMERM, HAL, EVENT_BEAT_SWIMMERM_HAL, SwimmermHalSeenText, SwimmermHalBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SwimmermHalAfterBattleText
+	waitbutton
+	closetext
+	end
+
 MtMoonSquareSign:
 	jumptext MtMoonSquareSignText
 
@@ -74,6 +99,26 @@ Route118HPUp:
 
 Route118HiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_ROUTE_118_HIDDEN_ULTRA_BALL
+	
+	
+SwimmermHalSeenText:
+	text "Are you going to"
+	line "SUNPOINT?"
+
+	para "How about a quick"
+	line "battle first?"
+	done
+	
+SwimmermHalBeatenText:
+	text "I lost that one!"
+	done
+
+
+SwimmermHalAfterBattleText:
+	text "I'd say I'm a bet-"
+	line "ter swimmer than"
+	cont "you. Yeah!"
+	done
 
 BirdKeeperHankSeenText:
 	text "I'm raising my"
@@ -165,6 +210,26 @@ MtMoonSquareSignText:
 	para "SUNPOINT CITY -"
 	line "SANSKRIT TOWN"
 	done
+	
+SwimmermBerkeSeenText:
+	text "The water's warm"
+	line "here. I'm loose"
+	cont "and limber."
+
+	para "Sure, I'll take"
+	line "you on!"
+	done
+	
+SwimmermBerkeBeatenText:
+	text "Yikes! I've got"
+	line "prune skin!"
+	done
+
+SwimmermBerkeAfterBattleText:
+	text "Isn't it relaxing"
+	line "just floating like"
+	cont "this?"
+	done
 
 Route118_MapEvents:
 	db 0, 0 ; filler
@@ -178,12 +243,14 @@ Route118_MapEvents:
 	bg_event  6, 10, BGEVENT_READ, MtMoonSquareSign
 	bg_event 12, 13, BGEVENT_ITEM, Route118HiddenUltraBall
 
-	db 7 ; object events
+	db 10 ; object events
 	object_event 64,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperHank, -1
 	object_event  8, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerHope, -1
 	object_event 11,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerSharon, -1
 	object_event  5,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route118HPUp, EVENT_ROUTE_118_HP_UP
-	object_event 72,  4, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SanskritTownRouteCooltrainermScript, -1
+	object_event 72,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SanskritTownRouteCooltrainermScript, -1
 	object_event 72,  5, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SanskritTownRouteMonsterScript, -1
 	object_event 16,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MotobuPathFruitTree, -1
-;	object_event 45, 10, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSwimmermRandall, -1
+	object_event 55,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermRandall, -1
+	object_event 44,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermBerke, -1
+	object_event 30,  5, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerSwimmermHal, -1

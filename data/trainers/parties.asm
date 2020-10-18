@@ -1967,8 +1967,10 @@ SwimmerMGroup:
 	db -1 ; end
 
 	; SWIMMERM (6)
-	db "BERKE@", TRAINERTYPE_NORMAL;unused, in sailorhuey
-	db 27, PLUCKROSS
+	db "BERKE@", TRAINERTYPE_NORMAL;used route 118
+	db 24, SHELLDER
+	db 22, OSUNFISH
+	db 22, TENTACRUEL
 	db -1 ; end
 
 	; SWIMMERM (7)
@@ -1983,10 +1985,9 @@ SwimmerMGroup:
 	db -1 ; end
 
 	; SWIMMERM (9)
-	db "HAL@", TRAINERTYPE_NORMAL
-	db 28, SEEL
-	db 30, DEWGONG
-	db 28, SEEL
+	db "HAL@", TRAINERTYPE_NORMAL; used route 118
+	db 25, STARYU
+	db 25, PSYDUCK
 	db -1 ; end
 
 	; SWIMMERM (10)
