@@ -54,3 +54,6 @@ Changelog
 1.12
 - added swimmer trainers to route 118
 - fixed player fishing sprite to match main sprite
+
+1.13
+- fixed issue where Misty would not battle on Elite 4 rematches

@@ -52,6 +52,7 @@ KogaScript_Battle:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue KogaRematchTeam
 	loadtrainer KOGA, KOGA1
+ReturnToMainKoga:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
@@ -75,7 +76,7 @@ KogaScript_AfterBattle:
 	
 KogaRematchTeam:
 	loadtrainer KOGA, KOGA2
-	jump ReturnToMainKaren
+	jump ReturnToMainKoga
 	end
 
 KogasRoom_EnterMovement:
