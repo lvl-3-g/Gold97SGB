@@ -233,8 +233,7 @@ ENDM
 
 	map_attributes TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, $05, 0
 
-	map_attributes KobanIsland, KOBAN_ISLAND, $21, NORTH | SOUTH
-	connection north, TropicalIslandJungle, TROPICAL_ISLAND_JUNGLE, 0
+	map_attributes KobanIsland, KOBAN_ISLAND, $21, SOUTH
 	connection south, Route107, ROUTE_107, 0
 
 	map_attributes Route107, ROUTE_107, $21, NORTH

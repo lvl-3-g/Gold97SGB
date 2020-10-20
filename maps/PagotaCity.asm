@@ -95,6 +95,23 @@ PagotaCityFruitTree:
 PagotaCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_PAGOTA_CITY_HIDDEN_HYPER_POTION
 	
+KurtsDoorLockedScript:
+	opentext
+	writetext KurtsDoorLockedText
+	waitbutton
+	closetext
+	applymovement PLAYER, KurtsDoorLocked_Movement
+	end
+	
+KurtsDoorLocked_Movement:
+	step DOWN
+	step_end
+
+
+	
+KurtsDoorLockedText:
+	text "It's locked…"
+	done
 
 	
 PagotaCityLassText:
@@ -208,7 +225,8 @@ PagotaCity_MapEvents:
 	warp_event  5, 14, EARLS_MUSEUM, 2
 	warp_event 30, 22, BILLS_FAMILYS_HOUSE, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event  3, 32, SCENE_KURTS_HOUSE_LOCKED, KurtsDoorLockedScript
 
 
 	db 9 ; bg events
