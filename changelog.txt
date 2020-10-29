@@ -61,3 +61,6 @@ Changelog
 1.14
 - fixed map border issue on Koban Island
 - fixed issue where Kurt's house wouldn't lock when he's in 5 floor tower
+
+1.15
+- fixed issue where Eevee wouldn't show that it is compatible with certain evo stones
