@@ -90,6 +90,21 @@ PlayersHousePCScript:
 	iftrue .Warp
 	closetext
 	end
+
+PlayersDollScript:
+	opentext
+	writetext PlayersDollText
+	waitbutton
+	closetext
+	end
+
+PlayersDollText:
+	text "It's a doll you"
+	line "got as a Christmas"
+	cont "present from a"
+	cont "relative in KANTO."
+	done
+
 PlayersRadioText1:
 	text "<PLAYER> turned"
 	line "on the radio."
@@ -184,8 +199,9 @@ PlayersHouse2F_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, PlayersHouseBookshelfScript
 	bg_event  8,  0, BGEVENT_IFSET, PlayersHousePosterScript
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event  7,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GameConsoleScript, EVENT_PLAYERS_HOUSE_2F_CONSOLE
 	object_event  4,  6, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1Script, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  6, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2Script, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  6, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDollScript, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+	object_event  6,  1, SPRITE_CLEFAIRY, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PlayersDollScript, -1
