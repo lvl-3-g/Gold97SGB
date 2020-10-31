@@ -475,7 +475,7 @@ ENDM
 	map_const OAK_LAB_FRONT_ROOM,									4,  8 ; new
 	map_const OAK_LAB_BACK_ROOM,                                     4,  4 ;  5
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  6
-	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  7
+	map_const PLAYERS_HOUSE_2F,                             5,  4 ;  7
 	map_const PLAYERS_NEIGHBORS_HOUSE,                      4,  4 ;  8
 	map_const RIVALS_HOUSE,                                   5,  4 ;  9
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11

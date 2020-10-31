@@ -883,7 +883,6 @@ StartTitleScreen:
 INCLUDE "engine/movie/title.asm"
 
 RunTitleScreen:
-	call Function63fe
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
@@ -893,7 +892,6 @@ RunTitleScreen:
 	farcall PlaySpriteAnimations
 	xor a
 	ldh [hOAMUpdate], a
-	call Function64b1
 	call DelayFrame
 	and a
 	ret
@@ -1053,53 +1051,6 @@ DeleteSaveData:
 ResetClock:
 	farcall _ResetClock
 	jp Init
-
-Function64b1:
-	; If bit 0 or 1 of [wTitleScreenTimer] is set, we don't need to be here.
-	ld a, [wTitleScreenTimer]
-	and %00000011
-	ret nz
-IF DEF(_GOLD)
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .Data_64e0
-	add hl, de
-	; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-ELIF DEF(_SILVER)
-	depixel 15, 11, 4, 0
-ENDC
-	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
-	call InitSpriteAnimStruct
-	ret
-
-IF DEF(_GOLD)
-.Data_64e0:
-; frame 0 y, x; frame 1 y, x
-	db 11 * 8 + 4, 10 * 8,  0 * 8,      0 * 8
-	db 11 * 8 + 4, 13 * 8, 11 * 8 + 4, 11 * 8
-	db 11 * 8 + 4, 13 * 8, 11 * 8 + 4, 15 * 8
-	db 11 * 8 + 4, 17 * 8, 11 * 8 + 4, 15 * 8
-	db  0 * 8,      0 * 8, 11 * 8 + 4, 15 * 8
-	db  0 * 8,      0 * 8, 11 * 8 + 4, 11 * 8
-ENDC
 
 Copyright:
 	call ClearTilemap

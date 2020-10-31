@@ -1,8 +1,10 @@
 InitDecorations:
 	ld a, DECO_FEATHERY_BED
 	ld [wDecoBed], a
-	ld a, DECO_TOWN_MAP
-	ld [wDecoPoster], a
+	ld a, DECO_RED_CARPET
+	ld [wDecoCarpet], a
+	;ld a, DECO_TOWN_MAP	; not present in original sw97
+	;ld [wDecoPoster], a	; should we keep this?
 	ret
 
 _PlayerDecorationMenu:
@@ -1065,33 +1067,55 @@ DecorationDesc_GiantOrnament:
 
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock
-	lb de, 0, 4 ; bed coordinates
+; beds
+	lb de, 0, 2 ; first
+	ld a, [wDecoBed]
+	and a
+	jr z, .only_carpets
+	call SetDecorationTile
+				; apply carpet to first bed
+	ld b, a
+	ld a, [wDecoCarpet]
+	and a
+	jr z, .second_bed
+	sub CARPETS
+	sla a
+	sla a
+	add b
+	ld [hl], a
+.second_bed
+	lb de, 4, 2 ; second
 	ld a, [wDecoBed]
 	call SetDecorationTile
-	lb de, 7, 4 ; plant coordinates
+				; apply carpet to second bed
+	ld b, a
+	ld a, [wDecoCarpet]
+	and a
+	jr z, .plants
+	sub CARPETS
+	sla a
+	sla a
+	add b
+	ld [hl], a
+	jr .plants
+
+.only_carpets
+	lb de, 0, 2
+	ld a, [wDecoCarpet]
+	call SetDecorationTile
+	lb de, 4, 2
+	ld a, [wDecoCarpet]
+	call SetDecorationTile
+.plants
+; plant
+	lb de, 9, 6 ; plant coordinates
 	ld a, [wDecoPlant]
 	call SetDecorationTile
-	lb de, 6, 0 ; poster coordinates
+; poster
+	lb de, 8, 0 ; poster coordinates
 	ld a, [wDecoPoster]
 	call SetDecorationTile
 	call SetPosterVisibility
-	lb de, 0, 0 ; carpet top-left coordinates
-	call PadCoords_de
-	ld a, [wDecoCarpet]
-	and a
-	ret z
-	call _GetDecorationSprite
-	ld [hl], a
-	push af
-	lb de, 0, 2 ; carpet bottom-left coordinates
-	call PadCoords_de
-	pop af
-	inc a
-	ld [hli], a ; carpet bottom-left block
-	inc a
-	ld [hli], a ; carpet bottom-middle block
-	dec a
-	ld [hl], a ; carpet bottom-right block
 	ret
 
 SetPosterVisibility:

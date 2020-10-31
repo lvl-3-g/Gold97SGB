@@ -31,8 +31,8 @@ SpriteAnimOAMData:
 	dbw $10, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_HAPPA
 	dbw $29, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_FLAMBEAR
 	dbw $42, .OAMData_GSIntroStarter           ; SPRITE_ANIM_OAMSET_GS_INTRO_CRUISEAL
-	dbw $f8, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1
-	dbw $fa, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2
+	dbw $78, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1
+	dbw $7c, .OAMData_GSTitleTrail             ; SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2
 	dbw $00, .OAMData_TextEntryCursor          ; SPRITE_ANIM_OAMSET_TEXT_ENTRY_CURSOR
 	dbw $00, .OAMData_TextEntryCursorBig       ; SPRITE_ANIM_OAMSET_TEXT_ENTRY_CURSOR_BIG
 	dbw $00, .OAMData_GSIntroGameFreakLogo     ; SPRITE_ANIM_OAMSET_GS_INTRO_GAMEFREAK_LOGO
@@ -619,6 +619,13 @@ ENDC
 	dbsprite -2,  0,  0,  0, $02, PAL_OW_TREE
 	dbsprite  1,  0,  0,  0, $03, PAL_OW_TREE
 
+
+.OAMData_GSTitleTrail:
+	db 4
+	dbsprite  0,  0,  0,  0, $00, 0
+	dbsprite  1,  0,  0,  0, $01, 0
+	dbsprite  0,  1,  0,  0, $02, 0
+	dbsprite  1,  1,  0,  0, $03, 0
 IF DEF(_GOLD)
 .OAMData_GSIntroHoOh1:
 	db 19
@@ -718,11 +725,6 @@ IF DEF(_GOLD)
 	dbsprite  2,  1,  0,  0, $20, 0
 	dbsprite  3, -2,  0,  0, $22, 0
 	dbsprite  3,  0,  0,  0, $24, 0
-
-.OAMData_GSTitleTrail:
-	db 1
-;	dbsprite -1, -1,  4,  4, $00, 1 | OBP_NUM
-
 ELIF DEF(_SILVER)
 .OAMData_GSIntroBlissey1:
 	db 16
@@ -822,9 +824,4 @@ ELIF DEF(_SILVER)
 	dbsprite  2,  0,  0,  0, $72, 0
 	dbsprite  3, -1,  0,  0, $74, 0
 	dbsprite  4, -1,  0,  0, $76, 0
-
-.OAMData_GSTitleTrail:
-	db 2
-	dbsprite -1, -1,  0,  0, $00, 0
-	dbsprite  0, -1,  0,  0, $02, 0
 ENDC
