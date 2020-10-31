@@ -3,6 +3,8 @@ InitDecorations:
 	ld [wDecoBed], a
 	ld a, DECO_RED_CARPET
 	ld [wDecoCarpet], a
+	ld a, DECO_N64
+	ld [wDecoConsole], a
 	;ld a, DECO_TOWN_MAP	; not present in original sw97
 	;ld [wDecoPoster], a	; should we keep this?
 	ret
@@ -1028,29 +1030,44 @@ DecorationDesc_NullPoster:
 
 DecorationDesc_LeftOrnament:
 	ld a, [wDecoLeftOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_OrnamentScript
 
 DecorationDesc_RightOrnament:
 	ld a, [wDecoRightOrnament]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_OrnamentScript
 
 DecorationDesc_Console:
 	ld a, [wDecoConsole]
-	jr DecorationDesc_OrnamentOrConsole
+	jr DecorationDesc_ConsoleScript
 
-DecorationDesc_OrnamentOrConsole:
+DecorationDesc_OrnamentScript:
 	ld c, a
 	ld de, wStringBuffer3
 	call GetDecorationName_c_de
-	ld b, BANK(.OrnamentConsoleScript)
-	ld de, .OrnamentConsoleScript
+	ld b, BANK(.OrnamentScript)
+	ld de, .OrnamentScript
 	ret
 
-.OrnamentConsoleScript:
+.OrnamentScript:
 	jumptext .LookAdorableDecoText
 
 .LookAdorableDecoText:
 	text_far _LookAdorableDecoText
+	text_end
+
+DecorationDesc_ConsoleScript:
+	ld c, a
+	ld de, wStringBuffer3
+	call GetDecorationName_c_de
+	ld b, BANK(.ConsoleScript)
+	ld de, .ConsoleScript
+	ret
+
+.ConsoleScript:
+	jumptext .ConsoleLookText
+
+.ConsoleLookText:
+	text_far _ConsoleDecoText
 	text_end
 
 DecorationDesc_GiantOrnament:
