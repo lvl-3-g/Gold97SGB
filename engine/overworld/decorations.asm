@@ -1,8 +1,10 @@
 InitDecorations:
 	ld a, DECO_FEATHERY_BED
 	ld [wDecoBed], a
-	ld a, DECO_TOWN_MAP
-	ld [wDecoPoster], a
+	ld a, DECO_RED_CARPET
+	ld [wDecoCarpet], a
+	;ld a, DECO_TOWN_MAP	; not present in original sw97
+	;ld [wDecoPoster], a	; should we keep this?
 	ret
 
 _PlayerDecorationMenu:
