@@ -22,12 +22,6 @@ TitleScreen:
 	call ByteFill
 	farcall ClearSpriteAnims
 
-; Decompress lower part of title screen
-;	ld hl, TitleScreenGFX1
-;	ld de, vTiles2
-;	ld a, BANK(TitleScreenGFX1)
-;	call FarDecompress
-
 ; Decompress upper part of title screen
 	ld hl, TitleScreenGFX2
 	ld de, vTiles1
