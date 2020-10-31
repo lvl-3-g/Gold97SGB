@@ -44,11 +44,11 @@ TitleScreen:
 ; This should only copy 4 tiles; there are 4 extra whitespace tiles in Gold
 ; before Ho-Oh gfx, but Silver reads the first 64 bytes of the compressed
 ; Blissey gfx and writes them to VRAM (but never displays them on screen).
-;	ld hl, TitleScreenGFX3
-;	ld de, vTiles1 tile $78
-;	ld bc, 8 tiles
-;	ld a, BANK(TitleScreenGFX3)
-;	call FarCopyBytes
+	ld hl, TitleScreenGFX3
+	ld de, vTiles0 tile $78
+	ld bc, 8 tiles
+	ld a, BANK(TitleScreenGFX3)
+	call FarCopyBytes
 
 	call FillTitleScreenPals
 	call LoadTitleScreenTilemap
@@ -57,7 +57,7 @@ TitleScreen:
 	ld [hli], a
 	ld [hl], a
 	ld hl, rLCDC
-	set rLCDC_SPRITE_SIZE, [hl]
+	res rLCDC_SPRITE_SIZE, [hl]	; 8x8 sprite mode
 	call EnableLCD
 
 ; Reset timing variables
@@ -68,30 +68,36 @@ TitleScreen:
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
 
-	depixel 12, 11
-;	ld a, SPRITE_ANIM_INDEX_GS_INTRO_HO_OH_BLISSEY
-;	call InitSpriteAnimStruct
-;	ld hl, wSpriteAnim1
-;	ld de, wSpriteAnim10
-;	ld bc, NUM_SPRITE_ANIM_STRUCTS
-;	call CopyBytes
-;	ld hl, wSpriteAnim1
-;	ld [hl], 0
-;
-;	ld hl, wLYOverrides
-;	ld bc, wLYOverridesEnd - wLYOverrides
-;	xor a
-;	call ByteFill
+	ld hl, .fire_starting_positions
+	ld c, 6 ; Load 6 flying objects on the screen.
+.set_fire_note_loop
+	push bc
+	ld e, [hl]
+	inc hl
+	ld d, [hl]
+	inc hl
+	push hl
+	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
+	call InitSpriteAnimStruct
+	pop hl
+	pop bc
+	dec c
+	jr nz, .set_fire_note_loop
 
-; Let LCD Stat know we're messing around with SCX
-;	ld a, LOW(rSCX); it's this oneeeeeeeeeeeeeeeeeeeeeeeeeeeeee finally this one stops the tile scroll
-	ldh [hLCDCPointer], a
-	ld b, SCGB_GS_TITLE_SCREEN
+	ld b, SCGB_BETA_TITLE_SCREEN
 	call GetSGBLayout
 	call LoadTitleScreenPals
 	ld de, MUSIC_TITLE
 	call PlayMusic
 	ret
+
+.fire_starting_positions
+	dw $4CE0
+	dw $58A0
+	dw $6490
+	dw $70D0
+	dw $7CB0
+	dw $8800
 
 LoadTitleScreenPals:; not this
 	ldh a, [hCGB]
@@ -102,41 +108,25 @@ LoadTitleScreenPals:; not this
 	jr nz, .sgb
 	ld a, %11011000
 	ldh [rBGP], a
-IF DEF(_GOLD)
-	ld a, %11111111
+	ld a, %11100100
 	ldh [rOBP0], a
-	ld a, %11111000
+	ld a, %11100100
 	ldh [rOBP1], a
-ELIF DEF(_SILVER)
-	ld a, %11110000
-	ldh [rOBP0], a
-	ld a, %11110000
-	ldh [rOBP1], a
-ENDC
 	ret
 
 .sgb
-	ld a, %11100100
+	ld a, %11011000
 	ldh [rBGP], a
-IF DEF(_GOLD)
-	ld a, %11111111
+	ld a, %11100100
 	ldh [rOBP0], a
 	ld a, %11100100
 	ldh [rOBP1], a
-ELIF DEF(_SILVER)
-	ld a, %11110000
-	ldh [rOBP0], a
-	ld a, %11100000
-	ldh [rOBP1], a
-ENDC
 	ret
 
 .cgb
-	ld a, %11100100
+	ld a, %11011000
 	call DmgToCgbBGPals
-IF DEF(_SILVER)
-	ld a, %11100000
-ENDC
+	ld a, %11100100
 	call DmgToCgbObjPal0
 	ret
 

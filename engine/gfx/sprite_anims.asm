@@ -727,8 +727,6 @@ DoAnimFrame:
 .GSTitleTrail
 	call .AnonymousJumptable
 	jp hl
-
-IF DEF(_GOLD)
 ; anonymous jumptable
 	dw .Function8d835
 	dw .Function8d84c
@@ -751,87 +749,37 @@ IF DEF(_GOLD)
 	add hl, bc
 	ld [hl], a
 
-.Function8d84c
+.Function8d84c	; sw97
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld a, [hl]
-	cp $a4
-	jr nc, .asm_8d881
 
 	ld hl, SPRITEANIMSTRUCT_0D
 	add hl, bc
-	add $4
+	sub [hl]
 
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld [hl], a
-
-	ld hl, SPRITEANIMSTRUCT_YCOORD
-	add hl, bc
-	inc [hl]
 
 	ld hl, SPRITEANIMSTRUCT_0D
 	add hl, bc
 	ld a, [hl]
 	sla a
 	sla a
-	ld d, $2
-
-	ld hl, SPRITEANIMSTRUCT_0C
-	add hl, bc
-	ld a, [hl]
-	add $3
-	ld [hl], a
-	call .Sprites_Sine
-
-	ld hl, SPRITEANIMSTRUCT_YOFFSET
-	add hl, bc
-	ld [hl], a
-	ret
-
-.asm_8d881
-	call DeinitializeSprite
-	ret
-
-ELIF DEF(_SILVER)
-; anonymous jumptable
-	dw .Function8d835
-	dw .Function8d856
-
-.Function8d835
-	ld a, [wIntroSceneTimer]
-	and $30
-	swap a
-	add $3
 	ld d, a
 
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
-	ld a, [wIntroSceneTimer]
-	and $30
-	swap a
-	add $07
-	add [hl]
+	ld a, [hl]
+	add a, 2
 	ld [hl], a
-	call .Sprites_Sine
 
+	call .Sprites_Sine
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
-.Function8d856
-	ld hl, SPRITEANIMSTRUCT_XCOORD
-	add hl, bc
-	ld a, [hl]
-	cp $a4
-	jr nc, .asm_8d863
-	add $4
-	ld [hl], a
 	ret
-
-.asm_8d863
-	call DeinitializeSprite
-	ret
-ENDC
 
 .GSIntroHoOhBlissey
 	ld hl, SPRITEANIMSTRUCT_0C

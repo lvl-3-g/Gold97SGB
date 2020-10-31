@@ -883,7 +883,6 @@ StartTitleScreen:
 INCLUDE "engine/movie/title.asm"
 
 RunTitleScreen:
-	call Function63fe
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
@@ -893,7 +892,6 @@ RunTitleScreen:
 	farcall PlaySpriteAnimations
 	xor a
 	ldh [hOAMUpdate], a
-	call Function64b1
 	call DelayFrame
 	and a
 	ret

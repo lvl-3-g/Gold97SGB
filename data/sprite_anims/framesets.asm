@@ -172,14 +172,9 @@ SpriteAnimFrameData:
 	delanim
 
 .Frameset_GSTitleTrail:
-IF DEF(_GOLD)
 	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1,  1
 	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2,  1
 	dorestart
-ELIF DEF(_SILVER)
-	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1, 32
-	endanim
-ENDC
 
 .Frameset_GSIntroPikachu4:
 	frame SPRITE_ANIM_OAMSET_GS_INTRO_PIKACHU_2,  0
