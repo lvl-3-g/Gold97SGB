@@ -1088,47 +1088,31 @@ ToggleMaptileDecorations:
 	lb de, 4, 2 ; first
 	ld a, [wDecoBed]
 	and a
-	jr z, .only_carpets
+	jr z, .only_carpet
 	call SetDecorationTile
-				; apply carpet to first bed
+				; apply carpet to bed
 	ld b, a
 	ld a, [wDecoCarpet]
 	and a
-	jr z, .second_bed
+	jr z, .plant
 	sub CARPETS
 	sla a
 	sla a
 	add b
 	ld [hl], a
-.second_bed
-;	lb de, 4, 2 ; second
-;	ld a, [wDecoBed]
-;	call SetDecorationTile
-;				; apply carpet to second bed
-;	ld b, a
-;	ld a, [wDecoCarpet]
-;	and a
-;	jr z, .plants
-;	sub CARPETS
-;	sla a
-;	sla a
-;	add b
-;	ld [hl], a
-	jr .plants
+	jr .plant		; carpet + bed applied, skip to next
 
-.only_carpets
-	lb de, 0, 2
-	ld a, [wDecoCarpet]
-	call SetDecorationTile
+.only_carpet
 	lb de, 4, 2
 	ld a, [wDecoCarpet]
 	call SetDecorationTile
-.plants
-; plant
+
+.plant
 	lb de, 9, 6 ; plant coordinates
 	ld a, [wDecoPlant]
 	call SetDecorationTile
-; poster
+
+.poster
 	lb de, 8, 0 ; poster coordinates
 	ld a, [wDecoPoster]
 	call SetDecorationTile
