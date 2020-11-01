@@ -3,6 +3,8 @@
 	const OAK2ENTRANCE_SILVER
 	const OAK2ENTRANCE_BLUE
 	const OAK2ENTRANCE_DAISY
+	const OAK2ENTRANCE_DEX1
+	const OAK2ENTRANCE_DEX2
 
 OakLabFrontRoom_MapScripts:
 	db 5 ; scene scripts
@@ -129,9 +131,10 @@ DaisyStopsScript1:
 	opentext
 	writetext DaisySpeechText
 	buttonsound
-	stringtotext .mapcardname, MEM_BUFFER_1
-	scall .JumpstdReceiveItem
-	setflag ENGINE_MAP_CARD
+	itemtotext POTION, MEM_BUFFER_1
+	scall DaisyScript_ReceiveThePotion
+	giveitem POTION, 1
+	itemnotify
 	writetext DaisySpeechText2
 	buttonsound
 	itemtotext POKE_BALL, MEM_BUFFER_1
@@ -162,9 +165,10 @@ DaisyStopsScript2:
 	opentext
 	writetext DaisySpeechText
 	buttonsound
-	stringtotext .mapcardname, MEM_BUFFER_1
-	scall .JumpstdReceiveItem
-	setflag ENGINE_MAP_CARD
+	itemtotext POTION, MEM_BUFFER_1
+	scall DaisyScript_ReceiveThePotion
+	giveitem POTION, 1
+	itemnotify
 	writetext DaisySpeechText2
 	buttonsound
 	itemtotext POKE_BALL, MEM_BUFFER_1
@@ -190,7 +194,16 @@ DaisyScript_ReceiveTheBalls:
 	jumpstd ReceiveItemScript
 	end
 	
-
+DaisyScript_ReceiveThePotion:
+	jumpstd ReceiveItemScript
+	end
+	
+OakLabFrontRoomDexScript:
+	opentext
+	writetext WhatIsDexText
+	waitbutton
+	closetext
+	end
 	
 OakLabFrontRoomBlueScript:
 	jumptextfaceplayer Text_InBack
@@ -212,6 +225,12 @@ OakLabFrontRoomBookshelf:
 	
 OakLabFrontRoomSign:
 	jumptext OakLabFrontRoomSignText
+	
+WhatIsDexText:
+	text "What is this?"
+	para "Some sort of"
+	line "encyclopedia?"
+	done
 	
 OakLabFrontRoomSignText:
 	text "Remember to SAVE"
@@ -247,10 +266,11 @@ DaisySpeechText:
 	done
 
 DaisySpeechText2:
-	text "The MAP CARD"
-	line "lets you view"
-	para "a map right in"
-	line "your #GEAR!"
+	text "A POTION helps"
+	line "restore your"
+	para "#MON's health"
+	line "if you're not at"
+	cont "a #MON CENTER!"
 	para "I'll also throw"
 	line "in a few"
 	para "#BALLs to"
@@ -265,11 +285,12 @@ DaisySpeechText3:
 	para "at just about any"
 	line "MART."
 	para "Also, we can't"
-	line "have your mother"
+	line "have your family"
 	para "worrying, so make"
 	line "sure to say"
-	para "goodbye before"
-	line "you leave town."
+	para "goodbye to your"
+	line "MOM and KEN before"
+	cont "you leave town!"
 	para "I'll be rooting"
 	line "for you!"
 	done
@@ -453,10 +474,12 @@ OakLabFrontRoom_MapEvents:
 	bg_event  2,  0, BGEVENT_READ, OakLabFrontRoomSign
 
 
-	db 4 ; object events
+	db 6 ; object events
 	object_event  6, 13, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomAideScript, -1
 	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomSilverScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
 	object_event  4, 13, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomBlueScript, EVENT_BLUE_OAK_LAB_FRONT_ROOM
 	object_event  1, 13, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDaisyScript, EVENT_DAISY_OAK_LAB_FRONT_ROOM
+	object_event  1,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
+	object_event  0,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
 
 	

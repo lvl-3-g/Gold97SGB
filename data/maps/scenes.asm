@@ -99,4 +99,5 @@ MapScenes::
 	scene_var RYUKYU_GYM,								   wRyukyuGymSceneID
 	scene_var ROUTE_101N,									wRoute101NSceneID
 	scene_var TEKNOS_AQUARIUM_1F,							wTeknosAquarium1FSceneID
+	scene_var PLAYERS_HOUSE_2F,								wPlayersHouse2FSceneID
 	db -1 ; end

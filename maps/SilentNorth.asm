@@ -11,7 +11,7 @@ SilentNorth_MapEvents:
 
 	db 2 ; warp events
 	warp_event  9,  7, VICTORY_ROAD_GATE, 1
-	warp_event 11,  7, DAITO_POKECENTER_1F, 1
+	warp_event 11,  7, RADIO_TOWER_4F, 1
 
 	db 0 ; coord events
 

@@ -2398,8 +2398,9 @@ wCrownPathSceneID::						  db
 wRyukyuGymSceneID::							  db
 wRoute101NSceneID::							db
 wTeknosAquarium1FSceneID::					db
+wPlayersHouse2FSceneID:: 					db
 
-	ds 162
+	ds 161
 
 wEventFlags:: flag_array NUM_EVENTS
 

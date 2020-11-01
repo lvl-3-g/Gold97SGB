@@ -9,7 +9,13 @@ PlayersHouse1F_MapScripts:
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .DummyScene1 ; SCENE_FINISHED
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .SetKenForOldSaves
+	
+.SetKenForOldSaves
+	setmapscene PLAYERS_HOUSE_2F, SCENE_PLAYERS_HOUSE_2F_NOTHING
+	return
+
 
 .DummyScene0:
 	end
@@ -34,8 +40,8 @@ MeetMomScript:
 	opentext
 	writetext Oak2sLookingForYouText
 	buttonsound
-	stringtotext GearName, MEM_BUFFER_1
-	scall PlayersHouse1FReceiveItemStd
+;	stringtotext GearName, MEM_BUFFER_1
+;	scall PlayersHouse1FReceiveItemStd
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
@@ -59,6 +65,12 @@ MeetMomScript:
 	yesorno
 	iffalse .SetDayOfWeek
 .DayOfWeekDone:
+	writetext GearIsActiveText1
+	waitbutton
+	waitsfx
+	writetext GearIsActiveText2
+	playsound SFX_ITEM
+	waitsfx
 	writetext ComeHomeForDSTText
 	yesorno
 	iffalse .ExplainPhone
@@ -83,6 +95,7 @@ MeetMomScript:
 	writetext FinalMomText
 	waitbutton
 	closetext
+	setevent EVENT_TALKED_TO_MOM_AT_BEGINNING
 	setevent EVENT_BLUE_SILENT_TOWN
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
@@ -188,6 +201,17 @@ MomWalksBackMovement:
 	slow_step LEFT
 	slow_step LEFT
 	step_end
+	
+GearIsActiveText1:
+	text "That's it!"
+	para "I think it's all"
+	line "working!"
+	done
+	
+GearIsActiveText2:
+	text "<PLAYER>'s #GEAR"
+	line "is now set up!"
+	done
 
 FinalMomText:
 	text "That's right,"
@@ -204,12 +228,14 @@ FinalMomText:
 
 Oak2sLookingForYouText:
 	text "Oh, <PLAYER>…!"
-	line "Your #MON"
+	line "Your new #MON"
 
-	para "GEAR is back from"
-	line "the repair shop."
-
-	para "Here you go!"
+	para "GEAR isn't set up"
+	line "yet!"
+	
+	para "Let's get that"
+	line "done before you"
+	cont "head out!"
 	done
 
 MomGivesPokegearText:
@@ -220,7 +246,7 @@ MomGivesPokegearText:
 	line "you want to be a"
 	cont "good trainer."
 
-	para "Oh, the day of the"
+	para "The day of the"
 	line "week isn't set."
 
 	para "You mustn't forget"

@@ -368,7 +368,7 @@ _ConsoleDecoText::
 	line "the @"
 	text_ram wStringBuffer3
 	text "!"
-	para "...Alright!"
+	para "…Alright!"
 	line "Time to get going!"
 	done
 

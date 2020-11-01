@@ -22,6 +22,10 @@ PagotaNicknameSpeechHouseBirdScript:
 	waitbutton
 	closetext
 	end
+	
+NicknameHouseRadio:
+	jumpstd Radio2Script
+
 
 PagotaNicknameSpeechHouseTeacherText:
 	text "She uses the names"
@@ -51,7 +55,8 @@ PagotaNicknameSpeechHouse_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event  6,  1, BGEVENT_READ, NicknameHouseRadio
 
 	db 3 ; object events
 	object_event  2,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PagotaNicknameSpeechHouseTeacherScript, -1

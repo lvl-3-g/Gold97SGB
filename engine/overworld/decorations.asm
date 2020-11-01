@@ -1085,7 +1085,7 @@ DecorationDesc_GiantOrnament:
 ToggleMaptileDecorations:
 	; tile coordinates work the same way as for changeblock
 ; beds
-	lb de, 0, 2 ; first
+	lb de, 4, 2 ; first
 	ld a, [wDecoBed]
 	and a
 	jr z, .only_carpets
@@ -1101,19 +1101,19 @@ ToggleMaptileDecorations:
 	add b
 	ld [hl], a
 .second_bed
-	lb de, 4, 2 ; second
-	ld a, [wDecoBed]
-	call SetDecorationTile
-				; apply carpet to second bed
-	ld b, a
-	ld a, [wDecoCarpet]
-	and a
-	jr z, .plants
-	sub CARPETS
-	sla a
-	sla a
-	add b
-	ld [hl], a
+;	lb de, 4, 2 ; second
+;	ld a, [wDecoBed]
+;	call SetDecorationTile
+;				; apply carpet to second bed
+;	ld b, a
+;	ld a, [wDecoCarpet]
+;	and a
+;	jr z, .plants
+;	sub CARPETS
+;	sla a
+;	sla a
+;	add b
+;	ld [hl], a
 	jr .plants
 
 .only_carpets

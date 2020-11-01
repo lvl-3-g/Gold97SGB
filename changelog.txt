@@ -64,3 +64,8 @@ Changelog
 
 1.15
 - fixed issue where Eevee wouldn't show that it is compatible with certain evo stones
+
+2.00
+- Ken is now in the game as player's brother
+- Title screen flame animation
+(Thanks to ZumiIsawhat? for assistance with this!)

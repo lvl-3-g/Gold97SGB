@@ -262,3 +262,8 @@ SCENE_FINISHED EQU 1
 ;wTeknosAquarium1FSceneID
 	const_def 1
 	const SCENE_TEKNOS_AQUARIUM_1F_NOTHING
+	
+;wPlayersHouse2FSceneID
+	const_def 1
+	const SCENE_PLAYERS_HOUSE_2F_NOTHING
+

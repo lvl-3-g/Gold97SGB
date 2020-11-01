@@ -358,7 +358,7 @@ Oak2DirectionsScript:
 	applymovement OAK2SLAB_OAK2, Oak2BackFromTable
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_RIVAL_CROWN_CITY
-	setscene SCENE_OAK2SLAB_AIDE_GIVES_POTION
+	setscene SCENE_OAK2SLAB_NOTHING
 	setmapscene SILENT_TOWN, SCENE_SILENT_NOTHING
 	setmapscene OAK_LAB_FRONT_ROOM, SCENE_OAK_LAB_FRONT_ROOM_BATTLE
 	setevent EVENT_SILVER_IN_OAK_LAB_BACK_ROOM
@@ -1326,11 +1326,11 @@ OakLabBackRoom_MapEvents:
 	warp_event  4,  7, OAK_LAB_FRONT_ROOM, 3
 
 
-	db 4 ; coord events
+	db 2 ; coord events
 	coord_event  3,  7, SCENE_OAK2SLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  7, SCENE_OAK2SLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  3,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
-	coord_event  4,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
+;	coord_event  3,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
+;	coord_event  4,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 
 	db 7 ; bg events
 	bg_event  0,  1, BGEVENT_READ, OakLabBackRoomBookshelf
