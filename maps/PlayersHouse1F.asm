@@ -10,10 +10,14 @@ PlayersHouse1F_MapScripts:
 	scene_script .DummyScene1 ; SCENE_FINISHED
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .SetKenForOldSaves
+	callback MAPCALLBACK_NEWMAP, .SetKenAndDecorForOldSaves
 	
-.SetKenForOldSaves
+.SetKenAndDecorForOldSaves
 	setmapscene PLAYERS_HOUSE_2F, SCENE_PLAYERS_HOUSE_2F_NOTHING
+	setevent EVENT_DECO_N64
+	setevent EVENT_DECO_CARPET_1
+	setevent EVENT_DECO_BED_1
+	setevent EVENT_DECO_POSTER_1
 	return
 
 

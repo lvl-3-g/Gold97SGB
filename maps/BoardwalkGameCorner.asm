@@ -10,6 +10,7 @@
 	const BOARDWALKGAMECORNER_COOLTRAINER_F
 	const BOARDWALKGAMECORNER_GENTLEMAN
 	const BOARDWALKGAMECORNER_POKEFAN_M2
+	const BOARDWALKGAMECORNER_RECEPTIONIST3
 
 BoardwalkGameCorner_MapScripts:
 	db 0 ; scene scripts
@@ -21,6 +22,244 @@ BoardwalkGameCorner_MapScripts:
 
 BoardwalkGameCornerCoinVendorScript:
 	jumpstd GameCornerCoinVendorScript
+	
+;--------------------------------------
+
+BoardwalkGameCornerDecorVendorScript:
+	faceplayer
+	opentext
+	writetext BoardwalkGameCornerPrizeVendorIntroText
+	waitbutton
+	checkitem COIN_CASE
+	iffalse BoardwalkGameCornerPrizeVendor_NoCoinCaseScript
+BoardwalkGameCornerDecorVendor_LoopScript:
+	writetext BoardwalkGameCornerPrizeVendorWhichPrizeText
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerDecorVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Bed
+	ifequal 2, .Carpet
+	ifequal 3, .Plant
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+.Bed
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerBedsVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Pink
+	ifequal 2, .Polkadot
+	ifequal 3, .Pikachu
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+.Pink
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_BED_2
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_BED_2
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+	
+.Polkadot
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_BED_3
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_BED_3
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+
+.Pikachu
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_BED_4
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_BED_4
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+
+.Carpet; COME_BACK2
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerCarpetVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .BlueCarpet
+	ifequal 2, .YellowCarpet
+	ifequal 3, .GreenCarpet
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+.BlueCarpet
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_CARPET_2
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_CARPET_2
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+	
+.YellowCarpet
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_CARPET_3
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_CARPET_3
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+
+.GreenCarpet
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_CARPET_4
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_CARPET_4
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+
+.Plant; COME_BACK2
+	special DisplayCoinCaseBalance
+	loadmenu BoardwalkGameCornerPlantVendorMenuHeader
+	verticalmenu
+	closewindow
+	ifequal 1, .Magna
+	ifequal 2, .Tropic
+	ifequal 3, .Jumbo
+	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	
+.Magna
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_PLANT_1
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_PLANT_1
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+	
+.Tropic
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_PLANT_2
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_PLANT_2
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+
+.Jumbo
+	checkcoins 1800
+	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
+	writetext SendItemToHomePCText
+	yesorno
+	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
+	checkevent EVENT_DECO_PLANT_3
+	iftrue .AlreadyHaveDecorItem
+	setevent EVENT_DECO_PLANT_3
+	takecoins 1800
+	jump BoardwalkGameCornerDecorVendor_FinishScript
+	end
+	
+.AlreadyHaveDecorItem
+	writetext AlreadyHaveDecorItemText
+	waitbutton
+	jump BoardwalkGameCornerDecorVendor_LoopScript
+
+	
+BoardwalkGameCornerDecorVendor_FinishScript:
+	waitsfx
+	playsound SFX_TRANSACTION
+	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
+	waitbutton
+	jump BoardwalkGameCornerDecorVendor_LoopScript
+	
+BoardwalkGameCornerPlantVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "MAGNAPLANT   1800@"
+	db "TROPICPLANT  1800@"
+	db "JUMBOPLANT   1800@"
+	db "CANCEL@"	
+
+BoardwalkGameCornerCarpetVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "BLUE CARPET  1800@"
+	db "YELLOW CARPET1800@"
+	db "GREEN CARPET 1800@"
+	db "CANCEL@"	
+
+BoardwalkGameCornerBedsVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "PINK BED     1800@"
+	db "POLKADOT BED 1800@"
+	db "PIKACHU BED  1800@"
+	db "CANCEL@"	
+	
+BoardwalkGameCornerDecorVendorMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 19, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "BEDS@"
+	db "CARPETS@"
+	db "PLANTS@"
+	db "CANCEL@"
+
+;--------------------------------------
 
 BoardwalkGameCornerTMVendorScript:
 	faceplayer
@@ -284,6 +523,16 @@ BoardwalkGameCornerCardFlipMachineScript:
 	special CardFlip
 	closetext
 	end
+	
+AlreadyHaveDecorItemText:
+	text "You already have"
+	line "this item."
+	done
+	
+SendItemToHomePCText:
+	text "Send this item to"
+	line "your bedroom PC?"
+	done
 
 BoardwalkGameCornerPrizeVendorIntroText:
 	text "Welcome!"
@@ -448,7 +697,7 @@ BoardwalkGameCorner_MapEvents:
 	bg_event 18, 11, BGEVENT_RIGHT, BoardwalkGameCornerCardFlipMachineScript
 	bg_event 13,  1, BGEVENT_LEFT, BoardwalkGameCornerLeftTheirDrinkScript
 
-	db 11 ; object events
+	db 12 ; object events
 	object_event  3,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerCoinVendorScript, -1
 	object_event 16,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerTMVendorScript, -1
 	object_event 18,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPrizeMonVendorScript, -1
@@ -460,3 +709,4 @@ BoardwalkGameCorner_MapEvents:
 	object_event 10,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerCooltrainerFScript, -1
 	object_event  5, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerGentlemanScript, -1
 	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPokefanM2Script, -1
+	object_event 14,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerDecorVendorScript, -1

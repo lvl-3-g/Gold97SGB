@@ -131,7 +131,24 @@ RuinsOfAlphResearchCenterScientist2Script:
 	end
 
 .GotAllUnown:
+	checkevent EVENT_GOT_UNOWN_DOLL_FROM_SCIENTIST
+	iffalse .GetDoll
 	writetext RuinsOfAlphResearchCenterScientist2Text_GotAllUnown
+	waitbutton
+	closetext
+	end
+	
+.GetDoll
+	writetext RuinsOfAlphResearchCenterScientist2Text_GetDoll
+	waitbutton
+	waitsfx
+	writetext GotUnownDollText
+	playsound SFX_ITEM
+	waitsfx
+;	waitbutton
+	setevent EVENT_GOT_UNOWN_DOLL_FROM_SCIENTIST
+	setevent EVENT_DECO_UNOWN_DOLL
+	writetext RuinsOfAlphResearchCenterScientist2Text_GetDoll2
 	waitbutton
 	closetext
 	end
@@ -202,6 +219,26 @@ MovementData_0x59276:
 	step UP
 	step UP
 	step_end
+	
+GotUnownDollText:
+	text "<PLAYER> got"
+	line "UNOWN DOLL!"
+	done
+	
+RuinsOfAlphResearchCenterScientist2Text_GetDoll:
+	text "Wow! You got every"
+	line "kind of UNOWN!"
+	para "Here's a small"
+	line "gift to celebrate"
+	cont "the occasion!"
+	done
+	
+RuinsOfAlphResearchCenterScientist2Text_GetDoll2:
+	text "It's a decorative"
+	line "UNOWN DOLL."
+	para "Set it up in your"
+	line "bedroom!"
+	done
 	
 RuinsOfAlphResearchCenterComputer2Text:
 	text "It's a computer"

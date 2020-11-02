@@ -27,6 +27,7 @@ BlueScriptRI:
 	special ReloadSpritesNoPalettes
 	disappear RAINBOWISLAND_BLUE
 	setevent EVENT_BLUE_ON_RAINBOW_ISLAND
+	setevent EVENT_DECO_SILVER_TROPHY; blue trophy
 	clearevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
 	pause 15
 	special FadeInQuickly
