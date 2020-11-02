@@ -69,3 +69,14 @@ Changelog
 - Ken is now in the game as player's brother
 - Title screen flame animation
 (Thanks to ZumiIsawhat? for assistance with this!)
+
+2.10
+- Title screen color adjustment
+- Fixed issue with decoration system
+- Traveling Doll salesman now wanders the world
+- Decorations available as Game Corner prizes
+- New music from earlier versions of the game
+- fixed minor tileset issues
+- fixed issue where scientist in Sanskrit Ruins would re appear
+- Trophies for defeating Elite 4 and Blue
+- Unown Doll as reward for catching all Unown

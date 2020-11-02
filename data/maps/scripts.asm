@@ -499,6 +499,8 @@ INCLUDE "maps/SunpointDocksCleanseTagHouse.asm"
 INCLUDE "maps/Kanto2Pokecenter1F.asm"
 INCLUDE "maps/KantoMart.asm"
 INCLUDE "maps/SkateboarderHouse.asm"
+INCLUDE "maps/Route105Route106Gate.asm"
+
 
 SECTION "Map Scripts 32", ROMX
 
@@ -515,7 +517,6 @@ INCLUDE "maps/KantoBattleClubB1F.asm"
 INCLUDE "maps/Route102WestGate.asm"
 INCLUDE "maps/Route102WestGate2F.asm"
 INCLUDE "maps/StandPoke.asm"
-INCLUDE "maps/Route105Route106Gate.asm"
 INCLUDE "maps/AlloyRoute107Gate.asm"
 INCLUDE "maps/AlloyRoute107Gate2F.asm"
 INCLUDE "maps/CharredSummit.asm"
