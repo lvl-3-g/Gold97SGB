@@ -55,7 +55,7 @@ NagoVillage_MapEvents:
 
 	db 3 ; warp events
 	warp_event  5,  4, NAGO_POKECENTER_1F, 1
-	warp_event 10, 15, NAGO_IMPOSTER_HOUSE, 1
+	warp_event 10, 15, NAGO_IMPOSTOR_HOUSE, 1
 	warp_event  5, 21, NAGO_CHARMANDER_HOUSE, 1
 
 	db 0 ; coord events

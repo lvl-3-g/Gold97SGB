@@ -13,7 +13,7 @@
 ;	const STANDCITY_BLOCKROCKET2
 ;	const STANDCITY_BLOCKROCKET3
 ;	const STANDCITY_BLOCKROCKET4
-	const STANDCITY_IMPOSTER
+	const STANDCITY_IMPOSTOR
 	const STANDCITY_HQBLOCKROCKET
 	const STANDCITY_NATIONALBLOCKROCKET
 
@@ -84,9 +84,9 @@ ImposterSceneScript:
 	writetext ImposterText1
 	waitbutton
 	closetext
-	moveobject STANDCITY_IMPOSTER, 29, 19
-	appear STANDCITY_IMPOSTER
-	applymovement STANDCITY_IMPOSTER, ImposterWalksDown
+	moveobject STANDCITY_IMPOSTOR, 29, 19
+	appear STANDCITY_IMPOSTOR
+	applymovement STANDCITY_IMPOSTOR, ImposterWalksDown
 	pause 10
 	opentext
 	writetext ImposterText2
@@ -106,8 +106,8 @@ ImposterSceneScript:
 	waitbutton
 	closetext
 	pause 10
-	applymovement STANDCITY_IMPOSTER, ImposterWalksUp
-	disappear STANDCITY_IMPOSTER
+	applymovement STANDCITY_IMPOSTOR, ImposterWalksUp
+	disappear STANDCITY_IMPOSTOR
 	setevent EVENT_JADE_FOREST_APPRENTICE
 	setscene SCENE_DEFAULT
 	playmusic MUSIC_KANTO_REGION
@@ -806,8 +806,8 @@ StandCity_MapEvents:
 
 
 	db 2 ; coord events
-	coord_event  34, 32, SCENE_STAND_CITY_IMPOSTER, ImposterIntro1
-	coord_event  35, 32, SCENE_STAND_CITY_IMPOSTER, ImposterIntro2
+	coord_event  34, 32, SCENE_STAND_CITY_IMPOSTOR, ImposterIntro1
+	coord_event  35, 32, SCENE_STAND_CITY_IMPOSTOR, ImposterIntro2
 
 	db 12 ; bg events
 	bg_event 36, 20, BGEVENT_READ, StandCitySign

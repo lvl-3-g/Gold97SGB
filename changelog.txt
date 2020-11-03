@@ -80,3 +80,7 @@ Changelog
 - fixed issue where scientist in Sanskrit Ruins would re appear
 - Trophies for defeating Elite 4 and Blue
 - Unown Doll as reward for catching all Unown
+
+2.11
+- Imposter Oak > Impostor Oak
+- minor text fixes

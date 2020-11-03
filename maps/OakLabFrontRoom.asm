@@ -273,14 +273,14 @@ DaisySpeechText2:
 	cont "a #MON CENTER!"
 	para "I'll also throw"
 	line "in a few"
-	para "#BALLs to"
+	para "# BALLS to"
 	line "help out."
 	done
 
 DaisySpeechText3:
 	text "But like Grandpa"
 	line "said, if you need"
-	para "more #BALLs,"
+	para "more # BALLS,"
 	line "you can find them"
 	para "at just about any"
 	line "MART."

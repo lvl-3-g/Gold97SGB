@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
-	const NAGOIMPOSTERHOUSE_FISHING_GURU
-	const NAGOIMPOSTERHOUSE_DIGLETT
+	const NAGOIMPOSTORHOUSE_FISHING_GURU
+	const NAGOIMPOSTORHOUSE_DIGLETT
 
 NagoImposterHouse_MapScripts:
 	db 0 ; scene scripts
@@ -19,7 +19,7 @@ NagoDiglett:
 	end
 
 NagoImposterHouseImposterText:
-	text "IMPOSTER OAK: Oh."
+	text "IMPOSTOR OAK: Oh."
 	para "It's you."
 	para "…"
 	para "I'm not here to"

@@ -8,7 +8,7 @@
 	const SHIP_ROCKET_5
 	const SHIP_BURGLAR
 	const SHIP_ITEMBALL
-	const SHIP_IMPOSTER
+	const SHIP_IMPOSTOR
 	const SHIP_ITEMBALL_2
 
 TeamRocketShipBase_MapScripts:
@@ -58,29 +58,29 @@ RocketGreetingsScript:
 	closetext
 	applymovement SHIP_ENTRANCE_1, Movement_StepDownFromMeShip
 	disappear SHIP_ENTRANCE_1
-	setscene SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTER
+	setscene SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTOR
 	end
 	
 ImposterAndCaptainScript:
-	showemote EMOTE_SHOCK, SHIP_IMPOSTER, 15
-	turnobject SHIP_IMPOSTER, DOWN
+	showemote EMOTE_SHOCK, SHIP_IMPOSTOR, 15
+	turnobject SHIP_IMPOSTOR, DOWN
 	opentext
 	writetext ImposterGreetingText
 	waitbutton
 	closetext
-	applymovement SHIP_IMPOSTER, ImposterWalksToMe
+	applymovement SHIP_IMPOSTOR, ImposterWalksToMe
 	opentext
 	writetext ImposterGreetingText2
 	waitbutton
 	closetext
-	turnobject SHIP_IMPOSTER, UP
+	turnobject SHIP_IMPOSTOR, UP
 	pause 15
 	opentext
 	writetext ImposterTellsCaptainText
 	waitbutton
 	closetext
 	pause 15
-	applymovement SHIP_IMPOSTER, ImposterWalksToCaptain
+	applymovement SHIP_IMPOSTOR, ImposterWalksToCaptain
 	opentext
 	writetext CaptainBeckons
 	waitbutton
@@ -177,8 +177,8 @@ CaptainRocketScript:
 	writetext CaptainRTellsImposterOff
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, SHIP_IMPOSTER, 15
-	turnobject SHIP_IMPOSTER, RIGHT
+	showemote EMOTE_SHOCK, SHIP_IMPOSTOR, 15
+	turnobject SHIP_IMPOSTOR, RIGHT
 	opentext
 	writetext ImposterOakIsShocked
 	waitbutton
@@ -193,9 +193,9 @@ CaptainRocketScript:
 	writetext ImposterOakIsShocked2
 	waitbutton
 	closetext
-	applymovement SHIP_IMPOSTER, ImposterLeavesRoom
+	applymovement SHIP_IMPOSTOR, ImposterLeavesRoom
 	playsound SFX_EXIT_BUILDING
-	disappear SHIP_IMPOSTER
+	disappear SHIP_IMPOSTOR
 	pause 5
 	turnobject SHIP_CAPTAIN_R, DOWN
 	opentext
@@ -470,11 +470,11 @@ CaptainRBeforeText:
 	done
 	
 CaptainRTellsImposterOff:
-	text "IMPOSTER OAK!"
+	text "IMPOSTOR OAK!"
 	done
 	
 ImposterOakIsShocked:
-	text "IMPOSTER OAK: Yes,"
+	text "IMPOSTOR OAK: Yes,"
 	line "sir!"
 	done
 	
@@ -486,14 +486,14 @@ CaptainRTellsImposterOff2:
 	done
 	
 ImposterOakIsShocked2:
-	text "IMPOSTER OAK: Aye,"
+	text "IMPOSTOR OAK: Aye,"
 	line "CAPTAIN!"
 	done
 	
 CaptainRFinishesSpeech:
 	text "…"
 	para "And I see you've"
-	line "met our IMPOSTER"
+	line "met our IMPOSTOR"
 	cont "OAK."
 	para "I know you're not"
 	line "fooled."
@@ -707,7 +707,7 @@ TeamRocketShipBase_MapEvents:
 
 	db 2 ; coord events
 	coord_event  3,  2, SCENE_DEFAULT, RocketGreetingsScript
-	coord_event 35, 21, SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTER, ImposterAndCaptainScript
+	coord_event 35, 21, SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTOR, ImposterAndCaptainScript
 
 	db 2 ; bg events
 	bg_event 29, 29, BGEVENT_READ, BasementDoorScript

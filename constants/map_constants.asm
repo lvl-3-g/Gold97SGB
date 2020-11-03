@@ -188,7 +188,7 @@ ENDM
 	map_const MOTOBU_PATH,                                    30,  9 ;  2
 	map_const ISEN_LAB_BACK,                            5,  4 ;  1
 	map_const ISEN_LAB_FRONT,                           20,  9 ;  2
-	map_const NAGO_IMPOSTER_HOUSE,                      5,  4 ;  2
+	map_const NAGO_IMPOSTOR_HOUSE,                      5,  4 ;  2
 	map_const NAGO_POKECENTER_1F,                       8,  4 ;  4
 	map_const NAGO_POKECENTER_2F_BETA,                  8,  4 ;  5
 	map_const ROUTE_109_POKECENTER_2F_BETA,                  8,  4 ;  9

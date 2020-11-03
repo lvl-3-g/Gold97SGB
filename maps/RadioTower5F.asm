@@ -89,7 +89,7 @@ GruntM30AfterBattleText:
 	
 ScientistRichSeenText:
 	text "What happened to"
-	line "IMPOSTER OAK?"
+	line "IMPOSTOR OAK?"
 	para "Well, he wasn't"
 	line "necessary to keep"
 	para "around since we"

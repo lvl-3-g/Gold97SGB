@@ -754,7 +754,7 @@ Text_OakDream:
 	cont "own #MON!"
 	para "There on the"
 	line "table are three"
-	cont "#BALLs."
+	cont "# BALLS."
 	para "Each of you,"
 	line "choose one to be"
 	para "your own partner"
@@ -931,7 +931,7 @@ Oak2DirectionsText1:
 	para "#MON. If you"
 	line "want to get some"
 	
-	para "#BALLs, you"
+	para "# BALLS, you"
 	line "should head"
 	
 	para "towards PAGOTA"

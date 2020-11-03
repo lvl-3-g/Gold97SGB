@@ -7,7 +7,7 @@
 	const TEAMROCKETBASEOFFICE_GRUNT3
 	const TEAMROCKETBASEOFFICE_GRUNT4
 	const TEAMROCKETBASEOFFICE_GRUNT5
-	const TEAMROCKETBASEOFFICE_IMPOSTER
+	const TEAMROCKETBASEOFFICE_IMPOSTOR
 	const TEAMROCKETBASEOFFICE_EXECUTIVE
 
 TeamRocketBaseOffice_MapScripts:
@@ -74,7 +74,7 @@ ExecutiveConfrontationScript:
 	closetext
 	applymovement TEAMROCKETBASEOFFICE_EXECUTIVE, ExecutiveLeavesOffice
 	disappear TEAMROCKETBASEOFFICE_EXECUTIVE
-	disappear TEAMROCKETBASEOFFICE_IMPOSTER
+	disappear TEAMROCKETBASEOFFICE_IMPOSTOR
 	setevent EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_1
 	setscene SCENE_TEAMROCKETBASEOFFICE_NOTHING
 	end
@@ -134,7 +134,7 @@ RocketBossRoomGrunt1Text:
 	done
 	
 RocketBossRoomGrunt2Text:
-	text "IMPOSTER OAK did a"
+	text "IMPOSTOR OAK did a"
 	line "great job"
 	para "convincing the"
 	line "people of STAND"

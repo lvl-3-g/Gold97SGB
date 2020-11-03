@@ -36,7 +36,7 @@ StandGymChuckScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_STORMBADGE
-	setmapscene STAND_CITY, SCENE_STAND_CITY_IMPOSTER
+	setmapscene STAND_CITY, SCENE_STAND_CITY_IMPOSTOR
 	checkcode VAR_BADGES
 ;	scall StandGymActivateRockets
 .FightDone:

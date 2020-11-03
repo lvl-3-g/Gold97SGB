@@ -92,7 +92,7 @@ BoardwalkGameCornerDecorVendor_LoopScript:
 	jump BoardwalkGameCornerDecorVendor_FinishScript
 	end
 
-.Carpet; COME_BACK2
+.Carpet
 	special DisplayCoinCaseBalance
 	loadmenu BoardwalkGameCornerCarpetVendorMenuHeader
 	verticalmenu
@@ -141,7 +141,7 @@ BoardwalkGameCornerDecorVendor_LoopScript:
 	jump BoardwalkGameCornerDecorVendor_FinishScript
 	end
 
-.Plant; COME_BACK2
+.Plant
 	special DisplayCoinCaseBalance
 	loadmenu BoardwalkGameCornerPlantVendorMenuHeader
 	verticalmenu

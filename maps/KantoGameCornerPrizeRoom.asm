@@ -85,7 +85,7 @@ KantoGameCornerDecorVendor_LoopScript:
 	jump KantoGameCornerDecorVendor_FinishScript
 	end
 
-.Console; COME_BACK2
+.Console;
 	special DisplayCoinCaseBalance
 	loadmenu KantoGameCornerConsoleVendorMenuHeader
 	verticalmenu
@@ -134,7 +134,7 @@ KantoGameCornerDecorVendor_LoopScript:
 	jump KantoGameCornerDecorVendor_FinishScript
 	end
 
-.BigDolls; COME_BACK2
+.BigDolls
 	special DisplayCoinCaseBalance
 	loadmenu KantoGameCornerBigDollVendorMenuHeader
 	verticalmenu

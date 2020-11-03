@@ -194,7 +194,7 @@ SCENE_FINISHED EQU 1
 	
 ;wTeamRocketShipBaseSceneID
 	const_def 1
-	const SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTER
+	const SCENE_TEAM_ROCKET_SHIP_BASE_IMPOSTOR
 	
 ;wRoute104SceneID
 	const_def 1
@@ -206,7 +206,7 @@ SCENE_FINISHED EQU 1
 	
 ;wStandCitySceneID
 	const_def 1
-	const SCENE_STAND_CITY_IMPOSTER
+	const SCENE_STAND_CITY_IMPOSTOR
 	
 ;wStandCityRocketHouseSceneID
 	const_def 1

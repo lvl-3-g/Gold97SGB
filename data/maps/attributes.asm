@@ -480,7 +480,7 @@ ENDM
 	map_attributes MeridianPathRyukyuGate, MERIDIAN_PATH_RYUKYU_GATE, $00, 0
 	map_attributes SeafoamGym, SEAFOAM_GYM, $09, 0
 	map_attributes GardenerGeoffDaitoHouse, GARDENER_GEOFF_DAITO_HOUSE, $00, 0
-	map_attributes NagoImposterHouse, NAGO_IMPOSTER_HOUSE, $00, 0
+	map_attributes NagoImposterHouse, NAGO_IMPOSTOR_HOUSE, $00, 0
 	map_attributes RyukyuOldCoupleHouse, RYUKYU_OLD_COUPLE_HOUSE, $00, 0
 	map_attributes NagoPokecenter1F, NAGO_POKECENTER_1F, $00, 0
 	map_attributes NagoPokecenter2FBeta, NAGO_POKECENTER_2F_BETA, $00, 0

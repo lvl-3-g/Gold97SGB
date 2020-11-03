@@ -9,7 +9,7 @@
 	const TEAMROCKETBASEB1F_SCIENTISTROSS
 	const TEAMROCKETBASEB1F_SCIENTISTMITCH
 	const TEAMROCKETBASEB1F_SILVER
-	const TEAMROCKETBASEB1F_IMPOSTER
+	const TEAMROCKETBASEB1F_IMPOSTOR
 	const TEAMROCKETBASEB1F_RAITORA
 
 TeamRocketBaseB1F_MapScripts:
@@ -40,22 +40,22 @@ ImposterCompEncounter:
 	writetext YoureNotOakCompScene
 	waitbutton
 	closetext
-	showemote EMOTE_SHOCK, TEAMROCKETBASEB1F_IMPOSTER, 20
-	turnobject TEAMROCKETBASEB1F_IMPOSTER, LEFT
-	applymovement TEAMROCKETBASEB1F_IMPOSTER, ImposterJumpsBack
+	showemote EMOTE_SHOCK, TEAMROCKETBASEB1F_IMPOSTOR, 20
+	turnobject TEAMROCKETBASEB1F_IMPOSTOR, LEFT
+	applymovement TEAMROCKETBASEB1F_IMPOSTOR, ImposterJumpsBack
 	pause 5
 	opentext
 	writetext HowDidYouKidsGetDownHereText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB1F_IMPOSTER, ImposterRunsOff
+	applymovement TEAMROCKETBASEB1F_IMPOSTOR, ImposterRunsOff
 	opentext
 	writetext SilverHeyWaitWhatsGoingOnText
 	waitbutton
 	closetext
 	applymovement TEAMROCKETBASEB1F_SILVER, ImposterRunsOff
 	disappear TEAMROCKETBASEB1F_SILVER
-	disappear TEAMROCKETBASEB1F_IMPOSTER
+	disappear TEAMROCKETBASEB1F_IMPOSTOR
 	setscene SCENE_TEAMROCKETBASEB1F_NOTHING
 	setevent EVENT_JADE_FOREST_LASS
 	end
@@ -592,7 +592,7 @@ WowItsShuttingDown:
 	done
 	
 HowDidYouKidsGetDownHereText:
-	text "IMPOSTER OAK: Hey!"
+	text "IMPOSTOR OAK: Hey!"
 	line "How'd you kids get"
 	cont "down here!"
 	para "No one who is un-"

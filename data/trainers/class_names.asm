@@ -34,7 +34,7 @@ TrainerClassNames::
 	db "GENTLEMAN@"
 	db "SKIER@"
 	db "TEACHER@"
-	db "IMPOSTER@"
+	db "IMPOSTOR@"
 	db "BUG CATCHER@"
 	db "FISHER@"
 	db "SWIMMER♂@"

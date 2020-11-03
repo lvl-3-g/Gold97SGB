@@ -348,7 +348,7 @@ ImBehindYouText:
 StoveText:
 	text "Mom's specialty!"
 
-	para "FROSTPOINT VOLCANO"
+	para "SUNPOINT VOLCANO"
 	line "BURGER!"
 	done
 
