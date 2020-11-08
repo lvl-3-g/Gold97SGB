@@ -938,7 +938,7 @@ _RocketRadioText2::
 
 _RocketRadioText3::
 	text_start
-	line "After three years"
+	line "After a long year"
 	done
 
 _RocketRadioText4::
@@ -958,30 +958,30 @@ _RocketRadioText6::
 
 _RocketRadioText7::
 	text_start
-	line "GIOVANNI! @"
+	line "#MON! @"
 	text_pause
 	text "Can you"
 	done
 
 _RocketRadioText8::
 	text_start
-	line "hear?@"
+	line "hear us?@"
 	text_pause
-	text " We did it!"
+	text " "
 	done
 
 _RocketRadioText9::
 	text_start
 	line "@"
 	text_pause
-	text "Where is our Boss?"
+	text "You will soon be"
 	done
 
 _RocketRadioText10::
 	text_start
 	line "@"
 	text_pause
-	text "Is he listening?"
+	text "under our control!"
 	done
 
 _AskFloorElevatorText::

@@ -1,6 +1,6 @@
 _ResetClock:
 	call ClearTilemap
-	call GetMemSGBLayout
+;	call GetMemSGBLayout
 	call LoadStandardFont
 	call LoadFontsExtra
 	ld de, MUSIC_MAIN_MENU
