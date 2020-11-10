@@ -390,10 +390,9 @@ AcademyNotebookText3:
 	para "The next page"
 	line "is… Blank!"
 
-	para "Boy: E-he-he…"
-
-	para "I haven't written"
-	line "anymore…"
+	para "Girl: Looks like"
+	line "that's all I"
+	cont "wrote!"
 	done
 
 AcademyStickerMachineText:

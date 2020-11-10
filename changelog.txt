@@ -89,3 +89,7 @@ Changelog
 - removed unfinished script for permanently removing smash rocks in Sunpoint
 - fixed graphical glitch on clock reset screen when playing on CGB
 - fixed Team Rocket radio takeover dialogue
+
+2.13
+- minor text fixes on route 101 and in trainer's school
+- added more mom phone dialogue

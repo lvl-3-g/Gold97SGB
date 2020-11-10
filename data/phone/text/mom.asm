@@ -29,6 +29,70 @@ MomPhoneGenericAreaText:
 	line "there. That's kind"
 	cont "of neat, <PLAYER>."
 	done
+	
+MomPhoneKantoText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "There's so much to"
+	line "do there!"
+	done
+	
+MomPhoneKikaiText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "Is the CALDERA as"
+	line "big as everyone"
+	cont "says it is?"
+	done
+	
+MomPhoneRyukyuText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "Are you sure you"
+	line "aren't just on a"
+	cont "vacation?"
+	done
+	
+MomPhoneIejimaText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "Isn't there a huge"
+	line "waterfall there?"
+	para "Take pictures!"
+	done
+
+MomPhoneFrostpointText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "You have a jacket,"
+	line "right?"
+	done
+	
+MomPhoneKobanText:
+	text "Wow! You're on"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "Did you see the"
+	line "DRAGON'S MAW?"
+	para "Sounds scary!"
+	done
 
 MomPhoneSilentText:
 	text "What? You're in"
@@ -38,6 +102,17 @@ MomPhoneSilentText:
 
 	para "Come see your MOM"
 	line "sometime!"
+	done
+	
+MomPhoneAmamiText:
+	text "Wow! You're in"
+	line "@"
+	text_ram wStringBuffer3
+	text "?"
+
+	para "I've never visited"
+	line "the ISLANDS."
+	para "Sounds exciting!"
 	done
 
 MomPhoneCrownText:

@@ -35,7 +35,51 @@ MomPhonePalette1:
 	ifequal GROUP_TEKNOS_CITY, .teknos
 	ifequal GROUP_SUNPOINT_CITY, .sunpoint
 	ifequal GROUP_STAND_CITY, .stand
+	ifequal GROUP_SILENT_HILLS, .crown
+	ifequal GROUP_AMAMI_TOWN, .amami
+	ifequal GROUP_KANTO_REGION, .kanto
+	ifequal GROUP_KOBAN_ISLAND, .koban
+	ifequal GROUP_FROSTPOINT_TOWN, .frostpoint
+	ifequal GROUP_BLUE_FOREST, .frostpoint
+	ifequal GROUP_IEJIMA_TOWN, .iejima
+	ifequal GROUP_RYUKYU_CITY, .ryukyu
+	ifequal GROUP_KIKAI_VILLAGE, .kikai
 	writetext MomPhoneGenericAreaText
+	promptbutton
+	sjump MomSavingMoney
+	
+.kikai
+	writetext MomPhoneKikaiText
+	promptbutton
+	sjump MomSavingMoney	
+	
+.ryukyu
+	writetext MomPhoneRyukyuText
+	promptbutton
+	sjump MomSavingMoney	
+	
+.iejima
+	writetext MomPhoneIejimaText
+	promptbutton
+	sjump MomSavingMoney	
+	
+.frostpoint
+	writetext MomPhoneFrostpointText
+	promptbutton
+	sjump MomSavingMoney	
+	
+.koban
+	writetext MomPhoneKobanText
+	promptbutton
+	sjump MomSavingMoney	
+	
+.kanto
+	writetext MomPhoneKantoText
+	promptbutton
+	sjump MomSavingMoney	
+
+.amami
+	writetext MomPhoneAmamiText
 	promptbutton
 	sjump MomSavingMoney
 
