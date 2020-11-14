@@ -122,13 +122,12 @@ Route112StandGateOfficerScript:
 ;	setevent EVENT_CLEARED_RADIO_TOWER
 ;	setevent EVENT_BEAT_CHUCK
 ;	setevent EVENT_JADE_FOREST_APPRENTICE
-;	setevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	jumptextfaceplayer Route112StandGateOfficerText
 
 Route112StandGateGrampsScript:
 	faceplayer
 	opentext
-	checkflag EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .RocketsGoneRoute102Gate
 	writetext StandCitySomethingIsUpText
 	waitbutton

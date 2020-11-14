@@ -44,7 +44,7 @@ Route105Antidote:
 
 
 Route105HiddenPotion:
-	hiddenitem POTION, EVENT_ROUTE_105_HIDDEN_POTION
+	hiddenitem SUPER_POTION, EVENT_ROUTE_105_HIDDEN_POTION
 
 
 

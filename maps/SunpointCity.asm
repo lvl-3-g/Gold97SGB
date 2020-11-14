@@ -166,7 +166,7 @@ CrownHouse2SignText:
 SunpointPhotoStudioSignText:
 	text "TRAINER TIPS"
 	para "Certain HM moves"
-	line "require BADGEs to"
+	line "require BADGES to"
 	para "use outside of"
 	line "battle!"
 	para "The moves can"

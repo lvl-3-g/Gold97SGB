@@ -242,7 +242,7 @@ Oak2PhoneRocketsText:
 	para "Keep up the great"
 	line "work with catching"
 	para "#MON and the"
-	line "LEAGUE CHALLENGE!"
+	line "LEAGUE challenge!"
 	done
 	
 Oak2AfterRadioTower:

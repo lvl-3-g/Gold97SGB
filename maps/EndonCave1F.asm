@@ -99,8 +99,9 @@ EndonCave1FRichGuyText_GotNugget:
 	
 PokemaniacCalvinSeenText:
 	text "I spend all my"
-	line "time in this cave,"
-	cont "rasing my #MON."
+	line "time raising my"
+	para "#MON in this"
+	line "cave."
 	para "I wish to battle"
 	line "with you."
 	done

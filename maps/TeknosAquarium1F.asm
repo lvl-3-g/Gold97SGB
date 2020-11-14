@@ -137,6 +137,8 @@ TeknosAquariumLeftScene:
 	setscene SCENE_TEKNOS_AQUARIUM_1F_NOTHING
 	setevent EVENT_WHITNEY_2_AQUARIUM
 	clearevent EVENT_WHITNEY_1_AQUARIUM
+	appear AQUA1F_WHITNEYAQUA2
+	disappear AQUA1F_WHITNEYAQUA1
 	end
 
 TeknosAquariumUpLeftScene:
@@ -161,6 +163,8 @@ TeknosAquariumUpLeftScene:
 	setscene SCENE_TEKNOS_AQUARIUM_1F_NOTHING
 	setevent EVENT_WHITNEY_2_AQUARIUM
 	clearevent EVENT_WHITNEY_1_AQUARIUM
+	appear AQUA1F_WHITNEYAQUA2
+	disappear AQUA1F_WHITNEYAQUA1
 	end
 TeknosAquariumUpRightScene:
 	pause 15
@@ -184,6 +188,8 @@ TeknosAquariumUpRightScene:
 	setscene SCENE_TEKNOS_AQUARIUM_1F_NOTHING
 	setevent EVENT_WHITNEY_2_AQUARIUM
 	clearevent EVENT_WHITNEY_1_AQUARIUM
+	appear AQUA1F_WHITNEYAQUA2
+	disappear AQUA1F_WHITNEYAQUA1
 	end
 	
 WhitneyAquaScript:

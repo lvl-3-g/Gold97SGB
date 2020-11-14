@@ -370,10 +370,9 @@ CamperRolandBeatenText:
 	done
 
 CamperRolandAfterText:
-	text "The farther up"
-	line "this route you go,"
-	para "the more snow"
-	line "there is."
+	text "A snowy hill is"
+	line "such a pleasant"
+	cont "camping location!"
 	done
 
 PicnickerLiz1SeenText:
@@ -496,7 +495,7 @@ Route112_MapEvents:
 	object_event  8, 41, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperRoland, -1
 	object_event  6, 30, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerPicnickerLiz1, -1
 	object_event  2, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route112GreatBall, EVENT_ROUTE_112_GREAT_BALL
-	object_event 14, 12, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_112_FRIEDA_OF_FRIDAY
+	object_event 14, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_112_FRIEDA_OF_FRIDAY
 	object_event 16, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route112Repel, EVENT_ROUTE_112_REPEL
 	object_event 10, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112OfficerScript, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
 	object_event 11, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker1Script, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM

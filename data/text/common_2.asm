@@ -84,8 +84,8 @@ _AskStrengthText::
 	done
 
 _BouldersMoveText::
-	text "Boulders may now"
-	line "be moved!"
+	text "Heavy objects may"
+	line "now be moved!"
 	done
 
 _BouldersMayMoveText::

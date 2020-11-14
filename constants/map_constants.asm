@@ -45,7 +45,6 @@ ENDM
 	map_const JADE_FOREST_SNORLAX_ROOM,                                 5,  8 ;  6
 	map_const DAY_CARE,                                     5,  4 ; 22
 	map_const ALLOY_ROUTE_107_GATE,						5,  4 ; 15
-	map_const ALLOY_ROUTE_107_GATE_2F,						4,  3 ; 15
 	map_const FIGHTING_DOJO,                                5,  6 ;  3
 	map_const ROUTE_109_POKECENTER_1F,                       8,  4 ;  8
 
@@ -250,7 +249,6 @@ ENDM
 	map_const EARLS_MUSEUM,                                  8,  4 ; 11
 	map_const ROUTE_102_GAME_HOUSE,                        4,  4 ;  8
 	map_const ROUTE_102_WEST_GATE,                        5,  4 ; 18
-	map_const ROUTE_102_WEST_GATE_2F,                     4,  3 ; 18
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 81
 
 	newgroup                                                      ; 11
@@ -279,6 +277,9 @@ ENDM
 	map_const RADIO_TOWER_6F,                               4,  4 ; 21
 	map_const WESTPORT_UNDERGROUND,                       15, 18 ; 45
 	map_const WESTPORT_GYM,                                   5,  8 ;  5
+	map_const ROUTE_101_PAGOTA_GATE_2F,                      4,  3 ; 11
+	map_const ROUTE_102_WEST_GATE_2F,                     4,  3 ; 18
+	map_const ALLOY_ROUTE_107_GATE_2F,						4,  3 ; 15
 
 	newgroup                                                      ; 12
 
@@ -481,7 +482,6 @@ ENDM
 	map_const DAY_OF_WEEK_SIBLINGS_HOUSE,                   4,  4 ; 11
 	map_const SILENT_POKECENTER_1F,                       8,  4 ;  9
 	map_const ROUTE_101_PAGOTA_GATE,                         5,  4 ; 11
-	map_const ROUTE_101_PAGOTA_GATE_2F,                      4,  3 ; 11
 	map_const SILENT_NORTH,                                    10,  5 ;  2
 
 	newgroup                                                      ; 25

@@ -97,19 +97,19 @@ NihonWaterWildMons:
 
 	map_id ENDON_CAVE_1F
 	db 4 percent ; encounter rate
-	db 21, MAGIKARP
+	db 17, MAGIKARP
 	db 18, MAGIKARP
 	db 5, MAGIKARP
 	
 	map_id ENDON_CAVE_2F
 	db 4 percent ; encounter rate
-	db 21, MAGIKARP
+	db 17, MAGIKARP
 	db 18, MAGIKARP
 	db 5, MAGIKARP
 	
 	map_id ENDON_CAVE_RUINS_CONNECTION
 	db 4 percent ; encounter rate
-	db 21, MAGIKARP
+	db 17, MAGIKARP
 	db 18, MAGIKARP
 	db 5, MAGIKARP
 	

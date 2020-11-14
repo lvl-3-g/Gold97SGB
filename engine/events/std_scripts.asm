@@ -460,7 +460,6 @@ InitializeEventsScript:
 	setevent EVENT_TEAM_ROCKET_BASE_B1F_EXECUTIVE
 	setevent EVENT_TEAM_ROCKET_BASE_B1F_DRAGONITE
 	setevent EVENT_RIVAL_TEAM_ROCKET_BASE; used to make suicune disappear
-;	setevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
 ;	setevent EVENT_GOT_FUEL_LINE
 	setevent EVENT_RIVAL_CROWN_CITY
 	setevent EVENT_ENTEI_APPEARS; used to make entei disappear

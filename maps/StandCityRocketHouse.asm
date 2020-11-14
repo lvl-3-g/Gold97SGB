@@ -328,7 +328,7 @@ SilverActuallyShowsUpNow2:
 	line "strong, too!"
 	para "It's time for me"
 	line "to show TEAM"
-	para "ROCKET who's boss!"
+	cont "ROCKET who's boss!"
 	done
 	
 SilverActuallyShowsUpNow3:

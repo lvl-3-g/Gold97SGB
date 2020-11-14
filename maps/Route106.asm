@@ -216,10 +216,10 @@ Route106FruitTree:
 	fruittree FRUITTREE_ROUTE_106
 
 Route106Potion:
-	itemball POTION
+	itemball SUPER_POTION
 
 Route106PokeBall:
-	itemball POKE_BALL
+	itemball GREAT_BALL
 	
 Route113MovementData_DayCareManWalksBackInside:
 	slow_step LEFT
@@ -269,6 +269,9 @@ SchoolboyChadSoManyTestsText:
 	line "live right here!"
 	para "I've never seen"
 	line "one though."
+	para "I'd definitely"
+	line "let you know if"
+	cont "I ever saw any."
 	done
 
 FledglingPaulsonSeenText:

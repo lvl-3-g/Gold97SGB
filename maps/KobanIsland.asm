@@ -33,7 +33,6 @@ OaksLabSign:
 	jumptext OaksLabSignText
 
 BluesHouseSign:
-;	clearevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	jumptext BluesHouseSignText
 	
 KobanIslandClairScript:

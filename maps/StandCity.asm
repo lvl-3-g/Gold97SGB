@@ -485,6 +485,9 @@ BlockRocket1BeforeText:
 	line "south of here!"
 	para "You should just"
 	line "stay in town!"
+	para "You don't want to"
+	line "miss our celebrity"
+	cont "speaker!"
 	done
 
 BlockRocket1AfterText:

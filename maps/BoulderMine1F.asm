@@ -46,7 +46,7 @@ BoulderMine1FGreatBall:
 	itemball GREAT_BALL
 
 BoulderMine1FXAttack:
-	itemball X_ATTACK
+	itemball SHARP_HORNS
 
 BoulderMine1FPotion:
 	itemball POTION

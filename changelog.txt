@@ -93,3 +93,27 @@ Changelog
 2.13
 - minor text fixes on route 101 and in trainer's school
 - added more mom phone dialogue
+
+2.20
+- Can no longer ride bike and skateboard on second floor of gates
+- capitalization for "LEAGUE challenge" has been made consistent
+- stats for Madame have been boosted slightly
+- "Boulders may now be moved!" changed to "Heavy objects may now be moved!"
+- Collision issue in Aquarium 1F has been fixed
+- Rival battle in Stand City now has Raitora instead of Kotora
+- Wild Magikarp levels in Endon Cave have been decreased slightly
+- Apricorn balls now function properly
+- Minor text fixes in Alloy Cafe
+- Capitalization issue fixed with Elder in Alloy City
+- NPC who tells schedule of Fast Ship doesn't appear until Fuel line is fixed
+- Boulder Mine 1F item ball is now Sharp Horns instead of X Attack
+- All instances of "BADGEs" is now "BADGES"
+- Spelling issue "rasing" fixed to "raising" in Endon Cave
+- Spelling issue "though" fixed to "through" on Route 104
+- Route 105 hidden item changed from Potion to Super Potion
+- Route 106 Potion changed to Super Potion, Poke Ball changed to Great Ball
+- Camper dialogue on Route 112 changed
+- Issue where old man in Stand City gate said Pokemon were feeling better early has been fixed
+- Additional dialogue added to Rocket blocking route south of Stand City
+- Issue where Whitney would move back to doorway in Aquarium fixed
+- Unobtainable items in Victory Road 1F have been relocated
