@@ -5,6 +5,7 @@
 	const WEATHEREDBIKER4
 	const WEATHEREDOFFICER
 	const WEATHEREDOFFICER2
+	const WEATHEREDTREE
 
 WeatheredTrail_MapScripts:
 	db 0 ; scene scripts
@@ -153,6 +154,10 @@ WeatheredTrailHiddenRareCandy:
 
 WeatheredTrailHiddenEnergyWall:
 	hiddenitem ENERGY_WALL, EVENT_WEATHERED_TRAIL_HIDDEN_ENERGY_WALL
+	
+TatsugoPathTree:
+	fruittree FRUITTREE_TATSUGO_PATH
+	
 
 WeatheredTrail_MapEvents:
 	db 0, 0 ; filler
@@ -169,10 +174,11 @@ WeatheredTrail_MapEvents:
 	bg_event 35,  8, BGEVENT_ITEM, WeatheredTrailHiddenRareCandy
 	bg_event 29, 17, BGEVENT_ITEM, WeatheredTrailHiddenEnergyWall
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 11, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerBikerBlaze, EVENT_IEJIMA_TOWN_FIXED
 	object_event 47, 13, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBikerRafael, EVENT_IEJIMA_TOWN_FIXED
 	object_event 15, 12, SPRITE_BIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBikerColton, EVENT_IEJIMA_TOWN_FIXED
 	object_event 31, 12, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerBikerJermaine, EVENT_IEJIMA_TOWN_FIXED
 	object_event 11, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WeatheredOfficer1, EVENT_IEJIMA_TOWN_NOT_FIXED
 	object_event 14, 10, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WeatheredOfficer2, EVENT_IEJIMA_TOWN_NOT_FIXED
+	object_event  9, 14, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TatsugoPathTree, -1

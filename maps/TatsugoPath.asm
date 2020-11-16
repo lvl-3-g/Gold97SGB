@@ -4,7 +4,6 @@
 	const TP_SNERD
 	const TP_SAILOR
 	const TP_ITEMBALL
-	const TP_TREE
 
 TatsugoPath_MapScripts:
 	db 0 ; scene scripts
@@ -22,9 +21,7 @@ TrainerSailorEugene:
 	closetext
 	end
 	
-TatsugoPathTree:
-	fruittree FRUITTREE_TATSUGO_PATH
-	
+
 
 SailorEugeneSeenText:
 	text "I just got back"
@@ -182,10 +179,9 @@ TatsugoPath_MapEvents:
 	bg_event 52, 10, BGEVENT_READ, KikaiStraitSign
 	bg_event  4, 15, BGEVENT_ITEM, TatsugoPathHiddenPPUP
 
-	db 6 ; object events
+	db 5 ; object events
 	object_event 19,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTeacherHolly, -1
 	object_event 19, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerInstrMoshe, -1
 	object_event 35,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerSNNorton, -1
 	object_event 47, 12, SPRITE_SAILOR, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSailorEugene, -1
 	object_event 43, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TPItemball, EVENT_TATSUGO_PATH_ITEMBALL
-	object_event 51,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TatsugoPathTree, -1

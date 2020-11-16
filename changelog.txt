@@ -121,6 +121,9 @@ Changelog
 2.21
 - Geodude and Rhyhorn line can now learn Rock Slide via level up
 - fixed issue where Diato Ranch and Great East Strait had no wild water encounters
-- fixed issue where status issues wouldn't affect catch rate of wild mons
+- fixed issue where status effects wouldn't affect catch rate of wild mons
 - changed dialogue for trainer who heals pokemon on Mt Fuji
 - improved cutscene when scientist revives fossil Pokemon
+
+2.22
+- moved a berry tree from Tatsugo Path to Weathered Trail due to outdoor sprite limitations
