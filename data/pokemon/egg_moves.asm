@@ -204,7 +204,6 @@ TentacoolEggMoves:
 
 GeodudeEggMoves:
 	db MEGA_PUNCH
-	db ROCK_SLIDE
 	db -1 ; end
 
 PonittleEggMoves:
@@ -320,7 +319,6 @@ KoffingEggMoves:
 RhyhornEggMoves:
 	db CRUNCH
 	db REVERSAL
-	db ROCK_SLIDE
 	db THRASH
 	db PURSUIT
 	db COUNTER

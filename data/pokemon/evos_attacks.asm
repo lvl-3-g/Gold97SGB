@@ -1008,6 +1008,7 @@ GeodudeEvosAttacks:
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 26, HARDEN
+	db 29, ROCK_SLIDE
 	db 31, MEGA_PUNCH
 	db 36, EARTHQUAKE
 	db 41, EXPLOSION
@@ -1025,6 +1026,7 @@ GravelerEvosAttacks:
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 27, HARDEN
+	db 31, ROCK_SLIDE
 	db 34, MEGA_PUNCH
 	db 41, EARTHQUAKE
 	db 48, EXPLOSION
@@ -1547,6 +1549,7 @@ RhyhornEvosAttacks:
 	db 1, TAIL_WHIP
 	db 13, STOMP
 	db 19, FURY_ATTACK
+	db 24, ROCK_SLIDE
 	db 31, SCARY_FACE
 	db 37, HORN_DRILL
 	db 49, TAKE_DOWN
@@ -1561,6 +1564,7 @@ RhydonEvosAttacks:
 	db 1, FURY_ATTACK
 	db 13, STOMP
 	db 19, FURY_ATTACK
+	db 24, ROCK_SLIDE
 	db 31, SCARY_FACE
 	db 37, HORN_DRILL
 	db 54, TAKE_DOWN

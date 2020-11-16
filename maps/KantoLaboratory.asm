@@ -41,20 +41,52 @@ KantoLaboratoryFossilScientist:
 	closetext
 	pause 15
 	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine5
+	pause 15
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	pause 15
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine6
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine7
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton
@@ -94,20 +126,52 @@ KantoLaboratoryFossilScientist:
 	closetext
 	pause 15
 	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine5
+	pause 15
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	pause 15
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine6
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine7
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton
@@ -147,20 +211,52 @@ KantoLaboratoryFossilScientist:
 	closetext
 	pause 15
 	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine1
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine2
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
 	playsound SFX_BOOT_PC
 	waitsfx
 	pause 15
 	playsound SFX_POTION
 	waitsfx
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine3
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
 	playsound SFX_POKEBALLS_PLACED_ON_TABLE
 	waitsfx
 	pause 15
-	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine4
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine5
+	pause 15
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	playsound SFX_MEGA_PUNCH
+	earthquake 80
+	special FadeOutPalettes
+	special FadeInPalettes
+	waitsfx
+	pause 15
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine6
+	playsound SFX_ENTER_DOOR
+	disappear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	pause 80
+	playsound SFX_ENTER_DOOR
+	moveobject KANTO_LABORATORY_FOSSIL_SCIENTIST, 2, 0
+	appear KANTO_LABORATORY_FOSSIL_SCIENTIST
+	applymovement KANTO_LABORATORY_FOSSIL_SCIENTIST, ScientistGoesToMachine7
 	opentext
 	writetext ScientistHereYouGoText
 	waitbutton
@@ -192,20 +288,27 @@ KantoLaboratoryBookshelf:
 	
 ScientistGoesToMachine1:
 	step UP
-	step LEFT
-	step LEFT
-	turn_head UP
+	step UP
+	step UP
 	step_end
 	
 ScientistGoesToMachine2:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
 	turn_head UP
 	step_end
 	
 ScientistGoesToMachine3:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
+	step_end
+	
+ScientistGoesToMachine4:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -213,11 +316,22 @@ ScientistGoesToMachine3:
 	turn_head UP
 	step_end
 	
-ScientistGoesToMachine4:
+ScientistGoesToMachine5:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+	
+ScientistGoesToMachine6:
+	step LEFT
+	step UP
+	step_end
+	
+ScientistGoesToMachine7:
 	step DOWN
-	step RIGHT
-	step RIGHT
-	turn_head DOWN
+	step DOWN
+	step DOWN
 	step_end
 	
 KantoLaboratoryGentlemanText:
@@ -352,6 +466,6 @@ KantoLaboratory_MapEvents:
 	bg_event  4, 13, BGEVENT_READ, KantoLaboratoryBookshelf
 
 	db 3 ; object events
-	object_event  2,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryFossilScientist, -1
+	object_event  2,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryFossilScientist, EVENT_SCIENTIST_SEQUENCE
 	object_event 17,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryScientist1Script, -1
 	object_event 16, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryGentlemanScript, -1

@@ -116,5 +116,17 @@ SWIslandsWaterWildMons:
 	db 38, TENTACOOL
 	db 40, STARYU
 	db 42, OSUNFISH
+	
+	map_id GREAT_EAST_STRAIT
+	db 3 percent 
+	db 43, OSUNFISH
+	db 43, TENTACRUEL
+	db 45, ANCHORAGE
+	
+	map_id DAITO_RANCH
+	db 2 percent 
+	db 43, OSUNFISH
+	db 43, TENTACOOL
+	db 45, TENTACRUEL
 
 	db -1 ; end

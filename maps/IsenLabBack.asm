@@ -36,7 +36,7 @@ MewtwoScript:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	setflag ENGINE_GOT_SHUCKIE_TODAY
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
-	loadwildmon MEWTWO, 40
+	loadwildmon MEWTWO, 50
 	startbattle
 	disappear ISEN_LAB_BACK_MEWTWO
 	reloadmapafterbattle

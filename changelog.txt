@@ -117,3 +117,10 @@ Changelog
 - Additional dialogue added to Rocket blocking route south of Stand City
 - Issue where Whitney would move back to doorway in Aquarium fixed
 - Unobtainable items in Victory Road 1F have been relocated
+
+2.21
+- Geodude and Rhyhorn line can now learn Rock Slide via level up
+- fixed issue where Diato Ranch and Great East Strait had no wild water encounters
+- fixed issue where status issues wouldn't affect catch rate of wild mons
+- changed dialogue for trainer who heals pokemon on Mt Fuji
+- improved cutscene when scientist revives fossil Pokemon
