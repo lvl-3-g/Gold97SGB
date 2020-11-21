@@ -159,12 +159,12 @@ PokemonCries::
 	mon_cry CRY_HAPPA,  -$010,  $0b0 ; HAPPA
 	mon_cry CRY_HAPPA,  -$059,  $160 ; BLOSSOMOLE
 	mon_cry CRY_HAPPA,  -$0b7,  $200 ; BLOSSOMITE
-	mon_cry CRY_FLAMBEAR,  -$210,  $0c0 ; FLAMBEAR
-	mon_cry CRY_FLAMBEAR,   $06d,  $160 ; VOLBEAR
-	mon_cry CRY_DYNABEAR,  $46c,  $0e8 ; DYNABEAR
-	mon_cry CRY_CRUISEAL,    $3fe,  $068 ; CRUISEAL
-	mon_cry CRY_CRUISEAL,    $2ce,  $0b8 ; AQUALLO
-	mon_cry CRY_CRUISEAL,   -$010,  $0c0 ; AQUARIUS
+	mon_cry CRY_MARILL,      $0a0,  $080 ; FLAMBEAR
+	mon_cry CRY_CRUISEAL,      $2f0,  $0a0 ; VOLBEAR
+	mon_cry CRY_CRUISEAL,      $de0,  $1a0 ; DYNABEAR
+	mon_cry CRY_MANTINE,     $f90,  $090 ; CRUIZE
+	mon_cry CRY_GOLEM,       $300,  $0f0 ; AQUALLO
+	mon_cry CRY_CRUISEAL,     -$010,  $0c0 ; AQUARIUS
 	mon_cry CRY_GOLEM,       $060,  $0c0 ; TANG
 	mon_cry CRY_GOLEM,      -$010,  $1a0 ; GELANIA
 	mon_cry CRY_HOOTHOOT,    $091,  $0d8 ; HOOTHOOT
@@ -197,9 +197,9 @@ PokemonCries::
 	mon_cry CRY_AIPOM,      -$051,  $0e8 ; AIPOM
 	mon_cry CRY_CATERPIE,   -$051,  $0e8 ; KINGOLD
 	mon_cry CRY_SUNFLORA,   -$020,  $180 ; SUNFLORA
-	mon_cry CRY_CRUISEAL,    $093,  $0af ; OSUNFISH
-	mon_cry CRY_MADAME,    $112,  $0e8 ; ANCHORAGE
-	mon_cry CRY_CRUISEAL,   -$051,  $0e8 ; GROTESS
+	mon_cry CRY_QWILFISH,    $043,  $050 ; OSUNFISH
+	mon_cry CRY_MADAME,      $8f0,  $100 ; ANCHORAGE
+	mon_cry CRY_CRUISEAL,     -$051,  $0e8 ; GROTESS
 	mon_cry CRY_AIPOM,       $0a2,  $140 ; ESPEON
 	mon_cry CRY_VENONAT,    -$0e9,  $0f0 ; UMBREON
 	mon_cry CRY_MARILL,     -$01f,  $180 ; MURKROW

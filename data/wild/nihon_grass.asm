@@ -71,7 +71,7 @@ NihonGrassWildMons:
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, FARFETCH_D
-	db 2, RATTATA
+	db 2, CATERPIE
 	db 3, RINRING
 	db 3, RINRING
 	; day
@@ -79,7 +79,7 @@ NihonGrassWildMons:
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, FARFETCH_D
-	db 2, RATTATA
+	db 2, CATERPIE
 	db 3, RINRING
 	db 3, RINRING
 	; nite
@@ -87,7 +87,7 @@ NihonGrassWildMons:
 	db 2, RATTATA
 	db 3, HOOTHOOT
 	db 3, FARFETCH_D
-	db 2, RATTATA
+	db 2, WEEDLE
 	db 3, RINRING
 	db 3, RINRING
 	
@@ -288,29 +288,29 @@ NihonGrassWildMons:
 	map_id BOULDER_MINE_B5F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 10, GEODUDE
-	db 12, SANDSHREW
+	db 10, ZUBAT
+	db 12, PSYDUCK
 	db 10, ZUBAT
 	db 10, TURBAN
 	db 12, ZUBAT
-	db 10, ONIX
-	db 14, ONIX
+	db 10, PSYDUCK
+	db 14, PSYDUCK
 	; day
-	db 10, GEODUDE
-	db 12, SANDSHREW
+	db 10, ZUBAT
+	db 12, PSYDUCK
 	db 10, ZUBAT
 	db 10, TURBAN
 	db 12, ZUBAT
-	db 10, ONIX
-	db 14, ONIX
+	db 10, PSYDUCK
+	db 14, PSYDUCK
 	; nite
-	db 10, GEODUDE
-	db 12, SANDSHREW
+	db 10, ZUBAT
+	db 12, PSYDUCK
 	db 10, ZUBAT
 	db 10, TURBAN
 	db 12, ZUBAT
-	db 10, ONIX
-	db 14, ONIX
+	db 10, WOLFAN
+	db 14, WOLFAN
 	
 	map_id BOULDER_MINE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -478,28 +478,28 @@ NihonGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 13, LEDYBA
-	db 14, CATERPIE
-	db 14, CATERPIE
-	db 14, WEEDLE
+	db 14, METAPOD
+	db 14, METAPOD
+	db 14, KAKUNA
 	db 13, CUBONE
-	db 15, WEEDLE
-	db 15, WEEDLE
+	db 15, KAKUNA
+	db 15, KAKUNA
 	; day
-	db 13, CATERPIE
-	db 14, CATERPIE
-	db 14, CATERPIE
-	db 14, WEEDLE
+	db 13, SPEAROW
+	db 14, METAPOD
+	db 14, METAPOD
+	db 14, KAKUNA
 	db 13, CUBONE
-	db 15, WEEDLE
-	db 15, WEEDLE
+	db 15, KAKUNA
+	db 15, KAKUNA
 	; nite
 	db 13, SPINARAK
 	db 14, HOOTHOOT
-	db 14, CATERPIE
-	db 14, WEEDLE
+	db 14, METAPOD
+	db 14, KAKUNA
 	db 13, CUBONE
-	db 15, WEEDLE
-	db 15, WEEDLE
+	db 15, KAKUNA
+	db 15, KAKUNA
 	
 	map_id ENDON_CAVE_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

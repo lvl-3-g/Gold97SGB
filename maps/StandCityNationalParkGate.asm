@@ -477,7 +477,7 @@ ExitBuildingMovement:
 MovementData_0x6add1:
 	big_step UP
 	big_step UP
-	big_step RIGHT
+;	big_step RIGHT
 	turn_head UP
 	step_end
 

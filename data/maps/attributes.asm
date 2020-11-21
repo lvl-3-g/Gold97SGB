@@ -388,7 +388,7 @@ ENDM
 	map_attributes RuinsOfAlphResearchCenter, RUINS_OF_ALPH_RESEARCH_CENTER, $00, 0
 	map_attributes BoulderMine1F, BOULDER_MINE_1F, $1D, 0
 	map_attributes BoulderMineB1F, BOULDER_MINE_B1F, $1D, 0
-	map_attributes BoulderMineB5F, BOULDER_MINE_B5F, $1D, 0
+	map_attributes BoulderMineB5F, BOULDER_MINE_B5F, $0B, 0
 	map_attributes SlowpokeWellB1F, SLOWPOKE_WELL_B1F, $2E, 0
 	map_attributes SlowpokeWellB2F, SLOWPOKE_WELL_B2F, $09, 0
 	map_attributes TeknosAquarium1F, TEKNOS_AQUARIUM_1F, $00, 0

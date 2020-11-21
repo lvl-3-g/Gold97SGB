@@ -275,7 +275,7 @@ SWIslandsGrassWildMons:
  	map_id NANJO_FOREST
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	db 42, PARAS
+	db 42, BEEDRILL
 	db 42, FEAROW
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
@@ -283,7 +283,7 @@ SWIslandsGrassWildMons:
 	db 41, AIPOM
 	db 42, AIPOM
 	; day
-	db 42, PARAS
+	db 42, BEEDRILL
 	db 42, FEAROW
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
@@ -291,7 +291,7 @@ SWIslandsGrassWildMons:
 	db 41, AIPOM
 	db 42, AIPOM
 	; nite
-	db 42, PARAS
+	db 42, BEEDRILL
 	db 42, NOCTOWL
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
@@ -363,24 +363,24 @@ SWIslandsGrassWildMons:
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, BOMSEAL
-	db 50, HITMONCHAN
-	db 50, HITMONLEE
+	db 50, WEEZING
+	db 50, WEEZING
 	; day
 	db 50, MACHOKE
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, BOMSEAL
-	db 50, HITMONCHAN
-	db 50, HITMONLEE
+	db 50, WEEZING
+	db 50, WEEZING
 	; nite
 	db 50, MACHOKE
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, BOMSEAL
-	db 50, HITMONCHAN
-	db 50, HITMONLEE
+	db 50, WEEZING
+	db 50, WEEZING
 	
 	map_id TROPICAL_ISLAND_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -406,8 +406,8 @@ SWIslandsGrassWildMons:
 	db 55, GOLDUCK
 	db 55, EXEGGCUTE
 	db 57, EXEGGCUTE
-	db 56, POLITOED
-	db 58, POLITOED
+	db 56, POLIWHIRL
+	db 58, POLIWHIRL
 
 	map_id TROPICAL_ISLAND_JUNGLE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -416,7 +416,7 @@ SWIslandsGrassWildMons:
 	db 56, BUTTERFREE
 	db 55, LICKITUNG
 	db 55, PRIMEAPE
-	db 57, PARAS
+	db 57, PARASECT
 	db 56, LICKITUNG
 	db 58, LICKITUNG
 	; day
@@ -424,7 +424,7 @@ SWIslandsGrassWildMons:
 	db 56, BUTTERFREE
 	db 55, LICKITUNG
 	db 55, PRIMEAPE
-	db 57, PARAS
+	db 57, PARASECT
 	db 56, LICKITUNG
 	db 58, LICKITUNG
 	; nite
@@ -432,7 +432,7 @@ SWIslandsGrassWildMons:
 	db 56, VENOMOTH
 	db 55, LICKITUNG
 	db 55, PRIMEAPE
-	db 57, PARAS
+	db 57, PARASECT
 	db 56, LICKITUNG
 	db 58, GLOOM
 	

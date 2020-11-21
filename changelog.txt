@@ -127,3 +127,11 @@ Changelog
 
 2.22
 - moved a berry tree from Tatsugo Path to Weathered Trail due to outdoor sprite limitations
+
+2.30
+- Caterpie and Metapod now appear in Silent Hills
+- Boulder Mine B5F is now ice themed, has Wolfan encounters
+- Hitmonchan and Hitmonlee can no longer be encountered in Kikai Caldera
+- Politoed can no longer be encountered on Tropical Island
+- New cries taken from Reforged for Osunfish and Cruiseal/Flambear lines
+- Issue fixed where you could stand on top of NPC while being judged for Bug Catching Contest
