@@ -293,7 +293,7 @@ Route109_MapEvents:
 	db 0 ; coord events
 
 	db 4 ; bg events
-	bg_event  4, 56, BGEVENT_READ, Route109TrainerTips
+	bg_event  2, 56, BGEVENT_READ, Route109TrainerTips
 	bg_event 14, 28, BGEVENT_READ, MoomooFarmSign
 	bg_event  1, 79, BGEVENT_READ, Route109Sign
 	bg_event  4, 35, BGEVENT_ITEM, Route109HiddenNugget
