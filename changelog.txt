@@ -136,5 +136,8 @@ Changelog
 - New cries taken from Reforged for Osunfish and Cruiseal/Flambear lines
 - Issue fixed where you could stand on top of NPC while being judged for Bug Catching Contest
 
- 2.31
+2.31
 - Fixed issue where you could trap yourself with a boulder in Alloy City Gym
+
+2.32
+- Bumped Rival's levels in Slowpoke Well
