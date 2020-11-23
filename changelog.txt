@@ -141,3 +141,8 @@ Changelog
 
 2.32
 - Bumped Rival's levels in Slowpoke Well
+
+2.33
+- Changed all instances of "TAILs" to "TAILS" and "BALLs" to "BALLS"
+- Added NPC to island in Kikai Strait
+- Fixed tileset issue in Kanto Laboratory
