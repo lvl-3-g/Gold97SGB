@@ -271,7 +271,7 @@ BirdKeeperBryanAfterBattleText:
 
 	para "If you can get"
 	line "ahold of KURT's"
-	para "custom FAST BALLs,"
+	para "custom FAST BALLS,"
 	line "they're great for"
 	cont "quick #MON."
 	done

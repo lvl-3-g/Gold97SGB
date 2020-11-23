@@ -300,7 +300,7 @@ OakSpeechText:
 	
 	para "Now they can live"
 	line "without losing"
-	para "their TAILs to"
+	para "their TAILS to"
 	line "TEAM ROCKET."
 	
 	para "But TEAM ROCKET"
@@ -399,7 +399,7 @@ OakStopThisText:
 	line "are hurting these"
 	cont "innocent SLOWPOKE!"
 	para "It's not right to"
-	line "cut their TAILs"
+	line "cut their TAILS"
 	para "off to sell them"
 	line "for profit!"
 	done

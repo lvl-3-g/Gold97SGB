@@ -132,7 +132,7 @@ KantoLassText:
 	line "probably should."
 	para "There's a good"
 	line "chance they made"
-	para "the #BALLs your"
+	para "the #BALLS your"
 	line "#MON are in!"
 	done
 	

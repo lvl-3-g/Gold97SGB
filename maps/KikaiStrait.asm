@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const KKS_SWIMMER1
 	const KKS_SWIMMER2
+	const KKS_YOUNGSTER
 
 KikaiStrait_MapScripts:
 	db 0 ; scene scripts
@@ -29,6 +30,21 @@ TrainerSwimmerfWendy:
 	waitbutton
 	closetext
 	end
+	
+KikaiStraitYoungsterScript:
+	faceplayer
+	opentext
+	writetext KikaiStraitYoungsterText
+	waitbutton
+	closetext
+	turnobject KKS_YOUNGSTER, UP
+	end
+	
+KikaiStraitYoungsterText:
+	text "Wow, the CALDERA"
+	line "looks absolutely"
+	cont "massive from here."
+	done
 
 SwimmerfDeniseSeenText:
 	text "The weather is so"
@@ -81,6 +97,7 @@ KikaiStrait_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 15, 14, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDenise, -1
 	object_event  9, 22, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfWendy, -1
+	object_event  8,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiStraitYoungsterScript, -1
