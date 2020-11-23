@@ -146,3 +146,6 @@ Changelog
 - Changed all instances of "TAILs" to "TAILS" and "BALLs" to "BALLS"
 - Added NPC to island in Kikai Strait
 - Fixed tileset issue in Kanto Laboratory
+
+2.34
+- Changed all instances of "POTIONs" to "POTIONS" and "EGGs" to "EGGS"

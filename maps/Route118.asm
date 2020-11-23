@@ -162,10 +162,10 @@ PicnickerHopeAfterBattleText:
 	text "I hear that some"
 	line "#MON have baby"
 	para "forms that hatch"
-	line "from EGGs."
+	line "from EGGS."
 
 	para "But where does one"
-	line "get #MON EGGs?"
+	line "get #MON EGGS?"
 	done
 
 PicnickerSharonSeenText:

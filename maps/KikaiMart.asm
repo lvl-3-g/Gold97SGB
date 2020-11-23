@@ -29,7 +29,7 @@ KikaiMartBlackbeltText:
 	done
 
 KikaiMartWomanText:
-	text "HYPER POTIONs are"
+	text "HYPER POTIONS are"
 	line "big sellers here."
 	para "They're necessary"
 	line "if you want to"
