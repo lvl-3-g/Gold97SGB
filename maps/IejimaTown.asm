@@ -301,7 +301,7 @@ IejimaTownGrampsBeforeText:
 	para "This has to have"
 	line "something to do"
 	para "with all of these"
-	line "BIKERs that have"
+	line "BIKERS that have"
 	cont "shown up here!"
 	done
 

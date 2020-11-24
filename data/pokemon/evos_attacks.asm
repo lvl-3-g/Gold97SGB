@@ -2554,16 +2554,22 @@ MarillEvosAttacks:
 BomsealEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
-	db 1, WATER_GUN
 	db 1, TAIL_WHIP
+	db 1, LICK
 	db 1, EMBER
-	db 4, LICK
-	db 9, SUNNY_DAY
-	db 10, RAIN_DANCE
-	db 15, FLAME_WHEEL
-	db 23, BUBBLEBEAM
-	db 31, FIRE_SPIN
-	db 43, TAKE_DOWN
+	db 6, BUBBLE
+	db 10, ENCORE
+	db 15, WATER_GUN
+	db 19, MEGAPHONE
+	db 24, FLAME_WHEEL
+	db 28, SUPERSONIC
+	db 33, BUBBLEBEAM
+	db 37, FIRE_SPIN
+	db 42, BODY_SLAM
+	db 46, DOUBLE_EDGE
+	db 51, SAFEGUARD
+	db 55, FIRE_BLAST
+	db 59, HYDRO_PUMP
 
 	db 0 ; no more level-up moves
 
@@ -2918,12 +2924,15 @@ QuagsireEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
 	db 1, TAIL_WHIP
+	db 7, MUD_SLAP
 	db 11, SLAM
-	db 23, AMNESIA
-	db 35, EARTHQUAKE
-	db 47, RAIN_DANCE
-	db 59, MIST
-	db 62, HAZE
+	db 14, HAZE
+	db 17, MIST
+	db 22, RAIN_DANCE
+	db 26, AMNESIA
+	db 35, BUBBLEBEAM
+	db 44, TOXIC
+	db 48, EARTHQUAKE
 	db 0 ; no more level-up moves
 
 PluckrossEvosAttacks:

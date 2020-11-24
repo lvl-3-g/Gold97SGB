@@ -53,13 +53,13 @@ MotobuPathIejimaGateOfficerText:
 MotobuPathIejimaGateOfficerText2:
 	text "What in the world"
 	line "could this group"
-	para "of BIKERs be up"
+	para "of BIKERS be up"
 	line "to?"
 	done
 
 MotobuPathIejimaGateOfficerText3:
 	text "A large group of"
-	line "BIKERs are causing"
+	line "BIKERS are causing"
 	para "problems in the"
 	line "HYDRO PLANT."
 	para "Seems like they"

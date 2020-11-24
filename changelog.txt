@@ -149,3 +149,9 @@ Changelog
 
 2.34
 - Changed all instances of "POTIONs" to "POTIONS" and "EGGs" to "EGGS"
+
+2.40
+- Changed all isntances of "BIKERs" to "BIKERS"
+- Complete re-work of Bomseal's status and learnset
+- Rival's Bomseal's moves adjusted to match new learnset
+- New learnset for Quagsire

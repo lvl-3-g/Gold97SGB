@@ -1,6 +1,6 @@
 	db BOMSEAL ; 184
 
-	db 100,  50,  75,  72,  72,  75
+	db  65, 97,  67,  77,  102,  77
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, WATER ; type

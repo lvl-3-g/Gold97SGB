@@ -50,7 +50,7 @@ IejimaPokecenter1FJanineText2:
 	done
 
 IejimaPokecenter1FJanineText:
-	text "Those BIKERs must"
+	text "Those BIKERS must"
 	line "have learned to"
 	cont "behave themselves."
 	done
