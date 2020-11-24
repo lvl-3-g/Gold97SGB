@@ -172,3 +172,6 @@ Changelog
 - Rinring line now learns Bite
 - Wolfan line now learns Low Kick and Slash
 
+2.51
+- Changed all instances of "badge" to "BADGE"
+

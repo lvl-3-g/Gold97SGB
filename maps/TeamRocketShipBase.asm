@@ -636,7 +636,7 @@ Text_EndDemo:
 	para "that will make"
 	line "exploring easier."
 	para "HM02 FLY and the"
-	line "badge you need to"
+	line "BADGE you need to"
 	cont "use it!"
 	done
 	

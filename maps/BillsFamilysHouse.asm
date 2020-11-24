@@ -138,7 +138,7 @@ BillGoGetBadge:
 	para "so that I shouldnt"
 	line "be here if you"
 	para "don't have the"
-	line "badge. So"
+	line "BADGE. So"
 	para "somethings wrong"
 	line "here!"
 	done

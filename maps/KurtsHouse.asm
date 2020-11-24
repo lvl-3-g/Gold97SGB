@@ -500,7 +500,7 @@ FalknerGreets:
 	para "I'll get on back"
 	line "to the GYM so you"
 	para "can challenge me"
-	line "for a badge."
+	line "for a BADGE."
 	para "…"
 	para "Hm?"
 	para "You're not taking"

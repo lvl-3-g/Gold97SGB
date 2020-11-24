@@ -462,7 +462,7 @@ HaveStarter2Egg:
 	line "GYM LEADER, even"
 	cont "though I lost."
 	para "I can't give you"
-	line "a badge, but I've"
+	line "a BADGE, but I've"
 	para "got an EGG of a"
 	line "rare #MON of"
 	cont "my favorite type!"

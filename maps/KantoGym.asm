@@ -252,7 +252,7 @@ RedDummyWalksToSpotLeft:
 KantoGymGuyWinText2:
 	text "What an incredible"
 	line "battle!"
-	para "How many badges do"
+	para "How many BADGES do"
 	line "you have now?"
 	para "You might be ready"
 	line "for the LEAGUE."

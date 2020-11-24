@@ -98,17 +98,17 @@ VictoryRoadGateOfficerText:
 
 VictoryRoadGateNotEnoughBadgesText:
 	text "You don't have"
-	line "eight badges."
+	line "eight BADGES."
 	para "I'm sorry, but"
 	line "only trainers with"
-	para "enough badges are"
+	para "enough BADGES are"
 	line "permitted to enter"
 	para "CROWN CITY and"
 	line "climb MT.FUJI."
 	done
 
 VictoryRoadGateEightBadgesText:
-	text "Ah! Eight badges!"
+	text "Ah! Eight BADGES!"
 
 	para "You have proven"
 	line "yourself worthy."
