@@ -155,3 +155,20 @@ Changelog
 - Complete re-work of Bomseal's status and learnset
 - Rival's Bomseal's moves adjusted to match new learnset
 - New learnset for Quagsire
+
+2.50
+- Combed through all trainers with defined movesets to make sure that their mons couldn't learn moves they can't actually learn
+- Muk can now learn Earthquake via TM
+- Ekans line now learns Crunch
+- Clefairy line now learns Mimic
+- Slowbro and Slowking now learn Body Slam
+- Magnemite line now learns Thunderbolt
+- Exeggcute now learns Synthesis
+- Cruiseal line now learns Powder Snow
+- Natu line now learns Quick Attack
+- Grotess now learns Crunch
+- Girafarig now learns Crunch
+- Turban now learns Crunch
+- Rinring line now learns Bite
+- Wolfan line now learns Low Kick and Slash
+
