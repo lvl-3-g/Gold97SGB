@@ -123,7 +123,8 @@ ENDM
 	connection north, Route103, ROUTE_103, 5
 	connection east, Route102, ROUTE_102, 5
 
-	map_attributes AlloyCity, ALLOY_CITY, $2F, WEST | EAST
+	map_attributes AlloyCity, ALLOY_CITY, $79, SOUTH | WEST | EAST
+	connection south, RouteU5U, ROUTE_U5U, 12
 	connection west, Route106, ROUTE_106, 0
 	connection east, Route108, ROUTE_108, 9
 
@@ -151,8 +152,7 @@ ENDM
 	map_attributes Route115, ROUTE_115, $35, WEST
 	connection west, SilentTown, SILENT_TOWN, 0
 
-	map_attributes RouteU5U, ROUTE_U5U, $2c, WEST
-	connection west, DaitoRanch, DAITO_RANCH, -9
+	map_attributes RouteU5U, ROUTE_U5U, $2c, 0
 
 	map_attributes Route101, ROUTE_101, $2F, WEST | EAST
 	connection west, Route101N, ROUTE_101N, -9
@@ -168,16 +168,18 @@ ENDM
 	map_attributes Route112, ROUTE_112, $2F, NORTH
 	connection north, BlueForest, BLUE_FOREST, -5
 
-	map_attributes Route104, ROUTE_104, $2F, WEST | EAST
+	map_attributes Route104, ROUTE_104, $2F, SOUTH | WEST | EAST
+	connection south, RouteU4U, ROUTE_U4U, 40
 	connection west, BirdonTown, BIRDON_TOWN, 0
 	connection east, Route105, ROUTE_105, 0
 
 	map_attributes Route113, ROUTE_113, $2F, NORTH
 	connection north, StandCity, STAND_CITY, -10
 
-	map_attributes Route103, ROUTE_103, $2F, NORTH | SOUTH
+	map_attributes Route103, ROUTE_103, $2F, NORTH | SOUTH | EAST
 	connection north, BirdonTown, BIRDON_TOWN, 0
 	connection south, WestportCity, WESTPORT_CITY, -5
+	connection east, RouteU4U, ROUTE_U4U, 18
 
 	map_attributes Route102, ROUTE_102, $05, WEST | EAST
 	connection west, WestportCity, WESTPORT_CITY, -5
@@ -199,9 +201,7 @@ ENDM
 	connection north, FrostpointTown, FROSTPOINT_TOWN, 0
 	connection south, BlueForest, BLUE_FOREST, -5
 
-	map_attributes RouteU4U, ROUTE_U4U, $05, WEST | EAST
-	connection west, TeknosCity, TEKNOS_CITY, -9
-	connection east, SanskritTown, SANSKRIT_TOWN, 0
+	map_attributes RouteU4U, ROUTE_U4U, $05, 0
 
 	map_attributes Boardwalk, BOARDWALK, $21, NORTH | SOUTH
 	connection north, SanskritTown, SANSKRIT_TOWN, 3

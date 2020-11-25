@@ -1618,8 +1618,9 @@ SkierGroup:
 	db -1 ; end
 
 	; SKIER (2)
-	db "CLARISSA@", TRAINERTYPE_NORMAL; unused
-	db 33, DEWGONG
+	db "CLARISSA@", TRAINERTYPE_MOVES; used, blue forest gym
+	db 28, SEEL,     POWDER_SNOW, SING, HEADBUTT, WATER_GUN
+	db 28, DELIBIRD, ICY_WIND, PROTECT, ENDURE, PRESENT
 	db -1 ; end
 
 TeacherGroup:
@@ -3380,6 +3381,13 @@ SageGroup:
 	db "KOJI@", TRAINERTYPE_NORMAL ;used
 	db 10, PARETTE
 	db 12, HOOTHOOT
+	db -1 ; end
+	
+	; SAGE (12)
+	db "YUREI@", TRAINERTYPE_NORMAL ;used
+	db 21, GASTLY
+	db 21, GASTLY
+	db 21, CURSTRAW
 	db -1 ; end
 
 MediumGroup:

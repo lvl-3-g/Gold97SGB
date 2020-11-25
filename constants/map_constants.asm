@@ -52,7 +52,7 @@ ENDM
 
 	map_const SANSKRIT_GAMBLER_MAN_HOUSE,           5,  4 ;  1
 	map_const SANSKRIT_POKECENTER_1F,                       8,  4 ;  3
-	map_const ROUTE_U4U,                                    30,  9 ;  5
+	map_const ROUTE_U4U,                                    10,  9 ;  5
 	map_const SANSKRIT_TOWN,                               10,  9 ;  7
 	map_const BOARDWALK,                                    10, 27 ;  5
 	map_const BOARDWALK_GAME_CORNER,                       10,  7 ; 19
@@ -379,7 +379,7 @@ ENDM
 	newgroup                                                      ; 19
 
 	map_const GREAT_EAST_STRAIT,                                    60, 9 ;  9
-	map_const ROUTE_U5U,                                    20,  9 ;  1
+	map_const ROUTE_U5U,                                    10,  9 ;  1
 	map_const DAITO_RANCH,                         15, 27 ;  2
 	map_const DAITO_POKECENTER_1F,                    8,  4 ;  3
 	map_const DAITO_RANCH_ORCHARD_HOUSE,                    5,  4 ;  4

@@ -1,6 +1,6 @@
 	db ANIMON ; 207
 
-	db  58,  58,  58,  58,  58,  58
+	db  88,  58,  58,  88,  58,  58
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, STEEL ; type

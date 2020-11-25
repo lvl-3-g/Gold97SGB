@@ -52,7 +52,6 @@ Route102_Blocks:
 	INCBIN "maps/Route102.blk"
 
 
-RouteU5U_Blocks:
 RouteU7U_Blocks:; made unused
 KikaiStrait_Blocks:
 	INCBIN "maps/KikaiStrait.blk"
@@ -148,6 +147,9 @@ BetaPokecenter_Blocks:
 Route105_Blocks:
 	INCBIN "maps/Route105.blk"
 
+RouteU5U_Blocks:
+	INCBIN "maps/RouteU5U.blk"
+	
 RouteU4U_Blocks:
 	INCBIN "maps/RouteU4U.blk"
 

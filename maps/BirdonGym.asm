@@ -1,9 +1,9 @@
 	object_const_def ; object_event constants
 	const BIRDONGYM_MORTY
 	const BIRDONGYM_GYM_GUY
-	const BIRDONGYM_GRAMPS
 	const BIRDONGYM_GRANNY1
 	const BIRDONGYM_GRANNY2
+	const BIRDONGYM_GRAMPS
 
 BirdonGym_MapScripts:
 	db 2 ; scene scripts
@@ -28,6 +28,17 @@ TrainerMediumDoris:
 	endifjustbattled
 	opentext
 	writetext MediumDorisAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerSageYurei:
+	trainer SAGE, YUREI, EVENT_BEAT_SAGE_YUREI, SageYureiSeenText, SageYureiBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SageYureiAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -71,16 +82,12 @@ BirdonGymMortyScript:
 	setflag ENGINE_FOGBADGE
 	checkcode VAR_BADGES
 	scall BirdonGymActivateRockets
-	;setmapscene TEKNOS_TIN_TOWER_ENTRANCE, SCENE_FINISHED
-	;setevent EVENT_RANG_HELIX_FOSSIL_1
-	;setevent EVENT_RANG_HELIX_FOSSIL_2
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
-	;setevent EVENT_BEAT_SAGE_JEFFREY
-	;setevent EVENT_BEAT_SAGE_PING
-	;setevent EVENT_BEAT_MEDIUM_MARTHA
-	;setevent EVENT_BEAT_MEDIUM_GRACE
+	setevent EVENT_BEAT_MEDIUM_DORIS
+	setevent EVENT_BEAT_MEDIUM_REBECCA
+	setevent EVENT_BEAT_SAGE_YUREI
 	writetext MortyText_FogBadgeSpeech
 	buttonsound
 	verbosegiveitem TM_SHADOW_BALL
@@ -344,7 +351,19 @@ BirdonGymGuyWinText:
 	cont "pure terror!"
 	done
 
-
+SageYureiSeenText:
+	text "Can you prove that"
+	line "you are alive?"
+	done
+	
+SageYureiBeatenText:
+	text "I see…"
+	done
+	
+SageYureiAfterBattleText:
+	text "Can you prove that"
+	line "I am even alive?"
+	done
 
 MediumDorisSeenText:
 	text "Fufufufu…"
@@ -409,9 +428,10 @@ BirdonGym_MapEvents:
 	bg_event  1,  7, BGEVENT_READ, BirdonGymStatue
 	bg_event  4,  7, BGEVENT_READ, BirdonGymStatue
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 16,  2, SPRITE_MORTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BirdonGymMortyScript, -1
 	object_event  0,  7, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BirdonGymGuyScript, -1
-	object_event  5,  6, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumRebecca, -1
-	object_event 11,  5, SPRITE_GRANNY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumDoris, -1
+	object_event  5,  6, SPRITE_SABRINA, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerMediumRebecca, -1
+	object_event 11,  5, SPRITE_SABRINA, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerMediumDoris, -1
+	object_event  4,  2, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSageYurei, -1
 

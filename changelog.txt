@@ -175,3 +175,16 @@ Changelog
 2.51
 - Changed all instances of "badge" to "BADGE"
 
+2.60
+- Added Sage Yurei to Birdon Gym
+- Added Skier Clarissa to Blue Forest Gym
+- Slight redesign of Blue Forest Gym
+- Bumped Animon's stats
+- Fixed border tile issue in Alloy City
+- Fixed border tile issue in Kanto Region
+- Added NPC in Kanto Region to block border tile issue from being visible
+- Fixed border tile issue in Route 104
+- Fixed border tile issue in Route 103
+- Unused routes "Route U4U" and "Route U5U" were redesigned to be attached to the sides of other maps to fix border tile issues
+- Redesigned whirlpool graphic so it matches beta in-game
+- Fixed issue where border could be bypassed on Great East Strait

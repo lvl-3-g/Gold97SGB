@@ -619,6 +619,7 @@ CHRIS EQU __enum__
 	const GAKU
 	const MASA
 	const KOJI
+	const YUREI
 
 	trainerclass MEDIUM ; 39
 	const MARTHA

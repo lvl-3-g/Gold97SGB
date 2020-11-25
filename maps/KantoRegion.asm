@@ -9,6 +9,7 @@
 	const KANTO_FISHER_2
 	const KANTO_LASS_2
 	const KANTO_ITEMBALL
+	const KANTO_FISHER_3
 
 KantoRegion_MapScripts:
 	db 0 ; scene scripts
@@ -25,6 +26,9 @@ KantoRegionTMDetect:
 
 KantoFisherScript:
 	jumptextfaceplayer KantoFisherText
+	
+KantoFisher3Script:
+	jumptextfaceplayer KantoFisher3Text
 
 KantoSign:
 	jumptext KantoSignText
@@ -85,6 +89,13 @@ KantoFisher2Script:
 	
 KantoLass2Script:
 	jumptextfaceplayer KantoLass2Text
+	
+KantoFisher3Text:
+	text "Doesn't returning"
+	line "to familiar place"
+	para "give you a warm,"
+	line "fuzzy feeling?"
+	done
 	
 KantoLass2Text:
 	text "The SCIENTISTs in"
@@ -298,7 +309,7 @@ KantoRegion_MapEvents:
 	bg_event 42,  4, BGEVENT_READ, KantoBattleClubSign
 	bg_event 54,  8, BGEVENT_READ, PokemonTowerSign
 
-	db 10 ; object events
+	db 11 ; object events
 	object_event 14, 46, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisherScript, -1
 	object_event 50, 26, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoCooltrainerMScript, -1
 	object_event 11, 19, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoTeacherScript, -1
@@ -309,3 +320,4 @@ KantoRegion_MapEvents:
 	object_event 40, 43, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisher2Script, -1
 	object_event 51, 48, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLass2Script, -1
 	object_event 21, 44, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KantoRegionTMDetect, EVENT_KIKAI_VILLAGE_TM_DETECT
+	object_event  3, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoFisher3Script, -1

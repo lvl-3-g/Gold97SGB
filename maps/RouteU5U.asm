@@ -17,13 +17,13 @@ RouteU5U_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  7,  3, DAITO_RANCH_ORCHARD_HOUSE, 1
-	warp_event 33,  5, VICTORY_ROAD_GATE, 7
+	warp_event -3,  3, DAITO_RANCH_ORCHARD_HOUSE, 1
+	warp_event 23,  5, VICTORY_ROAD_GATE, 7
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 31,  5, BGEVENT_READ, RouteU5USign
-	bg_event 25,  2, BGEVENT_ITEM, RouteU5UHiddenRareCandy
+	bg_event 21,  5, BGEVENT_READ, RouteU5USign
+	bg_event 15,  2, BGEVENT_ITEM, RouteU5UHiddenRareCandy
 
 	db 0 ; object events
