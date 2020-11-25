@@ -195,6 +195,8 @@ Changelog
 - Changed Whirl Island B1F Calcium item to Detect Orb
 - Changed Whirl Island B2F Full Restore item to Poison Stone
 - Added Covenant Orb item to Isen Lab
-- Made Amulent Coin available in Impostor Oak's house in Nago if missed on Ship Base
+- Made Amulet Coin available in Impostor Oak's house in Nago if missed on Ship Base
 - Added Clerk and shopper NPC to Westport Underground
 
+2.62
+- Fixed text error in Twinz's Pokedex entry
