@@ -188,3 +188,13 @@ Changelog
 - Unused routes "Route U4U" and "Route U5U" were redesigned to be attached to the sides of other maps to fix border tile issues
 - Redesigned whirlpool graphic so it matches beta in-game
 - Fixed issue where border could be bypassed on Great East Strait
+
+2.61
+- Changed Boulder Mine B2F X Defend item to Steel Shell
+- Changed Team Rocket Base B2F Full Heal item to Energy Wall
+- Changed Whirl Island B1F Calcium item to Detect Orb
+- Changed Whirl Island B2F Full Restore item to Poison Stone
+- Added Covenant Orb item to Isen Lab
+- Made Amulent Coin available in Impostor Oak's house in Nago if missed on Ship Base
+- Added Clerk and shopper NPC to Westport Underground
+

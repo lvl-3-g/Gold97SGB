@@ -9,8 +9,8 @@ WhirlIslandB2F_MapScripts:
 
 	db 0 ; callbacks
 
-WhirlIslandB2FFullRestore:
-	itemball FULL_RESTORE
+WhirlIslandB2FPoisonStone:
+	itemball POISON_STONE
 
 WhirlIslandB2FMaxRevive:
 	itemball MAX_REVIVE
@@ -34,7 +34,7 @@ WhirlIslandB2F_MapEvents:
 	db 0 ; bg events
 
 	db 4 ; object events
-	object_event 33, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FFullRestore, EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE
+	object_event 33, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FPoisonStone, EVENT_WHIRL_ISLAND_B2F_POISON_STONE
 	object_event  6, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxRevive, EVENT_WHIRL_ISLAND_B2F_MAX_REVIVE
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxElixer, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXER
 	object_event 35, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FTMSludgeBomb, EVENT_GOT_TM36_SLUDGE_BOMB

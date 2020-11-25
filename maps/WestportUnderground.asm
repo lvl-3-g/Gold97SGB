@@ -8,6 +8,8 @@
 	const WESTPORTUNDERGROUND_SUPER_NERD5
 	const WESTPORTUNDERGROUND_SUPER_NERD6
 	const WESTPORTUNDERGROUND_GRANNY
+	const WESTPORTUNDERGROUND_JANINE
+	const WESTPORTUNDERGROUND_CLERK
 
 WestportUnderground_MapScripts:
 	db 0 ; scene scripts
@@ -366,6 +368,9 @@ WestportUndergroundScript_ShopClosed:
 	waitbutton
 	closetext
 	end
+	
+WestportUndergroundJanineScript:
+	jumptextfaceplayer WestportUndergroundJanineText
 
 WestportUndergroundCoinCase:
 	itemball COIN_CASE
@@ -390,6 +395,33 @@ WestportUndergroundHiddenSuperPotion:
 
 WestportUndergroundHiddenAntidote:
 	hiddenitem ANTIDOTE, EVENT_WESTPORT_UNDERGROUND_HIDDEN_ANTIDOTE
+	
+WestportUndergroundClerkScript:
+	jumptextfaceplayer WestportUndergroundClerkText
+	
+WestportUndergroundClerkText:
+	text "Welcome."
+	para "Here you can find"
+	line "unique stores run"
+	cont "by vendors."
+	para "These stores are"
+	line "open only at"
+	cont "particular times,"
+	para "so you may need to"
+	line "come by later if"
+	para "you want to buy"
+	line "from someone."
+	done
+	
+WestportUndergroundJanineText:
+	text "This place has"
+	line "some interesting"
+	cont "shops."
+	para "But the dimly-lit"
+	line "halls attract some"
+	para "seedy TRAINERS"
+	line "looking to battle!"
+	done
 
 SupernerdEricSeenText:
 	text "The DEPT. STORE"
@@ -663,7 +695,7 @@ WestportUnderground_MapEvents:
 	bg_event  0,  1, BGEVENT_ITEM, WestportUndergroundHiddenSuperPotion
 	bg_event  0,  9, BGEVENT_ITEM, WestportUndergroundHiddenAntidote
 
-	db 8 ; object events
+	db 10 ; object events
 	object_event  0, 22, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdEric, -1
 	object_event 10, 17, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerSupernerdTeru, -1
 	object_event 19,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerPokemaniacIsaac, -1
@@ -673,3 +705,5 @@ WestportUnderground_MapEvents:
 	object_event 17, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OlderHaircutBrotherScript, EVENT_WESTPORT_UNDERGROUND_OLDER_HAIRCUT_BROTHER
 	object_event 18, 32, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, YoungerHaircutBrotherScript, EVENT_WESTPORT_UNDERGROUND_YOUNGER_HAIRCUT_BROTHER
 	object_event 26, 35, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BitterMerchantScript, EVENT_WESTPORT_UNDERGROUND_GRANNY
+	object_event  3,  4, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, WestportUndergroundJanineScript, -1
+	object_event  5,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, WestportUndergroundClerkScript, -1
