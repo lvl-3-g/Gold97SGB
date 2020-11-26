@@ -379,7 +379,7 @@ ENDM
 	newgroup                                                      ; 19
 
 	map_const GREAT_EAST_STRAIT,                                    60, 9 ;  9
-	map_const ROUTE_U5U,                                    10,  9 ;  1
+	map_const ROUTE_U5U,                                     10,  9 ;  1
 	map_const DAITO_RANCH,                         15, 27 ;  2
 	map_const DAITO_POKECENTER_1F,                    8,  4 ;  3
 	map_const DAITO_RANCH_ORCHARD_HOUSE,                    5,  4 ;  4

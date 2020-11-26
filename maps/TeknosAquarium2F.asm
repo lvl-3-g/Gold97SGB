@@ -3,6 +3,7 @@
 	const AQUA2F_ROCKET3
 	const AQUA2F_POKEFAN_M
 	const AQUA2F_POKEFAN_F
+	const AQUA2F_WHITNEY
 
 TeknosAquarium2F_MapScripts:
 	db 0 ; scene scripts
@@ -30,19 +31,32 @@ TrainerGruntM1:
 	clearflag ENGINE_ROCKETS_IN_SANSKRIT
 	checkevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
 	iffalse .AlreadyRescuedGirl
-	special FadeOutPalettes
+	special FadeOutPalettes; shouldn't be here ever, mine is mandatory first now
 	special HealParty
 	pause 15
 	warp TEKNOS_CITY, 6, 28
 	end
 
 .AlreadyRescuedGirl:
+	moveobject AQUA2F_WHITNEY, 9, 5
+	appear AQUA2F_WHITNEY
+	applymovement AQUA2F_WHITNEY, WhitneyWalksUpAfterRocketsMovement
+	applymovement PLAYER, PlayerWalksUpToWhitneyAfterRocketsMovement
+	opentext
+	writetext WhitneyWayToGoText
+	waitbutton
+	closetext
+	applymovement AQUA2F_WHITNEY, WhitneyWalksAwayAfterRocketsMovement
+	disappear AQUA2F_WHITNEY
+	pause 30
+	applymovement PLAYER, PlayerInAquariumDummyMovement
 	clearevent EVENT_WHITNEY_BACK_IN_TEKNOS_GYM
 	special FadeOutPalettes
 	special HealParty
 	pause 15
 	warp TEKNOS_CITY, 6, 28
 	end
+
 
 TrainerGruntM3:
 	trainer GRUNTM, GRUNTM_3, EVENT_BEAT_ROCKET_GRUNTM_3, GruntM3SeenText, GruntM3BeatenText, 0, .Script
@@ -96,6 +110,60 @@ Aqua2FExhibit2Script:
 Aqua2FExhibit3Script:
 	jumptext Aqua2FExhibit3Text
 	
+PlayerInAquariumDummyMovement:
+	step_end
+	
+WhitneyWalksUpAfterRocketsMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+	
+WhitneyWalksAwayAfterRocketsMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+	
+PlayerWalksUpToWhitneyAfterRocketsMovement:
+	step UP
+	turn_head LEFT
+	step_end
+	
+
+WhitneyWayToGoText:
+	text "Way to go,"
+	line "<PLAYER>!"
+	
+	para "You really showed"
+	line "them who's boss!"
+	
+	para "TEAM ROCKET won't"
+	line "hurt any of these"
+	cont "aquatic #MON"
+	cont "anymore."
+	
+	para "Hey…"
+	
+	para "You're actually"
+	line "pretty strong!"
+
+	para "Why don't you come"
+	line "by my GYM later?"
+	
+	para "I would love to"
+	line "battle you!"
+	
+	para "Speaking of which,"
+	line "I better get back"
+	cont "over there!"
+	
+	para "See ya!"
+	done
+	
+
 Aqua2FExhibit1Text:
 	text "KINGOLD are among"
 	line "the smallest of"
@@ -218,8 +286,9 @@ TeknosAquarium2F_MapEvents:
 	bg_event  7,  3, BGEVENT_READ, Aqua2FExhibit2Script
 	bg_event 11,  3, BGEVENT_READ, Aqua2FExhibit3Script
 
-	db 4 ; object events
-	object_event 15,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM1, EVENT_ROCKETS_TAKE_OVER_AQUARIUM
+	db 5 ; object events
+	object_event 14,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerGruntM1, EVENT_ROCKETS_TAKE_OVER_AQUARIUM
 	object_event  5,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerGruntM3, EVENT_ROCKETS_TAKE_OVER_AQUARIUM
 	object_event  7,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaPokefanMScript, -1
 	object_event 10,  4, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AquaPokefanFScript, -1
+	object_event 17, -4, SPRITE_WHITNEY, SPRITEMOVEDATA_STANDING_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_WHITNEY_AQUARIUM_2F
