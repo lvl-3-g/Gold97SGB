@@ -247,7 +247,7 @@ GeoffInsideMeetText:
 	line "desert, so I've"
 	para "moved myself out"
 	line "here to work on"
-	cont "this ranch!"
+	cont "this RANCH!"
 
 	para "Since you took"
 	line "the time to come"

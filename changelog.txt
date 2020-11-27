@@ -206,3 +206,7 @@ Changelog
 
 2.64
 - Changed all instances of "email" to "e-mail"
+
+2.65
+- Replaced all references of "ranch" in reference to Daito Ranch as "RANCH"
+

@@ -11,13 +11,14 @@ DaitoRanchOtherHouseFarmhandScript:
 	
 DaitoRanchOtherHouseFarmhandText:
 	text "Hi there!"
-	para "I work here on the"
-	line "RANCH!"
-	para "Being a ranchand"
+	para "I'm in charge of"
+	line "tending to those"
+	cont "MILTANK!"
+	para "Being a ranch hand"
 	line "is such a pleasant"
 	para "job when you work"
-	line "in such a scenic"
-	cont "place as this!"
+	line "in a scenic place"
+	cont "like this!"
 	done
 	
 
