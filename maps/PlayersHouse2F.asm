@@ -300,7 +300,7 @@ PlayersRadioText2:
 	line "on the PC."
 	
 	para "What's this?"
-	line "A new email?"
+	line "A new e-mail?"
 	
 	para "…"
 	

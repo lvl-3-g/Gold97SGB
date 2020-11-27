@@ -203,3 +203,6 @@ Changelog
 
 2.63
 - Added cutscene where Whitney talks to player after beating Rockets in Aquarium
+
+2.64
+- Changed all instances of "email" to "e-mail"
