@@ -137,6 +137,7 @@ PlayersHousePCScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue .PlayersHousePC2
 	opentext
+	playsound SFX_BOOT_PC
 	writetext PlayersRadioText2
 	waitbutton
 	closetext

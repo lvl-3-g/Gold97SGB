@@ -210,3 +210,7 @@ Changelog
 2.65
 - Replaced all references of "ranch" in reference to Daito Ranch as "RANCH"
 
+2.66
+- Added sound effect to light switches in Stand Gym
+- Added sound effect to player's PC when checking email from Oak at start
+- Changed "GAME CORNERs" to "GAME CORNERS"

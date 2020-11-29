@@ -195,6 +195,7 @@ LightSwitch:
 	yesorno
 	iffalse .no
 	closetext
+	playsound SFX_MOONLIGHT
 	special FadeOutPalettes
 	changeblock   23,  31, $3D ; floor
 	changeblock   21,  31, $3D ; floor
@@ -220,6 +221,7 @@ LightSwitch2:
 	yesorno
 	iffalse .no
 	closetext
+	playsound SFX_MOONLIGHT
 	special FadeOutPalettes
 	changeblock   19,  27, $3F ; floor
 	changeblock   25,  23, $3D ; floor
@@ -251,6 +253,7 @@ LightSwitch3:
 	yesorno
 	iffalse .no
 	closetext
+	playsound SFX_MOONLIGHT
 	special FadeOutPalettes
 	changeblock   21,  13, $19 ; floor
 	reloadmappart
@@ -274,6 +277,7 @@ LightSwitch4:
 	yesorno
 	iffalse .no
 	closetext
+	playsound SFX_MOONLIGHT
 	special FadeOutPalettes
 	changeblock   7,  13, $3F ; floor
 	changeblock   7,  11, $3F ; floor
@@ -303,6 +307,7 @@ LightSwitch5:
 	yesorno
 	iffalse .no
 	closetext
+	playsound SFX_MOONLIGHT
 	special FadeOutPalettes
 	changeblock    3,  7, $3F ; floor
 	changeblock    3,  9, $3F ; floor

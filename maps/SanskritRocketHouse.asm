@@ -140,7 +140,7 @@ SanskritRocketHouseOfficerText:
 	done
 
 SanskritRocketHouseSuperNerd1Text:
-	text "GAME CORNERs are"
+	text "GAME CORNERS are"
 	line "always reliable"
 	cont "sources of income!"
 	para "Remember that!"

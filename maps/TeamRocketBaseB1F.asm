@@ -162,7 +162,6 @@ TrainerScientistMitch:
 	end
 	
 TeamRocketBaseB1FComputerConsole:
-;	setevent EVENT_ROUTE_105_BATTLE
 	checkevent EVENT_WESTPORT_CITY_ROCKET_SCOUT
 	iftrue .SystemIsOff
 	opentext
