@@ -15,6 +15,23 @@ TreeMons:
 ;	db  %, species, level
 
 TreeMonSet_City:
+; common
+	db 50, SPEAROW,    10
+	db 15, SPEAROW,    10
+	db 15, SPEAROW,    10
+	db 10, AIPOM,      10
+	db  5, AIPOM,      10
+	db  5, AIPOM,      10
+	db -1
+; rare
+	db 50, SPEAROW,    10
+	db 15, SCYTHER,  10
+	db 15, SCYTHER,  10
+	db 10, AIPOM,      10
+	db  5, AIPOM,      10
+	db  5, AIPOM,      10
+	db -1
+
 TreeMonSet_Canyon:
 ; common
 	db 50, SPEAROW,    10

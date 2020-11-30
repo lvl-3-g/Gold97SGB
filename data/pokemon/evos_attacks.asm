@@ -1790,7 +1790,7 @@ PinsirEvosAttacks:
 	db 30, CROSS_CUTTER
 	db 35, THRASH
 	db 38, SWORDS_DANCE
-	db 42, SUBMISSION
+	db 43, SUBMISSION
 	db 47, GUILLOTINE
 	db 0 ; no more level-up moves
 

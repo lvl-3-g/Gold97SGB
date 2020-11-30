@@ -287,7 +287,7 @@ SWIslandsGrassWildMons:
 	db 42, FEAROW
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
-	db 42, JUMPLUFF
+	db 42, SCIZOR
 	db 41, AIPOM
 	db 42, AIPOM
 	; nite
@@ -295,7 +295,7 @@ SWIslandsGrassWildMons:
 	db 42, NOCTOWL
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
-	db 42, MURKROW
+	db 42, PLUCKROSS
 	db 41, AIPOM
 	db 42, AIPOM
 	

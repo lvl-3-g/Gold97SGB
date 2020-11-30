@@ -214,3 +214,13 @@ Changelog
 - Added sound effect to light switches in Stand Gym
 - Added sound effect to player's PC when checking email from Oak at start
 - Changed "GAME CORNERs" to "GAME CORNERS"
+
+2.70
+- Made Pinsir and Scizor available in Jade forest
+- Made Murkrow available on Routes 104 and 105
+- For some reason "TREEMON_CITY" maps weren't spawning headbutt tree Mons, no idea why, but changed those maps to use previously unused "TREEMON_CANYON" Mons, which work properly
+- Bugsy's first battle now has Pinsir instead of Pluckross
+- Falkner's levels boosted slightly
+- Scizor and Pluckross now available in Nanjo Forest
+- Moved unused sign text to be inacessible in Stand City
+

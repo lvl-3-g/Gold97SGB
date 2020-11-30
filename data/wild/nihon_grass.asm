@@ -682,7 +682,7 @@ NihonGrassWildMons:
 	db 15, PIDGEY
 	db 15, PIDGEY
 	; nite
-	db 13, DODUO
+	db 13, MURKROW
 	db 14, RATTATA
 	db 14, NATU
 	db 14, MAREEP
@@ -709,7 +709,7 @@ NihonGrassWildMons:
 	db 16, MAGNEMITE
 	db 18, MAGNEMITE
 	; nite
-	db 18, DODUO
+	db 18, MURKROW
 	db 18, RATTATA
 	db 16, NATU
 	db 18, MAREEP
@@ -759,7 +759,7 @@ NihonGrassWildMons:
 	db 18, SPEAROW
 	db 16, HOPPIP
 	db 20, SKIPLOOM
-	db 18, HOPPIP
+	db 18, SCYTHER
 	db 16, AIPOM
 	db 18, AIPOM
 	; nite
@@ -767,7 +767,7 @@ NihonGrassWildMons:
 	db 18, HOOTHOOT
 	db 16, HOPPIP
 	db 20, SKIPLOOM
-	db 18, MURKROW
+	db 18, PINSIR
 	db 16, AIPOM
 	db 18, AIPOM
 	

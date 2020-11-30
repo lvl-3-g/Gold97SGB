@@ -815,7 +815,7 @@ StandCity_MapEvents:
 	db 12 ; bg events
 	bg_event 36, 20, BGEVENT_READ, StandCitySign
 	bg_event 32, 35, BGEVENT_READ, OldFuchsiaGymSign
-	bg_event 25, 15, BGEVENT_READ, SafariZoneOfficeSign
+	bg_event 21,  1, BGEVENT_READ, SafariZoneOfficeSign
 	bg_event 24, 20, BGEVENT_READ, WardensHomeSign
 	bg_event  8,  8, BGEVENT_READ, SafariZoneClosedSign
 	bg_event 18, 21, BGEVENT_READ, NoLitteringSign
