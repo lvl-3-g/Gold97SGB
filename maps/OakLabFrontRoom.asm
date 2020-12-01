@@ -358,7 +358,7 @@ DoorLockedText:
 	done
 	
 OakLabFrontRoomSilverText:
-	text "Yo <PLAYER>!"
+	text "Yo, <PLAYER>!"
 	
 	para "Looks like PROF."
 	line "OAK isn't here!"

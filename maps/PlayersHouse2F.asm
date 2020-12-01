@@ -42,10 +42,27 @@ PlayersHouse2F_Ken:
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AT_BEGINNING
 	iftrue .KenPart2
-	writetext KenGreeting
+	writetext KenGreeting1
+	setevent EVENT_TALKED_TO_KEN_AT_BEGINNING
+	checkevent EVENT_READ_OAKS_EMAIL
+	iffalse .KenEmailScript
 	waitbutton
 	closetext
 	setscene SCENE_PLAYERS_HOUSE_2F_NOTHING
+	end
+	
+.KenEmailScript
+	waitbutton
+	writetext KenGreeting1pt2
+	waitbutton
+	closetext
+	checkcode VAR_FACING
+	ifequal UP, .DontNeedToWalk
+	applymovement PLAYER, PlayerToReadEmailMovement
+	turnobject PLAYERSHOUSE2F_KEN, DOWN
+	end
+	
+.DontNeedToWalk
 	end
 	
 .KenPart2
@@ -141,7 +158,15 @@ PlayersHousePCScript:
 	writetext PlayersRadioText2
 	waitbutton
 	closetext
+	setevent EVENT_READ_OAKS_EMAIL
+	checkevent EVENT_TALKED_TO_KEN_AT_BEGINNING
+	iffalse .DontSetKenScene
+	setscene SCENE_PLAYERS_HOUSE_2F_NOTHING
 	end
+	
+.DontSetKenScene
+	end
+
 .Warp:
 	warp NONE, 0, 0
 	end
@@ -160,13 +185,17 @@ PlayersDollScript:
 	closetext
 	end
 	
+PlayerToReadEmailMovement:
+	step DOWN
+	step_end
+	
 PlayersRadioText5:
 	text "Looks like it"
 	line "isn't on…"
 	done
 	
-KenGreeting:
-	text "KEN: Hey bro!"
+KenGreeting1:
+	text "KEN: Hey, bro!"
 	para "That shiny thing"
 	line "on your wrist…"
 	para "You finally got"
@@ -187,7 +216,10 @@ KenGreeting:
 	para "Come see me later"
 	line "before you head"
 	cont "out anywhere!"
-	para "Oh, yeah!"
+	done
+	
+KenGreeting1pt2:
+	text "Oh, yeah!"
 	para "I think I saw that"
 	line "you got a new"
 	cont "e-mail on your PC."

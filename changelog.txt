@@ -224,3 +224,6 @@ Changelog
 - Scizor and Pluckross now available in Nanjo Forest
 - Moved unused sign text to be inaccessible in Stand City
 
+2.71
+- Reading email is now mandatory at start of game, Ken will block you
+- Changed some instances of "Hey kid" to "Hey, kid" and "Hey PLAYER" to "Hey, PLAYER"

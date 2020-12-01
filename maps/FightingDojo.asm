@@ -174,7 +174,7 @@ Text_BeatEm:
 	done
 
 Text_GoBeatBlackbelts:
-	text "Hey kid!"
+	text "Hey, kid!"
 	para "If you can defeat"
 	line "my students, I'll"
 	para "reward you with"

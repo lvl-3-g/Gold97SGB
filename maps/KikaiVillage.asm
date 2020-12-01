@@ -75,8 +75,8 @@ KikaiBrunoScript:
 	end
 	
 HeyKidWatchOutText:
-	text "BRUNO: Hey kid,"
-	line "watch out!"
+	text "BRUNO: Watch out,"
+	line "kid!"
 	para "This rock is about"
 	line "to be dust!"
 	done
