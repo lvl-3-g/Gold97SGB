@@ -1,10 +1,12 @@
-	const_def 1 ; object constants
+	object_const_def ; object_event constants
 	const ROUTE105ROUTE106GATE_OFFICER
 	const ROUTE105ROUTE106GATE_ROCKER
 	const ROUTE105ROUTE106GATE_CLERK
 
 Route105Route106Gate_MapScripts:
-	db 1 ; scene scripts
+	db 0 ; scene scripts
+
+	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .DollWednesday
 
 .DollWednesday:
@@ -17,7 +19,6 @@ Route105Route106Gate_MapScripts:
 	appear ROUTE105ROUTE106GATE_CLERK
 	return
 
-	db 0 ; callbacks
 
 Route105Route106GateOfficerScript:
 	jumptextfaceplayer Route105Route106GateOfficerText

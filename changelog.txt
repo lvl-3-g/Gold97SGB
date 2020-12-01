@@ -227,3 +227,6 @@ Changelog
 2.71
 - Reading email is now mandatory at start of game, Ken will block you
 - Changed some instances of "Hey kid" to "Hey, kid" and "Hey PLAYER" to "Hey, PLAYER"
+
+2.72
+- Fixed issue where gate between Route 105 and 106 would crash game
