@@ -1075,6 +1075,14 @@ Pokedex_DrawMainScreenBG:
 	hlcoord 0, 0
 	lb bc, 7, 7
 	call Pokedex_PlaceBorder
+	xor a
+	hlcoord 0, 1
+	ld c, 7
+	call Pokedex_FillVertically
+	hlcoord 0,0
+	ld [hl], $34
+	hlcoord 0,8
+	ld [hl], $39
 	hlcoord 0, 9
 	lb bc, 6, 7
 	call Pokedex_PlaceBorder
@@ -1120,6 +1128,14 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceFrontpicTopLeftCorner
 	ret
 
+Pokedex_FillVertically:
+.loop
+	ld [hl], a
+	ld de, SCREEN_WIDTH
+	add hl, de
+	dec c
+	jr nz, .loop
+	ret
 String_SEEN:
 	db "SEEN", -1
 String_OWN:
