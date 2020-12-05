@@ -172,8 +172,8 @@ SpriteAnimFrameData:
 	delanim
 
 .Frameset_GSTitleTrail:
-	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1,  1
-	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2,  1
+	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_1,  3
+	frame SPRITE_ANIM_OAMSET_GS_TITLE_TRAIL_2,  3
 	dorestart
 
 .Frameset_GSIntroPikachu4:
