@@ -1992,7 +1992,7 @@ Pokedex_PutOldModeCursorOAM:
 	ld a, [wDexListingCursor]
 	or a
 	jr nz, .okay
-	ld hl, .CursorAtTopOAM
+;	ld hl, .CursorAtTopOAM ; commenting this line out fixes issue with curser graphics in "old" mode when cursor is at top of screen
 .okay
 	call Pokedex_LoadCursorOAM
 	ret
