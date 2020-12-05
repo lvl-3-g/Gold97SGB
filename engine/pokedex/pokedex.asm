@@ -1075,7 +1075,7 @@ Pokedex_DrawMainScreenBG:
 	hlcoord 0, 0
 	lb bc, 7, 7
 	call Pokedex_PlaceBorder
-	xor a
+	ld a, $7f
 	hlcoord 0, 1
 	ld c, 7
 	call Pokedex_FillVertically
