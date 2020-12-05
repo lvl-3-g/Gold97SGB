@@ -43,10 +43,10 @@ PrintDexEntry:
 	ld a, [wPrinterQueueLength]
 	push af
 
-	ld hl, vTiles1
-	ld de, FontInversed
-	lb bc, BANK(FontInversed), $80
-	call Request1bpp
+	;ld hl, vTiles1
+	;ld de, FontInversed
+	;lb bc, BANK(FontInversed), $80
+	;call Request1bpp
 
 	xor a
 	ldh [hPrinter], a

@@ -1,4 +1,4 @@
-roms := pokegold.gbc pokesilver.gbc
+roms := pokegold.gbc
 
 rom_obj := \
 audio.o \
@@ -50,7 +50,6 @@ RGBLINK ?= $(RGBDS)rgblink
 
 all: $(roms)
 gold:   pokegold.gbc
-silver: pokesilver.gbc
 
 clean:
 	rm -f $(roms) $(gold_obj) $(silver_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
