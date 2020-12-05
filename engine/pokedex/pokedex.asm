@@ -822,10 +822,6 @@ Pokedex_UpdateUnownMode:
 	ld a, DEXSTATE_OPTION_SCR
 	ld [wJumptableIndex], a
 	call DelayFrame
-	call Pokedex_CheckSGB
-	jr nz, .decompress
-	farcall LoadSGBPokedexGFX2
-	jr .done
 
 .decompress
 	ld hl, PokedexLZ
@@ -2434,10 +2430,6 @@ Pokedex_LoadGFX:
 	ld hl, vTiles2 tile $60
 	ld bc, $20 tiles
 	call Pokedex_InvertTiles
-	call Pokedex_CheckSGB
-	jr nz, .LoadPokedexLZ
-	farcall LoadSGBPokedexGFX
-	jr .LoadPokedexSlowpokeLZ
 
 .LoadPokedexLZ:
 	ld hl, PokedexLZ
