@@ -188,3 +188,4 @@ SFX:
 	dba Sfx_TrainArrived
 	dba Sfx_StopSlot
 	dba Sfx_2Boops
+	dba Sfx_TitleEntrance

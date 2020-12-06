@@ -5176,3 +5176,14 @@ Sfx_StopSlot_Ch5:
 	square_note 1, 15, 8, 1888
 	square_note 4, 8, 2, 1888
 	sound_ret
+
+Sfx_TitleEntrance:
+	channel_count 1
+	channel 8, .ch8
+.ch8
+	noise_note 8,  3, 12, $20
+	noise_note 6,  10, 0, $20
+	noise_note 8,  11, 0, $21
+	noise_note 10, 12, 0, $22
+	noise_note 15, 13, 2, $23
+	sound_ret

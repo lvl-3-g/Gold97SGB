@@ -330,18 +330,10 @@ SECTION "bank39", ROMX
 CopyrightGFX::
 INCBIN "gfx/intro/copyright.2bpp"
 
-IF DEF(_GOLD)
 TitleScreenGFX3:
 INCBIN "gfx/title/title_trail_gold.2bpp"
 TitleScreenGFX4:
-INCBIN "gfx/title/hooh_gold.2bpp.lz"
-
-ELIF DEF(_SILVER)
-TitleScreenGFX3:
-INCBIN "gfx/title/title_trail_silver.2bpp"
-TitleScreenGFX4:
-INCBIN "gfx/title/blissey_silver.2bpp.lz"
-ENDC
+INCBIN "gfx/title/notes.2bpp"
 
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/intro.asm"
