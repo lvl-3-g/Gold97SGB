@@ -55,7 +55,7 @@ PagotaCityYoungsterScript:
 	end
 
 KurtsHouseSign:
-	setevent EVENT_GOT_5F_SAGE_BLESSING
+;	setevent EVENT_GOT_5F_SAGE_BLESSING
 	jumptext KurtsHouseSignText
 
 PagotaCitySign:

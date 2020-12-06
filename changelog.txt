@@ -237,3 +237,7 @@ Changelog
 - Fixed issue where slowpoke vendor on Route 103 could talk to you while facing the wrong way
 - Fixed issue where a bug catcher in Westport Gym could spot you through a tree
 
+3.10
+- Title screen intro animation because ZumiIsawhat? is some sort of wizard
+- Fixed issue where reading sign outside of Kurt's house would give you Monk's blessing without climbing the tower
+
