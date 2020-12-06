@@ -1264,6 +1264,14 @@ Pokedex_DrawSearchResultsScreenBG:
 	hlcoord 0, 0
 	lb bc, 7, 7
 	call Pokedex_PlaceBorder
+	ld a, $7f
+	hlcoord 0, 1
+	ld c, 7
+	call Pokedex_FillVertically
+	hlcoord 0,0
+	ld [hl], $34
+	hlcoord 0,8
+	ld [hl], $39
 	hlcoord 0, 11
 	lb bc, 5, 18
 	call Pokedex_PlaceBorder
@@ -1281,7 +1289,7 @@ Pokedex_DrawSearchResultsScreenBG:
 	ld a, $5a
 	call Pokedex_FillColumn
 	hlcoord 8, 8
-	ld [hl], $53
+	ld [hl], $60
 	hlcoord 8, 9
 	ld [hl], $69
 	hlcoord 8, 10
