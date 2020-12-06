@@ -84,7 +84,7 @@ PokeGear:
 	farcall ClearSpriteAnims
 	call InitPokegearModeIndicatorArrow
 	ld a, 8
-	call SkipMusic
+;	call SkipMusic ; weird that this is a thing
 	ld a, LCDC_DEFAULT
 	ldh [rLCDC], a
 	call TownMap_InitCursorAndPlayerIconPositions
