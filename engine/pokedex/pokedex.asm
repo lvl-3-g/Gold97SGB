@@ -1077,8 +1077,8 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceBorder
 	ld a, $7f
 	hlcoord 0, 1
-	ld c, 7
-	call Pokedex_FillVertically
+	ld b, 7
+	call Pokedex_FillColumn
 	hlcoord 0,0
 	ld [hl], $34
 	hlcoord 0,8
@@ -1128,14 +1128,6 @@ Pokedex_DrawMainScreenBG:
 	call Pokedex_PlaceFrontpicTopLeftCorner
 	ret
 
-Pokedex_FillVertically:
-.loop
-	ld [hl], a
-	ld de, SCREEN_WIDTH
-	add hl, de
-	dec c
-	jr nz, .loop
-	ret
 String_SEEN:
 	db "SEEN", -1
 String_OWN:
@@ -1149,15 +1141,17 @@ String_START_SEARCH:
 Pokedex_DrawDexEntryScreenBG:
 	call Pokedex_FillBackgroundColor2
 	hlcoord 0, 0
-	lb bc, 15, 18
+	lb bc, 15, 19
 	call Pokedex_PlaceBorder
-	hlcoord 19, 0
+; patch left column
+	hlcoord 0, 0
 	ld [hl], $34
-	hlcoord 19, 1
-	ld a, " "
+	hlcoord 0, 1
+	ld a, $7F
 	ld b, 15
 	call Pokedex_FillColumn
 	ld [hl], $39
+; right column carried over
 	hlcoord 1, 10
 	ld bc, 19
 	ld a, $61
@@ -1266,8 +1260,8 @@ Pokedex_DrawSearchResultsScreenBG:
 	call Pokedex_PlaceBorder
 	ld a, $7f
 	hlcoord 0, 1
-	ld c, 7
-	call Pokedex_FillVertically
+	ld b, 7
+	call Pokedex_FillColumn
 	hlcoord 0,0
 	ld [hl], $34
 	hlcoord 0,8
