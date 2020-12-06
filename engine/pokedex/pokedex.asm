@@ -1281,7 +1281,7 @@ Pokedex_DrawSearchResultsScreenBG:
 	ld a, $5a
 	call Pokedex_FillColumn
 	hlcoord 8, 8
-	ld [hl], $53
+	ld [hl], $60
 	hlcoord 8, 9
 	ld [hl], $69
 	hlcoord 8, 10
