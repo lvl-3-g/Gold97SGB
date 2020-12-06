@@ -185,12 +185,16 @@ SlowpokeTailSalesmanScript:
 	writetext Text_ThoughtKidsWereLoaded
 	waitbutton
 	closetext
+	turnobject ROUTE103_FISHER, DOWN
+	setscene SCENE_ROUTE_103_NOTHING
 	end
 
 .refused
 	writetext Text_RefusedToBuySlowpokeTail
 	waitbutton
 	closetext
+	turnobject ROUTE103_FISHER, DOWN
+	setscene SCENE_ROUTE_103_NOTHING
 	end
 	
 

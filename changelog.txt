@@ -230,3 +230,5 @@ Changelog
 
 2.72
 - Fixed issue where gate between Route 105 and 106 would crash game
+
+test
