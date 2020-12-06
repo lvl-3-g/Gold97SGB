@@ -308,6 +308,9 @@ InitPokegearTilemap:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
+	hlcoord 0, 2
+	lb bc, 8, 18
+	call Textbox
 	call Pokegear_UpdateClock
 	ret
 

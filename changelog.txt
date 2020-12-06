@@ -231,4 +231,9 @@ Changelog
 2.72
 - Fixed issue where gate between Route 105 and 106 would crash game
 
-test
+3.00
+- Major Pokedex redesign! Thanks a ton to ZumiIsawhat? for doing this
+- Slight redesign to Pokegear clock, now has border you select in options around clock
+- Fixed issue where slowpoke vendor on Route 103 could talk to you while facing the wrong way
+- Fixed issue where a bug catcher in Westport Gym could spot you through a tree
+
