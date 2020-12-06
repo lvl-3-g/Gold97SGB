@@ -117,12 +117,12 @@ DrawDexEntryScreenRightEdge:
 	ld a, h
 	ldh [hBGMapAddress + 1], a
 	hlcoord 19, 0
-	ld [hl], $66
+	ld [hl], $34
 	hlcoord 19, 1
-	ld a, $67
+	ld a, $7f
 	ld b, 15
 	call Pokedex_FillColumn2
-	ld [hl], $68
+	ld [hl], $39
 	hlcoord 19, 17
 	ld [hl], $3c
 	xor a
