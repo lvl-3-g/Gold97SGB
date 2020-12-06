@@ -161,4 +161,6 @@ hCGBPalUpdate:: db
 hCGB::          db
 hSGB::          db
 
-	ds 20
+hTitleScreenSelectedOption:: db
+hTitleScreenLastPressed:: db
+	ds 18
