@@ -246,3 +246,8 @@ Changelog
 
 3.12
 - fixed main menu music to also be in stereo, missed that one initially
+
+3.20
+- Tweaks to Pokedex interface to make it cleaner
+- Fixed issue where player wouldn't face NPC while doing catching tutorial on Route 101
+

@@ -34,6 +34,7 @@ Route101Tutorial1:
 	follow ROUTE101_COOLTRAINER_M1, PLAYER
 	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData1b
 	stopfollow
+	turnobject PLAYER, DOWN
 	loadwildmon RATTATA, 5
 	catchtutorial BATTLETYPE_TUTORIAL
 	turnobject ROUTE101_COOLTRAINER_M1, UP
@@ -59,6 +60,7 @@ Route101Tutorial2:
 	follow ROUTE101_COOLTRAINER_M1, PLAYER
 	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData2b
 	stopfollow
+	turnobject PLAYER, DOWN
 	loadwildmon RATTATA, 5
 	catchtutorial BATTLETYPE_TUTORIAL
 	turnobject ROUTE101_COOLTRAINER_M1, UP
