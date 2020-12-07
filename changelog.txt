@@ -243,3 +243,6 @@ Changelog
 
 3.11
 - Brought over stereo versions of beta music from Reforged
+
+3.12
+- fixed main menu music to also be in stereo, missed that one initially
