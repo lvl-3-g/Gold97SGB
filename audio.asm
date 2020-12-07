@@ -21,7 +21,6 @@ INCLUDE "audio/music/darkcave.asm"
 INCLUDE "audio/music/nihongymbattle.asm"
 INCLUDE "audio/music/championbattle.asm"
 INCLUDE "audio/music/ssaqua.asm"
-INCLUDE "audio/music/silenttown.asm"
 INCLUDE "audio/music/westportcity.asm"
 INCLUDE "audio/music/amamitown.asm"
 INCLUDE "audio/music/titlescreen.asm"
@@ -76,6 +75,7 @@ INCLUDE "audio/music/evolution.asm"
 INCLUDE "audio/music/printer.asm"
 
 
+
 SECTION "Songs 4", ROMX
 
 INCLUDE "audio/music/viridiancity.asm"
@@ -120,6 +120,8 @@ INCLUDE "audio/music/bugcatchingcontest.asm"
 SECTION "Extra Songs 1", ROMX
 
 INCLUDE "audio/music/credits.asm"
+INCLUDE "audio/music/silenttown.asm"
+
 
 
 SECTION "Extra Songs 2", ROMX

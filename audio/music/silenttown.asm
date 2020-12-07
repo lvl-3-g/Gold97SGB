@@ -32,6 +32,7 @@ Town073_Ch1:
 	pitch_offset 1
 	vibrato 18, 1, 5
 	note_type 12, 12, 2
+	stereo_panning TRUE, FALSE
 	rest 4
 ; P1-1
 .loop10
@@ -171,6 +172,7 @@ Town073_Ch2:
 ; P2-2
 .loop20
 	note_type 12, 13, 4
+	stereo_panning FALSE, TRUE
 	note D_,4
 	note F_,4
 	note D#,2
@@ -228,6 +230,7 @@ Town073_Ch2:
 	note G_,1
 	note A_,8
 ; P2-10
+	stereo_panning TRUE, TRUE
 	note G_,6
 	note F_,6
 	note D#,4
@@ -260,6 +263,7 @@ Town073_Ch3:
 	rest 4
 ; P3-1
 .loop30
+	stereo_panning TRUE, TRUE
 	octave 4
 	note F_,6
 ; P3-2
@@ -294,6 +298,7 @@ Town073_Ch3:
 	note G_,6
 	note A_,4
 ; P3-10
+	stereo_panning FALSE, TRUE
 	note G_,6
 	note A#,6
 	note G_,4

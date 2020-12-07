@@ -241,3 +241,5 @@ Changelog
 - Title screen intro animation because ZumiIsawhat? is some sort of wizard
 - Fixed issue where reading sign outside of Kurt's house would give you Monk's blessing without climbing the tower
 
+3.11
+- Brought over stereo versions of beta music from Reforged
