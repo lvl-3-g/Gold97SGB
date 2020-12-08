@@ -109,7 +109,7 @@ _OakTimeWhatTimeIsItText::
 	done
 
 _OakTimeWhatHoursText::
-	text "What?@"
+	text "Is it @"
 	text_end
 
 _OakTimeHoursQuestionMarkText::
@@ -121,7 +121,7 @@ _OakTimeHowManyMinutesText::
 	done
 
 _OakTimeWhoaMinutesText::
-	text "Whoa!@"
+	text "What?@"
 	text_end
 
 _OakTimeMinutesQuestionMarkText::
@@ -134,9 +134,8 @@ _OakTimeOversleptText::
 	done
 
 _OakTimeYikesText::
-	text "!"
-	line "Yikes! I over-"
-	cont "slept!"
+	text ""
+	line "is that right?"
 	done
 
 _OakTimeSoDarkText::

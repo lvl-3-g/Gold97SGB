@@ -489,14 +489,13 @@ Continue_DisplayGameTime:
 	jp PrintNum
 
 OakSpeech:
-	farcall InitClock
-	call RotateFourPalettesLeft
+	;call RotateFourPalettesLeft
 	call ClearTilemap
 
 	ld de, MUSIC_ROUTE_105
 	call PlayMusic
 
-	call RotateFourPalettesRight
+	;call RotateFourPalettesRight
 	call RotateThreePalettesRight
 	xor a
 	ld [wCurPartySpecies], a
@@ -519,7 +518,6 @@ OakSpeech:
 	call GetBaseData
 
 	hlcoord 6, 4
-	hlcoord 6, 4 ; redundant
 	call PrepMonFrontpic
 
 	xor a
@@ -562,9 +560,54 @@ OakSpeech:
 	call GetSGBLayout
 	call Intro_RotatePalettesLeftFrontpic
 
+; name the player
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
+	ld hl, OakText6a
+	call PrintText
+	call RotateThreePalettesRight	; fade out
+	call ClearTilemap
+
+; name the rival
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+	ld hl, OakText6b
+	call PrintText
+	call NameRivalIntro
+	ld hl, OakText6c
+	call PrintText
+
+; flash in oak pic again
+	call RotateThreePalettesRight	; fade out
+	call ClearTilemap
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, POKEMON_PROF
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+	ld hl, OakText7a
+	call PrintText
+	farcall InitClock	; set time
+
+; flash in the player pic again
+	call RotateThreePalettesRight	; fade out
+	call ClearTilemap
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, CAL
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	call Intro_RotatePalettesLeftFrontpic	; fade in
+; all done!
 	ld hl, OakText7
 	call PrintText
 	ret
@@ -596,6 +639,22 @@ OakText5:
 
 OakText6:
 	text_far _OakText6
+	text_end
+
+OakText6a:
+	text_far _OakText6a
+	text_end
+
+OakText6b:
+	text_far _OakText6b
+	text_end
+
+OakText6c:
+	text_far _OakText6c
+	text_end
+
+OakText7a:
+	text_far _OakText7a
 	text_end
 
 OakText7:
@@ -642,6 +701,47 @@ NamePlayer:
 	ret
 
 INCLUDE "data/player_names.asm"
+INCLUDE "data/rival_names.asm"
+
+NameRivalIntro:
+	call MovePlayerPicRight
+	ld hl, RivalNameMenuHeader
+	call ShowPlayerNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	ld de, wRivalName
+	call StorePlayerName
+	farcall ApplyMonOrTrainerPals
+	call MovePlayerPicLeft
+	ret
+
+.NewName:
+	ld b, NAME_RIVAL
+	ld de, wRivalName
+	farcall NamingScreen
+
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	call LoadFontsExtra
+	call WaitBGMap
+
+	xor a
+	ld [wCurPartySpecies], a
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call RotateThreePalettesLeft
+
+	ld hl, wRivalName
+	ld de, RivalNameArray
+	call InitName
+	ret
+
 
 ShowPlayerNamingChoices:
 	call LoadMenuHeader
@@ -712,12 +812,12 @@ ShrinkPlayer:
 
 MovePlayerPicRight:
 	hlcoord 6, 4
-	ld de, 1
+	ld de, 1	; offset
 	jr MovePlayerPic
 
 MovePlayerPicLeft:
 	hlcoord 13, 4
-	ld de, -1
+	ld de, -1	; offset
 MovePlayerPic:
 	ld c, 7 + 1
 .loop

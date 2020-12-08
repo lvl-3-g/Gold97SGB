@@ -1178,8 +1178,9 @@ _OakText1::
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
+	text "As you may know,"
+	line "this world is in-"
+	cont "habited by crea-"
 	cont "tures that we call"
 	cont "#MON.@"
 	text_end
@@ -1218,6 +1219,38 @@ _OakText6::
 	line "say your name was?"
 	prompt
 
+_OakText6a::
+	text "Ah, so you are"
+	line "<PLAYER>!"
+	prompt
+
+_OakText6b::
+	text "This boy has been"
+	line "friends with you"
+	cont "since childhood,"
+	cont "am I correct?"
+
+	para "...Erm, what was"
+	line "his name again?"
+	prompt
+
+_OakText6c::
+	text "...That's right!"
+	line "<RIVAL> was his"
+	cont "name!"
+	prompt
+
+_OakText7a::
+	text "<PLAYER>!"
+
+	para "Before you start"
+	line "your journey,"
+
+	para "you'll have to"
+	line "set the date and"
+	cont "time."
+
+	prompt
 _OakText7::
 	text "<PLAYER>, are you"
 	line "ready?"
