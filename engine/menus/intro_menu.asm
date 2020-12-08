@@ -824,14 +824,21 @@ MovePlayerPic:
 	push bc
 	push hl
 	push de
-	xor a
-	ldh [hBGMapMode], a
-	lb bc, 7, 7
-	predef PlaceGraphic
-	xor a
-	ldh [hBGMapThird], a
-	call WaitBGMap
-	call DelayFrame
+	  push hl
+	    dec hl
+	    lb bc, 7, 7
+	    call ClearBox
+	  pop hl
+
+	  xor a
+	  ldh [hBGMapMode], a
+	  ldh [hBGMapThird], a
+
+	  lb bc, 7, 7
+	  predef PlaceGraphic
+
+	  call WaitBGMap
+	  call DelayFrame
 	pop de
 	pop hl
 	add hl, de
