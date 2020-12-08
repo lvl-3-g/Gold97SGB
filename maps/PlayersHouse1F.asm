@@ -231,7 +231,7 @@ FinalMomText:
 	line "for you."
 
 	para "He's probably still"
-	cont "close by, I'm sure"
+	line "close by, I'm sure"
 
 	para "you'll bump into"
 	line "him soon."
