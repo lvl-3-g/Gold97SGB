@@ -1228,14 +1228,14 @@ _OakText6b::
 	text "This boy has been"
 	line "friends with you"
 	cont "since childhood,"
-	cont "am I correct?"
+	cont "is that right?"
 
-	para "...Erm, what was"
+	para "…Erm, what was"
 	line "his name again?"
 	prompt
 
 _OakText6c::
-	text "...That's right!"
+	text "…That's right!"
 	line "<RIVAL> was his"
 	cont "name!"
 	prompt
