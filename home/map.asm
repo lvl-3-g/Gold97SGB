@@ -1763,7 +1763,7 @@ FadeToMenu::
 	xor a
 	ldh [hBGMapMode], a
 	call LoadStandardMenuHeader
-	farcall FadeOutPalettes
+	;farcall FadeOutPalettes
 	call ClearSprites
 	call DisableSpriteUpdates
 	ret
@@ -1786,7 +1786,7 @@ FinishExitMenu::
 	ld b, SCGB_MAPPALS
 	call GetSGBLayout
 	call WaitBGMap2
-	farcall FadeInPalettes
+	;farcall FadeInPalettes
 	call EnableSpriteUpdates
 	ret
 
