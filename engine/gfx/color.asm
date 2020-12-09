@@ -181,36 +181,6 @@ Function9136:
 	ld hl, BlkPacket_9ee5
 	jp PushSGBPals
 
-Function9144: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_BetaIntroVenusaur
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_BETA_INTRO_VENUSAUR
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
-Function915e: ; unreferenced
-	call CheckCGB
-	jr nz, .cgb
-	ldh a, [hSGB]
-	and a
-	ret z
-	ld hl, PalPacket_Pack
-	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
-
 Intro_LoadMonPalette:
 	call CheckCGB
 	jr nz, .cgb
@@ -241,36 +211,6 @@ Intro_LoadMonPalette:
 	ld a, c
 	call GetMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ret
-
-Function91b4: ; unreferenced
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
-	ld hl, wBetaPokerSGBPals
-	jp PushSGBPals
-
-.cgb
-	ld a, [wBetaPokerSGBCol]
-	ld c, a
-	ld a, [wBetaPokerSGBRow]
-	hlcoord 0, 0, wAttrmap
-	ld de, SCREEN_WIDTH
-.loop
-	and a
-	jr z, .done
-	add hl, de
-	dec a
-	jr .loop
-
-.done
-	ld b, 0
-	add hl, bc
-	lb bc, 6, 4
-	ld a, [wBetaPokerSGBAttr]
-	and $3
-	call FillBoxCGB
-	call CopyTilemapAtOnce
 	ret
 
 ApplyMonOrTrainerPals:
@@ -414,6 +354,9 @@ CopyFourPalettes:
 	ld c, 4
 
 CopyPalettes:
+	ld a, [hCGB]
+	and a
+	jr nz, .CGB
 .loop
 	push bc
 	ld a, [hli]
@@ -426,6 +369,19 @@ CopyPalettes:
 	dec c
 	jr nz, .loop
 	ret
+.CGB:
+.loop_c
+	push bc
+	ld a, [hli]
+	push hl
+	call GetPredefPal_CGB
+	call LoadHLPaletteIntoDE
+	pop hl
+	inc hl
+	pop bc
+	dec c
+	jr nz, .loop_c
+	ret
 
 GetPredefPal:
 	ld l, a
@@ -433,7 +389,17 @@ GetPredefPal:
 	add hl, hl
 	add hl, hl
 	add hl, hl
-	ld bc, PredefPals
+	ld bc, PredefPals_CGB
+	add hl, bc
+	ret
+
+GetPredefPal_CGB:
+	ld l, a
+	ld h, $0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, PredefPals_CGB
 	add hl, bc
 	ret
 
@@ -646,49 +612,8 @@ GetMonPalettePointer:
 	call _GetMonPalettePointer
 	ret
 
-Function9be8: ; unreferenced
-	ret
-	call CheckCGB
-	ret z
-	ld hl, BattleObjectPals
-	ld a, $90
-	ldh [rOBPI], a
-	ld c, 6 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ld hl, BattleObjectPals
-	ld de, wOBPals1 palette 2
-	ld bc, 2 palettes
-	call CopyBytes
-	ret
-
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"
-
-Function9c39: ; unreferenced
-	call CheckCGB
-	ret z
-	ld a, $90
-	ldh [rOBPI], a
-	ld a, PREDEFPAL_TRADE_TUBE
-	call GetPredefPal
-	call .PushPalette
-	ld a, PREDEFPAL_RB_GREENMON
-	call GetPredefPal
-	call .PushPalette
-	ret
-
-.PushPalette:
-	ld c, 1 palettes
-.loop
-	ld a, [hli]
-	ldh [rOBPD], a
-	dec c
-	jr nz, .loop
-	ret
 
 _GetMonPalettePointer:
 	ld l, a
@@ -868,20 +793,6 @@ _InitSGBBorderPals:
 	dw DataSndPacket6
 	dw DataSndPacket7
 	dw DataSndPacket8
-
-Function9d70: ; unreferenced
-	di
-	xor a
-	ldh [rJOYP], a
-	ld hl, MaskEnFreezePacket
-	call _PushSGBPals
-	call PushSGBBorder
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	ld hl, MaskEnCancelPacket
-	call _PushSGBPals
-	ei
-	ret
 
 PushSGBBorder:
 	call .LoadSGBBorderPointers
@@ -1090,7 +1001,9 @@ INCLUDE "data/sgb_ctrl_packets.asm"
 PredefPals:
 INCLUDE "gfx/sgb/predef.pal"
 
-IF DEF(_GOLD)
+PredefPals_CGB:
+INCLUDE "gfx/sgb/predef_cgb.pal"
+
 SGBBorderMap:
 ; interleaved tile ids and palette ids, without the center 20x18 screen area
 INCBIN "gfx/sgb/gold_border.sgb.tilemap"
@@ -1099,17 +1012,6 @@ SGBBorderPalettes:
 INCLUDE "gfx/sgb/gold_border.pal"
 SGBBorderGFX:
 INCBIN "gfx/sgb/gold_border.2bpp"
-
-ELIF DEF(_SILVER)
-SGBBorderMap:
-; interleaved tile ids and palette ids, without the center 20x18 screen area
-INCBIN "gfx/sgb/silver_border.sgb.tilemap"
-SGBBorderPalettes:
-; assumed to come after SGBBorderMap
-INCLUDE "gfx/sgb/silver_border.pal"
-SGBBorderGFX:
-INCBIN "gfx/sgb/silver_border.2bpp"
-ENDC
 
 HPBarPals:
 INCLUDE "gfx/battle/hp_bar.pal"
@@ -1224,15 +1126,8 @@ INCLUDE "gfx/diploma/diploma.pal"
 PartyMenuOBPals:
 INCLUDE "gfx/stats/party_menu_ob.pal"
 
-UnusedBattleObjectPals:
-INCLUDE "gfx/battle_anims/unused_battle_anims.pal"
-
 GSTitleBGPals:
-IF DEF(_GOLD)
 INCLUDE "gfx/title/title_bg_gold.pal"
-ELIF DEF(_SILVER)
-INCLUDE "gfx/title/title_bg_silver.pal"
-ENDC
 
 GSTitleOBPals:
 INCLUDE "gfx/title/title_fg.pal"
@@ -1244,8 +1139,4 @@ BetaPokerPals:
 INCLUDE "gfx/beta_poker/beta_poker.pal"
 
 SlotMachinePals:
-IF DEF(_GOLD)
 INCLUDE "gfx/slots/slots_gold.pal"
-ELIF DEF(_SILVER)
-INCLUDE "gfx/slots/slots_silver.pal"
-ENDC
