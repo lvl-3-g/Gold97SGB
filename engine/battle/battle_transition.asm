@@ -3,7 +3,11 @@ BATTLETRANSITION_CAVE             EQU $01
 BATTLETRANSITION_CAVE_STRONGER    EQU $09
 BATTLETRANSITION_NO_CAVE          EQU $10
 BATTLETRANSITION_NO_CAVE_STRONGER EQU $18
-BATTLETRANSITION_FINISH           EQU $20
+
+BATTLETRANSITION_SCANLINES        EQU $20
+BATTLETRANSITION_BLINDS           EQU $28
+
+BATTLETRANSITION_FINISH           EQU $2F
 BATTLETRANSITION_END              EQU $80
 
 BATTLETRANSITION_SQUARE EQU "8" ; $fe
@@ -145,8 +149,27 @@ BattleTransitionJumptable:
 	dw StartTrainerBattle_SetUpForRandomScatterOutro ; 1e
 	dw StartTrainerBattle_SpeckleToBlack ; 1f
 
+	; BATTLETRANSITION_SCANLINES
+	dw StartTrainerBattle_LoadPokeBallGraphics ; 20
+	dw StartTrainerBattle_SetUpBGMap ; 21
+	dw StartTrainerBattle_Flash ; 22
+	dw StartTrainerBattle_Flash ; 23
+	dw StartTrainerBattle_Flash ; 24
+	dw StartTrainerBattle_NextScene ; 25
+	dw StartTrainerBattle_SetUpForScanlineOutro ; 26
+	dw StartTrainerBattle_DoScanlines ; 27
+
+	; BATTLETRANSITION_WIPE
+	dw StartTrainerBattle_LoadPokeBallGraphics ; 28
+	dw StartTrainerBattle_SetUpBGMap ; 29
+	dw StartTrainerBattle_Flash ; 2a
+	dw StartTrainerBattle_Flash ; 2b
+	dw StartTrainerBattle_Flash ; 2c
+	dw StartTrainerBattle_SetUpForWipeOutro ; 2d
+	dw StartTrainerBattle_WipeOutro ; 2e
+
 	; BATTLETRANSITION_FINISH
-	dw StartTrainerBattle_Finish ; 20
+	dw StartTrainerBattle_Finish ; 2F
 
 ; transition animations
 	const_def
@@ -164,6 +187,21 @@ StartTrainerBattle_DetermineWhichAnimation:
 ; your lead Pokemon relative to the opponent's.
 ; BUG: wBattleMonLevel and wEnemyMonLevel are not set at this point, so whatever
 ; values happen to be there will determine the animation.
+	ld a, [wOtherTrainerClass]
+	and a
+	jr z, .check_wild
+
+	farcall IsGymLeader
+	jr c, .gym_leader
+
+	ld a, BATTLETRANSITION_SCANLINES
+	jr .got_transition_type
+
+.gym_leader
+	ld a, BATTLETRANSITION_BLINDS
+	jr .got_transition_type
+
+.check_wild
 	ld de, 0
 	ld a, [wBattleMonLevel]
 	add 3
@@ -184,6 +222,7 @@ StartTrainerBattle_DetermineWhichAnimation:
 	ld hl, .StartingPoints
 	add hl, de
 	ld a, [hl]
+.got_transition_type
 	ld [wJumptableIndex], a
 	ret
 
@@ -193,6 +232,101 @@ StartTrainerBattle_DetermineWhichAnimation:
 	db BATTLETRANSITION_CAVE_STRONGER
 	db BATTLETRANSITION_NO_CAVE
 	db BATTLETRANSITION_NO_CAVE_STRONGER
+
+StartTrainerBattle_SetUpForScanlineOutro:	; SW97 transition
+	call StartTrainerBattle_NextScene
+	ld a, LOW(rSCX)
+	ldh [hLCDCPointer], a
+	xor a
+	ld [wce64], a
+	call .SetUpScanlineStuff
+	ret
+.SetUpScanlineStuff:
+	ld hl, wLYOverrides
+	xor a
+	ld c, $90
+.keep_clearing
+	ld [hl+], a
+	dec c
+	jr nz, .keep_clearing
+	ret
+
+StartTrainerBattle_DoScanlines:		; SW97 transition
+	ld hl, wce64
+	ld a, [hl]
+	cp a, $50	; maximum value
+	jr nc, .finished
+	inc [hl]
+	ld e, a
+	xor $FF
+	inc a
+	ld d, a
+	call .split_even_odd
+	ret
+.finished
+	ld a, BATTLETRANSITION_END
+	ld [wJumptableIndex], a
+	ret
+
+.split_even_odd
+	ld hl, wLYOverrides
+	ld c, $48
+.continue_split_even_odd
+	ld [hl], e
+	inc hl
+	ld [hl], d
+	inc hl
+	dec c
+	jr nz, .continue_split_even_odd
+	ret
+
+StartTrainerBattle_SetUpForWipeOutro:
+	call StartTrainerBattle_NextScene
+	ld a, LOW(rSCY)
+	ldh [hLCDCPointer], a
+	xor a
+	ldh [hLYOverrideStart], a
+	ld a, SCREEN_HEIGHT_PX
+	ldh [hLYOverrideEnd], a
+	xor a
+	ld [wce64], a
+	ld a, SCREEN_HEIGHT_PX + 1
+	ldh [hSCY], a
+	ret
+
+StartTrainerBattle_WipeOutro:
+	ld hl, wce64
+	ld a, [hl]
+	cp $48
+	jr nc, .end
+	inc [hl]
+	srl a
+	ld e, a
+	ld d, 0
+	ld hl, wLYOverrides
+	add hl, de
+	call .DoWipeOutro
+	ret
+
+.end
+	ld a, BATTLETRANSITION_FINISH
+	ld [wJumptableIndex], a
+	ret
+
+.DoWipeOutro:
+	ld c, 4
+	ld de, SCREEN_HEIGHT_PX / 4
+	ld b, SCREEN_HEIGHT_PX + 1
+.loop
+	ld a, b
+	sub l
+	ld [hl], a
+	add hl, de
+	dec c
+	jr nz, .loop
+	ld hl, wLYOverridesEnd + 1
+	ld [hl], SCREEN_HEIGHT_PX + 1
+	ret
 
 StartTrainerBattle_Finish:
 	call ClearSprites
@@ -523,9 +657,9 @@ StartTrainerBattle_SpeckleToBlack:
 	ret
 
 StartTrainerBattle_LoadPokeBallGraphics:
-	ld a, [wOtherTrainerClass]
-	and a
-	jr z, .nextscene ; don't need to be here if wild
+	;ld a, [wOtherTrainerClass]
+	;and a
+	;jr z, .nextscene ; don't need to be here if wild
 
 	xor a
 	ldh [hBGMapMode], a

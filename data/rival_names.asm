@@ -1,4 +1,4 @@
-NameMenuHeader:
+RivalNameMenuHeader:
 	db STATICMENU_NO_TOP_SPACING
 	menu_coords 0, 0, 10, TEXTBOX_Y - 1
 	dw .Names
@@ -9,11 +9,11 @@ NameMenuHeader:
 	db 5 ; items
 	db "NEW NAME@"
 
-PlayerNameArray:
-	db "GOLD@"
-	db "HIRO@"
-	db "TAYLOR@"
-	db "KARL@"
+RivalNameArray:
+	db "SILVER@"
+	db "KAMON@"
+	db "OSCAR@"
+	db "MAX@"
 
 	db 2
 	db "NAME@" ; title

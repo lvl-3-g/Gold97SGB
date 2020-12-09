@@ -81,16 +81,16 @@ PalPacket_GamefreakLogo:
 
 PalPacket_a155:
 	sgb_pal01
-	RGB 31, 31, 31
+	RGB 28, 28, 28
 rept 6
-	RGB 00, 00, 00
+	RGB 04, 04, 04
 endr
 	ds 1
 
 PalPacket_a165:
 	sgb_pal23
-	RGB 31, 31, 31
+	RGB 28, 28, 28
 rept 6
-	RGB 00, 00, 00
+	RGB 04, 04, 04
 endr
 	ds 1

@@ -56,7 +56,7 @@ MeetMomScript:
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
 	writetext MomGivesPokegearText
 	buttonsound
-	special SetDayOfWeek
+;	special SetDayOfWeek
 .SetDayOfWeek:
 	writetext IsItDSTText
 	yesorno
@@ -95,9 +95,9 @@ MeetMomScript:
 .FinishPhone:
 	writetext InstructionsNextText
 	waitbutton
-	closetext
-	special NameRival
-	opentext
+;	closetext
+;	special NameRival
+;	opentext
 	writetext FinalMomText
 	waitbutton
 	closetext
@@ -220,16 +220,21 @@ GearIsActiveText2:
 	done
 
 FinalMomText:
-	text "That's right,"
-	line "<RIVAL> is"
-	cont "his name!"
-	
-	para "Well he's probably"
-	line "still close by."
-	
-	para "I'm sure you'll"
-	line "bump into him"
-	cont "soon."
+	;text "That's right,"
+	;line "<RIVAL> is"
+	;cont "his name!"
+
+	text "By the way, that"
+	line "friend of yours"
+
+	para "stopped by looking"
+	line "for you."
+
+	para "He's probably still"
+	line "close by, I'm sure"
+
+	para "you'll bump into"
+	line "him soon."
 	done
 
 Oak2sLookingForYouText:
@@ -238,7 +243,7 @@ Oak2sLookingForYouText:
 
 	para "GEAR isn't set up"
 	line "yet!"
-	
+
 	para "Let's get that"
 	line "done before you"
 	cont "head out!"
@@ -252,8 +257,8 @@ MomGivesPokegearText:
 	line "you want to be a"
 	cont "good trainer."
 
-	para "The day of the"
-	line "week isn't set."
+	para "The time isn't"
+	line "adjusted yet."
 
 	para "You mustn't forget"
 	line "that!"
@@ -302,23 +307,22 @@ InstructionsNextText:
 
 	para "Gee, isn't that"
 	line "convenient?"
-	
-	para "By the way, that"
-	line "friend of yours"
-	
-	para "stopped by looking"
-	line "for you."
-	
-	para "I can't remember"
-	line "his name though…"
-	
-	
+
+	;para "By the way, that"
+	;line "friend of yours"
+
+	;para "stopped by looking"
+	;line "for you."
+
+	;para "I can't remember"
+	;line "his name though…"
+
 	done
 
 HurryUpOak2IsWaitingText:
 	text "PROF.OAK told me"
 	line "he wanted to talk"
-	
+
 	para "to you. You should"
 	line "go see him when"
 	cont "you get a chance."

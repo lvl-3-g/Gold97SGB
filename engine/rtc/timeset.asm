@@ -1,5 +1,5 @@
-TIMESET_UP_ARROW   EQU "♂" ; $ef
-TIMESET_DOWN_ARROW EQU "♀" ; $f5
+TIMESET_UP_ARROW   EQU $d7
+TIMESET_DOWN_ARROW EQU $d8
 
 InitClock:
 ; Ask the player to set the time.
@@ -8,39 +8,38 @@ InitClock:
 	ld a, $1
 	ldh [hInMenu], a
 
+.SkipSavingMenuState:
+	call SetDayOfWeek.OnIntro
+
 	ld a, $0
 	ld [wSpriteUpdatesEnabled], a
-	ld a, $10
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
-	ld c, 8
-	call DelayFrames
-	call RotateFourPalettesLeft
-	call ClearTilemap
-	call ClearSprites
+	;ld a, $10
+	;ld [wMusicFade], a
+	;ld a, LOW(MUSIC_NONE)
+	;ld [wMusicFadeID], a
+	;ld a, HIGH(MUSIC_NONE)
+	;ld [wMusicFadeID + 1], a
+	;ld c, 8
+	;call DelayFrames
+	;call RotateFourPalettesLeft
+	;call ClearTilemap
+	;call ClearSprites
 	xor a
 	ldh [hBGMapMode], a
-	call LoadStandardFont
-	ld de, TimeSetBackgroundGFX
-	ld hl, vTiles2 tile $00
-	lb bc, BANK(TimeSetBackgroundGFX), 1
-	call Request1bpp
+	;call LoadStandardFont
 	ld de, TimeSetUpArrowGFX
-	ld hl, vTiles2 tile $01
+	ld hl, vTiles0 tile TIMESET_UP_ARROW
 	lb bc, BANK(TimeSetUpArrowGFX), 1
 	call Request1bpp
 	ld de, TimeSetDownArrowGFX
-	ld hl, vTiles2 tile $02
+	ld hl, vTiles0 tile TIMESET_DOWN_ARROW
 	lb bc, BANK(TimeSetDownArrowGFX), 1
 	call Request1bpp
-	call .ClearScreen
-	call WaitBGMap
-	call RotateFourPalettesRight
-	ld hl, OakTimeWokeUpText
-	call PrintText
+	;call .ClearScreen
+	;call WaitBGMap
+	;call RotateFourPalettesRight
+	;ld hl, OakTimeWokeUpText
+	;call PrintText
 	ld hl, wTimeSetBuffer
 	ld bc, wTimeSetBufferEnd - wTimeSetBuffer
 	xor a
@@ -51,14 +50,15 @@ InitClock:
 .loop
 	ld hl, OakTimeWhatTimeIsItText
 	call PrintText
-	hlcoord 3, 7
-	lb bc, 2, 15
-	call Textbox
-	hlcoord 11, 7
-	ld [hl], $1
-	hlcoord 11, 10
-	ld [hl], $2
-	hlcoord 4, 9
+	;hlcoord 3, 7
+	;lb bc, 2, 15
+	;call Textbox
+; render arrows inside the textbox
+	hlcoord $12, $0e
+	ld [hl], TIMESET_UP_ARROW
+	hlcoord $12, $10
+	ld [hl], TIMESET_DOWN_ARROW
+	hlcoord 1, $10
 	call DisplayHourOClock
 	ld c, 10
 	call DelayFrames
@@ -70,25 +70,22 @@ InitClock:
 
 	ld a, [wInitHourBuffer]
 	ld [wStringBuffer2 + 1], a
-	call .ClearScreen
+
 	ld hl, OakTimeWhatHoursText
 	call PrintText
 	call YesNoBox
 	jr nc, .HourIsSet
-	call .ClearScreen
+
 	jr .loop
 
 .HourIsSet:
 	ld hl, OakTimeHowManyMinutesText
 	call PrintText
-	hlcoord 11, 7
-	lb bc, 2, 7
-	call Textbox
-	hlcoord 15, 7
-	ld [hl], $1
-	hlcoord 15, 10
-	ld [hl], $2
-	hlcoord 12, 9
+	hlcoord $12, $0e
+	ld [hl], TIMESET_UP_ARROW
+	hlcoord $12, $10
+	ld [hl], TIMESET_DOWN_ARROW
+	hlcoord 1, $10
 	call DisplayMinutesWithMinString
 	ld c, 10
 	call DelayFrames
@@ -100,19 +97,21 @@ InitClock:
 
 	ld a, [wInitMinuteBuffer]
 	ld [wStringBuffer2 + 2], a
-	call .ClearScreen
+	;call .ClearScreen
 	ld hl, OakTimeWhoaMinutesText
 	call PrintText
 	call YesNoBox
 	jr nc, .MinutesAreSet
-	call .ClearScreen
 	jr .HourIsSet
 
 .MinutesAreSet:
 	call InitTimeOfDay
 	ld hl, OakText_ResponseToSetTime
 	call PrintText
-	call WaitPressAorB_BlinkCursor
+	call YesNoBox
+	jr nc, .TimeConfirmed
+	jp .SkipSavingMenuState
+.TimeConfirmed:
 	pop af
 	ldh [hInMenu], a
 	ret
@@ -166,11 +165,11 @@ SetHour:
 	ld [hl], a
 
 .okay
-	hlcoord 4, 9
+	hlcoord 1, $10
 	ld a, " "
 	ld bc, 15
 	call ByteFill
-	hlcoord 4, 9
+	hlcoord 1, $10
 	call DisplayHourOClock
 	call WaitBGMap
 	and a
@@ -193,31 +192,31 @@ DisplayHourOClock:
 	pop hl
 	ret
 
-Function907ba: ; unreferenced
-	ld h, d
-	ld l, e
-	push hl
-	call DisplayHourOClock
-	pop de
-	inc de
-	inc de
-	ld a, ":"
-	ld [de], a
-	inc de
-	push de
-	ld hl, 3
-	add hl, de
-	ld a, [de]
-	inc de
-	ld [hli], a
-	ld a, [de]
-	ld [hl], a
-	pop hl
-	call DisplayMinutesWithMinString
-	inc hl
-	inc hl
-	inc hl
-	ret
+;Function907ba: ; unreferenced
+;	ld h, d
+;	ld l, e
+;	push hl
+;	call DisplayHourOClock
+;	pop de
+;	inc de
+;	inc de
+;	ld a, ":"
+;	ld [de], a
+;	inc de
+;	push de
+;	ld hl, 3
+;	add hl, de
+;	ld a, [de]
+;	inc de
+;	ld [hli], a
+;	ld a, [de]
+;	ld [hl], a
+;	pop hl
+;	call DisplayMinutesWithMinString
+;	inc hl
+;	inc hl
+;	inc hl
+;	ret
 
 SetMinutes:
 	ldh a, [hJoyPressed]
@@ -255,11 +254,11 @@ SetMinutes:
 	inc a
 	ld [hl], a
 .finish_dpad
-	hlcoord 12, 9
+	hlcoord 1, $10
 	ld a, " "
 	ld bc, 7
 	call ByteFill
-	hlcoord 12, 9
+	hlcoord 1, $10
 	call DisplayMinutesWithMinString
 	call WaitBGMap
 	and a
@@ -332,45 +331,21 @@ OakTimeWhoaMinutesText:
 
 OakText_ResponseToSetTime:
 	text_asm
-	decoord 1, 14
-	ld a, [wInitHourBuffer]
-	ld c, a
-	call PrintHour
-	ld [hl], ":"
-	inc hl
-	ld de, wInitMinuteBuffer
-	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
-	call PrintNum
+	hlcoord 1, 14
+	call SetDayOfWeek.PlaceWeekdayString
+	ld d, b
+	ld e, c
+	inc de
+	call PrintHourAndMinutesAdjusted
 	ld b, h
 	ld c, l
 	ld a, [wInitHourBuffer]
-	cp MORN_HOUR
-	jr c, .nite
-	cp DAY_HOUR + 1
-	jr c, .morn
-	cp NITE_HOUR
-	jr c, .day
-.nite
-	ld hl, .OakTimeSoDarkText
-	ret
-.morn
-	ld hl, .OakTimeOversleptText
-	ret
-.day
 	ld hl, .OakTimeYikesText
 	ret
-
-.OakTimeOversleptText:
-	text_far _OakTimeOversleptText
-	text_end
-
 .OakTimeYikesText:
 	text_far _OakTimeYikesText
 	text_end
 
-.OakTimeSoDarkText:
-	text_far _OakTimeSoDarkText
-	text_end
 
 TimeSetBackgroundGFX:
 INCBIN "gfx/new_game/timeset_bg.1bpp"
@@ -382,6 +357,18 @@ INCBIN "gfx/new_game/down_arrow.1bpp"
 SetDayOfWeek:
 	ldh a, [hInMenu]
 	push af
+	call .Setup
+	call .Run
+	pop af
+	ldh [hInMenu], a
+	ret
+
+.OnIntro:
+	call .Setup
+	call .RunOnIntro
+	ret
+
+.Setup:
 	ld a, $1
 	ldh [hInMenu], a
 	ld de, TimeSetUpArrowGFX
@@ -394,6 +381,9 @@ SetDayOfWeek:
 	call Request1bpp
 	xor a
 	ld [wTempDayOfWeek], a
+	ret
+
+.Run:
 .loop
 	hlcoord 0, 12
 	lb bc, 4, 18
@@ -415,6 +405,7 @@ SetDayOfWeek:
 	call DelayFrames
 .loop2
 	call JoyTextDelay
+	call .PutWeekdayString
 	call .GetJoypadAction
 	jr nc, .loop2
 	call ExitMenu
@@ -427,8 +418,36 @@ SetDayOfWeek:
 	ld [wStringBuffer2], a
 	call InitDayOfWeek
 	call LoadStandardFont
-	pop af
-	ldh [hInMenu], a
+	ret
+
+.RunOnIntro:
+.loop_
+	call LoadStandardMenuHeader
+	ld hl, .OakTimeWhatDayIsItText
+	call PrintText
+	hlcoord $12, $e
+	ld [hl], TIMESET_UP_ARROW
+	hlcoord $12, $10
+	ld [hl], TIMESET_DOWN_ARROW
+	hlcoord $1, $10
+	call .PlaceWeekdayString
+	call ApplyTilemap
+	ld c, 10
+	call DelayFrames
+.loop2_
+	call JoyTextDelay
+	call .PutWeekdayString_InTextBox
+	call .GetJoypadAction
+	jr nc, .loop2_
+	call ExitMenu
+	ld hl, .ConfirmWeekdayText
+	call PrintText
+	call YesNoBox
+	jr c, .loop_
+	ld a, [wTempDayOfWeek]
+	ld [wStringBuffer2], a
+	call InitDayOfWeek
+	call LoadStandardFont
 	ret
 
 .GetJoypadAction:
@@ -474,12 +493,29 @@ SetDayOfWeek:
 	ld [hl], a
 
 .finish_dpad
+	scf
+	ccf
+	ret
+
+.PutWeekdayString:
 	xor a
 	ldh [hBGMapMode], a
 	hlcoord 10, 4
 	lb bc, 2, 9
 	call ClearBox
 	hlcoord 10, 5
+	call .PlaceWeekdayString
+	call WaitBGMap
+	and a
+	ret
+
+.PutWeekdayString_InTextBox:
+	xor a
+	ldh [hBGMapMode], a
+	hlcoord 1, $10
+	lb bc, 1, 9
+	call ClearBox
+	hlcoord 1, $10
 	call .PlaceWeekdayString
 	call WaitBGMap
 	and a
@@ -511,12 +547,12 @@ SetDayOfWeek:
 	dw .Saturday
 	dw .Sunday
 
-.Sunday:    db " SUNDAY@"
-.Monday:    db " MONDAY@"
-.Tuesday:   db " TUESDAY@"
+.Sunday:    db "SUNDAY@"
+.Monday:    db "MONDAY@"
+.Tuesday:   db "TUESDAY@"
 .Wednesday: db "WEDNESDAY@"
 .Thursday:  db "THURSDAY@"
-.Friday:    db " FRIDAY@"
+.Friday:    db "FRIDAY@"
 .Saturday:  db "SATURDAY@"
 
 .OakTimeWhatDayIsItText:
@@ -667,6 +703,34 @@ MrChrono:
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
 	call PrintNum
 	ret
+
+PrintHourAndMinutesAdjusted:
+	ld a, [wInitHourBuffer]
+	ld c, a
+	ld l, e
+	ld h, d
+	call AdjustHourForAMorPM
+	push af
+	  ld [wDeciramBuffer], a
+	  ld de, wDeciramBuffer
+	  call PrintTwoDigitNumberLeftAlign
+	  ld [hl], ":"
+	  inc hl
+	  ld de, wInitMinuteBuffer
+	  lb bc, PRINTNUM_LEADINGZEROS | 1, 2
+	  call PrintNum
+	pop af
+	jr nc, .not_am
+	ld de, .am
+	jr .end
+.not_am
+	ld de, .pm
+.end
+	inc hl
+	call PlaceString
+	ret
+.am: db "AM@"
+.pm: db "PM@"
 
 PrintHour:
 	ld l, e

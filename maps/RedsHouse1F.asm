@@ -14,6 +14,11 @@ RedsMom:
 	jumptextfaceplayer RedsMomText1
 
 RedsHouse1FTV:
+	checkcode VAR_FACING
+	ifequal UP, .tvtext
+	jumptext RedsHouse1FTVWrongSideText
+
+.tvtext
 	jumptext RedsHouse1FTVText
 
 RedsHouse1FBookshelf:
@@ -38,6 +43,10 @@ RedsMomText1:
 RedsHouse1FTVText:
 	text "I've never seen"
 	line "this show…"
+	done
+
+RedsHouse1FTVWrongSideText:
+	text "Oops, wrong side."
 	done
 
 RedsHouse1F_MapEvents:

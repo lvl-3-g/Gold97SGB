@@ -153,7 +153,7 @@ GameFreakPresents_Star:
 	add hl, bc
 	ld [hl], $80
 
-	ld de, SFX_GAME_FREAK_LOGO_GS
+	ld de, SFX_METRONOME
 	call PlaySFX
 
 	call GameFreakPresents_NextScene
