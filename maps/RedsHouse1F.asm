@@ -14,22 +14,12 @@ RedsMom:
 	jumptextfaceplayer RedsMomText1
 
 RedsHouse1FTV:
-	callasm .is_player_facing_up
-	iftrue .tvtext
+	checkcode VAR_FACING
+	ifequal UP, .tvtext
 	jumptext RedsHouse1FTVWrongSideText
 
 .tvtext
 	jumptext RedsHouse1FTVText
-
-.is_player_facing_up
-	xor a
-	ld [wScriptVar], a
-	ld a, [wPlayerFacing]
-	cp OW_UP
-	ret nz
-	ld a, TRUE
-	ld [wScriptVar], a
-	ret
 
 RedsHouse1FBookshelf:
 	jumpstd PictureBookshelfScript
