@@ -89,8 +89,8 @@ MapSetupCommands:
 	dba LoadMapAttributes ; 1a
 	dba LoadMapAttributes_SkipObjects ; 1b
 	dba ClearBGPalettes ; 1c
-	dba FadeOutPalettes ; 1d
-	dba FadeInPalettes ; 1e
+	dba FadeOutPalettes_Warp ; 1d
+	dba FadeInPalettes_Warp ; 1e
 	dba GetMapScreenCoords ; 1f
 	dba GetWarpDestCoords ; 20
 	dba SpawnInFacingDown ; 21

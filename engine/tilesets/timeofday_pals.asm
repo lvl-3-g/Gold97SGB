@@ -62,33 +62,79 @@ _UpdateTimePals::
 	call DmgToCgbTimePals
 	ret
 
-FadeInPalettes::
+;;;;;;;;;;;;;;;;;;;
+; only for warps  ;
+;;;;;;;;;;;;;;;;;;;
+
+FadeInPalettes_Warp::
+; fade in from black
 	ld c, $12
 	call GetTimePalFade
 	ld b, $4
-	call ConvertTimePalsDecHL
+	call ConvertTimePalsDecHL_MoreDelay
 	ret
 
-FadeOutPalettes::
-	call FillWhiteBGColor
+FadeOutPalettes_Warp::
+; fade out to black
 	ld c, $9
+	call GetTimePalFade
+	ld b, $4
+	call ConvertTimePalsIncHL_MoreDelay
+	ret
+
+ConvertTimePalsIncHL_MoreDelay:
+.loop
+	call DmgToCgbTimePals
+	inc hl
+	inc hl
+	inc hl
+	ld c, 8
+	call DelayFrames
+	dec b
+	jr nz, .loop
+	ret
+
+ConvertTimePalsDecHL_MoreDelay:
+.loop
+	call DmgToCgbTimePals
+	dec hl
+	dec hl
+	dec hl
+	ld c, 8
+	call DelayFrames
+	dec b
+	jr nz, .loop
+	ret
+
+;;;;;;;;;;;;;;;;;;;;;
+
+FadeInPalettes::
+	ld c, 3 * 0
 	call GetTimePalFade
 	ld b, $4
 	call ConvertTimePalsIncHL
 	ret
 
+FadeOutPalettes::
+	call FillWhiteBGColor
+	ld c, 3 * 3
+	call GetTimePalFade
+	ld b, $4
+	call ConvertTimePalsDecHL
+	ret
+
 FadeInQuickly:
-	ld c, $0
+	ld c, 3 * 6
 	call GetTimePalFade
 	ld b, $4
 	call ConvertTimePalsIncHL
 	ret
 
 FadeBlackQuickly:
-	ld c, $9
+	ld c, 3 * 3
 	call GetTimePalFade
 	ld b, $4
-	call ConvertTimePalsDecHL
+	call ConvertTimePalsIncHL
 	ret
 
 ResetPalettes::
@@ -304,10 +350,10 @@ GetTimePalFade:
 	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
 
 .cgbfade
-	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
-	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
-	dc 3,3,2,1, 3,3,2,1, 3,3,2,1
-	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
-	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
-	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
 	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
+	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
+	dc 3,2,1,0, 3,2,1,0, 3,2,1,0
+	dc 3,3,2,1, 3,3,2,1, 3,3,2,1
+	dc 3,3,3,2, 3,3,3,2, 3,3,3,2
+	dc 3,3,3,3, 3,3,3,3, 3,3,3,3
