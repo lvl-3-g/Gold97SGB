@@ -1786,7 +1786,7 @@ FinishExitMenu::
 	ld b, SCGB_MAPPALS
 	call GetSGBLayout
 	call WaitBGMap2
-	;farcall FadeInPalettes
+	farcall ResetPalettes
 	call EnableSpriteUpdates
 	ret
 

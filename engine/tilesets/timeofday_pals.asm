@@ -91,6 +91,11 @@ FadeBlackQuickly:
 	call ConvertTimePalsDecHL
 	ret
 
+ResetPalettes::
+	ld c, 3 * 3
+	call GetTimePalFade
+	jp DmgToCgbTimePals
+
 FillWhiteBGColor:
 	ld hl, wBGPals1
 	ld a, [hli]
