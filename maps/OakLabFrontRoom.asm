@@ -1,18 +1,23 @@
-	const_def 2 ; object constants
+	object_const_def ; object_event constants
 	const OAK2ENTRANCE_AIDE
 	const OAK2ENTRANCE_SILVER
 	const OAK2ENTRANCE_BLUE
 	const OAK2ENTRANCE_DAISY
 	const OAK2ENTRANCE_DEX1
 	const OAK2ENTRANCE_DEX2
+	const OAK2ENTRANCE_OAK
+	const OAK2ENTRANCE_SILVER2
+	const OAK2ENTRANCE_BLUE2
 
 OakLabFrontRoom_MapScripts:
-	db 5 ; scene scripts
+	db 7 ; scene scripts
 	scene_script .SceneOak2DoorLocked ; SCENE_DEFAULT
 	scene_script .SceneHeadToTheBack ;
 	scene_script .SceneOakLabFrontRoomNothing ;does this work?
-	scene_script .SceneOakLabFrontRoomBattle ;seems to!
+	scene_script .SceneOakLabFrontRoomPokedex ;seems to!
 	scene_script .SceneOakLabFrontRoomDaisy
+	scene_script .SceneOakLabFrontGoSeeOak
+	scene_script .SceneOakLabFrontRoomBattle
 
 	db 0 ; callbacks
 	
@@ -20,39 +25,155 @@ OakLabFrontRoom_MapScripts:
 	end
 	
 .SceneHeadToTheBack:
+	priorityjump .SceneHeadToTheBack2
+	end
+	
+.SceneHeadToTheBack2
+	turnobject OAK2ENTRANCE_BLUE, DOWN
 	turnobject PLAYER, UP
 	opentext
 	writetext Text_InBack
 	waitbutton
 	closetext
-	applymovement PLAYER, CatchUp_Movement
+	applymovement PLAYER, PlayerLabDummyMovement
 	follow OAK2ENTRANCE_BLUE, PLAYER
 	applymovement OAK2ENTRANCE_BLUE, Movement_BlueToBack
 	stopfollow
-	applymovement OAK2ENTRANCE_BLUE, Movement_BlueThroughDoor
+	showemote EMOTE_SHOCK, OAK2ENTRANCE_OAK, 15
+	opentext
+	writetext Oak2Text_Intro
+	waitbutton
+	closetext
+	turnobject OAK2ENTRANCE_SILVER2, RIGHT
+	opentext
+	writetext Text_OakIsOld
+	waitbutton
+	closetext
+	turnobject OAK2ENTRANCE_SILVER2, UP
+	pause 15
+	opentext
+	writetext Text_OakSpeech
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, OAK2ENTRANCE_SILVER2, 15
+	opentext
+	writetext Text_Interesting
+	waitbutton
+	closetext
+	pause 15
+	opentext
+	writetext Text_OakSpeechComeToBack
+	waitbutton
+	closetext
+	applymovement OAK2ENTRANCE_OAK, OakGoesIntoBackMovement
 	playsound SFX_ENTER_DOOR
-	disappear OAK2ENTRANCE_BLUE
-	applymovement PLAYER, Movement_PlayerThroughDoor
+	disappear OAK2ENTRANCE_OAK
+	applymovement OAK2ENTRANCE_SILVER2, SilverGoesIntoBackMovement
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
-	warpfacing UP, OAK_LAB_BACK_ROOM, 3, 7
+	disappear OAK2ENTRANCE_SILVER2
+	setscene SCENE_OAK_LAB_FRONT_ROOM_GO_SEE_OAK
+	setevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
 	end
 
 .SceneOakLabFrontRoomNothing:
 	end
 
+.SceneOakLabFrontRoomPokedex
+	end
+
+.SceneOakLabFrontRoomDaisy:
+	end
+	
+.SceneOakLabFrontGoSeeOak:
+	end
+
 .SceneOakLabFrontRoomBattle:
 	end
 	
-.SceneOakLabFrontRoomDaisy:
-	end
 
-BattleScript:
-	applymovement PLAYER, Movement_DownOne
+GetDexScript:
+	applymovement PLAYER, Movement_OverToBlue
 	playsound SFX_EXIT_BUILDING
 	moveobject OAK2ENTRANCE_SILVER, 4, 0
 	appear OAK2ENTRANCE_SILVER
-	applymovement OAK2ENTRANCE_SILVER, Movement_SilverDownOne
+	applymovement OAK2ENTRANCE_SILVER, Movement_SilverToBlue
+	turnobject OAK2ENTRANCE_BLUE2, RIGHT
+	opentext
+	writetext BlueWillGiveDexText
+	waitbutton
+	closetext
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex1Movement
+	pause 10
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex2Movement
+	disappear OAK2ENTRANCE_DEX1
+	disappear OAK2ENTRANCE_DEX2
+	pause 20
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex3Movement
+	opentext
+	writetext BlueText_Pokedex
+	waitbutton
+	closetext
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex4Movement
+	pause 10
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex5Movement
+	pause 10
+	opentext
+	writetext Lab_GetDexText
+	playsound SFX_ITEM
+	waitsfx
+	setflag ENGINE_POKEDEX
+	pause 15
+	waitbutton
+	closetext
+	applymovement OAK2ENTRANCE_BLUE2, BlueGoesToGetDex6Movement
+	playsound SFX_EXIT_BUILDING
+	moveobject OAK2ENTRANCE_OAK, 4, 0
+	appear OAK2ENTRANCE_OAK
+	applymovement OAK2ENTRANCE_OAK, OakWalksOverToGivePhoneNumber
+	pause 5
+	turnobject PLAYER, RIGHT
+	turnobject OAK2ENTRANCE_SILVER, RIGHT
+	opentext
+	writetext Oak2DirectionsText1
+	waitbutton
+	addcellnum PHONE_OAK2
+	opentext
+	writetext GotOak2sNumberText
+	playsound SFX_REGISTER_PHONE_NUMBER
+	waitsfx
+	waitbutton
+	closetext
+	pause 5
+	opentext
+	writetext Oak2DirectionsText3
+	waitbutton
+	closetext
+	applymovement OAK2ENTRANCE_OAK, OakWalksBackToBackRoom
+	playsound SFX_ENTER_DOOR
+	disappear OAK2ENTRANCE_OAK
+	setscene SCENE_OAK_LAB_FRONT_ROOM_BATTLE
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	end
+	
+BattleScript2:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iffalse YouReloadedMapScriptRight
+	applymovement OAK2ENTRANCE_SILVER, SilverConfrontsYouR1
+	turnobject OAK2ENTRANCE_SILVER, RIGHT
+	turnobject PLAYER, LEFT
+	jump BattleScriptMainBranch
+	end
+
+BattleScript:
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iffalse YouReloadedMapScriptLeft
+	applymovement OAK2ENTRANCE_SILVER, SilverConfrontsYouL1
+	turnobject OAK2ENTRANCE_SILVER, LEFT
+	turnobject PLAYER, RIGHT
+	jump BattleScriptMainBranch
+	end
+	
+BattleScriptMainBranch:
 	special FadeOutMusic
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
@@ -71,6 +192,7 @@ BattleScript:
 	reloadmap
 	iftrue .AfterVictorious
 	jump .AfterYourDefeat
+
 
 .Cruiseal:
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
@@ -112,6 +234,22 @@ BattleScript:
 	setscene SCENE_OAK_LAB_FRONT_ROOM_DAISY
 	special HealParty
 	playmapmusic
+	end
+	
+	
+YouReloadedMapScriptRight:
+	applymovement OAK2ENTRANCE_SILVER, SilverConfrontsYouR2
+	turnobject OAK2ENTRANCE_SILVER, RIGHT
+	turnobject PLAYER, LEFT
+	jump BattleScriptMainBranch
+	end
+
+	
+YouReloadedMapScriptLeft:
+	applymovement OAK2ENTRANCE_SILVER, SilverConfrontsYouL2
+	turnobject OAK2ENTRANCE_SILVER, LEFT
+	turnobject PLAYER, RIGHT
+	jump BattleScriptMainBranch
 	end
 
 
@@ -206,13 +344,53 @@ OakLabFrontRoomDexScript:
 	end
 	
 OakLabFrontRoomBlueScript:
-	jumptextfaceplayer Text_InBack
+	checkevent EVENT_BLUE_ON_RAINBOW_ISLAND
+	iftrue .BlueAfterBlueBattle
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .BlueAfterEliteFour
+	faceplayer
+	opentext
+	writetext Oak2Text_Accepted
+	waitbutton
+	closetext
+	end
+	
+.BlueAfterEliteFour
+	faceplayer
+	opentext
+	writetext Oak2Text_Accepted2
+	waitbutton
+	closetext
+	end
+	
+.BlueAfterBlueBattle
+	faceplayer
+	opentext
+	writetext Oak2Text_Accepted3
+	waitbutton
+	closetext
+	end
+
+
 	
 OakLabFrontRoomDaisyScript:
 	jumptextfaceplayer Text_RootingText
 
 OakLabFrontRoomSilverScript:
-	jumptextfaceplayer OakLabFrontRoomSilverText
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .SilverLabScriptAfterMon
+	writetext OakLabFrontRoomSilverText
+	waitbutton
+	closetext
+	end
+	
+.SilverLabScriptAfterMon:
+	writetext OakLabFrontRoomSilverText2
+	waitbutton
+	closetext
+	end
 
 OakLabFrontRoomAideScript:
 	jumptextfaceplayer OakLabFrontRoomAideText
@@ -225,6 +403,315 @@ OakLabFrontRoomBookshelf:
 	
 OakLabFrontRoomSign:
 	jumptext OakLabFrontRoomSignText
+	
+GoSeeOakScript:
+	turnobject OAK2ENTRANCE_BLUE, DOWN
+	opentext
+	writetext Text_GoSeeOak
+	waitbutton
+	closetext
+	applymovement PLAYER, GoSeeOakOneUp
+	end
+
+OakWalksOverToGivePhoneNumber:
+	step DOWN
+	step DOWN
+	step DOWN
+	turn_head LEFT
+	step_end
+	
+OakWalksBackToBackRoom:
+	step UP
+	step UP
+	slow_step UP
+	step_end
+
+OakGoesIntoBackMovement:
+	step UP
+	slow_step UP
+	step_end
+	
+SilverGoesIntoBackMovement:
+	big_step UP
+	big_step UP
+	big_step RIGHT
+	big_step UP
+	big_step UP
+	step_end
+	
+SilverConfrontsYouR1:
+	big_step RIGHT
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step DOWN
+	step_end
+
+SilverConfrontsYouL1:
+	big_step RIGHT
+	big_step RIGHT
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step DOWN
+	step_end
+	
+SilverConfrontsYouR2:
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step DOWN
+	step_end
+	
+SilverConfrontsYouL2:
+	big_step RIGHT
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	step DOWN
+	step_end
+	
+GoSeeOakOneUp:
+	slow_step UP
+	step_end
+	
+BlueGoesToGetDex1Movement:
+	step LEFT
+	step UP
+	step_end
+	
+BlueGoesToGetDex2Movement:
+	step RIGHT
+	turn_head UP
+	step_end
+	
+BlueGoesToGetDex3Movement:
+	step LEFT
+	step DOWN
+	turn_head RIGHT
+	step_end
+	
+BlueGoesToGetDex4Movement:
+	step DOWN
+	step RIGHT
+	step_end
+	
+BlueGoesToGetDex5Movement:
+	step UP
+	turn_head RIGHT
+	step_end
+	
+BlueGoesToGetDex6Movement:
+	step LEFT
+	turn_head RIGHT
+	step_end
+	
+
+Oak2Text_Accepted:
+	text "Thanks, <PLAYER>!"
+
+	para "I appreciate you"
+	line "helping out my"
+	cont "grandpa."
+	done
+
+Oak2Text_Accepted2:
+	text "How are things"
+	line "now that you've"
+	cont "beat the LEAGUE?"
+	para "I hope they're"
+	line "going well."
+	para "Have you seen"
+	line "<RIVAL> lately?"
+	para "I know he's out"
+	line "training with his"
+	cont "#MON."
+	para "I think he's"
+	line "learned how to"
+	para "work together with"
+	line "them as a team."
+	done
+	
+Oak2Text_Accepted3:
+	text "Hi <PLAYER>!"
+	para "Thanks for that"
+	line "incredible battle!"
+	para "Me and my #MON"
+	line "felt as fired up"
+	cont "as we ever had!"
+	done
+	
+	
+OakLabFrontRoomSilverText2:
+	text "My #MON will be"
+	line "the best ever!"
+	done
+	
+Oak2DirectionsText3:
+	text "<PLAYER>."
+	para "<RIVAL>."
+	para "I'm counting on"
+	line "you both!"
+	done
+
+Oak2DirectionsText1:
+	text "OAK: With that"
+	line "#DEX, you're"
+	para "ready to begin the"
+	line "adventure of a"
+	cont "lifetime!"
+	
+	para "ROUTE 101 and"
+	line "SILENT HILLS would"
+	
+	para "be great places to"
+	line "start looking for"
+	
+	para "#MON. If you"
+	line "want to get some"
+	
+	para "# BALLS, you"
+	line "should head"
+	
+	para "towards PAGOTA"
+	line "CITY nearby"
+	
+	para "to pick some up at"
+	line "their MART."
+	
+	para "I'm sure you'll do"
+	line "great!"
+
+	para "But just in case,"
+	line "here's my phone"
+
+	para "number. Call me if"
+	line "anything comes up!"
+	done
+	
+
+GotOak2sNumberText:
+	text "<PLAYER> got OAK's"
+	line "phone number."
+	done
+	
+	
+Lab_GetDexText:
+	text "<PLAYER> received"
+	line "#DEX!"
+	done
+
+
+BlueText_Pokedex:
+	text "BLUE: I used to"
+	line "want to be the"
+	para "world's best"
+	line "#MON trainer."
+	para "But when I got"
+	line "too arrogant…"
+	para "There was someone"
+	line "who showed me"
+	cont "humility."
+	para "<PLAYER>, you"
+	line "remind me of him."
+	para "And <RIVAL>!"
+	line "You remind me of"
+	cont "myself!"
+	para "Right, though!"
+	para "Here! Take this"
+	line "#DEX!"
+	para "It automatically"
+	line "records data on"
+	para "#MON you've"
+	line "seen or caught!"
+	done
+
+
+	
+BlueWillGiveDexText:
+	text "BLUE: Ah, I see"
+	line "you both got a"
+	cont "#MON!"
+	para "Here, I have"
+	line "something else"
+	cont "for you!"
+	done
+
+Text_GoSeeOak:
+	text "BLUE: Gramps is"
+	line "waiting for you in"
+	cont "the back!"
+	done
+
+Text_Interesting:
+	text "<RIVAL>: Hey,"
+	line "<PLAYER>!"
+
+	para "This just got"
+	line "interesting!"
+
+	done
+
+Text_OakSpeechComeToBack:
+	text "OAK: Won't you two"
+	line "follow me to the"
+	cont "back?"
+	done
+	
+Text_OakSpeech:
+	text "OAK: Indeed! I am"
+	line "PROF.OAK! You've"
+	para "got quite the"
+	line "mouth on you!"
+	para "Won't you listen"
+	line "for a while?"
+	para "One year ago, in"
+	line "KANTO, I entrusted"
+	para "two boys with a"
+	line "#MON and a"
+	para "#DEX each to"
+	line "assist in my"
+	cont "research."
+	para "In the end, they"
+	line "did an astounding"
+	cont "job!"
+	para "They succeeded in"
+	line "documenting 150"
+	para "species of"
+	line "#MON!"
+	para "However, new"
+	line "#MON are being"
+	para "found all over"
+	line "NIHON!"
+	para "Therefore, I moved"
+	line "my lab from KANTO"
+	para "to here, SILENT"
+	line "TOWN, to further"
+	cont "my research."
+	para "My grandson BLUE"
+	line "and my AIDES help,"
+	para "but it's not quite"
+	line "enough!"
+	para "<PLAYER>!"
+	para "<RIVAL>!"
+	para "Please help me"
+	line "research #MON!"
+	done
+	
+	
+
+Oak2Text_Intro:
+	text "OAK: <PLAYER>!"
+	line "There you are!"
+
+	done	
+	
+Text_OakIsOld:
+	text "<RIVAL>: I can't"
+	line "believe this old"
+	para "geezer is PROF."
+	line "OAK…"
+	done
 	
 WhatIsDexText:
 	text "What is this?"
@@ -341,15 +828,16 @@ TimeToBattle:
 Text_InBack:
 	text "PROF.OAK just got"
 	line "back in. He's"
-	para "waiting for you"
-	line "in the back!"
+	para "waiting to see"
+	line "you!"
 	done
 
 OakLabFrontRoomAideText:
-	text "If you're looking"
-	line "for PROF.OAK, he's"
-	para "usually in his"
-	line "back office."
+	text "I'm one of PROF."
+	line "OAK's AIDES."
+	para "Of course, we"
+	line "respect each other"
+	cont "greatly."
 	done
 	
 DoorLockedText:
@@ -391,31 +879,35 @@ DaisyWalksUp2:
 	step_end
 	
 SilverLeavesLab:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+	
+Movement_SilverToBlue:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step LEFT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+	slow_step LEFT
 	step_end
 	
-Movement_SilverDownOne:
+Movement_OverToBlue:
 	step DOWN
-	step_end
-	
-Movement_DownOne:
 	step DOWN
-	turn_head UP
+	step LEFT
+	slow_step LEFT
 	step_end	
 	
-CatchUp_Movement:
-	step UP
+PlayerLabDummyMovement:
 	step_end
 
 DoorLocked_Movement:
 	turn_head DOWN
-	step DOWN
+	slow_step DOWN
 	step_end
 
 Movement_BlueToBack:
@@ -428,9 +920,9 @@ Movement_BlueToBack:
 	step UP
 	step UP
 	step UP
-	step UP
-	step UP
-	step UP
+	slow_step UP
+	slow_step RIGHT
+	turn_head UP
 	step_end
 	
 Movement_BlueThroughDoor:
@@ -451,11 +943,15 @@ OakLabFrontRoom_MapEvents:
 	warp_event  4,  0, OAK_LAB_BACK_ROOM, 1
 
 
-	db 4 ; coord events
+	db 8 ; coord events
 	coord_event  4,  1, SCENE_DEFAULT, DoorLockedScript
-	coord_event  4,  1, SCENE_OAK_LAB_FRONT_ROOM_BATTLE, BattleScript
+	coord_event  3,  7, SCENE_OAK_LAB_FRONT_ROOM_GO_SEE_OAK, GoSeeOakScript
+	coord_event  4,  7, SCENE_OAK_LAB_FRONT_ROOM_GO_SEE_OAK, GoSeeOakScript
+	coord_event  4,  1, SCENE_OAK_LAB_FRONT_ROOM_POKEDEX, GetDexScript
 	coord_event  3, 11, SCENE_OAK_LAB_FRONT_ROOM_DAISY, DaisyStopsScript1
 	coord_event  4, 11, SCENE_OAK_LAB_FRONT_ROOM_DAISY, DaisyStopsScript2
+	coord_event  3,  8, SCENE_OAK_LAB_FRONT_ROOM_BATTLE, BattleScript
+	coord_event  4,  8, SCENE_OAK_LAB_FRONT_ROOM_BATTLE, BattleScript2
 
 	db 14 ; bg events
 	bg_event  6,  1, BGEVENT_READ, OakLabFrontRoomComputerScript
@@ -474,12 +970,15 @@ OakLabFrontRoom_MapEvents:
 	bg_event  2,  0, BGEVENT_READ, OakLabFrontRoomSign
 
 
-	db 6 ; object events
+	db 9 ; object events
 	object_event  6, 13, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomAideScript, -1
 	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomSilverScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
-	object_event  4, 13, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomBlueScript, EVENT_BLUE_OAK_LAB_FRONT_ROOM
+	object_event  4, 14, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomBlueScript, EVENT_BLUE_OAK_LAB_FRONT_ROOM
 	object_event  1, 13, SPRITE_DAISY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDaisyScript, EVENT_DAISY_OAK_LAB_FRONT_ROOM
-	object_event  1,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
-	object_event  0,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM
+	object_event  1,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_OAK_LAB_DEX_TABLE
+	object_event  0,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_OAK_LAB_DEX_TABLE
+	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomDexScript, EVENT_OAK_OAK_LAB_FRONT_ROOM
+	object_event  3,  4, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomSilverScript, EVENT_RIVAL_OAK_LAB_FRONT_ROOM_2
+	object_event  1,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakLabFrontRoomBlueScript, EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 
 	

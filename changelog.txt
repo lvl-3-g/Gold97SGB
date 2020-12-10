@@ -251,3 +251,13 @@ Changelog
 - Tweaks to Pokedex interface to make it cleaner
 - Fixed issue where player wouldn't face NPC while doing catching tutorial on Route 101
 
+4.00
+- Color palettes more closely match beta when playing on Super Game Boy
+- "Gold Version" logo matches beta
+- Professor Oak sprite in intro matches beta
+- Professor Oak has you set the time in his intro speech
+- Professor Oak has you name rival in intro speech instead of mom
+- Slowking instead of Marill in intro to match beta
+- Map transitions now match beta
+- New battle transitions pulled from beta for trainer and gym battles
+- Revamped cutscenes for when getting pokemon from lab at beginning of game, redone to closely match beta

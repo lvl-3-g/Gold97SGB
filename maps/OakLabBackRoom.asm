@@ -1,6 +1,5 @@
 	object_const_def ; object_event constants
 	const OAK2SLAB_OAK2
-	const OAK2SLAB_OAK2S_AIDE
 	const OAK2SLAB_POKE_BALL1
 	const OAK2SLAB_POKE_BALL2
 	const OAK2SLAB_POKE_BALL3
@@ -47,48 +46,28 @@ OakLabBackRoom_MapScripts:
 
 .WalkUpToOak2:
 	applymovement PLAYER, OakLabBackRoom_WalkUpToOak2Movement
-	showemote EMOTE_SHOCK, OAK2SLAB_OAK2, 15
-	opentext
-	writetext Oak2Text_Intro
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, OAK2SLAB_SILVER, 15
-	opentext
-	writetext Text_OakIsOld
-	waitbutton
-	closetext
-	pause 15
-	opentext
-	writetext Text_OakSpeech
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, OAK2SLAB_SILVER, 15
-	opentext
-	writetext Text_Interesting
-	waitbutton
-	closetext
-	showemote EMOTE_SHOCK, OAK2SLAB_BLUE, 15
-	opentext
-	writetext BlueText_Pokedex
-	waitbutton
-	closetext
-	applymovement OAK2SLAB_BLUE, BlueGivesDex1
-	pause 10
-	applymovement OAK2SLAB_BLUE, BlueGivesDex2
 	pause 5
-	opentext
-;	buttonsound
+
+;	writetext Lab_GetDexText
+;	playsound SFX_ITEM
 ;	waitsfx
-	writetext Lab_GetDexText
-	playsound SFX_ITEM
-	waitsfx
-	setflag ENGINE_POKEDEX
-	pause 15
+;	setflag ENGINE_POKEDEX
+;	pause 15
+;	waitbutton
+;	closetext
+
+	opentext
+	writetext Text_OakTakeAMon
 	waitbutton
 	closetext
-	applymovement OAK2SLAB_BLUE, BlueGivesDex3
+	showemote EMOTE_SHOCK, OAK2SLAB_SILVER, 15
 	opentext
-	writetext Text_OakDream
+	writetext Text_SilverGetsOneToo
+	waitbutton
+	closetext
+	pause 15
+	opentext
+	writetext Text_YesSilverGetsOneToo
 	waitbutton
 	closetext
 	applymovement OAK2SLAB_SILVER, MoveHeadLeft
@@ -102,33 +81,8 @@ OakLabBackRoom_MapScripts:
 
 OakLabBackRoomSilverScript:
 	jumptextfaceplayer Text_Best
-	
+
 OakLabBackRoomBlueScript:
-	checkevent EVENT_BLUE_ON_RAINBOW_ISLAND
-	iftrue .BlueAfterBlueBattle
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .BlueAfterEliteFour
-	faceplayer
-	opentext
-	writetext Oak2Text_Accepted
-	waitbutton
-	closetext
-	end
-	
-.BlueAfterEliteFour
-	faceplayer
-	opentext
-	writetext Oak2Text_Accepted2
-	waitbutton
-	closetext
-	end
-	
-.BlueAfterBlueBattle
-	faceplayer
-	opentext
-	writetext Oak2Text_Accepted3
-	waitbutton
-	closetext
 	end
 
 ProfOak2Script:
@@ -337,32 +291,30 @@ Oak2DirectionsScript:
 	applymovement OAK2SLAB_OAK2, Oak2ToTable
 	turnobject PLAYER, UP
 	opentext
-	writetext Oak2DirectionsText1
+	
+	
+	writetext Oak2DirectionsTextNew
 	waitbutton
 	closetext
-	addcellnum PHONE_OAK2
-	opentext
-	writetext GotOak2sNumberText
-	playsound SFX_REGISTER_PHONE_NUMBER
-	waitsfx
-	waitbutton
-	closetext
-	opentext
-	writetext Oak2DirectionsText2
-	waitbutton
-	closetext
-	opentext
-	writetext Oak2DirectionsText3
-	waitbutton
-	closetext
+;	
+;	opentext
+;	writetext Oak2DirectionsText2
+;	waitbutton
+;	closetext
+;	opentext
+;	writetext Oak2DirectionsText3
+;	waitbutton
+;	closetext
 	applymovement OAK2SLAB_OAK2, Oak2BackFromTable
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_RIVAL_CROWN_CITY
+	setevent EVENT_BLUE_OAK_LAB_FRONT_ROOM
 	setscene SCENE_OAK2SLAB_NOTHING
 	setmapscene SILENT_TOWN, SCENE_SILENT_NOTHING
-	setmapscene OAK_LAB_FRONT_ROOM, SCENE_OAK_LAB_FRONT_ROOM_BATTLE
+	setmapscene OAK_LAB_FRONT_ROOM, SCENE_OAK_LAB_FRONT_ROOM_POKEDEX
 	setevent EVENT_SILVER_IN_OAK_LAB_BACK_ROOM
 	clearevent EVENT_DAISY_OAK_LAB_FRONT_ROOM
+	clearevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 	end
 
 Oak2DescribesMrPokemonScript:
@@ -458,45 +410,7 @@ Oak2JumpRightScript:
 	opentext
 	end
 
-AideScript_WalkPotion1:
-	applymovement OAK2SLAB_OAK2S_AIDE, AideWalksRight1
-	turnobject PLAYER, DOWN
-	scall AideScript_GivePotion
-	applymovement OAK2SLAB_OAK2S_AIDE, AideWalksLeft1
-	end
 
-AideScript_WalkPotion2:
-	applymovement OAK2SLAB_OAK2S_AIDE, AideWalksRight2
-	turnobject PLAYER, DOWN
-	scall AideScript_GivePotion
-	applymovement OAK2SLAB_OAK2S_AIDE, AideWalksLeft2
-	end
-
-AideScript_GivePotion:
-	opentext
-	writetext AideText_GiveYouPotion
-	buttonsound
-	verbosegiveitem POTION
-	writetext AideText_AlwaysBusy
-	waitbutton
-	closetext
-	setscene SCENE_OAK2SLAB_NOTHING
-	end
-
-
-AideScript_AfterTheft:
-	writetext AideText_AfterTheft
-	waitbutton
-	closetext
-	end
-
-Oak2sAideScript:
-	faceplayer
-	opentext
-	writetext AideText_AlwaysBusy
-	waitbutton
-	closetext
-	end
 
 OakLabBackRoomTrashcan:
 	jumptext OakLabBackRoomTrashcanText
@@ -680,31 +594,19 @@ BlueGivesDex3:
 	turn_head DOWN
 	step_end
 	
-Oak2Text_Accepted3:
-	text "Hi <PLAYER>!"
-	para "Thanks for that"
-	line "incredible battle!"
-	para "Me and my #MON"
-	line "felt as fired up"
-	cont "as we ever had!"
+Text_YesSilverGetsOneToo:
+	text "OAK: Yes, of"
+	line "course."
+	para "Go on, choose!"
 	done
 	
-Oak2Text_Accepted2:
-	text "How are things"
-	line "now that you've"
-	cont "beat the LEAGUE?"
-	para "I hope they're"
-	line "going well."
-	para "Have you seen"
-	line "<RIVAL> lately?"
-	para "I know he's out"
-	line "training with his"
-	cont "#MON."
-	para "I think he's"
-	line "learned how to"
-	para "work together with"
-	line "them as a team."
+Text_SilverGetsOneToo:
+	text "<RIVAL>: We"
+	line "both get one?"
+	para "I get one too!?"
 	done
+	
+
 	
 Text_SilverTakeThisOne:
 	text "You sure you chose"
@@ -734,27 +636,11 @@ Text_Best:
 	cont "one!"
 	done
 
-Text_OakDream:
-	text "OAK: To make a"
-	line "complete guide on"
-	para "all of the #MON"
-	line "in the world…"
-	para "That was my dream!"
-	line "But #MON are"
-	para "being discovered"
-	line "even as we speak!"
-	para "I don't have"
-	line "enough time left"
-	cont "in this world."
-	para "So you two are"
-	line "going to help me"
-	cont "fulfill my dream!"
-	para "And to do that,"
-	line "you'll need your"
-	cont "own #MON!"
-	para "There on the"
-	line "table are three"
-	cont "# BALLS."
+Text_OakTakeAMon:
+	text "OAK: Look over"
+	line "there!"
+	para "On the table are"
+	line "three # BALLS."
 	para "Each of you,"
 	line "choose one to be"
 	para "your own partner"
@@ -770,106 +656,9 @@ Text_RivalGenerous:
 	line "guy!"
 	done
 
-Lab_GetDexText:
-	text "<PLAYER> received"
-	line "#DEX!"
-	done
-	
-Text_OakSpeech:
-	text "OAK: Indeed! I am"
-	line "PROF.OAK! You've"
-	para "got quite the"
-	line "mouth on you!"
-	para "Won't you listen"
-	line "for a while?"
-	para "One year ago, in"
-	line "KANTO, I entrusted"
-	para "two boys with a"
-	line "#MON and a"
-	para "#DEX each to"
-	line "assist in my"
-	cont "research."
-	para "In the end, they"
-	line "did an astounding"
-	cont "job!"
-	para "They succeeded in"
-	line "documenting 150"
-	para "species of"
-	line "#MON!"
-	para "However, new"
-	line "#MON are being"
-	para "found all over"
-	line "NIHON!"
-	para "Therefore, I moved"
-	line "my lab from KANTO"
-	para "to here, SILENT"
-	line "TOWN, to further"
-	cont "my research."
-	para "My grandson BLUE"
-	line "and my AIDEs help,"
-	para "but it's not quite"
-	line "enough!"
-	para "<PLAYER>!"
-	para "<RIVAL>!"
-	para "Please help me"
-	line "research #MON!"
-	done
-	
-Text_OakIsOld:
-	text "<RIVAL>: I can't"
-	line "believe this old"
-	para "geezer is PROF."
-	line "OAK…"
-	done
 
-Oak2Text_Intro:
-	text "OAK: <PLAYER>!"
-	line "There you are!"
 
-	done
 
-Oak2Text_Accepted:
-	text "Thanks, <PLAYER>!"
-
-	para "I appreciate you"
-	line "helping out my"
-	cont "grandpa."
-	done
-
-BlueText_Pokedex:
-	text "BLUE: I used to"
-	line "want to be the"
-	para "world's best"
-	line "#MON trainer."
-	para "But when I got"
-	line "too arrogant…"
-	para "There was someone"
-	line "who showed me"
-	cont "humility."
-	para "<PLAYER>, you"
-	line "remind me of him."
-	para "And <RIVAL>!"
-	line "You remind me of"
-	cont "myself!"
-	para "Right, though!"
-	para "I have something"
-	line "for you both!"
-	para "Here! Take this"
-	line "#DEX!"
-	para "It automatically"
-	line "records data on"
-	para "#MON you've"
-	line "seen or caught!"
-	done
-
-Text_Interesting:
-	text "<RIVAL>: Hey,"
-	line "<PLAYER>!"
-
-	para "This just got"
-	line "interesting!"
-
-	done
 
 Oak2Text_LetYourMonBattleIt:
 	text "If a wild #MON"
@@ -920,35 +709,22 @@ ReceivedStarterText:
 	text_ram wStringBuffer3
 	text "!"
 	done
-
-Oak2DirectionsText1:
-	text "ROUTE 101 and"
-	line "SILENT HILLS would"
 	
-	para "be great places to"
-	line "start looking for"
-	
-	para "#MON. If you"
-	line "want to get some"
-	
-	para "# BALLS, you"
-	line "should head"
-	
-	para "towards PAGOTA"
-	line "CITY nearby"
-	
-	para "to pick some up at"
-	line "their MART."
-	
-	para "I'm sure you'll do"
-	line "great!"
-
-	para "But just in case,"
-	line "here's my phone"
-
-	para "number. Call me if"
-	line "anything comes up!"
+Oak2DirectionsTextNew:
+	text "OAK: Your partner"
+	line "#MON wil be an"
+	para "important ally as"
+	line "well as a friend."
+	para "Be sure to treat"
+	line "it kindly."
+	para "Now, both of you"
+	line "should go see"
+	cont "BLUE."
+	para "He has something"
+	line "important to give"
+	cont "to you."
 	done
+
 
 Oak2DirectionsText2:
 	text "If your #MON is"
@@ -964,17 +740,8 @@ Oak2DirectionsText2:
 	line "it anytime."
 	done
 
-Oak2DirectionsText3:
-	text "<PLAYER>."
-	para "<RIVAL>."
-	para "I'm counting on"
-	line "you both!"
-	done
 
-GotOak2sNumberText:
-	text "<PLAYER> got OAK's"
-	line "phone number."
-	done
+
 
 Oak2DescribesMrPokemonText:
 	text "This is such an"
@@ -1341,9 +1108,8 @@ OakLabBackRoom_MapEvents:
 	bg_event  1,  0, BGEVENT_READ, OakLabBackRoomBookshelf
 	bg_event  9,  3, BGEVENT_READ, OakLabBackRoomTrashcan
 
-	db 7 ; object events
+	db 6 ; object events
 	object_event  4,  2, SPRITE_OAK2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfOak2Script, -1
-	object_event  7,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Oak2sAideScript, EVENT_OAK2S_AIDE_IN_LAB
 	object_event  5,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FlambearPokeBallScript, EVENT_FLAMBEAR_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_CRUISEAL_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, HappaPokeBallScript, EVENT_HAPPA_POKEBALL_IN_OAK_LAB_BACK_ROOM

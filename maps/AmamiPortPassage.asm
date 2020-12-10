@@ -187,7 +187,7 @@ TeleportGuyScript:
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warp WESTPORT_PORT_PASSAGE, 13, 2
 	end
