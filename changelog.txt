@@ -261,3 +261,7 @@ Changelog
 - Map transitions now match beta
 - New battle transitions pulled from beta for trainer and gym battles
 - Revamped cutscenes for when getting pokemon from lab at beginning of game, redone to closely match beta
+
+4.01
+- Minor tweaks to dialogue in Oak's lab
+- Fixed issue where loading older saves might show two Blues in Oak's lab

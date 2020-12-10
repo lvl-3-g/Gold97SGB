@@ -566,27 +566,38 @@ Oak2DirectionsText1:
 	
 	para "be great places to"
 	line "start looking for"
+	cont "#MON."
 	
-	para "#MON. If you"
-	line "want to get some"
+	para "If you want to get"
+	line "some # BALLS,"
+	para "you should head"
+	line "towards PAGOTA"
+	para "CITY nearby to"
+	line "pick some up at"
+	cont "their MART."
 	
-	para "# BALLS, you"
-	line "should head"
+	para "If your #MON is"
+	line "hurt, you should"
+
+	para "heal it with the"
+	line "#MON CENTER"
 	
-	para "towards PAGOTA"
-	line "CITY nearby"
-	
-	para "to pick some up at"
-	line "their MART."
+	para "just behind the"
+	line "lab."
+
+	para "Feel free to use"
+	line "it anytime."
+
 	
 	para "I'm sure you'll do"
 	line "great!"
 
 	para "But just in case,"
 	line "here's my phone"
+	cont "number."
 
-	para "number. Call me if"
-	line "anything comes up!"
+	para "Call me if any-"
+	line "thing comes up!"
 	done
 	
 

@@ -38,6 +38,7 @@ SilentTown_MapScripts:
 	setevent EVENT_RIVAL_OAK_LAB_FRONT_ROOM_2
 	setevent EVENT_OAK_LAB_DEX_TABLE
 	setevent EVENT_OAK_OAK_LAB_FRONT_ROOM
+	setevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
 	return
 	
 .DontFixSaves

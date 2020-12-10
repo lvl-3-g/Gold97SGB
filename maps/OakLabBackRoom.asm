@@ -727,20 +727,8 @@ Oak2DirectionsTextNew:
 
 
 Oak2DirectionsText2:
-	text "If your #MON is"
-	line "hurt, you should"
-
-	para "heal it with the"
-	line "#MON CENTER"
-	
-	para "just behind the"
-	line "lab."
-
-	para "Feel free to use"
-	line "it anytime."
+	text "notused"
 	done
-
-
 
 
 Oak2DescribesMrPokemonText:
