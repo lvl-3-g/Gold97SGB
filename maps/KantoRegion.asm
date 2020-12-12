@@ -273,7 +273,7 @@ KantoRegion_MapEvents:
 	warp_event 15, 17, KANTO_DEPT_STORE_1F, 2
 	warp_event 23, 19, KANTO_MANSION_1F, 2
 	warp_event  5,  5, KANTO_GYM, 2
-	warp_event 38, 29, WESTPORT_MAGNET_TRAIN_STATION, 1
+	warp_event 38, 29, KANTO_HOTEL, 1
 	warp_event 12, 43, OAKS_LAB, 1
 	warp_event 13, 43, OAKS_LAB, 2
 	warp_event 13, 38, BLUES_HOUSE, 1

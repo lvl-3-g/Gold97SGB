@@ -2337,7 +2337,7 @@ wRoute102SceneID::                                 db ; d98e
 wStandCityNationalParkGateSceneID::                 db ; d98f
 wBirdonTownSceneID::                              db ; d990
 wTeknosGymSceneID::                            db ; d991
-wWestportMagnetTrainStationSceneID::             db ; d992
+wKantoHotelSceneID::             db ; d992
 wWestportPokecenter1FSceneID::                   db ; d993
 wAlloyCitySceneID::                             db ; d994
 wRoute113SceneID::                                 db ; d995

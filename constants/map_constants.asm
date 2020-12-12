@@ -430,7 +430,7 @@ ENDM
 	map_const KANTO_2_POKECENTER_1F,                          8,  4 ; 17
 	map_const KANTO_MART,                                   8,  4 ;  5
 	map_const SILPH_CO_1F,                                 12,  8 ; 10
-	map_const WESTPORT_MAGNET_TRAIN_STATION,               8,  4 ;  7
+	map_const KANTO_HOTEL,               8,  4 ;  7
 	map_const OAKS_LAB,                                     5,  6 ;  6
 	map_const BLUES_HOUSE,                                  5,  4 ;  5
 	map_const REDS_HOUSE_1F,                                4,  4 ;  3
