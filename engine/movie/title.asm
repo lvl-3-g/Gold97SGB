@@ -57,12 +57,9 @@ InitTitleScreen:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	call ByteFill
 
-; fire GFX
-	ld hl, TitleScreenGFX3
-	ld de, vTiles0 tile $78
-	ld bc, 8 tiles
-	ld a, BANK(TitleScreenGFX3)
-	call FarCopyBytes
+; fire or note GFX
+	ld a, [hTitleScreenSelectedOption]
+	call TitleScreenSwitchObjectGFX
 
 	call FillTitleScreenPals
 	call LoadTitleScreenTilemap
@@ -406,6 +403,10 @@ TitleScreenMain:
 	ld hl, hJoyDown
 
 ; Change to musical notes and back with Left + B
+
+; If there's musical notes on the screen, the Pikachu
+; minigame is enabled
+
 	ld a, [hl]
 	and D_LEFT + B_BUTTON
 	cp  D_LEFT + B_BUTTON
