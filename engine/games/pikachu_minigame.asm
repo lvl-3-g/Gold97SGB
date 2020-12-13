@@ -58,6 +58,11 @@ PikachuMiniGame::
 	ld a, BANK(Intro_GrassGFX2)
 	call FarDecompress
 
+	ld hl, PikachuMiniGame_ExtraGFX
+	ld de, vTiles2 tile $30
+	ld bc, 2 tiles
+	call CopyBytes
+
 ; Metatiles
 	ld a, LOW(PikachuMiniGame_Meta)
 	ld [wPikachuMinigameTilesPointer], a
@@ -496,15 +501,15 @@ PikachuMiniGame_UpdateBlocks:
 	add hl, de
 	ld de, wPikachuMinigameColumnBuffer
 	ld a, e
-	ld [wRequested1bppDest], a
+	ld [wRequested2bppDest], a
 	ld a, d
-	ld [wRequested1bppDest + 1], a
+	ld [wRequested2bppDest + 1], a
 	ld a, l
-	ld [wRequested1bppSource], a
+	ld [wRequested2bppSource], a
 	ld a, h
-	ld [wRequested1bppSource + 1], a
+	ld [wRequested2bppSource + 1], a
 	ld a, 1
-	ld [wRequested1bppSize], a
+	ld [wRequested2bppSize], a
 	ret
 
 
@@ -1489,3 +1494,6 @@ INCBIN "gfx/pikachu_minigame/pikachu_blockmap.bin"
 
 PikachuMiniGame_Meta:
 INCBIN "gfx/pikachu_minigame/pikachu_blockset.bin"
+
+PikachuMiniGame_ExtraGFX:
+	db $FF, $FF, $3C, $FF, $01, $FF, $00, $81, $00, $02, $03, $B7, $00, $CA, $1C, $FF, $83, $F3, $30, $FF, $85, $FF, $EA, $FF, $FF, $FF, $FF, $FF, $FF, $00, $00, $00
