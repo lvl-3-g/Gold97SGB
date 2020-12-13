@@ -74,7 +74,7 @@ Copyright_GameFreakPresents:
 	ldh [hBGMapMode], a
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
-	lb de, %00100100, %11111000
+	lb de, %00100100, %11100100
 	call DmgToCgbObjPals
 	ret
 
@@ -151,7 +151,7 @@ GameFreakPresents_Star:
 
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
-	ld [hl], $80
+	ld [hl], $A0
 
 	ld de, SFX_METRONOME
 	call PlaySFX
