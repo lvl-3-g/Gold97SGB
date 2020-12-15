@@ -800,6 +800,10 @@ ShrinkPlayer:
 	ld c, 3
 	call DelayFrames
 
+; reset palette
+	lb de, %11100000, %11100000
+	call DmgToCgbObjPals
+
 	call Intro_PlaceChrisSprite
 	call LoadFontsExtra
 
