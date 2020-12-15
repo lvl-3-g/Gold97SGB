@@ -273,3 +273,7 @@ Changelog
 4.03
 - Fixed map label for Kanto Hotel and fixed dialogue within map
 - Changed trade in Teknos City from Bellsprout>Curstraw to Curstraw>Wolfan
+
+4.04
+- Minor grammar fix in mom's speech at beginning of game
+- Fixed issue where player sprite wouldn't load properly during the "shrinking" part in the intro sequence
