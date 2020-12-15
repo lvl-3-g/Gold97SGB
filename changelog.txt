@@ -277,3 +277,6 @@ Changelog
 4.04
 - Minor grammar fix in mom's speech at beginning of game
 - Fixed issue where player sprite wouldn't load properly during the "shrinking" part in the intro sequence
+
+4.05
+- Fixed minor tileset issue in ice path tileset
