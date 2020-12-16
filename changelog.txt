@@ -284,3 +284,4 @@ Changelog
 4.10
 - Added Pikachu minigame (press left + B on title screen and wait) (Thanks to Zumi again for more wizardry!)
 - Tweaked morning color scheme to be more accurate to beta
+- Slightly modified SGB border to include accented "e"
