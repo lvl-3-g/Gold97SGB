@@ -790,6 +790,7 @@ Intro_UpdateTilemapAndBGMap:
 	dec c
 	jr nz, .loop
 
+	di
 	ld a, [wIntroBGMapPointer + 0]
 	ld e, a
 	ld a, [wIntroBGMapPointer + 1]
@@ -815,7 +816,7 @@ Intro_UpdateTilemapAndBGMap:
 
 	pop de
 	pop hl
-	ret
+	reti
 
 Functione4fde:
 ; something to do with water scene sprite anims?
