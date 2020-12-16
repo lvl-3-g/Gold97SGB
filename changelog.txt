@@ -280,3 +280,7 @@ Changelog
 
 4.05
 - Fixed minor tileset issue in ice path tileset
+
+4.10
+- Added Pikachu minigame (press left + B on title screen and wait) (Thanks to Zumi again for more wizardry!)
+- Tweaked morning color scheme to be more accurate to beta
