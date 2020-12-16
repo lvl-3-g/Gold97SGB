@@ -196,10 +196,6 @@ DoAnimFrame:
 	ld [hl], a
 
 .Function8d576
-	ld de, $0201
-	ldh a, [hSGB]
-	and a
-	jr z, .asm_8d581
 	ld de, $0402
 
 .asm_8d581
@@ -803,9 +799,9 @@ ENDC
 
 .UnusedPikachu
 	push bc
-	farcall ret_e0000
+	farcall Animate_MinigamePikachu
 	pop bc
-	ld hl, wc704
+	ld hl, wPikachuMinigamePikachuNextAnim
 	ld a, [hl]
 	and $3
 	ret z
@@ -825,7 +821,7 @@ ENDC
 	db SPRITE_ANIM_FRAMESET_UNUSED_PIKACHU_3
 
 .UnusedPikachuTail
-	farcall ret_e0000
+	farcall Animate_MinigamePikachuTail
 	ret
 
 .UnusedNote
@@ -838,7 +834,7 @@ ENDC
 
 .Function8d8c7
 	call .Function8d8e1
-	ld a, [wc717]
+	ld a, [wPikachuMinigameScrollSpeed]
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
 	add [hl]
@@ -875,7 +871,7 @@ ENDC
 	db -4, -7, -9, -10, -9, -7, -4,  0
 
 .UnusedJigglypuff
-	ld a, [wc717]
+	ld a, [wPikachuMinigameScrollSpeed]
 
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
@@ -884,7 +880,7 @@ ENDC
 	cp $30
 	ret nz
 	xor a
-	ld [wc717], a
+	ld [wPikachuMinigameScrollSpeed], a
 	ret
 
 .NamingScreenCursor

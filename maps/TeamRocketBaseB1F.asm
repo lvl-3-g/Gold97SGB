@@ -293,24 +293,18 @@ TeamRocketBaseB1FComputerPower_loop:
 	playsound SFX_ZAP_CANNON
 	earthquake 80
 	special FadeOutPalettes
-	changeblock 11, 13, $4D ; damage
-	changeblock 19, 13, $4F ; damage
 	special FadeInPalettes
 	reloadmappart
 	waitsfx
 	playsound SFX_ZAP_CANNON
 	earthquake 80
 	special FadeOutPalettes
-	changeblock 11, 15, $4C ; damage
-	changeblock 19, 15, $4E ; damage
 	special FadeInPalettes
 	reloadmappart
 	waitsfx
 	playsound SFX_ZAP_CANNON
 	earthquake 80
 	special FadeOutPalettes
-	changeblock 11, 19, $48 ; damage
-	changeblock 19, 19, $4A ; damage
 	special FadeInPalettes
 	reloadmappart	
 	waitsfx
@@ -319,23 +313,29 @@ TeamRocketBaseB1FComputerPower_loop:
 	applymovement TEAMROCKETBASEB1F_RAITORA, RaitoraJumpsDown
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
-	special FadeOutPalettes
+;	special FadeOutPalettes
 	changeblock 13, 19, $4B ; damage
-	special FadeInPalettes
+	changeblock 11, 13, $4D ; damage
+	changeblock 19, 13, $4F ; damage
+;	special FadeInPalettes
 	reloadmappart
 	waitsfx
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
-	special FadeOutPalettes
+;	special FadeOutPalettes
+	changeblock 11, 15, $4C ; damage
+	changeblock 19, 15, $4E ; damage
 	changeblock 15, 19, $49 ; damage
-	special FadeInPalettes
+;	special FadeInPalettes
 	reloadmappart
 	waitsfx
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
-	special FadeOutPalettes
+;	special FadeOutPalettes
 	changeblock 17, 19, $4B ; damage
-	special FadeInPalettes
+	changeblock 11, 19, $48 ; damage
+	changeblock 19, 19, $4A ; damage
+;	special FadeInPalettes
 	reloadmappart
 	playsound SFX_SHUT_DOWN_PC
 	waitsfx

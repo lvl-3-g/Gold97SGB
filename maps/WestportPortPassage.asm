@@ -184,7 +184,7 @@ TeleportGuyScript2:
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warp AMAMI_PORT_PASSAGE, 13, 2
 	end

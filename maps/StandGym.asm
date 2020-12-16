@@ -201,11 +201,11 @@ LightSwitch:
 	changeblock   21,  31, $3D ; floor
 	reloadmappart
 	special FadeInPalettes
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	changeblock   23,  31, $39 ; floor
 	changeblock   21,  31, $39 ; floor
 	reloadmappart
-	special FadeInPalettes
+	special FadeInQuickly
 	opentext
 	writetext ItsASwitch2
 	waitbutton
@@ -230,14 +230,14 @@ LightSwitch2:
 	changeblock   27,  19, $19 ; floor
 	reloadmappart
 	special FadeInPalettes
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	changeblock   19,  27, $3B ; floor
 	changeblock   25,  23, $39 ; floor
 	changeblock   27,  23, $10 ; floor
 	changeblock   27,  21, $10 ; floor
 	changeblock   27,  19, $10 ; floor
 	reloadmappart
-	special FadeInPalettes
+	special FadeInQuickly
 	opentext
 	writetext ItsASwitch2
 	waitbutton
@@ -258,10 +258,10 @@ LightSwitch3:
 	changeblock   21,  13, $19 ; floor
 	reloadmappart
 	special FadeInPalettes
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	changeblock   21,  13, $10 ; floor
 	reloadmappart
-	special FadeInPalettes
+	special FadeInQuickly
 	opentext
 	writetext ItsASwitch2
 	waitbutton
@@ -285,13 +285,13 @@ LightSwitch4:
 	changeblock  13,  15, $3D ; floor
 	reloadmappart
 	special FadeInPalettes
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	changeblock   7,  13, $3B ; floor
 	changeblock   7,  11, $3B ; floor
 	changeblock   7,   9, $3B ; floor
 	changeblock  13,  15, $39 ; floor
 	reloadmappart
-	special FadeInPalettes
+	special FadeInQuickly
 	opentext
 	writetext ItsASwitch2
 	waitbutton
@@ -314,12 +314,12 @@ LightSwitch5:
 	changeblock    7,  9, $3F ; floor
 	reloadmappart
 	special FadeInPalettes
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	changeblock    3,  7, $3B ; floor
 	changeblock    3,  9, $3B ; floor
 	changeblock    7,  9, $3B ; floor
 	reloadmappart
-	special FadeInPalettes
+	special FadeInQuickly
 	opentext
 	writetext ItsASwitch2
 	waitbutton

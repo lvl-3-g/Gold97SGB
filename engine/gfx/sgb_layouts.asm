@@ -533,9 +533,6 @@ endr
 	ret
 
 .morn_day
-	ld a, [wTimeOfDayPal]
-	cp DAY_F
-	jr c, .sgb_morn
 	ld a, [wEnvironment]
 	cp ROUTE
 	jr z, .route
@@ -553,10 +550,6 @@ endr
 	ld hl, MapGroupRoofSGBPalInds
 	add hl, de
 	ld a, [hl]
-	ret
-	
-.sgb_morn
-	ld a, PREDEFPAL_LAVENDER; this makes the sprites blue/gray as well don't know how to fix
 	ret
 
 .route

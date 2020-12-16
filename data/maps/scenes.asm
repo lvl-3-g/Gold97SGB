@@ -38,7 +38,7 @@ MapScenes::
 	scene_var STAND_CITY_NATIONAL_PARK_GATE,                 wStandCityNationalParkGateSceneID
 	scene_var BIRDON_TOWN,                                 wBirdonTownSceneID
 	scene_var TEKNOS_GYM,                               wTeknosGymSceneID
-	scene_var WESTPORT_MAGNET_TRAIN_STATION,              wWestportMagnetTrainStationSceneID
+	scene_var KANTO_HOTEL,              wKantoHotelSceneID
 	scene_var WESTPORT_POKECENTER_1F,                     wWestportPokecenter1FSceneID
 	scene_var ALLOY_CITY,                                wAlloyCitySceneID
 	scene_var ROUTE_113,                                    wRoute113SceneID ; unused

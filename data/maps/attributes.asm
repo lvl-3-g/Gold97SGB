@@ -522,7 +522,7 @@ ENDM
 	map_attributes WestportBikeShop, WESTPORT_BIKE_SHOP, $00, 0
 	map_attributes WestportHappinessRater, WESTPORT_HAPPINESS_RATER, $00, 0
 	map_attributes BillsFamilysHouse, BILLS_FAMILYS_HOUSE, $00, 0
-	map_attributes WestportMagnetTrainStation, WESTPORT_MAGNET_TRAIN_STATION, $00, 0
+	map_attributes KantoHotel, KANTO_HOTEL, $00, 0
 	map_attributes Route102GameHouse, ROUTE_102_GAME_HOUSE, $00, 0
 	map_attributes WestportPokecenter1F, WESTPORT_POKECENTER_1F, $00, 0
 	map_attributes WestportPPSpeechHouse, WESTPORT_PP_SPEECH_HOUSE, $00, 0

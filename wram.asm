@@ -530,11 +530,55 @@ wLinkData:: ds $514
 wLinkDataEnd::
 
 NEXTU
-; unused (engine/gfx/sprite_anims.asm)
-	ds 4
-wc704:: ds 19
-wc717:: ds 1
+; Pikachu minigame
 
+wPikachuMinigamePikachuObjectPointer:: ds 2
+wPikachuMinigamePikachuTailObjectPointer:: ds 2
+wPikachuMinigamePikachuNextAnim:: ds 1
+
+wPikachuMinigameControlEnable:: ds 1
+
+wc606:: ds 1	; written to, but is this read from?
+
+wPikachuMinigamePikachuYOffset:: ds 1
+wPikachuMinigameNoteTimer:: ds 1
+wPikachuMinigameScore:: ds 2
+wPikachuMinigameNoteCounter:: ds 2	; not used for anything meaningful?
+
+wPikachuMinigameSpawnTypeIndex:: ds 1
+wPikachuMinigameSpawnDataIndex:: ds 1
+wPikachuMinigameScoreModifier:: ds 1
+
+wPikachuMinigameNoteCaught:: ds 1
+
+; Time keeping
+wPikachuMinigameTimeFrames:: ds 1
+wPikachuMinigameTimeSeconds:: ds 1
+
+; are these two used?
+wc613:: ds 1
+wc614:: ds 1
+
+wPikachuMinigameRedrawTimer:: ds 1
+wc616:: ds 1
+wPikachuMinigameScrollSpeed:: ds 1
+
+wPikachuMinigameColumnFlags:: ds 1
+wPikachuMinigameSavedColumnPointer:: ds 2
+wPikachuMinigameColumnPointer:: ds 2
+
+wPikachuMinigameRepeatColumnCounter:: ds 1
+wPikachuMinigameRepeatColumnCounter2:: ds 1
+
+wPikachuMinigameSceneTimer:: ds 1
+
+wPikachuMinigameJumptableIndex:: ds 1
+
+wPikachuMinigameBGMapPointer:: ds 2
+wPikachuMinigameTilemapPointer:: ds 2
+wPikachuMinigameTilesPointer:: ds 2
+
+wPikachuMinigameColumnBuffer:: ds 16
 NEXTU
 ; link data members
 wLinkPlayerName:: ds NAME_LENGTH
@@ -626,12 +670,20 @@ NEXTU
 	ds $100 - SCREEN_HEIGHT_PX
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX
 wLYOverridesBackupEnd:: ds $100 - SCREEN_HEIGHT_PX
+
 ENDU
 
 UNION
 ; blank credits tile buffer
 wCreditsBlankFrame2bpp:: ds 4 * 4 tiles
 wCreditsBlankFrame2bppEnd::
+
+
+NEXTU
+
+wRedrawRowOrColumnSrcTiles::
+; the tiles of the row or column to be redrawn by RedrawRowOrColumn
+	ds SCREEN_WIDTH * 2
 
 NEXTU
 ; mystery gift data
@@ -1883,6 +1935,7 @@ wSelectedDecoration:: db
 wOtherDecoration::    db
 	ds 3
 wCurEnemyItem:: db
+
 ENDU
 
 	ds 3
@@ -2337,7 +2390,7 @@ wRoute102SceneID::                                 db ; d98e
 wStandCityNationalParkGateSceneID::                 db ; d98f
 wBirdonTownSceneID::                              db ; d990
 wTeknosGymSceneID::                            db ; d991
-wWestportMagnetTrainStationSceneID::             db ; d992
+wKantoHotelSceneID::             db ; d992
 wWestportPokecenter1FSceneID::                   db ; d993
 wAlloyCitySceneID::                             db ; d994
 wRoute113SceneID::                                 db ; d995
@@ -2683,6 +2736,7 @@ wOTPartyDataEnd::
 ENDU
 
 wPokemonDataEnd::
+
 wGameDataEnd::
 
 

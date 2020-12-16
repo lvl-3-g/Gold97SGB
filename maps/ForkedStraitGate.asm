@@ -32,7 +32,7 @@ CredCheckLeft:
 	waitbutton
 	closetext
 	setevent EVENT_DONE_FS_GATE_CHECK
-	setevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM ; blue no longer in the lab at silent town
+	setevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2 ; blue no longer in the lab at silent town
 	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
 	setevent EVENT_MEW_SPOT_3_FOUND
 	setevent EVENT_MEW_SPOT_4_FOUND
@@ -70,7 +70,7 @@ CredCheckRight:
 	waitbutton
 	closetext
 	setevent EVENT_DONE_FS_GATE_CHECK
-	setevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 	setevent EVENT_MEW_SPOT_2_FOUND ; islands events initializing
 	setevent EVENT_MEW_SPOT_3_FOUND
 	setevent EVENT_MEW_SPOT_4_FOUND

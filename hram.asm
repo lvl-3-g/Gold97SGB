@@ -163,4 +163,7 @@ hSGB::          db
 
 hTitleScreenSelectedOption:: db
 hTitleScreenLastPressed:: db
-	ds 18
+
+hRedrawRowOrColumnMode:: db
+hRedrawRowOrColumnDest:: ds 2
+

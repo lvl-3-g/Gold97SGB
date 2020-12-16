@@ -251,3 +251,32 @@ Changelog
 - Tweaks to Pokedex interface to make it cleaner
 - Fixed issue where player wouldn't face NPC while doing catching tutorial on Route 101
 
+4.00
+- Color palettes more closely match beta when playing on Super Game Boy
+- "Gold Version" logo matches beta
+- Professor Oak sprite in intro matches beta
+- Professor Oak has you set the time in his intro speech
+- Professor Oak has you name rival in intro speech instead of mom
+- Slowking instead of Marill in intro to match beta
+- Map transitions now match beta
+- New battle transitions pulled from beta for trainer and gym battles
+- Revamped cutscenes for when getting pokemon from lab at beginning of game, redone to closely match beta
+
+4.01
+- Minor tweaks to dialogue in Oak's lab
+- Fixed issue where loading older saves might show two Blues in Oak's lab
+
+4.02
+- Fixed issue where Oak's Aide would still be in lab even if he was also in Pagota pokecenter
+- Fixed issue where Blue would still be in lab even if he was also in Slowpoke Well
+
+4.03
+- Fixed map label for Kanto Hotel and fixed dialogue within map
+- Changed trade in Teknos City from Bellsprout>Curstraw to Curstraw>Wolfan
+
+4.04
+- Minor grammar fix in mom's speech at beginning of game
+- Fixed issue where player sprite wouldn't load properly during the "shrinking" part in the intro sequence
+
+4.05
+- Fixed minor tileset issue in ice path tileset

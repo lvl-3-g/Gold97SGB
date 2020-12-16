@@ -33,6 +33,7 @@ TeknosGymWhitneyScript:
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	specialphonecall SPECIALCALL_ROBBED
 	setmapscene OAK_LAB_FRONT_ROOM, SCENE_DEFAULT
+	setevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 	opentext
 	writetext PlayerReceivedPlainBadgeText
 	playsound SFX_GET_BADGE

@@ -95,6 +95,7 @@
 	const MUSIC_KIKAI_VILLAGE_ROCKET_RADIO    ; 5a
 	const MUSIC_PRINTER                      ; 5b
 	const MUSIC_POST_CREDITS                 ; 5c
+	const MUSIC_PIKACHU_MINIGAME
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_OLD_MAHOGANY_MART EQU $64

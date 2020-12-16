@@ -95,3 +95,4 @@ Music:
 	dba Music_KikaiVillageRocketRadio
 	dba Music_Printer
 	dba Music_PostCredits
+	dba Music_SurfingPikachu

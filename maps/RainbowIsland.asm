@@ -28,7 +28,7 @@ BlueScriptRI:
 	disappear RAINBOWISLAND_BLUE
 	setevent EVENT_BLUE_ON_RAINBOW_ISLAND
 	setevent EVENT_DECO_SILVER_TROPHY; blue trophy
-	clearevent EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
+	clearevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 	pause 15
 	special FadeInQuickly
 	pause 30

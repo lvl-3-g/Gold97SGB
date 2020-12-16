@@ -495,8 +495,8 @@ Route101NCrownPathEntrance_Blocks:
 KurtsHouse_Blocks:
 	INCBIN "maps/KurtsHouse.blk"
 
-WestportMagnetTrainStation_Blocks:
-	INCBIN "maps/WestportMagnetTrainStation.blk"
+KantoHotel_Blocks:
+	INCBIN "maps/KantoHotel.blk"
 
 RuinsOfAlphOutside_Blocks:
 	INCBIN "maps/RuinsOfAlphOutside.blk"

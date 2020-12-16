@@ -190,6 +190,8 @@ INCLUDE "engine/pokedex/pokedex_2.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
 INCLUDE "engine/pokemon/mail.asm"
+INCLUDE "engine/games/pikachu_minigame.asm"
+INCLUDE "audio/music/surfingpikachu.asm"
 
 
 SECTION "bank14", ROMX
