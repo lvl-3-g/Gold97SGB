@@ -947,7 +947,7 @@ Intro_PlaceChrisSprite:
 IntroSequence:
 	callfar Copyright_GameFreakPresents
 	jr c, StartTitleScreen
-	callfar GoldSilverIntro
+	callfar PikachuMiniGame
 
 	; fallthrough
 

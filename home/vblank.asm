@@ -44,7 +44,7 @@ VBlank::
 	dw VBlank3
 	dw VBlank4
 	dw VBlank5
-	dw VBlank0 ; just in case
+	dw VBlank6 ; just in case
 	dw VBlank0 ; just in case
 
 VBlank0::
@@ -65,6 +65,7 @@ VBlank0::
 	ld hl, hVBlankCounter
 	inc [hl]
 
+VBlank0_Cont:
 	; advance random variables
 	ldh a, [rDIV]
 	ld b, a
@@ -402,3 +403,10 @@ VBlank3::
 	ld a, IE_DEFAULT
 	ldh [rIE], a
 	ret
+
+VBlank6::
+	; inc frame counter
+	ld hl, hVBlankCounter
+	inc [hl]
+	homecall _RedrawRowOrColumn
+	jp VBlank0_Cont

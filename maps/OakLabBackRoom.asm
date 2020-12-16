@@ -464,7 +464,7 @@ SilverGetHappaMovement:
 
 OakLabBackRoom_WalkUpToOak2Movement:
 	step UP
-	step UP
+	slow_step UP
 	step_end
 
 OakLabBackRoom_CantLeaveMovement:
