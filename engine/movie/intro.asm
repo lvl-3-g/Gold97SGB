@@ -74,7 +74,7 @@ Copyright_GameFreakPresents:
 	ldh [hBGMapMode], a
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
-	lb de, %00100100, %11111000
+	lb de, %00100100, %11100100
 	call DmgToCgbObjPals
 	ret
 
@@ -151,7 +151,7 @@ GameFreakPresents_Star:
 
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc
-	ld [hl], $80
+	ld [hl], $A0
 
 	ld de, SFX_METRONOME
 	call PlaySFX
@@ -790,6 +790,7 @@ Intro_UpdateTilemapAndBGMap:
 	dec c
 	jr nz, .loop
 
+	di
 	ld a, [wIntroBGMapPointer + 0]
 	ld e, a
 	ld a, [wIntroBGMapPointer + 1]
@@ -815,7 +816,7 @@ Intro_UpdateTilemapAndBGMap:
 
 	pop de
 	pop hl
-	ret
+	reti
 
 Functione4fde:
 ; something to do with water scene sprite anims?
@@ -1034,8 +1035,9 @@ IntroScene9:
 	ld hl, .palettes
 	add hl, de
 	ld a, [hl]
-	cp -1
+	and a
 	jr z, .next
+
 	call DmgToCgbBGPals
 	ld hl, hSCY
 	inc [hl]
@@ -1049,9 +1051,16 @@ IntroScene9:
 	ret
 
 .palettes
-	db %11100100, %11100100, %11100100, %11100100
-	db %11100100, %10010000, %01000000, %00000000
-	db -1
+; fade out to black
+	db %11100100
+	db %11100100
+	db %11100100
+	db %11100100
+	db %11100100
+	db %11111001
+	db %11111110
+	db %11111111
+	db 0
 
 	ret ; unused
 

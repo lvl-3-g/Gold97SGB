@@ -58,6 +58,11 @@ PikachuMiniGame::
 	ld a, BANK(Intro_GrassGFX2)
 	call FarDecompress
 
+	ld hl, PikachuMiniGame_ExtraGFX
+	ld de, vTiles2 tile $30
+	ld bc, 2 tiles
+	call CopyBytes
+
 ; Metatiles
 	ld a, LOW(PikachuMiniGame_Meta)
 	ld [wPikachuMinigameTilesPointer], a
@@ -94,8 +99,8 @@ PikachuMiniGame::
 	ld [wPikachuMinigameNoteCounter + 1], a
 	ld [wPikachuMinigameTimeFrames], a
 	ld [wPikachuMinigameTimeSeconds], a
-	ld [wc613], a
-	ld [wc614], a
+	ld [wPikachuMinigameFadeOutCounter], a
+	ld [wPikachuMinigameFadeOutIndex], a
 	ld [wPikachuMinigameNoteTimer], a
 	ld [wPikachuMinigameSpawnTypeIndex], a
 	ld [wPikachuMinigameSpawnDataIndex], a
@@ -496,15 +501,15 @@ PikachuMiniGame_UpdateBlocks:
 	add hl, de
 	ld de, wPikachuMinigameColumnBuffer
 	ld a, e
-	ld [wRequested1bppDest], a
+	ld [wRequested2bppDest], a
 	ld a, d
-	ld [wRequested1bppDest + 1], a
+	ld [wRequested2bppDest + 1], a
 	ld a, l
-	ld [wRequested1bppSource], a
+	ld [wRequested2bppSource], a
 	ld a, h
-	ld [wRequested1bppSource + 1], a
+	ld [wRequested2bppSource + 1], a
 	ld a, 1
-	ld [wRequested1bppSize], a
+	ld [wRequested2bppSize], a
 	ret
 
 
@@ -557,6 +562,10 @@ PikachuMiniGame_ShowJigglypuff:
 
 	xor a
 	ld [wPikachuMinigameSceneTimer], a
+
+	ld a, 16
+	ld [wPikachuMinigameFadeOutCounter], a
+
 	ld hl, wPikachuMinigameJumptableIndex
 	inc [hl]
 
@@ -565,11 +574,15 @@ PikachuMiniGame_FadeOut:
 	and a
 	ret nz
 
-	ld a, [wPikachuMinigameSceneTimer]
-	srl a
-	srl a
-	srl a
-	srl a
+	ld hl, wPikachuMinigameFadeOutCounter
+	dec [hl]
+	ret nz
+
+; this should prevent too much slowdowns on GBC
+	ld a, 24
+	ld [wPikachuMinigameFadeOutCounter], a
+
+	ld a, [wPikachuMinigameFadeOutIndex]
 
 	ld e, a
 	ld d, 0
@@ -590,7 +603,7 @@ PikachuMiniGame_FadeOut:
 	call DmgToCgbObjPals
 
 ; from this point, the timer increments*instead
-	ld hl, wPikachuMinigameSceneTimer
+	ld hl, wPikachuMinigameFadeOutIndex
 	inc [hl]
 	ret
 
@@ -603,15 +616,11 @@ PikachuMiniGame_FadeOut:
 	ret
 
 .DMGPals:
-	db $94, $94
-	db $94, $94
 	db $94, $50
 	db $40, $00
 	db -1
 
 .Obj_SGBPals:
-	db $e4, $e4
-	db $e4, $e4
 	db $e4, $90
 	db $40, $00
 	db -1
@@ -1489,3 +1498,6 @@ INCBIN "gfx/pikachu_minigame/pikachu_blockmap.bin"
 
 PikachuMiniGame_Meta:
 INCBIN "gfx/pikachu_minigame/pikachu_blockset.bin"
+
+PikachuMiniGame_ExtraGFX:
+	db $FF, $FF, $3C, $FF, $01, $FF, $00, $81, $00, $02, $03, $B7, $00, $CA, $1C, $FF, $83, $F3, $30, $FF, $85, $FF, $EA, $FF, $FF, $FF, $FF, $FF, $FF, $00, $00, $00
