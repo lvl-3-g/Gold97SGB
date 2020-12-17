@@ -31,7 +31,7 @@ TrainerGruntM1:
 	clearflag ENGINE_ROCKETS_IN_SANSKRIT
 	checkevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
 	iffalse .AlreadyRescuedGirl
-	special FadeOutPalettes; shouldn't be here ever, mine is mandatory first now
+	special FadeBlackQuickly; shouldn't be here ever, mine is mandatory first now
 	special HealParty
 	pause 15
 	warp TEKNOS_CITY, 6, 28
@@ -51,7 +51,7 @@ TrainerGruntM1:
 	pause 30
 	applymovement PLAYER, PlayerInAquariumDummyMovement
 	clearevent EVENT_WHITNEY_BACK_IN_TEKNOS_GYM
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	special HealParty
 	pause 15
 	warp TEKNOS_CITY, 6, 28

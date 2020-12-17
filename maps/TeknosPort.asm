@@ -50,7 +50,7 @@ TeknosPortSailorAtGangwayScript:
 	applymovement PLAYER, MovementData_0x74a301
 	clearevent EVENT_WESTPORT_PORT_SAILOR_AT_GANGWAY
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warpfacing UP, WESTPORT_PORT, 8, 15
 	end

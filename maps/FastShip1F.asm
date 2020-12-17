@@ -66,7 +66,7 @@ FastShip1FSailor1Script:
 	closetext
 	scall .LetThePlayerOut
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	setevent EVENT_AMAMI_PORT_SAILOR_AT_GANGWAY
 	setmapscene AMAMI_PORT, SCENE_AMAMIPORT_LEAVE_SHIP
@@ -79,7 +79,7 @@ FastShip1FSailor1Script:
 	closetext
 	scall .LetThePlayerOut
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	setevent EVENT_WESTPORT_PORT_SAILOR_AT_GANGWAY
 	setmapscene WESTPORT_PORT, SCENE_WESTPORTPORT_LEAVE_SHIP

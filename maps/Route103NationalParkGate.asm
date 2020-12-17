@@ -72,7 +72,7 @@ Route103NationalParkGate_MapScripts:
 	closetext
 	scall Route103NationalParkGate_EnterContest
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warp NATIONAL_PARK_BUG_CONTEST, 10, 47
 	end
@@ -109,7 +109,7 @@ Route103NationalParkGate_OkayToProceed:
 	special GiveParkBalls
 	scall Route103NationalParkGate_EnterContest
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	special SelectRandomBugContestContestants
 	warp NATIONAL_PARK_BUG_CONTEST, 10, 47

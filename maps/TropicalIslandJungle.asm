@@ -17,11 +17,11 @@ MewSpot1Script:
 	cry MEW
 	waitbutton
 	closetext
-	special FadeBlackQuickly
+	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
 	disappear MEW_SPOT_1
-	special FadeInQuickly
+	special FadeInPalettes
 	setevent EVENT_MEW_SPOT_1_FOUND
 	setevent EVENT_SLOWKING_HINT_2
 	clearevent EVENT_MEW_SPOT_2_FOUND
@@ -34,11 +34,11 @@ MewSpot5Script:
 	cry MEW
 	waitbutton
 	closetext
-	special FadeBlackQuickly
+	special FadeOutPalettes
 	playsound SFX_WARP_TO
 	pause 10
 	disappear MEW_SPOT_5
-	special FadeInQuickly
+	special FadeInPalettes
 	setevent EVENT_MEW_SPOT_5_FOUND
 	setevent EVENT_SLOWKING_HINT_6
 	clearevent EVENT_MEW_SPOT_6_FOUND

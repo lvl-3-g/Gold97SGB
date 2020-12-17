@@ -44,7 +44,7 @@ WestportPortSailorAtGangwayScript:
 	waitsfx
 	applymovement PLAYER, MovementData_0x74a30
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iffalse .FirstTime
@@ -79,7 +79,7 @@ WestportPortSailorAtGangwayScriptTeknos:
 	waitsfx
 	applymovement PLAYER, MovementData_0x74a30
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warpfacing UP, TEKNOS_PORT, 4, 9
 	end

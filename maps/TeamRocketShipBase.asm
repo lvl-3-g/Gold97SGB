@@ -228,7 +228,7 @@ CaptainRocketScript:
 ;	waitbutton
 ;	closetext
 ; comment
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	special HealParty
 	pause 15
 	setevent EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT

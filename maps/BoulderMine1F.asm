@@ -29,7 +29,7 @@ GirlInMineScript:
 	checkevent EVENT_ROCKETS_TAKE_OVER_AQUARIUM
 	iftrue .AlreadySavedAquarium
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	pause 10
 	warpfacing UP, TEKNOS_ITEMFINDER_HOUSE, 4, 7
 	end
@@ -37,7 +37,7 @@ GirlInMineScript:
 .AlreadySavedAquarium:
 	clearevent EVENT_WHITNEY_BACK_IN_TEKNOS_GYM
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	pause 10
 	warpfacing UP, TEKNOS_ITEMFINDER_HOUSE, 4, 7
 	end

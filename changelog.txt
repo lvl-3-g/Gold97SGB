@@ -285,3 +285,8 @@ Changelog
 - Added Pikachu minigame (press left + B on title screen and wait) (Thanks to Zumi again for more wizardry!)
 - Tweaked morning color scheme to be more accurate to beta
 - Slightly modified SGB border to include accented "e"
+
+4.11
+- Fixed minor issue with Sanskrit tileset
+- Changed instances of screen fading white for scripted warps to fading black for warps to match standard warp fadeout
+- Changed Mew teleporting to fade to white instead of black

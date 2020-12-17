@@ -130,7 +130,7 @@ SilentTown_TeacherStopsYouScene3:
 	clearevent EVENT_OAK_OAK_LAB_FRONT_ROOM
 	applymovement PLAYER, Movement_PlayerIntoLab
 	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	warpfacing UP, OAK_LAB_FRONT_ROOM, 4, 15
 	end
 

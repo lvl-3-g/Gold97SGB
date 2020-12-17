@@ -89,7 +89,7 @@ StandCityNationalParkGate_MapScripts:
 	closetext
 	turnobject PLAYER, DOWN
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	warpfacing DOWN, NATIONAL_PARK_BUG_CONTEST, 32, 31
 	end
@@ -173,7 +173,7 @@ Route102OfficerScriptContest:
 	turnobject PLAYER, DOWN
 	applymovement PLAYER, ExitBuildingMovement
 	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
+	special FadeBlackQuickly
 	waitsfx
 	special SelectRandomBugContestContestants
 	warpfacing DOWN, NATIONAL_PARK_BUG_CONTEST, 32, 31
