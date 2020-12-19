@@ -28,4 +28,4 @@ DeepwaterPassageB1F_MapEvents:
 
 	db 2 ; object events
 	object_event 17,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageB1FNevermeltice, EVENT_DEEPWATER_PASSAGE_B1F_NEVERMELTICE
-	object_event -6,  1, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DeepwaterPassageB1FRock, -1
+	object_event -6,  1, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DeepwaterPassageB1FRock, -1

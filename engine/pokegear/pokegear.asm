@@ -2498,7 +2498,7 @@ Pokedex_GetArea:
 	add $78 ; where the player's sprite is loaded
 	ld [hli], a ; tile id
 	inc de
-	xor a ; PAL_OW_RED
+	xor a ; PAL_OW_ORANGE
 	ld [hli], a ; attributes
 	jr .ShowPlayerLoop
 

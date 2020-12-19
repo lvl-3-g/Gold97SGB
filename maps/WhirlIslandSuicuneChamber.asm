@@ -38,4 +38,4 @@ WhirlIslandSuicuneChamber_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  4,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_RIVAL_TEAM_ROCKET_BASE
+	object_event  4,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_RIVAL_TEAM_ROCKET_BASE

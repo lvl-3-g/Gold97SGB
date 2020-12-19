@@ -80,6 +80,6 @@ IejimaPokecenter1F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FNurseScript, -1
-	object_event  1,  5, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_LEFT, 2, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FJanineScript, -1
-	object_event  9,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FGentlemanScript, -1
+	object_event  5,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FNurseScript, -1
+	object_event  1,  5, SPRITE_JANINE, SPRITEMOVEDATA_STANDING_LEFT, 2, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FJanineScript, -1
+	object_event  9,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, IejimaPokecenter1FGentlemanScript, -1

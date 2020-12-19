@@ -180,4 +180,4 @@ TeknosPortPassage_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events	
-	object_event 11, 15, SPRITE_CLERK, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TravelingDollSalesmanThursday, EVENT_DOLL_SALESMAN_THURSDAY
+	object_event 11, 15, SPRITE_CLERK, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, TravelingDollSalesmanThursday, EVENT_DOLL_SALESMAN_THURSDAY

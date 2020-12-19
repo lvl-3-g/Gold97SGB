@@ -58,4 +58,4 @@ IejimaHouse1_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  4,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IejimaTownGrampsAfter, EVENT_IEJIMA_TOWN_NOT_FIXED
+	object_event  4,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IejimaTownGrampsAfter, EVENT_IEJIMA_TOWN_NOT_FIXED

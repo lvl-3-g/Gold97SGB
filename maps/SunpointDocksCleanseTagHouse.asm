@@ -73,4 +73,4 @@ SunpointDocksCleanseTagHouse_MapEvents:
 
 	db 2 ; object events
 	object_event  2,  5, SPRITE_GRANNY, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SunpointDocksCleanseTagHouseGrannyScript, -1
-	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunpointDocksCleanseTagHouseTeacherScript, -1
+	object_event  5,  3, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, SunpointDocksCleanseTagHouseTeacherScript, -1

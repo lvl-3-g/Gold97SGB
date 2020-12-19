@@ -120,4 +120,4 @@ WestportBikeShop_MapEvents:
 	bg_event  7,  6, BGEVENT_READ, WestportBikeShopBicycle
 
 	db 1 ; object events
-	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WestportBikeShopClerkScript, -1
+	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WestportBikeShopClerkScript, -1

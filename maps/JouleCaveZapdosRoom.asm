@@ -58,4 +58,4 @@ JouleCaveZapdosRoom_MapEvents:
 	bg_event  3,  4, BGEVENT_ITEM, ZapdosHiddenBrightPowder
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_EXPLODING_TRAP_8
+	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_EXPLODING_TRAP_8

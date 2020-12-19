@@ -33,4 +33,4 @@ AmamiTownHouse2_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  1,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, AmamiTownHouse2GentlemanScript, -1
+	object_event  1,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, AmamiTownHouse2GentlemanScript, -1

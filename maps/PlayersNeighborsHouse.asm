@@ -94,4 +94,4 @@ PlayersNeighborsHouse_MapEvents:
 	bg_event  7,  1, BGEVENT_READ, PlayersNeighborsHouseRadioScript
 
 	db 1 ; object events
-	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PlayersNeighborsDaughterScript, -1
+	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, PlayersNeighborsDaughterScript, -1

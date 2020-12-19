@@ -306,45 +306,45 @@ ENDC
 
 .OAMData_RedWalk:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED
-	dbsprite -1,  0,  0,  0, $02, PAL_OW_RED
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_ORANGE
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_ORANGE
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_ORANGE
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_ORANGE
 
 .OAMData_MagnetTrainRed:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED | PRIORITY
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED | PRIORITY
-	dbsprite -1,  0,  0,  0, $02, PAL_OW_RED | PRIORITY
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED | PRIORITY
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_ORANGE | PRIORITY
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_ORANGE | PRIORITY
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_ORANGE | PRIORITY
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_ORANGE | PRIORITY
 
 .OAMData_PartyMonWithMail1:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED
-	dbsprite -1,  0,  0,  0, $08, PAL_OW_RED
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_ORANGE
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_ORANGE
+	dbsprite -1,  0,  0,  0, $08, PAL_OW_ORANGE
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_ORANGE
 
 .OAMData_PartyMonWithMail2:
 	db 4
-	dbsprite -1, -1,  0,  0, $04, PAL_OW_RED
-	dbsprite  0, -1,  0,  0, $05, PAL_OW_RED
-	dbsprite -1,  0,  0,  0, $08, PAL_OW_RED
-	dbsprite  0,  0,  0,  0, $07, PAL_OW_RED
+	dbsprite -1, -1,  0,  0, $04, PAL_OW_ORANGE
+	dbsprite  0, -1,  0,  0, $05, PAL_OW_ORANGE
+	dbsprite -1,  0,  0,  0, $08, PAL_OW_ORANGE
+	dbsprite  0,  0,  0,  0, $07, PAL_OW_ORANGE
 
 .OAMData_PartyMonWithItem1:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED
-	dbsprite -1,  0,  0,  0, $09, PAL_OW_RED
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_ORANGE
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_ORANGE
+	dbsprite -1,  0,  0,  0, $09, PAL_OW_ORANGE
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_ORANGE
 
 .OAMData_PartyMonWithItem2:
 	db 4
-	dbsprite -1, -1,  0,  0, $04, PAL_OW_RED
-	dbsprite  0, -1,  0,  0, $05, PAL_OW_RED
-	dbsprite -1,  0,  0,  0, $09, PAL_OW_RED
-	dbsprite  0,  0,  0,  0, $07, PAL_OW_RED
+	dbsprite -1, -1,  0,  0, $04, PAL_OW_ORANGE
+	dbsprite  0, -1,  0,  0, $05, PAL_OW_ORANGE
+	dbsprite -1,  0,  0,  0, $09, PAL_OW_ORANGE
+	dbsprite  0,  0,  0,  0, $07, PAL_OW_ORANGE
 
 .OAMData_GSIntroMagikarp:
 	db 6
@@ -475,14 +475,14 @@ ENDC
 
 .OAMData_Leaf:
 	db 1
-	dbsprite -1, -1,  4,  4, $00, PAL_OW_TREE
+	dbsprite -1, -1,  4,  4, $00, PAL_OW_RED
 
 .OAMData_Tree:
 	db 4
-	dbsprite -1, -1,  0,  0, $00, PAL_OW_TREE
-	dbsprite  0, -1,  0,  0, $01, PAL_OW_TREE
-	dbsprite -1,  0,  0,  0, $02, PAL_OW_TREE
-	dbsprite  0,  0,  0,  0, $03, PAL_OW_TREE
+	dbsprite -1, -1,  0,  0, $00, PAL_OW_RED
+	dbsprite  0, -1,  0,  0, $01, PAL_OW_RED
+	dbsprite -1,  0,  0,  0, $02, PAL_OW_RED
+	dbsprite  0,  0,  0,  0, $03, PAL_OW_RED
 
 .OAMData_TextEntryCursor:
 	db 4
@@ -600,24 +600,24 @@ ENDC
 
 .OAMData_CutTree2:
 	db 4
-	dbsprite -2, -1,  6,  0, $00, PAL_OW_TREE
-	dbsprite  0, -1,  2,  0, $01, PAL_OW_TREE
-	dbsprite -2,  0,  6,  0, $02, PAL_OW_TREE
-	dbsprite  0,  0,  2,  0, $03, PAL_OW_TREE
+	dbsprite -2, -1,  6,  0, $00, PAL_OW_RED
+	dbsprite  0, -1,  2,  0, $01, PAL_OW_RED
+	dbsprite -2,  0,  6,  0, $02, PAL_OW_RED
+	dbsprite  0,  0,  2,  0, $03, PAL_OW_RED
 
 .OAMData_CutTree3:
 	db 4
-	dbsprite -2, -1,  4,  0, $00, PAL_OW_TREE
-	dbsprite  0, -1,  4,  0, $01, PAL_OW_TREE
-	dbsprite -2,  0,  4,  0, $02, PAL_OW_TREE
-	dbsprite  0,  0,  4,  0, $03, PAL_OW_TREE
+	dbsprite -2, -1,  4,  0, $00, PAL_OW_RED
+	dbsprite  0, -1,  4,  0, $01, PAL_OW_RED
+	dbsprite -2,  0,  4,  0, $02, PAL_OW_RED
+	dbsprite  0,  0,  4,  0, $03, PAL_OW_RED
 
 .OAMData_CutTree4:
 	db 4
-	dbsprite -2, -1,  0,  0, $00, PAL_OW_TREE
-	dbsprite  1, -1,  0,  0, $01, PAL_OW_TREE
-	dbsprite -2,  0,  0,  0, $02, PAL_OW_TREE
-	dbsprite  1,  0,  0,  0, $03, PAL_OW_TREE
+	dbsprite -2, -1,  0,  0, $00, PAL_OW_RED
+	dbsprite  1, -1,  0,  0, $01, PAL_OW_RED
+	dbsprite -2,  0,  0,  0, $02, PAL_OW_RED
+	dbsprite  1,  0,  0,  0, $03, PAL_OW_RED
 
 
 .OAMData_GSTitleTrail:

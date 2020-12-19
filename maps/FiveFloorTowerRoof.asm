@@ -58,4 +58,4 @@ FiveFloorTowerRoof_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  8,  6, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_FIVE_FLOOR_TOWER_ROOF_HO_OH
+	object_event  8,  6, SPRITE_HO_OH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_FIVE_FLOOR_TOWER_ROOF_HO_OH

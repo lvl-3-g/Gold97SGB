@@ -208,4 +208,4 @@ AlloyHouseBeta_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  6,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, AlloyHouseBetaElderScript, EVENT_PAGOTA_CITY_EARL
+	object_event  6,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, AlloyHouseBetaElderScript, EVENT_PAGOTA_CITY_EARL

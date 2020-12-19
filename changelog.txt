@@ -294,3 +294,7 @@ Changelog
 In-progress 5.00
 - CGB uses individual tile and sprite based colors pulled from demo
 - Not fully tested yet, not sure if it's going in the released game
+
+In-progress 5.01
+- More work on new GBC color scheme
+- Changed color constants to be more consistent

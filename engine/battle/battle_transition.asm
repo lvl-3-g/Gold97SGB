@@ -770,13 +770,13 @@ popo
 	call .copy
 	ld de, wBGPals2 palette PAL_BG_TEXT
 	call .copy
-	ld de, wOBPals1 palette PAL_OW_TREE
+	ld de, wOBPals1 palette PAL_OW_RED
 	call .copy
-	ld de, wOBPals2 palette PAL_OW_TREE
+	ld de, wOBPals2 palette PAL_OW_RED
 	call .copy
-	ld de, wOBPals1 palette PAL_OW_ROCK
+	ld de, wOBPals1 palette PAL_OW_YELLOW
 	call .copy
-	ld de, wOBPals2 palette PAL_OW_ROCK
+	ld de, wOBPals2 palette PAL_OW_YELLOW
 
 .copy
 	push hl

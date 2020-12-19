@@ -524,7 +524,7 @@ _CGB_MapPals:
 	call .LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
-; Copy PAL_OW_TREE and PAL_OW_ROCK
+; Copy PAL_OW_RED and PAL_OW_YELLOW
 	call .LoadHLBGPaletteIntoDE
 	call .LoadHLBGPaletteIntoDE
 	ld a, SCGB_MAPPALS

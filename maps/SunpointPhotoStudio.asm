@@ -72,4 +72,4 @@ SunpointPhotoStudio_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  1,  2, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunpointPhotoStudioFishingGuruScript, -1
+	object_event  1,  2, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, SunpointPhotoStudioFishingGuruScript, -1

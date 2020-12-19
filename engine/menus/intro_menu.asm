@@ -930,7 +930,7 @@ Intro_PlaceChrisSprite:
 	ld a, [de]
 	inc de
 	ld [hli], a ; tile id
-	xor a ; PAL_OW_RED
+	xor a ; PAL_OW_ORANGE
 	ld [hli], a ; attributes
 	dec c
 	jr nz, .loop
