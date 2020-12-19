@@ -180,6 +180,6 @@ WestportDeptStore6F_MapEvents:
 
 	db 3 ; object events
 	object_event  8,  3, SPRITE_OFFICER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 3, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WestportDeptStore6FSuperNerdScript, -1
-	object_event  6,  5, SPRITE_MONSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportDeptStore6FMonScript, -1
-	object_event  3,  6, SPRITE_BIRD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WestportDeptStore6FBirdScript, -1
+	object_event  6,  5, SPRITE_MONSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, WestportDeptStore6FMonScript, -1
+	object_event  3,  6, SPRITE_BIRD, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 2, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, WestportDeptStore6FBirdScript, -1
 

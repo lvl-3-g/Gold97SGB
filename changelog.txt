@@ -290,3 +290,7 @@ Changelog
 - Fixed minor issue with Sanskrit tileset
 - Changed instances of screen fading white for scripted warps to fading black for warps to match standard warp fadeout
 - Changed Mew teleporting to fade to white instead of black
+
+In-progress 5.00
+- CGB uses individual tile and sprite based colors pulled from demo
+- Not fully tested yet, not sure if it's going in the released game
