@@ -305,3 +305,7 @@ In-progress 5.02
 
 In-progress 5.03
 - Fixed issue with blue shade on some indoor tilesets
+
+In-progress 5.04
+- More tileset and sprite color corrections
+
