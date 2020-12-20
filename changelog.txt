@@ -319,3 +319,5 @@ In-progress 5.05
 - Redesigned options menu
 - Individually assigned colors for all overworld tiles and sprites
 
+5.07
+- Fixed some issues with blue forest tileset to make map transitions smoother in GBC mode
