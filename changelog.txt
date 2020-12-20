@@ -302,3 +302,6 @@ In-progress 5.01
 In-progress 5.02
 - Fixed issue with RED and YELLOW sprites in CGB mode
 - More adjustments to overworld sprite color assignments
+
+In-progress 5.03
+- Fixed issue with blue shade on some indoor tilesets
