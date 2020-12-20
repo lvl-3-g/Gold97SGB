@@ -10,7 +10,7 @@ RyukyuArboretum_MapScripts:
 	db 0 ; callbacks
 
 
-RyukyuMagnetTrainSpeechHouseCooltrainer:
+RyukyuArboretumHouseCooltrainer:
 	faceplayer
 	opentext
 	checkevent EVENT_EXPLODING_TRAP_14
@@ -75,10 +75,10 @@ RyukyuMagnetTrainParasScript:
 	closetext
 	end
 	
-RyukyuMagnetTrainSpeechHouseYoungsterScript:
-	jumptextfaceplayer RyukyuMagnetTrainSpeechHouseYoungsterText
+RyukyuArboretumHouseYoungsterScript:
+	jumptextfaceplayer RyukyuArboretumHouseYoungsterText
 	
-RyukyuMagnetTrainSpeechHouseYoungsterText:
+RyukyuArboretumHouseYoungsterText:
 	text "This place is"
 	line "neat!"
 	para "GRASS #MON seem"
@@ -169,8 +169,8 @@ RyukyuArboretum_MapEvents:
 	db 0 ; bg events
 
 	db 5 ; object events
-	object_event  7,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuMagnetTrainSpeechHouseCooltrainer, -1
+	object_event  7,  4, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuArboretumHouseCooltrainer, -1
 	object_event  5, 13, SPRITE_ODDISH, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuMagnetTrainOddishScript, -1
 	object_event 14,  8, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuMagnetTrainBulbasaurScript, -1
 	object_event  6,  7, SPRITE_PARAS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuMagnetTrainParasScript, -1
-	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuMagnetTrainSpeechHouseYoungsterScript, -1
+	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuArboretumHouseYoungsterScript, -1

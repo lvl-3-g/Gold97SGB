@@ -312,3 +312,10 @@ In-progress 5.04
 In-progress 5.05
 - Merged Zumi's additions (redesigned menu and options for GBC color mode)
 - Fixed issue where in GBC mode that grass you walk through appears red
+
+5.06
+- New GBC color mode released!
+- Within the options menu on GBC only, a color palette option can change between Super Game Boy colors and custom Game Boy Color colors
+- Redesigned options menu
+- Individually assigned colors for all overworld tiles and sprites
+

@@ -82,6 +82,6 @@ MountFujiPokecenter1F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  3,  9, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FNurseScript, -1
+	object_event  3,  9, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FNurseScript, -1
 	object_event 14,  9, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FClerkScript, -1
 	object_event 16, 13, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountFujiPokecenter1FCooltrainerMScript, -1
