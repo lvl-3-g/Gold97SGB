@@ -171,7 +171,7 @@ PlaceOptionsString:
 .Page2_text:
 	db "PRINT BRIGHTNESS  <LF>"
 	db "                  <LF>"
-	db " -2  -1  0  +1  +2<LF><LF>"
+	db " -2  -1  0  1   2 <LF><LF>"
 	db "MENU ACCOUNT      <LF>"
 	db "                  <LF>"
 	db " ON       OFF     <LF><LF>@"
@@ -235,8 +235,8 @@ endr
 	jp .ExitAndPage
 
 .PrinterPositions:
-	db 16 ; 00
-	db 12 ; 20
+	db 15 ; 00
+	db 11 ; 20
 	db 8  ; 40
 	db 4  ; 60
 
@@ -587,9 +587,9 @@ Options_Print:
 	ld [hl], " "
 	hlcoord 9, 7
 	ld [hl], " "
-	hlcoord 13, 7
+	hlcoord 12, 7
 	ld [hl], " "
-	hlcoord 17, 7
+	hlcoord 16, 7
 	ld [hl], " "
 
 ; determine arrow position
@@ -605,8 +605,8 @@ Options_Print:
 	and a
 	ret
 .PositionOffsets:
-	db 16
-	db 12
+	db 15
+	db 11
 	db 8
 	db 4
 	db 0
