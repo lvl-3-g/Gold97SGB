@@ -2738,6 +2738,7 @@ wPokemonDataEnd::
 
 wGameDataEnd::
 
+wOptionsPage:: db
 
 SECTION "Stack", WRAMX
 
