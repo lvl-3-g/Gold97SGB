@@ -519,16 +519,16 @@ _CGB_MapPals:
 	dec b
 	jr nz, .bg_loop
 ; Copy PAL_BG_TEXT and 6 OB palettes
-	ld b, 7
+	ld b, 9
 .ob_loop
 	call .LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
-; Copy PAL_OW_RED and PAL_OW_YELLOW
-	call .LoadHLBGPaletteIntoDE
-	call .LoadHLBGPaletteIntoDE
-	ld a, SCGB_MAPPALS
-	ld [wSGBPredef], a
+; Copy PAL_OW_RED and PAL_OW_YELLOW; commenting this out because RED and YELLOW aren't treated differently anymore
+;	call .LoadHLBGPaletteIntoDE
+;	call .LoadHLBGPaletteIntoDE
+;	ld a, SCGB_MAPPALS
+;	ld [wSGBPredef], a
 	ret
 	
 .LoadHLBGPaletteIntoDE:

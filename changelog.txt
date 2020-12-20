@@ -298,3 +298,7 @@ In-progress 5.00
 In-progress 5.01
 - More work on new GBC color scheme
 - Changed color constants to be more consistent
+
+In-progress 5.02
+- Fixed issue with RED and YELLOW sprites in CGB mode
+- More adjustments to overworld sprite color assignments

@@ -59,7 +59,7 @@ OverworldSprites:
 	overworld_sprite BigSnorlaxSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SurfingPikachuSpriteGFX, 12, WALKING_SPRITE, PAL_OW_ORANGE
 	overworld_sprite RocketSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite RocketGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite RocketGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite NurseSpriteGFX, 12, STANDING_SPRITE, PAL_OW_ORANGE
 	overworld_sprite LinkReceptionistSpriteGFX, 12, WALKING_SPRITE, PAL_OW_ORANGE
 	overworld_sprite ClerkSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
@@ -89,7 +89,7 @@ OverworldSprites:
 	overworld_sprite N64SpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite BipetalSpriteGFX, 12, STANDING_SPRITE, PAL_OW_GREEN
 	overworld_sprite SurfSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite PokeBallSpriteGFX, 4, STILL_SPRITE, PAL_OW_ORANGE
+	overworld_sprite PokeBallSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite PokedexSpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite PaperSpriteGFX, 4, STILL_SPRITE, PAL_OW_BLUE
 	overworld_sprite VirtualBoySpriteGFX, 4, STILL_SPRITE, PAL_OW_ORANGE
