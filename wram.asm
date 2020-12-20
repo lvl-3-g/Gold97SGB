@@ -2148,6 +2148,7 @@ wGBPrinterBrightness::
 	db
 wOptions2::
 ; bit 0: menu account off/on
+; bit 1: use SGB-style or CGB-style colors?
 	db
 
 	ds 2
@@ -2738,6 +2739,7 @@ wPokemonDataEnd::
 
 wGameDataEnd::
 
+wDemoMode:: db
 wOptionsPage:: db
 
 SECTION "Stack", WRAMX

@@ -309,3 +309,6 @@ In-progress 5.03
 In-progress 5.04
 - More tileset and sprite color corrections
 
+In-progress 5.05
+- Merged Zumi's additions (redesigned menu and options for GBC color mode)
+- Fixed issue where in GBC mode that grass you walk through appears red
