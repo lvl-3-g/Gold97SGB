@@ -600,24 +600,24 @@ ENDC
 
 .OAMData_CutTree2:
 	db 4
-	dbsprite -2, -1,  6,  0, $00, PAL_OW_RED
-	dbsprite  0, -1,  2,  0, $01, PAL_OW_RED
-	dbsprite -2,  0,  6,  0, $02, PAL_OW_RED
-	dbsprite  0,  0,  2,  0, $03, PAL_OW_RED
+	dbsprite -2, -1,  6,  0, $00, PAL_OW_GREEN
+	dbsprite  0, -1,  2,  0, $01, PAL_OW_GREEN
+	dbsprite -2,  0,  6,  0, $02, PAL_OW_GREEN
+	dbsprite  0,  0,  2,  0, $03, PAL_OW_GREEN
 
 .OAMData_CutTree3:
 	db 4
-	dbsprite -2, -1,  4,  0, $00, PAL_OW_RED
-	dbsprite  0, -1,  4,  0, $01, PAL_OW_RED
-	dbsprite -2,  0,  4,  0, $02, PAL_OW_RED
-	dbsprite  0,  0,  4,  0, $03, PAL_OW_RED
+	dbsprite -2, -1,  4,  0, $00, PAL_OW_GREEN
+	dbsprite  0, -1,  4,  0, $01, PAL_OW_GREEN
+	dbsprite -2,  0,  4,  0, $02, PAL_OW_GREEN
+	dbsprite  0,  0,  4,  0, $03, PAL_OW_GREEN
 
 .OAMData_CutTree4:
 	db 4
-	dbsprite -2, -1,  0,  0, $00, PAL_OW_RED
-	dbsprite  1, -1,  0,  0, $01, PAL_OW_RED
-	dbsprite -2,  0,  0,  0, $02, PAL_OW_RED
-	dbsprite  1,  0,  0,  0, $03, PAL_OW_RED
+	dbsprite -2, -1,  0,  0, $00, PAL_OW_GREEN
+	dbsprite  1, -1,  0,  0, $01, PAL_OW_GREEN
+	dbsprite -2,  0,  0,  0, $02, PAL_OW_GREEN
+	dbsprite  1,  0,  0,  0, $03, PAL_OW_GREEN
 
 
 .OAMData_GSTitleTrail:
