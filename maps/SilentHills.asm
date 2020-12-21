@@ -134,8 +134,8 @@ SilentHillsRockerScript:
 	
 SilentHillsRockerText:
 	text "I'm not a trainer,"
-	line "but there are a"
-	cont "lot up ahead!"
+	line "but there are"
+	cont "several up ahead!"
 	para "If they see you,"
 	line "you'll have to"
 	cont "battle."

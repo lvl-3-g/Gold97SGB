@@ -321,3 +321,9 @@ In-progress 5.05
 
 5.07
 - Fixed some issues with blue forest tileset to make map transitions smoother in GBC mode
+
+5.08
+- Added arrows indicating entrance to Silent Hills
+- Updated Alloy City and Stand City maps to accomodate slight tileset change
+- Palette fixes for Player's house and Forest tilesets
+- Fixed issue where headbutt tree animation was red instead of green
