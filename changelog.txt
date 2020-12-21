@@ -327,3 +327,7 @@ In-progress 5.05
 - Updated Alloy City and Stand City maps to accomodate slight tileset change
 - Palette fixes for Player's house and Forest tilesets
 - Fixed issue where headbutt tree animation was red instead of green
+
+5.09
+- Fixed issue where cut trees would appear red while being cut
+- Made trainer HUD pokeballs appear green instead of B/W in GBC mode
