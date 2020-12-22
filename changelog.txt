@@ -331,3 +331,8 @@ In-progress 5.05
 5.09
 - Fixed issue where cut trees would appear red while being cut
 - Made trainer HUD pokeballs appear green instead of B/W in GBC mode
+
+5.10
+- Made bricks in gate tileset blue in GBC mode
+- All standard guard houses now have orange guards on mainland, yellow guards on the islands
+- Fixed minor issue with sanskrit tileset and game corner tileset
