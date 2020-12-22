@@ -336,3 +336,7 @@ In-progress 5.05
 - Made bricks in gate tileset blue in GBC mode
 - All standard guard houses now have orange guards on mainland, yellow guards on the islands
 - Fixed minor issue with sanskrit tileset and game corner tileset
+
+5.11
+- Fixed a few tileset color issues in blue forest and forest tilesets
+- blank pokeball icons in trainer hud are now light green instead of black to match demo
