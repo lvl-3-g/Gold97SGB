@@ -343,3 +343,6 @@ In-progress 5.05
 
 5.12
 - Fixed minor issues in many tilesets where brown and gray tiles weren't colored properly
+
+5.13
+- Fixed issue where certain tiles would appear to glow during nighttime
