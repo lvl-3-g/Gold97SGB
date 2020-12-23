@@ -351,3 +351,7 @@ In-progress 5.05
 - Fixed issue where flowers didn't match tileset while map was loading when exiting Geoff's hosue on Route 104
 - Fixed grammar error for fisher in Pallet Town
 - no more updates today
+
+5.15
+- Just kidding, one more update
+- Fixed issue where tall grass wasn't able to be cut on several tilesets
