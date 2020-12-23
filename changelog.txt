@@ -346,3 +346,8 @@ In-progress 5.05
 
 5.13
 - Fixed issue where certain tiles would appear to glow during nighttime
+
+5.14
+- Fixed issue where flowers didn't match tileset while map was loading when exiting Geoff's hosue on Route 104
+- Fixed grammar error for fisher in Pallet Town
+- no more updates today

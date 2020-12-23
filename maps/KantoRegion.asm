@@ -92,9 +92,10 @@ KantoLass2Script:
 	
 KantoFisher3Text:
 	text "Doesn't returning"
-	line "to familiar place"
-	para "give you a warm,"
-	line "fuzzy feeling?"
+	line "to a familiar"
+	para "place give you a"
+	line "warm, fuzzy"
+	cont "feeling?"
 	done
 	
 KantoLass2Text:
