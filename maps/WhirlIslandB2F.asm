@@ -20,6 +20,9 @@ WhirlIslandB2FMaxElixer:
 	
 WhirlIslandB2FTMSludgeBomb:
 	itemball TM_SLUDGE_BOMB
+	
+WhirlIslandB2FCovenantOrb:
+	itemball COVENANT_ORB
 
 WhirlIslandB2F_MapEvents:
 	db 0, 0 ; filler
@@ -33,8 +36,9 @@ WhirlIslandB2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 33, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FPoisonStone, EVENT_WHIRL_ISLAND_B2F_POISON_STONE
 	object_event  6, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxRevive, EVENT_WHIRL_ISLAND_B2F_MAX_REVIVE
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxElixer, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXER
 	object_event 35, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FTMSludgeBomb, EVENT_GOT_TM36_SLUDGE_BOMB
+	object_event 28, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FCovenantOrb, EVENT_WHIRL_ISLAND_B2F_COVENANT_ORB

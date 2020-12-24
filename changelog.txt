@@ -361,3 +361,6 @@ In-progress 5.05
 - Added text for PC in Rival's house
 - Changed dialogue for Rival's brother to match beta
 - Fixed "email" to "e-mail" in message from Oak
+
+5.21
+- Added Covenant Orb pickups to Boulder Mine B4F, Slowpoke well, and Whirl Island B2F
