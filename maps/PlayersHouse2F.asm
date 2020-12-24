@@ -339,9 +339,9 @@ PlayersRadioText2:
 	
 	para "I hope you'll"
 	line "excuse the sudden"
-	para "email, but there's"
-	line "something that I"
-	para "would like to"
+	para "e-mail, but there"
+	line "is something that"
+	para "I would like to"
 	line "entrust you with."
 	
 	para "Won't you come by"

@@ -470,8 +470,8 @@ SilentTownRivalText3:
 	line "laugh!"
 	para "Calling her"
 	line "something so"
-	cont "childish is"
-	para "hilarious!"
+	para "childish is"
+	line "hilarious!"
 	
 	para "Well, I'm off to"
 	line "OAK's!"

@@ -355,3 +355,9 @@ In-progress 5.05
 5.15
 - Just kidding, one more update
 - Fixed issue where tall grass wasn't able to be cut on several tilesets
+
+5.20
+- Added ability to name mother
+- Added text for PC in Rival's house
+- Changed dialogue for Rival's brother to match beta
+- Fixed "email" to "e-mail" in message from Oak
