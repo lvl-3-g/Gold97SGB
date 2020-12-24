@@ -364,3 +364,6 @@ In-progress 5.05
 
 5.21
 - Added Covenant Orb pickups to Boulder Mine B4F, Slowpoke well, and Whirl Island B2F
+
+5.22
+- Fixed some coloration issues with docks tileset
