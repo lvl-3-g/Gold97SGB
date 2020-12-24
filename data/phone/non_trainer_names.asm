@@ -7,7 +7,7 @@ NonTrainerCallerNames:
 	dw .oak2
 
 .none:     db "----------@"
-.mom:      db "MOM@"
+.mom:      db "<MOM>@"
 .bill:     db "BILL@"
 .oak2:      db "PROF.OAK@"
 .bikeshop: db "BIKE SHOP@"
