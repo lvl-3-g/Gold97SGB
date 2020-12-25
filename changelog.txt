@@ -367,3 +367,7 @@ In-progress 5.05
 
 5.22
 - Fixed some coloration issues with docks tileset
+
+5.23
+- Fixed more coloration issues with docks tileset that I should have fixed five minutes ago
+
