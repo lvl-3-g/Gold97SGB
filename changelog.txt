@@ -371,3 +371,5 @@ In-progress 5.05
 5.23
 - Fixed more coloration issues with docks tileset that I should have fixed five minutes ago
 
+5.24
+- Fixed issue where opposing trainer overworld sprite would turn gray during the transition at start of battle in GBC mode

@@ -765,18 +765,18 @@ opt b.X ; . = 0, X = 1
 	bigdw %................
 popo
 
-.copypals
+.copypals; don't know why changing all of these to PAL_BG_TEXT fixed the issue, but it did.... has something to do with when I changed PAL_OW_ROCK to RED and TREE to YELLOW in p5.01
 	ld de, wBGPals1 palette PAL_BG_TEXT
 	call .copy
 	ld de, wBGPals2 palette PAL_BG_TEXT
 	call .copy
-	ld de, wOBPals1 palette PAL_OW_RED
+	ld de, wOBPals1 palette PAL_BG_TEXT
 	call .copy
-	ld de, wOBPals2 palette PAL_OW_RED
+	ld de, wOBPals2 palette PAL_BG_TEXT
 	call .copy
-	ld de, wOBPals1 palette PAL_OW_YELLOW
+	ld de, wOBPals1 palette PAL_BG_TEXT
 	call .copy
-	ld de, wOBPals2 palette PAL_OW_YELLOW
+	ld de, wOBPals2 palette PAL_BG_TEXT
 
 .copy
 	push hl
