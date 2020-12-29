@@ -181,7 +181,7 @@ Oak2PhoneEggAssistantText:
 	line "<RIVAL> are"
 	cont "doing well."
 	para "I've sent one of"
-	line "my AIDEs out to"
+	line "my AIDES out to"
 	para "the PAGOTA CITY"
 	line "#MON CENTER."
 	para "If you've got a"

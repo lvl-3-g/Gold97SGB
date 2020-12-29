@@ -62,6 +62,7 @@ SilentTown_RivalGreets:
 	waitbutton
 	special NameMom 
 	closetext 
+	setevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
 	showemote EMOTE_SHOCK, SILENTTOWN_SILVER, 15
 	opentext
 	writetext SilentTownRivalText3
@@ -207,53 +208,32 @@ SilentTownSign:
 	jumptext SilentTownSignText
 
 SilentTownPlayersHouseSign:
-;	setevent EVENT_DECO_BED_1
-;	setevent EVENT_DECO_BED_2
-;	setevent EVENT_DECO_BED_3
-;	setevent EVENT_DECO_BED_4
-;	setevent EVENT_DECO_CARPET_1
-;	setevent EVENT_DECO_CARPET_2
-;	setevent EVENT_DECO_CARPET_3
-;	setevent EVENT_DECO_CARPET_4
-;	setevent EVENT_DECO_PLANT_1
-;	setevent EVENT_DECO_PLANT_2
-;	setevent EVENT_DECO_PLANT_3
-;	setevent EVENT_DECO_PLANT_4
-;	setevent EVENT_DECO_POSTER_1 ; 2b0
-;	setevent EVENT_DECO_POSTER_2
-;	setevent EVENT_DECO_POSTER_3
-;	setevent EVENT_DECO_FAMICOM
-;	setevent EVENT_DECO_SNES
-;	setevent EVENT_DECO_N64
-;	setevent EVENT_DECO_VIRTUAL_BOY
-;	setevent EVENT_DECO_PIKACHU_DOLL
-;	setevent EVENT_DECO_SURFING_PIKACHU_DOLL; actually poliwrath now
-;	setevent EVENT_DECO_CLEFAIRY_DOLL
-;	setevent EVENT_DECO_JIGGLYPUFF_DOLL
-;	setevent EVENT_DECO_BULBASAUR_DOLL
-;	setevent EVENT_DECO_CHARMANDER_DOLL
-;	setevent EVENT_DECO_SQUIRTLE_DOLL
-;	setevent EVENT_DECO_POLIWAG_DOLL
-;	setevent EVENT_DECO_DIGLETT_DOLL
-;	setevent EVENT_DECO_STARMIE_DOLL ; 2c0
-;	setevent EVENT_DECO_MAGIKARP_DOLL
-;	setevent EVENT_DECO_ODDISH_DOLL
-;	setevent EVENT_DECO_GENGAR_DOLL
-;	setevent EVENT_DECO_SHELLDER_DOLL
-;	setevent EVENT_DECO_GRIMER_DOLL
-;	setevent EVENT_DECO_VOLTORB_DOLL
-;	setevent EVENT_DECO_WEEDLE_DOLL
-;	setevent EVENT_DECO_UNOWN_DOLL
-;	setevent EVENT_DECO_GEODUDE_DOLL
-;	setevent EVENT_DECO_MACHOP_DOLL
-;	setevent EVENT_DECO_TENTACOOL_DOLL
-;	setevent EVENT_PLAYERS_ROOM_POSTER
-;	setevent EVENT_DECO_GOLD_TROPHY
-;	setevent EVENT_DECO_SILVER_TROPHY
-;	setevent EVENT_DECO_BIG_SNORLAX_DOLL
-;	setevent EVENT_DECO_BIG_ONIX_DOLL ; 2d0
-;	setevent EVENT_DECO_BIG_LAPRAS_DOLL
-	jumptext SilentTownPlayersHouseSignText
+	opentext
+	checkevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
+	iffalse .NameMomAgain
+	writetext SilentTownPlayersHouseSignText
+	waitbutton
+	closetext
+	end
+	
+.NameMomAgain
+	writetext NameMomAgainText
+	yesorno
+	iffalse .DontNameMomAgain
+	special NameMom 
+	closetext 
+	setevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
+	opentext
+	writetext MomHasBeenRenamed
+	waitbutton
+	closetext
+	end
+	
+.DontNameMomAgain
+	writetext NameMomAgainText2
+	waitbutton
+	closetext
+	end
 
 SilentTownOakLabBackRoomSign:
 	jumptext SilentTownOakLabBackRoomSignText
@@ -355,6 +335,45 @@ Movement_SilverComesFromTheShadows_NBT:
 Movement_PlayerTurnsHead:
 	turn_head RIGHT
 	step_end
+	
+MomHasBeenRenamed:
+	text "Your Mother's name"
+	line "is now <MOM>!"
+	done
+	
+NameMomAgainText:
+	text "Hello!"
+	para "This message only"
+	line "appears on older"
+	para "save files that"
+	line "may have your MOM"
+	para "incorrectly named"
+	line "in the # GEAR"
+	cont "phone."
+	para "Check to see if"
+	line "MOM's name appears"
+	para "correct in the"
+	line "phone."
+	para "A common issue is"
+	line "having the name of"
+	para "the Player instead"
+	line "of MOM."
+	para "You can rename her"
+	line "here to fix any"
+	para "issues or if you"
+	line "just want to give"
+	para "her a different"
+	line "name."
+	para "This can only be"
+	line "done one time."
+	para "Rename your MOM?"
+	done
+	
+NameMomAgainText2:
+	text "Talk to this sign"
+	line "again to name your"
+	cont "MOM."
+	done
 	
 Text_Study101:
 	text "…And if we spend"
