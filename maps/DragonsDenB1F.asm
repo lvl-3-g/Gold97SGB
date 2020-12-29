@@ -303,7 +303,7 @@ CooltrainermDarinSeenText:
 	text "You! Do you have"
 	line "what it takes to"
 	para "train the powerful"
-	line "DRAGON #MON?"
+	line "dragon #MON?"
 	done
 
 CooltrainermDarinBeatenText:
@@ -340,7 +340,7 @@ CooltrainerfCaraAfterBattleTextNotDone:
 	done
 
 CooltrainerfCaraAfterBattleText:
-	text "Raising DRAGONs is"
+	text "Raising dragons is"
 	line "more rewarding"
 	para "than other types,"
 	line "I think."
@@ -350,7 +350,7 @@ CooltrainerfCaraAfterBattleText:
 InstructorRandSeenText:
 	text "Have you learned"
 	line "enough about"
-	para "mystical DRAGON"
+	para "mystical dragon"
 	line "#MON in order"
 	para "to respect them"
 	line "properly?"
@@ -363,7 +363,7 @@ InstructorRandBeatenText:
 InstructorRandAfterBattleText:
 	text "The history of"
 	line "people training"
-	para "DRAGON #MON is"
+	para "dragon #MON is"
 	line "long and storied."
 	para "But some suspect"
 	line "it began here."
@@ -387,7 +387,7 @@ TwinsLeaandpia1AfterBattleText:
 	text "Have you ever"
 	line "battled LANCE?"
 	para "He is the only"
-	line "DRAGON TRAINER"
+	line "dragon trainer"
 	para "considered CLAIR's"
 	line "superior."
 	done

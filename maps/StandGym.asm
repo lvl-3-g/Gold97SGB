@@ -352,7 +352,7 @@ OkeraGivesYouSomething2:
 	text "Maybe you'll find"
 	line "that useful if"
 	para "you have some"
-	line "DARK #MON."
+	line "dark #MON."
 	done
 
 ItsASwitch:
@@ -512,7 +512,7 @@ ChuckIntroText1:
 	para "power that finds"
 	line "its strength in"
 	cont "the dark?"
-	para "DARK type #MON"
+	para "Dark-type #MON"
 	line "possess a power"
 	cont "like none other."
 	para "Even in the short"

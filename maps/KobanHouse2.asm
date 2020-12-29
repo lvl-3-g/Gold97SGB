@@ -11,7 +11,7 @@ KobanHouse2GuruScript:
 	
 KobanHouse2GuruText:
 	text "It's said that"
-	line "DRAGON #MON"
+	line "dragon #MON"
 	para "still inhabit the"
 	line "cave just north"
 	cont "of here."

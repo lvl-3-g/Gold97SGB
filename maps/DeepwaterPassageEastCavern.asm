@@ -58,7 +58,7 @@ PryceGreetingText:
 	line "train deep in"
 	cont "this cave."
 	para "Live among the"
-	line "ICE #MON in"
+	line "ice #MON in"
 	para "order to truly"
 	line "understand them."
 	para "…"

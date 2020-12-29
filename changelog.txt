@@ -377,3 +377,7 @@ In-progress 5.05
 5.25
 - Fixed an instance of "AIDEs" to "AIDES" in a call from PROF.OAK
 - Added a function to rename Mother on older save files - Talk to the sign outside of your house to give your mother a name. This can be used to fix a common issue where older save files would show your mom's name as the player's name in the PokeGear phone.
+
+5.30
+- Fixed issue where yellow-colored trainers would still appear gray during transition at beginning of battle in GBC mode
+- Lots of text consistency fixes. "TRAINER" to "Trainer", "XXX TYPE" to "Xxx-type"

@@ -69,9 +69,9 @@ BirdKeeperTobyAfterBattleText:
 	text "I plan to train in"
 	line "ALLOY CITY at"
 	cont "the FIGHTING DOJO."
-	para "FLYING #MON are"
+	para "Flying #MON are"
 	line "strong against"
-	cont "FIGHTING TYPE."
+	cont "fighting-type."
 	para "…Is that an"
 	line "unfair advantage?"
 	done

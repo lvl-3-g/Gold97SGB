@@ -87,7 +87,7 @@ Route105YoungsterText_DirectionsToMrPokemonsHouse:
 
 Route105CooltrainerFText:
 	text "I'm looking for"
-	line "ELECTRIC-TYPE"
+	line "electric-type"
 	cont "#MON."
 	para "I know there's a"
 	line "few different"

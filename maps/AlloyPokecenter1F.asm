@@ -42,7 +42,7 @@ AlloyPokecenter1FTeacherText:
 	cont "across the sea."
 
 	para "I hear she's a"
-	line "master of DRAGON"
+	line "master of dragon"
 	cont "#MON."
 	done
 

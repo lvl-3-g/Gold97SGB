@@ -96,7 +96,7 @@ SwimmermSethBeatenText:
 SwimmermSethAfterBattleText:
 	text "One day I'd like"
 	line "to train with the"
-	para "DRAGON MASTER in"
+	para "dragon master on"
 	line "KOBAN ISLAND."
 	done
 	

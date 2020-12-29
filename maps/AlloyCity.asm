@@ -201,7 +201,7 @@ AlloyCityRivalText:
 	line "cool, though!"
 	para "There's a GYM"
 	line "LEADER that uses"
-	cont "the STEEL-TYPE!"
+	cont "the steel-type!"
 	para "I'd never even"
 	line "heard of that type"
 	cont "before!"

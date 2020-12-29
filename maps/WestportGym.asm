@@ -92,7 +92,7 @@ PostRematchScriptBugsy:
 BugsyRematchText:
 	text "I've continued"
 	line "my deep study"
-	cont "on BUG #MON!"
+	cont "on bug #MON!"
 	
 	para "Allow me to"
 	line "show you the"
@@ -118,7 +118,7 @@ BugsyAfterRematchText:
 	para "I think I'll"
 	line "continue to"
 	para "specialize in"
-	line "BUG #MON."
+	line "bug #MON."
 	
 	para "There's so much"
 	line "to learn about"
@@ -222,12 +222,12 @@ BugsyText_INeverLose:
 	text "I'm BUGSY!"
 	para "I've dedicated my"
 	line "life to learning"
-	cont "about BUG #MON!"
+	cont "about bug #MON!"
 	para "My family has"
 	line "always been"
-	para "disgusted by BUGs,"
+	para "disgusted by bugs,"
 	line "but not me!"
-	para "BUG #MON are"
+	para "bug #MON are"
 	line "fascinating, and"
 	para "grow strong very"
 	line "quickly!"

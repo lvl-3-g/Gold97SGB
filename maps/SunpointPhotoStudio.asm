@@ -55,7 +55,7 @@ SunpointFishGuruText:
 	para "of town is"
 	line "dangerously hot"
 	cont "inside."
-	para "FIRE #MON are"
+	para "Fire #MON are"
 	line "said to be"
 	cont "attracted to it."
 	done

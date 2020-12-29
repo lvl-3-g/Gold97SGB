@@ -419,7 +419,7 @@ WestportUndergroundJanineText:
 	cont "shops."
 	para "But the dimly-lit"
 	line "halls attract some"
-	para "seedy TRAINERS"
+	para "seedy trainers"
 	line "looking to battle!"
 	done
 

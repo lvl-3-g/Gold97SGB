@@ -46,7 +46,7 @@ AlloyCafeStrengthSailorText:
 AlloyCafeStrengthSailorText_GotStrength:
 	text "Ships still have"
 	line "to set sail since"
-	para "FLYING #MON"
+	para "flying #MON"
 	line "can't carry cargo."
 	done
 

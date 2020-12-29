@@ -225,7 +225,7 @@ HikerLeonardAfterBattleText:
 FirebreatherBillSeenText:
 	text "Nothing in this"
 	line "FOREST can handle"
-	cont "my FIRE #MON!"
+	cont "my fire #MON!"
 	done
 
 FirebreatherBillBeatenText:
@@ -243,7 +243,7 @@ CooltrainerfGwenSeenText:
 	text "I'm not lost!"
 	para "And even if I was,"
 	line "my team is ready"
-	cont "for any TRAINER!"
+	cont "for any trainer!"
 	done
 
 CooltrainerfGwenBeatenText:

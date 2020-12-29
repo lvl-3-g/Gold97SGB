@@ -719,7 +719,7 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	jr nz, .daytime
 	ld hl, .nightpals
 .daytime
-	call .copypals
+;	call .copypals; Actually commenting out this whole .copypals thing fixes the issue.... some yellow sprites were still showing up as gray during the battle transition before...
 	push hl
 	ld de, wBGPals1 palette PAL_BG_TEXT
 	ld bc, 1 palettes

@@ -133,7 +133,7 @@ BlueForestCooltrainerF1Text:
 
 BlueForestYoungsterText:
 	text "There are lots of"
-	line "ICE type #MON"
+	line "ice-type #MON"
 	para "in the DEEPWATER"
 	line "PASSAGE."
 	done

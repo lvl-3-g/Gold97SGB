@@ -261,12 +261,12 @@ Jasmine_SteelTypeIntro:
 	line "have shown that"
 	para "they can handle"
 	line "the #MON of my"
-	para "GYM TRAINERS have"
+	para "GYM trainers have"
 	line "proven themselves"
 	para "to be worthy"
 	line "opponents of the"
 	para "incredible defense"
-	line "of my STEEL"
+	line "of my steel"
 	cont "#MON."
 	para "You've done well"
 	line "to defeat them."
@@ -358,7 +358,7 @@ GentlemanPrestonSeenText:
 	text "Have you ever"
 	line "faced off against"
 	para "the defenses of"
-	line "STEEL #MON?"
+	line "steel #MON?"
 	done
 
 GentlemanPrestonBeatenText:
@@ -368,7 +368,7 @@ GentlemanPrestonBeatenText:
 	done
 
 GentlemanPrestonAfterBattleText:
-	text "STEEL #MON have"
+	text "Steel #MON have"
 	line "high DEFENSE."
 	para "But they're not"
 	line "impenetrable."
@@ -377,9 +377,9 @@ GentlemanPrestonAfterBattleText:
 
 GentlemanAlfredSeenText:
 	text "This GYM used to"
-	line "use ROCK #MON."
+	line "use rock #MON."
 	para "But JASMINE found"
-	line "the new STEEL type"
+	line "the new steel-type"
 	cont "more appealing."
 	done
 
@@ -395,7 +395,7 @@ GentlemanAlfredAfterBattleText:
 	done
 	
 SuperNerdTomSeenText:
-	text "The STEEL type"
+	text "The steel-type"
 	line "is rare!"
 	para "Which means of"
 	line "course I have to"

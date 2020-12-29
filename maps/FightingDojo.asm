@@ -152,7 +152,7 @@ UnknownText_0x7e3df1:
 Text_FocusBandDescription:
 	text "TYROGUE can evolve"
 	line "into one of three"
-	para "different FIGHTING"
+	para "different fighting"
 	line "#MON!"
 	para "A trainer like you"
 	line "should have no"

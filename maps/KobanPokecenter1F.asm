@@ -38,13 +38,13 @@ KobanPokecenter1FTeacherText:
 	line "seen you before."
 	para "I assume you're"
 	line "here to learn of"
-	cont "DRAGON #MON."
+	cont "dragon #MON."
 	done
 
 KobanPokecenter1FYoungsterText:
 	text "I'm not too"
 	line "interested in"
-	cont "DRAGON #MON."
+	cont "dragon #MON."
 	para "There isn't much"
 	line "for me to do here."
 	para "I might move away"

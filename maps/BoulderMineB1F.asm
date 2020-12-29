@@ -60,7 +60,7 @@ HikerPhillipBeatenText:
 	done
 	
 HikerPhillipAfterBattleText:
-	text "My ROCK #MON"
+	text "My rock #MON"
 	line "feel right at home"
 	cont "here."
 	done

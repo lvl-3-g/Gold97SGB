@@ -144,7 +144,7 @@ PagotaCityGrampsText:
 	para "GYM, is a fine"
 	line "trainer!"
 
-	para "His FLYING-TYPE"
+	para "His flying-type"
 	line "bird #MON are"
 	para "trained to perform"
 	line "in parades and"

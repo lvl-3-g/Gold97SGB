@@ -208,7 +208,7 @@ Oak2PhoneRadioTowerRocketTakeoverText:
 	line "know anything"
 	cont "about it?"
 
-	para "..."
+	para "…"
 	para "Hm? You just dealt"
 	line "with TEAM ROCKET"
 	para "in their base in"
@@ -236,7 +236,7 @@ Oak2PhoneRocketsText:
 	para "I worry that TEAM"
 	line "ROCKET is planning"
 	para "something truly"
-	line "terrible..."
+	line "terrible…"
 	para "But you don't need"
 	line "to dwell on that!"
 	para "Keep up the great"

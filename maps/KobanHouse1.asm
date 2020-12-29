@@ -59,7 +59,7 @@ ClairPlayerReceivedDratiniText:
 	done
 	
 ClairSymbolicDragonText:
-	text "DRAGON #MON are"
+	text "Dragon #MON are"
 	line "difficult to"
 	para "raise, but their"
 	line "majesty and"
@@ -81,27 +81,27 @@ ClairTakeThisDratiniText:
 	line "ORB!"
 	para "I see you have"
 	line "learned of the"
-	para "power of DRAGON"
+	para "power of dragon"
 	line "#MON!"
 	para "I would like to"
 	line "reward you with"
 	para "a special #MON"
 	line "that deserves to"
 	para "be raised by a"
-	line "worthy TRAINER!"
+	line "worthy trainer!"
 	done
 	
 GoGetTheOrbText:
 	text "Retreive the"
 	line "DRAGON ORB from"
-	para "a TRAINER in the"
+	para "a trainer in the"
 	line "cave, and bring it"
 	cont "to me."
 	done
 	
 DragonsAreGreatText:
-	text "Being a DRAGON"
-	line "TRAINER requires"
+	text "Being a dragon"
+	line "trainer requires"
 	para "more dedication"
 	line "than most types."
 	para "It is very much a"

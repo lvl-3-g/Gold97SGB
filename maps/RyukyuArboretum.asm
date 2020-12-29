@@ -81,7 +81,7 @@ RyukyuArboretumHouseYoungsterScript:
 RyukyuArboretumHouseYoungsterText:
 	text "This place is"
 	line "neat!"
-	para "GRASS #MON seem"
+	para "Grass #MON seem"
 	line "to love it here!"
 	done
 	

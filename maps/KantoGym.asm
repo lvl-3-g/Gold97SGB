@@ -280,7 +280,7 @@ KantoGymGuyRedNotHereText2:
 	para "I'm sure he'll be"
 	line "back soon. Why"
 	para "don't you battle"
-	line "the TRAINERS here"
+	line "the trainers here"
 	para "while we wait for"
 	line "his return?"
 	done
