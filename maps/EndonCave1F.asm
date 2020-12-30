@@ -11,10 +11,18 @@ EndonCave1F_MapScripts:
 
 EndonCave1FTMDynamicpunch:
 	itemball TM_DYNAMICPUNCH
+	
+EndonCave1FSuperPotion:
+	itemball SUPER_POTION
+	
+EndonCave1FUltraBall:
+	itemball ULTRA_BALL
 
 EndonCave1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_ENDON_CAVE_1F_HIDDEN_MAX_REVIVE
 
+EndonCave1FSteelShell:
+	itemball STEEL_SHELL
 
 EndonCave1FRichGuyScript:
 	faceplayer
@@ -132,8 +140,11 @@ EndonCave1F_MapEvents:
 	db 1 ; bg events
 	bg_event  7, 10, BGEVENT_ITEM, EndonCave1FHiddenMaxRevive
 
-	db 3 ; object events
+	db 6 ; object events
 	object_event 16,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EndonCave1FRichGuyScript, -1
 	object_event 14, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacCalvin, -1
-	object_event  4,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FTMDynamicpunch, EVENT_TATSUGO_PATH_REVIVE
+	object_event  4,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FTMDynamicpunch, EVENT_ENDON_CAVE_1F_DYNAMICPUNCH
+	object_event 16, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FSuperPotion, EVENT_ENDON_CAVE_1F_SUPER_POTION
+	object_event  3,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FUltraBall, EVENT_ENDON_CAVE_1F_ULTRA_BALL
+	object_event 48,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave1FSteelShell, EVENT_ENDON_CAVE_1F_STEEL_SHELL
 

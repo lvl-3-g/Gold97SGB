@@ -10,6 +10,10 @@ SlowpokeWellB1F_MapScripts:
 	db 0 ; callbacks
 
 .SceneSlowpoke1Rival:
+	priorityjump .SceneSlowpoke1RivalContinued
+	end
+	
+.SceneSlowpoke1RivalContinued
 	showemote EMOTE_SHOCK, SLOWPOKE_WELL_B1F_SILVER, 15
 	special FadeOutMusic
 	pause 15

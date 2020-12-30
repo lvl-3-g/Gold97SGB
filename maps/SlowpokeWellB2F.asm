@@ -98,13 +98,13 @@ RocketEncounterScript:
 	pause 25
 	moveobject SLOWPOKEB2F_ELDER, 9, 13
 	appear SLOWPOKEB2F_ELDER
-	applymovement SLOWPOKEB2F_ELDER, ELDER_WALKS_TO_PLAYER
-	applymovement PLAYER, PLAYER_LOOKS_AT_ELDER
+	applymovement SLOWPOKEB2F_ELDER, ElderWalksToPlayerMovement
+	applymovement PLAYER, PlayerLooksAtElderMovement
 	opentext
 	writetext ElderAsksToSeeYou
 	waitbutton
 	closetext
-	applymovement SLOWPOKEB2F_ELDER, ELDER_WALKS_AWAY_FROM_PLAYER
+	applymovement SLOWPOKEB2F_ELDER, ElderWalksAwayFromPlayerMovement
 	disappear SLOWPOKEB2F_ELDER
 	setevent EVENT_ELDER_IN_WELL
 	setevent EVENT_103_SLOWPOKE_SALESMAN
@@ -197,24 +197,24 @@ OneStepUp:
 	step UP
 	step_end
 
-ELDER_WALKS_TO_PLAYER:
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
+ElderWalksToPlayerMovement:
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
+	slow_step UP
 	turn_head RIGHT
 	step_end
 
-ELDER_WALKS_AWAY_FROM_PLAYER:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+ElderWalksAwayFromPlayerMovement:
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
+	slow_step DOWN
 	step_end
 
-PLAYER_LOOKS_AT_ELDER:
+PlayerLooksAtElderMovement:
 	turn_head LEFT
 	step_end
 
@@ -314,8 +314,8 @@ OakSpeechText:
 	para "It can't be a"
 	line "good thing."
 	
-	para "BLUE, we best re"
-	line "-turn to the lab"
+	para "BLUE, we best re-"
+	line "turn to the lab"
 	cont "and investigate."
 	
 	para "<PLAYER>, <RIVAL>!"

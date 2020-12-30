@@ -43,25 +43,6 @@ WestportGymSign:
 	jumptext WestportGymSignText
 
 SlowpokeWellSign:
-	;setflag ENGINE_EEVEE_SWARM
-	;swarm SWARM_EEVEE, ROUTE_106
-	;giveitem HM_ROCK_SMASH
-	;clearflag ENGINE_ZEPHYRBADGE
-	;jumpstd radiotowerrockets
-	;setevent EVENT_ROUTE_105_BATTLE
-	;opentext
-	;verbosegiveitem HELIX_FOSSIL
-	;verbosegiveitem DOME_FOSSIL
-	;setevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-	;clearevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_1
-	;clearevent EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-	;setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_1
-	;setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_2
-	;setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_3; makes lass disappear in kume house
-	;setevent EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF;
-	;giveitem HM_SURF
-	;givepoke BALLERINE, 5
-	;givepoke ABRA, 5
 	jumptext SlowpokeWellSignText
 
 

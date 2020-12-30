@@ -388,3 +388,8 @@ In-progress 5.05
 5.32
 - Fixed issue where tree in Jade Forest could not be cut down
 
+5.33
+- Fixed issue where Rival overworld sprite could have graphical glitches during Slowpoke Well encounter
+- Made old man in Slowpoke Well walk slower like an old man would
+- Added new items pickups to Endon Cave
+- Made some more water Pokemon able to learn Waterfall because not having a Pokemon that can learn it is the worst
