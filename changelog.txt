@@ -384,3 +384,7 @@ In-progress 5.05
 
 5.31
 - Fixed issue where textboxes would appear blue at night while on GBC in GBC mode, now both GBC mode and SGB mode use white textboxes on GBC
+
+5.32
+- Fixed issue where tree in Jade Forest could not be cut down
+

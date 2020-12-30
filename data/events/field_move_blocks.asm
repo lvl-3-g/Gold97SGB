@@ -62,6 +62,7 @@ CutTreeBlockPointers:
 ; facing block, replacement block, animation
 	db $27, $01, 1
 	db $28, $01, 1
+	db $0F, $17, 0 ; tree
 	db -1 ; end
 
 .tropical:
