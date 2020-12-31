@@ -1,5 +1,7 @@
 SECTION "Map Blocks 1", ROMX
 
+RyukyuRestaurant_Blocks:
+	INCBIN "maps/RyukyuRestaurant.blk"
 
 
 RadioTower1F_Blocks:
@@ -649,9 +651,6 @@ WhirlIsland1F_Blocks:
 WhirlIslandSW_Blocks:
 	INCBIN "maps/WhirlIslandSW.blk"
 
-WhirlIslandCave_Blocks:
-	INCBIN "maps/WhirlIslandCave.blk"
-
 WhirlIslandSE_Blocks:
 	INCBIN "maps/WhirlIslandSE.blk"
 
@@ -664,14 +663,21 @@ WhirlIslandB2F_Blocks:
 WhirlIslandBlisseyChamber_Blocks:
 	INCBIN "maps/WhirlIslandBlisseyChamber.blk"
 
-SilverCaveRoom1_Blocks:
-	INCBIN "maps/SilverCaveRoom1.blk"
+RyukyuTheatre_Blocks:
+	INCBIN "maps/RyukyuTheatre.blk"
 
-SilverCaveRoom2_Blocks:
-	INCBIN "maps/SilverCaveRoom2.blk"
+RyukyuHotel_Blocks:
+	INCBIN "maps/RyukyuHotel.blk"
 
-SilverCaveRoom3_Blocks:
-	INCBIN "maps/SilverCaveRoom3.blk"
+RyukyuHotel2F_Blocks:
+RyukyuHotel3F_Blocks:
+RyukyuHotel4F_Blocks:
+RyukyuHotel5F_Blocks:
+	INCBIN "maps/RyukyuHotelFloors.blk"
+	
+RyukyuHotelRooms_Blocks:
+	INCBIN "maps/RyukyuHotelRooms.blk"
+
 
 OldMahoganyMart1F_Blocks:
 BoulderMineB4FGiftShop_Blocks:
@@ -783,9 +789,6 @@ WestportBikeShop_Blocks:
 KantoLaboratory_Blocks:
 	INCBIN "maps/KantoLaboratory.blk"
 
-TeknosTinTowerEntrance_Blocks:
-	INCBIN "maps/TeknosTinTowerEntrance.blk"
-
 BoardwalkGameCorner_Blocks:
 	INCBIN "maps/BoardwalkGameCorner.blk"
 
@@ -876,14 +879,11 @@ MrFujisHouse_Blocks:
 SanskritRocketHouse_Blocks:
 	INCBIN "maps/SanskritRocketHouse.blk"
 
-SilverCaveItemRooms_Blocks:
-;	INCBIN "maps/SilverCaveItemRooms.blk"
+RyukyuElevator_Blocks:
+	INCBIN "maps/RyukyuElevator.blk"
 
 DayCare_Blocks:
 	INCBIN "maps/DayCare.blk"
-
-SoulHouse_Blocks:
-	INCBIN "maps/SoulHouse.blk"
 
 KumeSocialHouse_Blocks:
 	INCBIN "maps/KumeSocialHouse.blk"
@@ -957,8 +957,6 @@ Route102GameHouse_Blocks:
 
 MountFujiOutside_Blocks:
 	INCBIN "maps/MountFujiOutside.blk"
-
-TeknosTinTowerBackEntrance_Blocks:
 
 DeepwaterPassageEntrance_Blocks:
 	INCBIN "maps/DeepwaterPassageEntrance.blk"

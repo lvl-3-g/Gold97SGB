@@ -421,15 +421,19 @@ ENDM
 	map_attributes WhirlIslandSuicuneChamber, WHIRL_ISLAND_SUICUNE_CHAMBER, $09, 0
 	map_attributes WhirlIsland1F, WHIRL_ISLAND_1F, $09, 0
 	map_attributes WhirlIslandSW, WHIRL_ISLAND_SW, $09, 0
-	map_attributes WhirlIslandCave, WHIRL_ISLAND_CAVE, $09, 0
+	map_attributes RyukyuRestaurant, RYUKYU_RESTAURANT, $00, 0
 	map_attributes WhirlIslandSE, WHIRL_ISLAND_SE, $09, 0
 	map_attributes WhirlIslandB1F, WHIRL_ISLAND_B1F, $09, 0
 	map_attributes WhirlIslandB2F, WHIRL_ISLAND_B2F, $09, 0
 	map_attributes WhirlIslandBlisseyChamber, WHIRL_ISLAND_BLISSEY_CHAMBER, $0f, 0
-	map_attributes SilverCaveRoom1, SILVER_CAVE_ROOM_1, $09, 0
-	map_attributes SilverCaveRoom2, SILVER_CAVE_ROOM_2, $09, 0
-	map_attributes SilverCaveRoom3, SILVER_CAVE_ROOM_3, $09, 0
-	map_attributes SilverCaveItemRooms, SILVER_CAVE_ITEM_ROOMS, $09, 0
+	map_attributes RyukyuTheatre, RYUKYU_THEATRE, $00, 0
+	map_attributes RyukyuHotel, RYUKYU_HOTEL, $00, 0
+	map_attributes RyukyuHotel2F, RYUKYU_HOTEL_2F, $00, 0
+	map_attributes RyukyuHotel3F, RYUKYU_HOTEL_3F, $00, 0
+	map_attributes RyukyuHotel4F, RYUKYU_HOTEL_4F, $00, 0
+	map_attributes RyukyuHotel5F, RYUKYU_HOTEL_5F, $00, 0
+	map_attributes RyukyuHotelRooms, RYUKYU_HOTEL_ROOMS, $00, 0
+	map_attributes RyukyuElevator, RYUKYU_ELEVATOR, $00, 0
 	map_attributes AmpareCavernB1F, AMPARE_CAVERN_B1F, $1D, 0
 	map_attributes AmpareCavern1F, AMPARE_CAVERN_1F, $09, 0
 	map_attributes DeepwaterPassageEntrance, DEEPWATER_PASSAGE_ENTRANCE, $09, 0
@@ -460,8 +464,6 @@ ENDM
 	map_attributes NanjoForest, NANJO_FOREST, $00, 0
 	map_attributes VictoryRoad, VICTORY_ROAD, $09, 0
 	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
-	map_attributes TeknosTinTowerEntrance, TEKNOS_TIN_TOWER_ENTRANCE, $00, 0
-	map_attributes TeknosTinTowerBackEntrance, TEKNOS_TIN_TOWER_BACK_ENTRANCE, $00, 0
 	map_attributes TeknosPokecenter1F, TEKNOS_POKECENTER_1F, $00, 0
 	map_attributes TeknosFishingHouse, TEKNOS_FISHING_HOUSE, $00, 0
 	map_attributes KantoLaboratory, KANTO_LABORATORY, $00, 0
@@ -592,7 +594,6 @@ ENDM
 	map_attributes FrostpointPryceHouse, FROSTPOINT_PRYCE_HOUSE, $00, 0
 	map_attributes FrostpointOtherHouse, FROSTPOINT_OTHER_HOUSE, $00, 0
 	map_attributes FrostpointMart, FROSTPOINT_MART, $00, 0
-	map_attributes SoulHouse, SOUL_HOUSE, $00, 0
 	map_attributes SanskritRocketHouse, SANSKRIT_ROCKET_HOUSE, $00, 0
 	map_attributes UrasoeParkUrasoeTrailGate, URASOE_PARK_URASOE_TRAIL_GATE, $00, 0
 	map_attributes AmamiTownSuperRodHouse, AMAMI_TOWN_SUPER_ROD_HOUSE, $00, 0

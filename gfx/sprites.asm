@@ -105,3 +105,4 @@ SECTION "Sprites 3", ROMX
 MinelrSpriteGFX::			   INCBIN "gfx/sprites/minelr.2bpp"
 MineudSpriteGFX::			   INCBIN "gfx/sprites/mineud.2bpp"
 StandingYoungsterSpriteGFX::		   INCBIN "gfx/sprites/standing_youngster.2bpp"
+PlaceholderSpriteGFX::		   INCBIN "gfx/sprites/placeholder.2bpp"

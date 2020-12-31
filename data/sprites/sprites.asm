@@ -104,3 +104,4 @@ OverworldSprites:
 	overworld_sprite FruitTreeSpriteGFX, 4, STILL_SPRITE, PAL_OW_GREEN
 	overworld_sprite GoldTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite SilverTrophySpriteGFX, 4, STILL_SPRITE, PAL_OW_GRAY
+	overworld_sprite PlaceholderSpriteGFX, 4, STILL_SPRITE, PAL_OW_GRAY

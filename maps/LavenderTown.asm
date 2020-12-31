@@ -106,13 +106,13 @@ SoulHouseSignText:
 LavenderTown_MapEvents:
 	db 0, 0 ; filler
 
-	db 7 ; warp events
+	db 6 ; warp events
 	warp_event  5,  5, KOBAN_POKECENTER_1F, 1
 	warp_event  5,  9, MR_FUJIS_HOUSE, 1
 	warp_event  3, 13, FROSTPOINT_PRYCE_HOUSE, 1
 	warp_event  7, 13, FROSTPOINT_OTHER_HOUSE, 1
 	warp_event  1,  5, FROSTPOINT_MART, 2
-	warp_event 13, 11, SOUL_HOUSE, 1
+;	warp_event 13, 11, SOUL_HOUSE, 1
 	warp_event 14,  5, SANSKRIT_ROCKET_HOUSE, 1
 
 	db 0 ; coord events

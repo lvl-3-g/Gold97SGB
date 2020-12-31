@@ -43,7 +43,6 @@ MapScenes::
 	scene_var ALLOY_CITY,                                wAlloyCitySceneID
 	scene_var ROUTE_113,                                    wRoute113SceneID ; unused
 	scene_var ROUTE_113_ROUTE_114_GATE,                   wRoute113Route114GateSceneID ; unused
-	scene_var TEKNOS_TIN_TOWER_ENTRANCE,                 wTeknosTinTowerEntranceSceneID
 	scene_var TEKNOS_POKECENTER_1F,                      wTeknosPokecenter1FSceneID
 	scene_var BIRDON_GYM,                                wBirdonGymSceneID
 	scene_var SANSKRIT_TOWN,                               wSanskritTownSceneID
@@ -68,7 +67,6 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB1FSceneID
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
 	scene_var WESTPORT_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wWestportUndergroundSwitchRoomEntrancesSceneID
-	scene_var SILVER_CAVE_ROOM_3,                          wSilverCaveRoom3SceneID ; unused
 	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var KANTO_RESTAURANT,                               wKantoRestaurantSceneID

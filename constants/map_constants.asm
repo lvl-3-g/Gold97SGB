@@ -114,15 +114,10 @@ ENDM
 	map_const WHIRL_ISLAND_SUICUNE_CHAMBER,                              5,  9 ; 66
 	map_const WHIRL_ISLAND_1F,                             10,  9 ; 67
 	map_const WHIRL_ISLAND_SW,                             10,  9 ; 68
-	map_const WHIRL_ISLAND_CAVE,                            5,  9 ; 69
 	map_const WHIRL_ISLAND_SE,                              5,  9 ; 70
 	map_const WHIRL_ISLAND_B1F,                            20, 18 ; 71
 	map_const WHIRL_ISLAND_B2F,                            20, 18 ; 72
 	map_const WHIRL_ISLAND_BLISSEY_CHAMBER,                  10,  9 ; 73
-	map_const SILVER_CAVE_ROOM_1,                          10, 18 ; 66
-	map_const SILVER_CAVE_ROOM_2,                          15, 18 ; 67
-	map_const SILVER_CAVE_ROOM_3,                          10, 18 ; 68
-	map_const SILVER_CAVE_ITEM_ROOMS,                      10,  9 ; 69
 	map_const AMPARE_CAVERN_B1F,                   20, 18 ; 70
 	map_const AMPARE_CAVERN_1F,               15, 18 ; 71
 	map_const DEEPWATER_PASSAGE_ENTRANCE,                               5, 18 ; 72
@@ -139,8 +134,6 @@ ENDM
 
 	newgroup                                                      ;  4
 
-	map_const TEKNOS_TIN_TOWER_ENTRANCE,                 10,  9 ;  1
-	map_const TEKNOS_TIN_TOWER_BACK_ENTRANCE,             4,  4 ;  2
 	map_const TEKNOS_POKECENTER_1F,                       8,  4 ;  3
 	map_const TEKNOS_FISHING_HOUSE,                  5,  4 ;  4
 	map_const TEKNOS_MART,                                8,  4 ;  6
@@ -373,7 +366,6 @@ ENDM
 	map_const LAVENDER_TOWN,                               10,  9 ;  4
 	map_const KOBAN_POKECENTER_2F_BETA,                  8,  4 ;  6
 	map_const MR_FUJIS_HOUSE,                               5,  4 ;  7
-	map_const SOUL_HOUSE,                                   5,  4 ; 11
 	map_const URASOE_PARK_URASOE_TRAIL_GATE,                         5,  4 ; 13
 
 	newgroup                                                      ; 19
@@ -499,6 +491,15 @@ ENDM
 	map_const SUNPOINT_DOCKS_CLEANSE_TAG_HOUSE,                    4,  4 ; 15
 	map_const URASOE_PARK,                              20,  9 ;  3
 	map_const RYUKYU_OLD_COUPLE_HOUSE,                  5,  4 ;  3
+	map_const RYUKYU_HOTEL,                          15, 5 ; 67
+	map_const RYUKYU_HOTEL_2F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_3F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_4F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_5F,                          10,  9 ; 67
+	map_const RYUKYU_HOTEL_ROOMS,                          20,  9 ; 67
+	map_const RYUKYU_ELEVATOR,                       2,  2 ; 69
+	map_const RYUKYU_RESTAURANT,                           10,  9 ; 69
+	map_const RYUKYU_THEATRE,                          10, 9 ; 66
 
 	newgroup                                                      ; 26
 

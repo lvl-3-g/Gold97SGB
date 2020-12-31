@@ -100,6 +100,7 @@
 	const SPRITE_FRUIT_TREE ; 5d
 	const SPRITE_GOLD_TROPHY ; 5e
 	const SPRITE_SILVER_TROPHY ; 5f
+	const SPRITE_PLACEHOLDER
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80
