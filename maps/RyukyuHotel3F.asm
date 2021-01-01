@@ -7,6 +7,14 @@ RyukyuHotel3F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+HotelDoorLockedScript3F:
+	jumptextfaceplayer HotelDoorLockedText3F
+	
+HotelDoorLockedText3F:
+	text "The door is"
+	line "locked…"
+	done
 
 RyukyuHotel3F_MapEvents:
 	db 0, 0 ; filler
@@ -23,6 +31,6 @@ RyukyuHotel3F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event   7,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event  13,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event   7, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
+	object_event   7,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript3F, -1
+	object_event  13,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript3F, -1
+	object_event   7, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript3F, -1

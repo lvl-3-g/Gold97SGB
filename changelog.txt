@@ -393,3 +393,10 @@ In-progress 5.05
 - Made old man in Slowpoke Well walk slower like an old man would
 - Added new items pickups to Endon Cave
 - Made some more water Pokemon able to learn Waterfall because not having a Pokemon that can learn it is the worst
+
+6.b1
+- Mapped out new locations in Ryukyu City
+
+6.b2
+- Added scripts for hotel receptionist
+- Added Professor Oak battle

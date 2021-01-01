@@ -100,7 +100,9 @@ CHRIS EQU __enum__
 	const BROCK1
 
 	trainerclass MISTY ; 12
-	const MISTY1
+	const OAK_HAS_CRUISEAL
+	const OAK_HAS_HAPPA
+	const OAK_HAS_FLAMBEAR
 
 	trainerclass LT_SURGE ; 13
 	const LT_SURGE1

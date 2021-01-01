@@ -17,7 +17,7 @@ TrainerClassNames::
 	db "ELITE FOUR@"
 	db "CHAMPION@"
 	db "GIOVANNI@"
-	db "LEADER@"
+	db "PROF.OAK@"
 	db "LEADER@"
 	db "SCIENTIST@"
 	db "LEADER@"

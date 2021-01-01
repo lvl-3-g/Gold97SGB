@@ -10,7 +10,7 @@
 	const OAK2ENTRANCE_BLUE2
 
 OakLabFrontRoom_MapScripts:
-	db 7 ; scene scripts
+	db 8 ; scene scripts
 	scene_script .SceneOak2DoorLocked ; SCENE_DEFAULT
 	scene_script .SceneHeadToTheBack ;
 	scene_script .SceneOakLabFrontRoomNothing ;does this work?
@@ -18,10 +18,14 @@ OakLabFrontRoom_MapScripts:
 	scene_script .SceneOakLabFrontRoomDaisy
 	scene_script .SceneOakLabFrontGoSeeOak
 	scene_script .SceneOakLabFrontRoomBattle
+	scene_script .SceneOakLabFrontRoomAfterTalkingToClerk
 
 	db 0 ; callbacks
 	
 .SceneOak2DoorLocked:
+	end
+	
+.SceneOakLabFrontRoomAfterTalkingToClerk
 	end
 	
 .SceneHeadToTheBack:
@@ -254,6 +258,21 @@ YouReloadedMapScriptLeft:
 
 
 DoorLockedScript:
+	opentext
+	writetext DoorLockedText
+	waitbutton
+	closetext
+	applymovement PLAYER, DoorLocked_Movement
+	end
+	
+DoorLockedScriptWeekends:
+	checkcode VAR_WEEKDAY
+	ifequal SATURDAY, .DoorIsLockedWeekend
+	checkcode VAR_WEEKDAY
+	ifequal SUNDAY, .DoorIsLockedWeekend
+	end
+
+.DoorIsLockedWeekend
 	opentext
 	writetext DoorLockedText
 	waitbutton
@@ -954,7 +973,7 @@ OakLabFrontRoom_MapEvents:
 	warp_event  4,  0, OAK_LAB_BACK_ROOM, 1
 
 
-	db 8 ; coord events
+	db 9 ; coord events
 	coord_event  4,  1, SCENE_DEFAULT, DoorLockedScript
 	coord_event  3,  7, SCENE_OAK_LAB_FRONT_ROOM_GO_SEE_OAK, GoSeeOakScript
 	coord_event  4,  7, SCENE_OAK_LAB_FRONT_ROOM_GO_SEE_OAK, GoSeeOakScript
@@ -963,6 +982,7 @@ OakLabFrontRoom_MapEvents:
 	coord_event  4, 11, SCENE_OAK_LAB_FRONT_ROOM_DAISY, DaisyStopsScript2
 	coord_event  3,  8, SCENE_OAK_LAB_FRONT_ROOM_BATTLE, BattleScript
 	coord_event  4,  8, SCENE_OAK_LAB_FRONT_ROOM_BATTLE, BattleScript2
+	coord_event  4,  1, SCENE_OAK_LAB_FRONT_ROOM_AFTER_TALKING_TO_CLERK, DoorLockedScriptWeekends
 
 	db 14 ; bg events
 	bg_event  6,  1, BGEVENT_READ, OakLabFrontRoomComputerScript

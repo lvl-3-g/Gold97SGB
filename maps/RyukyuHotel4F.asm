@@ -12,6 +12,14 @@ RyukyuHotel4F_MapScripts:
 .FlipStairs4F:
 	changeblock  19,  1, $1E ; flipped
 	return
+	
+HotelDoorLockedScript4F:
+	jumptextfaceplayer HotelDoorLockedText4F
+	
+HotelDoorLockedText4F:
+	text "The door is"
+	line "locked…"
+	done
 
 RyukyuHotel4F_MapEvents:
 	db 0, 0 ; filler
@@ -28,6 +36,6 @@ RyukyuHotel4F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event   7,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event   7, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
+	object_event   7,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1
+	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1
+	object_event   7, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1

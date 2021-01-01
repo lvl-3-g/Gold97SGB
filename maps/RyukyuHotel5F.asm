@@ -12,6 +12,14 @@ RyukyuHotel5F_MapScripts:
 .NoUpstairs:
 	changeblock  19,  1, $1C ; down only
 	return
+	
+HotelDoorLockedScript5F:
+	jumptextfaceplayer HotelDoorLockedText5F
+	
+HotelDoorLockedText5F:
+	text "The door is"
+	line "locked…"
+	done
 
 RyukyuHotel5F_MapEvents:
 	db 0, 0 ; filler
@@ -27,6 +35,6 @@ RyukyuHotel5F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  13,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
-	object_event  13, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript, -1
+	object_event  13,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
+	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
+	object_event  13, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
