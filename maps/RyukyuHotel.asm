@@ -162,7 +162,13 @@ RyukyuHotelClerkText:
 	done
 	
 RyukyuHotelClerk2Text:
-	text "Welcome, guest!"
+	text "Welcome!"
+	para "Many of our guests"
+	line "are experienced"
+	para "#MON trainers"
+	line "who are waiting"
+	para "to battle in"
+	line "their suites!"
 	done
 	
 HotelReceptionistNoSaleText:

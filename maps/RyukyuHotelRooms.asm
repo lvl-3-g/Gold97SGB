@@ -27,6 +27,8 @@ RyukyuHotelRoomsOakScript:
 	writetext RyukyuHotelRoomsOakBefore
 	yesorno
 	iffalse .NoOakBattleYet
+	writetext RyukyuHotelRoomsOakBefore2
+	waitbutton
 	closetext
 	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
 	iftrue .Cruise
@@ -76,6 +78,11 @@ RyukyuHotelRoomsOakScript:
 	waitbutton
 	closetext
 	end
+	
+RyukyuHotelRoomsOakBefore2:
+	text "Let's both give"
+	line "it our best!"
+	done
 	
 RyukyuHotelRoomsOakNoBattle:
 	text "Not a problem!"

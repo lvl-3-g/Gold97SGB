@@ -2,6 +2,8 @@
 	const RYUKYU_HOTEL_5F_PLACEHOLDER_1
 	const RYUKYU_HOTEL_5F_PLACEHOLDER_2
 	const RYUKYU_HOTEL_5F_PLACEHOLDER_3
+	const RYUKYU_HOTEL_5F_GENTLEMAN
+	const RYUKYU_HOTEL_5F_JANINE
 
 RyukyuHotel5F_MapScripts:
 	db 0 ; scene scripts
@@ -13,8 +15,26 @@ RyukyuHotel5F_MapScripts:
 	changeblock  19,  1, $1C ; down only
 	return
 	
+RyukyuHotel5FGentleman:
+	jumptextfaceplayer RyukyuHotel5FGentlemanText
+	
+RyukyuHotel5FJanine:
+	jumptextfaceplayer RyukyuHotel5FJanineText
+	
 HotelDoorLockedScript5F:
 	jumptextfaceplayer HotelDoorLockedText5F
+	
+RyukyuHotel5FGentlemanText:
+	text "My, this sure is"
+	line "a lovely place"
+	cont "to vacation!"
+	done
+	
+RyukyuHotel5FJanineText:
+	text "Have you tried"
+	line "battling any of"
+	cont "the KIMONO GIRLS?"
+	done
 	
 HotelDoorLockedText5F:
 	text "The door is"
@@ -34,7 +54,9 @@ RyukyuHotel5F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 5 ; object events
 	object_event  13,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
 	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
 	object_event  13, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript5F, -1
+	object_event  16,  8, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RyukyuHotel5FGentleman, -1
+	object_event   9, 17, SPRITE_JANINE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuHotel5FJanine, -1

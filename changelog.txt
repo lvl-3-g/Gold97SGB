@@ -405,3 +405,6 @@ In-progress 5.05
 - Restaurant Game Corner scripts set up
 - Theatre scripts and Kimono Girls set up
 - Added NPCS to first floor of hotel
+
+6.b4
+- Added NPCS to rest of hotel

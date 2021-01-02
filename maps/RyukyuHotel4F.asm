@@ -2,6 +2,8 @@
 	const RYUKYU_HOTEL_4F_PLACEHOLDER_1
 	const RYUKYU_HOTEL_4F_PLACEHOLDER_2
 	const RYUKYU_HOTEL_4F_PLACEHOLDER_3
+	const RYUKYU_HOTEL_4F_POKEFAN_M
+	const RYUKYU_HOTEL_4F_FISHER
 
 RyukyuHotel4F_MapScripts:
 	db 0 ; scene scripts
@@ -13,8 +15,28 @@ RyukyuHotel4F_MapScripts:
 	changeblock  19,  1, $1E ; flipped
 	return
 	
+RyukyuHotel4FPokefanM:
+	jumptextfaceplayer RyukyuHotel4FPokefanMText
+	
+RyukyuHotel4FFisher:
+	jumptextfaceplayer RyukyuHotel4FFisherText
+	
 HotelDoorLockedScript4F:
 	jumptextfaceplayer HotelDoorLockedText4F
+
+RyukyuHotel4FPokefanMText:
+	text "Are you from"
+	line "around here?"
+	para "Hm, SILENT TOWN?"
+	line "That's pretty far."
+	done
+	
+RyukyuHotel4FFisherText:
+	text "I can't wait for"
+	line "another day of"
+	para "fishing out on the"
+	line "shore!"
+	done
 	
 HotelDoorLockedText4F:
 	text "The door is"
@@ -35,7 +57,9 @@ RyukyuHotel4F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 5 ; object events
 	object_event   7,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1
 	object_event   1,  2, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1
 	object_event   7, 14, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, HotelDoorLockedScript4F, -1
+	object_event  15,  3, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuHotel4FPokefanM, -1
+	object_event  10, 15, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RyukyuHotel4FFisher, -1
