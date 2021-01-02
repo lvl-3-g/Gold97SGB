@@ -106,3 +106,7 @@ MinelrSpriteGFX::			   INCBIN "gfx/sprites/minelr.2bpp"
 MineudSpriteGFX::			   INCBIN "gfx/sprites/mineud.2bpp"
 StandingYoungsterSpriteGFX::		   INCBIN "gfx/sprites/standing_youngster.2bpp"
 PlaceholderSpriteGFX::		   INCBIN "gfx/sprites/placeholder.2bpp"
+
+
+SECTION "Sprites 4", ROMX
+RivalsMomSpriteGFX::		   INCBIN "gfx/sprites/rivals_mom.2bpp"

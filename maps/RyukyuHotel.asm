@@ -3,6 +3,11 @@
 	const RYUKYU_HOTEL_CLERK_1
 	const RYUKYU_HOTEL_PLACEHOLDER
 	const RYUKYU_HOTEL_CLERK_2
+	const RYUKYU_HOTEL_YOUNGSTER
+	const RYUKYU_HOTEL_BUG_CATCHER
+	const RYUKYU_HOTEL_TEACHER
+	const RYUKYU_HOTEL_LASS
+	const RYUKYU_HOTEL_JANINE
 
 RyukyuHotel_MapScripts:
 	db 0 ; scene scripts
@@ -101,6 +106,47 @@ RyukyuHotelClerk2:
 	
 RyukyuHotelElevatorNeedsPass:
 	jumptextfaceplayer RyukyuHotelElevatorNeedsPassText
+	
+RyukyuHotelYoungster:
+	jumptextfaceplayer RyukyuHotelYoungsterText
+	
+RyukyuHotelBugCatcher:
+	jumptextfaceplayer RyukyuHotelBugCatcherText
+	
+RyukyuHotelTeacher:
+	jumptextfaceplayer RyukyuHotelTeacherText
+	
+RyukyuHotelLass:
+	jumptextfaceplayer RyukyuHotelLassText
+	
+RyukyuHotelJanine:
+	jumptextfaceplayer RyukyuHotelJanineText
+	
+RyukyuHotelYoungsterText:
+	text "I've never stayed"
+	line "in such a huge"
+	cont "hotel before!"
+	done
+	
+RyukyuHotelBugCatcherText:
+	text "I want to go out"
+	line "to the beach!"
+	done
+	
+RyukyuHotelTeacherText:
+	text "Our hotel suite"
+	line "is so cozy!"
+	done
+
+RyukyuHotelLassText:
+	text "Which floor is my"
+	line "room on?"
+	done
+	
+RyukyuHotelJanineText:
+	text "The weather here"
+	line "is beautiful!"
+	done
 	
 RyukyuHotelElevatorNeedsPassText:
 	text "It requires a ROOM"
@@ -205,8 +251,13 @@ RyukyuHotel_MapEvents:
 	db 1 ; bg events
 	bg_event 23,  4, BGEVENT_ITEM, RyukyuHotelHiddenMaxPotion
 
-	db 4 ; object events
+	db 9 ; object events
 	object_event  6,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuHotelReceptionist, -1
 	object_event 29,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RyukyuHotelClerk, EVENT_HOTEL_UPSTAIRS_IS_BLOCKED
 	object_event 26,  0, SPRITE_PLACEHOLDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuHotelElevatorNeedsPass, EVENT_HOTEL_UPSTAIRS_IS_BLOCKED
 	object_event 28,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RyukyuHotelClerk2, EVENT_HOTEL_UPSTAIRS_IS_NOT_BLOCKED
+	object_event 14,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuHotelYoungster, -1
+	object_event 24,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, RyukyuHotelBugCatcher, -1
+	object_event 25,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, RyukyuHotelTeacher, -1
+	object_event 21,  1, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuHotelLass, -1
+	object_event 18,  6, SPRITE_JANINE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuHotelJanine, -1

@@ -140,6 +140,7 @@ ROMX $36
 	"Font Inversed"
 	"Tileset Data 7"
 	"Tileset Data 9"
+	"Sprites 4"
 ROMX $37
 	"Map Blocks 3"
 	"Tileset Data 5"

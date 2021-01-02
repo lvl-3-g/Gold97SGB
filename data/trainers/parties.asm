@@ -3557,35 +3557,33 @@ PokefanMGroup:
 
 KimonoGirlGroup:
 	; KIMONO_GIRL (1)
-	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 24, SKIPLOOM
-	db 24, VULPIX
-	db 21, SKIPLOOM
+	db "KYOKO@", TRAINERTYPE_NORMAL
+	db 70, LEAFEON
 	db -1 ; end
 
 	; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 20, FLAREON
+	db 70, FLAREON
 	db -1 ; end
 
 	; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 20, ESPEON
+	db 70, ESPEON
 	db -1 ; end
 
 	; KIMONO_GIRL (4)
 	db "ZUKI@", TRAINERTYPE_NORMAL
-	db 20, UMBREON
+	db 70, UMBREON
 	db -1 ; end
 
 	; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 20, VAPOREON
+	db 70, VAPOREON
 	db -1 ; end
 
 	; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 20, JOLTEON
+	db 70, JOLTEON
 	db -1 ; end
 
 TwinsGroup:

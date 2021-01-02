@@ -7,6 +7,7 @@
 	const RYUKYU_COOLTRAINER_M
 	const RYUKYU_SWIMMER_GUY
 	const RYUKYU_SWIMMER_GIRL
+	const RYUKYU_POKEFAN_M2
 
 RyukyuCity_MapScripts:
 	db 0 ; scene scripts
@@ -54,6 +55,8 @@ RyukyuSwimmerGuyScript:
 RyukyuSwimmerGirlScript:
 	jumptextfaceplayer RyukyuSwimmerGirlText
 
+RyukyuPokefanM2Script:
+	jumptextfaceplayer RyukyuPokefanM2Text
 	
 FireStarterTest:
 	clearevent EVENT_GOT_CRUISEAL_FROM_OAK
@@ -84,6 +87,12 @@ WaterStarterTestText:
 	
 FireStarterTestText:
 	text "fire"
+	done
+	
+RyukyuPokefanM2Text:
+	text "I just enjoy"
+	line "watching the waves"
+	cont "on the sea."
 	done
 	
 RyukyuCitySignText:
@@ -178,7 +187,7 @@ RyukyuCity_MapEvents:
 	bg_event 18, 27, BGEVENT_READ, WaterStarterTest
 	bg_event 20, 27, BGEVENT_READ, GrassStarterTest
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 29, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuPokefanMScript, -1
 	object_event 11, 12, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, RyukyuTeacherScript, -1
 	object_event 11, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuTwinScript, -1
@@ -187,3 +196,4 @@ RyukyuCity_MapEvents:
 	object_event  9, 19, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RyukyuCooltrainerMScript, -1
 	object_event  5, 20, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuSwimmerGuyScript, -1
 	object_event  6, 10, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, RyukyuSwimmerGirlScript, -1
+	object_event  8, 29, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RyukyuPokefanM2Script, -1

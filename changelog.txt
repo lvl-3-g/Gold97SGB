@@ -400,3 +400,8 @@ In-progress 5.05
 6.b2
 - Added scripts for hotel receptionist
 - Added Professor Oak battle
+
+6.b3
+- Restaurant Game Corner scripts set up
+- Theatre scripts and Kimono Girls set up
+- Added NPCS to first floor of hotel
