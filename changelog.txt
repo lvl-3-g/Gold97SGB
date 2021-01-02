@@ -408,3 +408,8 @@ In-progress 5.05
 
 6.b4
 - Added NPCS to rest of hotel
+
+6.00
+- New location, Ryukyu Hotel released!
+- Added trainers to hotel rooms
+- Tweaks to NPC scripts

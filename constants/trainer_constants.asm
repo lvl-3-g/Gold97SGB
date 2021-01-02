@@ -194,6 +194,7 @@ CHRIS EQU __enum__
 	const CONNIE3
 	const DANA2
 	const DANA3
+	const ELIZA
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -220,6 +221,7 @@ CHRIS EQU __enum__
 	const ALLEN
 	const DARIN
 	const LIAM
+	const WOZNIAK
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -244,6 +246,9 @@ CHRIS EQU __enum__
 	const REENA3
 	const CARA
 	const JULIA
+	const AYANO; orange
+	const YUKA; green
+	const AYAKA; yellow
 
 	trainerclass BEAUTY ; 1d
 	const VICTORIA
@@ -559,6 +564,7 @@ CHRIS EQU __enum__
 	const GILBERT
 	const JARED
 	const RODNEY
+	const RAPHAEL
 
 	trainerclass PICNICKER ; 35
 	const LIZ1
@@ -603,6 +609,7 @@ CHRIS EQU __enum__
 	const JOHN
 	const JERRY
 	const SPENCER
+	const QUENTIN
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

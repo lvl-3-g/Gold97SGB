@@ -917,17 +917,12 @@ LassGroup:
 	db 36, AMPHAROS,   TACKLE, THUNDERSHOCK, THUNDER_WAVE, COTTON_SPORE
 	db -1 ; end
 
-	; LASS (16)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 38, PSYDUCK,    SCRATCH, DISABLE, CONFUSION, SCREECH
-	db 38, AMPHAROS,   TACKLE, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
+	; LASS (15)
+	db "ELIZA@", TRAINERTYPE_NORMAL
+	db 56, GOLDUCK
+	db 54, AMPHAROS
 	db -1 ; end
 
-	; LASS (17)
-	db "DANA@", TRAINERTYPE_MOVES
-	db 43, AMPHAROS,   SWIFT, THUNDERPUNCH, THUNDER_WAVE, COTTON_SPORE
-	db 43, GOLDUCK,    DISABLE, SURF, PSYCHIC_M, SCREECH
-	db -1 ; end
 
 JanineGroup:
 	; JANINE (1) turned into bruno
@@ -1082,6 +1077,13 @@ CooltrainerMGroup:
 	db 51, GROTESS,    BIDE, IRON_TAIL, SUPERSONIC, HYDRO_PUMP
 	db 51, EXEGGUTOR,  LEECH_SEED, CONFUSION, SLEEP_POWDER, SOLARBEAM
 	db -1 ; end
+	
+	; COOLTRAINERM (11)
+	db "WOZ@", TRAINERTYPE_NORMAL
+	db 53, FLAREON
+	db 55, PLUCKROSS
+	db 54, GELANIA
+	db -1 ; end
 
 CooltrainerFGroup:
 	; COOLTRAINERF (1)
@@ -1228,6 +1230,24 @@ CooltrainerFGroup:
 	db 36, MURKROW
 	db 37, MURKROW
 	db 38, MURKROW
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "AYANO@", TRAINERTYPE_NORMAL; used
+	db 56, CHARIZARD
+	db 56, DYNABEAR
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "YUKA@", TRAINERTYPE_NORMAL; used
+	db 56, BLASTOISE
+	db 56, AQUARIUS
+	db -1 ; end
+	
+	; COOLTRAINERF (22)
+	db "AYAKA@", TRAINERTYPE_NORMAL; used
+	db 56, VENUSAUR
+	db 56, BLOSSOMITE
 	db -1 ; end
 
 BeautyGroup:
@@ -3002,6 +3022,12 @@ PsychicGroup:
 	db 44, HYPNO
 	db -1 ; end
 
+	; PSYCHIC_T (13)
+	db "RAPHAEL@", TRAINERTYPE_NORMAL; used fast ship w2a
+	db 54, ALAKAZAM
+	db 55, HYPNO
+	db -1 ; end
+
 PicnickerGroup:
 	; PICNICKER (1)
 	db "LIZ@", TRAINERTYPE_NORMAL; used, route 32
@@ -3288,27 +3314,11 @@ CamperGroup:
 	db 22, ZUBAT
 	db -1 ; end
 
-	; CAMPER (20)
-	db "TODD@", TRAINERTYPE_NORMAL
-	db 36, GRAVELER
-	db 36, GRAVELER
-	db 36, MEOWSY
-	db 38, PSYDUCK
-	db -1 ; end
-
-	; CAMPER (21)
-	db "TODD@", TRAINERTYPE_MOVES
-	db 39, GRAVELER,   SELFDESTRUCT, ROCK_THROW, HARDEN, MAGNITUDE
-	db 39, GRAVELER,   SELFDESTRUCT, ROCK_THROW, HARDEN, MAGNITUDE
-	db 43, MADAME,   ROCK_THROW, HARDEN, AMNESIA, FLAMETHROWER
-	db 40, GOLDUCK,    DISABLE, PSYCHIC_M, SURF, PSYCH_UP
-	db -1 ; end
-
 	; CAMPER (22)
-	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 36, FEAROW
-	db 36, PRIMEAPE
-	db 36, TAUROS
+	db "QUENTIN@", TRAINERTYPE_NORMAL; used, ryukyu hotel
+	db 54, FEAROW
+	db 52, PRIMEAPE
+	db 53, TAUROS
 	db -1 ; end
 
 ExecutiveFGroup:
@@ -3835,8 +3845,9 @@ SoldierGroup:; use officer sprite
 	db -1 ; end
 	
 	; SOLDIER (4)
-	db "WARNELL@", TRAINERTYPE_NORMAL ;unused
-	db 20, GROWLITHE
+	db "WARNELL@", TRAINERTYPE_NORMAL ;used, ryukyu hotel
+	db 52, ARCANINE
+	db 54, CLOYSTER
 	db -1 ; end
 	
 InstructorGroup:; use gentleman sprite
