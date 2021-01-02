@@ -413,3 +413,6 @@ In-progress 5.05
 - New location, Ryukyu Hotel released!
 - Added trainers to hotel rooms
 - Tweaks to NPC scripts
+
+6.01
+- Fixed issue where debug scripts were left active in Ryukyu City

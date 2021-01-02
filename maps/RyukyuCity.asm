@@ -183,9 +183,9 @@ RyukyuCity_MapEvents:
 	bg_event 16, 17, BGEVENT_READ, RyukyuCityHotelSign
 	bg_event 32, 26, BGEVENT_READ, RyukyuCityMartSign
 	bg_event 26, 12, BGEVENT_READ, RyukyuCitySign
-	bg_event 19, 27, BGEVENT_READ, FireStarterTest; COME_BACK2
-	bg_event 18, 27, BGEVENT_READ, WaterStarterTest
-	bg_event 20, 27, BGEVENT_READ, GrassStarterTest
+	bg_event 19, 26, BGEVENT_READ, FireStarterTest
+	bg_event 18, 26, BGEVENT_READ, WaterStarterTest
+	bg_event 19, 25, BGEVENT_READ, GrassStarterTest
 
 	db 9 ; object events
 	object_event 29, 14, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, RyukyuPokefanMScript, -1
