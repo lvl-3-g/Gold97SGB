@@ -338,8 +338,9 @@ ENDM
 	map_attributes SeasidePath, SEASIDE_PATH, $21, NORTH
 	connection north, AmamiTown, AMAMI_TOWN, 0
 
-	map_attributes UrasoePark, URASOE_PARK, $2F, NORTH
+	map_attributes UrasoePark, URASOE_PARK, $2F, NORTH | WEST
 	connection north, RyukyuCity, RYUKYU_CITY, 0
+	connection west, RouteU5U, ROUTE_U5U, -7
 
 	map_attributes FujiSummit, FUJI_SUMMIT, $2F, SOUTH
 	connection south, MountFujiOutside, MOUNT_FUJI_OUTSIDE, 0

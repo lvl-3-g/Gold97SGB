@@ -419,3 +419,6 @@ In-progress 5.05
 
 6.02
 - Fixed issue where Nurse in Sunpoint and Kikai Pokecenters would flash with Pokeballs while healing
+
+6.03
+- Fixed minor map border issue in Urasoe Park
