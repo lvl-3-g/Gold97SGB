@@ -416,3 +416,6 @@ In-progress 5.05
 
 6.01
 - Fixed issue where debug scripts were left active in Ryukyu City
+
+6.02
+- Fixed issue where Nurse in Sunpoint and Kikai Pokecenters would flash with Pokeballs while healing

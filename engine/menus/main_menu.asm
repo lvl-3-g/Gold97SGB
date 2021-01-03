@@ -219,7 +219,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	text_end
 	
 .VersionNumberPrint:
-	db "v6.01@"
+	db "v6.02@"
 
 PrintDayOfWeek:
 	push de
