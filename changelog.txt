@@ -422,3 +422,7 @@ In-progress 5.05
 
 6.03
 - Fixed minor map border issue in Urasoe Park
+
+6.04
+- Tweaked morning overworld color settings on GBC mode to match the SGB mode more closely
+
