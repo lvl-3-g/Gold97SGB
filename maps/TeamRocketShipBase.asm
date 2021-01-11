@@ -232,7 +232,7 @@ CaptainRocketScript:
 	special HealParty
 	pause 15
 	setevent EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
-	clearevent EVENT_FLORIA_AT_FLOWER_SHOP
+	clearevent EVENT_SUNPOINT_DOCKS_NPCS
 	setevent EVENT_PRYCE_IN_GYM
 	setevent EVENT_PRYCE_IN_HOME
 	setmapscene ROUTE_104, SCENE_ROUTE104_NOTHING

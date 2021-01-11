@@ -107,7 +107,7 @@ RyukyuGymPokefanMScript:
 	iftrue .GotHappaGiveFlambear
 	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
 	iftrue .GotCruiseGiveHappa
-	checkevent EVENT_EXPLODING_TRAP_19
+	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymWater
 	writetext PokefanMBeforeTextWater
 	waitbutton
@@ -116,10 +116,10 @@ RyukyuGymPokefanMScript:
 	loadtrainer POKEFANM, TREVOR
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_EXPLODING_TRAP_19
+	setevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	opentext
 .AfterBattleFakeGymWater
-	checkevent EVENT_EXPLODING_TRAP_20
+	checkevent EVENT_GOT_EGG_FROM_FAKE_GYM
 	iftrue .AlreadyGotEgg2Water
 	writetext HaveStarter2Egg
 	waitbutton
@@ -128,7 +128,7 @@ RyukyuGymPokefanMScript:
 	giveegg CRUISEAL, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
-	setevent EVENT_EXPLODING_TRAP_20
+	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
 .AlreadyGotEgg2Water
 	writetext TakeGoodCareOfStarter2
 	waitbutton
@@ -136,7 +136,7 @@ RyukyuGymPokefanMScript:
 	end
 	
 .GotHappaGiveFlambear
-	checkevent EVENT_EXPLODING_TRAP_19
+	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymFire
 	writetext PokefanMBeforeTextFire
 	waitbutton
@@ -145,10 +145,10 @@ RyukyuGymPokefanMScript:
 	loadtrainer HIKER, BAILEY
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_EXPLODING_TRAP_19
+	setevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	opentext
 .AfterBattleFakeGymFire
-	checkevent EVENT_EXPLODING_TRAP_20
+	checkevent EVENT_GOT_EGG_FROM_FAKE_GYM
 	iftrue .AlreadyGotEgg2Fire
 	writetext HaveStarter2Egg
 	waitbutton
@@ -157,7 +157,7 @@ RyukyuGymPokefanMScript:
 	giveegg FLAMBEAR, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
-	setevent EVENT_EXPLODING_TRAP_20
+	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
 .AlreadyGotEgg2Fire
 	writetext TakeGoodCareOfStarter2
 	waitbutton
@@ -165,7 +165,7 @@ RyukyuGymPokefanMScript:
 	end
 	
 .GotCruiseGiveHappa
-	checkevent EVENT_EXPLODING_TRAP_19
+	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymGrass
 	writetext PokefanMBeforeTextGrass
 	waitbutton
@@ -174,10 +174,10 @@ RyukyuGymPokefanMScript:
 	loadtrainer POKEFANM, CARTER
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_EXPLODING_TRAP_19
+	setevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	opentext
 .AfterBattleFakeGymGrass
-	checkevent EVENT_EXPLODING_TRAP_20
+	checkevent EVENT_GOT_EGG_FROM_FAKE_GYM
 	iftrue .AlreadyGotEgg2Grass
 	writetext HaveStarter2Egg
 	waitbutton
@@ -186,7 +186,7 @@ RyukyuGymPokefanMScript:
 	giveegg HAPPA, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
-	setevent EVENT_EXPLODING_TRAP_20
+	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
 .AlreadyGotEgg2Grass
 	writetext TakeGoodCareOfStarter2
 	waitbutton
@@ -315,7 +315,7 @@ RyukyuGymLassScript:
 RyukyuGymGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_19
+	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .GymGuyFakeGymAfter
 	checkevent EVENT_GOT_HAPPA_FROM_OAK
 	iftrue .GymGuyFire

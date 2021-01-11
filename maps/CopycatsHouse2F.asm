@@ -12,7 +12,7 @@ CopycatsHouse2F_MapScripts:
 
 Copycat:
 	faceplayer
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	checkevent EVENT_GOT_KANTO_BATTLE_CLUB_PASS
 	iftrue .GotPass
 	checkevent EVENT_RETURNED_LOST_ITEM_TO_COPYCAT
 	iftrue .TryGivePassAgain
@@ -70,7 +70,7 @@ Copycat:
 	promptbutton
 	verbosegiveitem PASS
 	iffalse .Cancel
-	setevent EVENT_GOT_PASS_FROM_COPYCAT
+	setevent EVENT_GOT_KANTO_BATTLE_CLUB_PASS
 	writetext CopycatText_ExplainPass
 	waitbutton
 	closetext

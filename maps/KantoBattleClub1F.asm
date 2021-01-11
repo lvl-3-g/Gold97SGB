@@ -7,7 +7,7 @@ KantoBattleClub1F_MapScripts:
 	db 0 ; callbacks
 	
 EntranceCheckClub:
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	checkevent EVENT_GOT_KANTO_BATTLE_CLUB_PASS
 	iffalse .GivePass
 	checkitem PASS
 	iffalse .NoPass
@@ -43,7 +43,7 @@ GivePassFullScript:
 	waitbutton
 	verbosegiveitem PASS
 	closetext
-	setevent EVENT_GOT_PASS_FROM_COPYCAT
+	setevent EVENT_GOT_KANTO_BATTLE_CLUB_PASS
 	checkcode VAR_FACING
 	ifequal LEFT, .FullSceneTime
 	end
@@ -53,7 +53,7 @@ GivePassFullScript:
 	end
 
 BouncerScript:
-	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	checkevent EVENT_GOT_KANTO_BATTLE_CLUB_PASS
 	iffalse .GivePass2
 	checkitem PASS
 	iffalse .NoPass2

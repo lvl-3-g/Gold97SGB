@@ -14,7 +14,7 @@ AmamiPublicPool_MapScripts:
 AmamiPublicPoolSwimmerSquirtle:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_13
+	checkevent EVENT_GOT_SQUIRTLE_FROM_POOL
 	iftrue .AlreadyGotSquirtle
 	writetext ILoveSquirtleText
 	yesorno
@@ -28,7 +28,7 @@ AmamiPublicPoolSwimmerSquirtle:
 	writetext GiveSquirtleText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_13
+	setevent EVENT_GOT_SQUIRTLE_FROM_POOL
 	end
 	
 .AlreadyGotSquirtle

@@ -15,7 +15,7 @@ IsenLabBack_MapScripts:
 ;	iftrue .NoMew
 ;	checkevent EVENT_SWITCH_11
 ;	iffalse .NoMew
-;	checkevent EVENT_EXPLODING_TRAP_17
+;	checkevent EVENT_MEW_IN_LAB_2_NOW_UNUSED
 ;	iftrue .NoMew
 ;	appear ISEN_LAB_BACK_MEW
 ;	return
@@ -51,7 +51,7 @@ MewtwoScript:
 ;	cry MEW
 ;	pause 15
 ;	closetext
-;	setevent EVENT_EXPLODING_TRAP_17
+;	setevent EVENT_MEW_IN_LAB_2_NOW_UNUSED
 ;	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
 ;	loadwildmon MEW, 5
 ;	startbattle
@@ -80,4 +80,4 @@ IsenLabBack_MapEvents:
 
 	db 1 ; object events
 	object_event  5,  2, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, MewtwoScript, EVENT_SWITCH_11
-;	object_event  4,  2, SPRITE_MONSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, MewScript, EVENT_EXPLODING_TRAP_18
+;	object_event  4,  2, SPRITE_MONSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, MewScript, EVENT_MEW_IN_LAB_NOW_UNUSED

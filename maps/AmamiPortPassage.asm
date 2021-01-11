@@ -174,11 +174,11 @@ AmamiPortPassageTeacherScript:
 TeleportGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_1
+	checkevent EVENT_TALKED_TO_AMAMI_WARP_GUY
 	iftrue .SkipTeleportTextAmami
 	writetext TeleportGuyText1
 	buttonsound
-	setevent EVENT_EXPLODING_TRAP_1
+	setevent EVENT_TALKED_TO_AMAMI_WARP_GUY
 .SkipTeleportTextAmami
 	writetext TeleportGuyText1_2
 	yesorno

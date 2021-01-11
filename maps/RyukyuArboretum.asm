@@ -13,7 +13,7 @@ RyukyuArboretum_MapScripts:
 RyukyuArboretumHouseCooltrainer:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_14
+	checkevent EVENT_GOT_BULBASAUR_FROM_ARBORETUM
 	iftrue .AlreadyGotBulbasaur
 	writetext ILoveBulbasaurText
 	yesorno
@@ -27,7 +27,7 @@ RyukyuArboretumHouseCooltrainer:
 	writetext GiveBulbasaurText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_14
+	setevent EVENT_GOT_BULBASAUR_FROM_ARBORETUM
 	end
 	
 .AlreadyGotBulbasaur

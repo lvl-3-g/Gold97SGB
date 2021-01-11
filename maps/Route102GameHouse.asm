@@ -13,18 +13,18 @@ Route102GameHouse_MapScripts:
 N64HouseScientistScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	checkevent EVENT_GO_LOOK_FOR_PEOPLE_FOR_GAME_HOUSE
 	iftrue .AlreadyAskedToSearchN64
 	writetext N64HouseScientistText
 	buttonsound
 	writetext N64HouseScientistText2
 	waitbutton
 	closetext
-	setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+	setevent EVENT_GO_LOOK_FOR_PEOPLE_FOR_GAME_HOUSE
 	end
 
 .AlreadyAskedToSearchN64
-	checkevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
+	checkevent EVENT_YOUNGSTER_FROM_BIRDON_IN_GAME_HOUSE
 	iffalse .N64OnePersonSoFar
 	writetext N64HouseScientistText2
 	waitbutton
@@ -48,7 +48,7 @@ N64HouseScientistScript:
 	end
 	
 .N643PeopleTimeForStarter3
-	checkevent EVENT_HYDRAULIC_CAVE_ENTEI
+	checkevent EVENT_GAME_HOUSE_SCIENTIST_GIVES_STARTER
 	iftrue .AlreadyGotStarter3
 	writetext N64HouseScientistText5
 	waitbutton
@@ -64,7 +64,7 @@ N64HouseScientistScript:
 	writetext TakeGoodCareOfStarter3
 	waitbutton
 	closetext
-	setevent EVENT_HYDRAULIC_CAVE_ENTEI
+	setevent EVENT_GAME_HOUSE_SCIENTIST_GIVES_STARTER
 	end
 	
 .HaveHappaGiveCruise
@@ -76,7 +76,7 @@ N64HouseScientistScript:
 	writetext TakeGoodCareOfStarter3
 	waitbutton
 	closetext
-	setevent EVENT_HYDRAULIC_CAVE_ENTEI
+	setevent EVENT_GAME_HOUSE_SCIENTIST_GIVES_STARTER
 	end
 	
 .HaveCruiseGiveFlambear
@@ -88,7 +88,7 @@ N64HouseScientistScript:
 	writetext TakeGoodCareOfStarter3
 	waitbutton
 	closetext
-	setevent EVENT_HYDRAULIC_CAVE_ENTEI
+	setevent EVENT_GAME_HOUSE_SCIENTIST_GIVES_STARTER
 	end
 	
 .AlreadyGotStarter3
@@ -324,7 +324,7 @@ Route102GameHouse_MapEvents:
 
 	db 6 ; object events
 	object_event 6,  6, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, N64HouseScientistScript, -1
-	object_event 4,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, N64HouseYoungsterScript, EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
+	object_event 4,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, N64HouseYoungsterScript, EVENT_YOUNGSTER_FROM_BIRDON_IN_GAME_HOUSE
 	object_event 3,  3, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, N64HouseRockerScript, EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_2
 	object_event 0,  4, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, N64HouseLassScript, EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
 	object_event 1,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, N64HouseCooltrainerMScript, EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF

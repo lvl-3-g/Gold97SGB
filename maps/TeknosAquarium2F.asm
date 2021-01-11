@@ -29,7 +29,7 @@ TrainerGruntM1:
 	setevent EVENT_WHITNEY_1_AQUARIUM
 	setevent EVENT_ROCKETS_TAKE_OVER_AQUARIUM; this is the event for the rocket objects
 	clearflag ENGINE_ROCKETS_IN_SANSKRIT
-	checkevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2
+	checkevent EVENT_GIRL_IS_BACK_AT_HOUSE
 	iffalse .AlreadyRescuedGirl
 	special FadeBlackQuickly; shouldn't be here ever, mine is mandatory first now
 	special HealParty

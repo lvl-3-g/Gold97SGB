@@ -431,3 +431,8 @@ In-progress 5.05
 - Silver now walks faster when chasing after Impostor Oak
 - Fixed Imposter Oak sprite in Stand City so he appears gray instead of orange
 - Fixed issue with staircase tile in deepwater passage
+
+6.10
+- Tweaked dialogue for executive in rocket base
+- Brought over Kotora/Raitora cries from Reforged
+- Lots and lots of behind-the-scenes renames of event flags

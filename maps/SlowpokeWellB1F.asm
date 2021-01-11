@@ -66,8 +66,8 @@ SlowpokeWellB1F_MapScripts:
 	playsound SFX_EXIT_BUILDING
 	disappear SLOWPOKE_WELL_B1F_SILVER
 	setscene SCENE_SLOWPOKE1_NOTHING
-	setevent EVENT_GOT_SQUIRTBOTTLE
-	setevent EVENT_EXPLODING_TRAP_21
+	setevent EVENT_RIVAL_IN_SLOWPOKE_WELL
+	setevent EVENT_KINGS_ROCK_GUY_APPEARS
 	special HealParty
 	special FadeOutMusic
 	waitsfx
@@ -170,5 +170,5 @@ SlowpokeWellB1F_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 10, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSilverScript, EVENT_GOT_SQUIRTBOTTLE
+	object_event 10, 10, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SlowpokeWellB1FSilverScript, EVENT_RIVAL_IN_SLOWPOKE_WELL
 

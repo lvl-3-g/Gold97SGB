@@ -8,7 +8,7 @@ CharredSummit_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Moltres
 
 .Moltres:
-	checkevent EVENT_EXPLODING_TRAP_4
+	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppearM
 	checkitem TRI_WING; change this to whatever becomes the tri-wing
 	iftrue .AppearM
@@ -29,7 +29,7 @@ MoltresScript:
 	cry MOLTRES
 	pause 15
 	closetext
-	setevent EVENT_EXPLODING_TRAP_4
+	setevent EVENT_FOUGHT_MOLTRES
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
 	loadwildmon MOLTRES, 40
 	startbattle
@@ -54,4 +54,4 @@ CharredSummit_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event 11,  1, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_EXPLODING_TRAP_7
+	object_event 11,  1, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoltresScript, EVENT_MOLTRES_IN_CHARRED_SUMMIT

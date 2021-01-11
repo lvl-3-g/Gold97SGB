@@ -14,7 +14,7 @@ StandCityRocketHouse_MapScripts:
 
 
 .CheckStairsUncovered:
-	checkevent EVENT_BOARDWALK_GATE_ROCKETS
+	checkevent EVENT_HIDDEN_STAIRCASE_IN_STAND_BASE
 	iffalse .NoStairsYet
 	changeblock 19, 7, $2a 
 	return
@@ -126,7 +126,7 @@ SilverFindsStairsMain:
 	applymovement STANDCITYROCKETHOUSE_OKERA, OkeraGoesToZoo
 	disappear STANDCITYROCKETHOUSE_OKERA
 	setscene SCENE_STAND_CITY_ROCKET_HOUSE_NOTHING
-	setevent EVENT_BOARDWALK_GATE_ROCKETS
+	setevent EVENT_HIDDEN_STAIRCASE_IN_STAND_BASE
 	setevent EVENT_OKERA_NOT_IN_GYM
 	end
 	

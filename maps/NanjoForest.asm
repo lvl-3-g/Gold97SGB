@@ -23,14 +23,14 @@ NanjoForest_MapScripts:
 	return
 	
 .WednesdaySZ
-	checkevent EVENT_EXPLODING_TRAP_16
+	checkevent EVENT_DEFEATED_SILVER_IN_NANJO_FOREST
 	iftrue .disapearSZSilver
 	appear NANJO_FOREST_SILVER
 	return
 
 WisdomOrbYoungsterScript:
 	faceplayer
-	checkevent EVENT_EXPLODING_TRAP_12
+	checkevent EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY
 	iftrue .AlreadyGaveWisdomOrb
 	checkevent EVENT_RETURNED_FUEL_LINE
 	iftrue .TryGivingWisdomOrb
@@ -45,7 +45,7 @@ WisdomOrbYoungsterScript:
 .TryGivingWisdomOrb
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .NoWisdomOrbYet
-	checkevent EVENT_EXPLODING_TRAP_11
+	checkevent EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE
 	iffalse .SetUpWisdomOrb
 	opentext
 	writetext HeresWisdomOrbText
@@ -55,7 +55,7 @@ WisdomOrbYoungsterScript:
 	writetext WhatDoesWisdomOrbDoText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_12
+	setevent EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
@@ -68,7 +68,7 @@ WisdomOrbYoungsterScript:
 	writetext NoWisdomOrbYetText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_11
+	setevent EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
@@ -138,7 +138,7 @@ NanjoForestSilverScript:
 	writetext NanjoForestSilverAfter
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_16
+	setevent EVENT_DEFEATED_SILVER_IN_NANJO_FOREST
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	playmapmusic
 	end
@@ -294,7 +294,7 @@ NanjoForest_MapEvents:
 	db 9 ; object events
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbYoungsterScript, -1
 	object_event 23,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbBugCatcherScript, -1
-	object_event  6,  8, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_EXPLODING_TRAP_15
+	object_event  6,  8, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_SILVER_APPEARS_IN_NANJO_FOREST
 	object_event 26, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
 	object_event 12,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
 	object_event  8, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM

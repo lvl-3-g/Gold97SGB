@@ -13,7 +13,7 @@ SuicuneEvent:
 	cry SUICUNE
 	pause 15
 	closetext
-	setevent EVENT_RIVAL_TEAM_ROCKET_BASE
+	setevent EVENT_SUICUNE_IN_WHIRL_ISLAND
 ;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon SUICUNE, 40
 	startbattle
@@ -38,4 +38,4 @@ WhirlIslandSuicuneChamber_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  4,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_RIVAL_TEAM_ROCKET_BASE
+	object_event  4,  2, SPRITE_GROWLITHE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SuicuneEvent, EVENT_SUICUNE_IN_WHIRL_ISLAND

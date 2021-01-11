@@ -108,7 +108,7 @@ ImposterSceneScript:
 	pause 10
 	applymovement STANDCITY_IMPOSTOR, ImposterWalksUp
 	disappear STANDCITY_IMPOSTOR
-	setevent EVENT_JADE_FOREST_APPRENTICE
+	setevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	setscene SCENE_DEFAULT
 	playmusic MUSIC_KANTO_REGION
 	end
@@ -119,7 +119,7 @@ StandCityRocker:
 	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .RockerRocketsGone
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .RockerAfterImposter
 	writetext StandCityRockerText
 	waitbutton
@@ -143,7 +143,7 @@ StandCityPokefanM:
 	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .PokefanRocketsGone
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .PokefanAfterImposter
 	writetext StandCityPokefanMText
 	waitbutton
@@ -168,7 +168,7 @@ StandCityTwin:
 	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .TwinRocketsGone
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .TwinAfterImposter
 	writetext StandCityTwinText
 	waitbutton
@@ -192,7 +192,7 @@ StandCityTeacher:
 	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .TeacherRocketsGone
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .TeacherAfterImposter
 	writetext StandCityTeacherText
 	waitbutton
@@ -214,9 +214,9 @@ StandCityTeacher:
 StandCityBlockRocket1:
 	faceplayer
 	opentext
-	checkevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_ROCKETS_IN_ROCKET_BASE
 	iftrue .BlockRocket1AfterBase
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .BlockRocket1AfterImposter
 	writetext BlockRocket1BeforeText
 	waitbutton
@@ -238,9 +238,9 @@ StandCityBlockRocket1:
 StandCityBlockRocket2:
 	faceplayer
 	opentext
-	checkevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_ROCKETS_IN_ROCKET_BASE
 	iftrue .BlockRocket2AfterBase
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .BlockRocket2AfterImposter
 	writetext BlockRocket2BeforeText
 	waitbutton
@@ -263,9 +263,9 @@ StandCityBlockRocket2:
 StandCityBlockRocket3:
 	faceplayer
 	opentext
-	checkevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_ROCKETS_IN_ROCKET_BASE
 	iftrue .BlockRocket3AfterBase
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .BlockRocket3AfterImposter
 	writetext BlockRocket3BeforeText
 	waitbutton
@@ -288,9 +288,9 @@ StandCityBlockRocket3:
 StandCityBlockRocket4:
 	faceplayer
 	opentext
-	checkevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_ROCKETS_IN_ROCKET_BASE
 	iftrue .BlockRocket4AfterBase
-	checkevent EVENT_JADE_FOREST_APPRENTICE
+	checkevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	iftrue .BlockRocket4AfterImposter
 	writetext BlockRocket4BeforeText
 	waitbutton
@@ -343,8 +343,8 @@ NoLitteringSign:
 
 StandCityPokecenterSign:
 ;	setevent EVENT_STAND_CITY_ZOO_MONS
-;	clearevent EVENT_JADE_FOREST_APPRENTICE
-;	clearevent EVENT_JADE_FOREST_LASS
+;	clearevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
+;	clearevent EVENT_SILVER_AND_IMPOSTOR_DISAPPEAR
 	jumpstd PokecenterSignScript
 
 StandCityMartSign:
@@ -359,7 +359,7 @@ StandCityHQBlockRocket:
 StandCityNationalBlockRocket:
 	faceplayer
 	opentext
-	checkevent EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	checkevent EVENT_ROCKETS_IN_ROCKET_BASE
 	iftrue .NatioanlBlockRocketAfterBase
 	writetext StandCityNationalBlockRocketText
 	waitbutton

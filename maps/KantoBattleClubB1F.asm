@@ -651,7 +651,7 @@ BattleClubYoungsterScript:
 .WowYouBeatAllen
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_22
+	checkevent EVENT_GOT_TOGEPI_FROM_TRAINER_CLUB
 	iftrue .AlreadyGotTogepi
 	writetext IHaveAWeirdEggText
 	yesorno
@@ -665,7 +665,7 @@ BattleClubYoungsterScript:
 	writetext GiveTogepiText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_22
+	setevent EVENT_GOT_TOGEPI_FROM_TRAINER_CLUB
 	end
 	
 .AlreadyGotTogepi

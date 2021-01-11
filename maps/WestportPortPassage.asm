@@ -171,11 +171,11 @@ DollSalesmanTextMonday_AskWhichPrizeText:
 TeleportGuyScript2:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_2
+	checkevent EVENT_TALKED_TO_WESTPORT_WARP_GUY
 	iftrue .SkipTeleportTextWest
 	writetext TeleportGuyText12
 	buttonsound
-	setevent EVENT_EXPLODING_TRAP_2
+	setevent EVENT_TALKED_TO_WESTPORT_WARP_GUY
 .SkipTeleportTextWest
 	writetext TeleportGuyText12_2	
 	yesorno

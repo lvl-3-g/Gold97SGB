@@ -16,7 +16,7 @@ IcedCavernB1F_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Articuno
 
 .Articuno:
-	checkevent EVENT_EXPLODING_TRAP_9
+	checkevent EVENT_FOUGHT_ARTICUNO
 	iftrue .NoAppearA
 	checkitem TRI_WING; change this to whatever becomes the tri-wing
 	iftrue .AppearA
@@ -37,7 +37,7 @@ ArticunoScript:
 	cry ARTICUNO
 	pause 15
 	closetext
-	setevent EVENT_EXPLODING_TRAP_9
+	setevent EVENT_FOUGHT_ARTICUNO
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
 	loadwildmon ARTICUNO, 40
 	startbattle
@@ -98,4 +98,4 @@ IcedCavernB1F_MapEvents:
 	object_event 37, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcedCavernB1FFullRestore, EVENT_ICED_CAVERN_B1F_FULL_RESTORE
 	object_event 37,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcedCavernB1FMaxEther, EVENT_ICED_CAVERN_B1F_MAX_ETHER
 	object_event 16, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcedCavernB1FPPUp, EVENT_ICED_CAVERN_B1F_PP_UP
-	object_event 27, 24, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArticunoScript, EVENT_EXPLODING_TRAP_10
+	object_event 27, 24, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArticunoScript, EVENT_ARTICUNO_IN_ICED_CAVERN

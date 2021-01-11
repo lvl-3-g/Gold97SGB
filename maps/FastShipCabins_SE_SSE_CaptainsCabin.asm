@@ -21,7 +21,7 @@ SSAquaCaptain:
 	opentext
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .LaterTrip
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
+	checkevent EVENT_CAPTAIN_TOLD_YOU_ABOUT_BROKEN_SHIP
 	iffalse .FirstCaptainTalk
 	writetext SSAquaCaptainExhaustingText
 	waitbutton
@@ -41,7 +41,7 @@ SSAquaCaptain:
 ;	waitbutton
 ;	setevent EVENT_FAST_SHIP_HAS_ARRIVED
 	setevent EVENT_FAST_SHIP_FOUND_GIRL
-	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
+	setevent EVENT_CAPTAIN_TOLD_YOU_ABOUT_BROKEN_SHIP
 ;	closetext
 	end
 	

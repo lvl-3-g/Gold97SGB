@@ -121,7 +121,7 @@ Route112StandGateOfficerScript:
 ;	clearevent EVENT_STAND_CITY_ZOO_MONS
 ;	setevent EVENT_CLEARED_RADIO_TOWER
 ;	setevent EVENT_BEAT_CHUCK
-;	setevent EVENT_JADE_FOREST_APPRENTICE
+;	setevent EVENT_IMPOSTER_OAK_HAS_SPOKEN
 	jumptextfaceplayer Route112StandGateOfficerText
 
 Route112StandGateGrampsScript:

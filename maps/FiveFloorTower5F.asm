@@ -10,7 +10,7 @@ FiveFloorTower5F_MapScripts:
 	callback MAPCALLBACK_TILES, .AddStairs
 
 .AddStairs:
-	checkevent EVENT_EARLS_ACADEMY_EARL
+	checkevent EVENT_HO_OH_EVENT_STARTED
 	iffalse .DoneStairs
 	changeblock   0,  5, $3A ; ladder
 .DoneStairs:
@@ -19,7 +19,7 @@ FiveFloorTower5F_MapScripts:
 FiveFloorTower5FSageScript:
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .AfterHoOh
-	checkevent EVENT_EARLS_ACADEMY_EARL
+	checkevent EVENT_HO_OH_EVENT_STARTED
 	iftrue .DuringHoOh
 	setevent EVENT_GOT_5F_SAGE_BLESSING
 	faceplayer
@@ -224,5 +224,5 @@ FiveFloorTower5F_MapEvents:
 
 	db 3 ; object events
 	object_event  2,  3, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FiveFloorTower5FSageScript, -1
-	object_event  1,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FiveFloorTower5FSageScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
-	object_event  3,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FiveFloorTower5FSageScript, EVENT_SLOWPOKE_WELL_SLOWPOKES
+	object_event  1,  3, SPRITE_KURT, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FiveFloorTower5FSageScript, EVENT_KURT_AND_CAPTAIN_AT_FIVE_FLOOR_TOWER
+	object_event  3,  3, SPRITE_CAPTAIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, FiveFloorTower5FSageScript, EVENT_KURT_AND_CAPTAIN_AT_FIVE_FLOOR_TOWER

@@ -174,11 +174,11 @@ PokemonCries::
 	mon_cry CRY_SPINARAK,    $011,  $200 ; SPINARAK
 	mon_cry CRY_SPINARAK,   -$0ae,  $1e2 ; ARIADOS
 	mon_cry CRY_SQUIRTLE,   -$010,  $140 ; CROBAT
-	mon_cry CRY_VOLTORB,     $091,  $048 ; KOTORA
-	mon_cry CRY_VOLTORB,     $098,  $068 ; RAITORA
+	mon_cry CRY_PICHU,       $f60,  $200 ; KOTORA
+	mon_cry CRY_RAIKOU,      $db3,  $168 ; RAITORA
 	mon_cry CRY_PICHU,       $000,  $140 ; PICHU
 	mon_cry CRY_CLEFFA,      $061,  $091 ; CLEFFA
-	mon_cry CRY_HAPPA,   $0e8,  $0e8 ; IGGLYBUFF
+	mon_cry CRY_HAPPA,  	 $0e8,  $0e8 ; IGGLYBUFF
 	mon_cry CRY_TOGEPI,      $010,  $100 ; TOGEPI
 	mon_cry CRY_WEEPINBELL,  $03b,  $068 ; PONITTLE
 	mon_cry CRY_NATU,       -$067,  $100 ; NATU

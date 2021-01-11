@@ -21,7 +21,7 @@ NagoCharmanderHouseCharmander:
 NagoCharmanderHouseTeacher:
 	faceplayer
 	opentext
-	checkevent EVENT_EXPLODING_TRAP_6
+	checkevent EVENT_GOT_CHARMANDER_FROM_CRAZY_LADY
 	iftrue .AlreadyGotCharmander
 	writetext ILoveCharmanderText
 	yesorno
@@ -35,7 +35,7 @@ NagoCharmanderHouseTeacher:
 	writetext GiveCharmanderText
 	waitbutton
 	closetext
-	setevent EVENT_EXPLODING_TRAP_6
+	setevent EVENT_GOT_CHARMANDER_FROM_CRAZY_LADY
 	end
 	
 .AlreadyGotCharmander

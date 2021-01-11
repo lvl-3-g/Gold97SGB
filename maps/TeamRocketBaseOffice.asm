@@ -75,7 +75,7 @@ ExecutiveConfrontationScript:
 	applymovement TEAMROCKETBASEOFFICE_EXECUTIVE, ExecutiveLeavesOffice
 	disappear TEAMROCKETBASEOFFICE_EXECUTIVE
 	disappear TEAMROCKETBASEOFFICE_IMPOSTOR
-	setevent EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_1
+	setevent EVENT_IMPOSTOR_AND_EXECUTIVE_DISAPPEAR
 	setscene SCENE_TEAMROCKETBASEOFFICE_NOTHING
 	end
 	
@@ -236,8 +236,6 @@ TheExecutiveGreeting:
 	cont "of TEAM ROCKET."
 	para "Second only to our"
 	line "leader, GIOVANNI."
-	para "I have a lot on"
-	line "the line here."
 	para "Am I right to"
 	line "assume you've"
 	para "figured out what"
@@ -245,23 +243,23 @@ TheExecutiveGreeting:
 	para "All of the money"
 	line "and supplies we've"
 	para "gathered have been"
-	line "used for this"
+	line "used for this one"
 	cont "ultimate goal!"
 	para "We've built a"
 	line "device that can"
 	para "emit a powerful"
-	line "wave that can be"
-	para "used to mind"
-	line "control #MON!"
-	para "In other words,"
-	line "TEAM ROCKET is"
-	para "about to take"
-	line "control of all the"
-	cont "world's #MON!"
+	line "wave which can be"
+	para "used to control"
+	line "the minds of"
+	cont "#MON!"
+	para "Soon, all #MON"
+	line "will be under the"
+	para "command of TEAM"
+	line "ROCKET!"
 	para "We'll make better"
 	line "use of them than"
 	cont "anyone ever has!"
-	para "I REFUSE to let"
+	para "I refuse to let"
 	line "you get in the way"
 	para "of TEAM ROCKET any"
 	line "longer!"
@@ -311,10 +309,10 @@ TeamRocketBaseOffice_MapEvents:
 	object_event  9, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseOfficeHyperPotion, EVENT_TEAM_ROCKET_BASE_OFFICE_HYPER_POTION
 	object_event 16,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseOfficeNugget, EVENT_TEAM_ROCKET_BASE_OFFICE_NUGGET
 	object_event 24,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TeamRocketBaseOfficeGuardSpec, EVENT_TEAM_ROCKET_BASE_OFFICE_GUARD_SPEC
-	object_event 21,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt1, EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 28,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt2, EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 22, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt3, EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 19,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt4, EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event 25,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt5, EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM
-	object_event  7, 11, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_1
-	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_1
+	object_event 21,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt1, EVENT_ROCKETS_IN_ROCKET_BASE
+	object_event 28,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt2, EVENT_ROCKETS_IN_ROCKET_BASE
+	object_event 22, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt3, EVENT_ROCKETS_IN_ROCKET_BASE
+	object_event 19,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt4, EVENT_ROCKETS_IN_ROCKET_BASE
+	object_event 25,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 1, RocketBossRoomGrunt5, EVENT_ROCKETS_IN_ROCKET_BASE
+	object_event  7, 11, SPRITE_SURGE, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_IMPOSTOR_AND_EXECUTIVE_DISAPPEAR
+	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_IMPOSTOR_AND_EXECUTIVE_DISAPPEAR

@@ -31,8 +31,8 @@ TeknosPokecenter1F_MapScripts:
 	playsound SFX_EXIT_BUILDING
 	disappear TEKNOSPOKECENTER1F_BILL
 	setflag ENGINE_TIME_CAPSULE
-	clearevent EVENT_TEKNOS_CITY_GRAMPS
-	clearevent EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1
+	clearevent EVENT_GRAMPS_AT_MINE
+	clearevent EVENT_GIRL_IS_IN_MINE
 	clearevent EVENT_BOULDER_MINE_WHITNEY
 	setscene SCENE_FINISHED
 	waitsfx

@@ -103,7 +103,7 @@
 	const EVENT_GOT_TM36_SLUDGE_BOMB
 	const EVENT_GOT_ITEMFINDER
 	const EVENT_GOT_BICYCLE
-	const EVENT_GOT_SQUIRTBOTTLE ;used for slowpoke b1f rival object
+	const EVENT_RIVAL_IN_SLOWPOKE_WELL ;used for slowpoke b1f rival object
 	const EVENT_GOT_MIRACLE_SEED_IN_ROUTE_112
 	const EVENT_GOT_CHARCOAL_IN_BIRDON_MILK_BAR
 	const EVENT_GOT_TM02_HEADBUTT
@@ -223,7 +223,7 @@
 	const EVENT_GOT_COINS_FROM_GAMBLER_AT_KANTO
 	const EVENT_MET_COPYCAT_FOUND_OUT_ABOUT_LOST_ITEM
 	const EVENT_RETURNED_LOST_ITEM_TO_COPYCAT
-	const EVENT_GOT_PASS_FROM_COPYCAT; battle pass for swislands trainer club
+	const EVENT_GOT_KANTO_BATTLE_CLUB_PASS; battle pass for kanto trainer club
 	const EVENT_GOT_LOST_ITEM_FROM_FAN_CLUB
 	const EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT_BUT_BAG_WAS_FULL
 	const EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
@@ -266,7 +266,7 @@
 	const EVENT_MERIDIAN_PATH_HIDDEN_POTION
 	const EVENT_FOUND_LEFTOVERS_IN_KANTO_CAFE
 	const EVENT_FOUND_BERSERK_GENE_IN_NAGO_VILLAGE
-	const EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM; used, for getting dragon orb
+	const EVENT_GOT_DRAGON_ORB_FROM_MAW; used, for getting dragon orb
 	const EVENT_AMAMI_TOWN_HIDDEN_FULL_HEAL
 	const EVENT_KANTO_REGION_HIDDEN_PP_UP
 	const EVENT_FROSTPOINT_TOWN_HIDDEN_RARE_CANDY
@@ -415,7 +415,7 @@
 	const EVENT_SWITCH_1; sunday
 	const EVENT_SWITCH_2; monday
 	const EVENT_SWITCH_3; tueaday
-	const EVENT_EMERGENCY_SWITCH; used, makes rival disappear in princely path / underground
+	const EVENT_EMERGENCY_SWITCH; used, makes rival disappear in crown path
 	const EVENT_SWITCH_4; wednesday
 	const EVENT_SWITCH_5; thursday
 	const EVENT_SWITCH_6; friday
@@ -424,7 +424,7 @@
 	const EVENT_SWITCH_9; used after talking to heal lass on mt fuji for the first time
 	const EVENT_SWITCH_10; scope lens from granny in prince city
 	const EVENT_SWITCH_11; used for mewtwo
-	const EVENT_SWITCH_12; used for getting starter 2 in kume city/kume city
+	const EVENT_SWITCH_12; used for getting starter 2 in kume city
 	const EVENT_SWITCH_13 ; 2e0
 	const EVENT_SWITCH_14; event set after getting dratini
 	const EVENT_UNCOVERED_STAIRCASE_IN_OLD_MAHOGANY_MART
@@ -434,28 +434,28 @@
 	const EVENT_SECURITY_CAMERA_3
 	const EVENT_SECURITY_CAMERA_4
 	const EVENT_SECURITY_CAMERA_5
-	const EVENT_EXPLODING_TRAP_1; used for old man abra warp at amami town
-	const EVENT_EXPLODING_TRAP_2;  used for old man abra warp at west city
-	const EVENT_EXPLODING_TRAP_3; used for zapdos encounter
-	const EVENT_EXPLODING_TRAP_4; used for moltres encounter
+	const EVENT_TALKED_TO_AMAMI_WARP_GUY; used for old man abra warp at amami town
+	const EVENT_TALKED_TO_WESTPORT_WARP_GUY;  used for old man abra warp at west city
+	const EVENT_FOUGHT_ZAPDOS; used for zapdos encounter
+	const EVENT_FOUGHT_MOLTRES; used for moltres encounter
 	const EVENT_GOT_SKATEBOARD; used for getting skateboard
-	const EVENT_EXPLODING_TRAP_6; used for getting charmander in nago village
-	const EVENT_EXPLODING_TRAP_7; used for moltres appear/disappear
-	const EVENT_EXPLODING_TRAP_8 ; used for zapdos appear/disappear
-	const EVENT_EXPLODING_TRAP_9; articuno event
-	const EVENT_EXPLODING_TRAP_10; used for making articuno appear/disappear
-	const EVENT_EXPLODING_TRAP_11; used for tri wing youngster in forest
-	const EVENT_EXPLODING_TRAP_12; used for him as well, but for after giving wing
-	const EVENT_EXPLODING_TRAP_13; used for getting squirtle in amami town
-	const EVENT_EXPLODING_TRAP_14; used for getting bulbasaur in ryukyu city
-	const EVENT_EXPLODING_TRAP_15; used for silver in safari zone beta
-	const EVENT_EXPLODING_TRAP_16; used also for silver in safari zone beta
-	const EVENT_EXPLODING_TRAP_17; used for mew
-	const EVENT_EXPLODING_TRAP_18; also for mew
-	const EVENT_EXPLODING_TRAP_19; used for type gym leader
-	const EVENT_EXPLODING_TRAP_20; used for fake gym egg
-	const EVENT_EXPLODING_TRAP_21; used for slowpoke well kings rock guy
-	const EVENT_EXPLODING_TRAP_22; used for getting togepi from youngster in battle club
+	const EVENT_GOT_CHARMANDER_FROM_CRAZY_LADY; used for getting charmander in nago village
+	const EVENT_MOLTRES_IN_CHARRED_SUMMIT; used for moltres appear/disappear
+	const EVENT_ZAPDOS_IN_JOULE_CAVE ; used for zapdos appear/disappear
+	const EVENT_FOUGHT_ARTICUNO; articuno event
+	const EVENT_ARTICUNO_IN_ICED_CAVERN; used for making articuno appear/disappear
+	const EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE; used for wisdom orb youngster in forest
+	const EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY; used for him as well, but for after giving orb
+	const EVENT_GOT_SQUIRTLE_FROM_POOL; used for getting squirtle in amami town
+	const EVENT_GOT_BULBASAUR_FROM_ARBORETUM; used for getting bulbasaur in ryukyu city
+	const EVENT_SILVER_APPEARS_IN_NANJO_FOREST; used for silver in nanjo forest
+	const EVENT_DEFEATED_SILVER_IN_NANJO_FOREST; used also for silver in nanjo forest
+	const EVENT_MEW_IN_LAB_2_NOW_UNUSED; used for mew
+	const EVENT_MEW_IN_LAB_NOW_UNUSED; also for mew
+	const EVENT_DEFEATED_FAKE_GYM_LEADER; used for type gym leader
+	const EVENT_GOT_EGG_FROM_FAKE_GYM; used for fake gym egg
+	const EVENT_KINGS_ROCK_GUY_APPEARS; used for slowpoke well kings rock guy
+	const EVENT_GOT_TOGEPI_FROM_TRAINER_CLUB; used for getting togepi from youngster in battle club
 	const EVENT_LEARNED_HAIL_GIOVANNI
 	const EVENT_OPENED_DOOR_TO_ROCKET_HIDEOUT_TRANSMITTER ; 300
 	const EVENT_LEARNED_SLOWPOKETAIL
@@ -490,9 +490,9 @@
 	const EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
 	const EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	const EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA ; 320
-	const EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA; used to make youngster disappear from over world and go to...
-	const EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA; ...the n64 house, this makes him appear
-	const EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA; used to trigger the search for n64 trainers
+	const EVENT_YOUNGSTER_IN_BIRDON_MILK_BAR; used to make youngster disappear from over world and go to...
+	const EVENT_YOUNGSTER_FROM_BIRDON_IN_GAME_HOUSE; ...the n64 house, this makes him appear
+	const EVENT_GO_LOOK_FOR_PEOPLE_FOR_GAME_HOUSE; used to trigger the search for n64 trainers
 	const EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
 	const EVENT_LISTENED_TO_INITIAL_RADIO
 ; More Crystal-exclusive events in Nihon
@@ -1430,7 +1430,7 @@
 	const EVENT_VICTORY_ROAD_HP_UP
 	const EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	const EVENT_TOHJO_FALLS_MOON_STONE
-	const EVENT_ROUTE_U6U_MAX_ELIXER; zap cannon in darkcavepagotaentrance
+	const EVENT_AMPARE_CAVERN_ZAP_CANNON; zap cannon in darkcavepagotaentrance
 	const EVENT_ROUTE_115_TM_SOLARBEAM
 	const EVENT_ROUTE_115_RARE_CANDY
 	const EVENT_ROUTE_101_POTION
@@ -1449,7 +1449,7 @@
 	const EVENT_ENDON_CAVE_1F_DYNAMICPUNCH
 	const EVENT_TATSUGO_PATH_ELIXER
 	const EVENT_VICTORY_ROAD_2F_TOXIC
-	const EVENT_GREAT_EAST_STRAIT_X_SPEED; route 7 tm roar
+	const EVENT_ROUTE_119_ROAR_TM; route 7 tm roar
 ; Nihon people
 	const EVENT_RIVAL_SILENT_TOWN
 	const EVENT_RIVAL_OAK_LAB_FRONT_ROOM
@@ -1462,7 +1462,7 @@
 	const EVENT_KURTS_HOUSE_FALKNER
 	const EVENT_RIVAL_CROWN_CITY
 	const EVENT_ENTEI_APPEARS; entei event
-	const EVENT_RIVAL_TEAM_ROCKET_BASE; suicune event
+	const EVENT_SUICUNE_IN_WHIRL_ISLAND; suicune event
 	const EVENT_RIVAL_WESTPORT_UNDERGROUND
 	const EVENT_RIVAL_VICTORY_ROAD
 	const EVENT_RIVAL_ALLOY_CITY
@@ -1472,9 +1472,9 @@
 	const EVENT_PLAYERS_HOUSE_MOM_1
 	const EVENT_PLAYERS_HOUSE_MOM_2
 	const EVENT_MR_POKEMONS_HOUSE_OAK
-	const EVENT_PAGOTA_CITY_EARL; used for noting that the ho-oh story man isn't home, disappears sages in tower as well
-	const EVENT_EARLS_ACADEMY_EARL; used for noting that you have triggered the ho-oh event
-	const EVENT_WESTPORT_CITY_ROCKET_SCOUT; used for setting the rocket base console to off
+	const EVENT_ALLOY_CAPTAIN_AT_HOME; used for noting that the ho-oh story man isn't home, disappears sages in tower as well
+	const EVENT_HO_OH_EVENT_STARTED; used for noting that you have triggered the ho-oh event
+	const EVENT_ROCKET_COMPUTER_IS_OFF; used for setting the rocket base console to off
 	const EVENT_WESTPORT_CITY_ROCKET_TAKEOVER
 	const EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	const EVENT_WESTPORT_CITY_CIVILIANS
@@ -1490,15 +1490,15 @@
 	const EVENT_TEAM_ROCKET_BASE_SECURITY_GRUNTS
 	const EVENT_TEAM_ROCKET_BASE_POPULATION
 	const EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
-	const EVENT_BOARDWALK_GATE_ROCKETS; used for making hidden stairs appear
+	const EVENT_HIDDEN_STAIRCASE_IN_STAND_BASE; used for making hidden stairs appear
 	const EVENT_TEAM_ROCKET_BASE_B1F_EXECUTIVE
 	const EVENT_TEAM_ROCKET_BASE_B1F_GRUNT_WITH_EXECUTIVE
 	const EVENT_TEAM_ROCKET_BASE_B1F_DRAGONITE
-	const EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_1; used to make imposter and executive disappear in boss room
+	const EVENT_IMPOSTOR_AND_EXECUTIVE_DISAPPEAR; used to make imposter and executive disappear in boss room
 	const EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_2
 	const EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_3
 	const EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM; used for workers on route 32/112
-	const EVENT_BLUE_FOREST_SUPER_NERD_DOES_NOT_BLOCK_GYM; this is the event for clearing the rocket hideout in stand city, but not the the radio tower
+	const EVENT_ROCKETS_IN_ROCKET_BASE; this is the event for clearing the rocket hideout in stand city, but not the the radio tower
 	const EVENT_DAY_CARE_MAN_IN_DAY_CARE
 	const EVENT_DAY_CARE_MAN_ON_ROUTE_113
 	const EVENT_DAY_CARE_MON_1
@@ -1507,21 +1507,21 @@
 	const EVENT_ROUTE_113_ROUTE_114_GATE_TEACHER_BEHIND_COUNTER
 	const EVENT_ROUTE_113_ROUTE_114_GATE_LASS
 	const EVENT_ROUTE_113_ROUTE_114_GATE_TEACHER_IN_WALKWAY
-	const EVENT_JADE_FOREST_LASS; used for making silver and imposter disappear after initial encounter by computer console
+	const EVENT_SILVER_AND_IMPOSTOR_DISAPPEAR; used for making silver and imposter disappear after initial encounter by computer console
 	const EVENT_COPYCAT_1
 	const EVENT_COPYCAT_2
 	const EVENT_WESTPORT_SALE_OFF
 	const EVENT_WESTPORT_SALE_ON
 	const EVENT_6F2
-	const EVENT_JADE_FOREST_APPRENTICE; used, this marks that imposter oak has given his speech
+	const EVENT_IMPOSTER_OAK_HAS_SPOKEN; used, this marks that imposter oak has given his speech
 	const EVENT_JADE_FOREST_CHARCOAL_MASTER
-	const EVENT_BIRDON_MILK_BAR_FARFETCH_D ;used for boulder in alloy gym
-	const EVENT_BIRDON_MILK_BAR_APPRENTICE ;used for boulder in alloy gym
-	const EVENT_BIRDON_MILK_BAR_BOSS ;used for boulder in alloy gym
+	const EVENT_ALLOY_GYM_BOULDER_1 ;used for boulder in alloy gym
+	const EVENT_ALLOY_GYM_BOULDER_2 ;used for boulder in alloy gym
+	const EVENT_ALLOY_GYM_BOULDER_3 ;used for boulder in alloy gym
 	const EVENT_ROUTE_102_SILVER
 	const EVENT_RAIKOU_APPEARS; raikou event
 	const EVENT_BIRDON_TOWN_SLOWPOKETAIL_ROCKET
-	const EVENT_SLOWPOKE_WELL_SLOWPOKES; used to make kurt and captain disappear before ho oh event
+	const EVENT_KURT_AND_CAPTAIN_AT_FIVE_FLOOR_TOWER; used to make kurt and captain disappear before ho oh event
 	const EVENT_SLOWPOKE_WELL_ROCKETS
 	const EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	const EVENT_GUIDE_GENT_VISIBLE_IN_CROWN
@@ -1575,7 +1575,7 @@
 	const EVENT_FAST_SHIP_B1F_SAILOR_RIGHT
 	const EVENT_RETURNED_FUEL_LINE; used for returning ship part to dock sailor, also marking that islands are fully open
 	const EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1; unused, needs to be reset if going to use
-	const EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2; used for setting up scene with captain and broken ship
+	const EVENT_CAPTAIN_TOLD_YOU_ABOUT_BROKEN_SHIP; used for setting up scene with captain and broken ship
 	const EVENT_WESTPORT_PORT_PASSAGE_POKEFAN_M
 	const EVENT_ROUTE_103_NATIONAL_PARK_GATE_YOUNGSTER
 	const EVENT_KIKAI_VILLAGE_CIVILIANS
@@ -1601,8 +1601,8 @@
 	const EVENT_WESTPORT_TRAIN_STATION_GENTLEMAN
 	const EVENT_BURNED_TOWER_B1F_BEASTS_1
 	const EVENT_BURNED_TOWER_B1F_BEASTS_2
-	const EVENT_BLUE_FOREST_GRAMPS_BLOCKS_DRAGONS_DEN; used, clair blocks cave of dragons
-	const EVENT_BLUE_FOREST_GRAMPS_NOT_BLOCKING_DRAGONS_DEN; used, for clair in her house
+	const EVENT_CLAIR_IN_FRONT_OF_DRAGONS_MAW; used, clair blocks cave of dragons
+	const EVENT_CLAIR_INSIDE_HOUSE; used, for clair in her house
 	const EVENT_RUINS_OF_ALPH_KABUTO_CHAMBER_RECEPTIONIST
 	const EVENT_OPENED_MT_SILVER
 	const EVENT_FOUGHT_SNORLAX ; 750
@@ -1629,7 +1629,7 @@
 	const EVENT_WHITNEY_BACK_IN_TEKNOS_GYM ;morty in the gym, actually whitney
 	const EVENT_RANG_HELIX_FOSSIL_1
 	const EVENT_RANG_HELIX_FOSSIL_2
-	const EVENT_FLORIA_AT_FLOWER_SHOP ;used for making npcs appear and disappear at the south point docks
+	const EVENT_SUNPOINT_DOCKS_NPCS ;used for making npcs appear and disappear at the south point docks
 	const EVENT_FLORIA_AT_BIPETAL
 	const EVENT_WESTPORT_CITY_MOVE_TUTOR
 	const EVENT_BOARDWALK_GAME_CORNER_MOVE_TUTOR
@@ -1696,18 +1696,18 @@
 	const EVENT_JADE_FOREST_KURT
 	const EVENT_JOULE_CAVE_1F_MAX_POTION
 	const EVENT_JOULE_CAVE_1F_NUGGET
-	const EVENT_BIRDON_GYM_GRAMPS; used for grandpa at home
-	const EVENT_TEKNOS_CITY_GRAMPS; used for grandpa at mine
+	const EVENT_GRAMPS_IS_AT_GRAMPS_HOUSE; used for grandpa at home
+	const EVENT_GRAMPS_AT_MINE; used for grandpa at mine
 	const EVENT_EUSINE_IN_BURNED_TOWER
-	const EVENT_WISE_TRIOS_ROOM_WISE_TRIO_1; used for granddaughter in mine
-	const EVENT_WISE_TRIOS_ROOM_WISE_TRIO_2; used for granddaughter at home
+	const EVENT_GIRL_IS_IN_MINE; used for granddaughter in mine
+	const EVENT_GIRL_IS_BACK_AT_HOUSE; used for granddaughter at home
 	const EVENT_SUNPOINT_CITY_EUSINE
 	const EVENT_SAW_SUICUNE_AT_SUNPOINT_CITY
 	const EVENT_SAW_SUICUNE_ON_ROUTE_U4U
 	const EVENT_SAW_SUICUNE_ON_ROUTE_102 ; 7b0
 	const EVENT_TEKNOS_TIN_TOWER_ENTRANCE_WANDERING_SAGE
 	const EVENT_HYDRAULIC_CAVE_SUICUNE
-	const EVENT_HYDRAULIC_CAVE_ENTEI; used for getting starter from scientist
+	const EVENT_GAME_HOUSE_SCIENTIST_GIVES_STARTER; used for getting starter from scientist
 	const EVENT_HYDRAULIC_CAVE_RAIKOU
 	const EVENT_HYDRAULIC_CAVE_EUSINE
 	const EVENT_HYDRAULIC_CAVE_WISE_TRIO_1

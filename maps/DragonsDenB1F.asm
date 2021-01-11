@@ -57,7 +57,7 @@ TrainerCooltrainermDarin:
 	end
 	
 .DarinOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	checkevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 	iffalse .DarinGetDragonOrb
 	opentext
 	writetext CooltrainermDarinAfterBattleText
@@ -100,7 +100,7 @@ TrainerInstructorRand:
 	end
 	
 .RandOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	checkevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 	iffalse .RandGetDragonOrb
 	opentext
 	writetext InstructorRandAfterBattleText
@@ -144,7 +144,7 @@ TrainerCooltrainerfCara:
 	end
 	
 .CaraOrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	checkevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 	iffalse .CaraGetDragonOrb
 	opentext
 	writetext CooltrainerfCaraAfterBattleText
@@ -187,7 +187,7 @@ TrainerTwinsLeaandpia1:
 	end
 	
 .Twin1OrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	checkevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 	iffalse .Twin1GetDragonOrb
 	opentext
 	writetext TwinsLeaandpia1AfterBattleText
@@ -230,7 +230,7 @@ TrainerTwinsLeaandpia2:
 	end
 	
 .Twin2OrbCheck
-	checkevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	checkevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 	iffalse .Twin2GetDragonOrb
 	opentext
 	writetext TwinsLeaandpia2AfterBattleText
@@ -270,7 +270,7 @@ DragonOrbGetScript:
 	writetext HeresTheOrb
 	waitbutton
 	verbosegiveitem MACHINE_PART
-	setevent EVENT_FOUND_MACHINE_PART_IN_JADE_FOREST_SNORLAX_ROOM
+	setevent EVENT_GOT_DRAGON_ORB_FROM_MAW
 ;	writetext HeresTheOrb2
 ;	waitbutton
 	closetext

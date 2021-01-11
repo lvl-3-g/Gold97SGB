@@ -8,7 +8,7 @@ JouleCaveZapdosRoom_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Zapdos
 
 .Zapdos:
-	checkevent EVENT_EXPLODING_TRAP_3
+	checkevent EVENT_FOUGHT_ZAPDOS
 	iftrue .NoAppearZ
 	checkitem TRI_WING; change this to whatever becomes the tri-wing
 	iftrue .AppearZ
@@ -30,7 +30,7 @@ ZapdosScript:
 	cry ZAPDOS
 	pause 15
 	closetext
-	setevent EVENT_EXPLODING_TRAP_3
+	setevent EVENT_FOUGHT_ZAPDOS
 	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
 	loadwildmon ZAPDOS, 40
 	startbattle
@@ -58,4 +58,4 @@ JouleCaveZapdosRoom_MapEvents:
 	bg_event  3,  4, BGEVENT_ITEM, ZapdosHiddenBrightPowder
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_EXPLODING_TRAP_8
+	object_event  7,  5, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, ZapdosScript, EVENT_ZAPDOS_IN_JOULE_CAVE
