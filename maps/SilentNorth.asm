@@ -10,8 +10,8 @@ SilentNorth_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 11,  7, VICTORY_ROAD_GATE, 1
-	warp_event  9,  7, TEAM_ROCKET_BASE_OFFICE, 1; COME_BACK2
+	warp_event  9,  7, VICTORY_ROAD_GATE, 1
+	warp_event 11,  7, TEAM_ROCKET_BASE_OFFICE, 1
 
 	db 0 ; coord events
 

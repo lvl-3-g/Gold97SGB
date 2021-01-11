@@ -436,3 +436,6 @@ In-progress 5.05
 - Tweaked dialogue for executive in rocket base
 - Brought over Kotora/Raitora cries from Reforged
 - Lots and lots of behind-the-scenes renames of event flags
+
+6.11
+- Fixed issue where warp to crown path was set up incorrectly
