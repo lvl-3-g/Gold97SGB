@@ -426,3 +426,8 @@ In-progress 5.05
 6.04
 - Tweaked morning overworld color settings on GBC mode to match the SGB mode more closely
 
+6.05
+- Tweaks to underground and lighthouse tileset palettes
+- Silver now walks faster when chasing after Impostor Oak
+- Fixed Imposter Oak sprite in Stand City so he appears gray instead of orange
+- Fixed issue with staircase tile in deepwater passage

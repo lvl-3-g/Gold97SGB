@@ -53,7 +53,7 @@ ImposterCompEncounter:
 	writetext SilverHeyWaitWhatsGoingOnText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB1F_SILVER, ImposterRunsOff
+	applymovement TEAMROCKETBASEB1F_SILVER, SilverRunsOffFast
 	disappear TEAMROCKETBASEB1F_SILVER
 	disappear TEAMROCKETBASEB1F_IMPOSTOR
 	setscene SCENE_TEAMROCKETBASEB1F_NOTHING
@@ -440,6 +440,13 @@ TeamRocketGuyLeaves:
 	step LEFT
 	step LEFT
 	step LEFT
+	step_end
+	
+SilverRunsOffFast:
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
 	step_end
 	
 ImposterRunsOff:
