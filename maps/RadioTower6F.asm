@@ -269,13 +269,13 @@ GiovanniGreeting:
 	
 	para "I have endured"
 	line "much to restore"
-	cont "my organization to"
-	cont "its former glory."
+	para "my organization to"
+	line "its former glory."
 	
-	para "And you, remind me"
+	para "And you remind me"
 	line "of another certain"
-	cont "child I once"
-	cont "faced."
+	para "child I once"
+	line "faced."
 
 	para "…"
 	
@@ -294,10 +294,10 @@ GiovanniGreeting:
 	
 	para "Not again!"
 	
-	para "I, GIOVANNI the"
+	para "I, GIOVANNI, the"
 	line "mighty LEADER of"
 	cont "TEAM ROCKET,"	
-	cont "will crush you!"	
+	para "will crush you!"	
 	done
 	
 
