@@ -443,3 +443,8 @@ In-progress 5.05
 6.12
 - Fixed some grammar issues with Giovanni's speech in radio tower
 - Fixed a few color issues with elite four room tileset
+
+6.13
+- Redid grammar on location signage to be consistent with final game
+- Fixed issue where sign was not visible in Amami Town
+- Made workaround for strange bug where some old saves show receptionist sprite instead of officer sprite on Route 113 - Enter route then fly somewhere else to fix issue

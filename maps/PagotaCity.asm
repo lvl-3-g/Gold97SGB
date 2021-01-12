@@ -171,8 +171,8 @@ PagotaCityYoungsterTextNoTree:
 PagotaCitySignText:
 	text "PAGOTA CITY"
 
-	para "Timeless as the"
-	line "stars above."
+	para "Timeless As the"
+	line "Stars Above"
 	done
 
 PagotaGymSignText:

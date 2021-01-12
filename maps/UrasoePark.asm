@@ -124,8 +124,8 @@ EngineerLandonAfterBattleText:
 TropicalIslandJungleSignText:
 	text "URASOE PARK"
 
-	para "A nature reserve"
-	line "for #MON"
+	para "A Nature Reserve"
+	line "For #MON"
 	done
 
 UrasoePark_MapEvents:

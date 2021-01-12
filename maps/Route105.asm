@@ -99,7 +99,7 @@ Route105SignText:
 	text "ROUTE 105"
 
 	para "JADE FOREST"
-	line "just up ahead!"
+	line "Just Ahead"
 	done
 
 

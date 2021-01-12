@@ -83,8 +83,8 @@ FrostpointTownDeepwaterSignText:
 FrostpointTownSignText:
 	text "FROSTPOINT TOWN"
 
-	para "The frigid land"
-	line "of hardy people"
+	para "The Frigid Land"
+	line "of Hardy People"
 	done
 
 FrostpointTown_MapEvents:

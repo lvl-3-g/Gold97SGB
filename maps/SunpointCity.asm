@@ -137,9 +137,9 @@ SunpointCityUnusedText:
 
 SunpointCitySignText:
 	text "SUNPOINT CITY"
-	para "NIHON's link for"
-	line "international"
-	cont "trade."
+	para "NIHON's Hub For"
+	line "International"
+	cont "Trade"
 	done
 
 StandGymSignText:

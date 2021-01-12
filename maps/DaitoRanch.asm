@@ -29,10 +29,10 @@ DaitoRanchSign:
 	jumptext DaitoRanchSignText
 	
 DaitoRanchSignText:
-	text "DAITO RANCH -"
-	para "Dairy producers"
-	line "of the SOUTHWEST"
-	cont "ISLANDS."
+	text "DAITO RANCH"
+	para "Dairy Producers"
+	line "Of the SOUTHWEST"
+	cont "ISLANDS"
 	done
 
 SummerHomeSign:

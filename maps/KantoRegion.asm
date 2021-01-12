@@ -171,9 +171,9 @@ KantoFisherText:
 	done
 	
 KantoSignText:
-	text "KANTO-"
-	line "NIHON's southern"
-	cont "crown jewel."
+	text "KANTO REGION"
+	para "NIHON's Southern"
+	line "Crown Jewel"
 	done
 	
 KantoGymSignText:
@@ -185,11 +185,11 @@ KantoGymSignText:
 	done
 	
 KobanIslandSignText2:
-	text "PALLET TOWN -"
+	text "PALLET TOWN"
 
-	para "A tranquil setting"
-	line "of peace and"
-	cont "purity."
+	para "A Tranquil Setting"
+	line "of Peace and"
+	cont "Purity"
 	done
 	
 RedsHouseSignText2:

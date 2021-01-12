@@ -81,8 +81,8 @@ AmamiTownBugCatcherText:
 
 AmamiTownSignText:
 	text "AMAMI TOWN"
-	para "A destination for"
-	line "adventurers!"
+	para "A Destination For"
+	line "Adventurers!"
 	done
 	
 AmamiPoolText:

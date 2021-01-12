@@ -99,8 +99,8 @@ SanskritTownCooltrainermText:
 SanskritTownSignText:
 	text "SANSKRIT TOWN"
 
-	para "A link to NIHON's"
-	line "past."
+	para "A Link To NIHON's"
+	line "Past"
 	done
 
 SanskritTownRagecandybarSignText:

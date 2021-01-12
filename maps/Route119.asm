@@ -292,13 +292,13 @@ FisherRalphSwarmText:
 
 Route119CrownPathSignText:
 	text "ROUTE 119"
-	para "East to TEKNOS"
-	line "CITY"
+	para "TEKNOS CITY -"
+	line "SUNPOINT CITY"
 	done
 
 Route119LockedDoorText:
-	text "Go through gate"
-	line "to SUNPOINT CITY."
+	text "Go Through Gate"
+	line "For SUNPOINT CITY"
 	done
 	
 Route119Rocket1Text:

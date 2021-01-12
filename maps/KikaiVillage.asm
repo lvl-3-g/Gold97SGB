@@ -156,13 +156,13 @@ CalderaSign:
 	
 KikaiSignText:
 	text "KIKAI VILLAGE"
-	para "The firey hot"
-	line "fighters' town!"
+	para "The Firey Hot"
+	line "Fighters' Town!"
 	done
 
 CalderaSignText:
 	text "KIKAI CALDERA"
-	line "Be wary of lava."
+	para "Be Wary of Lava"
 	done
 
 KikaiVillage_MapEvents:

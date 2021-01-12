@@ -700,9 +700,9 @@ StandCityTeacherAllGoodText:
 StandCitySignText:
 	text "STAND CITY"
 
-	para "A utopia for"
-	line "people and #MON"
-	cont "alike"
+	para "A Utopia for"
+	line "People and #MON"
+	cont "Alike"
 	done
 
 OldFuchsiaGymSignText:
@@ -710,9 +710,9 @@ OldFuchsiaGymSignText:
 	line "#MON GYM"
 	cont "LEADER: OKERA"
 
-	para "The Kid who"
-	line "thrives in the"
-	cont "dark"
+	para "The Kid Who"
+	line "Thrives In the"
+	cont "Dark"
 	done
 
 SafariZoneOfficeSignText:

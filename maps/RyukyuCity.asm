@@ -96,10 +96,10 @@ RyukyuPokefanM2Text:
 	done
 	
 RyukyuCitySignText:
-	text "RYUKYU CITY -"
+	text "RYUKYU CITY"
 	para "The SOUTHWEST"
-	line "ISLANDS' shining"
-	cont "gem."
+	line "ISLANDS' Shining"
+	cont "Gem"
 	done
 
 RyukyuCityHotelSignText:

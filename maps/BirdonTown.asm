@@ -126,9 +126,9 @@ BirdonTownSlowpokeText2:
 
 BirdonTownSignText:
 	text "BIRDON TOWN"
-	para "Desolate in plant"
-	line "growth, but not"
-	cont "in friendship."
+	para "Desolate In Plant"
+	line "Growth, But Not In"
+	cont "Friendship"
 	done
 
 
@@ -145,10 +145,9 @@ WestportGymSignText:
 SlowpokeWellSignText:
 	text "SLOWPOKE WELL"
 
-	para "An oasis for"
-	line "SLOWPOKE in an"
-	para "otherwise arid"
-	line "environment."
+	para "An Oasis For"
+	line "SLOWPOKE In an"
+	cont "Arid Environment"
 	done
 
 

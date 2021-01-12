@@ -45,9 +45,9 @@ NagoVillageTeacherText:
 	done
 	
 NagoVillageSignText:
-	text "NAGO VILLAGE -"
-	para "A quiet seaside"
-	line "settlement."
+	text "NAGO VILLAGE"
+	para "A Quiet Seaside"
+	line "Settlement"
 	done
 
 NagoVillage_MapEvents:

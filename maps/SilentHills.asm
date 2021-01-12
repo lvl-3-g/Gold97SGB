@@ -283,9 +283,8 @@ SunnyNotSundayText:
 
 SilentHillsSignText:
 	text "SILENT HILLS"
-	para "A gathering spot"
-	line "for rising"
-	cont "trainers!"
+	para "A Gathering Spot"
+	line "For Trainers"
 	done
 
 SilentHillsSign2Text:

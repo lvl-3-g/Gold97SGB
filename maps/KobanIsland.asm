@@ -81,8 +81,8 @@ KobanIslandFisherText:
 
 OaksLabSignText:
 	text "KOBAN ISLAND"
-	para "A small island"
-	line "with big history."
+	para "A Small Island"
+	line "With Big History"
 	done
 
 BluesHouseSignText:

@@ -242,8 +242,8 @@ AlloyCitySailor2Text:
 AlloyCitySignText:
 	text "ALLOY CITY"
 
-	para "A bustling city"
-	line "by rough waters"
+	para "A Bustling City"
+	line "by Rough Waters"
 	done
 
 AlloyGymSignText:

@@ -412,15 +412,15 @@ TeknosGymSignText:
 	line "#MON GYM"
 	cont "LEADER: BUGSY"
 
-	para "The high-class"
-	line "master of insects!"
+	para "The High-Class"
+	line "Master of Insects"
 	done
 
 WestportCitySignText:
 	text "WESTPORT CITY"
 
-	para "NIHON's shining"
-	line "coastal metropolis"
+	para "NIHON's Shining"
+	line "Coastal Metropolis"
 	done
 
 

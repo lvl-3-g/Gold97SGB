@@ -73,7 +73,7 @@ CrownCitySign2Text:
 	
 CrownCitySignText:
 	text "CROWN CITY"
-	para "The base camp for"
+	para "The Base Camp For"
 	line "LEAGUE Challengers"
 	done
 	

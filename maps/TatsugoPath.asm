@@ -151,19 +151,17 @@ HeartPondSign:
 	
 HeartPondSignText:
 	text "HEART POND"
-	para "A place where"
-	line "lovers meet."
+	para "A Place Where"
+	line "Lovers Meet"
 	done
 
 KikaiStraitSign:
 	jumptext KikaiStraitSignText
 	
 KikaiStraitSignText:
-	text "TATSUGO PATH -"
-	line "KIKAI STRAIT"
-	
-	para "KIKAI VILLAGE"
-	line "AHEAD"
+	text "TATSUGO PATH"
+	para "AMAMI TOWN -"
+	line "KIKAI VILLAGE"
 	done
 
 TatsugoPath_MapEvents:

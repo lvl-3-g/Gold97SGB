@@ -86,8 +86,8 @@ KumeCityRockerText:
 	
 KumeCitySignText:
 	text "KUME CITY"
-	para "The rocky mountain"
-	line "town."
+	para "The Rocky Mountain"
+	line "Town"
 	done
 	
 UrumaCavernSignText:

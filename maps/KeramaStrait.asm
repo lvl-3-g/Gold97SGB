@@ -137,7 +137,8 @@ KeramaStraitFisher2Text:
 KeramaStraitSignText:
 	text "KERAMA STRAIT"
 
-	para "West to KUME CITY"
+	para "RYUKYU CITY -"
+	line "KUME CITY"
 	done
 
 

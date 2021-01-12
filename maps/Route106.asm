@@ -357,7 +357,7 @@ DarkCaveSignText:
 JadeSignText:
 	text "JADE FOREST"
 	para "Entrance to the"
-	line "right."
+	line "Right"
 	done
 
 HikerAnthony2SeenText:

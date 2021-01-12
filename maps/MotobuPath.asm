@@ -139,7 +139,7 @@ MotobuPathSign:
 MotobuPathSignText:
 	text "MOTOBU PATH"
 	para "NAGO VILLAGE -"
-	line "IEJIMA TOWN."
+	line "IEJIMA TOWN"
 	done
 
 

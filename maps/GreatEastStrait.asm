@@ -14,8 +14,10 @@ GreatEastSign:
 	
 GreatEastSignText:
 	text "GREAT EAST STRAIT"
-	line "ahead - watch out"
-	cont "for whirlpools!"
+	para "NANJO FOREST -"
+	line "DAITO RANCH"
+	para "Watch Out For"
+	line "Whirlpools!"
 	done
 
 

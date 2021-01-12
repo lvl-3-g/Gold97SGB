@@ -301,7 +301,7 @@ Route101Sign1Text:
 	line "PAGOTA CITY"
 	
 	para "SILENT HILLS"
-	line "in between."
+	line "In Between"
 	done
 
 SilentHillsEntranceSignText:

@@ -9,8 +9,12 @@
 Route113_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
-
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .FixSpriteWTF
+	
+.FixSpriteWTF
+	variablesprite SPRITE_OLD_FUCHSIA_GYM_1, SPRITE_OFFICER
+	return
 
 TrainerCamperTodd1:
 	trainer CAMPER, TODD1, EVENT_BEAT_CAMPER_TODD, CamperTodd1SeenText, CamperTodd1BeatenText, 0, .Script
@@ -182,7 +186,7 @@ Route113SignText:
 	text "ROUTE 113"
 
 	para "STAND CITY -"
-	line "KANTO"
+	line "KANTO REGION"
 	done
 
 Route113TrainerTipsText:
@@ -238,5 +242,5 @@ Route113_MapEvents:
 	object_event  6,  6, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OfficerKeithScript, -1
 	object_event 14, 47, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 3, TrainerPokefanmBrandon, -1
 	object_event 19, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route113Nugget, EVENT_ROUTE_113_NUGGET
-	object_event 17, 44, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, SoldierGeraldScript, -1
+	object_event 17, 44, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, SoldierGeraldScript, -1
 	object_event 12, 13, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route113Tree, -1

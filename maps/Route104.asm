@@ -351,8 +351,8 @@ Route104SignText:
 	
 Route104SignActualText:
 	text "ROUTE 104"
-	line "BIRDON TOWN -"
-	cont "ALLOY CITY"
+	para "BIRDON TOWN -"
+	line "ALLOY CITY"
 	done
 	
 

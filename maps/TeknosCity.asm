@@ -290,9 +290,9 @@ TeknosCityGramps3Text:
 
 TeknosCitySignText:
 	text "TEKNOS CITY"
-	para "A city that"
-	line "embraces the"
-	cont "future."
+	para "A City that"
+	line "Embraces the"
+	cont "Future"
 	done
 
 TinTowerSignText:
@@ -321,8 +321,8 @@ BirdonGymSignText:
 	line "#MON GYM"
 	cont "LEADER: WHITNEY"
 
-	para "The energetic"
-	line "go-getter!"
+	para "The Energetic"
+	line "Go-Getter!"
 	done
 
 TeknosDanceTheaterSignText:
