@@ -1105,7 +1105,7 @@ CooltrainerFGroup:
 	; COOLTRAINERF (3)
 	db "FRAN@", TRAINERTYPE_NORMAL; used, kanto gym
 	db 39, SEADRA
-	db 40, GELANIA
+	db 41, TANGELA
 	db -1 ; end
 
 	; COOLTRAINERF (4)

@@ -2171,9 +2171,10 @@ FlambearEvosAttacks:
 	db 6, ROAR
 	db 12, EMBER
 	db 19, BITE
+	db 22, FURY_SWIPES
 	db 27, FLAME_WHEEL
 	db 31, SCARY_FACE
-	db 36, FURY_SWIPES
+	db 36, CRUNCH
 	db 39, REST
 	db 46, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -2186,10 +2187,11 @@ VolbearEvosAttacks:
 	db 6, ROAR
 	db 12, EMBER
 	db 21, BITE
+	db 26, FURY_SWIPES
 	db 30, FLAME_WHEEL
 	db 34, SCARY_FACE
-	db 38, FURY_SWIPES
-	db 41, REST
+	db 38, CRUNCH
+	db 42, REST
 	db 49, FLAMETHROWER
 	db 0 ; no more level-up moves
 
@@ -2200,10 +2202,11 @@ DynabearEvosAttacks:
 	db 6, ROAR
 	db 12, EMBER
 	db 21, BITE
+	db 26, FURY_SWIPES
 	db 30, FLAME_WHEEL
 	db 34, SCARY_FACE
-	db 40, FURY_SWIPES
-	db 43, REST
+	db 41, CRUNCH
+	db 44, REST
 	db 52, FLAMETHROWER
 	db 0 ; no more level-up moves
 

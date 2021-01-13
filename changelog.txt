@@ -448,3 +448,7 @@ In-progress 5.05
 - Redid grammar on location signage to be consistent with final game
 - Fixed issue where sign was not visible in Amami Town
 - Made workaround for strange bug where some old saves show receptionist sprite instead of officer sprite on Route 113 - Enter route then fly somewhere else to fix issue
+
+6.14
+- Fixed coloration issue in dept store maps
+- Flambear line can now learn Crunch
