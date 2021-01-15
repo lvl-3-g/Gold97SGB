@@ -185,6 +185,12 @@ NihonWaterWildMons:
 	db 26, GYARADOS
 	db 25, HORSEA
 	
+	map_id ROUTE_112
+	db 6 percent ; encounter rate
+	db 21, MAGIKARP
+	db 18, GOLDEEN
+	db 5, MAGIKARP	
+	
 	map_id ROUTE_113
 	db 6 percent ; encounter rate
 	db 21, MAGIKARP

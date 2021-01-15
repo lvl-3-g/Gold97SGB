@@ -452,3 +452,9 @@ In-progress 5.05
 6.14
 - Fixed coloration issue in dept store maps
 - Flambear line can now learn Crunch
+
+6.15
+- Minor fixes to port tileset
+- Fixed issue where the pond on route 112 didn't have any encounters
+- Minor text fix in dialogue from warp guy at Amami Docks
+- Better coloration for office tileset

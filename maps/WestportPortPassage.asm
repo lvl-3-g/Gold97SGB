@@ -214,7 +214,7 @@ TeleportGuyText12:
 	para "Well look here!"
 	para "My beloved ABRA"
 	line "can send you over"
-	para "to the islands in"
+	para "to the ISLANDS in"
 	line "an instant!"
 	para "I got a buddy"
 	line "waiting at the"
