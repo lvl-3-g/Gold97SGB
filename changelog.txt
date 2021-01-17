@@ -458,3 +458,6 @@ In-progress 5.05
 - Fixed issue where the pond on route 112 didn't have any encounters
 - Minor text fix in dialogue from warp guy at Amami Docks
 - Better coloration for office tileset
+
+6.16
+- Fixed issue where Kikai Village roofs were red instead of brown in GBC mode
