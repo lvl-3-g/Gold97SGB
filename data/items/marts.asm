@@ -49,13 +49,16 @@ MartCrown:
 	db -1 ; end
 
 MartCrownDex:
-	db 6 ; # items
+	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db SUPER_POTION
 	db HYPER_POTION
+	db REVIVE
 	db FULL_HEAL
+	db SUPER_REPEL
 	db MAX_REPEL
+	db ESCAPE_ROPE
 	db -1 ; end
 
 MartPagota:
@@ -72,12 +75,13 @@ MartPagota:
 	db -1 ; end
 
 MartBirdon:
-	db 10 ; # items
+	db 11 ; # items
 	db POKE_BALL
 	db POTION
 	db SUPER_POTION
 	db ESCAPE_ROPE
 	db REPEL
+	db SUPER_REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db SHARP_HORNS
@@ -183,7 +187,7 @@ MartWestport5F4:
 	db -1 ; end
 
 MartAlloy:
-	db 8 ; # items
+	db 12 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
 	db HYPER_POTION
@@ -192,19 +196,23 @@ MartAlloy:
 	db AWAKENING
 	db ICE_HEAL
 	db SUPER_REPEL
+	db X_ATTACK
+	db X_DEFEND
+	db STEEL_SHELL
+	db POWER_WINGS
 	db -1 ; end
 
 MartTeknos:
 	db 10 ; # items
 	db POKE_BALL
-	db GREAT_BALL
+	db ESCAPE_ROPE
 	db POTION
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
-	db ICE_HEAL
+	db REPEL
 	db REVIVE
 	db -1 ; end
 
@@ -229,18 +237,22 @@ MartSanskrit2:
 	db -1 ; end
 
 MartBlueForest:
-	db 7 ; # items
+	db 11 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
 	db FULL_HEAL
 	db REVIVE
+	db SUPER_REPEL
 	db MAX_REPEL
 	db X_DEFEND
 	db X_ATTACK
+	db ICE_HEAL
+	db POWER_WINGS
+	db ESCAPE_ROPE
 	db -1 ; end
 
-MartViridian:
-	db 8 ; # items
+MartViridian:; sanskrit
+	db 9 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
 	db FULL_HEAL
@@ -249,9 +261,10 @@ MartViridian:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
+	db SUPER_REPEL
 	db -1 ; end
 
-MartKume:
+MartKume:; sunpoint
 	db 10 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -265,7 +278,7 @@ MartKume:
 	db DETECT_ORB
 	db -1 ; end
 
-MartNago:
+MartNago:; kume
 	db 8 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -277,8 +290,8 @@ MartNago:
 	db DIRE_HIT
 	db -1 ; end
 
-MartLavender:
-	db 8 ; # items
+MartLavender:; frostpoint
+	db 9 ; # items
 	db GREAT_BALL
 	db POTION
 	db SUPER_POTION
@@ -286,11 +299,12 @@ MartLavender:
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
+	db ICE_HEAL
 	db BURN_HEAL
 	db -1 ; end
 
 MartAmami:
-	db 7 ; # items
+	db 8 ; # items
 	db ULTRA_BALL
 	db SUPER_POTION
 	db HYPER_POTION
@@ -298,6 +312,7 @@ MartAmami:
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
+	db ESCAPE_ROPE
 	db -1 ; end
 
 MartKanto2F1:
@@ -382,12 +397,13 @@ MartStand:
 	db -1 ; end
 
 MartRyukyu:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_HEAL
+	db ESCAPE_ROPE
 	db X_ATTACK
 	db X_DEFEND
 	db SHARP_HORNS

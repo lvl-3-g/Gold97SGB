@@ -82,7 +82,7 @@ MotobuPathIejimaGate_MapEvents:
 	db 0 ; bg events
 
 	db 9 ; object events
-	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, MotobuPathIejimaGateOfficerScript, -1
+	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, MotobuPathIejimaGateOfficerScript, -1
 	object_event  0,  7, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MotobuPathIejimaGateBikerScript, EVENT_RETURNED_FUEL_LINE
 	object_event  1,  7, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, MotobuPathIejimaGateBikerScript, EVENT_RETURNED_FUEL_LINE
 	object_event  1,  6, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, MotobuPathIejimaGateBikerScript, EVENT_RETURNED_FUEL_LINE
