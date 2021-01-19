@@ -465,3 +465,6 @@ In-progress 5.05
 6.17
 - Fixed issue where guard in gate to Iejima Town was orange instead of yellow
 - Adjusted a few marts, more repels and escape ropes in stock
+
+6.18
+- When fighting Blue, he is labeled as just "BLUE" instead of "LEADER BLUE" since he's not a leader in this game
