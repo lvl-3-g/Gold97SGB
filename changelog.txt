@@ -461,3 +461,7 @@ In-progress 5.05
 
 6.16
 - Fixed issue where Kikai Village roofs were red instead of brown in GBC mode
+
+6.17
+- Fixed issue where guard in gate to Iejima Town was orange instead of yellow
+- Adjusted a few marts, more repels and escape ropes in stock
