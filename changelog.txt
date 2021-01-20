@@ -468,3 +468,7 @@ In-progress 5.05
 
 6.18
 - When fighting Blue, he is labeled as just "BLUE" instead of "LEADER BLUE" since he's not a leader in this game
+
+6.20
+- Fixed issues with tropical tileset coloration
+- Fixed tile issue on Rainbow Island
