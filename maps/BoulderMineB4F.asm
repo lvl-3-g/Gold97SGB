@@ -24,7 +24,7 @@ BoulderMineB4FDomeFossil:
 BoulderMineB4FTMGigaDrain:
 	itemball TM_GIGA_DRAIN
 
-BoulderMine1FAwakening:
+BoulderMineB4FStrength:
 	itemball HM_STRENGTH
 
 BoulderMineB4FCovenantOrb:
@@ -43,7 +43,7 @@ BoulderMineB4F_MapEvents:
 	db 0 ; bg events
 
 	db 4 ; object events
-	object_event 22, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMine1FAwakening, EVENT_BOULDER_MINE_1F_AWAKENING
+	object_event 22, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB4FStrength, EVENT_BOULDER_MINE_1F_AWAKENING
 	object_event 16, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB4FTMGigaDrain, EVENT_KIKAI_STRAIT_ULTRA_BALL
 	object_event  2, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB4FDomeFossil, EVENT_KIKAI_STRAIT_MAX_REPEL
 	object_event 14,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB4FCovenantOrb, EVENT_BOULDER_MINE_B4F_COVENANT_ORB

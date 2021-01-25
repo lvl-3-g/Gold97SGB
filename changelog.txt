@@ -472,3 +472,6 @@ In-progress 5.05
 6.20
 - Fixed issues with tropical tileset coloration
 - Fixed tile issue on Rainbow Island
+
+6.21
+- Minor coloration fixes in Cave and Dark Cave tilesets
