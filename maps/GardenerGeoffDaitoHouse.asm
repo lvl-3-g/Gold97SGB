@@ -54,9 +54,9 @@ WantFactText:
 	done
 	
 AhOkText:
-	text "Ah alright,"
-	line "maybe another"
-	cont "time then."
+	text "Ah, alright."
+	line "Maybe another"
+	cont "time, then."
 	done
 	
 PapayaText:

@@ -254,7 +254,7 @@ TeknosCityLass2Text_ReleasedBeasts:
 TeknosCityFisherText:
 	text "The AQUARIUM isn't"
 	line "too interesting to"
-	cont "SAILORs like me."
+	cont "SAILORS like me."
 	para "We see all these"
 	line "#MON out on the"
 	cont "sea! Ohoho!"

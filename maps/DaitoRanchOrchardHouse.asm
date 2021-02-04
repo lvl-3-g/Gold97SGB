@@ -18,8 +18,8 @@ AppleFarmerText:
 	cont "to my ORCHARD!"
 	
 	para "I could use your"
-	line "help kid."
-	para "My APPLEs sell for"
+	line "help, kid."
+	para "My APPLES sell for"
 	line "a pretty penny"
 	para "on the mainland"
 	line "for their crisp"
