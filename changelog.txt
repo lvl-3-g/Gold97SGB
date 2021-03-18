@@ -479,3 +479,6 @@ In-progress 5.05
 6.22
 - Fixed issue where fence in MooMoo house in Daito Ranch was blue instead of brown
 - Minor grammar fixes
+
+6.23
+- Various tileset and color fixes, nothing important
