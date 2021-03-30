@@ -179,14 +179,14 @@ INCBIN "data/tilesets/park_metatiles.bin"
 TilesetParkColl::
 INCLUDE "data/tilesets/park_collision.asm"
 
-TilesetRuinsOfAlphGFX::
-INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
+TilesetSanskritRuinsGFX::
+INCBIN "gfx/tilesets/sanskrit_ruins.2bpp.lz"
 
-TilesetRuinsOfAlphMeta::
-INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
+TilesetSanskritRuinsMeta::
+INCBIN "data/tilesets/sanskrit_ruins_metatiles.bin"
 
-TilesetRuinsOfAlphColl::
-INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
+TilesetSanskritRuinsColl::
+INCLUDE "data/tilesets/sanskrit_ruins_collision.asm"
 
 TilesetRadioTowerGFX::
 INCBIN "gfx/tilesets/radio_tower.2bpp.lz"

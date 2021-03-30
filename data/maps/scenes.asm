@@ -55,13 +55,13 @@ MapScenes::
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID
 	scene_var RADIO_TOWER_5F,                              wRadioTower5FSceneID
-	scene_var RUINS_OF_ALPH_OUTSIDE,                       wRuinsOfAlphOutsideSceneID
-	scene_var RUINS_OF_ALPH_RESEARCH_CENTER,               wRuinsOfAlphResearchCenterSceneID
-	scene_var RUINS_OF_ALPH_HO_OH_CHAMBER,                 wRuinsOfAlphHoOhChamberSceneID
-	scene_var RUINS_OF_ALPH_KABUTO_CHAMBER,                wRuinsOfAlphKabutoChamberSceneID
-	scene_var RUINS_OF_ALPH_OMANYTE_CHAMBER,               wRuinsOfAlphOmanyteChamberSceneID
-	scene_var RUINS_OF_ALPH_AERODACTYL_CHAMBER,            wRuinsOfAlphAerodactylChamberSceneID
-	scene_var RUINS_OF_ALPH_INNER_CHAMBER,                 wRuinsOfAlphInnerChamberSceneID
+	scene_var SANSKRIT_RUINS_OUTSIDE,                       wSanskritRuinsOutsideSceneID
+	scene_var SANSKRIT_RUINS_RESEARCH_CENTER,               wSanskritRuinsResearchCenterSceneID
+	scene_var SANSKRIT_RUINS_HO_OH_CHAMBER,                 wSanskritRuinsHoOhChamberSceneID
+	scene_var SANSKRIT_RUINS_KABUTO_CHAMBER,                wSanskritRuinsKabutoChamberSceneID
+	scene_var SANSKRIT_RUINS_OMANYTE_CHAMBER,               wSanskritRuinsOmanyteChamberSceneID
+	scene_var SANSKRIT_RUINS_AERODACTYL_CHAMBER,            wSanskritRuinsAerodactylChamberSceneID
+	scene_var SANSKRIT_RUINS_INNER_CHAMBER,                 wSanskritRuinsInnerChamberSceneID
 	scene_var OLD_MAHOGANY_MART_1F,                            wOldMahoganyMart1FSceneID
 	scene_var TEAM_ROCKET_BASE_OFFICE,                        wTeamRocketBaseOfficeSceneID
 	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB1FSceneID

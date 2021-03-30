@@ -18,7 +18,7 @@
 	const LANDMARK_ROUTE_117           ; 34
 	const LANDMARK_ENDON_CAVE        ; 1c
 	const LANDMARK_SANSKRIT_TOWN     ; 24
-	const LANDMARK_RUINS_OF_ALPH     ; 09
+	const LANDMARK_SANSKRIT_RUINS     ; 09
 	const LANDMARK_ROUTE_118           ; 36
 	const LANDMARK_SUNPOINT_CITY     ; 21
 	const LANDMARK_MAGMA_SHAFT      ; 18

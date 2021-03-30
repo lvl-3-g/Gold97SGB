@@ -1446,7 +1446,7 @@ RadioChannels:
 	dbw 16, .PKMNTalkAndPokedexShow ; 04.5
 	dbw 28, .PokemonMusic           ; 07.5
 	dbw 32, .LuckyChannel           ; 08.5
-	dbw 52, .RuinsOfAlphRadio       ; 13.5
+	dbw 52, .SanskritRuinsRadio       ; 13.5
 	dbw 64, .PlacesAndPeople        ; 16.5
 	dbw 72, .LetsAllSing            ; 18.5
 	dbw 78, .PokeFluteRadio         ; 20.0
@@ -1474,9 +1474,9 @@ RadioChannels:
 	jr nc, .NoSignal
 	jp LoadStation_LuckyChannel
 
-.RuinsOfAlphRadio:
+.SanskritRuinsRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
-	cp LANDMARK_RUINS_OF_ALPH
+	cp LANDMARK_SANSKRIT_RUINS
 	jr nz, .NoSignal
 	jp LoadStation_UnownRadio
 

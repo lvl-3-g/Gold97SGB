@@ -12,7 +12,7 @@ EndonCaveRuinsConnection_MapEvents:
 
 	db 2 ; warp events
 	warp_event 11, 51, ENDON_CAVE_2F, 3
-	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 7
+	warp_event  3,  9, SANSKRIT_RUINS_OUTSIDE, 7
 
 	db 0 ; coord events
 

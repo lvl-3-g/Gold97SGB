@@ -582,7 +582,7 @@ NihonGrassWildMons:
 	db 15, ZUBAT
 	db 15, ZUBAT
 
-	map_id RUINS_OF_ALPH_INNER_CHAMBER
+	map_id SANSKRIT_RUINS_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 5, UNOWN
@@ -609,7 +609,7 @@ NihonGrassWildMons:
 	db 5, UNOWN
 	db 5, UNOWN
 	
-	map_id RUINS_OF_ALPH_OUTSIDE
+	map_id SANSKRIT_RUINS_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 13, RATTATA

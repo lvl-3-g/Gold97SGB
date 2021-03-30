@@ -121,7 +121,7 @@ SanskritTown_MapEvents:
 	db 7 ; warp events
 	warp_event 15,  4, SANSKRIT_MART, 1
 	warp_event  3,  7, SANSKRIT_GAMBLER_MAN_HOUSE, 1
-	warp_event 16, 11, RUINS_OF_ALPH_RESEARCH_CENTER, 1
+	warp_event 16, 11, SANSKRIT_RUINS_RESEARCH_CENTER, 1
 	warp_event  3, 12, SANSKRIT_POKECENTER_1F, 1
 	warp_event  4,  3, SANSKRIT_ROCKET_HOUSE, 1
 	warp_event  8, 17, BOARDWALK_GATE, 1

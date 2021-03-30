@@ -77,7 +77,7 @@
 	const MUSIC_ROCKET_HIDEOUT               ; 48
 	const MUSIC_DRAGONS_DEN                  ; 49
 	const MUSIC_NIHON_WILD_BATTLE_NIGHT      ; 4a
-	const MUSIC_RUINS_OF_ALPH_RADIO          ; 4b
+	const MUSIC_SANSKRIT_RUINS_RADIO          ; 4b
 	const MUSIC_CAPTURE                      ; 4c
 	const MUSIC_ROUTE_115                     ; 4d
 	const MUSIC_MOM                          ; 4e
@@ -87,7 +87,7 @@
 	const MUSIC_GS_OPENING                   ; 52
 	const MUSIC_GS_OPENING_2                 ; 53
 	const MUSIC_MAIN_MENU                    ; 54
-	const MUSIC_RUINS_OF_ALPH_INTERIOR       ; 55
+	const MUSIC_SANSKRIT_RUINS_INTERIOR       ; 55
 	const MUSIC_ROCKET_OVERTURE              ; 56
 	const MUSIC_DANCING_HALL                 ; 57
 	const MUSIC_BUG_CATCHING_CONTEST_RANKING ; 58

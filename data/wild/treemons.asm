@@ -1,11 +1,11 @@
 TreeMons:
 ; entries correspond to TREEMON_SET_* constants
 	dw TreeMonSet_City
-	dw TreeMonSet_Canyon
+	dw TreeMonSet_Urban
 	dw TreeMonSet_Town
-	dw TreeMonSet_Route
-	dw TreeMonSet_SWIslands
-	dw TreeMonSet_Lake
+	dw TreeMonSet_Overworld1
+	dw TreeMonSet_Overworld3
+	dw TreeMonSet_Overworld2
 	dw TreeMonSet_Forest
 	dw TreeMonSet_Rock
 
@@ -32,7 +32,7 @@ TreeMonSet_City:
 	db  5, AIPOM,      10
 	db -1
 
-TreeMonSet_Canyon:
+TreeMonSet_Urban:
 ; common
 	db 50, SPEAROW,    10
 	db 15, SPEAROW,    10
@@ -68,7 +68,7 @@ TreeMonSet_Town:
 	db  5, AIPOM,      10
 	db -1
 
-TreeMonSet_Route:
+TreeMonSet_Overworld1:
 ; common
 	db 50, HOOTHOOT,   10
 	db 15, SPINARAK,   10
@@ -86,7 +86,7 @@ TreeMonSet_Route:
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_SWIslands:
+TreeMonSet_Overworld3:
 ; common
 	db 50, HOOTHOOT,   10
 	db 15, EKANS,      10
@@ -104,7 +104,7 @@ TreeMonSet_SWIslands:
 	db  5, EXEGGCUTE,  10
 	db -1
 
-TreeMonSet_Lake:
+TreeMonSet_Overworld2:
 ; common
 	db 50, HOOTHOOT,   10
 	db 15, VENONAT,    10

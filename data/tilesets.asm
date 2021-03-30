@@ -35,7 +35,7 @@ Tilesets::
 	tileset TilesetTower
 	tileset TilesetCave
 	tileset TilesetPark
-	tileset TilesetRuinsOfAlph
+	tileset TilesetSanskritRuins
 	tileset TilesetRadioTower
 	tileset TilesetUnderground
 	tileset TilesetIcePath

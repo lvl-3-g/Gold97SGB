@@ -22,7 +22,7 @@ Landmarks:
 	landmark  56,  60, Route117Name
 	landmark  52,  60, EndonCaveName
 	landmark  44,  60, SanskritTownName
-	landmark  44,  52, RuinsOfAlphName
+	landmark  44,  52, SanskritRuinsName
 	landmark  32,  60, Route118Name
 	landmark  20,  60, SunpointCityName
 	landmark  19,  59, MagmaShaftName
@@ -115,7 +115,7 @@ BlueForestName:  db "BLUE FOREST@"
 KikaiVillageName:      db "KIKAI¯VILLAGE@"
 DaitoRanchName:      db "DAITO RANCH@"
 FiveFloorTowerName:     db "5 FLOOR¯TOWER@"
-RuinsOfAlphName:     db "SANSKRIT¯RUINS@"
+SanskritRuinsName:     db "SANSKRIT¯RUINS@"
 BoulderMineName:       db "BOULDER¯MINE@"
 SlowpokeWellName:    db "SLOWPOKE¯WELL@"
 RadioTowerName:      db "RADIO TOWER@"

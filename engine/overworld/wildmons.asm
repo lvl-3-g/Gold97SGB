@@ -236,7 +236,7 @@ ApplyMusicEffectOnEncounterRate::
 	ld a, [wMapMusic]
 	cp MUSIC_POKEMON_MARCH
 	jr z, .double
-	cp MUSIC_RUINS_OF_ALPH_RADIO
+	cp MUSIC_SANSKRIT_RUINS_RADIO
 	jr z, .double
 	cp MUSIC_POKEMON_LULLABY
 	ret nz

@@ -69,8 +69,8 @@ INCLUDE "gfx/tilesets/cave_palette_map.asm"
 TilesetParkPalMap:
 INCLUDE "gfx/tilesets/park_palette_map.asm"
 
-TilesetRuinsOfAlphPalMap:
-INCLUDE "gfx/tilesets/ruins_of_alph_palette_map.asm"
+TilesetSanskritRuinsPalMap:
+INCLUDE "gfx/tilesets/sanskrit_ruins_palette_map.asm"
 
 TilesetRadioTowerPalMap:
 INCLUDE "gfx/tilesets/radio_tower_palette_map.asm"

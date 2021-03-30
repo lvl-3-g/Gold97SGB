@@ -58,10 +58,10 @@ ENDM
 	map_const BOARDWALK_GAME_CORNER,                       10,  7 ; 19
 	map_const ROUTE_117,                                     30,  9 ;  1
 	map_const ROUTE_116,                                     10, 18 ;  1
-	map_const RUINS_OF_ALPH_OUTSIDE,                       10, 18 ; 22
+	map_const SANSKRIT_RUINS_OUTSIDE,                       10, 18 ; 22
 	map_const ROUTE_118,                                     35,  9 ; 12
 	map_const SANSKRIT_MART,                                8,  4 ;  8
-	map_const RUINS_OF_ALPH_RESEARCH_CENTER,                4,  4 ; 28
+	map_const SANSKRIT_RUINS_RESEARCH_CENTER,                4,  4 ; 28
 	map_const SANSKRIT_ROCKET_HOUSE,                          10,  4 ; 12
 	map_const ROUTE_118_SUNPOINT_GATE,                         5,  4 ; 25
 
@@ -78,11 +78,11 @@ ENDM
 	map_const BURNED_TOWER_B1F,                            10,  9 ; 14
 	map_const NATIONAL_PARK,                               20, 27 ; 15
 	map_const NATIONAL_PARK_BUG_CONTEST,                   20, 27 ; 16
-	map_const RUINS_OF_ALPH_HO_OH_CHAMBER,                  4,  5 ; 23
-	map_const RUINS_OF_ALPH_KABUTO_CHAMBER,                 4,  5 ; 24
-	map_const RUINS_OF_ALPH_OMANYTE_CHAMBER,                4,  5 ; 25
-	map_const RUINS_OF_ALPH_AERODACTYL_CHAMBER,             4,  5 ; 26
-	map_const RUINS_OF_ALPH_INNER_CHAMBER,                 10, 14 ; 27
+	map_const SANSKRIT_RUINS_HO_OH_CHAMBER,                  4,  5 ; 23
+	map_const SANSKRIT_RUINS_KABUTO_CHAMBER,                 4,  5 ; 24
+	map_const SANSKRIT_RUINS_OMANYTE_CHAMBER,                4,  5 ; 25
+	map_const SANSKRIT_RUINS_AERODACTYL_CHAMBER,             4,  5 ; 26
+	map_const SANSKRIT_RUINS_INNER_CHAMBER,                 10, 14 ; 27
 	map_const BOULDER_MINE_1F,                               20,  9 ; 29
 	map_const BOULDER_MINE_B1F,                              20,  9 ; 30
 	map_const BOULDER_MINE_B5F,                              10,  9 ; 31
@@ -234,7 +234,7 @@ ENDM
 	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
 	map_const PAGOTA_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const PAGOTA_POKECENTER_1F,                         8,  4 ; 10
-	map_const ROUTE_112_RUINS_OF_ALPH_GATE,                  5,  4 ; 12
+	map_const ROUTE_112_SANSKRIT_RUINS_GATE,                  5,  4 ; 12
 	map_const ROUTE_103_WESTPORT_GATE,                      5,  4 ; 14
 	map_const ROUTE_103_NATIONAL_PARK_GATE,                  4,  4 ; 15
 	map_const KURTS_HOUSE,                                  8,  4 ;  4

@@ -77,7 +77,7 @@ Music:
 	dba Music_RocketHideout
 	dba Music_DragonsDen
 	dba Music_NihonWildBattleNight
-	dba Music_RuinsOfAlphRadio
+	dba Music_SanskritRuinsRadio
 	dba Music_SuccessfulCapture
 	dba Music_RouteU6U
 	dba Music_Mom
@@ -87,7 +87,7 @@ Music:
 	dba Music_GoldSilverOpening
 	dba Music_GoldSilverOpening2
 	dba Music_MainMenu
-	dba Music_RuinsOfAlphInterior
+	dba Music_SanskritRuinsInterior
 	dba Music_RocketTheme
 	dba Music_DancingHall
 	dba Music_ContestResults

@@ -278,8 +278,8 @@ Route102SilverTalkScript:
 Route102Sign:
 	jumptext Route102SignText
 
-RuinsOfAlphNorthSign:
-	jumptext RuinsOfAlphNorthSignText
+SanskritRuinsNorthSign:
+	jumptext SanskritRuinsNorthSignText
 
 Route102TrainerTips1:
 	jumptext Route102TrainerTips1Text
@@ -486,7 +486,7 @@ Route102SignText:
 	line "WESTPORT CITY"
 	done
 
-RuinsOfAlphNorthSignText:
+SanskritRuinsNorthSignText:
 	text "RUINS OF ALPH"
 	line "NORTH ENTRANCE"
 	done

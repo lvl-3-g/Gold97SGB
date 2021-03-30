@@ -29,7 +29,7 @@ NihonWaterWildMons:
 	db 18, TENTACOOL
 	db 21, TENTACRUEL
 	
-	map_id RUINS_OF_ALPH_OUTSIDE
+	map_id SANSKRIT_RUINS_OUTSIDE
 	db 6 percent ; encounter rate
 	db 18, OSUNFISH
 	db 21, QUAGSIRE

@@ -337,7 +337,7 @@ TilesetTraditionalHouseAnim:
 TilesetChampionsRoomAnim:
 TilesetLighthouseAnim:
 TilesetPlayersRoomAnim:
-TilesetRuinsOfAlphAnim:
+TilesetSanskritRuinsAnim:
 TilesetRadioTowerAnim:
 TilesetUndergroundAnim:
 TilesetOfficeAnim:

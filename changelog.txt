@@ -482,3 +482,10 @@ In-progress 5.05
 
 6.23
 - Various tileset and color fixes, nothing important
+
+6.24
+- Lots of behind-the-scenes changes
+- Renamed Headbutt tree groups
+- Removed fishing data from maps that don't have water to fish in
+- Renamed all internal references of "Ruins of Alph" to "Sanskrit Ruins"
+- Only gameplay change- Starmie can no longer be caught in Kikai Strait, keeping consistent with stone evo Mons not being catchable in the wild

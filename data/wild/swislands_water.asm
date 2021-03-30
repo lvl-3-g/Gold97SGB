@@ -72,7 +72,7 @@ SWIslandsWaterWildMons:
 	db 2 percent ; encounter rate
 	db 40, TENTACOOL
 	db 42, STARYU
-	db 40, STARMIE
+	db 40, STARYU
 	
 	map_id TATSUGO_PATH
 	db 2 percent

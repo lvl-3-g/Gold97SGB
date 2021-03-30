@@ -303,7 +303,7 @@ PlayersHouse1F_Blocks:
 	INCBIN "maps/PlayersHouse1F.blk"
 
 MotobuPathIejimaGate_Blocks:
-Route112RuinsOfAlphGate_Blocks:
+Route112SanskritRuinsGate_Blocks:
 Route115KantoGate_Blocks:
 Route118SunpointGate_Blocks:
 SeasidePathIsenStraitGate_Blocks:
@@ -500,18 +500,18 @@ KurtsHouse_Blocks:
 KantoHotel_Blocks:
 	INCBIN "maps/KantoHotel.blk"
 
-RuinsOfAlphOutside_Blocks:
-	INCBIN "maps/RuinsOfAlphOutside.blk"
+SanskritRuinsOutside_Blocks:
+	INCBIN "maps/SanskritRuinsOutside.blk"
 
 
-RuinsOfAlphHoOhChamber_Blocks:
-RuinsOfAlphKabutoChamber_Blocks:
-RuinsOfAlphOmanyteChamber_Blocks:
-RuinsOfAlphAerodactylChamber_Blocks:
-	INCBIN "maps/RuinsOfAlphPuzzleChamber.blk"
+SanskritRuinsHoOhChamber_Blocks:
+SanskritRuinsKabutoChamber_Blocks:
+SanskritRuinsOmanyteChamber_Blocks:
+SanskritRuinsAerodactylChamber_Blocks:
+	INCBIN "maps/SanskritRuinsPuzzleChamber.blk"
 
-RuinsOfAlphInnerChamber_Blocks:
-	INCBIN "maps/RuinsOfAlphInnerChamber.blk"
+SanskritRuinsInnerChamber_Blocks:
+	INCBIN "maps/SanskritRuinsInnerChamber.blk"
 
 
 
@@ -780,8 +780,8 @@ AmpareCavernB1F_Blocks:
 AmpareCavern1F_Blocks:
 	INCBIN "maps/AmpareCavern1F.blk"
 
-RuinsOfAlphResearchCenter_Blocks:
-	INCBIN "maps/RuinsOfAlphResearchCenter.blk"
+SanskritRuinsResearchCenter_Blocks:
+	INCBIN "maps/SanskritRuinsResearchCenter.blk"
 
 WestportBikeShop_Blocks:
 	INCBIN "maps/WestportBikeShop.blk"

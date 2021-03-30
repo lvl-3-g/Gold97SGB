@@ -133,7 +133,7 @@ ENDM
 	connection west, Route120, ROUTE_120, 0
 
 	map_attributes SanskritTown, SANSKRIT_TOWN, $21, NORTH | SOUTH | WEST | EAST
-	connection north, RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, 0
+	connection north, SanskritRuinsOutside, SANSKRIT_RUINS_OUTSIDE, 0
 	connection south, Boardwalk, BOARDWALK, -3
 	connection west, Route118, ROUTE_118, 0
 	connection east, Route117, ROUTE_117, 0
@@ -345,7 +345,7 @@ ENDM
 	map_attributes FujiSummit, FUJI_SUMMIT, $2F, SOUTH
 	connection south, MountFujiOutside, MOUNT_FUJI_OUTSIDE, 0
 	
-	map_attributes RuinsOfAlphOutside, RUINS_OF_ALPH_OUTSIDE, $21, SOUTH
+	map_attributes SanskritRuinsOutside, SANSKRIT_RUINS_OUTSIDE, $21, SOUTH
 	connection south, SanskritTown, SANSKRIT_TOWN, 0
 	
 	map_attributes ForkedStraitNorth, FORKED_STRAIT_NORTH, $21, NORTH
@@ -381,12 +381,12 @@ ENDM
 	map_attributes RadioTower4F, RADIO_TOWER_4F, $00, 0
 	map_attributes RadioTower5F, RADIO_TOWER_5F, $00, 0
 	map_attributes RadioTower6F, RADIO_TOWER_5F, $00, 0
-	map_attributes RuinsOfAlphHoOhChamber, RUINS_OF_ALPH_HO_OH_CHAMBER, $00, 0
-	map_attributes RuinsOfAlphKabutoChamber, RUINS_OF_ALPH_KABUTO_CHAMBER, $00, 0
-	map_attributes RuinsOfAlphOmanyteChamber, RUINS_OF_ALPH_OMANYTE_CHAMBER, $00, 0
-	map_attributes RuinsOfAlphAerodactylChamber, RUINS_OF_ALPH_AERODACTYL_CHAMBER, $00, 0
-	map_attributes RuinsOfAlphInnerChamber, RUINS_OF_ALPH_INNER_CHAMBER, $00, 0
-	map_attributes RuinsOfAlphResearchCenter, RUINS_OF_ALPH_RESEARCH_CENTER, $00, 0
+	map_attributes SanskritRuinsHoOhChamber, SANSKRIT_RUINS_HO_OH_CHAMBER, $00, 0
+	map_attributes SanskritRuinsKabutoChamber, SANSKRIT_RUINS_KABUTO_CHAMBER, $00, 0
+	map_attributes SanskritRuinsOmanyteChamber, SANSKRIT_RUINS_OMANYTE_CHAMBER, $00, 0
+	map_attributes SanskritRuinsAerodactylChamber, SANSKRIT_RUINS_AERODACTYL_CHAMBER, $00, 0
+	map_attributes SanskritRuinsInnerChamber, SANSKRIT_RUINS_INNER_CHAMBER, $00, 0
+	map_attributes SanskritRuinsResearchCenter, SANSKRIT_RUINS_RESEARCH_CENTER, $00, 0
 	map_attributes BoulderMine1F, BOULDER_MINE_1F, $1D, 0
 	map_attributes BoulderMineB1F, BOULDER_MINE_B1F, $1D, 0
 	map_attributes BoulderMineB5F, BOULDER_MINE_B5F, $0B, 0
@@ -515,7 +515,7 @@ ENDM
 	map_attributes KikaiCaldera2F, KIKAI_CALDERA_2F, $59, 0
 	map_attributes KikaiCaldera3F, KIKAI_CALDERA_3F, $59, 0
 	map_attributes TeknosTradeHouse, TEKNOS_TRADE_HOUSE, $00, 0
-	map_attributes Route112RuinsOfAlphGate, ROUTE_112_RUINS_OF_ALPH_GATE, $00, 0
+	map_attributes Route112SanskritRuinsGate, ROUTE_112_SANSKRIT_RUINS_GATE, $00, 0
 	map_attributes Route106Pokecenter1F, ROUTE_106_POKECENTER_1F, $00, 0
 	map_attributes Route103WestportGate, ROUTE_103_WESTPORT_GATE, $00, 0
 	map_attributes Route103NationalParkGate, ROUTE_103_NATIONAL_PARK_GATE, $00, 0
