@@ -489,3 +489,10 @@ In-progress 5.05
 - Removed fishing data from maps that don't have water to fish in
 - Renamed all internal references of "Ruins of Alph" to "Sanskrit Ruins"
 - Only gameplay change- Starmie can no longer be caught in Kikai Strait, keeping consistent with stone evo Mons not being catchable in the wild
+
+6.25
+- Fixed issue where rematches with Schoolboy Alan could have incorrect parties
+- Fixed issue where rematches with Pokemaniac Brent could have incorrect parties
+- Fixed issue where phone calls from Pokemaniac Brent could mention catching a Clefable, which is not possible to do
+- Fixed issue where phone calls from Fisher Tully could mention catching a Clefable, which is not possible to do
+- Minor grammar fixes

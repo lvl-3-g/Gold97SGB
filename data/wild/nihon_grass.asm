@@ -203,6 +203,35 @@ NihonGrassWildMons:
 	db 5, GASTLY
 
 	
+	map_id ROUTE_119; no grass, only used so Fisher Tully has correct phone data - this matches surfing wild mons for this route
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	db 12, GOLDEEN
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	; day
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	db 12, GOLDEEN
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	; nite
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	db 12, GOLDEEN
+	db 12, GOLDEEN
+	db 13, MARILL
+	db 13, SEAKING
+	
+
+	
 	map_id ROUTE_120
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -229,6 +258,35 @@ NihonGrassWildMons:
 	db 12, HOPPIP
 	db 14, HOPPIP
 	db 14, HOPPIP
+	
+
+	
+	map_id BOARDWALK; no grass, only used so Pokemaniac Brent has correct phone data - this matches surfing wild mons for this route
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
+	db 18, GOLDEEN
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
+	; day
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
+	db 18, GOLDEEN
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
+	; nite
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
+	db 18, GOLDEEN
+	db 18, GOLDEEN
+	db 21, POLIWAG
+	db 21, SEAKING
 	
 
 	map_id BOULDER_MINE_1F
