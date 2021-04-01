@@ -500,3 +500,6 @@ In-progress 5.05
 6.26
 - Fixed issue where a warp in the Westport department basement was incorrectly placed
 - Cleaned up some dialogue
+
+6.27
+- Fixed issue with tileset in Iced Cavern
