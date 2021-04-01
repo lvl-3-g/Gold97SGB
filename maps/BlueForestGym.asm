@@ -43,7 +43,7 @@ BlueForestGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_BRAD
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	setevent EVENT_BEAT_SKIER_CLARISSA
-	setevent EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM; for workers south of town
+	setevent EVENT_ROUTE_112_SNOW_STORM; for workers south of town
 	setevent EVENT_STAND_CITY_ZOO_MONS; makes normal pokes in zoo disappear
 	writetext PryceText_GlacierBadgeSpeech
 	buttonsound

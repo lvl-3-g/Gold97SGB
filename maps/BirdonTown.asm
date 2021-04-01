@@ -50,16 +50,6 @@ BirdonTownJadetForestSign:
 	jumptext BirdonTownJadeForestSignText
 
 BirdonTownPokecenterSign:
-;	setevent EVENT_CLEARED_RADIO_TOWER
-;	clearflag ENGINE_ROCKETS_IN_RADIO_TOWER
-;	setevent EVENT_WESTPORT_CITY_ROCKET_TAKEOVER
-;	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-;	clearevent EVENT_WESTPORT_CITY_CIVILIANS
-;	clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
-;	setevent EVENT_TEAM_ROCKET_DISBANDED
-;	clearevent EVENT_STAND_CITY_ZOO_MONS
-;	setevent EVENT_RED_IN_KANTO_GYM
-;	clearevent EVENT_TELEPORT_GUY
 	jumpstd PokecenterSignScript
 
 BirdonTownMartSign:

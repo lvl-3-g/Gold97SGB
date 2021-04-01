@@ -300,15 +300,8 @@ Route112Worker2Script:
 	jumptextfaceplayer Route112Worker2Text
 
 Route112OfficerText:
-	text "A recent storm"
-	line "blew a large"
-	para "amount of snow"
-	line "down the hill and"
-	cont "into this gate."
-	para "The storm had"
-	line "damaged the doors"
-	para "and broken the"
-	line "windows."
+	text "A recent snowstorm"
+	line "damaged this gate."
 	para "We're working on"
 	line "getting it"
 	cont "repaired."
@@ -320,12 +313,10 @@ Route112Worker1Text:
 	line "a much lower"
 	para "altitude than"
 	line "BLUE FOREST."
-	para "Snow mixed with"
-	line "strong winds from"
-	para "a storm blowing"
-	line "down this hill was"
-	para "too much for this"
-	line "gate to handle!"
+	para "The storm blew"
+	line "snow down the"
+	para "hill and right"
+	line "into this gate!"
 	done
 	
 Route112Worker2Text:
@@ -497,8 +488,8 @@ Route112_MapEvents:
 	object_event  2, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route112GreatBall, EVENT_ROUTE_112_GREAT_BALL
 	object_event 14, 12, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_112_FRIEDA_OF_FRIDAY
 	object_event 16, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route112Repel, EVENT_ROUTE_112_REPEL
-	object_event 10, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112OfficerScript, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
-	object_event 11, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker1Script, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
-	object_event 13, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker2Script, EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM
+	object_event 10, 47, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112OfficerScript, EVENT_ROUTE_112_SNOW_STORM
+	object_event 11, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker1Script, EVENT_ROUTE_112_SNOW_STORM
+	object_event 13, 48, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 3, Route112Worker2Script, EVENT_ROUTE_112_SNOW_STORM
 	object_event  4,  9, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerPicnickerGina1, -1
 	object_event  4, 16, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route112Tree, -1

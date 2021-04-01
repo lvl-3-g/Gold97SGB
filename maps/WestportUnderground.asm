@@ -674,8 +674,8 @@ WestportUnderground_MapEvents:
 	warp_event  6,  0, WESTPORT_DEPT_STORE_ELEVATOR, 1
 	warp_event 18,  2, WESTPORT_BIKE_SHOP, 1
 	warp_event 12,  6, WESTPORT_UNDERGROUND, 4
+	warp_event  0, 35, WESTPORT_UNDERGROUND, 3
 	warp_event  1, 35, WESTPORT_UNDERGROUND, 3
-	warp_event  2, 35, WESTPORT_UNDERGROUND, 3
 	warp_event 12, 14, WESTPORT_UNDERGROUND, 7
 	warp_event 14, 35, WESTPORT_UNDERGROUND, 6
 	warp_event 15, 35, WESTPORT_UNDERGROUND, 6

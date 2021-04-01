@@ -1497,7 +1497,7 @@
 	const EVENT_IMPOSTOR_AND_EXECUTIVE_DISAPPEAR; used to make imposter and executive disappear in boss room
 	const EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_2
 	const EVENT_TEAM_ROCKET_BASE_B1F_ELECTRODE_3
-	const EVENT_BLUE_FOREST_SUPER_NERD_BLOCKS_GYM; used for workers on route 32/112
+	const EVENT_ROUTE_112_SNOW_STORM; used for workers on route 32/112
 	const EVENT_ROCKETS_IN_ROCKET_BASE; this is the event for clearing the rocket hideout in stand city, but not the the radio tower
 	const EVENT_DAY_CARE_MAN_IN_DAY_CARE
 	const EVENT_DAY_CARE_MAN_ON_ROUTE_113
