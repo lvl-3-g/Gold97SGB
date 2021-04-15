@@ -503,3 +503,7 @@ In-progress 5.05
 
 6.27
 - Fixed issue with tileset in Iced Cavern
+
+6.28
+- Fixed issue with tileset in Iced Cavern again because I'm dumb
+- Fixed spelling error in Buena's dialogue in Radio Tower 2f

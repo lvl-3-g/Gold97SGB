@@ -94,7 +94,7 @@ RadioTower2fBuenaText:
 	line "to host a new"
 	cont "radio show!"
 	para "I can't wait until"
-	line "it stats airing!"
+	line "it starts airing!"
 	done
 	
 RadioTower2fBuenaTextTakeover:
