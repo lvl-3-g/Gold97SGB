@@ -108,7 +108,8 @@ RocketEncounterScript:
 	disappear SLOWPOKEB2F_ELDER
 	setevent EVENT_ELDER_IN_WELL
 	setevent EVENT_103_SLOWPOKE_SALESMAN
-	setevent EVENT_FROSTPOINT_ROCKS_CLEARED
+	setevent EVENT_BOARDWALK_PATH_IS_OPEN
+	setevent EVENT_SANSKRIT_ROCKET_HOUSE_KEY_ITEM
 	setscene SCENE_SLOWPOKE2_NOTHING
 	clearevent EVENT_BLUE_OAK_LAB_FRONT_ROOM_2
 	setmapscene OAK_LAB_FRONT_ROOM, SCENE_OAK_LAB_FRONT_ROOM_NOTHING
@@ -275,7 +276,7 @@ SlowpokeWellB2FGymGuyText:
 	line "KING'S ROCK often"
 
 	para "gets bitten by a"
-	line "TURBAN."
+	line "DISTURBAN."
 
 	para "Here, I'll share a"
 	line "KING'S ROCK with"

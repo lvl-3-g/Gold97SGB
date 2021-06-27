@@ -56,7 +56,7 @@ BirdonTownMartSign:
 	jumpstd MartSignScript
 
 WhiteApricornTree:
-	fruittree FRUITTREE_BIRDON_TOWN
+	fruittree FRUITTREE_TREE_BIRDON_TOWN
 
 BirdonTownHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_BIRDON_TOWN_HIDDEN_FULL_HEAL

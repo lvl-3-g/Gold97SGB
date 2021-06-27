@@ -601,10 +601,10 @@ Credits_LoadBorderGFX:
 	dw CreditsElekidGFX
 	dw CreditsElekidGFX    + 32 tiles
 
-	dw CreditsTangleGFX
-	dw CreditsTangleGFX   + 16 tiles
-	dw CreditsTangleGFX   + 32 tiles
-	dw CreditsTangleGFX   + 48 tiles
+	dw CreditsBurgelaGFX
+	dw CreditsBurgelaGFX   + 16 tiles
+	dw CreditsBurgelaGFX   + 32 tiles
+	dw CreditsBurgelaGFX   + 48 tiles
 
 Credits_TheEnd:
 	ld a, $40
@@ -626,7 +626,7 @@ CreditsMonsGFX: ; used only for BANK(CreditsMonsGFX)
 CreditsBellossomGFX: INCBIN "gfx/credits/bellossom.2bpp"
 CreditsTogepiGFX:    INCBIN "gfx/credits/togepi.2bpp"
 CreditsElekidGFX:    INCBIN "gfx/credits/elekid.2bpp"
-CreditsTangleGFX:   INCBIN "gfx/credits/tangle.2bpp"
+CreditsBurgelaGFX:   INCBIN "gfx/credits/burgela.2bpp"
 
 INCLUDE "data/credits_script.asm"
 INCLUDE "data/credits_strings_pointers.asm"

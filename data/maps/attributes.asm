@@ -438,12 +438,12 @@ ENDM
 	map_attributes AmpareCavernB1F, AMPARE_CAVERN_B1F, $1D, 0
 	map_attributes AmpareCavern1F, AMPARE_CAVERN_1F, $09, 0
 	map_attributes DeepwaterPassageEntrance, DEEPWATER_PASSAGE_ENTRANCE, $09, 0
-	map_attributes DragonsDenB1F, DRAGONS_DEN_B1F, $09, 0
+	map_attributes DragonsMaw1F, DRAGONS_MAW_1F, $09, 0
 	map_attributes TohjoFalls, TOHJO_FALLS, $09, 0
 	map_attributes AlloyPokecenter1F, ALLOY_POKECENTER_1F, $00, 0
 	map_attributes AlloyGym, ALLOY_GYM, $00, 0
 	map_attributes AlloyTimsHouse, ALLOY_TIMS_HOUSE, $00, 0
-	map_attributes AlloyHouseBeta, ALLOY_HOUSE_BETA, $00, 0
+	map_attributes AlloySailorHoOhHouse, ALLOY_SAILOR_HO_OH_HOUSE, $00, 0
 	map_attributes AlloyPunishmentSpeechHouse, ALLOY_PUNISHMENT_SPEECH_HOUSE, $00, 0
 	map_attributes AlloyGoodRodHouse, ALLOY_GOOD_ROD_HOUSE, $00, 0
 	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
@@ -463,8 +463,8 @@ ENDM
 	map_attributes BoulderMineB3F, BOULDER_MINE_B3F, $09, 0
 	map_attributes SafariZoneStandGateBeta, SAFARI_ZONE_STAND_GATE_BETA, $00, 0
 	map_attributes NanjoForest, NANJO_FOREST, $00, 0
-	map_attributes VictoryRoad, VICTORY_ROAD, $09, 0
-	map_attributes VictoryRoad2F, VICTORY_ROAD_2F, $09, 0
+	map_attributes MtFujiInteriorLower, MT_FUJI_INTERIOR_LOWER, $09, 0
+	map_attributes MtFujiInteriorUpper, MT_FUJI_INTERIOR_UPPER, $09, 0
 	map_attributes TeknosPokecenter1F, TEKNOS_POKECENTER_1F, $00, 0
 	map_attributes TeknosFishingHouse, TEKNOS_FISHING_HOUSE, $00, 0
 	map_attributes KantoLaboratory, KANTO_LABORATORY, $00, 0
@@ -504,7 +504,7 @@ ENDM
 	map_attributes BoardwalkGate, BOARDWALK_GATE, $00, 0
 	map_attributes PagotaMart, PAGOTA_MART, $00, 0
 	map_attributes PagotaGym, PAGOTA_GYM, $00, 0
-	map_attributes EarlsPokemonAcademy, EARLS_POKEMON_ACADEMY, $00, 0
+	map_attributes PagotaPokemonAcademy, PAGOTA_POKEMON_ACADEMY, $00, 0
 	map_attributes PagotaNicknameSpeechHouse, PAGOTA_NICKNAME_SPEECH_HOUSE, $00, 0
 	map_attributes PagotaPokecenter1F, PAGOTA_POKECENTER_1F, $00, 0
 	map_attributes KikaiPokecenter1F, KIKAI_POKECENTER_1F, $00, 0
@@ -641,7 +641,7 @@ ENDM
 	map_attributes SilentPokecenter2FBeta, SILENT_POKECENTER_2F_BETA, $00, 0
 	map_attributes Route116NuggetHouse, ROUTE_116_NUGGET_HOUSE, $00, 0
 	map_attributes Route116BirdonGate, ROUTE_116_BIRDON_GATE, $00, 0
-	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
+	map_attributes CrownPathGate, CROWN_PATH_GATE, $00, 0
 	map_attributes OakLabFrontRoom, OAK_LAB_FRONT_ROOM, $00, 0
 	map_attributes OakLabBackRoom, OAK_LAB_BACK_ROOM, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0

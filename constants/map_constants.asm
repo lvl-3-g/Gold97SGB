@@ -31,7 +31,7 @@ ENDM
 	map_const ALLOY_POKECENTER_1F,                        8,  4 ;  1
 	map_const ALLOY_GYM,                                 10,  8 ;  2
 	map_const ALLOY_TIMS_HOUSE,                           5,  4 ;  3
-	map_const ALLOY_HOUSE_BETA,                           5,  4 ;  4
+	map_const ALLOY_SAILOR_HO_OH_HOUSE,                           5,  4 ;  4
 	map_const ALLOY_PUNISHMENT_SPEECH_HOUSE,              5,  4 ;  5
 	map_const ALLOY_GOOD_ROD_HOUSE,                       5,  4 ;  6
 	map_const ALLOY_CAFE,                                 4,  4 ;  7
@@ -129,8 +129,8 @@ ENDM
 	map_const BOULDER_MINE_B3F,                             20, 9 ; 79
 	map_const SAFARI_ZONE_STAND_GATE_BETA,                5,  4 ; 80
 	map_const NANJO_FOREST,                            20, 18 ; 81
-	map_const VICTORY_ROAD,                                20, 27 ; 91
-	map_const VICTORY_ROAD_2F,                             20, 27 ; 91
+	map_const MT_FUJI_INTERIOR_LOWER,                                20, 27 ; 91
+	map_const MT_FUJI_INTERIOR_UPPER,                             20, 27 ; 91
 
 	newgroup                                                      ;  4
 
@@ -231,7 +231,7 @@ ENDM
 	map_const PAGOTA_CITY,                                 20, 18 ;  5
 	map_const PAGOTA_MART,                                  8,  4 ;  6
 	map_const PAGOTA_GYM,                                   5,  8 ;  7
-	map_const EARLS_POKEMON_ACADEMY,                        4,  8 ;  8
+	map_const PAGOTA_POKEMON_ACADEMY,                        4,  8 ;  8
 	map_const PAGOTA_NICKNAME_SPEECH_HOUSE,                 4,  4 ;  9
 	map_const PAGOTA_POKECENTER_1F,                         8,  4 ; 10
 	map_const ROUTE_112_SANSKRIT_RUINS_GATE,                  5,  4 ; 12
@@ -242,7 +242,7 @@ ENDM
 	map_const EARLS_MUSEUM,                                  8,  4 ; 11
 	map_const ROUTE_102_GAME_HOUSE,                        4,  4 ;  8
 	map_const ROUTE_102_WEST_GATE,                        5,  4 ; 18
-	map_const DRAGONS_DEN_B1F,                             20, 18 ; 81
+	map_const DRAGONS_MAW_1F,                             20, 18 ; 81
 
 	newgroup                                                      ; 11
 
@@ -452,7 +452,7 @@ ENDM
 	map_const TRAINER_HOUSE_B1F,                            5,  8 ;  7
 	map_const SILENT_POKECENTER_2F_BETA,                  8,  4 ; 10
 	map_const ROUTE_116_NUGGET_HOUSE,                         4,  4 ; 11
-	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
+	map_const CROWN_PATH_GATE,                           10,  9 ; 13
 	map_const MOTOBU_PATH_IEJIMA_GATE,                       5,  4 ;  4
 	map_const HYDRO_PLANT,                                 20, 18 ; 10
 	map_const IEJIMA_POKECENTER_1F,							8,  4

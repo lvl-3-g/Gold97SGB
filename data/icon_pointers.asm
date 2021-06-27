@@ -37,5 +37,5 @@ IconPointers:
 	dw BlisseyIcon
 	dw GyaradosIcon
 	dw SlowpokeIcon
-	dw BipetalIcon
+	dw BellignanIcon
 	dw BigmonIcon

@@ -97,7 +97,7 @@ MeridianPathProtein:
 	itemball PROTEIN
 
 MeridianPathHiddenPotion:
-	hiddenitem POTION, EVENT_MERIDIAN_PATH_HIDDEN_POTION
+	hiddenitem HYPER_POTION, EVENT_MERIDIAN_PATH_HIDDEN_POTION
 	
 MeridianPathSign:
 	jumptext MeridianPathSignText

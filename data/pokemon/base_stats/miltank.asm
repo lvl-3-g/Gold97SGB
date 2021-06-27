@@ -1,4 +1,4 @@
-	db MILTANK ; 242 actually chix
+	db MILTANK ; 242 actually dodaerie
 
 	db  95,  80, 105, 100,  40,  70
 	;   hp  atk  def  spd  sat  sdf

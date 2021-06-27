@@ -1121,13 +1121,13 @@ IntroScene10:
 	ld bc, vTiles1 - vTiles0
 	call Decompress
 
-	ld c, HAPPA
+	ld c, CHIKORITA
 	ld de, vTiles0 tile $10
 	farcall Intro_GetMonFrontpic
-	ld c, FLAMBEAR
+	ld c, CUBBURN
 	ld de, vTiles0 tile $29
 	farcall Intro_GetMonFrontpic
-	ld c, CRUISEAL
+	ld c, PALSSIO
 	ld de, vTiles0 tile $42
 	farcall Intro_GetMonFrontpic
 
@@ -1336,42 +1336,42 @@ Intro_CheckSCYEvent:
 	jp hl
 
 .scy_jumptable
-	dbw $86, Intro_LoadHappaPalette
-	dbw $87, Intro_HappaAppears
+	dbw $86, Intro_LoadChikoritaPalette
+	dbw $87, Intro_ChikoritaAppears
 	dbw $88, Functione53e0
 	dbw $98, Functione53eb
-	dbw $99, Intro_LoadFlambearPalette
-	dbw $af, Intro_FlambearAppears
+	dbw $99, Intro_LoadCubburnPalette
+	dbw $af, Intro_CubburnAppears
 	dbw $b0, Functione53e0
 	dbw $c0, Functione53eb
-	dbw $c1, Intro_LoadCruisealPalette
-	dbw $d7, Intro_CruisealAppears
+	dbw $c1, Intro_LoadPalssioPalette
+	dbw $d7, Intro_PalssioAppears
 	dbw $d8, Functione53e0
 	dbw $e8, Functione53eb
 	dbw $e9, Functione5412
 	db -1
 
-Intro_HappaAppears:
+Intro_ChikoritaAppears:
 	ld de, SFX_GS_INTRO_POKEMON_APPEARS
 	call PlaySFX
 	depixel 22, 1
-	ld a, SPRITE_ANIM_INDEX_GS_INTRO_HAPPA
+	ld a, SPRITE_ANIM_INDEX_GS_INTRO_CHIKORITA
 	call InitSpriteAnimStruct
 	ret
 
-Intro_FlambearAppears:
+Intro_CubburnAppears:
 	ld de, SFX_GS_INTRO_POKEMON_APPEARS
 	call PlaySFX
 	depixel 22, 20
-	ld a, SPRITE_ANIM_INDEX_GS_INTRO_FLAMBEAR
+	ld a, SPRITE_ANIM_INDEX_GS_INTRO_CUBBURN
 	call InitSpriteAnimStruct
 	ret
 
-Intro_CruisealAppears:
+Intro_PalssioAppears:
 	ld de, SFX_GS_INTRO_POKEMON_APPEARS
 	call PlaySFX
 	depixel 22, 1
-	ld a, SPRITE_ANIM_INDEX_GS_INTRO_CRUISEAL
+	ld a, SPRITE_ANIM_INDEX_GS_INTRO_PALSSIO
 	call InitSpriteAnimStruct
 	ret
 
@@ -1389,25 +1389,25 @@ Functione53eb:
 	call DmgToCgbBGPals
 	ret
 
-Intro_LoadHappaPalette:
-	ld c, HAPPA
+Intro_LoadChikoritaPalette:
+	ld c, CHIKORITA
 	farcall Intro_LoadMonPalette
 	ret
 
-Intro_LoadFlambearPalette:
-	ld c, FLAMBEAR
+Intro_LoadCubburnPalette:
+	ld c, CUBBURN
 	farcall Intro_LoadMonPalette
 	ret
 
-Intro_LoadCruisealPalette:
-	ld c, CRUISEAL
+Intro_LoadPalssioPalette:
+	ld c, PALSSIO
 	farcall Intro_LoadMonPalette
 	ret
 
 Functione5412:
 	ldh a, [hCGB]
 	and a
-	ld c, FLAMBEAR
+	ld c, CUBBURN
 	jr nz, .got_mon
 	ld c, CHARIZARD
 .got_mon

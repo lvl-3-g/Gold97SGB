@@ -19,8 +19,8 @@ INCLUDE "maps/BoulderMineB2F.asm"
 INCLUDE "maps/BoulderMineB3F.asm"
 INCLUDE "maps/SafariZoneStandGateBeta.asm"
 INCLUDE "maps/NanjoForest.asm"
-INCLUDE "maps/VictoryRoad.asm"
-INCLUDE "maps/VictoryRoad2F.asm"
+INCLUDE "maps/MtFujiInteriorLower.asm"
+INCLUDE "maps/MtFujiInteriorUpper.asm"
 INCLUDE "maps/KikaiPokecenter1F.asm"
 INCLUDE "maps/KikaiMart.asm"
 
@@ -115,7 +115,7 @@ INCLUDE "maps/RyukyuElevator.asm"
 INCLUDE "maps/AmpareCavernB1F.asm"
 INCLUDE "maps/AmpareCavern1F.asm"
 INCLUDE "maps/DeepwaterPassageEntrance.asm"
-INCLUDE "maps/DragonsDenB1F.asm"
+INCLUDE "maps/DragonsMaw1F.asm"
 INCLUDE "maps/TohjoFalls.asm"
 
 
@@ -229,7 +229,7 @@ SECTION "Map Scripts 16", ROMX
 INCLUDE "maps/AlloyPokecenter1F.asm"
 INCLUDE "maps/AlloyGym.asm"
 INCLUDE "maps/AlloyTimsHouse.asm"
-INCLUDE "maps/AlloyHouseBeta.asm"
+INCLUDE "maps/AlloySailorHoOhHouse.asm"
 INCLUDE "maps/AlloyPunishmentSpeechHouse.asm"
 INCLUDE "maps/AlloyGoodRodHouse.asm"
 INCLUDE "maps/AlloyCafe.asm"
@@ -300,7 +300,7 @@ SECTION "Map Scripts 21", ROMX
 
 INCLUDE "maps/PagotaMart.asm"
 INCLUDE "maps/PagotaGym.asm"
-INCLUDE "maps/EarlsPokemonAcademy.asm"
+INCLUDE "maps/PagotaPokemonAcademy.asm"
 INCLUDE "maps/PagotaNicknameSpeechHouse.asm"
 INCLUDE "maps/PagotaPokecenter1F.asm"
 INCLUDE "maps/TeknosTradeHouse.asm"
@@ -465,7 +465,7 @@ INCLUDE "maps/SilentPokecenter1F.asm"
 INCLUDE "maps/SilentPokecenter2FBeta.asm"
 INCLUDE "maps/Route116NuggetHouse.asm"
 INCLUDE "maps/Route116BirdonGate.asm"
-INCLUDE "maps/VictoryRoadGate.asm"
+INCLUDE "maps/CrownPathGate.asm"
 
 
 SECTION "Map Scripts 30", ROMX

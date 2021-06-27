@@ -97,10 +97,10 @@ Changelog
 2.20
 - Can no longer ride bike and skateboard on second floor of gates
 - capitalization for "LEAGUE challenge" has been made consistent
-- stats for Madame have been boosted slightly
+- stats for Luxwan have been boosted slightly
 - "Boulders may now be moved!" changed to "Heavy objects may now be moved!"
 - Collision issue in Aquarium 1F has been fixed
-- Rival battle in Stand City now has Raitora instead of Kotora
+- Rival battle in Stand City now has Straigar instead of Tyker
 - Wild Magikarp levels in Endon Cave have been decreased slightly
 - Apricorn balls now function properly
 - Minor text fixes in Alloy Cafe
@@ -130,10 +130,10 @@ Changelog
 
 2.30
 - Caterpie and Weedle now appear in Silent Hills
-- Boulder Mine B5F is now ice themed, has Wolfan encounters
+- Boulder Mine B5F is now ice themed, has Warfurs encounters
 - Hitmonchan and Hitmonlee can no longer be encountered in Kikai Caldera
 - Politoed can no longer be encountered on Tropical Island
-- New cries taken from Reforged for Osunfish and Cruiseal/Flambear lines
+- New cries taken from Reforged for Molambino and Palssio/Cubburn lines
 - Issue fixed where you could stand on top of NPC while being judged for Bug Catching Contest
 
 2.31
@@ -152,8 +152,8 @@ Changelog
 
 2.40
 - Changed all isntances of "BIKERs" to "BIKERS"
-- Complete re-work of Bomseal's status and learnset
-- Rival's Bomseal's moves adjusted to match new learnset
+- Complete re-work of Grenmar's status and learnset
+- Rival's Grenmar's moves adjusted to match new learnset
 - New learnset for Quagsire
 
 2.50
@@ -164,13 +164,13 @@ Changelog
 - Slowbro and Slowking now learn Body Slam
 - Magnemite line now learns Thunderbolt
 - Exeggcute now learns Synthesis
-- Cruiseal line now learns Powder Snow
+- Palssio line now learns Powder Snow
 - Natu line now learns Quick Attack
-- Grotess now learns Crunch
+- Lurreel now learns Crunch
 - Girafarig now learns Crunch
-- Turban now learns Crunch
-- Rinring line now learns Bite
-- Wolfan line now learns Low Kick and Slash
+- Disdisturban now learns Crunch
+- Moibelle line now learns Bite
+- Warfurs line now learns Low Kick and Slash
 
 2.51
 - Changed all instances of "badge" to "BADGE"
@@ -179,7 +179,7 @@ Changelog
 - Added Sage Yurei to Birdon Gym
 - Added Skier Clarissa to Blue Forest Gym
 - Slight redesign of Blue Forest Gym
-- Bumped Animon's stats
+- Bumped Mimmeo's stats
 - Fixed border tile issue in Alloy City
 - Fixed border tile issue in Kanto Region
 - Added NPC in Kanto Region to block border tile issue from being visible
@@ -199,7 +199,7 @@ Changelog
 - Added Clerk and shopper NPC to Westport Underground
 
 2.62
-- Fixed text error in Twinz's Pokedex entry
+- Fixed text error in Bipulla's Pokedex entry
 
 2.63
 - Added cutscene where Whitney talks to player after beating Rockets in Aquarium
@@ -219,9 +219,9 @@ Changelog
 - Made Pinsir and Scyther available in Jade forest
 - Made Murkrow available on Routes 104 and 105
 - For some reason "TREEMON_CITY" maps weren't spawning headbutt tree Mons, no idea why, but changed those maps to use previously unused "TREEMON_CANYON" Mons, which work properly
-- Bugsy's first battle now has Pinsir instead of Pluckross
+- Bugsy's first battle now has Pinsir instead of Tricules
 - Falkner's levels boosted slightly
-- Scizor and Pluckross now available in Nanjo Forest
+- Scizor and Tricules now available in Nanjo Forest
 - Moved unused sign text to be inaccessible in Stand City
 
 2.71
@@ -272,7 +272,7 @@ Changelog
 
 4.03
 - Fixed map label for Kanto Hotel and fixed dialogue within map
-- Changed trade in Teknos City from Bellsprout>Curstraw to Curstraw>Wolfan
+- Changed trade in Teknos City from Bellsprout>Stromen to Stromen>Warfurs
 
 4.04
 - Minor grammar fix in mom's speech at beginning of game
@@ -434,7 +434,7 @@ In-progress 5.05
 
 6.10
 - Tweaked dialogue for executive in rocket base
-- Brought over Kotora/Raitora cries from Reforged
+- Brought over Tyker/Straigar cries from Reforged
 - Lots and lots of behind-the-scenes renames of event flags
 
 6.11
@@ -451,7 +451,7 @@ In-progress 5.05
 
 6.14
 - Fixed coloration issue in dept store maps
-- Flambear line can now learn Crunch
+- Cubburn line can now learn Crunch
 
 6.15
 - Minor fixes to port tileset

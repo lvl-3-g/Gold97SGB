@@ -1,4 +1,5 @@
 	object_const_def ; object_event constants
+	const OAKSOLDLAB_AIDE
 
 OaksLab_MapScripts:
 	db 0 ; scene scripts
@@ -16,6 +17,18 @@ OaksLabPoster2:
 	
 OaksLabPC:
 	jumptext OaksLabPCText
+	
+OaksOldLabAideScript:
+	jumptextfaceplayer OaksOldLabAideText
+	
+OaksOldLabAideText:
+	text "Hiya!"
+	para "PROF.OAK is study-"
+	line "ing over in SILENT"
+	cont "TOWN!"
+	para "I'm here watching"
+	line "over his old LAB."
+	done
 
 OaksLabPoster1Text:
 	text "Press START to"
@@ -53,4 +66,6 @@ OaksLab_MapEvents:
 	bg_event  4,  0, BGEVENT_READ, OaksLabPoster2
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  4,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, OaksOldLabAideScript, -1
+

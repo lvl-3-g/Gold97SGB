@@ -184,12 +184,12 @@ BattleScriptMainBranch:
 	writetext TimeToBattle
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
-	iftrue .Cruiseal
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Happa
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
+	iftrue .Palssio
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Chikorita
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_CRUISEAL
+	loadtrainer RIVAL1, RIVAL1_1_PALSSIO
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -198,9 +198,9 @@ BattleScriptMainBranch:
 	jump .AfterYourDefeat
 
 
-.Cruiseal:
+.Palssio:
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_HAPPA
+	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
@@ -208,9 +208,9 @@ BattleScriptMainBranch:
 	iftrue .AfterVictorious
 	jump .AfterYourDefeat
 
-.Happa:
+.Chikorita:
 	winlosstext SilverEntranceWinText, SilverEntranceLossText
-	loadtrainer RIVAL1, RIVAL1_1_FLAMBEAR
+	loadtrainer RIVAL1, RIVAL1_1_CUBBURN
 	writecode VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic

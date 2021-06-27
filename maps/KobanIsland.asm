@@ -158,7 +158,7 @@ KobanIsland_MapEvents:
 	warp_event  5, 10, KOBAN_MART, 1
 	warp_event  9, 10, KOBAN_POKECENTER_1F, 1
 	warp_event 15,  9, KOBAN_HOUSE_2, 1
-	warp_event 13,  5, DRAGONS_DEN_B1F, 1
+	warp_event 13,  5, DRAGONS_MAW_1F, 1
 
 	db 0 ; coord events
 

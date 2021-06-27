@@ -6,5 +6,5 @@
 	next "it stretches to"
 
 	page "become like a net"
-	next "to entangle its"
+	next "to enburgela its"
 	next "prey.@"

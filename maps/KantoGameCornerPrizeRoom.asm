@@ -357,7 +357,7 @@ KantoGameCornerPrizeRoomPokemonVendor:
 	closewindow
 	ifequal 1, .pikachu
 	ifequal 2, .porygon
-	ifequal 3, .wolfan
+	ifequal 3, .warfurs
 	jump KantoPrizeRoom_cancel
 
 .pikachu
@@ -396,21 +396,21 @@ KantoGameCornerPrizeRoomPokemonVendor:
 	takecoins 5555
 	jump .loop
 
-.wolfan
+.warfurs
 	checkcoins 8888
 	ifequal HAVE_LESS, KantoPrizeRoom_notenoughcoins
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, KantoPrizeRoom_notenoughroom
-	pokenamemem WOLFAN, MEM_BUFFER_0
+	pokenamemem WARFURS, MEM_BUFFER_0
 	scall KantoPrizeRoom_askbuy
 	iffalse KantoPrizeRoom_cancel
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext KantoPrizeRoom_HereYouGoText
 	waitbutton
-	writebyte WOLFAN
+	writebyte WARFURS
 	special GameCornerPrizeMonCheckDex
-	givepoke WOLFAN, 40
+	givepoke WARFURS, 40
 	takecoins 8888
 	jump .loop
 
@@ -425,7 +425,7 @@ KantoGameCornerPrizeRoomPokemonVendor:
 	db 4 ; items
 	db "PIKACHU    2222@"
 	db "PORYGON    5555@"
-	db "WOLFAN     8888@"
+	db "WARFURS    8888@"
 	db "CANCEL@"
 	
 DummyVendorScript:

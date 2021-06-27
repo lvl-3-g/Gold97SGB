@@ -10,7 +10,7 @@ SanskritMart_MapScripts:
 
 SanskritMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_VIRIDIAN
+	pokemart MARTTYPE_STANDARD, MART_ACTUAL_SANSKRIT
 	closetext
 	end
 

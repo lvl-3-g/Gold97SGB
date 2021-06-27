@@ -173,7 +173,7 @@ Route103TMRollout:
 	itemball TM_ROLLOUT
 
 Route103FruitTree:
-	fruittree FRUITTREE_ROUTE_103
+	fruittree FRUITTREE_TREE_ROUTE_103
 	
 
 SlowpokeTailSalesmanScript:

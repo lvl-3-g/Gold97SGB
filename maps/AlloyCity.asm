@@ -271,7 +271,7 @@ AlloyCity_MapEvents:
 	warp_event 23, 22, ALLOY_GOOD_ROD_HOUSE, 1
 	warp_event  5, 23, ALLOY_CAFE, 1
 	warp_event  7, 14, ALLOY_MART, 1
-	warp_event 23, 13, ALLOY_HOUSE_BETA, 1
+	warp_event 23, 13, ALLOY_SAILOR_HO_OH_HOUSE, 1
 	warp_event 18,  5, ALLOY_ROUTE_107_GATE, 3
 	warp_event 33, 15, FIGHTING_DOJO, 1
 	warp_event 19,  5, ALLOY_ROUTE_107_GATE, 4

@@ -85,7 +85,7 @@ SWIslandsWaterWildMons:
 	db 2 percent ; encounter rate
 	db 45, TENTACOOL
 	db 48, TENTACRUEL
-	db 50, ANCHORAGE
+	db 50, ANGORE
 
 	map_id FORKED_STRAIT_EAST
 	db 2 percent
@@ -115,17 +115,17 @@ SWIslandsWaterWildMons:
 	db 2 percent
 	db 38, TENTACOOL
 	db 40, STARYU
-	db 42, OSUNFISH
+	db 42, MOLAMBINO
 	
 	map_id GREAT_EAST_STRAIT
 	db 3 percent 
-	db 43, OSUNFISH
+	db 43, MOLAMBINO
 	db 43, TENTACRUEL
-	db 45, ANCHORAGE
+	db 45, ANGORE
 	
 	map_id DAITO_RANCH
 	db 2 percent 
-	db 43, OSUNFISH
+	db 43, MOLAMBINO
 	db 43, TENTACOOL
 	db 45, TENTACRUEL
 

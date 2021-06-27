@@ -150,17 +150,17 @@ BitmasksPointers:
 	dw DragoniteBitmasks
 	dw MewtwoBitmasks
 	dw MewBitmasks
-	dw HappaBitmasks
+	dw ChikoritaBitmasks
 	dw BlossomoleBitmasks
 	dw BlossomiteBitmasks
+	dw CubburnBitmasks
 	dw FlambearBitmasks
-	dw VolbearBitmasks
-	dw DynabearBitmasks
+	dw BruinusBitmasks
 	dw CruiseBitmasks
-	dw AqualloBitmasks
-	dw AquariusBitmasks
+	dw PressioBitmasks
+	dw DonmarinBitmasks
 	dw TangBitmasks
-	dw GelaniaBitmasks
+	dw JungelaBitmasks
 	dw HoothootBitmasks
 	dw NoctowlBitmasks
 	dw LedybaBitmasks
@@ -168,13 +168,13 @@ BitmasksPointers:
 	dw SpinarakBitmasks
 	dw AriadosBitmasks
 	dw CrobatBitmasks
-	dw KotoraBitmasks
-	dw RaitoraBitmasks
+	dw TykerBitmasks
+	dw StraigarBitmasks
 	dw PichuBitmasks
 	dw CleffaBitmasks
 	dw IgglybuffBitmasks
 	dw TogepiBitmasks
-	dw PonittleBitmasks
+	dw KoltaBitmasks
 	dw NatuBitmasks
 	dw XatuBitmasks
 	dw MareepBitmasks
@@ -182,45 +182,45 @@ BitmasksPointers:
 	dw AmpharosBitmasks
 	dw BellossomBitmasks
 	dw MarillBitmasks
-	dw BomsealBitmasks
-	dw BipetalBitmasks
+	dw GrenmarBitmasks
+	dw BellignanBitmasks
 	dw PolitoedBitmasks
 	dw HoppipBitmasks
 	dw SkiploomBitmasks
 	dw JumpluffBitmasks
 	dw AipomBitmasks
-	dw KingoldBitmasks
+	dw OrfryBitmasks
 	dw SunfloraBitmasks
-	dw OsunfishBitmasks
-	dw AnchorageBitmasks
-	dw GrotessBitmasks
+	dw MolambinoBitmasks
+	dw AngoreBitmasks
+	dw LurreelBitmasks
 	dw EspeonBitmasks
 	dw UmbreonBitmasks
 	dw MurkrowBitmasks
 	dw SlowkingBitmasks
-	dw TritalesBitmasks
+	dw VulpiiiBitmasks
 	dw UnownBitmasks
-	dw TwinzBitmasks
+	dw BipullaBitmasks
 	dw GirafarigBitmasks
-	dw TurbanBitmasks
-	dw GrimbyBitmasks
+	dw DisdisturbanBitmasks
+	dw SmujjBitmasks
 	dw ParaBitmasks
-	dw AnimonBitmasks
+	dw MimmeoBitmasks
 	dw SteelixBitmasks
 	dw SnubbullBitmasks
 	dw QuagsireBitmasks
-	dw PluckrossBitmasks
+	dw TriculesBitmasks
 	dw ScizorBitmasks
-	dw RinringBitmasks
-	dw BellringBitmasks
+	dw MoibelleBitmasks
+	dw BelledamBitmasks
 	dw SneaselBitmasks
 	dw QwilfishBitmasks
-	dw NumbpuffBitmasks
-	dw MeowsyBitmasks
-	dw MadameBitmasks
-	dw CurstrawBitmasks
-	dw CurpanBitmasks
-	dw GrowliteBitmasks
+	dw KazappelinBitmasks
+	dw CoinpurBitmasks
+	dw LuxwanBitmasks
+	dw StromenBitmasks
+	dw PhandarinBitmasks
+	dw PupperonBitmasks
 	dw RemoraidBitmasks
 	dw OctilleryBitmasks
 	dw DelibirdBitmasks
@@ -239,13 +239,13 @@ BitmasksPointers:
 	dw SmoochumBitmasks
 	dw ElekidBitmasks
 	dw MagbyBitmasks
-	dw ChixBitmasks
+	dw DodaerieBitmasks
 	dw MiltankBitmasks
 	dw RaikouBitmasks
 	dw EnteiBitmasks
 	dw SuicuneBitmasks
-	dw WolfanBitmasks
-	dw WarwolfBitmasks
+	dw WarfursBitmasks
+	dw WearlycanBitmasks
 	dw LickilordBitmasks
 	dw BlisseyBitmasks
 	dw HoOhBitmasks

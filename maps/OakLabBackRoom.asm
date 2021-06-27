@@ -155,30 +155,30 @@ Oak2AfterLeagueInPerson:
 	closetext
 	end
 
-FlambearPokeBallScript:
+CubburnPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic FLAMBEAR
-	cry FLAMBEAR
+	pokepic CUBBURN
+	cry CUBBURN
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeFlambearText
+	writetext TakeCubburnText
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAK2SLAB_POKE_BALL1
-	setevent EVENT_GOT_FLAMBEAR_FROM_OAK
+	setevent EVENT_GOT_CUBBURN_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	pokenamemem FLAMBEAR, MEM_BUFFER_0
+	pokenamemem CUBBURN, MEM_BUFFER_0
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke FLAMBEAR, 5, BERRY
+	givepoke CUBBURN, 5, BERRY
 	closetext
 	applymovement OAK2SLAB_SILVER, SilverGetCruiseMovement
 	opentext
@@ -192,7 +192,7 @@ FlambearPokeBallScript:
 	waitsfx
 	buttonsound
 	closetext
-	setevent EVENT_CRUISEAL_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_PALSSIO_POKEBALL_IN_OAK_LAB_BACK_ROOM
 ;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 ;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
@@ -202,8 +202,8 @@ CruisePokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic CRUISEAL
-	cry CRUISEAL
+	pokepic PALSSIO
+	cry PALSSIO
 	waitbutton
 	closepokepic
 	opentext
@@ -211,72 +211,72 @@ CruisePokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAK2SLAB_POKE_BALL2
-	setevent EVENT_GOT_CRUISEAL_FROM_OAK
+	setevent EVENT_GOT_PALSSIO_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	pokenamemem CRUISEAL, MEM_BUFFER_0
+	pokenamemem PALSSIO, MEM_BUFFER_0
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke CRUISEAL, 5, BERRY
+	givepoke PALSSIO, 5, BERRY
 	closetext
-	applymovement OAK2SLAB_SILVER, SilverGetHappaMovement
+	applymovement OAK2SLAB_SILVER, SilverGetChikoritaMovement
 	opentext
 	writetext Text_SilverTakeThisOne
 	waitbutton
 	closetext
 	disappear OAK2SLAB_POKE_BALL3
 	opentext
-	writetext Text_SilverGetHappa
+	writetext Text_SilverGetChikorita
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
 	closetext
-	setevent EVENT_HAPPA_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_CHIKORITA_POKEBALL_IN_OAK_LAB_BACK_ROOM
 ;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 ;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
 
-HappaPokeBallScript:
+ChikoritaPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic HAPPA
-	cry HAPPA
+	pokepic CHIKORITA
+	cry CHIKORITA
 	waitbutton
 	closepokepic
 	opentext
-	writetext TakeHappaText
+	writetext TakeChikoritaText
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear OAK2SLAB_POKE_BALL3
-	setevent EVENT_GOT_HAPPA_FROM_OAK
+	setevent EVENT_GOT_CHIKORITA_FROM_OAK
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
-	pokenamemem HAPPA, MEM_BUFFER_0
+	pokenamemem CHIKORITA, MEM_BUFFER_0
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
-	givepoke HAPPA, 5, BERRY
+	givepoke CHIKORITA, 5, BERRY
 	closetext
-	applymovement OAK2SLAB_SILVER, SilverGetFlambearMovement
+	applymovement OAK2SLAB_SILVER, SilverGetCubburnMovement
 	opentext
 	writetext Text_SilverTakeThisOne
 	waitbutton
 	closetext
 	disappear OAK2SLAB_POKE_BALL1
 	opentext
-	writetext Text_SilverGetFlambear
+	writetext Text_SilverGetCubburn
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
 	closetext
-	setevent EVENT_FLAMBEAR_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_CUBBURN_POKEBALL_IN_OAK_LAB_BACK_ROOM
 ;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
 ;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
@@ -448,13 +448,13 @@ SilverGetCruiseMovement:
 	step UP
 	step_end
 	
-SilverGetFlambearMovement:
+SilverGetCubburnMovement:
 	step RIGHT
 	step UP
 	step UP
 	step_end
 	
-SilverGetHappaMovement:
+SilverGetChikoritaMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -556,7 +556,7 @@ OakLabBackRoom_Oak2ToDefaultPositionMovement2:
 	turn_head DOWN
 	step_end
 
-AfterFlambearMovement:
+AfterCubburnMovement:
 	step LEFT
 	step UP
 	turn_head UP
@@ -569,7 +569,7 @@ AfterCruiseMovement:
 	turn_head UP
 	step_end
 
-AfterHappaMovement:
+AfterChikoritaMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -617,17 +617,17 @@ Text_SilverTakeThisOne:
 	
 Text_SilverGetCruise:
 	text "<RIVAL> received"
-	line "CRUISEAL!"
+	line "PALSSIO!"
 	done
 	
-Text_SilverGetFlambear:
+Text_SilverGetCubburn:
 	text "<RIVAL> received"
-	line "FLAMBEAR!"
+	line "CUBBURN!"
 	done
 	
-Text_SilverGetHappa:
+Text_SilverGetChikorita:
 	text "<RIVAL> received"
-	line "HAPPA!"
+	line "CHIKORITA!"
 	done
 		
 Text_Best:
@@ -671,21 +671,21 @@ LabWhereGoingText:
 	line "are you going?"
 	done
 
-TakeFlambearText:
+TakeCubburnText:
 	text "OAK: You'll take"
-	line "FLAMBEAR, the"
+	line "CUBBURN, the"
 	cont "fire #MON?"
 	done
 
 TakeCruiseText:
 	text "OAK: Do you want"
-	line "CRUISEAL, the"
+	line "PALSSIO, the"
 	cont "water #MON?"
 	done
 
-TakeHappaText:
+TakeChikoritaText:
 	text "OAK: So, you like"
-	line "HAPPA, the"
+	line "CHIKORITA, the"
 	cont "grass #MON?"
 	done
 
@@ -1098,8 +1098,8 @@ OakLabBackRoom_MapEvents:
 
 	db 6 ; object events
 	object_event  4,  2, SPRITE_OAK2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ProfOak2Script, -1
-	object_event  5,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FlambearPokeBallScript, EVENT_FLAMBEAR_POKEBALL_IN_OAK_LAB_BACK_ROOM
-	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_CRUISEAL_POKEBALL_IN_OAK_LAB_BACK_ROOM
-	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, HappaPokeBallScript, EVENT_HAPPA_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	object_event  5,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CubburnPokeBallScript, EVENT_CUBBURN_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	object_event  6,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CruisePokeBallScript, EVENT_PALSSIO_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	object_event  2,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OakLabBackRoomBlueScript, EVENT_BLUE_IN_OAK_LAB_BACK_ROOM
 	object_event  4,  5, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OakLabBackRoomSilverScript, EVENT_SILVER_IN_OAK_LAB_BACK_ROOM

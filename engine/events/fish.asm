@@ -94,8 +94,8 @@ GetFishGroupIndex:
 
 	ld a, d
 	cp FISHGROUP_QWILFISH
-	jr z, .pluckross
-	cp FISHGROUP_REMORAID
+	jr z, .tricules
+	cp FISHGROUP_WATER_7
 	jr z, .remoraid
 
 .done
@@ -104,9 +104,9 @@ GetFishGroupIndex:
 	ld d, 0
 	ret
 
-.pluckross
+.tricules
 	ld a, [wFishingSwarmFlag]
-	cp FISHSWARM_PLUCKROSS
+	cp FISHSWARM_TRICULES
 	jr nz, .done
 	ld d, FISHGROUP_QWILFISH_SWARM
 	jr .done

@@ -125,19 +125,19 @@ MrPokemonsHouse_OakScript:
 	setmapscene OAK_LAB_BACK_ROOM, SCENE_OAK2SLAB_MEET_OFFICER
 	specialphonecall SPECIALCALL_ROBBED
 	clearevent EVENT_COP_IN_OAK_LAB_BACK_ROOM
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
-	iftrue .RivalTakesHappa
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .RivalTakesFlambear
-	setevent EVENT_CRUISEAL_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
+	iftrue .RivalTakesChikorita
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .RivalTakesCubburn
+	setevent EVENT_PALSSIO_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	end
 
-.RivalTakesHappa:
-	setevent EVENT_HAPPA_POKEBALL_IN_OAK_LAB_BACK_ROOM
+.RivalTakesChikorita:
+	setevent EVENT_CHIKORITA_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	end
 
-.RivalTakesFlambear:
-	setevent EVENT_FLAMBEAR_POKEBALL_IN_OAK_LAB_BACK_ROOM
+.RivalTakesCubburn:
+	setevent EVENT_CUBBURN_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	end
 
 MrPokemonsHouse_ForeignMagazines:

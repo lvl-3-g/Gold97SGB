@@ -156,7 +156,7 @@ WeatheredTrailHiddenEnergyWall:
 	hiddenitem ENERGY_WALL, EVENT_WEATHERED_TRAIL_HIDDEN_ENERGY_WALL
 	
 TatsugoPathTree:
-	fruittree FRUITTREE_TATSUGO_PATH
+	fruittree FRUITTREE_TREE_WEATHERED_TRAIL
 	
 
 WeatheredTrail_MapEvents:

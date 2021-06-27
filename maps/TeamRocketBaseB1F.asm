@@ -10,7 +10,7 @@
 	const TEAMROCKETBASEB1F_SCIENTISTMITCH
 	const TEAMROCKETBASEB1F_SILVER
 	const TEAMROCKETBASEB1F_IMPOSTOR
-	const TEAMROCKETBASEB1F_RAITORA
+	const TEAMROCKETBASEB1F_STRAIGAR
 
 TeamRocketBaseB1F_MapScripts:
 	db 0 ; scene scripts
@@ -264,30 +264,30 @@ TeamRocketBaseB1FComputerPower_loop:
 	closetext
 	turnobject TEAMROCKETBASEB1F_SILVER, LEFT
 	pause 15
-	moveobject TEAMROCKETBASEB1F_RAITORA, 14, 20
-	appear TEAMROCKETBASEB1F_RAITORA
+	moveobject TEAMROCKETBASEB1F_STRAIGAR, 14, 20
+	appear TEAMROCKETBASEB1F_STRAIGAR
 	turnobject TEAMROCKETBASEB1F_SILVER, LEFT
 	playsound SFX_BALL_POOF
 	waitsfx
-	cry RAITORA
+	cry STRAIGAR
 	turnobject TEAMROCKETBASEB1F_SILVER, LEFT
 	pause 15
 	opentext
-	writetext RaitoraDestroyThisThing
+	writetext StraigarDestroyThisThing
 	waitbutton
 	closetext
 ;	pause 15
 ;	pause 5
 	opentext
-	writetext RaitoraDestroyThisThing2
+	writetext StraigarDestroyThisThing2
 	waitbutton
 	closetext
 	turnobject TEAMROCKETBASEB1F_SILVER, UP
 	playsound SFX_JUMP_OVER_LEDGE
-	applymovement TEAMROCKETBASEB1F_RAITORA, RaitoraJumpsUp
+	applymovement TEAMROCKETBASEB1F_STRAIGAR, StraigarJumpsUp
 	pause 15
 	opentext
-	writetext RaitoraDestroysTheThing
+	writetext StraigarDestroysTheThing
 	waitbutton
 	closetext
 	playsound SFX_ZAP_CANNON
@@ -310,7 +310,7 @@ TeamRocketBaseB1FComputerPower_loop:
 	waitsfx
 	pause 15
 	playsound SFX_JUMP_OVER_LEDGE
-	applymovement TEAMROCKETBASEB1F_RAITORA, RaitoraJumpsDown
+	applymovement TEAMROCKETBASEB1F_STRAIGAR, StraigarJumpsDown
 	playsound SFX_MEGA_PUNCH
 	earthquake 80
 ;	special FadeOutPalettes
@@ -346,16 +346,16 @@ TeamRocketBaseB1FComputerPower_loop:
 	pause 15
 	turnobject TEAMROCKETBASEB1F_SILVER, LEFT
 	opentext
-	writetext RaitoraDestroyedTheThing
+	writetext StraigarDestroyedTheThing
 	waitbutton
 	closetext
 	playsound SFX_BALL_POOF
-	disappear TEAMROCKETBASEB1F_RAITORA
+	disappear TEAMROCKETBASEB1F_STRAIGAR
 	pause 10
 	turnobject TEAMROCKETBASEB1F_SILVER, LEFT
 	turnobject TEAMROCKETBASEB1F_SILVER, UP
 	opentext
-	writetext RaitoraDestroyedTheThing2
+	writetext StraigarDestroyedTheThing2
 	waitbutton
 	closetext
 	moveobject TEAMROCKETBASEB1F_GRUNTM8, 13, 25
@@ -488,11 +488,11 @@ TeamRocketGuyWalksUp:
 	step UP
 	step_end
 	
-RaitoraJumpsUp:
+StraigarJumpsUp:
 	jump_step UP
 	step_end
 
-RaitoraJumpsDown:
+StraigarJumpsDown:
 	jump_step DOWN
 	step_end
 	
@@ -542,28 +542,28 @@ WhatHaveYouDoneText2:
 	line "use it!"
 	done
 	
-RaitoraDestroyedTheThing:
+StraigarDestroyedTheThing:
 	text "<RIVAL>: Great"
-	line "job, RAITORA!"
+	line "job, STRAIGAR!"
 	para "You did it!"
 	done
 	
-RaitoraDestroyedTheThing2:
+StraigarDestroyedTheThing2:
 	text "Now this thing"
 	line "will never hurt"
 	cont "another #MON!"
 	done
 	
-RaitoraDestroysTheThing:
-	text "RAITORA:"
+StraigarDestroysTheThing:
+	text "STRAIGAR:"
 	line "Raiiiii!!"
 	done
 	
-RaitoraDestroyThisThing:
-	text "Go! RAITORA!"
+StraigarDestroyThisThing:
+	text "Go! STRAIGAR!"
 	done
 	
-RaitoraDestroyThisThing2:
+StraigarDestroyThisThing2:
 	text "Hop on up there"
 	line "and destroy this"
 	para "thing with your"

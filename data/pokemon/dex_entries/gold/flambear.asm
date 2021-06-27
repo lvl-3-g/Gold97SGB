@@ -1,10 +1,10 @@
 	db "FIRE BEAR@" ; species name
-	dw 201, 220 ; height, weight
+	dw 305, 720 ; height, weight
 
-	db   "The fire that"
-	next "spouts from its"
-	next "ears burns hottest"
+	db   "The fur on its"
+	next "back can become"
+	next "alight with flame"
 
-	page "when it is angry."
-	next "The flaring flames"
-	next "intimidate foes.@"
+	page "whenever it wills."
+	next "Touching it causes"
+	next "instant burns.@"

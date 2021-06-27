@@ -14,7 +14,7 @@ Route116_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .ClearTeknosRocks
 
 .ClearTeknosRocks:
-	setevent EVENT_FROSTPOINT_ROCKS_CLEARED
+	setevent EVENT_BOARDWALK_PATH_IS_OPEN
 	return
 
 
@@ -51,7 +51,7 @@ Route116MaxPotion:
 
 
 Route116FruitTree:
-	fruittree FRUITTREE_ROUTE_116
+	fruittree FRUITTREE_TREE_ROUTE_116
 
 
 BugCatcherDougSeenText:

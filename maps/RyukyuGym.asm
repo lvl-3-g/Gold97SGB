@@ -12,9 +12,9 @@ RyukyuGym_MapScripts:
 	callback MAPCALLBACK_TILES, .RyukyuGymTypeChange
 	
 .RyukyuGymTypeChange:
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .GrassGym
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .FireGym
 	jump .doneGym
 .GrassGym:
@@ -103,10 +103,10 @@ RyukyuGym_MapScripts:
 RyukyuGymPokefanMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .GotHappaGiveFlambear
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
-	iftrue .GotCruiseGiveHappa
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .GotChikoritaGiveCubburn
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
+	iftrue .GotCruiseGiveChikorita
 	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymWater
 	writetext PokefanMBeforeTextWater
@@ -125,7 +125,7 @@ RyukyuGymPokefanMScript:
 	waitbutton
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg CRUISEAL, 5
+	giveegg PALSSIO, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
 	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
@@ -135,7 +135,7 @@ RyukyuGymPokefanMScript:
 	closetext
 	end
 	
-.GotHappaGiveFlambear
+.GotChikoritaGiveCubburn
 	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymFire
 	writetext PokefanMBeforeTextFire
@@ -154,7 +154,7 @@ RyukyuGymPokefanMScript:
 	waitbutton
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg FLAMBEAR, 5
+	giveegg CUBBURN, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
 	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
@@ -164,7 +164,7 @@ RyukyuGymPokefanMScript:
 	closetext
 	end
 	
-.GotCruiseGiveHappa
+.GotCruiseGiveChikorita
 	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .AfterBattleFakeGymGrass
 	writetext PokefanMBeforeTextGrass
@@ -183,7 +183,7 @@ RyukyuGymPokefanMScript:
 	waitbutton
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .PartyFullStarter2
-	giveegg HAPPA, 5
+	giveegg CHIKORITA, 5
 	stringtotext .eggname2, MEM_BUFFER_1
 	scall .GetStarter2Egg
 	setevent EVENT_GOT_EGG_FROM_FAKE_GYM
@@ -211,9 +211,9 @@ Trainer1Scene:
 	showemote EMOTE_SHOCK, RYUKYU_GYM_LASS, 30
 	turnobject PLAYER, LEFT
 	opentext
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Trainer1GotHappaUseFire
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Trainer1GotChikoritaUseFire
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Trainer1GotCruiseUseGrass
 	writetext LassTextBeforeWater
 	waitbutton
@@ -225,7 +225,7 @@ Trainer1Scene:
 	setscene SCENE_RYUKYU_GYM_TRAINER_2
 	end
 	
-.Trainer1GotHappaUseFire
+.Trainer1GotChikoritaUseFire
 	writetext LassTextBeforeFire
 	waitbutton
 	closetext
@@ -251,9 +251,9 @@ Trainer2Scene:
 	playmusic MUSIC_YOUNGSTER_ENCOUNTER
 	showemote EMOTE_SHOCK, RYUKYU_GYM_YOUNGSTER, 30
 	opentext
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Trainer2GotHappaUseFire
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Trainer2GotChikoritaUseFire
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Trainer2GotCruiseUseGrass
 	writetext YoungsterTextBeforeWater
 	waitbutton
@@ -265,7 +265,7 @@ Trainer2Scene:
 	setscene SCENE_RYUKYU_GYM_NOTHING
 	end
 
-.Trainer2GotHappaUseFire
+.Trainer2GotChikoritaUseFire
 	writetext YoungsterTextBeforeFire
 	waitbutton
 	closetext
@@ -290,9 +290,9 @@ Trainer2Scene:
 RyukyuGymYoungsterScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .Trainer2AfterFire
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Trainer2AfterGrass
 	writetext Trainer2AfterWaterText
 	waitbutton
@@ -317,9 +317,9 @@ RyukyuGymGuyScript:
 	opentext
 	checkevent EVENT_DEFEATED_FAKE_GYM_LEADER
 	iftrue .GymGuyFakeGymAfter
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .GymGuyFire
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .GymGuyGrass
 	writetext GymGuyWaterText
 	waitbutton

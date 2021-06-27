@@ -89,7 +89,7 @@ JadeForestLassScript:
 JadeForestRevive:
 	itemball REVIVE
 
-JadeForestXAttack:
+JadeForestPrettyTail:
 	itemball PRETTY_TAIL
 
 JadeForestAntidote:
@@ -107,6 +107,9 @@ JadeForestHiddenSuperPotion:
 JadeForestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_JADE_FOREST_HIDDEN_FULL_HEAL
 
+JadeForestHiddenAwakening:
+	hiddenitem AWAKENING, EVENT_JADE_FOREST_HIDDEN_AWAKENING
+
 JadeForestBoulder:
 ; unused
 	jumpstd StrengthBoulderScript
@@ -120,14 +123,14 @@ JadeForestSignpost2:
 	
 
 RouteU4UFruitTree1:
-	fruittree FRUITTREE_ROUTE_U4U_1
+	fruittree FRUITTREE_TREE_JADE_FOREST_1
 
 RouteU4UFruitTree2:
-	fruittree FRUITTREE_ROUTE_U4U_2
+	fruittree FRUITTREE_TREE_JADE_FOREST_2
 
 RouteU4UFruitTree3:
-	fruittree FRUITTREE_ROUTE_U4U_3
-
+	fruittree FRUITTREE_TREE_JADE_FOREST_3
+	
 Text_HeadbuttIntro:
 	text "What am I doing?"
 
@@ -271,11 +274,12 @@ JadeForest_MapEvents:
 	
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 6 ; bg events
 	bg_event 27, 41, BGEVENT_READ, JadeForestSignpost
 	bg_event 32,  6, BGEVENT_ITEM, JadeForestHiddenEther
 	bg_event 13, 55, BGEVENT_ITEM, JadeForestHiddenSuperPotion
 	bg_event 30, 53, BGEVENT_ITEM, JadeForestHiddenFullHeal
+	bg_event 30, 43, BGEVENT_ITEM, JadeForestHiddenAwakening
 	bg_event 39, 29, BGEVENT_READ, JadeForestSignpost2
 
 	db 13 ; object events
@@ -284,7 +288,7 @@ JadeForest_MapEvents:
 	;object_event 12, 29, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_JADE_FOREST_KURT
 	object_event 17, 23, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, JadeForestLassScript, -1
 	object_event 34, 40, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerBugCatcherWayne, -1
-	object_event 31, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, JadeForestXAttack, EVENT_JADE_FOREST_X_ATTACK
+	object_event 31, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, JadeForestPrettyTail, EVENT_JADE_FOREST_X_ATTACK
 	object_event 31, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, JadeForestAntidote, EVENT_JADE_FOREST_ANTIDOTE
 	object_event 42,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, JadeForestEther, EVENT_JADE_FOREST_ETHER
 	object_event 27, 35, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerHikerLeonard, -1

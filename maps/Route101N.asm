@@ -178,18 +178,18 @@ Route101Sign2Text:
 
 
 TeacherColetteSeenText:
-	text "My CHIX is the"
+	text "My DODAERIE is the"
 	line "cutest in the"
 	cont "world."
 	done
 
 TeacherColetteBeatenText:
-	text "My CHIX!"
+	text "My DODAERIE!"
 	done
 
 TeacherColetteAfterBattleText:
 	text "Look how adorable"
-	line "my CHIX acts!"
+	line "my DODAERIE acts!"
 
 	para "Isn't it cute"
 	line "enough to make"

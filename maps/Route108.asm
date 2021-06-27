@@ -52,7 +52,7 @@ Route108TrainerTips:
 	jumptext Route108TrainerTipsText
 
 Route108FruitTree:
-	fruittree FRUITTREE_ROUTE_108
+	fruittree FRUITTREE_TREE_ROUTE_108
 
 BirdKeeperTobySeenText:
 	text "Fly high into the"

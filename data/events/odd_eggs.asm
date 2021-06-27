@@ -26,22 +26,22 @@ prob_total = 0
 ; Ballerine/Mime JR
 	prob 6
 	prob 2
-; Ponittle/Ponittle
+; Kolta/Kolta
 	prob 6
 	prob 2
-; Tritales/Tritales
+; Vulpiii/Vulpiii
 	prob 6
 	prob 2
-; Grimby/Grimby
+; Smujj/Smujj
 	prob 6
 	prob 2
-; Meowsy/Meowsy
+; Coinpur/Coinpur
 	prob 6
 	prob 2
-; Growlite/Growlite
+; Pupperon/Pupperon
 	prob 6
 	prob 2
-; Tangle
+; Burgela
 	prob 5
 	prob 2
 
@@ -413,7 +413,7 @@ OddEgg1End:
 	bigdw 12 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db PONITTLE
+	db KOLTA
 	db NO_ITEM
 	db TACKLE, FLAME_WHEEL, 0, 0
 	dw 02560 ; OT ID
@@ -439,7 +439,7 @@ OddEgg1End:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db PONITTLE
+	db KOLTA
 	db NO_ITEM
 	db TACKLE, FLAME_WHEEL, 0, 0
 	dw 00256 ; OT ID
@@ -465,7 +465,7 @@ OddEgg1End:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db TRITALES
+	db VULPIII
 	db NO_ITEM
 	db EMBER, FAINT_ATTACK, 0, 0
 	dw 02560 ; OT ID
@@ -491,7 +491,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db TRITALES
+	db VULPIII
 	db NO_ITEM
 	db EMBER, FAINT_ATTACK, 0, 0
 	dw 00256 ; OT ID
@@ -517,7 +517,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db GRIMBY
+	db SMUJJ
 	db NO_ITEM
 	db LICK, MEAN_LOOK, POISON_GAS, 0
 	dw 02560 ; OT ID
@@ -543,7 +543,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db GRIMBY
+	db SMUJJ
 	db NO_ITEM
 	db LICK, MEAN_LOOK, POISON_GAS, 0
 	dw 02560 ; OT ID
@@ -569,7 +569,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db MEOWSY
+	db COINPUR
 	db NO_ITEM
 	db SCRATCH, CHARM, 0, 0
 	dw 02560 ; OT ID
@@ -595,7 +595,7 @@ OddEgg1End:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
-	db MEOWSY
+	db COINPUR
 	db NO_ITEM
 	db SCRATCH, CHARM, 0, 0
 	dw 02560 ; OT ID
@@ -621,7 +621,7 @@ OddEgg1End:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db GROWLITE
+	db PUPPERON
 	db NO_ITEM
 	db CRUNCH, ROAR, 0, 0
 	dw 02560 ; OT ID
@@ -647,7 +647,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db GROWLITE
+	db PUPPERON
 	db NO_ITEM
 	db CRUNCH, ROAR, 0, 0
 	dw 02560 ; OT ID
@@ -673,7 +673,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 	
-	db TANGLE
+	db BURGELA
 	db NO_ITEM
 	db CONFUSION, SLEEP_POWDER, ABSORB, 0
 	dw 02560 ; OT ID
@@ -699,7 +699,7 @@ OddEgg1End:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db TANGLE
+	db BURGELA
 	db NO_ITEM
 	db CONFUSION, SLEEP_POWDER, ABSORB, 0
 	dw 02560 ; OT ID

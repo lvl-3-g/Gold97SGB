@@ -38,12 +38,12 @@ RyukyuHotelRoomsOakScript:
 	writetext RyukyuHotelRoomsOakBefore2
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Cruise
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Happa
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Chikorita
 	winlosstext RyukyuHotelRoomsOakTextWin, RyukyuHotelRoomsOakTextLoss
-	loadtrainer MISTY, OAK_HAS_HAPPA
+	loadtrainer MISTY, OAK_HAS_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -51,15 +51,15 @@ RyukyuHotelRoomsOakScript:
 
 .Cruise:
 	winlosstext RyukyuHotelRoomsOakTextWin, RyukyuHotelRoomsOakTextLoss
-	loadtrainer MISTY, OAK_HAS_FLAMBEAR
+	loadtrainer MISTY, OAK_HAS_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .FinishBattle
 
-.Happa:
+.Chikorita:
 	winlosstext RyukyuHotelRoomsOakTextWin, RyukyuHotelRoomsOakTextLoss
-	loadtrainer MISTY, OAK_HAS_CRUISEAL
+	loadtrainer MISTY, OAK_HAS_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -321,7 +321,8 @@ RyukyuHotelRoomsOakNoBattle:
 	done
 	
 RyukyuHotelRoomsOakBefore:
-	text "Why, <PLAYER>!"
+	text "PROF.OAK: Why,"
+	line "<PLAYER>!"
 	para "How good to see"
 	line "you here!"
 	para "It seems like"
@@ -356,9 +357,9 @@ RyukyuHotelRoomsOakTextLoss:
 	done
 	
 RyukyuHotelRoomsOakAfter:
-	text "I can't thank"
-	line "you enough for"
-	cont "all of your help!"
+	text "PROF.OAK: I can't"
+	line "thank you enough"
+	cont "for your help!"
 	para "I've reached new"
 	line "hights in my"
 	para "research and love"

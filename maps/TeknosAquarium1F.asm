@@ -287,7 +287,7 @@ Aqua1FExhibit2Text:
 	done
 
 Aqua1FExhibit3Text:
-	text "OSUNFISH and"
+	text "MOLAMBINO and"
 	line "MAGIKARP can"
 	para "peacefully share"
 	line "the same living"
@@ -374,7 +374,7 @@ AquaYoungsterRocketsText:
 
 AquaYoungsterNoRocketsText:
 	text "I was hoping I'd"
-	line "see an ANCHORAGE"
+	line "see an ANGORE"
 	para "in person, but"
 	line "there isn't one"
 	cont "here."

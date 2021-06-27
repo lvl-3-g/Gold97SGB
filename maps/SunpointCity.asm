@@ -24,7 +24,7 @@ SunpointCity_MapScripts:
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_SUNPOINT
-	setevent EVENT_FROSTPOINT_ROCKS_CLEARED
+	setevent EVENT_BOARDWALK_PATH_IS_OPEN
 	return
 
 

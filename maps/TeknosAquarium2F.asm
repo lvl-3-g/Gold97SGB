@@ -165,7 +165,7 @@ WhitneyWayToGoText:
 	
 
 Aqua2FExhibit1Text:
-	text "KINGOLD are among"
+	text "ORFRY are among"
 	line "the smallest of"
 	para "all aquatic"
 	line "#MON."
@@ -177,9 +177,9 @@ Aqua2FExhibit2Text:
 	done
 	
 Aqua2FExhibit3Text:
-	text "TURBAN can survive"
-	line "on both land and"
-	cont "fully underwater."
+	text "DISTURBAN can"
+	line "survive on land"
+	cont "and underwater."
 	para "It has a unique"
 	line "relationship with"
 	cont "the SLOWPOKE line."

@@ -13,7 +13,7 @@ MapScenes::
 	scene_var JADE_FOREST_SNORLAX_ROOM,                                wJadeForestSnorlaxRoomSceneID
 	scene_var MERIDIAN_PATH,                                    wMeridianPathSceneID
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
-	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID
+	scene_var CROWN_PATH_GATE,                           wCrownPathGateSceneID
 	scene_var RYUKYU_ARBORETUM,                wRyukyuArboretumSceneID
 	scene_var FORKED_STRAIT_GATE,                               wForkedStraitGateSceneID
 	scene_var SEASIDE_PATH_ISEN_STRAIT_GATE,                      wSeasidePathIsenStraitGateSceneID
@@ -67,8 +67,8 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B1F,                        wTeamRocketBaseB1FSceneID
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
 	scene_var WESTPORT_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wWestportUndergroundSwitchRoomEntrancesSceneID
-	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
-	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
+	scene_var MT_FUJI_INTERIOR_LOWER,                                wMtFujiInteriorLowerSceneID
+	scene_var DRAGONS_MAW_1F,                             wDragonsMaw1FSceneID
 	scene_var KANTO_RESTAURANT,                               wKantoRestaurantSceneID
 	scene_var WESTPORT_PORT,                                wWestportPortSceneID
 	scene_var AMAMI_PORT,                              wAmamiPortSceneID

@@ -231,12 +231,12 @@ Route102SilverScript:
 	writetext Route102RivalBeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Cruise
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Happa
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Chikorita
 	winlosstext Route102SilverWinText, Route102SilverLossText
-	loadtrainer RIVAL1, RIVAL1_2_CRUISEAL
+	loadtrainer RIVAL1, RIVAL1_2_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -244,15 +244,15 @@ Route102SilverScript:
 
 .Cruise:
 	winlosstext Route102SilverWinText, Route102SilverLossText
-	loadtrainer RIVAL1, RIVAL1_2_HAPPA
+	loadtrainer RIVAL1, RIVAL1_2_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .AfterBattle
 
-.Happa:
+.Chikorita:
 	winlosstext Route102SilverWinText, Route102SilverLossText
-	loadtrainer RIVAL1, RIVAL1_2_FLAMBEAR
+	loadtrainer RIVAL1, RIVAL1_2_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -291,9 +291,9 @@ Route102GameHouse:
 	jumptext Route102GameHouseText
 
 Route102FruitTree:
-	fruittree FRUITTREE_ROUTE_102
+	fruittree FRUITTREE_TREE_ROUTE_102
 
-BipetalShakeMovement:
+BellignanShakeMovement:
 	tree_shake ; shake
 	step_end
 

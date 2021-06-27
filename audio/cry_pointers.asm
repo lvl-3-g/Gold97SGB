@@ -43,27 +43,27 @@ Cries:
 	dba Cry_Girafarig
 	dba Cry_Raikou
 	dba Cry_Mareep
-	dba Cry_Ponittle
+	dba Cry_Kolta
 	dba Cry_Hoothoot
-	dba Cry_Tangle
+	dba Cry_Burgela
 	dba Cry_Slowking
-	dba Cry_Flambear
-	dba Cry_Happa
-	dba Cry_Cruiseal
-	dba Cry_Animon
+	dba Cry_Cubburn
+	dba Cry_Chikorita
+	dba Cry_Palssio
+	dba Cry_Mimmeo
 	dba Cry_Cleffa
-	dba Cry_Meowsy
+	dba Cry_Coinpur
 	dba Cry_Ledyba
 	dba Cry_Entei
-	dba Cry_Anchorage
+	dba Cry_Angore
 	dba Cry_Mantine
-	dba Cry_Dynabear
+	dba Cry_Bruinus
 	dba Cry_Natu
 	dba Cry_Qwilfish
 	dba Cry_Sunflora
 	dba Cry_Ampharos
-	dba Cry_Madame
+	dba Cry_Luxwan
 	dba Cry_Pichu
 	dba Cry_Aipom
-	dba Cry_Parette
+	dba Cry_Paraspor
 	dba Cry_Donphan

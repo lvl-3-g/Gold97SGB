@@ -377,7 +377,7 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	closewindow
 	ifequal 1, .abra
 	ifequal 2, .cubone
-	ifequal 3, .twinz
+	ifequal 3, .bipulla
 	jump BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 
 .abra
@@ -416,21 +416,21 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	takecoins 800
 	jump .loop
 
-.twinz
+.bipulla
 	checkcoins 1500
 	ifequal HAVE_LESS, BoardwalkGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BoardwalkGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem TWINZ, MEM_BUFFER_0
+	pokenamemem BIPULLA, MEM_BUFFER_0
 	scall BoardwalkGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse BoardwalkGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext BoardwalkGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte TWINZ
+	writebyte BIPULLA
 	special GameCornerPrizeMonCheckDex
-	givepoke TWINZ, 15
+	givepoke BIPULLA, 15
 	takecoins 1500
 	jump .loop
 
@@ -445,7 +445,7 @@ BoardwalkGameCornerPrizeMonVendorScript:
 	db 4 ; items
 	db "ABRA        100@"
 	db "CUBONE      800@"
-	db "TWINZ      1500@"
+	db "BIPULLA    1500@"
 	db "CANCEL@"
 
 BoardwalkGameCornerPharmacistScript:

@@ -10,7 +10,7 @@ KumeMart_MapScripts:
 
 KumeMart_Clerk:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_NAGO
+	pokemart MARTTYPE_STANDARD, MART_ACTUAL_KUME
 	closetext
 	end
 

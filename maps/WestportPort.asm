@@ -34,7 +34,7 @@ WestportPortSailorAtGangwayScript:
 	opentext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue WestportPortAlreadyRodeScript
-	writetext UnknownText_0x74a55
+	writetext DepartureTimeText
 	waitbutton
 	closetext
 	turnobject WESTPORTPORT_SAILOR1, DOWN
@@ -69,7 +69,7 @@ WestportPortSailorAtGangwayScript:
 WestportPortSailorAtGangwayScriptTeknos:
 	faceplayer
 	opentext
-	writetext UnknownText_0x74a55
+	writetext DepartureTimeText
 	waitbutton
 	closetext
 	turnobject WESTPORTPORT_SAILOR1, DOWN
@@ -85,7 +85,7 @@ WestportPortSailorAtGangwayScriptTeknos:
 	end
 
 WestportPortAlreadyRodeScript:
-	writetext UnknownText_0x74a80
+	writetext SorryCantBoardText
 	waitbutton
 	closetext
 	end
@@ -101,7 +101,7 @@ WestportPortWalkUpToShipScript:
 	checkflag ENGINE_HIVEBADGE
 	iftrue WestportPortSailorFerryToTeknosScript
 	opentext
-	writetext WestportPortSailorBeforeHOFText
+	writetext WestportPortSailorBeforeHiveBadgeText
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
@@ -111,7 +111,14 @@ WestportPortWalkUpToShipScript:
 	end
 
 WestportPortSailorOriginalScript:
-	opentext
+	writetext WelcomeToTheDocksAfterHOF
+	loadmenu WestportDocksAfterHOFMenu
+	verticalmenu
+	closewindow
+	ifequal 1, .Teknos
+	ifequal 2, .Islands
+	jump WestportDocksCancel
+.Islands
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iffalse .FirstTime
 	checkcode VAR_WEEKDAY
@@ -121,14 +128,13 @@ WestportPortSailorOriginalScript:
 	ifequal WEDNESDAY, .NextShipFriday
 	ifequal THURSDAY, .NextShipFriday
 .FirstTime:
-	writetext UnknownText_0x74a9c
-	yesorno
-	iffalse WestportPortNotRidingMoveAwayScript
-	writetext UnknownText_0x74ada
+;	yesorno
+;	iffalse WestportPortNotRidingMoveAwayScript
+	writetext AskForTicketText
 	buttonsound
 	checkitem S_S_TICKET
 	iffalse .NoTicket
-	writetext UnknownText_0x74b11
+	writetext FlashTheTicketText
 	waitbutton
 	closetext
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
@@ -136,21 +142,21 @@ WestportPortSailorOriginalScript:
 	jump WestportPortSailorAtGangwayScript
 
 .NoTicket:
-	writetext UnknownText_0x74b41
+	writetext DontHaveTicketWhoopsText
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
 	end
 
 .NextShipMonday:
-	writetext UnknownText_0x74ba8
+	writetext NoTripsToIslandsTodayText
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
 	end
 
 .NextShipFriday:
-	writetext UnknownText_0x74bce
+	writetext NoTripsToIslandsToday2Text
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
@@ -159,9 +165,40 @@ WestportPortSailorOriginalScript:
 .skip:
 	end
 	
+.Teknos
+	writetext WestportPortSailorGoToTeknosText2
+	waitbutton
+	closetext
+	applymovement PLAYER, MovementData_0x74a37
+	jump WestportPortSailorAtGangwayScriptTeknos
+	end
+	
+	
+WestportDocksAfterHOFMenu:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 3, 19, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 3 ; items
+	db "TEKNOS CITY@"
+	db "SOUTHWEST ISLANDS@"
+	db "CANCEL@"
+	
+WestportDocksCancel:
+	writetext HopeToSeeYouAgainText
+	waitbutton
+	closetext
+	applymovement PLAYER, MovementData_0x74a34
+	end
+	
 WestportPortSailorFerryToTeknosScript:
 	faceplayer
 	opentext
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue WestportPortSailorOriginalScript
 	writetext WestportPortSailorGoToTeknosText
 	yesorno
 	iffalse .NotGoing
@@ -174,8 +211,6 @@ WestportPortSailorFerryToTeknosScript:
 	
 	
 .NotGoing:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue WestportPortSailorOriginalScript
 	writetext WestportPortSailorNotGoingToTeknosText
 	waitbutton
 	closetext
@@ -183,13 +218,13 @@ WestportPortSailorFerryToTeknosScript:
 	end
 
 WestportPortNotRidingScript:
-	writetext UnknownText_0x74af6
+	writetext HopeToSeeYouAgainText
 	waitbutton
 	closetext
 	end
 
 WestportPortNotRidingMoveAwayScript:
-	writetext UnknownText_0x74af6
+	writetext HopeToSeeYouAgainText
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
@@ -198,55 +233,55 @@ WestportPortNotRidingMoveAwayScript:
 WestportPortSailorAfterHOFScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue WestportPortAlreadyRodeScript
-	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iffalse .FirstTime
-	checkcode VAR_WEEKDAY
-	ifequal SUNDAY, .NextShipMonday
-	ifequal SATURDAY, .NextShipMonday
-	ifequal TUESDAY, .NextShipFriday
-	ifequal WEDNESDAY, .NextShipFriday
-	ifequal THURSDAY, .NextShipFriday
-.FirstTime:
-	writetext UnknownText_0x74a9c
-	yesorno
-	iffalse WestportPortNotRidingScript
-	writetext UnknownText_0x74ada
-	buttonsound
-	checkitem S_S_TICKET
-	iffalse .NoTicket
-	writetext UnknownText_0x74b11
-	waitbutton
-	closetext
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	checkcode VAR_FACING
-	ifequal RIGHT, .Right
-	applymovement PLAYER, MovementData_0x74a3f
-	jump WestportPortSailorAtGangwayScript
+;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1; this will always be true, right? You can't talk to him normally, the background event covers the script.
+	jump WestportPortAlreadyRodeScript
+;	checkevent EVENT_FAST_SHIP_FIRST_TIME
+;	iffalse .FirstTime
+;	checkcode VAR_WEEKDAY
+;	ifequal SUNDAY, .NextShipMonday
+;	ifequal SATURDAY, .NextShipMonday
+;	ifequal TUESDAY, .NextShipFriday
+;	ifequal WEDNESDAY, .NextShipFriday
+;	ifequal THURSDAY, .NextShipFriday
+;.FirstTime:
+;	writetext NowAlsoOfferIslandsText
+;	yesorno
+;	iffalse WestportPortNotRidingScript
+;	writetext AskForTicketText
+;	buttonsound
+;	checkitem S_S_TICKET
+;	iffalse .NoTicket
+;	writetext FlashTheTicketText
+;	waitbutton
+;	closetext
+;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+;	checkcode VAR_FACING
+;	ifequal RIGHT, .Right
+;	applymovement PLAYER, MovementData_0x74a3f
+;	jump WestportPortSailorAtGangwayScript
 
-.Right:
-	applymovement PLAYER, MovementData_0x74a49
-	jump WestportPortSailorAtGangwayScript
-
-.NoTicket:
-	writetext UnknownText_0x74b41
-	waitbutton
-	closetext
-	end
-
-.NextShipMonday:
-	writetext UnknownText_0x74ba8
-	waitbutton
-	closetext
-	end
-
-.NextShipFriday:
-	writetext UnknownText_0x74bce
-	waitbutton
-	closetext
-	end
-
+;.Right:
+;	applymovement PLAYER, MovementData_0x74a49
+;	jump WestportPortSailorAtGangwayScript
+;
+;.NoTicket:
+;	writetext DontHaveTicketWhoopsText
+;	waitbutton
+;	closetext
+;	end
+;
+;.NextShipMonday:
+;	writetext NoTripsToIslandsTodayText
+;	waitbutton
+;	closetext
+;	end
+;
+;.NextShipFriday:
+;	writetext NoTripsToIslandsToday2Text
+;	waitbutton
+;	closetext
+;	end
+;
 WestportPortSailorBeforeHOFScript:
 
 	end
@@ -340,6 +375,20 @@ MovementData_0x74a49:
 	step DOWN
 	step DOWN
 	step_end
+	
+WelcomeToTheDocksAfterHOF:
+	text "Welcome to the"
+	line "WESTPORT DOCKS!"
+	para "We have expanded"
+	line "our services and"
+	para "now offer rides"
+	line "to both TEKNOS"
+	para "CITY as well as"
+	line "NIHON's SOUTHWEST"
+	cont "ISLANDS!"
+	para "Where would you"
+	line "like to go today?"
+	done
 
 WestportPortSailorNotGoingToTeknosText:
 	text "Please join us"
@@ -359,7 +408,7 @@ WestportPortSailorGoToTeknosText2:
 	line "TEKNOS CITY."
 	done
 
-UnknownText_0x74a55:
+DepartureTimeText:
 	text "We're departing"
 	line "soon. Please get"
 	cont "on board."
@@ -380,30 +429,23 @@ UnknownText_0x74a55:
 ;	line "playing!"
 ;	done
 
-UnknownText_0x74a80:
+SorryCantBoardText:
 	text "Sorry. You can't"
 	line "board now."
 	done
 
-UnknownText_0x74a9c:
-	text "We now also offer"
-	line "trips to NIHON's"
-	cont "SOUTHWEST ISLANDS."
-	para "Would you like to"
-	line "travel there?"
-	done
 
-UnknownText_0x74ada:
+AskForTicketText:
 	text "May I see your"
 	line "S.S.TICKET?"
 	done
 
-UnknownText_0x74af6:
+HopeToSeeYouAgainText:
 	text "We hope to see you"
 	line "again!"
 	done
 
-UnknownText_0x74b11:
+FlashTheTicketText:
 	text "<PLAYER> flashed"
 	line "the S.S.TICKET."
 
@@ -411,7 +453,7 @@ UnknownText_0x74b11:
 	line "Thank you!"
 	done
 
-UnknownText_0x74b41:
+DontHaveTicketWhoopsText:
 	text "<PLAYER> tried to"
 	line "show the S.S."
 	cont "TICKET…"
@@ -420,26 +462,28 @@ UnknownText_0x74b41:
 
 	para "Sorry!"
 	line "Trips to the"
-	para "islands require"
+	para "ISLANDS require"
 	line "you to have an"
 	cont "S.S.TICKET."
 	done
 
-UnknownText_0x74ba8:
-	text "The next trip to"
-	line "the SOUTHWEST"
-	cont "ISLANDS will set"
-	cont "sail on Monday."
+NoTripsToIslandsTodayText:
+	text "Sorry, but the"
+	line "next boat to the"
+	para "SOUTHWEST ISLANDS"
+	line "will set sail on"
+	cont "monday."
 	para "Today, we only"
 	line "offer ferries to"
 	cont "TEKNOS CITY."
 	done
 
-UnknownText_0x74bce:
-	text "The next trip to"
-	line "the SOUTHWEST"
-	cont "ISLANDS will set"
-	cont "sail on Friday."
+NoTripsToIslandsToday2Text:
+	text "Sorry, but the"
+	line "next boat to the"
+	para "SOUTHWEST ISLANDS"
+	line "will set sail on"
+	cont "friday."
 	para "Today, we only"
 	line "offer ferries to"
 	cont "TEKNOS CITY."
@@ -476,7 +520,7 @@ WestportPortCooltrainerFText:
 	para "I wish I could go…"
 	done
 
-WestportPortSailorBeforeHOFText:
+WestportPortSailorBeforeHiveBadgeText:
 	text "We're very sorry,"
 	line "but at this time,"
 	para "the WESTPORT CITY"

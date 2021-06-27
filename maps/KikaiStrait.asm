@@ -2,6 +2,7 @@
 	const KKS_SWIMMER1
 	const KKS_SWIMMER2
 	const KKS_YOUNGSTER
+	const KKS_ITEMBALL
 
 KikaiStrait_MapScripts:
 	db 0 ; scene scripts
@@ -39,6 +40,10 @@ KikaiStraitYoungsterScript:
 	closetext
 	turnobject KKS_YOUNGSTER, UP
 	end
+	
+KikaiStraitStarPiece:
+	itemball STAR_PIECE
+
 	
 KikaiStraitYoungsterText:
 	text "Wow, the CALDERA"
@@ -97,7 +102,8 @@ KikaiStrait_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 15, 14, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDenise, -1
 	object_event  9, 22, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfWendy, -1
 	object_event  8,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KikaiStraitYoungsterScript, -1
+	object_event  5,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, KikaiStraitStarPiece, EVENT_PICKED_UP_STAR_PIECE_KIKAI_STRAIT

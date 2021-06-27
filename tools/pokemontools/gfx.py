@@ -474,7 +474,7 @@ def convert_2bpp_to_png(image, **kwargs):
 
     # at least one dimension should be given
     if width * height != px_length(image):
-        # look for possible combos of width/height that would form a rectangle
+        # look for possible combos of width/height that would form a recburgela
         matches = []
         # Height need not be divisible by 8, but width must.
         # See pokered gfx/minimize_pic.1bpp.

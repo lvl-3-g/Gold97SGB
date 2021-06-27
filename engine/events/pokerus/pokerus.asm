@@ -123,7 +123,7 @@ GivePokerusAndConvertBerries:
 
 ConvertBerriesToBerryJuice:
 ; If we haven't been to Westport City at least once,
-; prevent Rinring from turning held Berry into Berry Juice.
+; prevent Moibelle from turning held Berry into Berry Juice.
 	ld hl, wStatusFlags2
 	bit STATUSFLAGS2_REACHED_WESTPORT_F, [hl]
 	ret z
@@ -136,7 +136,7 @@ ConvertBerriesToBerryJuice:
 	push af
 	push hl
 	ld a, [hl]
-	cp RINRING
+	cp MOIBELLE
 	jr nz, .loopMon
 	ld bc, MON_ITEM
 	add hl, bc

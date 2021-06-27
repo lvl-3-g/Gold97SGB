@@ -33,14 +33,14 @@ Route103WestportGatePokefanFScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_WHITNEY
-	iftrue .FoughtBipetal
+	iftrue .FoughtBellignan
 	writetext Route103WestportGatePokefanFText
 	waitbutton
 	closetext
 	end
 
-.FoughtBipetal
-	writetext Route103WestportGatePokefanFText_FoughtBipetal
+.FoughtBellignan
+	writetext Route103WestportGatePokefanFText_FoughtBellignan
 	waitbutton
 	closetext
 	end
@@ -127,7 +127,7 @@ Route103WestportGatePokefanFText:
 	line "now."
 	done
 
-Route103WestportGatePokefanFText_FoughtBipetal:
+Route103WestportGatePokefanFText_FoughtBellignan:
 	text "The path ahead has"
 	line "been cleared."
 	para "That's good, since"

@@ -19,13 +19,13 @@ RivalBattleFinal:
 	writetext UndergroundSilverBeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .cruise
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .happa
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .chikorita
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_CRUISEAL
+	loadtrainer RIVAL1, RIVAL1_5_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -34,16 +34,16 @@ RivalBattleFinal:
 .cruise
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_HAPPA
+	loadtrainer RIVAL1, RIVAL1_5_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .returnfrombattle
 
-.happa
+.chikorita
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_FLAMBEAR
+	loadtrainer RIVAL1, RIVAL1_5_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -190,8 +190,8 @@ CrownPath_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event 10, 33, VICTORY_ROAD_GATE, 3
-	warp_event 11, 33, VICTORY_ROAD_GATE, 4
+	warp_event 10, 33, CROWN_PATH_GATE, 3
+	warp_event 11, 33, CROWN_PATH_GATE, 4
 	warp_event 11,  1, CROWN_CITY, 1
 	warp_event 12,  1, CROWN_CITY, 2
 

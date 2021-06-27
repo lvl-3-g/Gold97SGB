@@ -150,16 +150,16 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw HappaEggMoves
+	dw ChikoritaEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw FlambearEggMoves
+	dw CubburnEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw CruisealEggMoves
+	dw PalssioEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw TangleEggMoves
+	dw BurgelaEggMoves
 	dw NoEggMoves
 	dw HoothootEggMoves
 	dw NoEggMoves
@@ -168,13 +168,13 @@ EggMovePointers::
 	dw SpinarakEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw KotoraEggMoves
+	dw TykerEggMoves
 	dw NoEggMoves
 	dw PichuEggMoves
 	dw CleffaEggMoves
 	dw IgglybuffEggMoves
 	dw TogepiEggMoves
-	dw PonittleEggMoves
+	dw KoltaEggMoves
 	dw NatuEggMoves
 	dw NoEggMoves
 	dw MareepEggMoves
@@ -182,45 +182,45 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw MarillEggMoves
-	dw BomsealEggMoves
-	dw BipetalEggMoves
+	dw GrenmarEggMoves
+	dw BellignanEggMoves
 	dw NoEggMoves
 	dw HoppipEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw AipomEggMoves
-	dw KingoldEggMoves
+	dw OrfryEggMoves
 	dw NoEggMoves
-	dw OsunfishEggMoves
+	dw MolambinoEggMoves
 	dw NoEggMoves
-	dw GrotessEggMoves
+	dw LurreelEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw MurkrowEggMoves
 	dw NoEggMoves
-	dw TritalesEggMoves
+	dw VulpiiiEggMoves
 	dw NoEggMoves
-	dw TwinzEggMoves
+	dw BipullaEggMoves
 	dw NoEggMoves
-	dw TurbanEggMoves
-	dw GrimbyEggMoves
-	dw ParetteEggMoves
+	dw DisdisturbanEggMoves
+	dw SmujjEggMoves
+	dw ParasporEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw QuagsireEggMoves
-	dw PluckrossEggMoves
+	dw TriculesEggMoves
 	dw NoEggMoves
-	dw RinringEggMoves
+	dw MoibelleEggMoves
 	dw NoEggMoves
 	dw SneaselEggMoves
 	dw QwilfishEggMoves
 	dw NoEggMoves
-	dw MeowsyEggMoves
+	dw CoinpurEggMoves
 	dw NoEggMoves
-	dw CurstrawEggMoves
+	dw StromenEggMoves
 	dw NoEggMoves
-	dw GrowliteEggMoves
+	dw PupperonEggMoves
 	dw RemoraidEggMoves
 	dw NoEggMoves
 	dw DelibirdEggMoves
@@ -239,12 +239,12 @@ EggMovePointers::
 	dw SmoochumEggMoves
 	dw ElekidEggMoves
 	dw MagbyEggMoves
-	dw ChixEggMoves
+	dw DodaerieEggMoves
 	dw MiltankEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw WolfanEggMoves
+	dw WarfursEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

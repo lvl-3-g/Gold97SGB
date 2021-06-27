@@ -72,24 +72,24 @@ NihonGrassWildMons:
 	db 3, HOPPIP
 	db 3, FARFETCH_D
 	db 2, CATERPIE
-	db 3, RINRING
-	db 3, RINRING
+	db 3, MOIBELLE
+	db 3, MOIBELLE
 	; day
 	db 2, PIDGEY
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, FARFETCH_D
 	db 2, CATERPIE
-	db 3, RINRING
-	db 3, RINRING
+	db 3, MOIBELLE
+	db 3, MOIBELLE
 	; nite
 	db 2, HOOTHOOT
 	db 2, RATTATA
 	db 3, HOOTHOOT
 	db 3, FARFETCH_D
 	db 2, WEEDLE
-	db 3, RINRING
-	db 3, RINRING
+	db 3, MOIBELLE
+	db 3, MOIBELLE
 	
 
 	map_id FIVE_FLOOR_TOWER_2F
@@ -114,7 +114,7 @@ NihonGrassWildMons:
 	db 3, GASTLY
 	db 4, GASTLY
 	db 5, GASTLY
-	db 3, CURSTRAW
+	db 3, STROMEN
 	db 7, GASTLY
 	db 5, RATTATA
 	db 5, RATTATA
@@ -143,7 +143,7 @@ NihonGrassWildMons:
 	db 4, GASTLY
 	db 5, GASTLY
 	db 3, RATTATA
-	db 7, CURSTRAW
+	db 7, STROMEN
 	db 5, RATTATA
 	db 5, RATTATA
 	
@@ -170,7 +170,7 @@ NihonGrassWildMons:
 	db 4, GASTLY
 	db 5, GASTLY
 	db 3, RATTATA
-	db 7, CURSTRAW
+	db 7, STROMEN
 	db 5, RATTATA
 	db 5, RATTATA
 
@@ -236,24 +236,24 @@ NihonGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, MAREEP
-	db 13, RINRING
-	db 13, KOTORA
+	db 13, MOIBELLE
+	db 13, TYKER
 	db 13, LEDYBA
 	db 12, HOPPIP
 	db 14, HOPPIP
 	db 14, HOPPIP
 	; day
 	db 12, MAREEP
-	db 13, RINRING
-	db 13, KOTORA
+	db 13, MOIBELLE
+	db 13, TYKER
 	db 13, HOPPIP
 	db 12, HOPPIP
 	db 14, HOPPIP
 	db 14, HOPPIP
 	; nite
 	db 12, MAREEP
-	db 13, RINRING
-	db 13, KOTORA
+	db 13, MOIBELLE
+	db 13, TYKER
 	db 13, SPINARAK
 	db 12, HOPPIP
 	db 14, HOPPIP
@@ -349,7 +349,7 @@ NihonGrassWildMons:
 	db 10, ZUBAT
 	db 12, PSYDUCK
 	db 10, ZUBAT
-	db 10, TURBAN
+	db 10, DISTURBAN
 	db 12, ZUBAT
 	db 10, PSYDUCK
 	db 14, PSYDUCK
@@ -357,7 +357,7 @@ NihonGrassWildMons:
 	db 10, ZUBAT
 	db 12, PSYDUCK
 	db 10, ZUBAT
-	db 10, TURBAN
+	db 10, DISTURBAN
 	db 12, ZUBAT
 	db 10, PSYDUCK
 	db 14, PSYDUCK
@@ -365,10 +365,10 @@ NihonGrassWildMons:
 	db 10, ZUBAT
 	db 12, PSYDUCK
 	db 10, ZUBAT
-	db 10, TURBAN
+	db 10, DISTURBAN
 	db 12, ZUBAT
-	db 10, WOLFAN
-	db 14, WOLFAN
+	db 10, WARFURS
+	db 14, WARFURS
 	
 	map_id BOULDER_MINE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -513,7 +513,7 @@ NihonGrassWildMons:
 	db 13, SLOWPOKE
 	db 14, SLOWPOKE
 	db 15, ZUBAT
-	db 15, TURBAN
+	db 15, DISTURBAN
 	db 15, SLOWPOKE
 	; day
 	db 13, ZUBAT
@@ -521,7 +521,7 @@ NihonGrassWildMons:
 	db 13, SLOWPOKE
 	db 14, SLOWPOKE
 	db 15, ZUBAT
-	db 15, TURBAN
+	db 15, DISTURBAN
 	db 15, SLOWPOKE
 	; nite
 	db 13, ZUBAT
@@ -529,7 +529,7 @@ NihonGrassWildMons:
 	db 13, SLOWPOKE
 	db 14, SLOWPOKE
 	db 15, ZUBAT
-	db 15, TURBAN
+	db 15, DISTURBAN
 	db 15, SLOWPOKE
 	
 	map_id ROUTE_116
@@ -745,8 +745,8 @@ NihonGrassWildMons:
 	db 14, NATU
 	db 14, MAREEP
 	db 13, MAREEP
-	db 15, TWINZ
-	db 15, TWINZ
+	db 15, BIPULLA
+	db 15, BIPULLA
 
 	map_id ROUTE_105
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1025,25 +1025,25 @@ NihonGrassWildMons:
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WOLFAN
+	db 21, WARFURS
 	db 20, QUAGSIRE
-	db 22, WOLFAN
+	db 22, WARFURS
 	; day
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WOLFAN
+	db 21, WARFURS
 	db 20, QUAGSIRE
-	db 22, WOLFAN
+	db 22, WARFURS
 	; nite
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WOLFAN
+	db 21, WARFURS
 	db 20, QUAGSIRE
-	db 22, WOLFAN
+	db 22, WARFURS
 
 	map_id ROUTE_112
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1072,7 +1072,7 @@ NihonGrassWildMons:
 	db 22, SNEASEL
 	db 21, SNEASEL
 
-	map_id DRAGONS_DEN_B1F
+	map_id DRAGONS_MAW_1F
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 26, RATICATE
@@ -1187,7 +1187,7 @@ NihonGrassWildMons:
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, BOMSEAL
+	db 30, GRENMAR
 	db 26, MAGMAR
 	db 27, MAGMAR
 	; day
@@ -1195,7 +1195,7 @@ NihonGrassWildMons:
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, BOMSEAL
+	db 30, GRENMAR
 	db 26, MAGMAR
 	db 27, MAGMAR
 	; nite
@@ -1203,7 +1203,7 @@ NihonGrassWildMons:
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, BOMSEAL
+	db 30, GRENMAR
 	db 26, MAGMAR
 	db 27, MAGMAR
 
@@ -1369,7 +1369,7 @@ NihonGrassWildMons:
 	db 39, NOCTOWL
 	db 39, NOCTOWL
 	
-	map_id VICTORY_ROAD
+	map_id MT_FUJI_INTERIOR_LOWER
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 39, ONIX
@@ -1396,7 +1396,7 @@ NihonGrassWildMons:
 	db 41, KANGASKHAN
 	db 41, KANGASKHAN
 	
-	map_id VICTORY_ROAD_2F
+	map_id MT_FUJI_INTERIOR_UPPER
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 40, ONIX

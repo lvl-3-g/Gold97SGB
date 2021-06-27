@@ -71,31 +71,31 @@ AppleOrchardSignText:
 	done
 
 Appletree1:
-	fruittree FRUITTREE_ORCHARD1
+	fruittree FRUITTREE_TREE_DAITO_1
 	
 Appletree2:
-	fruittree FRUITTREE_ORCHARD2
+	fruittree FRUITTREE_TREE_DAITO_2
 	
 Appletree3:
-	fruittree FRUITTREE_ORCHARD3
+	fruittree FRUITTREE_TREE_DAITO_3
 	
 Appletree4:
-	fruittree FRUITTREE_ORCHARD4; not used because doesn't respawn?
+	fruittree FRUITTREE_TREE_FIX_34; not used because doesn't respawn?
 	
 Appletree5:
-	fruittree FRUITTREE_ORCHARD5; not used because doesn't respawn?
+	fruittree FRUITTREE_TREE_FIX_35; not used because doesn't respawn?
 	
 Appletree6:
-	fruittree FRUITTREE_ORCHARD6
+	fruittree FRUITTREE_TREE_DAITO_4
 	
 Appletree7:
-	fruittree FRUITTREE_ORCHARD7
+	fruittree FRUITTREE_TREE_DAITO_5
 
 Route105FruitTree1:
-	fruittree FRUITTREE_ROUTE_105_1
+	fruittree FRUITTREE_TREE_DAITO_6
 
 Route105FruitTree2:
-	fruittree FRUITTREE_ROUTE_105_2
+	fruittree FRUITTREE_TREE_DAITO_7
 
 
 DaitoRanchMiltankText:
@@ -241,8 +241,8 @@ DaitoRanch_MapEvents:
 	object_event 22, 29, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT,0, 0, -1, DAY, PAL_NPC_BROWN , OBJECTTYPE_SCRIPT, 0, DaitoGeoffPatioScript, -1
 	object_event 14,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree1, -1
 	object_event 15, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree2, -1
-	object_event 16,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree3, -1
+	object_event 20,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree3, -1
 	object_event 18,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route105FruitTree1, -1
 	object_event 17, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route105FruitTree2, -1
 	object_event 19, 10, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree6, -1
-	object_event 20,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree7, -1
+	object_event 16,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Appletree7, -1

@@ -671,8 +671,8 @@ PinkBowDesc:
 	next "type moves. (HOLD)@"
 
 StickDesc:
-	db   "An ordinary stick."
-	next "Sell low.@"
+	db   "Ups critical hit"
+	next "ratio of LUXWAN.@"
 
 SmokeBallDesc:
 	db   "Escape from wild"

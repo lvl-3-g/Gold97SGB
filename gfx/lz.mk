@@ -30,7 +30,7 @@ gfx/pokegear/pokegear_sprites.2bpp.lz: LZFLAGS += --align 4
 gfx/pokegear/town_map.2bpp.lz: LZFLAGS = --compressor null --method 1 --align 1
 
 gfx/pokemon/hitmontop/back_gold.2bpp.lz: LZFLAGS += --method 4
-gfx/pokemon/chix/back_gold.2bpp.lz: LZFLAGS += --method 4
+gfx/pokemon/dodaerie/back_gold.2bpp.lz: LZFLAGS += --method 4
 
 gfx/slots/slots_1.2bpp.lz: LZFLAGS += --method 2 --align 4
 gfx/slots/slots_2.2bpp.lz: LZFLAGS += --align 4

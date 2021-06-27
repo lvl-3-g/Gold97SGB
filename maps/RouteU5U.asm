@@ -18,7 +18,7 @@ RouteU5U_MapEvents:
 
 	db 2 ; warp events
 	warp_event -3,  3, DAITO_RANCH_ORCHARD_HOUSE, 1
-	warp_event 23,  5, VICTORY_ROAD_GATE, 7
+	warp_event 23,  5, CROWN_PATH_GATE, 7
 
 	db 0 ; coord events
 

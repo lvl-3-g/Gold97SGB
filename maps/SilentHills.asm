@@ -115,13 +115,13 @@ SilentHillsSign2:
 	jumptext SilentHillsSign2Text
 
 SilentHillsFruitTree1:
-	fruittree FRUITTREE_SILENT_HILLS_1
+	fruittree FRUITTREE_TREE_SILENT_HILLS_1
 
 SilentHillsFruitTree2:
-	fruittree FRUITTREE_SILENT_HILLS_2
+	fruittree FRUITTREE_TREE_SILENT_HILLS_2
 
 SilentHillsFruitTree3:
-	fruittree FRUITTREE_SILENT_HILLS_3
+	fruittree FRUITTREE_TREE_SILENT_HILLS_3
 
 SilentHillsHiddenEther:
 	hiddenitem ETHER, EVENT_SILENT_HILLS_HIDDEN_ETHER

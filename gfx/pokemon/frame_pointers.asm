@@ -150,17 +150,17 @@ FramesPointers:
 	dw DragoniteFrames
 	dw MewtwoFrames
 	dw MewFrames
-	dw HappaFrames
+	dw ChikoritaFrames
 	dw BlossomoleFrames
 	dw BlossomiteFrames
+	dw CubburnFrames
 	dw FlambearFrames
-	dw VolbearFrames
-	dw DynabearFrames
+	dw BruinusFrames
 	dw CruiseFrames
-	dw AqualloFrames
-	dw AquariusFrames
+	dw PressioFrames
+	dw DonmarinFrames
 	dw TangFrames
-	dw GelaniaFrames
+	dw JungelaFrames
 	dw HoothootFrames
 	dw NoctowlFrames
 	dw LedybaFrames
@@ -168,13 +168,13 @@ FramesPointers:
 	dw SpinarakFrames
 	dw AriadosFrames
 	dw CrobatFrames
-	dw KotoraFrames
-	dw RaitoraFrames
+	dw TykerFrames
+	dw StraigarFrames
 	dw PichuFrames
 	dw CleffaFrames
 	dw IgglybuffFrames
 	dw TogepiFrames
-	dw PonittleFrames
+	dw KoltaFrames
 	dw NatuFrames
 	dw XatuFrames
 	dw MareepFrames
@@ -182,45 +182,45 @@ FramesPointers:
 	dw AmpharosFrames
 	dw BellossomFrames
 	dw MarillFrames
-	dw BomsealFrames
-	dw BipetalFrames
+	dw GrenmarFrames
+	dw BellignanFrames
 	dw PolitoedFrames
 	dw HoppipFrames
 	dw SkiploomFrames
 	dw JumpluffFrames
 	dw AipomFrames
-	dw KingoldFrames
+	dw OrfryFrames
 	dw SunfloraFrames
-	dw OsunfishFrames
-	dw AnchorageFrames
-	dw GrotessFrames
+	dw MolambinoFrames
+	dw AngoreFrames
+	dw LurreelFrames
 	dw EspeonFrames
 	dw UmbreonFrames
 	dw MurkrowFrames
 	dw SlowkingFrames
-	dw TritalesFrames
+	dw VulpiiiFrames
 	dw UnownFrames
-	dw TwinzFrames
+	dw BipullaFrames
 	dw GirafarigFrames
-	dw TurbanFrames
-	dw GrimbyFrames
+	dw DisdisturbanFrames
+	dw SmujjFrames
 	dw ParaFrames
-	dw AnimonFrames
+	dw MimmeoFrames
 	dw SteelixFrames
 	dw SnubbullFrames
 	dw QuagsireFrames
-	dw PluckrossFrames
+	dw TriculesFrames
 	dw ScizorFrames
-	dw RinringFrames
-	dw BellringFrames
+	dw MoibelleFrames
+	dw BelledamFrames
 	dw SneaselFrames
 	dw QwilfishFrames
-	dw NumbpuffFrames
-	dw MeowsyFrames
-	dw MadameFrames
-	dw CurstrawFrames
-	dw CurpanFrames
-	dw GrowliteFrames
+	dw KazappelinFrames
+	dw CoinpurFrames
+	dw LuxwanFrames
+	dw StromenFrames
+	dw PhandarinFrames
+	dw PupperonFrames
 	dw RemoraidFrames
 	dw OctilleryFrames
 	dw DelibirdFrames
@@ -239,13 +239,13 @@ FramesPointers:
 	dw SmoochumFrames
 	dw ElekidFrames
 	dw MagbyFrames
-	dw ChixFrames
+	dw DodaerieFrames
 	dw MiltankFrames
 	dw RaikouFrames
 	dw EnteiFrames
 	dw SuicuneFrames
-	dw WolfanFrames
-	dw WarwolfFrames
+	dw WarfursFrames
+	dw WearlycanFrames
 	dw LickilordFrames
 	dw BlisseyFrames
 	dw HoOhFrames

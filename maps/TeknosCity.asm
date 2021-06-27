@@ -17,10 +17,10 @@ TeknosCity_MapScripts:
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_TILES, .ClearTeknosCityRocks
+	callback MAPCALLBACK_TILES, .ClearOpenBoardwalkPath
 
-.ClearTeknosCityRocks:
-	checkevent EVENT_FROSTPOINT_ROCKS_CLEARED
+.ClearOpenBoardwalkPath:
+	checkevent EVENT_BOARDWALK_PATH_IS_OPEN
 	iftrue .Done
 	changeblock 21,  7, $41 ; fence
 	changeblock 23,  7, $41 ; fence
@@ -41,7 +41,7 @@ TeknosCityGramps1Script:
 TeknosCityGramps2Script:
 	faceplayer
 	opentext
-	checkevent EVENT_FROSTPOINT_ROCKS_CLEARED
+	checkevent EVENT_BOARDWALK_PATH_IS_OPEN
 	iftrue .Gramps2Script2
 	writetext TeknosCityGramps2Text
 	waitbutton
@@ -106,7 +106,7 @@ TeknosCitySign:
 	jumptext TeknosCitySignText
 
 TinTowerSign:
-	checkevent EVENT_FROSTPOINT_ROCKS_CLEARED
+	checkevent EVENT_BOARDWALK_PATH_IS_OPEN
 	iftrue .TinTowerSign2
 	jumptext TinTowerSignText
 	
@@ -368,7 +368,7 @@ TeknosCity_MapEvents:
 	bg_event 10, 17, BGEVENT_READ, BurnedTowerSign
 	bg_event 32, 10, BGEVENT_READ, TeknosCityPokecenterSign
 	bg_event 32, 16, BGEVENT_READ, TeknosCityMartSign
-	bg_event 33, 13, BGEVENT_ITEM, TeknosCityHiddenHyperPotion
+	bg_event  5, 18, BGEVENT_ITEM, TeknosCityHiddenHyperPotion
 	bg_event 24, 29, BGEVENT_READ, TeknosCityDocksSign
 
 	db 12 ; object events

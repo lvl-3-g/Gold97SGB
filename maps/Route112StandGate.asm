@@ -74,28 +74,28 @@ Route102GateRivalScript:
 	closetext
 	applymovement ROUTE112STANDGATE_RIVAL, SilverChecksGuard2
 	pause 5
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
-	iftrue .R36GCruiseal
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .R36GHappa
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
+	iftrue .R36GPalssio
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .R36GChikorita
 	winlosstext Route102GSilverWinText, Route102GSilverLossText
-	loadtrainer RIVAL1, RIVAL1_4_CRUISEAL
+	loadtrainer RIVAL1, RIVAL1_4_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .R36GAfterBattle
 
-.R36GCruiseal:
+.R36GPalssio:
 	winlosstext Route102GSilverWinText, Route102GSilverLossText
-	loadtrainer RIVAL1, RIVAL1_4_HAPPA
+	loadtrainer RIVAL1, RIVAL1_4_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .R36GAfterBattle
 
-.R36GHappa:
+.R36GChikorita:
 	winlosstext Route102GSilverWinText, Route102GSilverLossText
-	loadtrainer RIVAL1, RIVAL1_4_FLAMBEAR
+	loadtrainer RIVAL1, RIVAL1_4_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

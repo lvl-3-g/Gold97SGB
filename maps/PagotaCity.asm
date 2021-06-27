@@ -67,8 +67,8 @@ PagotaGymSign:
 FiveFloorTowerSign:
 	jumptext FiveFloorTowerSignText
 
-EarlsPokemonAcademySign:
-	jumptext EarlsPokemonAcademySignText
+PagotaPokemonAcademySign:
+	jumptext PagotaPokemonAcademySignText
 
 EarlsMuseumSign2:
 	jumptext EarlsMuseumSign2Text
@@ -90,7 +90,7 @@ PagotaCityStimulusOrb:
 	
 
 PagotaCityFruitTree:
-	fruittree FRUITTREE_PAGOTA_CITY
+	fruittree FRUITTREE_TREE_PAGOTA_CITY
 
 PagotaCityHiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_PAGOTA_CITY_HIDDEN_HYPER_POTION
@@ -191,7 +191,7 @@ FiveFloorTowerSignText:
 	line "Way of #MON"
 	done
 
-EarlsPokemonAcademySignText:
+PagotaPokemonAcademySignText:
 	text "EARL'S ART HOUSE"
 	done
 	
@@ -214,7 +214,7 @@ PagotaCity_MapEvents:
 	warp_event 27, 14, PAGOTA_GYM, 2
 	warp_event 10, 26, PAGOTA_NICKNAME_SPEECH_HOUSE, 1
 	warp_event 27, 28, PAGOTA_POKECENTER_1F, 1
-	warp_event 22, 26, EARLS_POKEMON_ACADEMY, 1
+	warp_event 22, 26, PAGOTA_POKEMON_ACADEMY, 1
 	warp_event 11, 17, FIVE_FLOOR_TOWER_1F, 1
 	warp_event 19, 30, ROUTE_101_PAGOTA_GATE, 2
 	warp_event 18, 30, ROUTE_101_PAGOTA_GATE, 1
@@ -233,7 +233,7 @@ PagotaCity_MapEvents:
 	bg_event 20, 29, BGEVENT_READ, PagotaCitySign
 	bg_event 28, 16, BGEVENT_READ, PagotaGymSign
 	bg_event  8, 16, BGEVENT_READ, FiveFloorTowerSign
-	bg_event  8, 14, BGEVENT_READ, EarlsPokemonAcademySign
+	bg_event  8, 14, BGEVENT_READ, PagotaPokemonAcademySign
 	bg_event 28, 28, BGEVENT_READ, PagotaCityPokecenterSign
 	bg_event  4, 26, BGEVENT_READ, PagotaCityMartSign
 	bg_event 24,  4, BGEVENT_ITEM, PagotaCityHiddenHyperPotion

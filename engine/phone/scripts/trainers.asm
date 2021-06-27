@@ -212,7 +212,7 @@ RalphPhoneCallerScript:
 
 .NoBattle:
 	scall PhoneScript_Random2
-	ifequal 0, .PluckrossSwarm
+	ifequal 0, .TriculesSwarm
 	scall PhoneScript_Random2
 	ifequal 0, Phone_CheckIfUnseenRare_Male
 	sjump Phone_GenericCall_Male
@@ -222,12 +222,12 @@ RalphPhoneCallerScript:
 	setevent EVENT_RALPH_READY_FOR_REMATCH
 	sjump PhoneScript_WantsToBattle_Male
 
-.PluckrossSwarm:
+.TriculesSwarm:
 	checkflag ENGINE_SWARM
 	iftrue Phone_GenericCall_Male
-	getmonname STRING_BUFFER_4, PLUCKROSS
+	getmonname STRING_BUFFER_4, TRICULES
 	getstring STRING_BUFFER_5, PhoneRoute112Text
-	setval FISHSWARM_PLUCKROSS
+	setval FISHSWARM_TRICULES
 	special ActivateFishingSwarm
 	sjump PhoneScript_SwarmFish
 
@@ -269,7 +269,7 @@ AnthonyPhoneCallerScript:
 
 .NoBattle:
 	scall PhoneScript_Random2
-	ifequal 0, .ParetteSwarm
+	ifequal 0, .ParasporSwarm
 	scall PhoneScript_Random2
 	ifequal 0, Phone_CheckIfUnseenRare_Male
 	sjump Phone_GenericCall_Male
@@ -279,10 +279,10 @@ AnthonyPhoneCallerScript:
 	setevent EVENT_ANTHONY_READY_FOR_REMATCH
 	sjump PhoneScript_WantsToBattle_Male
 
-.ParetteSwarm:
+.ParasporSwarm:
 	checkflag ENGINE_SWARM
 	iftrue Phone_GenericCall_Male
-	getmonname STRING_BUFFER_4, PARETTE
+	getmonname STRING_BUFFER_4, PARASPOR
 	getstring STRING_BUFFER_5, PhoneDarkCaveText
 	swarm AMPARE_CAVERN_B1F
 	sjump PhoneScript_SwarmCave
@@ -371,7 +371,7 @@ ArniePhoneCallerScript:
 	scall PhoneScript_Random2
 	ifequal 0, .WantsBattle
 	scall PhoneScript_Random2
-	ifequal 0, .OsunfishSwarm
+	ifequal 0, .MolambinoSwarm
 	scall PhoneScript_Random2
 	ifequal 0, Phone_CheckIfUnseenRare_Male
 	sjump Phone_GenericCall_Male
@@ -381,10 +381,10 @@ ArniePhoneCallerScript:
 	setevent EVENT_ARNIE_READY_FOR_REMATCH
 	sjump PhoneScript_WantsToBattle_Male
 
-.OsunfishSwarm:
+.MolambinoSwarm:
 	checkflag ENGINE_SWARM
 	iftrue Phone_GenericCall_Male
-	getmonname STRING_BUFFER_4, OSUNFISH
+	getmonname STRING_BUFFER_4, MOLAMBINO
 	getstring STRING_BUFFER_5, PhoneRoute103Text
 	swarm ROUTE_103
 	sjump PhoneScript_SwarmGrass

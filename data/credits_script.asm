@@ -175,7 +175,7 @@ CreditsScript:
 	db CREDITS_WAIT, 1
 
 ; Update the banner.
-	db CREDITS_SCENE, 3 ; Tangle
+	db CREDITS_SCENE, 3 ; Burgela
 
 	db     US_VERSION_STAFF, 1
 

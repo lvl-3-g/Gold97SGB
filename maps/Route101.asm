@@ -135,6 +135,7 @@ SilentHillsEntranceSign:
 	jumptext SilentHillsEntranceSignText
 	
 DebugSign:
+	opentext
 ;	setflag ENGINE_RADIO_CARD
 ;	setflag ENGINE_ZEPHYRBADGE
 ;	setflag ENGINE_HIVEBADGE
@@ -180,16 +181,17 @@ DebugSign:
 ;	giveitem ENERGY_WALL
 ;	giveitem STEEL_SHELL
 ;	giveitem POWER_WINGS
-	givepoke CRUISEAL, 5
-	givepoke HAPPA, 5
+	givepoke PALSSIO, 5
+	givepoke CHIKORITA, 5
 	givepoke FARFETCH_D, 5
-	givepoke KOTORA, 5
-	givepoke WOLFAN, 5
+	givepoke PIKACHU, 5
+	givepoke DIGLETT, 5
 	jumptext DebugSignText
+	closetext
 	end
 
 Route101FruitTree:
-	fruittree FRUITTREE_ROUTE_101
+	fruittree FRUITTREE_TREE_ROUTE_101
 
 Route101Potion:
 	itemball POTION

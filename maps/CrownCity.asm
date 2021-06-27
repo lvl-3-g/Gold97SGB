@@ -101,7 +101,7 @@ CrownCity_MapEvents:
 	warp_event 11, 25, CROWN_PATH, 3
 	warp_event  5, 22, CROWN_POKECENTER_1F, 1
 	warp_event 11, 22, CROWN_MART, 1
-	warp_event  9,  1, VICTORY_ROAD, 1
+	warp_event  9,  1, MT_FUJI_INTERIOR_LOWER, 1
 	warp_event  3, 17, CROWN_HOUSE_1, 1
 	warp_event 15, 19, CROWN_HOUSE_2, 1
 	warp_event 14, 15, CROWN_CITY_TRAINER_HOUSE, 1

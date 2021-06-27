@@ -1,21 +1,34 @@
 	object_const_def ; object_event constants
-	const SANSKRITROCKETHOUSE_RECEPTIONIST
-	const SANSKRITROCKETHOUSE_OFFICER
-	const SANSKRITROCKETHOUSE_SUPER_NERD1
-	const SANSKRITROCKETHOUSE_GENTLEMAN
-	const SANSKRITROCKETHOUSE_SUPER_NERD2
+	const SANSKRITROCKETHOUSE_KEY_GUY
+	const SANSKRITROCKETHOUSE_BIRD
+	const SANSKRITROCKETHOUSE_ROCKET_1
+	const SANSKRITROCKETHOUSE_ROCKET_2
+	const SANSKRITROCKETHOUSE_ROCKET_3
+	const SANSKRITROCKETHOUSE_ITEM
 
 SanskritRocketHouse_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .RemoveKeyIfAlreadyHave
 
-SanskritRocketHouseReceptionistScript:
+.RemoveKeyIfAlreadyHave:
+	checkevent EVENT_USED_BASEMENT_KEY
+	iftrue .RemoveThatKey
+	return
+	
+.RemoveThatKey
+	disappear SANSKRITROCKETHOUSE_ITEM
+	disappear SANSKRITROCKETHOUSE_KEY_GUY
+	return
+
+
+SanskritRocketHouseKeyGuyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_ROCKET_KEY_DIALOGUE
 	iftrue .GiveKey
-	writetext SanskritRocketHouseReceptionistText
+	writetext SanskritRocketHouseKeyGuyText
 	waitbutton
 	closetext
 	end
@@ -23,7 +36,7 @@ SanskritRocketHouseReceptionistScript:
 .GiveKey:
 	checkevent EVENT_TALKED_TO_ROCKET_WITH_KEY
 	iftrue .AlreadyGotKey
-	writetext SanskritRocketHouseReceptionistTextKeyTime
+	writetext SanskritRocketHouseKeyGuyTextKeyTime
 	waitbutton
 	closetext
 	winlosstext RocketKey_WinText, RocketKey_LossText
@@ -37,89 +50,121 @@ SanskritRocketHouseReceptionistScript:
 	opentext
 	writetext RocketKey_AfterText
 	waitbutton
-	verbosegiveitem BASEMENT_KEY
-	writetext RocketKey_AfterText2
-	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_ROCKET_WITH_KEY
+	setevent EVENT_KEY_GUY_IS_GONE
+	appear SANSKRITROCKETHOUSE_ITEM
+	clearevent EVENT_SANSKRIT_ROCKET_HOUSE_KEY_ITEM
+	checkcode VAR_FACING
+	ifequal LEFT, .walk_down_around_player
+	applymovement SANSKRITROCKETHOUSE_KEY_GUY, KeyGuyRunsAwayInShame
+	disappear SANSKRITROCKETHOUSE_KEY_GUY
 	end
 	
-.AlreadyGotKey:
+.walk_down_around_player
+	applymovement SANSKRITROCKETHOUSE_KEY_GUY, KeyGuyRunsAwayInShame2
+	disappear SANSKRITROCKETHOUSE_KEY_GUY
+	end
+
+.AlreadyGotKey:; this is unused now
 	writetext RocketKey_Afterwards
 	waitbutton
 	closetext
 	end
 
-SanskritRocketHouseOfficerScript:
+SanskritRocketHouseBirdScript:
 	faceplayer
 	opentext
-	writetext SanskritRocketHouseOfficerText
+	writetext SanskritRocketHouseBirdText
 	cry MURKROW
 	waitbutton
 	closetext
 	end
 
-SanskritRocketHouseSuperNerd1Script:
+SanskritRocketHouseRocket1Script:
 	faceplayer
 	opentext
 	checkevent EVENT_ROCKET_KEY_DIALOGUE
 	iftrue .SN1KeyScript
-	writetext SanskritRocketHouseSuperNerd1Text
+	writetext SanskritRocketHouseRocket1Text
 	waitbutton
 	closetext
 	end
 
 .SN1KeyScript:
-	writetext SanskritRocketHouseSuperNerd1TextKey
+	writetext SanskritRocketHouseRocket1TextKey
 	waitbutton
 	closetext
 	end
 
-SanskritRocketHouseGentlemanScript:
+SanskritRocketHouseRocket2Script:
 	faceplayer
 	opentext
 	checkevent EVENT_ROCKET_KEY_DIALOGUE
 	iftrue .GMKeyScript
-	writetext SanskritRocketHouseGentlemanText
+	writetext SanskritRocketHouseRocket2Text
 	waitbutton
 	closetext
 	end
 
 .GMKeyScript:
-	writetext SanskritRocketHouseGentlemanTextKey
+	writetext SanskritRocketHouseRocket2TextKey
 	waitbutton
 	closetext
 	end
 
 
-SanskritRocketHouseSuperNerd2Script:
+SanskritRocketHouseRocket3Script:
 	faceplayer
 	opentext
 	checkevent EVENT_ROCKET_KEY_DIALOGUE
 	iftrue .SN2KeyScript
-	writetext SanskritRocketHouseSuperNerd2Text
+	writetext SanskritRocketHouseRocket3Text
 	waitbutton
 	closetext
 	end
 
 .SN2KeyScript:
-	writetext SanskritRocketHouseSuperNerd2TextKey
+	writetext SanskritRocketHouseRocket3TextKey
 	waitbutton
 	closetext
 	end
 
 
-SanskritRocketHouseDirectory:
-	jumptext SanskritRocketHouseDirectoryText
+SanskritRocketHousePoster:
+	jumptext SanskritRocketHousePosterText
 
-SanskritRocketHousePokeFluteSign:
-	jumptext SanskritRocketHousePokeFluteSignText
+SanskritRocketHouseTelevisionSign:
+	jumptext SanskritRocketHouseTelevisionSignText
 
 SanskritRocketHouseReferenceLibrary:
 ; unreferenced
 	jumptext SanskritRocketHouseReferenceLibraryText
+	
+KeyGuyRunsAwayInShame:
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	step_end
+	
+KeyGuyRunsAwayInShame2:
+	big_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	step_end
+	
+SanskritRocketHouseShipKeyItem:
+	itemball BASEMENT_KEY
 
-SanskritRocketHouseReceptionistText:
+SanskritRocketHouseKeyGuyText:
 	text "Ha!"
 	para "Supplies are"
 	line "rolling in fast"
@@ -135,18 +180,18 @@ SanskritRocketHouseReceptionistText:
 	line "our work here!"
 	done
 
-SanskritRocketHouseOfficerText:
+SanskritRocketHouseBirdText:
 	text "MURKROW: KRAWW!"
 	done
 
-SanskritRocketHouseSuperNerd1Text:
+SanskritRocketHouseRocket1Text:
 	text "GAME CORNERS are"
 	line "always reliable"
 	cont "sources of income!"
 	para "Remember that!"
 	done
 	
-SanskritRocketHouseSuperNerd1TextKey:
+SanskritRocketHouseRocket1TextKey:
 	text "Hm? A key?"
 	para "Nah, I don't have"
 	line "that."
@@ -156,7 +201,7 @@ SanskritRocketHouseSuperNerd1TextKey:
 	line "ROCKET's way, kid!"
 	done
 
-SanskritRocketHouseGentlemanText:
+SanskritRocketHouseRocket2Text:
 	text "Some kid has been"
 	line "messing with our"
 	cont "plans."
@@ -170,7 +215,7 @@ SanskritRocketHouseGentlemanText:
 	para "HA!"
 	done
 
-SanskritRocketHouseGentlemanTextKey:
+SanskritRocketHouseRocket2TextKey:
 	text "What key?"
 	line "I don't have any"
 	cont "keys."
@@ -185,7 +230,7 @@ SanskritRocketHouseGentlemanTextKey:
 	done
 
 
-SanskritRocketHouseSuperNerd2Text:
+SanskritRocketHouseRocket3Text:
 	text "Just a bit longer"
 	line "until we can show"
 	para "the world what"
@@ -193,7 +238,7 @@ SanskritRocketHouseSuperNerd2Text:
 	cont "truly capable of!"
 	done
 
-SanskritRocketHouseSuperNerd2TextKey:
+SanskritRocketHouseRocket3TextKey:
 	text "Nah, I don't have"
 	line "any keys."
 	para "The CAPTAIN"
@@ -201,7 +246,7 @@ SanskritRocketHouseSuperNerd2TextKey:
 	cont "with any of those."
 	done
 
-SanskritRocketHouseSuperNerd2Text_GotExpnCard:
+SanskritRocketHouseRocket3Text_GotExpnCard:
 	text "Hey there!"
 
 	para "I am the super"
@@ -218,13 +263,13 @@ SanskritRocketHouseSuperNerd2Text_GotExpnCard:
 	cont "off the air!"
 	done
 
-SanskritRocketHouseDirectoryText:
+SanskritRocketHousePosterText:
 	text "All #MON exist"
 	line "for the glory of"
 	cont "TEAM ROCKET!"
 	done
 
-SanskritRocketHousePokeFluteSignText:
+SanskritRocketHouseTelevisionSignText:
 	text "It's a rerun…"
 	done
 
@@ -237,7 +282,7 @@ SanskritRocketHouseReferenceLibraryText:
 	line "reference library."
 	done
 	
-SanskritRocketHouseReceptionistTextKeyTime:
+SanskritRocketHouseKeyGuyTextKeyTime:
 	text "A SHIP KEY?"
 	para "Maybe I have it."
 	line "What's it to you?"
@@ -275,12 +320,13 @@ SanskritRocketHouse_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 16,  2, BGEVENT_READ, SanskritRocketHouseDirectory
-	bg_event  6,  1, BGEVENT_READ, SanskritRocketHousePokeFluteSign
+	bg_event 16,  2, BGEVENT_READ, SanskritRocketHousePoster
+	bg_event  6,  1, BGEVENT_READ, SanskritRocketHouseTelevisionSign
 
-	db 5 ; object events
-	object_event  9,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseReceptionistScript, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
-	object_event 17,  4, SPRITE_BIRD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseOfficerScript, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
-	object_event 11,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseSuperNerd1Script, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
-	object_event 19,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseGentlemanScript, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
-	object_event 15,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseSuperNerd2Script, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	db 6 ; object events
+	object_event  9,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseKeyGuyScript, EVENT_KEY_GUY_IS_GONE
+	object_event 17,  4, SPRITE_BIRD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseBirdScript, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	object_event 11,  2, SPRITE_ROCKET, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseRocket1Script, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	object_event 19,  4, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseRocket2Script, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	object_event 15,  4, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, SanskritRocketHouseRocket3Script, EVENT_ROCKETS_IN_BOAT_AT_SUNPOINT
+	object_event  9,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SanskritRocketHouseShipKeyItem, EVENT_SANSKRIT_ROCKET_HOUSE_KEY_ITEM

@@ -62,16 +62,16 @@ WestportDeptStoreB1FMachopScript:
 	end
 
 WestportDeptStoreB1FEther:
-	itemball ETHER
+	end
 
 WestportDeptStoreB1FAmuletCoin:
-	itemball AMULET_COIN
+	end
 
 WestportDeptStoreB1FBurnHeal:
-	itemball BURN_HEAL
+	end
 
 WestportDeptStoreB1FUltraBall:
-	itemball ULTRA_BALL
+	end
 
 WestportDeptStoreB1FBlackBelt1Text:
 	text "Hey, kid! You're"

@@ -78,7 +78,7 @@ Route104SignActual:
 	jumptext Route104SignActualText
 
 Route104FruitTree:
-	fruittree FRUITTREE_ROUTE_104
+	fruittree FRUITTREE_TREE_ROUTE_104
 	
 Movement_1LEFT:
 	step LEFT

@@ -274,7 +274,7 @@ Route112GreatBall:
 	itemball GREAT_BALL
 
 Route112Tree:
-	fruittree FRUITTREE_BOARDWALK
+	fruittree FRUITTREE_TREE_ROUTE_112
 
 Route112Repel:
 	itemball REPEL

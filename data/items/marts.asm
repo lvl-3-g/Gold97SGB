@@ -18,10 +18,10 @@ Marts:
 	dw MartSanskrit1
 	dw MartSanskrit2
 	dw MartBlueForest
-	dw MartViridian
-	dw MartKume
-	dw MartNago
-	dw MartLavender
+	dw MartActualSanskrit
+	dw MartActualSunpoint
+	dw MartActualKume
+	dw MartActualFrostpoint
 	dw MartAmami
 	dw MartKanto2F1
 	dw MartKanto2F2
@@ -40,15 +40,12 @@ Marts:
 	dw MartWestportNew
 .End
 
-MartCrown:
-	db 4 ; # items
-	db POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db AWAKENING
+MartCrown:; UNUSED
+	db 1 ; # items
+	db ULTRA_BALL
 	db -1 ; end
 
-MartCrownDex:
+MartCrownDex:; good
 	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -61,7 +58,7 @@ MartCrownDex:
 	db ESCAPE_ROPE
 	db -1 ; end
 
-MartPagota:
+MartPagota:; good
 	db 9 ; # items
 	db POKE_BALL
 	db POTION
@@ -74,7 +71,7 @@ MartPagota:
 	db X_SPEED
 	db -1 ; end
 
-MartBirdon:
+MartBirdon:; good
 	db 11 ; # items
 	db POKE_BALL
 	db POTION
@@ -89,16 +86,12 @@ MartBirdon:
 	db POWER_WINGS
 	db -1 ; end
 
-MartSunpoint:
-	db 5 ; # items
-	db POTION
-	db SUPER_POTION
-	db HYPER_POTION
-	db FULL_HEAL
-	db REVIVE
+MartSunpoint:; UNUSED
+	db 1 ; # items
+	db ULTRA_BALL
 	db -1 ; end
 
-MartWestport2F1:
+MartWestport2F1:; good
 	db 7 ; # items
 	db POTION
 	db SUPER_POTION
@@ -109,7 +102,7 @@ MartWestport2F1:
 	db ICE_HEAL
 	db -1 ; end
 
-MartWestport2F2:
+MartWestport2F2:; good
 	db 7 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -120,7 +113,7 @@ MartWestport2F2:
 	db POKE_DOLL
 	db -1 ; end
 
-MartWestport3F:
+MartWestport3F:; good
 	db 7 ; # items
 	db X_SPEED
 	db X_SPECIAL
@@ -131,7 +124,7 @@ MartWestport3F:
 	db X_ACCURACY
 	db -1 ; end
 
-MartWestport4F:
+MartWestport4F:; good
 	db 5 ; # items
 	db PROTEIN
 	db IRON
@@ -140,8 +133,8 @@ MartWestport4F:
 	db HP_UP
 	db -1 ; end
 
-MartWestport5F1:
-	db 7 ; # items
+MartWestport5F1:; all these 5f ones can be treated as either headbutt or not, but include headbutt
+	db 8 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -149,10 +142,11 @@ MartWestport5F1:
 	db TM_THUNDER
 	db TM_FIRE_BLAST
 	db TM_BLIZZARD
+	db TM_DEFENSE_CURL
 	db -1 ; end
 
-MartWestport5F2:
-	db 8 ; # items
+MartWestport5F2:; good
+	db 9 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -161,10 +155,11 @@ MartWestport5F2:
 	db TM_THUNDER
 	db TM_FIRE_BLAST
 	db TM_BLIZZARD
+	db TM_DEFENSE_CURL
 	db -1 ; end
 
-MartWestport5F3:
-	db 7 ; # items
+MartWestport5F3:; good
+	db 8 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -172,10 +167,11 @@ MartWestport5F3:
 	db TM_THUNDER
 	db TM_FIRE_BLAST
 	db TM_BLIZZARD
+	db TM_DEFENSE_CURL
 	db -1 ; end
 
-MartWestport5F4:
-	db 8 ; # items
+MartWestport5F4:; good
+	db 9 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -184,9 +180,10 @@ MartWestport5F4:
 	db TM_THUNDER
 	db TM_FIRE_BLAST
 	db TM_BLIZZARD
+	db TM_DEFENSE_CURL
 	db -1 ; end
 
-MartAlloy:
+MartAlloy:; good
 	db 12 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -202,7 +199,7 @@ MartAlloy:
 	db POWER_WINGS
 	db -1 ; end
 
-MartTeknos:
+MartTeknos:; good
 	db 10 ; # items
 	db POKE_BALL
 	db ESCAPE_ROPE
@@ -216,27 +213,17 @@ MartTeknos:
 	db REVIVE
 	db -1 ; end
 
-MartSanskrit1:
-	db 4 ; # items
-	db TINYMUSHROOM
-	db SLOWPOKETAIL
-	db POKE_BALL
-	db POTION
+MartSanskrit1:; UNUSED
+	db 1 ; # items
+	db ULTRA_BALL
 	db -1 ; end
 
-MartSanskrit2:
-	db 8 ; # items
-	db RAGECANDYBAR
-	db GREAT_BALL
-	db SUPER_POTION
-	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db SUPER_REPEL
-	db REVIVE
+MartSanskrit2:; UNUSED
+	db 1 ; # items
+	db ULTRA_BALL
 	db -1 ; end
 
-MartBlueForest:
+MartBlueForest:; good
 	db 11 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -251,7 +238,7 @@ MartBlueForest:
 	db ESCAPE_ROPE
 	db -1 ; end
 
-MartViridian:; sanskrit
+MartActualSanskrit:; good
 	db 9 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -264,7 +251,7 @@ MartViridian:; sanskrit
 	db SUPER_REPEL
 	db -1 ; end
 
-MartKume:; sunpoint
+MartActualSunpoint:; good
 	db 10 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -278,7 +265,7 @@ MartKume:; sunpoint
 	db DETECT_ORB
 	db -1 ; end
 
-MartNago:; kume
+MartActualKume:; good
 	db 8 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -290,7 +277,7 @@ MartNago:; kume
 	db DIRE_HIT
 	db -1 ; end
 
-MartLavender:; frostpoint
+MartActualFrostpoint:; good
 	db 9 ; # items
 	db GREAT_BALL
 	db POTION
@@ -303,7 +290,7 @@ MartLavender:; frostpoint
 	db BURN_HEAL
 	db -1 ; end
 
-MartAmami:
+MartAmami:; good, also Kikai
 	db 8 ; # items
 	db ULTRA_BALL
 	db SUPER_POTION
@@ -315,7 +302,7 @@ MartAmami:
 	db ESCAPE_ROPE
 	db -1 ; end
 
-MartKanto2F1:
+MartKanto2F1:; good
 	db 7 ; # items
 	db POTION
 	db SUPER_POTION
@@ -326,7 +313,7 @@ MartKanto2F1:
 	db MAX_REPEL
 	db -1 ; end
 
-MartKanto2F2:
+MartKanto2F2:; good
 	db 10 ; # items
 	db POKE_BALL
 	db GREAT_BALL
@@ -340,7 +327,7 @@ MartKanto2F2:
 	db PARLYZ_HEAL
 	db -1 ; end
 
-MartKanto3F:
+MartKanto3F:; good
 	db 8 ; # items
 	db TM_HIDDEN_POWER
 	db TM_SUNNY_DAY
@@ -352,7 +339,7 @@ MartKanto3F:
 	db TM_PSYCHIC_M
 	db -1 ; end
 
-MartKanto3F2:
+MartKanto3F2:; good
 	db 4 ; # items
 	db FIRE_STONE
 	db THUNDERSTONE
@@ -360,12 +347,12 @@ MartKanto3F2:
 	db LEAF_STONE
 	db -1 ; end
 
-MartKanto4F:
+MartKanto4F:; UNUSED
 	db 1 ; # items
-	db POKE_DOLL
+	db ULTRA_BALL
 	db -1 ; end
 
-MartKanto5F1:
+MartKanto5F1:; good
 	db 5 ; # items
 	db HP_UP
 	db PROTEIN
@@ -374,7 +361,7 @@ MartKanto5F1:
 	db CALCIUM
 	db -1 ; end
 
-MartKanto5F2:
+MartKanto5F2:; good
 	db 7 ; # items
 	db X_ACCURACY
 	db GUARD_SPEC
@@ -385,7 +372,7 @@ MartKanto5F2:
 	db X_SPECIAL
 	db -1 ; end
 
-MartStand:
+MartStand:;good also kanto mart
 	db 7 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -396,7 +383,7 @@ MartStand:
 	db MAX_REPEL
 	db -1 ; end
 
-MartRyukyu:
+MartRyukyu:; good
 	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
@@ -410,16 +397,12 @@ MartRyukyu:
 	db FOCUS_ORB
 	db -1 ; end
 
-MartMtMoon:
-	db 5 ; # items
-	db POKE_DOLL
-	db FRESH_WATER
-	db SODA_POP
-	db LEMONADE
-	db REPEL
+MartMtMoon:; UNUSED
+	db 1 ; # items
+	db ULTRA_BALL
 	db -1 ; end
 
-MartMountFuji:
+MartMountFuji:; good
 	db 7 ; # items
 	db ULTRA_BALL
 	db MAX_REPEL
@@ -430,7 +413,7 @@ MartMountFuji:
 	db FULL_HEAL
 	db -1 ; end
 
-MartUnderground:
+MartUnderground:; good
 	db 4 ; # items
 	db ENERGYPOWDER
 	db ENERGY_ROOT
@@ -438,25 +421,18 @@ MartUnderground:
 	db REVIVAL_HERB
 	db -1 ; end
 
-DefaultMart:
+DefaultMart:; UNUSED
 	db 2 ; # items
 	db POKE_BALL
 	db POTION
 	db -1 ; end
 	
-MartTestGarden:
-	db 8 ; # items
-	db MASTER_BALL
+MartTestGarden:; UNUSED
+	db 1 ; # items
 	db ULTRA_BALL
-	db COVENANT_ORB
-	db MAX_REVIVE
-	db HEART_STONE
-	db POISON_STONE
-	db FULL_HEAL
-	db RARE_CANDY
 	db -1 ; end
 
-MartKoban:
+MartKoban:; good
 	db 8 ; # items
 	db GREAT_BALL
 	db SUPER_POTION
@@ -468,7 +444,7 @@ MartKoban:
 	db SUPER_REPEL
 	db -1 ; end
 	
-MartWestportNew:
+MartWestportNew:; good, also kanto dept store
 	db 7 ; # items
 	db SHARP_HORNS
 	db STEEL_SHELL

@@ -333,11 +333,13 @@ UnknownText_0x74f31:
 	done
 
 UnknownText_0x74f4d:
-	text "Welcome to FAST"
-	line "SHIP S.S.AQUA."
+	text "Welcome to the"
+	line "AMAMI DOCKS."
 
 	para "Will you be board-"
-	line "ing today?"
+	line "ing the FAST SHIP"
+	para "to WESTPORT CITY"
+	line "today?"
 	done
 
 UnknownText_0x74f8b:
@@ -373,13 +375,19 @@ UnknownText_0x74ff2:
 	done
 
 UnknownText_0x75059:
-	text "The FAST SHIP will"
-	line "sail on Wednesday."
+	text "Sorry, but the"
+	line "next boat to"
+	para "WESTPORT CITY"
+	line "will set sail on"
+	cont "wednesday."
 	done
 
 UnknownText_0x75080:
-	text "The FAST SHIP will"
-	line "sail on Sunday."
+	text "Sorry, but the"
+	line "next boat to"
+	para "WESTPORT CITY"
+	line "will set sail on"
+	cont "sunday."
 	done
 
 UnknownText_0x750a6:

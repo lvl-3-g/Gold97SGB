@@ -1,5 +1,5 @@
 	object_const_def ; object_event constants
-	const BILLSHOUSE_GRAMPS
+	const EARLMUSEUM_EARL
 	const EARLMUSEUM_BIRD
 	const EARLMUSEUM_DRAGON
 	const EARLMUSEUM_LASS
@@ -54,7 +54,7 @@ ArtistEarl:
 	scall .ExcitedToSee
 	special BillsGrandfather
 	iffalse .SaidNo
-	ifnotequal MADAME, .WrongPokemon
+	ifnotequal LUXWAN, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
 	jump .ShowedLickitung
@@ -199,7 +199,7 @@ ArtistEarlIntroText:
 	cont "impressive!"
 	para "I've been working"
 	line "on a statue of the"
-	para "#MON MADAME,"
+	para "#MON LUXWAN,"
 	line "but it's not quite"
 	para "finished."
 	done
@@ -259,7 +259,7 @@ ArtistEarlWrongPokemonText:
 
 ArtistEarlLickitungText:
 	text "If I could only"
-	line "see a MADAME in"
+	line "see a LUXWAN in"
 	para "person, I might"
 	line "feel inspired to"
 	cont "finish my statue."
@@ -268,7 +268,7 @@ ArtistEarlLickitungText:
 
 ArtistEarlOddishText:
 	text "I've finished my"
-	line "MADAME statue!"
+	line "LUXWAN statue!"
 	para "Now I'd like to"
 	line "finish my statue"
 	cont "of a DRATINI."
@@ -281,7 +281,7 @@ ArtistEarlOddishText:
 
 	
 BirdText:
-	text "MADAME STATUE"
+	text "LUXWAN STATUE"
 	line "by EARL"
 	done
 	

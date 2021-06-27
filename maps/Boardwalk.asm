@@ -154,7 +154,7 @@ BoardwalkTrainerTips:
 	jumptext BoardwalkTrainerTipsText
 
 BoardwalkFruitTree:
-	fruittree FRUITTREE_BOARDWALK
+	fruittree FRUITTREE_TREE_ROUTE_112
 
 
 FledglingHidalgoSeenText:

@@ -351,7 +351,7 @@ StandCityMartSign:
 	jumpstd MartSignScript
 
 StandCityFruitTree:
-	fruittree FRUITTREE_STAND_CITY
+	fruittree FRUITTREE_TREE_STAND_CITY
 	
 StandCityHQBlockRocket:
 	jumptextfaceplayer StandCityHQBlockRocketText

@@ -81,7 +81,7 @@
 	const MUSIC_CAPTURE                      ; 4c
 	const MUSIC_ROUTE_115                     ; 4d
 	const MUSIC_MOM                          ; 4e
-	const MUSIC_VICTORY_ROAD                 ; 4f
+	const MUSIC_MT_FUJI_INTERIOR_LOWER                 ; 4f
 	const MUSIC_POKEMON_LULLABY              ; 50
 	const MUSIC_POKEMON_MARCH                ; 51
 	const MUSIC_GS_OPENING                   ; 52

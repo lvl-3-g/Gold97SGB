@@ -19,9 +19,9 @@ SpriteAnimFrameData:
 	dw .Frameset_GSIntroPikachuTail
 	dw .Frameset_GSIntroPikachuTail2
 	dw .Frameset_GSIntroFireball
-	dw .Frameset_GSIntroHappa
-	dw .Frameset_GSIntroFlambear
-	dw .Frameset_GSIntroCruiseal
+	dw .Frameset_GSIntroChikorita
+	dw .Frameset_GSIntroCubburn
+	dw .Frameset_GSIntroPalssio
 	dw .Frameset_GSTitleTrail
 	dw .Frameset_GSIntroPikachu
 	dw .Frameset_GSIntroPikachu2
@@ -159,16 +159,16 @@ SpriteAnimFrameData:
 	frame SPRITE_ANIM_OAMSET_GS_INTRO_BIG_FIREBALL,  1
 	delanim
 
-.Frameset_GSIntroHappa:
-	frame SPRITE_ANIM_OAMSET_GS_INTRO_HAPPA, 24
+.Frameset_GSIntroChikorita:
+	frame SPRITE_ANIM_OAMSET_GS_INTRO_CHIKORITA, 24
 	delanim
 
-.Frameset_GSIntroFlambear:
-	frame SPRITE_ANIM_OAMSET_GS_INTRO_FLAMBEAR, 24, OAM_X_FLIP
+.Frameset_GSIntroCubburn:
+	frame SPRITE_ANIM_OAMSET_GS_INTRO_CUBBURN, 24, OAM_X_FLIP
 	delanim
 
-.Frameset_GSIntroCruiseal:
-	frame SPRITE_ANIM_OAMSET_GS_INTRO_CRUISEAL, 24
+.Frameset_GSIntroPalssio:
+	frame SPRITE_ANIM_OAMSET_GS_INTRO_PALSSIO, 24
 	delanim
 
 .Frameset_GSTitleTrail:

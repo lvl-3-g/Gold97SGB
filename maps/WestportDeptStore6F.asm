@@ -104,7 +104,7 @@ WestportDeptStore6FBirdScript:
 	faceplayer
 	opentext
 	writetext WestportDeptStore6FBirdText
-	cry MADAME
+	cry LUXWAN
 	waitbutton
 	closetext
 	end
@@ -115,7 +115,7 @@ WestportDeptStore6FMonText:
 	done
 	
 WestportDeptStore6FBirdText:
-	text "MADAME:"
+	text "LUXWAN:"
 	line "Kwaa!"
 	done
 

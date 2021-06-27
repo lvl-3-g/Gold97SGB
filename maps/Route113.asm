@@ -39,7 +39,7 @@ SoldierGeraldScript:
 	end
 
 Route113Tree:
-	fruittree FRUITTREE_GREAT_EAST_STRAIT_2
+	fruittree FRUITTREE_TREE_ROUTE_113
 
 
 OfficerKeithScript:

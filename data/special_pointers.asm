@@ -91,8 +91,8 @@ SpecialsPointers::
 	add_special ActivateFishingSwarm
 	add_special ToggleMaptileDecorations
 	add_special ToggleDecorationsVisibility
-	add_special GiveRinring
-	add_special ReturnRinring
+	add_special GiveMoibelle
+	add_special ReturnMoibelle
 	add_special BillsGrandfather
 	add_special CheckPokerus
 	add_special DisplayCoinCaseBalance

@@ -27,8 +27,8 @@ DoAnimFrame:
 	dw .GSIntroPikachu
 	dw .GSIntroPikachuTail
 	dw .GSIntroFireball
-	dw .GSIntroHappaCruiseal
-	dw .GSIntroFlambear
+	dw .GSIntroChikoritaPalssio
+	dw .GSIntroCubburn
 	dw .GSTitleTrail
 	dw .UnusedPikachu
 	dw .UnusedPikachuTail
@@ -629,7 +629,7 @@ DoAnimFrame:
 	ret
 
 ; flash down/right
-.GSIntroHappaCruiseal
+.GSIntroChikoritaPalssio
 	call .AnonymousJumptable
 	jp hl
 
@@ -677,7 +677,7 @@ DoAnimFrame:
 	ret
 
 ; flash down/left
-.GSIntroFlambear
+.GSIntroCubburn
 	call .AnonymousJumptable
 	jp hl
 

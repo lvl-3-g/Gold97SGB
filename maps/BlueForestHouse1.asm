@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
 	const BLUE_FORESTHOUSE_1_GRANNY
-	const BLUE_FORESTHOUSE_1_ANIMON
+	const BLUE_FORESTHOUSE_1_MIMMEO
 
 BlueForestHouse1_MapScripts:
 	db 0 ; scene scripts
@@ -24,17 +24,17 @@ BlueForestHouse1GrannyScript:
 	closetext
 	end	
 
-BlueForestHouse1AnimonScript:
+BlueForestHouse1MimmeoScript:
 	faceplayer
 	opentext
 	writetext BlueForestHouse1MonText
-	cry ANIMON
+	cry MIMMEO
 	waitbutton
 	closetext
 	end
 	
 BlueForestHouse1MonText:
-	text "ANIMON:"
+	text "MIMMEO:"
 	line "Uoi!"
 	done
 
@@ -42,7 +42,7 @@ Text_NightmareIntro:
 	text "I had a terrible"
 	line "nightmare last"
 	para "night that my"
-	line "ANIMON had dis-"
+	line "MIMMEO had dis-"
 	cont "appeared."
 	para "I was so heart-"
 	line "broken."
@@ -76,4 +76,4 @@ BlueForestHouse1_MapEvents:
 
 	db 2 ; object events
 	object_event  8, 3, SPRITE_GRANNY, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BlueForestHouse1GrannyScript, -1
-	object_event  9, 6, SPRITE_GRIMER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, BlueForestHouse1AnimonScript, -1
+	object_event  9, 6, SPRITE_GRIMER, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, BlueForestHouse1MimmeoScript, -1

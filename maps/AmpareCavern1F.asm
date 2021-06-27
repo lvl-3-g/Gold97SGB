@@ -11,13 +11,13 @@ AmpareCavern1F_MapScripts:
 AmpareCavern1FPharmacistScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
+	checkevent EVENT_GOT_CONFUSE_CLAW_IN_DARK_CAVE
 	iftrue .GotBlackglasses
 	writetext AmpareCavern1FPharmacistText1
 	buttonsound
 	verbosegiveitem CONFUSE_CLAW
 	iffalse .PackFull
-	setevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
+	setevent EVENT_GOT_CONFUSE_CLAW_IN_DARK_CAVE
 .GotBlackglasses:
 	writetext AmpareCavern1FPharmacistText2
 	waitbutton

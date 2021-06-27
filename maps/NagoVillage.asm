@@ -18,9 +18,7 @@ NagoVillagePokecenterSign:
 NagoVillageSign:
 	jumptext NagoVillageSignText
 
-NagoVillageHiddenBerserkGene:
-	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_NAGO_VILLAGE
-	
+
 NagoVillageTeacherScript:
 	jumptextfaceplayer NagoVillageTeacherText
 	
@@ -60,9 +58,8 @@ NagoVillage_MapEvents:
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 2 ; bg events
 	bg_event  6,  4, BGEVENT_READ, NagoVillagePokecenterSign
-	bg_event  9,  2, BGEVENT_ITEM, NagoVillageHiddenBerserkGene
 	bg_event  7, 11, BGEVENT_READ, NagoVillageSign
 
 	db 2 ; object events

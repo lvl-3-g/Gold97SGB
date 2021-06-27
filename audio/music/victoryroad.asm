@@ -1,11 +1,11 @@
-Music_VictoryRoad:
+Music_MtFujiInteriorLower:
 	channel_count 4
-	channel 1, Music_VictoryRoad_Ch1
-	channel 2, Music_VictoryRoad_Ch2
-	channel 3, Music_VictoryRoad_Ch3
-	channel 4, Music_VictoryRoad_Ch4
+	channel 1, Music_MtFujiInteriorLower_Ch1
+	channel 2, Music_MtFujiInteriorLower_Ch2
+	channel 3, Music_MtFujiInteriorLower_Ch3
+	channel 4, Music_MtFujiInteriorLower_Ch4
 
-Music_VictoryRoad_Ch1:
+Music_MtFujiInteriorLower_Ch1:
 	tempo 144
 	volume 7, 7
 	stereo_panning FALSE, TRUE
@@ -64,7 +64,7 @@ Music_VictoryRoad_Ch1:
 	note F#, 3
 	sound_ret
 
-Music_VictoryRoad_Ch2:
+Music_MtFujiInteriorLower_Ch2:
 	duty_cycle 3
 	vibrato 16, 2, 4
 .mainloop:
@@ -135,7 +135,7 @@ Music_VictoryRoad_Ch2:
 	note A_, 1
 	sound_ret
 
-Music_VictoryRoad_Ch3:
+Music_MtFujiInteriorLower_Ch3:
 	stereo_panning TRUE, FALSE
 	note_type 12, 2, 8
 .mainloop:
@@ -175,7 +175,7 @@ Music_VictoryRoad_Ch3:
 	note A_, 3
 	sound_ret
 
-Music_VictoryRoad_Ch4:
+Music_MtFujiInteriorLower_Ch4:
 	toggle_noise 0
 	drum_speed 12
 .mainloop:

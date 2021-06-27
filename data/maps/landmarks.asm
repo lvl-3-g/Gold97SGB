@@ -56,7 +56,7 @@ Landmarks:
 	landmark 132, 116, Route114Name
 	landmark 124, 116, KantoRegionName
 	landmark 108, 116, Route115Name
-	landmark  92, 108, VictoryRoadName
+	landmark  92, 108, MtFujiInteriorLowerName
 	landmark  92, 100, CrownCityName
 	landmark  92,  92, MountFujiName
 	landmark 123, 115, BattleTowerName
@@ -139,7 +139,7 @@ RyukyuCityName:     db "RYUKYU CITY@"
 StandCityName:     db "STAND CITY@"
 FrostpointTownName:  db "FROSTPOINT¯TOWN@"
 MountFujiName:   db "MT.FUJI@"
-VictoryRoadName:     db "CROWN PATH@"
+MtFujiInteriorLowerName:     db "CROWN PATH@"
 UrasoeParkName:          db "URASOE PARK@"
 CharredSummitName:      db "CHARRED¯SUMMIT@"
 ForkedStraitName:   db "FORKED¯STRAIT@"

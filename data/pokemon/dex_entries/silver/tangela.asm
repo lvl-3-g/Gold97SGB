@@ -1,7 +1,7 @@
 	db "VINE@" ; species name
 	dw 303, 770 ; height, weight
 
-	db   "It tangles any"
+	db   "It burgelas any"
 	next "moving thing with"
 	next "its vines. Their"
 

@@ -145,14 +145,14 @@ MountFujiOutside_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_event 11, 15, VICTORY_ROAD, 2
-	warp_event  5, 13, VICTORY_ROAD, 3
-	warp_event 15, 11, VICTORY_ROAD, 4
-	warp_event 11,  9, VICTORY_ROAD, 5
-	warp_event  1,  7, VICTORY_ROAD, 6
-	warp_event 17,  5, VICTORY_ROAD_2F, 1
-	warp_event 11,  3, VICTORY_ROAD_2F, 2
-	warp_event  7,  1, VICTORY_ROAD_2F, 3
+	warp_event 11, 15, MT_FUJI_INTERIOR_LOWER, 2
+	warp_event  5, 13, MT_FUJI_INTERIOR_LOWER, 3
+	warp_event 15, 11, MT_FUJI_INTERIOR_LOWER, 4
+	warp_event 11,  9, MT_FUJI_INTERIOR_LOWER, 5
+	warp_event  1,  7, MT_FUJI_INTERIOR_LOWER, 6
+	warp_event 17,  5, MT_FUJI_INTERIOR_UPPER, 1
+	warp_event 11,  3, MT_FUJI_INTERIOR_UPPER, 2
+	warp_event  7,  1, MT_FUJI_INTERIOR_UPPER, 3
 
 	db 0 ; coord events
 

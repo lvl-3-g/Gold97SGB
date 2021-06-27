@@ -13,15 +13,15 @@ ManiaScript:
 	iftrue .default_postevent
 	checkevent EVENT_RED_IN_KANTO_GYM
 	iftrue .alreadyhaveshuckie
-	writetext ManiaText_AskLookAfterRinring
+	writetext ManiaText_AskLookAfterMoibelle
 	yesorno
 	iffalse .refusetotakeshuckie
-	special GiveRinring
+	special GiveMoibelle
 	iffalse .partyfull
-	writetext ManiaText_TakeCareOfRinring
+	writetext ManiaText_TakeCareOfMoibelle
 	promptbutton
 	waitsfx
-	writetext ManiaText_GotRinring
+	writetext ManiaText_GotMoibelle
 	playsound SFX_KEY_ITEM
 	waitsfx
 	closetext
@@ -31,7 +31,7 @@ ManiaScript:
 .alreadyhaveshuckie
 	checkflag ENGINE_GOT_SHUCKIE_TODAY
 	iffalse .returnshuckie
-	writetext ManiaText_TakeCareOfRinring
+	writetext ManiaText_TakeCareOfMoibelle
 	waitbutton
 	closetext
 	end
@@ -52,7 +52,7 @@ ManiaScript:
 	writetext ManiaText_CanIHaveMyMonBack
 	yesorno
 	iffalse .refused
-	special ReturnRinring
+	special ReturnMoibelle
 	ifequal SHUCKIE_WRONG_MON, .wrong
 	ifequal SHUCKIE_REFUSED, .refused
 	ifequal SHUCKIE_HAPPY, .superhappy
@@ -65,13 +65,13 @@ ManiaScript:
 	end
 
 .wrong
-	writetext ManiaText_RinringNotThere
+	writetext ManiaText_MoibelleNotThere
 	waitbutton
 	closetext
 	end
 
 .superhappy
-	writetext ManiaText_RinringLikesYou
+	writetext ManiaText_MoibelleLikesYou
 	waitbutton
 	closetext
 	setevent EVENT_MANIA_TOOK_SHUCKIE_OR_LET_YOU_KEEP_HIM
@@ -84,7 +84,7 @@ ManiaScript:
 	end
 
 .nothingleft
-	writetext ManiaText_RinringIsYourLastMon
+	writetext ManiaText_MoibelleIsYourLastMon
 	waitbutton
 	closetext
 	end
@@ -99,7 +99,7 @@ ManiasHouseUnusedBookshelf:
 ; unused
 	jumpstd PictureBookshelfScript
 
-ManiaText_AskLookAfterRinring:
+ManiaText_AskLookAfterMoibelle:
 	text "I, I'm in shock!"
 
 	para "A guy about your"
@@ -123,14 +123,14 @@ ManiaText_AskLookAfterRinring:
 	line "for a while?"
 	done
 
-ManiaText_TakeCareOfRinring:
+ManiaText_TakeCareOfMoibelle:
 	text "Oh, thank you!"
 
 	para "Take good care of"
 	line "it, please!"
 	done
 
-ManiaText_GotRinring:
+ManiaText_GotMoibelle:
 	text "<PLAYER> received a"
 	line "#MON."
 	done
@@ -159,13 +159,13 @@ ManiaText_ThankYou:
 	text "Thank you!"
 	done
 
-ManiaText_RinringNotThere:
+ManiaText_MoibelleNotThere:
 	text "Hey, you don't"
 	line "have my #MON"
 	cont "with you."
 	done
 
-ManiaText_RinringLikesYou:
+ManiaText_MoibelleLikesYou:
 	text "My #MON has"
 	line "come to like you."
 
@@ -190,7 +190,7 @@ ManiaText_HappinessSpeech:
 	line "treats them well."
 	done
 
-ManiaText_RinringIsYourLastMon:
+ManiaText_MoibelleIsYourLastMon:
 	text "If I take my #-"
 	line "MON back, what are"
 

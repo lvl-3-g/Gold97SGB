@@ -81,7 +81,7 @@ Music:
 	dba Music_SuccessfulCapture
 	dba Music_RouteU6U
 	dba Music_Mom
-	dba Music_VictoryRoad
+	dba Music_MtFujiInteriorLower
 	dba Music_PokemonLullaby
 	dba Music_PokemonMarch
 	dba Music_GoldSilverOpening

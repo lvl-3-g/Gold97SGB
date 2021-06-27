@@ -116,7 +116,7 @@ SWIslandsGrassWildMons:
 	db 39, PIDGEOTTO
 	db 42, PIDGEOTTO
 	db 43, PIDGEOT
-	db 40, MADAME
+	db 40, LUXWAN
 	db 39, RATICATE
 	db 40, JUMPLUFF
 	db 40, JUMPLUFF
@@ -124,7 +124,7 @@ SWIslandsGrassWildMons:
 	db 39, PIDGEOTTO
 	db 42, PIDGEOTTO
 	db 43, PIDGEOT
-	db 40, MADAME
+	db 40, LUXWAN
 	db 39, RATICATE
 	db 40, JUMPLUFF
 	db 40, JUMPLUFF
@@ -132,7 +132,7 @@ SWIslandsGrassWildMons:
 	db 39, NOCTOWL
 	db 39, RATICATE
 	db 40, NOCTOWL
-	db 40, MADAME
+	db 40, LUXWAN
 	db 39, RATICATE
 	db 40, NOCTOWL
 	db 40, NOCTOWL
@@ -143,7 +143,7 @@ SWIslandsGrassWildMons:
 	db 50, PIDGEOTTO
 	db 50, PIDGEOTTO
 	db 51, PIDGEOT
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, RATICATE
 	db 51, JUMPLUFF
 	db 51, JUMPLUFF
@@ -151,7 +151,7 @@ SWIslandsGrassWildMons:
 	db 50, PIDGEOTTO
 	db 50, PIDGEOTTO
 	db 51, PIDGEOT
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, RATICATE
 	db 51, JUMPLUFF
 	db 51, JUMPLUFF
@@ -159,7 +159,7 @@ SWIslandsGrassWildMons:
 	db 50, NOCTOWL
 	db 50, RATICATE
 	db 51, NOCTOWL
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, RATICATE
 	db 51, NOCTOWL
 	db 51, NOCTOWL
@@ -170,7 +170,7 @@ SWIslandsGrassWildMons:
 	db 50, MAGNETON
 	db 50, ELECTRODE
 	db 51, HAUNTER
-	db 51, CURPAN
+	db 51, KADABRA
 	db 50, RATICATE
 	db 51, RATICATE
 	db 51, RATICATE
@@ -178,7 +178,7 @@ SWIslandsGrassWildMons:
 	db 50, MAGNETON
 	db 50, ELECTRODE
 	db 51, HAUNTER
-	db 51, CURPAN
+	db 51, KADABRA
 	db 50, RATICATE
 	db 51, RATICATE
 	db 51, RATICATE
@@ -186,7 +186,7 @@ SWIslandsGrassWildMons:
 	db 50, MAGNETON
 	db 50, ELECTRODE
 	db 51, HAUNTER
-	db 51, CURPAN
+	db 51, PHANDARIN
 	db 50, RATICATE
 	db 51, RATICATE
 	db 51, RATICATE
@@ -295,7 +295,7 @@ SWIslandsGrassWildMons:
 	db 42, NOCTOWL
 	db 41, JUMPLUFF
 	db 44, SKIPLOOM
-	db 42, PLUCKROSS
+	db 42, TRICULES
 	db 41, AIPOM
 	db 42, AIPOM
 	
@@ -334,7 +334,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, MAGMAR
 	db 52, MAGMAR
 	; day
@@ -342,7 +342,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, MAGMAR
 	db 52, MAGMAR
 	; nite
@@ -350,7 +350,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, MAGMAR
 	db 52, MAGMAR
 
@@ -362,7 +362,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, WEEZING
 	db 50, WEEZING
 	; day
@@ -370,7 +370,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, WEEZING
 	db 50, WEEZING
 	; nite
@@ -378,7 +378,7 @@ SWIslandsGrassWildMons:
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
-	db 50, BOMSEAL
+	db 50, GRENMAR
 	db 50, WEEZING
 	db 50, WEEZING
 	
@@ -472,7 +472,7 @@ SWIslandsGrassWildMons:
 	db 47, PRIMEAPE
 	db 50, EXEGGCUTE
 	db 47, KINGLER
-	db 48, RAITORA
+	db 48, STRAIGAR
 	db 50, PRIMEAPE
 	; day
 	db 46, KRABBY
@@ -480,15 +480,15 @@ SWIslandsGrassWildMons:
 	db 47, PRIMEAPE
 	db 50, EXEGGCUTE
 	db 47, KINGLER
-	db 48, RAITORA
+	db 48, STRAIGAR
 	db 50, PRIMEAPE
 	; nite
 	db 46, KRABBY
 	db 47, ARBOK
-	db 47, BELLRING
+	db 47, BELLEDAM
 	db 50, TANGELA
 	db 46, KINGLER
-	db 48, RAITORA
+	db 48, STRAIGAR
 	db 50, TANGELA
 	
 	map_id WEATHERED_TRAIL
@@ -497,7 +497,7 @@ SWIslandsGrassWildMons:
 	db 50, PIDGEOTTO
 	db 50, PIDGEOTTO
 	db 51, PIDGEOT
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, ELECTRODE
 	db 51, JUMPLUFF
 	db 51, JUMPLUFF
@@ -505,7 +505,7 @@ SWIslandsGrassWildMons:
 	db 50, PIDGEOTTO
 	db 50, PIDGEOTTO
 	db 51, PIDGEOT
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, ELECTRODE
 	db 51, JUMPLUFF
 	db 51, JUMPLUFF
@@ -513,7 +513,7 @@ SWIslandsGrassWildMons:
 	db 50, NOCTOWL
 	db 50, RATICATE
 	db 51, NOCTOWL
-	db 51, MADAME
+	db 51, LUXWAN
 	db 50, ELECTRODE
 	db 51, NOCTOWL
 	db 51, NOCTOWL

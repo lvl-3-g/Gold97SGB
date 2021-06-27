@@ -9,10 +9,10 @@ Cry_Togepi:
 	channel 5, Cry_Togepi_Ch5
 	channel 6, Cry_Togepi_Ch6
 
-Cry_Ponittle:
+Cry_Kolta:
 	channel_count 2
-	channel 5, Cry_Ponittle_Ch5
-	channel 6, Cry_Ponittle_Ch6
+	channel 5, Cry_Kolta_Ch5
+	channel 6, Cry_Kolta_Ch6
 
 Cry_Spinarak:
 	channel_count 3
@@ -32,10 +32,10 @@ Cry_Hoothoot:
 	channel 6, Cry_Hoothoot_Ch6
 	channel 8, Cry_Hoothoot_Ch8
 
-Cry_Tangle:
+Cry_Burgela:
 	channel_count 2
-	channel 5, Cry_Tangle_Ch5
-	channel 6, Cry_Tangle_Ch6
+	channel 5, Cry_Burgela_Ch5
+	channel 6, Cry_Burgela_Ch6
 
 Cry_Slowking:
 	channel_count 3
@@ -48,22 +48,22 @@ Cry_Mareep:
 	channel 5, Cry_Mareep_Ch5
 	channel 6, Cry_Mareep_Ch6
 
-Cry_Flambear:
+Cry_Cubburn:
 	channel_count 3
-	channel 5, Cry_Flambear_Ch5
-	channel 6, Cry_Flambear_Ch6
-	channel 8, Cry_Flambear_Ch8
+	channel 5, Cry_Cubburn_Ch5
+	channel 6, Cry_Cubburn_Ch6
+	channel 8, Cry_Cubburn_Ch8
 
-Cry_Happa:
+Cry_Chikorita:
 	channel_count 3
-	channel 5, Cry_Happa_Ch5
-	channel 6, Cry_Happa_Ch6
-	channel 8, Cry_Happa_Ch8
+	channel 5, Cry_Chikorita_Ch5
+	channel 6, Cry_Chikorita_Ch6
+	channel 8, Cry_Chikorita_Ch8
 
-Cry_Animon:
+Cry_Mimmeo:
 	channel_count 2
-	channel 5, Cry_Animon_Ch5
-	channel 8, Cry_Animon_Ch8
+	channel 5, Cry_Mimmeo_Ch5
+	channel 8, Cry_Mimmeo_Ch8
 
 Cry_Girafarig:
 	channel_count 3
@@ -71,10 +71,10 @@ Cry_Girafarig:
 	channel 6, Cry_Girafarig_Ch6
 	channel 8, Cry_Girafarig_Ch8
 
-Cry_Meowsy:
+Cry_Coinpur:
 	channel_count 2
-	channel 5, Cry_Meowsy_Ch5
-	channel 8, Cry_Meowsy_Ch8
+	channel 5, Cry_Coinpur_Ch5
+	channel 8, Cry_Coinpur_Ch8
 
 Cry_Ledyba:
 	channel_count 3
@@ -82,11 +82,11 @@ Cry_Ledyba:
 	channel 6, Cry_Ledyba_Ch6
 	channel 8, Cry_Ledyba_Ch8
 
-Cry_Anchorage:
+Cry_Angore:
 	channel_count 3
-	channel 5, Cry_Anchorage_Ch5
-	channel 6, Cry_Anchorage_Ch6
-	channel 8, Cry_Anchorage_Ch8
+	channel 5, Cry_Angore_Ch5
+	channel 6, Cry_Angore_Ch6
+	channel 8, Cry_Angore_Ch8
 
 Cry_Donphan:
 	channel_count 3
@@ -94,11 +94,11 @@ Cry_Donphan:
 	channel 6, Cry_Donphan_Ch6
 	channel 8, Cry_Donphan_Ch8
 
-Cry_Dynabear:
+Cry_Bruinus:
 	channel_count 3
-	channel 5, Cry_Dynabear_Ch5
-	channel 6, Cry_Dynabear_Ch6
-	channel 8, Cry_Dynabear_Ch8
+	channel 5, Cry_Bruinus_Ch5
+	channel 6, Cry_Bruinus_Ch6
+	channel 8, Cry_Bruinus_Ch8
 
 Cry_Natu:
 	channel_count 3
@@ -124,11 +124,11 @@ Cry_Ampharos:
 	channel 6, Cry_Ampharos_Ch6
 	channel 8, Cry_Ampharos_Ch8
 
-Cry_Cruiseal:
+Cry_Palssio:
 	channel_count 3
-	channel 5, Cry_Cruiseal_Ch5
-	channel 6, Cry_Cruiseal_Ch6
-	channel 8, Cry_Cruiseal_Ch8
+	channel 5, Cry_Palssio_Ch5
+	channel 6, Cry_Palssio_Ch6
+	channel 8, Cry_Palssio_Ch8
 
 Cry_Cleffa:
 	channel_count 3
@@ -148,17 +148,17 @@ Cry_Aipom:
 	channel 6, Cry_Aipom_Ch6
 	channel 8, Cry_Aipom_Ch8
 
-Cry_Parette:
+Cry_Paraspor:
 	channel_count 3
-	channel 5, Cry_Parette_Ch5
-	channel 6, Cry_Parette_Ch6
-	channel 8, Cry_Parette_Ch8
+	channel 5, Cry_Paraspor_Ch5
+	channel 6, Cry_Paraspor_Ch6
+	channel 8, Cry_Paraspor_Ch8
 
-Cry_Madame:
+Cry_Luxwan:
 	channel_count 3
-	channel 5, Cry_Madame_Ch5
-	channel 6, Cry_Madame_Ch6
-	channel 8, Cry_Madame_Ch8
+	channel 5, Cry_Luxwan_Ch5
+	channel 6, Cry_Luxwan_Ch6
+	channel 8, Cry_Luxwan_Ch8
 
 Cry_Entei:
 	channel_count 3
@@ -197,7 +197,7 @@ Cry_Entei_Ch8:
 	noise_note 32, 11, 4, 108
 	sound_ret
 
-Cry_Madame_Ch5:
+Cry_Luxwan_Ch5:
 	duty_cycle_pattern 3, 0, 1, 0
 	square_note 4, 10, -7, 1824
 	square_note 2, 15, 8, 1820
@@ -208,7 +208,7 @@ Cry_Madame_Ch5:
 	square_note 4, 9, 1, 1806
 	sound_ret
 
-Cry_Madame_Ch6:
+Cry_Luxwan_Ch6:
 	duty_cycle_pattern 0, 0, 2, 2
 	square_note 1, 11, 8, 1808
 	square_note 3, 13, 8, 1836
@@ -219,7 +219,7 @@ Cry_Madame_Ch6:
 	square_note 4, 12, 1, 1872
 	sound_ret
 
-Cry_Madame_Ch8:
+Cry_Luxwan_Ch8:
 	noise_note 2, 14, 8, 59
 .loop:
 	noise_note 1, 15, 1, 78
@@ -228,7 +228,7 @@ Cry_Madame_Ch8:
 	noise_note 20, 12, 2, 95
 	sound_ret
 
-Cry_Parette_Ch5:
+Cry_Paraspor_Ch5:
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 1, 15, 8, 1456
 	square_note 1, 15, 8, 1204
@@ -241,13 +241,13 @@ Cry_Parette_Ch5:
 	pitch_sweep 8, 8
 	sound_ret
 
-Cry_Parette_Ch6:
+Cry_Paraspor_Ch6:
 	duty_cycle_pattern 0, 2, 0, 2
 	square_note 8, 11, 8, 1224
 	square_note 32, 11, 5, 1040
 	sound_ret
 
-Cry_Parette_Ch8:
+Cry_Paraspor_Ch8:
 	noise_note 3, 15, -7, 75
 	noise_note 3, 14, -7, 76
 	noise_note 32, 11, 5, 95
@@ -355,11 +355,11 @@ Cry_Togepi_Ch6:
 	square_note 16, 15, 1, 1959
 	sound_ret
 
-Cry_Ponittle_Ch5:
+Cry_Kolta_Ch5:
 	pitch_offset 2
-Cry_Ponittle_Ch6:
+Cry_Kolta_Ch6:
 	sound_call Cry_Togepi_Ch6
-	sound_loop 2, Cry_Ponittle_Ch6
+	sound_loop 2, Cry_Kolta_Ch6
 	square_note 14, 0, 0, 0
 	square_note 8, 15, 2, 1986
 	sound_ret
@@ -452,19 +452,19 @@ Cry_Hoothoot_Ch8:
 	noise_note 16, 10, 7, 110
 	sound_ret
 
-Cry_Tangle_Ch5:
+Cry_Burgela_Ch5:
 	pitch_offset 32
 	duty_cycle 0
-	sound_jump Cry_Tangle_Ch6.body
+	sound_jump Cry_Burgela_Ch6.body
 
-Cry_Tangle_Ch6:
+Cry_Burgela_Ch6:
 	duty_cycle_pattern 0, 1, 2, 3
 .body:
 	square_note 8, 3, -1, 1837
 	square_note 8, 15, 1, 1824
 	sound_ret
 
-Cry_Tangle_Ch8:
+Cry_Burgela_Ch8:
 	noise_note 8, 3, -3, 0
 	noise_note 8, 9, 2, 0
 	sound_ret
@@ -483,9 +483,9 @@ Cry_Mareep_Ch6:
 	square_note 6, 15, 1, 1886
 	sound_ret
 
-Cry_Flambear_Ch5:
+Cry_Cubburn_Ch5:
 	pitch_offset 32
-Cry_Flambear_Ch6:
+Cry_Cubburn_Ch6:
 	duty_cycle 2
 	square_note 8, 2, -7, 263
 .loop1:
@@ -498,15 +498,15 @@ Cry_Flambear_Ch6:
 	sound_loop 4, .loop2
 	sound_ret
 
-Cry_Animon_Ch8:
-Cry_Flambear_Ch8:
+Cry_Mimmeo_Ch8:
+Cry_Cubburn_Ch8:
 	noise_note 8, 3, -7, 82
 	noise_note 32, 9, 3, 79
 	sound_ret
 
-Cry_Happa_Ch5:
+Cry_Chikorita_Ch5:
 	pitch_offset 32
-Cry_Happa_Ch6:
+Cry_Chikorita_Ch6:
 	duty_cycle_pattern 0, 2, 0, 1
 	square_note 2, 12, 8, 1601
 	square_note 2, 4, 8, 1601
@@ -515,12 +515,12 @@ Cry_Happa_Ch6:
 	square_note 4, 15, 1, 1931
 	sound_ret
 
-Cry_Happa_Ch8:
+Cry_Chikorita_Ch8:
 	noise_note 4, 9, 1, 16
 	noise_note 8, 9, 4, 3
 	sound_ret
 
-Cry_Animon_Ch5:
+Cry_Mimmeo_Ch5:
 	duty_cycle_pattern 2, 2, 0, 2
 	sound_jump Cry_Mareep_Ch6.body
 
@@ -547,7 +547,7 @@ Cry_Girafarig_Ch8:
 	noise_note 7, 4, 1, 0
 	sound_ret
 
-Cry_Meowsy_Ch5:
+Cry_Coinpur_Ch5:
 	duty_cycle_pattern 2, 1, 0, 1
 	square_note 12, 15, 2, 1958
 	square_note 4, 15, 8, 1968
@@ -556,7 +556,7 @@ Cry_Meowsy_Ch5:
 	square_note 8, 14, 1, 656
 	sound_ret
 
-Cry_Meowsy_Ch8:
+Cry_Coinpur_Ch8:
 	noise_note 12, 11, 2, 80
 	noise_note 8, 10, 8, 96
 	noise_note 6, 10, 8, 91
@@ -588,7 +588,7 @@ Cry_Ledyba_Ch8:
 	noise_note 4, 8, 7, 0
 	sound_ret
 
-Cry_Anchorage_Ch5:
+Cry_Angore_Ch5:
 Cry_Donphan_Ch5:
 	duty_cycle 2
 	square_note 2, 9, -1, 1816
@@ -599,7 +599,7 @@ Cry_Donphan_Ch5:
 	square_note 8, 0, 0, 0
 	sound_ret
 
-Cry_Anchorage_Ch6:
+Cry_Angore_Ch6:
 Cry_Donphan_Ch6:
 	duty_cycle_pattern 0, 0, 1, 3
 	square_note 2, 11, -1, 1848
@@ -610,7 +610,7 @@ Cry_Donphan_Ch6:
 	square_note 8, 0, 0, 0
 	sound_ret
 
-Cry_Anchorage_Ch8:
+Cry_Angore_Ch8:
 	noise_note 2, 5, -3, 4
 	noise_note 4, 6, 8, 19
 	noise_note 8, 6, 8, 32
@@ -627,7 +627,7 @@ Cry_Donphan_Ch8:
 	sound_ret
 
 Cry_Qwilfish_Ch5:
-Cry_Dynabear_Ch5:
+Cry_Bruinus_Ch5:
 	duty_cycle_pattern 0, 1, 0, 2
 .loop1:
 	square_note 3, 12, 1, 1937
@@ -650,7 +650,7 @@ Cry_Dynabear_Ch5:
 	sound_ret
 
 Cry_Qwilfish_Ch6:
-Cry_Dynabear_Ch6:
+Cry_Bruinus_Ch6:
 	duty_cycle_pattern 1, 3, 2, 0
 	square_note 8, 9, -1, 1856
 	square_note 8, 7, -1, 1862
@@ -661,7 +661,7 @@ Cry_Dynabear_Ch6:
 	square_note 24, 14, 2, 1923
 	sound_ret
 
-Cry_Dynabear_Ch8:
+Cry_Bruinus_Ch8:
 	noise_note 16, 10, 6, 22
 	noise_note 24, 9, 8, 61
 	noise_note 32, 9, 8, 92
@@ -760,7 +760,7 @@ Cry_Ampharos_Ch8:
 	noise_note 24, 13, 2, 91
 	sound_ret
 
-Cry_Cruiseal_Ch5:
+Cry_Palssio_Ch5:
 	duty_cycle_pattern 0, 3, 0, 2
 	square_note 8, 15, 8, 816
 	square_note 8, 15, 8, 832
@@ -769,7 +769,7 @@ Cry_Cruiseal_Ch5:
 	square_note 32, 11, 2, 1972
 	sound_ret
 
-Cry_Cruiseal_Ch6:
+Cry_Palssio_Ch6:
 	duty_cycle_pattern 0, 1, 0, 2
 	square_note 8, 14, 8, 800
 	square_note 8, 14, 8, 808
@@ -778,7 +778,7 @@ Cry_Cruiseal_Ch6:
 	square_note 32, 7, 2, 1924
 	sound_ret
 
-Cry_Cruiseal_Ch8:
+Cry_Palssio_Ch8:
 	noise_note 2, 11, -6, 73
 	noise_note 5, 11, -6, 58
 	noise_note 2, 11, -6, 41

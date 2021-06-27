@@ -10,7 +10,7 @@ FrostpointMart_MapScripts:
 
 FrostpointMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_LAVENDER
+	pokemart MARTTYPE_STANDARD, MART_ACTUAL_FROSTPOINT
 	closetext
 	end
 

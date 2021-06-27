@@ -49,7 +49,7 @@ RyukyuHotelReceptionist:
 	iffalse HotelReceptionist_NoSale
 	checkmoney YOUR_MONEY, 10000
 	ifequal HAVE_LESS, HotelReceptionist_NoMoney
-	giveitem MOOMOO_MILK
+;	giveitem MOOMOO_MILK; lolololol why was this here? Looks like the receptionist was handing out secret milk
 	takemoney YOUR_MONEY, 10000
 	special PlaceMoneyTopRight
 	waitsfx
@@ -64,9 +64,9 @@ RyukyuHotelReceptionist:
 	disappear RYUKYU_HOTEL_PLACEHOLDER
 	appear RYUKYU_HOTEL_CLERK_2
 	setmapscene OAK_LAB_FRONT_ROOM, SCENE_OAK_LAB_FRONT_ROOM_AFTER_TALKING_TO_CLERK
-	setevent EVENT_FLAMBEAR_POKEBALL_IN_OAK_LAB_BACK_ROOM
-	setevent EVENT_CRUISEAL_POKEBALL_IN_OAK_LAB_BACK_ROOM
-	setevent EVENT_HAPPA_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_CUBBURN_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_PALSSIO_POKEBALL_IN_OAK_LAB_BACK_ROOM
+	setevent EVENT_CHIKORITA_POKEBALL_IN_OAK_LAB_BACK_ROOM
 	setevent EVENT_GOT_HOTEL_PASS
 	end
 	

@@ -803,9 +803,9 @@ BugCatchingContestant10BStillCompetingText:
 	line "win."
 	done
 
-UnusedBipetalText:
+UnusedBellignanText:
 ; This text is unused and unreferenced in the final game.
-; The tree Pokémon is Bipetal.
+; The tree Pokémon is Bellignan.
 ; The Silph Scope 2 was later reworked into the Squirtbottle.
 	text "I hear there's a"
 	line "#MON that looks"

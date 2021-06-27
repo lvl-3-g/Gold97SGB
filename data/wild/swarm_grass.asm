@@ -2,30 +2,30 @@
 
 SwarmGrassWildMons:
 
-; Osunfish swarm
+; Molambino swarm
 	map_id ROUTE_103
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 12, OSUNFISH
-	db 14, OSUNFISH
+	db 12, MOLAMBINO
+	db 14, MOLAMBINO
 	db 14, PIDGEY
 	db 10, DITTO
 	db 10, DITTO
 	; day
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 12, OSUNFISH
-	db 14, OSUNFISH
+	db 12, MOLAMBINO
+	db 14, MOLAMBINO
 	db 14, PIDGEY
 	db 10, DITTO
 	db 10, DITTO
 	; nite
 	db 12, NIDORAN_M
 	db 12, NIDORAN_F
-	db 12, OSUNFISH
-	db 14, OSUNFISH
+	db 12, MOLAMBINO
+	db 14, MOLAMBINO
 	db 14, HOOTHOOT
 	db 10, DITTO
 	db 10, DITTO
@@ -87,33 +87,33 @@ SwarmGrassWildMons:
 	db 15, EEVEE
 	ENDC
 
-; Parette swarm
+; Paraspor swarm
 	map_id AMPARE_CAVERN_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	db 3, GEODUDE
-	db 3, PARETTE
+	db 3, PARASPOR
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, PARETTE
-	db 4, PARETTE
-	db 4, PARETTE
+	db 2, PARASPOR
+	db 4, PARASPOR
+	db 4, PARASPOR
 	; day
 	db 3, GEODUDE
-	db 3, PARETTE
+	db 3, PARASPOR
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, PARETTE
-	db 4, PARETTE
-	db 4, PARETTE
+	db 2, PARASPOR
+	db 4, PARASPOR
+	db 4, PARASPOR
 	; nite
 	db 3, GEODUDE
-	db 3, PARETTE
+	db 3, PARASPOR
 	db 2, ZUBAT
 	db 2, GEODUDE
-	db 2, PARETTE
-	db 4, PARETTE
-	db 4, PARETTE
+	db 2, PARASPOR
+	db 4, PARASPOR
+	db 4, PARASPOR
 
 ; Marill swarm
 	map_id CHARRED_SUMMIT_CAVE

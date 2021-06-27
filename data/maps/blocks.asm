@@ -32,8 +32,8 @@ JouleCaveZapdosRoom_Blocks:
 AmamiPortPassage_Blocks:
 	INCBIN "maps/AmamiPortPassage.blk"
 
-VictoryRoad2F_Blocks:
-	INCBIN "maps/VictoryRoad2F.blk"
+MtFujiInteriorUpper_Blocks:
+	INCBIN "maps/MtFujiInteriorUpper.blk"
 
 JadeForest_Blocks:
 	INCBIN "maps/JadeForest.blk"
@@ -409,8 +409,8 @@ Kanto2Pokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 
-EarlsPokemonAcademy_Blocks:
-	INCBIN "maps/EarlsPokemonAcademy.blk"
+PagotaPokemonAcademy_Blocks:
+	INCBIN "maps/PagotaPokemonAcademy.blk"
 
 WestportDeptStore1F_Blocks:
 KantoDeptStore1F_Blocks:
@@ -472,7 +472,7 @@ BlueForestDragonSpeechHouse_Blocks:
 	
 TeknosTradeHouse_Blocks:
 WestportPPSpeechHouse_Blocks:
-AlloyHouseBeta_Blocks:
+AlloySailorHoOhHouse_Blocks:
 IejimaHouse2_Blocks:
 	INCBIN "maps/House3.blk"
 
@@ -912,8 +912,8 @@ SeafoamGym_Blocks:
 MrPokemonsHouse_Blocks:
 	INCBIN "maps/MrPokemonsHouse.blk"
 
-VictoryRoadGate_Blocks:
-	INCBIN "maps/VictoryRoadGate.blk"
+CrownPathGate_Blocks:
+	INCBIN "maps/CrownPathGate.blk"
 
 WestportPortPassage_Blocks:
 TeknosPortPassage_Blocks:
@@ -934,8 +934,8 @@ CrownPath_Blocks:
 DaitoRanchBarn_Blocks:
 	INCBIN "maps/DaitoRanchBarn.blk"
 
-VictoryRoad_Blocks:
-	INCBIN "maps/VictoryRoad.blk"
+MtFujiInteriorLower_Blocks:
+	INCBIN "maps/MtFujiInteriorLower.blk"
 
 FujiSummit_Blocks:
 	INCBIN "maps/FujiSummit.blk"
@@ -961,8 +961,8 @@ MountFujiOutside_Blocks:
 DeepwaterPassageEntrance_Blocks:
 	INCBIN "maps/DeepwaterPassageEntrance.blk"
 
-DragonsDenB1F_Blocks:
-	INCBIN "maps/DragonsDenB1F.blk"
+DragonsMaw1F_Blocks:
+	INCBIN "maps/DragonsMaw1F.blk"
 
 TohjoFalls_Blocks:
 	INCBIN "maps/TohjoFalls.blk"

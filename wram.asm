@@ -2365,7 +2365,7 @@ wHydroPlantSceneID::                              db ; d976
 wJadeForestSnorlaxRoomSceneID::                             db ; d977
 wMeridianPathSceneID::                                 db ; d978
 wTrainerHouseB1FSceneID::                         db ; d979
-wVictoryRoadGateSceneID::                         db ; d97a
+wCrownPathGateSceneID::                         db ; d97a
 wRyukyuArboretumSceneID::               db ; d97b
 wForkedStraitGateSceneID::                             db ; d97c
 wSeasidePathIsenStraitGateSceneID::                      db ; d97d
@@ -2421,8 +2421,8 @@ wTeamRocketBaseB1FSceneID::                       db ; d9b3
 wTeamRocketBaseB2FSceneID::                       db ; d9b4
 wWestportUndergroundSwitchRoomEntrancesSceneID:: db ; d9b5
 wSilverCaveRoom3SceneID::                         db ; d9b6
-wVictoryRoadSceneID::                             db ; d9b7
-wDragonsDenB1FSceneID::                           db ; d9b8
+wMtFujiInteriorLowerSceneID::                             db ; d9b7
+wDragonsMaw1FSceneID::                           db ; d9b8
 wKantoRestaurantSceneID::                            db ; d9b9
 wWestportPortSceneID::                             db ; d9ba
 wAmamiPortSceneID::                           db ; d9bb

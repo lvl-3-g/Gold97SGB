@@ -213,7 +213,7 @@ Route106CooltrainerMScript:
 	jumptextfaceplayer Route106CooltrainerMText
 
 Route106FruitTree:
-	fruittree FRUITTREE_ROUTE_106
+	fruittree FRUITTREE_TREE_ROUTE_106
 
 Route106Potion:
 	itemball SUPER_POTION

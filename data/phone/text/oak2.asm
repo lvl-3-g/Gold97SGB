@@ -157,7 +157,7 @@ Oak2PhoneDisasterText:
 	line "fascinating"
 	para "relationship"
 	line "between SLOWPOKE"
-	cont "and TURBAN."
+	cont "and DISTURBAN."
 	para "I could use some"
 	line "assistance in"
 	para "capturing a few"

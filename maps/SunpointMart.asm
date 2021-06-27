@@ -10,7 +10,7 @@ SunpointMart_MapScripts:
 
 SunpointMartClerkScript:
 	opentext
-	pokemart MARTTYPE_STANDARD, MART_KUME
+	pokemart MARTTYPE_STANDARD, MART_ACTUAL_SUNPOINT
 	closetext
 	end
 

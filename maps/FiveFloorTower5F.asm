@@ -109,7 +109,7 @@ CaptainCantBelieve:
 	
 SageTellsYouToSeeBird:
 	text "<PLAYER>."
-	para "Ho-Oh roosts above"
+	para "HO-OH roosts above"
 	line "our heads."
 	para "The bird has"
 	line "returned, as"

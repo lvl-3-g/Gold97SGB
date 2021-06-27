@@ -12,7 +12,7 @@ RotateUnownFrontpic:
 	ld de, wceed
 	call .Copy
 	call .Rotate
-	ld hl, UnownPrinter_GBPrinterRectangle
+	ld hl, UnownPrinter_GBPrinterRecburgela
 	pop bc
 	add hl, bc
 	add hl, bc
@@ -107,5 +107,5 @@ y = y + 1
 endr
 ENDM
 
-UnownPrinter_GBPrinterRectangle:
+UnownPrinter_GBPrinterRecburgela:
 	gbprinterrect 7, 7

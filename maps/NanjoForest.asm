@@ -91,10 +91,10 @@ WisdomOrbBugCatcherScript:
 	end
 	
 NanjoFruitTree1:
-	fruittree FRUITTREE_KIKAI_STRAIT
+	fruittree FRUITTREE_TREE_NANJO_FOREST
 	
 NanjoFruitTree2:
-	fruittree FRUITTREE_TROPICAL_ISLAND_JUNGLE
+	fruittree FRUITTREE_TREE_NANJO_FOREST_2
 	
 NanjoForestSilverScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
@@ -105,12 +105,12 @@ NanjoForestSilverScript:
 	writetext NanjoForestSilverBefore
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
 	iftrue .Cruise
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .Happa
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .Chikorita
 	winlosstext NanjoForestSilverTextWin, NanjoForestSilverTextLoss
-	loadtrainer RIVAL2, RIVAL2_1_CRUISEAL
+	loadtrainer RIVAL2, RIVAL2_1_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -118,15 +118,15 @@ NanjoForestSilverScript:
 
 .Cruise:
 	winlosstext NanjoForestSilverTextWin, NanjoForestSilverTextLoss
-	loadtrainer RIVAL2, RIVAL2_1_HAPPA
+	loadtrainer RIVAL2, RIVAL2_1_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .FinishBattle
 
-.Happa:
+.Chikorita:
 	winlosstext NanjoForestSilverTextWin, NanjoForestSilverTextLoss
-	loadtrainer RIVAL2, RIVAL2_1_FLAMBEAR
+	loadtrainer RIVAL2, RIVAL2_1_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -223,10 +223,10 @@ NanjoForestSilverAfter:
 	done
 	
 WhatDoesWisdomOrbDoText:
-	text "I wonder what it"
+	text "I wonder where it"
 	line "came from."
-	para "Could it have been"
-	line "a #MON?"
+	para "Can #MON use"
+	line "it?"
 	done
 	
 HeresWisdomOrbText:
@@ -295,9 +295,9 @@ NanjoForest_MapEvents:
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbYoungsterScript, -1
 	object_event 23,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbBugCatcherScript, -1
 	object_event  6,  8, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_SILVER_APPEARS_IN_NANJO_FOREST
-	object_event 26, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
+	object_event 32, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
 	object_event 12,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
 	object_event  8, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullHeal, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
 	object_event 16, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestFullRestore, EVENT_PICKED_UP_ENERGYPOWDER_FROM_KABUTO_ITEM_ROOM
-	object_event 27, 28, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree1, -1
-	object_event 10, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree1, -1
+	object_event 33, 29, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree1, -1
+	object_event 10, 23, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NanjoFruitTree2, -1

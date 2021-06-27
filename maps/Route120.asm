@@ -4,6 +4,7 @@
 	const ROUTE120_SCHOOLBOY
 	const ROUTE120_LASS
 	const ROUTE120_GRAMPS
+	const ROUTE120_ITEMBALL
 
 Route120_MapScripts:
 	db 0 ; scene scripts
@@ -129,7 +130,10 @@ Route120BoulderMineSign:
 	jumptext Route120BoulderMineSignText
 
 Route120FruitTree:
-	fruittree FRUITTREE_ROUTE_120
+	fruittree FRUITTREE_TREE_ROUTE_120
+	
+Route120SuperRepel:
+	itemball SUPER_REPEL
 	
 Route120GrampsText:
 	text "Oh, good! You're"
@@ -243,11 +247,12 @@ Route120_MapEvents:
 	db 1 ; bg events
 	bg_event 10,  6, BGEVENT_READ, Route120BoulderMineSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 42,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route120FruitTree, -1
 	object_event 12, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterJoey, -1
 	object_event 24,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_TRAINER, 4, TrainerSchoolboyDudley, -1
 	object_event 12,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassConnie, -1
 	object_event  8,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route120GrampsScript, EVENT_GRAMPS_AT_MINE
+	object_event 21, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route120SuperRepel, EVENT_PICKED_UP_ROUTE_120_SUPER_REPEL
 
 

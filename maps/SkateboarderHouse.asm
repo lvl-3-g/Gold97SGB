@@ -38,7 +38,7 @@ SkateboarderHouseBookshelf:
 	jumpstd MagazineBookshelfScript
 
 SkateboarderHouseSkateboarderDudeText:
-	text "Woah dude!"
+	text "Woah, dude!"
 	para "You still riding"
 	line "around on a bike?"
 	para "Get with the"
@@ -49,7 +49,7 @@ SkateboarderHouseSkateboarderDudeText:
 	done
 	
 SkateboarderHouseSkateboarderDudeText2:
-	text "Woah dude!"
+	text "Woah, dude!"
 	para "With that board,"
 	line "you can get around"
 	para "quickly in even"
@@ -58,7 +58,7 @@ SkateboarderHouseSkateboarderDudeText2:
 	done
 	
 SkateboarderHouseSkateboarderDudeTextNoBike:
-	text "Woah dude!"
+	text "Woah, dude!"
 	para "What are you doing"
 	line "walking around"
 	cont "on your feet?"

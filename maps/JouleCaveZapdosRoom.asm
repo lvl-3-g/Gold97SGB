@@ -44,7 +44,7 @@ ZapdosText:
 	
 
 ZapdosHiddenBrightPowder:
-	hiddenitem BRIGHTPOWDER, EVENT_PICKED_UP_ENERGY_ROOT_FROM_AERODACTYL_ITEM_ROOM
+	hiddenitem BRIGHTPOWDER, EVENT_PICKED_UP_BRIGHTPOWDER_FROM_ZAPDOS_ROOM
 
 JouleCaveZapdosRoom_MapEvents:
 	db 0, 0 ; filler

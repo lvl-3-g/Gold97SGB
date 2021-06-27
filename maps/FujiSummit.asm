@@ -26,8 +26,8 @@ FujiSummit_MapEvents:
 	db 6 ; warp events
 	warp_event  9,  5, MOUNT_FUJI_POKECENTER_1F, 1
 	warp_event 10,  5, MOUNT_FUJI_POKECENTER_1F, 2
-	warp_event 10, 15, VICTORY_ROAD_2F, 4
-	warp_event 11, 15, VICTORY_ROAD_2F, 4
+	warp_event 10, 15, MT_FUJI_INTERIOR_UPPER, 4
+	warp_event 11, 15, MT_FUJI_INTERIOR_UPPER, 4
 	warp_event  8,  5, MOUNT_FUJI_POKECENTER_1F, 1
 	warp_event 11,  5, MOUNT_FUJI_POKECENTER_1F, 2
 

@@ -26,31 +26,31 @@ SlowpokeWellB1F_MapScripts:
 	writetext BurnedTowerSilver_BeforeText
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_CRUISEAL_FROM_OAK
-	iftrue .cruiseal
-	checkevent EVENT_GOT_HAPPA_FROM_OAK
-	iftrue .happa
+	checkevent EVENT_GOT_PALSSIO_FROM_OAK
+	iftrue .palssio
+	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
+	iftrue .chikorita
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_3_CRUISEAL
+	loadtrainer RIVAL1, RIVAL1_3_PALSSIO
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .returnfrombattle
 
-.cruiseal
+.palssio
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_3_HAPPA
+	loadtrainer RIVAL1, RIVAL1_3_CHIKORITA
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	jump .returnfrombattle
 
-.happa
+.chikorita
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
-	loadtrainer RIVAL1, RIVAL1_3_FLAMBEAR
+	loadtrainer RIVAL1, RIVAL1_3_CUBBURN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
