@@ -46,30 +46,12 @@ NihonWaterWildMons:
 	db 18, GOLDEEN
 	db 21, POLIWAG
 	db 21, SEAKING
-	
-	map_id SLOWPOKE_WELL_B1F
-	db 2 percent ; encounter rate
-	db 18, SLOWPOKE
-	db 21, SLOWPOKE
-	db 12, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent ; encounter rate
 	db 18, SLOWPOKE
 	db 21, SLOWPOKE
 	db 21, SLOWBRO
-	
-	map_id BOULDER_MINE_1F
-	db 4 percent ; encounter rate
-	db 21, TENTACOOL
-	db 18, TENTACOOL
-	db 21, TENTACRUEL
-
-	map_id BOULDER_MINE_B1F
-	db 4 percent ; encounter rate
-	db 21, TENTACOOL
-	db 18, TENTACOOL
-	db 21, TENTACRUEL
 
 	map_id BOULDER_MINE_B5F
 	db 4 percent ; encounter rate
@@ -78,18 +60,6 @@ NihonWaterWildMons:
 	db 21, GOLDUCK
 	
 	map_id BOULDER_MINE_B2F
-	db 4 percent ; encounter rate
-	db 21, TENTACOOL
-	db 18, TENTACOOL
-	db 21, TENTACRUEL
-	
-	map_id BOULDER_MINE_B3F
-	db 4 percent ; encounter rate
-	db 21, TENTACOOL
-	db 18, TENTACOOL
-	db 21, TENTACRUEL
-	
-	map_id BOULDER_MINE_B4F
 	db 4 percent ; encounter rate
 	db 21, TENTACOOL
 	db 18, TENTACOOL

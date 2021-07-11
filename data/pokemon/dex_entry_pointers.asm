@@ -203,7 +203,7 @@ PokedexDataPointerTable:
 	dw UnownPokedexEntry
 	dw BipullaPokedexEntry
 	dw GirafarigPokedexEntry
-	dw DisdisturbanPokedexEntry
+	dw DisturbanPokedexEntry
 	dw SmujjPokedexEntry
 	dw ParasporPokedexEntry
 	dw MimmeoPokedexEntry

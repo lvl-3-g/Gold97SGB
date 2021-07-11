@@ -2863,7 +2863,7 @@ GirafarigEvosAttacks:
 	db 48, PERISH_SONG
 	db 0 ; no more level-up moves
 
-DisdisturbanEvosAttacks:
+DisturbanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, PROTECT

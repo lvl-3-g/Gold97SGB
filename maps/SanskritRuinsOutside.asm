@@ -65,7 +65,18 @@ SanskritRuinsOutsideScientistSceneContinue:
 	writetext SanskritRuinsOutsideScientistText
 	waitbutton
 	closetext
-	applymovement SANSKRITRUINSOUTSIDE_SCIENTIST, MovementData_0x580ba
+	checkcode VAR_FACING
+	ifequal UP, .scientist_walks_around_player
+	applymovement SANSKRITRUINSOUTSIDE_SCIENTIST, ScientistWalksDownMovementData
+	disappear SANSKRITRUINSOUTSIDE_SCIENTIST
+	setevent EVENT_TALKED_TO_OUTSIDE_SCIENTIST
+	setscene SCENE_SANSKRITRUINSOUTSIDE_NOTHING
+	setmapscene SANSKRIT_RUINS_RESEARCH_CENTER, SCENE_SANSKRITRUINSRESEARCHCENTER_GET_UNOWN_DEX
+	warpcheck
+	end
+
+.scientist_walks_around_player
+	applymovement SANSKRITRUINSOUTSIDE_SCIENTIST, ScientistWalksDownMovementData2
 	disappear SANSKRITRUINSOUTSIDE_SCIENTIST
 	setevent EVENT_TALKED_TO_OUTSIDE_SCIENTIST
 	setscene SCENE_SANSKRITRUINSOUTSIDE_NOTHING
@@ -134,7 +145,17 @@ SanskritRuinsSign:
 SanskritRuinsResearchCenterSign:
 	jumptext SanskritRuinsResearchCenterSignText
 
-MovementData_0x580ba:
+ScientistWalksDownMovementData:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+
+ScientistWalksDownMovementData2:
+	step RIGHT
 	step DOWN
 	step DOWN
 	step DOWN

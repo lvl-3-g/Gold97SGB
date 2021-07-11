@@ -101,7 +101,7 @@ JadeForestEther:
 JadeForestHiddenEther:
 	hiddenitem ETHER, EVENT_JADE_FOREST_HIDDEN_ETHER
 
-JadeForestHiddenSuperPotion:
+JadeForestHiddenPowerWings:
 	hiddenitem POWER_WINGS, EVENT_JADE_FOREST_HIDDEN_SUPER_POTION
 
 JadeForestHiddenFullHeal:
@@ -277,13 +277,13 @@ JadeForest_MapEvents:
 	db 6 ; bg events
 	bg_event 27, 41, BGEVENT_READ, JadeForestSignpost
 	bg_event 32,  6, BGEVENT_ITEM, JadeForestHiddenEther
-	bg_event 13, 55, BGEVENT_ITEM, JadeForestHiddenSuperPotion
+	bg_event 13, 55, BGEVENT_ITEM, JadeForestHiddenPowerWings
 	bg_event 30, 53, BGEVENT_ITEM, JadeForestHiddenFullHeal
 	bg_event 30, 43, BGEVENT_ITEM, JadeForestHiddenAwakening
 	bg_event 39, 29, BGEVENT_READ, JadeForestSignpost2
 
 	db 13 ; object events
-	object_event 19,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JadeForestHeadbuttGuyScript, -1
+	object_event 19,  9, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, JadeForestHeadbuttGuyScript, -1
 	object_event 23, 55, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, JadeForestRevive, EVENT_JADE_FOREST_REVIVE
 	;object_event 12, 29, SPRITE_KURT, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_JADE_FOREST_KURT
 	object_event 17, 23, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, JadeForestLassScript, -1

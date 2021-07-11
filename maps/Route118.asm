@@ -20,7 +20,7 @@ SanskritTownRouteCooltrainermScript:
 SanskritTownRouteMonsterScript:
 	end
 	
-MotobuPathFruitTree:
+Route118FruitTree:
 	fruittree FRUITTREE_TREE_ROUTE_118
 
 TrainerBirdKeeperHank:
@@ -91,8 +91,8 @@ TrainerSwimmermHal:
 	closetext
 	end
 
-MtMoonSquareSign:
-	jumptext MtMoonSquareSignText
+Route118Sign:
+	jumptext Route118SignText
 
 Route118HPUp:
 	itemball HP_UP
@@ -205,7 +205,7 @@ SwimmermRandallAfterBattleText:
 	cont "It's healthy."
 	done
 
-MtMoonSquareSignText:
+Route118SignText:
 	text "ROUTE 118"
 	para "SUNPOINT CITY -"
 	line "SANSKRIT TOWN"
@@ -240,7 +240,7 @@ Route118_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  6, 10, BGEVENT_READ, MtMoonSquareSign
+	bg_event  6, 10, BGEVENT_READ, Route118Sign
 	bg_event 12, 13, BGEVENT_ITEM, Route118HiddenUltraBall
 
 	db 10 ; object events
@@ -250,7 +250,7 @@ Route118_MapEvents:
 	object_event 20,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route118HPUp, EVENT_ROUTE_118_HP_UP
 	object_event 72,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, SanskritTownRouteCooltrainermScript, -1
 	object_event 72,  5, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, SanskritTownRouteMonsterScript, -1
-	object_event  5,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MotobuPathFruitTree, -1
+	object_event  5,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route118FruitTree, -1
 	object_event 55,  8, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSwimmermRandall, -1
 	object_event 44,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 4, TrainerSwimmermBerke, -1
 	object_event 30,  5, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 4, TrainerSwimmermHal, -1

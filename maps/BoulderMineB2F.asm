@@ -19,7 +19,7 @@ BoulderMineB2FTMSteelWing:
 BoulderMineB2FHiddenXAccuracy:
 	hiddenitem X_ACCURACY, EVENT_BOULDER_MINE_B2F_HIDDEN_X_ACCURACY
 
-BoulderMineB2FHiddenXDefend:
+BoulderMineB2FHiddenSteelShell:
 	hiddenitem STEEL_SHELL, EVENT_BOULDER_MINE_B2F_HIDDEN_STEEL_SHELL
 	
 BoulderMineB2FHeartStone:
@@ -67,7 +67,7 @@ BoulderMineB2F_MapEvents:
 
 	db 2 ; bg events
 	bg_event 29,  1, BGEVENT_ITEM, BoulderMineB2FHiddenXAccuracy
-	bg_event 26,  8, BGEVENT_ITEM, BoulderMineB2FHiddenXDefend
+	bg_event 26,  8, BGEVENT_ITEM, BoulderMineB2FHiddenSteelShell
 
 	db 5 ; object events
 	object_event  8, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB2FElixer, EVENT_BOULDER_MINE_B2F_ELIXER

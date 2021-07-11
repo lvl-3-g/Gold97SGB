@@ -379,7 +379,7 @@ UnknownText_0x75059:
 	line "next boat to"
 	para "WESTPORT CITY"
 	line "will set sail on"
-	cont "wednesday."
+	cont "Wednesday."
 	done
 
 UnknownText_0x75080:
@@ -387,7 +387,7 @@ UnknownText_0x75080:
 	line "next boat to"
 	para "WESTPORT CITY"
 	line "will set sail on"
-	cont "sunday."
+	cont "Sunday."
 	done
 
 UnknownText_0x750a6:

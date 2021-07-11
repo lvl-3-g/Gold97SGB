@@ -34,9 +34,6 @@ SkateboarderHouseSkateboarderDude:
 	closetext
 	end
 
-SkateboarderHouseBookshelf:
-	jumpstd MagazineBookshelfScript
-
 SkateboarderHouseSkateboarderDudeText:
 	text "Woah, dude!"
 	para "You still riding"
@@ -79,9 +76,7 @@ SkateboarderHouse_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
-	bg_event  0,  1, BGEVENT_READ, SkateboarderHouseBookshelf
-	bg_event  1,  1, BGEVENT_READ, SkateboarderHouseBookshelf
+	db 0 ; bg events
 
 	db 1 ; object events
 	object_event  2,  3, SPRITE_ROCKER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SkateboarderHouseSkateboarderDude, -1

@@ -202,7 +202,7 @@ AnimationIdlePointers:
 	dw UnownAnimationIdle
 	dw BipullaAnimationIdle
 	dw GirafarigAnimationIdle
-	dw DisdisturbanAnimationIdle
+	dw DisturbanAnimationIdle
 	dw SmujjAnimationIdle
 	dw ParaAnimationIdle
 	dw MimmeoAnimationIdle

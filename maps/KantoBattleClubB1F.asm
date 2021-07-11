@@ -653,6 +653,12 @@ BattleClubYoungsterScript:
 	opentext
 	checkevent EVENT_GOT_TOGEPI_FROM_TRAINER_CLUB
 	iftrue .AlreadyGotTogepi
+	checkevent EVENT_ALREADY_GOT_CONGRATS_FROM_YOUNGSTER
+	iftrue .AlreadyGotCongrats
+	writetext BattleClubYoungsterText
+	setevent EVENT_ALREADY_GOT_CONGRATS_FROM_YOUNGSTER
+	waitbutton
+.AlreadyGotCongrats
 	writetext IHaveAWeirdEggText
 	yesorno
 	iffalse .DontTakeTogepi
@@ -759,9 +765,9 @@ GiveTogepiText:
 	done
 	
 IHaveAWeirdEggText:
-	text "Wow! I heard you"
+	text "Wow! You really"
 	line "beat that super"
-	cont "tough COOLTRAINER!"
+	cont "tough COOLTRAINER?"
 	para "That's incredible!"
 	para "Hey, listen. I had"
 	line "this weird #MON"
@@ -861,6 +867,8 @@ BattleClubYoungsterText:
 	line "by on Saturdays."
 	para "Could you beat"
 	line "him?"
+	para "Let me know once"
+	line "you have!"
 	done
 	
 BattleClubJanineText:

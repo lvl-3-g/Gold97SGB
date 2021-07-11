@@ -202,7 +202,7 @@ BitmasksPointers:
 	dw UnownBitmasks
 	dw BipullaBitmasks
 	dw GirafarigBitmasks
-	dw DisdisturbanBitmasks
+	dw DisturbanBitmasks
 	dw SmujjBitmasks
 	dw ParaBitmasks
 	dw MimmeoBitmasks

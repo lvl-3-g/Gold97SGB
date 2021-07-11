@@ -11,7 +11,7 @@ EndonCave2F_MapScripts:
 	db 0 ; callbacks
 	
 
-TatsugoPathElixer:
+EndonCave2FElixer:
 	itemball ELIXER
 
 
@@ -129,4 +129,4 @@ EndonCave2F_MapEvents:
 	object_event 48, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerCooltrainermNick, -1
 	object_event  8,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBirdKeeperTheo, -1
 	object_event 21,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave2FEther, EVENT_ENDON_CAVE_2F_ETHER
-	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TatsugoPathElixer, EVENT_TATSUGO_PATH_ELIXER
+	object_event  2,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, EndonCave2FElixer, EVENT_ENDON_CAVE_2F_ELIXER

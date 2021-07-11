@@ -90,8 +90,8 @@ SWIslandsWaterWildMons:
 	map_id FORKED_STRAIT_EAST
 	db 2 percent
 	db 45, TENTACOOL
-	db 48, TENTACOOL
-	db 50, TENTACRUEL
+	db 48, TENTACRUEL
+	db 50, ANGORE
 	
 	map_id TROPICAL_ISLAND_OUTSIDE
 	db 2 percent
@@ -108,8 +108,8 @@ SWIslandsWaterWildMons:
 	map_id FORKED_STRAIT_WEST
 	db 2 percent
 	db 45, TENTACOOL
-	db 48, TENTACOOL
-	db 50, TENTACRUEL
+	db 48, TENTACRUEL
+	db 50, ANGORE
 	
 	map_id MOTOBU_PATH
 	db 2 percent

@@ -55,7 +55,7 @@ BirdonTownPokecenterSign:
 BirdonTownMartSign:
 	jumpstd MartSignScript
 
-WhiteApricornTree:
+FruitTreeBirdonTown:
 	fruittree FRUITTREE_TREE_BIRDON_TOWN
 
 BirdonTownHiddenFullHeal:
@@ -179,4 +179,4 @@ BirdonTown_MapEvents:
 	object_event 14, 11, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BirdonTownGrampsScript, -1
 	object_event 10,  7, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, 1, 1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BirdonTownTeacherScript, -1
 	object_event  3, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, BirdonTownYoungsterScript, -1
-	object_event 14,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, WhiteApricornTree, -1
+	object_event 14,  8, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FruitTreeBirdonTown, -1

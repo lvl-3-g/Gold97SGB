@@ -202,7 +202,7 @@ FramesPointers:
 	dw UnownFrames
 	dw BipullaFrames
 	dw GirafarigFrames
-	dw DisdisturbanFrames
+	dw DisturbanFrames
 	dw SmujjFrames
 	dw ParaFrames
 	dw MimmeoFrames

@@ -43,7 +43,7 @@ Route105Antidote:
 
 
 
-Route105HiddenPotion:
+Route105HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_105_HIDDEN_POTION
 
 
@@ -115,7 +115,7 @@ Route105_MapEvents:
 
 	db 2 ; bg events
 	bg_event  6, 28, BGEVENT_READ, Route105Sign
-	bg_event 13, 30, BGEVENT_ITEM, Route105HiddenPotion
+	bg_event 13, 30, BGEVENT_ITEM, Route105HiddenSuperPotion
 
 	db 4 ; object events
 	object_event  8, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerYoungsterMikey, -1

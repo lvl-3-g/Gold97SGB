@@ -28,40 +28,31 @@ SunpointCity_MapScripts:
 	return
 
 
-SunpointCityChucksWife:
-	jumptextfaceplayer ChucksWifeFlySpeechText
-
-SunpointCityYoungster:
-	jumptextfaceplayer SunpointCityYoungsterText
-
-SunpointCityPokefanM:
-	jumptextfaceplayer SunpointCityPokefanMText
-
 SunpointCityLass:
 	jumptextfaceplayer SunpointCityLassText
 
-SunpointCityUnusedScript:
-; unreferenced
-	jumptextfaceplayer SunpointCityUnusedText
+SunpointCityFishingGuru:
+	jumptextfaceplayer SunpointCityFishingGuruText
+
+SunpointCityTwin:
+	jumptextfaceplayer SunpointCityTwinText
+
+SunpointCityRocker:
+	jumptextfaceplayer SunpointCityRockerText
 
 SunpointCitySign:
 	jumptext SunpointCitySignText
 
-StandGymSign:
-	jumptext StandGymSignText
-
-CrownHouse2Sign:
+SunpointCityMartSign:
 	jumpstd MartSignScript
 
-SunpointPhotoStudioSign:
-	jumptext SunpointPhotoStudioSignText
+SunpointTrainerTipsSign:
+	jumptext SunpointTrainerTipsSignText
 
-SunpointPokeSeerSign:
-	jumptext SunpointPokeSeerSignText
+SunpointMagmaShaftWarningSign:
+	jumptext SunpointMagmaShaftWarningSignText
 
 SunpointPokecenterSign:
-	;giveitem HM_ROCK_SMASH
-	;setflag ENGINE_STORMBADGE
 	jumpstd PokecenterSignScript
 
 SunpointCityRock:
@@ -75,7 +66,7 @@ SunpointCityHiddenMaxEther:
 
 
 
-ChucksWifeFlySpeechText:
+SunpointCityLassText:
 	text "The climate on"
 	line "this side of NIHON"
 	para "is considerably"
@@ -93,7 +84,7 @@ ChucksWifeChubbyText:
 	cont "little chubby."
 	done
 
-SunpointCityYoungsterText:
+SunpointCityFishingGuruText:
 	text "Have you ever been"
 	line "to BLUE FOREST?"
 	para "It's cold and"
@@ -104,7 +95,7 @@ SunpointCityYoungsterText:
 	line "for me."
 	done
 
-SunpointCityPokefanMText:
+SunpointCityTwinText:
 	text "Rare #MON are"
 	line "said to live in"
 	cont "the MAGMA SHAFT."
@@ -116,22 +107,11 @@ SunpointCityPokefanMText:
 	line "entrance."
 	done
 
-SunpointCityLassText:
+SunpointCityRockerText:
 	text "This city doesn't"
 	line "have a GYM."
 	para "I don't think it"
 	line "needs one, though."
-	done
-
-SunpointCityUnusedText:
-; unused
-	text "There are several"
-	line "islands between"
-	cont "here and ALLOY."
-
-	para "A mythical sea"
-	line "creature supposed-"
-	cont "ly lives there."
 	done
 
 
@@ -142,28 +122,7 @@ SunpointCitySignText:
 	cont "Trade"
 	done
 
-StandGymSignText:
-	text "SUNPOINT CITY"
-	line "#MON GYM"
-
-	para "LEADER: CHUCK"
-
-	para "His Roaring Fists"
-	line "Do the Talking"
-	done
-
-CrownHouse2SignText:
-	text "500 Years of"
-	line "Tradition"
-
-	para "SUNPOINT CITY"
-	line "PHARMACY"
-
-	para "We Await Your"
-	line "Medicinal Queries"
-	done
-
-SunpointPhotoStudioSignText:
+SunpointTrainerTipsSignText:
 	text "TRAINER TIPS"
 	para "Certain HM moves"
 	line "require BADGES to"
@@ -174,7 +133,7 @@ SunpointPhotoStudioSignText:
 	cont "battle, though."
 	done
 
-SunpointPokeSeerSignText:
+SunpointMagmaShaftWarningSignText:
 	text "NOTICE:"
 	para "Dangerous rocks"
 	line "frequently fall"
@@ -202,20 +161,19 @@ SunpointCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 8 ; bg events
+	db 7 ; bg events
 	bg_event 26, 21, BGEVENT_READ, SunpointCitySign
-	bg_event 15, 10, BGEVENT_READ, StandGymSign
 	bg_event 32, 16, BGEVENT_READ, SunpointPokecenterSign
-	bg_event 18, 22, BGEVENT_READ, CrownHouse2Sign
-	bg_event 14, 22, BGEVENT_READ, SunpointPhotoStudioSign
-	bg_event 28, 16, BGEVENT_READ, SunpointPokeSeerSign
+	bg_event 18, 22, BGEVENT_READ, SunpointCityMartSign
+	bg_event 14, 22, BGEVENT_READ, SunpointTrainerTipsSign
+	bg_event 28, 16, BGEVENT_READ, SunpointMagmaShaftWarningSign
 	bg_event 34, 24, BGEVENT_ITEM, SunpointCityHiddenRevive
 	bg_event 13, 21, BGEVENT_ITEM, SunpointCityHiddenMaxEther
 
 	db 6 ; object events
-	object_event 28, 13, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SunpointCityYoungster, -1
-	object_event 23, 22, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, SunpointCityPokefanM, -1
-	object_event 24, 17, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SunpointCityLass, -1
+	object_event 28, 13, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SunpointCityFishingGuru, -1
+	object_event 23, 22, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_SCRIPT, 0, SunpointCityTwin, -1
+	object_event 24, 17, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SunpointCityRocker, -1
 	object_event 19, 16, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SunpointCityRock, -1
 	object_event 18, 17, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SunpointCityRock, -1
-	object_event 22, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunpointCityChucksWife, -1
+	object_event 22, 22, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SunpointCityLass, -1

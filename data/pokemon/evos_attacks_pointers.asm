@@ -204,7 +204,7 @@ EvosAttacksPointers::
 	dw UnownEvosAttacks
 	dw BipullaEvosAttacks
 	dw GirafarigEvosAttacks
-	dw DisdisturbanEvosAttacks
+	dw DisturbanEvosAttacks
 	dw SmujjEvosAttacks
 	dw ParasporEvosAttacks
 	dw MimmeoEvosAttacks

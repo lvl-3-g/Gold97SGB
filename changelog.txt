@@ -168,7 +168,7 @@ Changelog
 - Natu line now learns Quick Attack
 - Lurreel now learns Crunch
 - Girafarig now learns Crunch
-- Disdisturban now learns Crunch
+- Disturban now learns Crunch
 - Moibelle line now learns Bite
 - Warfurs line now learns Low Kick and Slash
 

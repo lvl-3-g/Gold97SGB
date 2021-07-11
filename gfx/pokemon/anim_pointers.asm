@@ -202,7 +202,7 @@ AnimationPointers:
 	dw UnownAnimation
 	dw BipullaAnimation
 	dw GirafarigAnimation
-	dw DisdisturbanAnimation
+	dw DisturbanAnimation
 	dw SmujjAnimation
 	dw ParaAnimation
 	dw MimmeoAnimation

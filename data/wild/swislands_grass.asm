@@ -94,9 +94,9 @@ SWIslandsGrassWildMons:
 	db 45, CHANSEY
 	db 44, CHANSEY
 	; day
-	db 44, PARAS
+	db 44, PARASECT
 	db 43, NIDORINO
-	db 44, VENONAT
+	db 44, VENOMOTH
 	db 45, EXEGGCUTE
 	db 43, FLAAFFY
 	db 45, CHANSEY
@@ -104,7 +104,7 @@ SWIslandsGrassWildMons:
 	; nite
 	db 44, ARIADOS
 	db 43, NIDORINO
-	db 44, VENONAT
+	db 44, VENOMOTH
 	db 45, EXEGGCUTE
 	db 43, FLAAFFY
 	db 45, CHANSEY
@@ -171,7 +171,7 @@ SWIslandsGrassWildMons:
 	db 50, ELECTRODE
 	db 51, HAUNTER
 	db 51, KADABRA
-	db 50, RATICATE
+	db 50, HYPNO
 	db 51, RATICATE
 	db 51, RATICATE
 	; day
@@ -179,7 +179,7 @@ SWIslandsGrassWildMons:
 	db 50, ELECTRODE
 	db 51, HAUNTER
 	db 51, KADABRA
-	db 50, RATICATE
+	db 50, HYPNO
 	db 51, RATICATE
 	db 51, RATICATE
 	; nite
@@ -187,7 +187,7 @@ SWIslandsGrassWildMons:
 	db 50, ELECTRODE
 	db 51, HAUNTER
 	db 51, PHANDARIN
-	db 50, RATICATE
+	db 50, HYPNO
 	db 51, RATICATE
 	db 51, RATICATE
 
@@ -446,7 +446,7 @@ SWIslandsGrassWildMons:
 	db 55, PIKACHU
 	db 57, EXEGGCUTE
 	db 56, DODRIO
-	db 58, TOGEPI
+	db 58, DODRIO
 	; day
 	db 55, BUTTERFREE
 	db 56, LEDIAN
@@ -454,7 +454,7 @@ SWIslandsGrassWildMons:
 	db 55, PIKACHU
 	db 57, EXEGGCUTE
 	db 56, PIDGEOT
-	db 58, TOGEPI
+	db 58, PIDGEOT
 	; nite
 	db 55, GLOOM
 	db 56, RATICATE
@@ -462,7 +462,7 @@ SWIslandsGrassWildMons:
 	db 55, MEOWTH
 	db 57, EXEGGCUTE
 	db 56, ONIX
-	db 58, TOGEPI
+	db 58, ONIX
 
 	map_id MOTOBU_PATH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

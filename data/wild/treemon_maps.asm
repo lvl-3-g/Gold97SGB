@@ -12,7 +12,7 @@ TreeMonMaps:
 	treemon_map ROUTE_108,                   TREEMON_SET_OVERWORLD_3
 	treemon_map ROUTE_109,                   TREEMON_SET_OVERWORLD_3
 	treemon_map ROUTE_113,                   TREEMON_SET_OVERWORLD_3
-	treemon_map ROUTE_112,                   TREEMON_SET_OVERWORLD_3
+	treemon_map ROUTE_106,                   TREEMON_SET_OVERWORLD_3
 	treemon_map SEASIDE_PATH,                TREEMON_SET_OVERWORLD_3
 	treemon_map ROUTE_115,                   TREEMON_SET_OVERWORLD_1
 	treemon_map URASOE_TRAIL,                TREEMON_SET_OVERWORLD_1

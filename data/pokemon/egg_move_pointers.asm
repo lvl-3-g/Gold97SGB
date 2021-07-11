@@ -202,7 +202,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw BipullaEggMoves
 	dw NoEggMoves
-	dw DisdisturbanEggMoves
+	dw DisturbanEggMoves
 	dw SmujjEggMoves
 	dw ParasporEggMoves
 	dw NoEggMoves

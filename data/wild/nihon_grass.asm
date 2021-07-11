@@ -514,7 +514,7 @@ NihonGrassWildMons:
 	db 14, SLOWPOKE
 	db 15, ZUBAT
 	db 15, DISTURBAN
-	db 15, SLOWPOKE
+	db 15, DISTURBAN
 	; day
 	db 13, ZUBAT
 	db 14, ZUBAT
@@ -522,7 +522,7 @@ NihonGrassWildMons:
 	db 14, SLOWPOKE
 	db 15, ZUBAT
 	db 15, DISTURBAN
-	db 15, SLOWPOKE
+	db 15, DISTURBAN
 	; nite
 	db 13, ZUBAT
 	db 14, ZUBAT
@@ -530,7 +530,7 @@ NihonGrassWildMons:
 	db 14, SLOWPOKE
 	db 15, ZUBAT
 	db 15, DISTURBAN
-	db 15, SLOWPOKE
+	db 15, DISTURBAN
 	
 	map_id ROUTE_116
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -698,7 +698,7 @@ NihonGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 14, SPEAROW
-	db 15, SPEAROW
+	db 15, TANGELA
 	db 15, PIDGEY
 	db 15, TANGELA
 	db 14, DODUO
@@ -727,7 +727,7 @@ NihonGrassWildMons:
 	db 13, DODUO
 	db 14, RATTATA
 	db 14, NATU
-	db 14, MAREEP
+	db 14, NATU
 	db 13, MAREEP
 	db 15, PIDGEY
 	db 15, PIDGEY
@@ -753,8 +753,8 @@ NihonGrassWildMons:
 	; morn
 	db 18, DODUO
 	db 18, RATTATA
-	db 16, NATU
 	db 18, MAREEP
+	db 16, NATU
 	db 18, MAREEP
 	db 16, MAGNEMITE
 	db 18, MAGNEMITE
@@ -1399,28 +1399,28 @@ NihonGrassWildMons:
 	map_id MT_FUJI_INTERIOR_UPPER
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 40, ONIX
-	db 40, GOLBAT
-	db 41, RHYHORN
-	db 41, DUGTRIO
+	db 41, ONIX
+	db 41, GOLBAT
+	db 42, RHYHORN
 	db 42, DUGTRIO
-	db 42, KANGASKHAN
-	db 42, KANGASKHAN
+	db 43, DUGTRIO
+	db 43, KANGASKHAN
+	db 43, KANGASKHAN
 	; day
-	db 40, ONIX
-	db 40, GOLBAT
-	db 41, RHYHORN
-	db 41, DUGTRIO
+	db 41, ONIX
+	db 41, GOLBAT
+	db 42, RHYHORN
 	db 42, DUGTRIO
-	db 42, KANGASKHAN
-	db 42, KANGASKHAN
+	db 43, DUGTRIO
+	db 43, KANGASKHAN
+	db 43, KANGASKHAN
 	; nite
-	db 40, ONIX
-	db 40, GOLBAT
-	db 41, RHYHORN
-	db 41, DUGTRIO
+	db 41, ONIX
+	db 41, GOLBAT
+	db 42, RHYHORN
 	db 42, DUGTRIO
-	db 42, KANGASKHAN
-	db 42, KANGASKHAN
+	db 43, DUGTRIO
+	db 43, KANGASKHAN
+	db 43, KANGASKHAN
 
 	db -1 ; end

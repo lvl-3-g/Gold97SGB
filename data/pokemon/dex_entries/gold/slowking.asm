@@ -2,9 +2,9 @@
 	dw 607, 1750 ; height, weight
 
 	db   "Every time it ya-"
-	next "wns, SHELLDER"
-	next "injects more poi-"
+	next "wns, DISTURBAN"
+	next "clamps down more"
 
-	page "son into it. The"
-	next "poison makes it"
+	page "tightly. The"
+	next "pressure makes it"
 	next "more intelligent.@"

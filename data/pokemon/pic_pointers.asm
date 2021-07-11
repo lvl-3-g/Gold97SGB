@@ -411,8 +411,8 @@ PokemonPicPointers::
 	dba_pic BipullaBackpic
 	dba_pic GirafarigFrontpic
 	dba_pic GirafarigBackpic
-	dba_pic DisdisturbanFrontpic
-	dba_pic DisdisturbanBackpic
+	dba_pic DisturbanFrontpic
+	dba_pic DisturbanBackpic
 	dba_pic SmujjFrontpic
 	dba_pic SmujjBackpic
 	dba_pic ParasporFrontpic

@@ -588,7 +588,7 @@ BipullaEggMoves:
 	db BEAT_UP
 	db -1 ; end
 
-DisdisturbanEggMoves:
+DisturbanEggMoves:
 	db CRUNCH
 	db FLAIL
 	db SWIFT

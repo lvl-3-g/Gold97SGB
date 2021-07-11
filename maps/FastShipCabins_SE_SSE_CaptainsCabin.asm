@@ -313,7 +313,7 @@ PsychicRodneyBeatenText:
 
 PsychicRodneyAfterBattleText:
 	text "I get it. You can"
-	line "hear NIHONS's"
+	line "hear NIHON's"
 	cont "radio on here."
 	done
 
