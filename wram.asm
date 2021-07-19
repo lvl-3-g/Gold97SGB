@@ -2372,8 +2372,8 @@ wSeasidePathIsenStraitGateSceneID::                      db ; d97d
 wMountFujiPokecenter1FSceneID::               db ; d97e
 wWillsRoomSceneID::                               db ; d97f
 wKogasRoomSceneID::                               db ; d980
-wBrunosRoomSceneID::                              db ; d981
-wKarensRoomSceneID::                              db ; d982
+wAgathasRoomSceneID::                              db ; d981
+wMistysRoomSceneID::                              db ; d982
 wLancesRoomSceneID::                              db ; d983
 wHallOfFameSceneID::                              db ; d984
 wRoute115SceneID::                                 db ; d985

@@ -47,8 +47,6 @@ Script_ApproachLanceFromLeft:
 	jump LancesRoomLanceScript
 
 Script_ApproachLanceFromRight:
-;	warp SUNPOINT_DOCKS, 13, 3
-;	end
 	special FadeOutMusic
 	applymovement PLAYER, MovementData_ApproachLanceFromRight
 LancesRoomLanceScript:
@@ -82,24 +80,13 @@ ReturnToMainLance:
 	turnobject LANCESROOM_LANCE, DOWN
 	pause 10
 	turnobject PLAYER, DOWN
-;	appear LANCESROOM_MARY
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRushesIn
-;	opentext
-;	writetext UnknownText_0x1811dd
-;	waitbutton
-;	closetext
 	appear LANCESROOM_OAK
 	applymovement LANCESROOM_OAK, LancesRoomMovementData_OakWalksIn
-;	follow LANCESROOM_MARY, LANCESROOM_OAK
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryYieldsToOak
-;	stopfollow
 	turnobject LANCESROOM_OAK, UP
-;	turnobject LANCESROOM_LANCE, LEFT
 	opentext
 	writetext UnknownText_0x18121b
 	waitbutton
 	closetext
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryInterviewChampion
 	turnobject PLAYER, RIGHT
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
@@ -122,13 +109,11 @@ ReturnToMainLance:
 	applymovement PLAYER, LancesRoomMovementData_PlayerExits
 	playsound SFX_EXIT_BUILDING
 	disappear PLAYER
-	applymovement LANCESROOM_OAK, LancesRoomMovementData_MaryTriesToFollow
-;	showemote EMOTE_SHOCK, LANCESROOM_MARY, 15
+	applymovement LANCESROOM_OAK, LancesRoomMovementData_OakWalksToHoFDoor
 	opentext
 	writetext UnknownText_0x1813c5
 	pause 30
 	closetext
-;	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRunsBackAndForth
 	special FadeBlackQuickly
 	pause 15
 	warpfacing UP, HALL_OF_FAME, 4, 13
@@ -196,24 +181,11 @@ LancesRoomMovementData_PlayerExits:
 	step UP
 	step_end
 
-LancesRoomMovementData_MaryTriesToFollow:
+LancesRoomMovementData_OakWalksToHoFDoor:
 	step UP
 	step UP
 	step_end
 
-LancesRoomMovementData_MaryRunsBackAndForth:
-	big_step RIGHT
-	big_step RIGHT
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step LEFT
-	big_step LEFT
-	turn_head UP
-	step_end
 
 LanceBattleIntroText:
 	text "LANCE: I've been"
@@ -368,8 +340,8 @@ LancesRoom_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  4, 23, KARENS_ROOM, 3
-	warp_event  5, 23, KARENS_ROOM, 4
+	warp_event  4, 23, MISTYS_ROOM, 3
+	warp_event  5, 23, MISTYS_ROOM, 4
 	warp_event  4,  1, HALL_OF_FAME, 1
 	warp_event  5,  1, HALL_OF_FAME, 2
 
@@ -381,5 +353,5 @@ LancesRoom_MapEvents:
 
 	db 3 ; object events
 	object_event  5,  3, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, LancesRoomLanceScript, -1
-	object_event  4,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_OAK_AND_MARY
-	object_event  4,  7, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_OAK_AND_MARY
+	object_event  4,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_PROFESSOR_OAK
+	object_event  4,  7, SPRITE_OAK, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LANCES_ROOM_PROFESSOR_OAK

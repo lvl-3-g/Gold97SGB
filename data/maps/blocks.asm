@@ -702,11 +702,11 @@ WillsRoom_Blocks:
 KogasRoom_Blocks:
 	INCBIN "maps/KogasRoom.blk"
 
-BrunosRoom_Blocks:
-	INCBIN "maps/BrunosRoom.blk"
+AgathasRoom_Blocks:
+	INCBIN "maps/AgathasRoom.blk"
 
-KarensRoom_Blocks:
-	INCBIN "maps/KarensRoom.blk"
+MistysRoom_Blocks:
+	INCBIN "maps/MistysRoom.blk"
 
 WestportGym_Blocks:
 	INCBIN "maps/WestportGym.blk"

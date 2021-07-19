@@ -20,8 +20,8 @@ MapScenes::
 	scene_var MOUNT_FUJI_POKECENTER_1F,                wMountFujiPokecenter1FSceneID
 	scene_var WILLS_ROOM,                                  wWillsRoomSceneID
 	scene_var KOGAS_ROOM,                                  wKogasRoomSceneID
-	scene_var BRUNOS_ROOM,                                 wBrunosRoomSceneID
-	scene_var KARENS_ROOM,                                 wKarensRoomSceneID
+	scene_var AGATHAS_ROOM,                                 wAgathasRoomSceneID
+	scene_var MISTYS_ROOM,                                 wMistysRoomSceneID
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
 	scene_var ROUTE_115,                                    wRoute115SceneID

@@ -576,8 +576,8 @@ ENDM
 	map_attributes MountFujiPokecenter1F, MOUNT_FUJI_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
 	map_attributes KogasRoom, KOGAS_ROOM, $00, 0
-	map_attributes BrunosRoom, BRUNOS_ROOM, $00, 0
-	map_attributes KarensRoom, KARENS_ROOM, $00, 0
+	map_attributes AgathasRoom, AGATHAS_ROOM, $00, 0
+	map_attributes MistysRoom, MISTYS_ROOM, $00, 0
 	map_attributes LancesRoom, LANCES_ROOM, $00, 0
 	map_attributes HallOfFame, HALL_OF_FAME, $00, 0
 	map_attributes StandMart, STAND_MART, $00, 0
