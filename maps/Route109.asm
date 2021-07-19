@@ -89,18 +89,11 @@ TrainerPokefanfJaime:
 	closetext
 	end
 
-Route109Sign:
-	setflag ENGINE_FLYPOINT_SILENT
-	setflag ENGINE_FLYPOINT_BIRDON
-	setflag ENGINE_FLYPOINT_PAGOTA
-	clearflag ENGINE_FLYPOINT_KOBAN
-	jumptext Route109SignText
 
-MoomooFarmSign:
-	jumptext MoomooFarmSignText
 
-Route109TrainerTips:
-	jumptext Route109TrainerTipsText
+Route109PokecenterSign:
+	jumptext Route109PokecenterSignText
+
 
 Route109FruitTree:
 	fruittree FRUITTREE_TREE_ROUTE_109
@@ -254,32 +247,13 @@ BeautyValerieAfterBattleText:
 	
 	
 
-Route109SignText:
-	text "ROUTE 39"
 
-	para "ALLOY CITY -"
-	line "TEKNOS CITY"
-	done
-
-MoomooFarmSignText:
+Route109PokecenterSignText:
 	text "Heal Your #MON!"
 	line "#MON CENTER"
 	done
 
-Route109TrainerTipsText:
-	text "TRAINER TIPS"
 
-	para "Use HEADBUTT on"
-	line "trees to shake"
-	cont "#MON out."
-
-	para "Different kinds of"
-	line "#MON drop out"
-	cont "of trees."
-
-	para "Use HEADBUTT on"
-	line "any tree you see!"
-	done
 
 Route109_MapEvents:
 	db 0, 0 ; filler
@@ -292,11 +266,9 @@ Route109_MapEvents:
 
 	db 0 ; coord events
 
-	db 4 ; bg events
-	bg_event  2, 56, BGEVENT_READ, Route109TrainerTips
-	bg_event 14, 28, BGEVENT_READ, MoomooFarmSign
-	bg_event  1, 79, BGEVENT_READ, Route109Sign
-	bg_event  4, 35, BGEVENT_ITEM, Route109HiddenNugget
+	db 2 ; bg events
+	bg_event 14, 28, BGEVENT_READ, Route109PokecenterSign
+	bg_event  4, 11, BGEVENT_ITEM, Route109HiddenNugget
 
 	db 6 ; object events
 	object_event  4, 63, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyValerie, -1

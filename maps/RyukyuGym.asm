@@ -2,7 +2,7 @@
 	const RYUKYU_GYM_LASS
 	const RYUKYU_GYM_YOUNGSTER
 	const RYUKYU_GYM_POKEFAN_M
-	const SAFFROM_GYM_GYM_GUY
+	const RYUKYU_GYM_GYM_GUY
 
 
 RyukyuGym_MapScripts:

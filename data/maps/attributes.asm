@@ -409,7 +409,7 @@ ENDM
 	map_attributes WestportDeptStoreB1F, WESTPORT_DEPT_STORE_B1F, $00, 0
 	map_attributes WestportUndergroundWarehouse, WESTPORT_UNDERGROUND_WAREHOUSE, $00, 0
 	map_attributes CharredSummitCave, CHARRED_SUMMIT_CAVE, $09, 0
-	map_attributes JouleCaveZapdosRoom, MOUNT_MORTAR_ZAPDOS_ROOM, $09, 0
+	map_attributes JouleCaveZapdosRoom, JOULE_CAVE_ZAPDOS_ROOM, $09, 0
 	map_attributes JouleCave1F, JOULE_CAVE_1F, $09, 0
 	map_attributes IcedCavern1F, ICED_CAVERN_1F, $09, 0
 	map_attributes IcedCavernB1F, ICED_CAVERN_B1F, $09, 0
@@ -560,7 +560,7 @@ ENDM
 	map_attributes SunpointMart, SUNPOINT_MART, $00, 0
 	map_attributes KumePokecenter1F, KUME_POKECENTER_1F, $00, 0
 	map_attributes KumePokecenter2FBeta, KUME_POKECENTER_2F_BETA, $00, 0
-	map_attributes KumeSnoozeSpeechHouse, KUME_SNOOZE_SPEECH_HOUSE, $00, 0
+	map_attributes KumeIslandLegendSpeechHouse, KUME_ISLAND_LEGEND_SPEECH_HOUSE, $00, 0
 	map_attributes WestportPort, WESTPORT_PORT, $0a, 0
 	map_attributes AmamiPort, AMAMI_PORT, $0a, 0
 	map_attributes FastShip1F, FAST_SHIP_1F, $00, 0

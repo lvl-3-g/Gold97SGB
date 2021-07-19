@@ -29,7 +29,7 @@ AlloyMartCooltrainerFText:
 	done
 
 AlloyMartLassText:
-	text "My BUTTERFREE came"
+	text "My PIDGEOTTO came"
 	line "from my boyfriend"
 	cont "overseas."
 

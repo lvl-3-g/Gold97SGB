@@ -136,7 +136,7 @@ JouleCave1F_MapEvents:
 
 	db 2 ; warp events
 	warp_event  5, 31, SEASIDE_PATH, 2
-	warp_event 35, 15, MOUNT_MORTAR_ZAPDOS_ROOM, 1
+	warp_event 35, 15, JOULE_CAVE_ZAPDOS_ROOM, 1
 
 	db 0 ; coord events
 

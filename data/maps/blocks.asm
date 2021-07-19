@@ -192,7 +192,7 @@ AmamiFishingSpeechHouse_Blocks:
 NagoCharmanderHouse_Blocks:
 AmamiTownHouse2_Blocks:
 BluesHouse_Blocks:
-KumeSnoozeSpeechHouse_Blocks:
+KumeIslandLegendSpeechHouse_Blocks:
 BillsBrothersHouse_Blocks:
 FrostpointPryceHouse_Blocks:
 FrostpointOtherHouse_Blocks:

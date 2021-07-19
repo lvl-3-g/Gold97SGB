@@ -944,17 +944,17 @@ NihonGrassWildMons:
 	db 19, PSYDUCK
 	db 20, PARAS
 	db 20, EKANS
-	db 19, LICKITUNG
-	db 21, SNEASEL
-	db 21, SNEASEL
+	db 19, PARAS
+	db 21, PSYDUCK
+	db 21, PSYDUCK
 	; day
 	db 20, EKANS
 	db 19, PSYDUCK
 	db 20, PARAS
 	db 20, EKANS
 	db 19, LICKITUNG
-	db 21, SNEASEL
-	db 21, SNEASEL
+	db 21, EKANS
+	db 21, EKANS
 	; nite
 	db 20, EKANS
 	db 19, PSYDUCK

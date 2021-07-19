@@ -36,15 +36,41 @@ TinTowerHoOh:
 	clearevent EVENT_RAIKOU_APPEARS
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon HO_OH, 30
-;	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
 	startbattle
 	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
 	setevent EVENT_SET_WHEN_FOUGHT_HO_OH
+	pause 20
+	playsound SFX_MEGA_PUNCH
+	waitsfx
+	pause 10
+	cry RAIKOU
+	pause 20
+	playsound SFX_MEGA_PUNCH
+	waitsfx
+	pause 10
+	cry ENTEI
+	pause 20
+	playsound SFX_MEGA_PUNCH
+	waitsfx
+	pause 10
+	cry SUICUNE
+	pause 20
+	opentext
+	writetext BeastsHaveScatteredText
+	waitbutton
+	closetext
 	end
 
 HoOhText:
 	text "Shaoooh!"
+	done
+	
+BeastsHaveScatteredText:
+	text "It feels as though"
+	line "three gusts of"
+	para "wind have shaken"
+	line "the land…"
 	done
 
 FiveFloorTowerRoof_MapEvents:

@@ -363,24 +363,24 @@ SWIslandsGrassWildMons:
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, GRENMAR
-	db 50, WEEZING
-	db 50, WEEZING
+	db 50, MAGMAR
+	db 52, MAGMAR
 	; day
 	db 50, MACHOKE
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, GRENMAR
-	db 50, WEEZING
-	db 50, WEEZING
+	db 50, MAGMAR
+	db 52, MAGMAR
 	; nite
 	db 50, MACHOKE
 	db 48, GRAVELER
 	db 48, MACHOKE
 	db 52, WEEZING
 	db 50, GRENMAR
-	db 50, WEEZING
-	db 50, WEEZING
+	db 50, MAGMAR
+	db 52, MAGMAR
 	
 	map_id TROPICAL_ISLAND_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -486,10 +486,10 @@ SWIslandsGrassWildMons:
 	db 46, KRABBY
 	db 47, ARBOK
 	db 47, BELLEDAM
-	db 50, TANGELA
+	db 50, JUNGELA
 	db 46, KINGLER
 	db 48, STRAIGAR
-	db 50, TANGELA
+	db 50, JUNGELA
 	
 	map_id WEATHERED_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

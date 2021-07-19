@@ -102,7 +102,7 @@ ENDM
 	map_const WESTPORT_UNDERGROUND_WAREHOUSE,             10,  9 ; 48
 	map_const CHARRED_SUMMIT_CAVE,                     20, 18 ; 57
 	map_const JOULE_CAVE_1F,                      30, 18 ; 58
-	map_const MOUNT_MORTAR_ZAPDOS_ROOM,                    10,  9 ; 58
+	map_const JOULE_CAVE_ZAPDOS_ROOM,                    10,  9 ; 58
 	map_const ICED_CAVERN_1F,                      20, 18 ; 59
 	map_const ICED_CAVERN_B1F,                            20, 18 ; 60
 	map_const DEEPWATER_PASSAGE_B2F,                                 10, 36 ; 61
@@ -305,7 +305,7 @@ ENDM
 	map_const KUME_SOCIAL_HOUSE,                                   5,  4 ;  4
 	map_const KUME_POKECENTER_1F,                         8,  4 ;  6
 	map_const KUME_POKECENTER_2F_BETA,                    8,  4 ;  7
-	map_const KUME_SNOOZE_SPEECH_HOUSE,                   5,  4 ;  8
+	map_const KUME_ISLAND_LEGEND_SPEECH_HOUSE,                   5,  4 ;  8
 	map_const URASOE_TRAIL,                                    10, 18 ;  2
 	map_const KERAMA_STRAIT,                                    30,  9 ;  5
 	map_const KUME_POINT,                                    10,  9 ; 15

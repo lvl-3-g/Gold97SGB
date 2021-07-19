@@ -1,4 +1,4 @@
-	db ORFRY ; 118
+	db ORFRY ; 191
 
 	db  40,  50,  50,  52,  30,  40
 	;   hp  atk  def  spd  sat  sdf

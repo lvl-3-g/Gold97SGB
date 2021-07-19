@@ -93,17 +93,10 @@ BlueForestSign:
 	jumptext BlueForestSignText
 
 BlueForestGymSign:
-;	verbosegiveitem HM_WHIRLPOOL
 	jumptext BlueForestGymSignText
 
-MoveDeletersHouseSign:
-	jumptext MoveDeletersHouseSignText
-
-DragonDensSign:
-	jumptext DragonDensSignText
-
-BlueForestTrainerTips:
-	jumptext BlueForestTrainerTipsText
+DeepwaterPassageSign:
+	jumptext DeepwaterPassageSignText
 
 BlueForestPokecenterSign:
 	;setmapscene ROUTE_112_STAND_GATE, SCENE_DEFAULT
@@ -211,26 +204,13 @@ BlueForestGymSignText:
 	line "Elder"
 	done
 
-MoveDeletersHouseSignText:
-	text "MOVE DELETER'S"
-	line "HOUSE"
-	done
 
-DragonDensSignText:
+DeepwaterPassageSignText:
 	text "DEEPWATER PASSAGE"
 	line "South Entrance"
 	done
 
-BlueForestTrainerTipsText:
-	text "TRAINER TIPS"
 
-	para "A #MON holding"
-	line "a MIRACLEBERRY"
-
-	para "will cure itself"
-	line "of any status"
-	cont "problem."
-	done
 
 BlueForest_MapEvents:
 	db 0, 0 ; filler
@@ -241,7 +221,6 @@ BlueForest_MapEvents:
 	warp_event 19, 13, BLUE_FOREST_EMYS_HOUSE, 1
 	warp_event 25,  6, BLUE_FOREST_MART, 1
 	warp_event 13, 18, BLUE_FOREST_POKECENTER_1F, 1
-	;warp_event 13, 18, DEEPWATER_PASSAGE_B2F, 1
 	warp_event  3, 22, MOVE_DELETERS_HOUSE, 1
 	warp_event 27, 11, BLUE_FOREST_HOUSE_1, 1
 	warp_event  5,  5, DEEPWATER_PASSAGE_ENTRANCE, 1
@@ -251,12 +230,10 @@ BlueForest_MapEvents:
 
 	db 0 ; coord events
 
-	db 7 ; bg events
+	db 5 ; bg events
 	bg_event  2, 26, BGEVENT_READ, BlueForestSign
 	bg_event 28, 22, BGEVENT_READ, BlueForestGymSign
-	bg_event  0, 18, BGEVENT_READ, MoveDeletersHouseSign
-	bg_event  4,  8, BGEVENT_READ, DragonDensSign
-	bg_event  0, 17, BGEVENT_READ, BlueForestTrainerTips
+	bg_event  4,  8, BGEVENT_READ, DeepwaterPassageSign
 	bg_event 26,  6, BGEVENT_READ, BlueForestMartSign
 	bg_event 14, 18, BGEVENT_READ, BlueForestPokecenterSign
 

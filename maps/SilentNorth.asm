@@ -11,7 +11,7 @@ SilentNorth_MapEvents:
 
 	db 2 ; warp events
 	warp_event  9,  7, CROWN_PATH_GATE, 1
-	warp_event 11,  7, ROUTE_104_GEOFFS_HOUSE, 1
+	warp_event 11,  7, ALLOY_CAFE, 1
 
 	db 0 ; coord events
 
