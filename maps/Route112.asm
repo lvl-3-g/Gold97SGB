@@ -479,7 +479,7 @@ Route112_MapEvents:
 	db 3 ; bg events
 	bg_event  8,  2, BGEVENT_READ, Route112Sign
 	bg_event 15, 48, BGEVENT_ITEM, Route112HiddenGreatBall
-	bg_event 14,  4, BGEVENT_ITEM, Route112HiddenSuperPotion
+	bg_event 15,  4, BGEVENT_ITEM, Route112HiddenSuperPotion
 
 	db 11 ; object events
 	object_event 10, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterGordon, -1

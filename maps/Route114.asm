@@ -114,7 +114,8 @@ SportsmanJacobAfterBattleText:
 
 CamperDeanSeenText:
 	text "Have you ever been"
-	line "to KANTO?"
+	line "to the KANTO"
+	cont "REGION?"
 	done
 
 CamperDeanBeatenText:
@@ -220,7 +221,7 @@ Route114SignText:
 	text "ROUTE 114"
 
 	para "STAND CITY -"
-	line "KANTO"
+	line "KANTO REGION"
 	done
 
 Route114_MapEvents:
@@ -234,7 +235,7 @@ Route114_MapEvents:
 
 	db 2 ; bg events
 	bg_event  4, 10, BGEVENT_READ, Route114Sign
-	bg_event 35, 14, BGEVENT_ITEM, Route114HiddenEther
+	bg_event 35, 15, BGEVENT_ITEM, Route114HiddenEther
 
 	db 7 ; object events
 	object_event 18, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerCamperDean, -1

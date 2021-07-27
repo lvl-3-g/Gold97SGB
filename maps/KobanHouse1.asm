@@ -36,12 +36,10 @@ KobanHouse1ClairScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke DRATINI, 15
-;	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
 	setevent EVENT_SWITCH_14
 	takeitem MACHINE_PART
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_7
 	writetext ClairSymbolicDragonText
 	waitbutton
 	closetext

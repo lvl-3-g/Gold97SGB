@@ -314,32 +314,29 @@ StandCityBlockRocket4:
 StandCitySign:
 	jumptext StandCitySignText
 
-OldFuchsiaGymSign:
-	jumptext OldFuchsiaGymSignText
+StandCityGymSign:
+	jumptext StandCityGymSignText
 
-SafariZoneOfficeSign:
-	jumptext SafariZoneOfficeSignText
+ZooMedicalSign:
+	jumptext ZooMedicalSignText
 
-WardensHomeSign:
-	jumptext WardensHomeSignText
+StandZooKangaskhanSign:
+	jumptext StandZooKangaskhanSignText
 
-SafariZoneClosedSign:
-	jumptext SafariZoneClosedSignText
-
-SafariZoneClefairySign:
-	jumptext SafariZoneClefairySignText
+StandZooClefairySign:
+	jumptext StandZooClefairySignText
 	
-SafariZoneAmpharosSign:
-	jumptext SafariZoneAmpharosSignText
+StandZooAmpharosSign:
+	jumptext StandZooAmpharosSignText
 	
-SafariZoneSkarmorySign:
-	jumptext SafariZoneSkarmorySignText
+StandZooSkarmorySign:
+	jumptext StandZooSkarmorySignText
 	
-SafariZoneGolduckSign:
-	jumptext SafariZoneGolduckSignText
+StandZooGolduckSign:
+	jumptext StandZooGolduckSignText
 
-NoLitteringSign:
-	jumptext NoLitteringSignText
+StandZooOfficeSign:
+	jumptext StandZooOfficeSignText
 
 StandCityPokecenterSign:
 ;	setevent EVENT_STAND_CITY_ZOO_MONS
@@ -705,7 +702,7 @@ StandCitySignText:
 	cont "Alike"
 	done
 
-OldFuchsiaGymSignText:
+StandCityGymSignText:
 	text "STAND CITY"
 	line "#MON GYM"
 	cont "LEADER: OKERA"
@@ -715,21 +712,13 @@ OldFuchsiaGymSignText:
 	cont "Dark"
 	done
 
-SafariZoneOfficeSignText:
-	text "There's a notice"
-	line "here…"
 
-	para "SAFARI ZONE OFFICE"
-	line "is closed until"
-	cont "further notice."
-	done
-
-WardensHomeSignText:
+ZooMedicalSignText:
 	text "STAND CITY ZOO"
 	line "Medical Center"
 	done
 
-SafariZoneClosedSignText:
+StandZooKangaskhanSignText:
 	text "#MON:"
 	line "KANGASKHAN"
 	para "To avoid"
@@ -740,7 +729,7 @@ SafariZoneClosedSignText:
 	line "standing up."
 	done
 
-SafariZoneClefairySignText:
+StandZooClefairySignText:
 	text "#MON:"
 	line "CLEFAIRY"
 	para "Though rarely"
@@ -751,7 +740,7 @@ SafariZoneClefairySignText:
 	line "full moon."
 	done
 	
-SafariZoneAmpharosSignText:
+StandZooAmpharosSignText:
 	text "#MON:"
 	line "AMPHAROS"
 	para "When it gets dark,"
@@ -762,7 +751,7 @@ SafariZoneAmpharosSignText:
 	line "ocean's surface."
 	done
 	
-SafariZoneSkarmorySignText:
+StandZooSkarmorySignText:
 	text "#MON:"
 	line "SKARMORY"
 	para "The feathers that"
@@ -773,7 +762,7 @@ SafariZoneSkarmorySignText:
 	line "as swords."
 	done
 	
-SafariZoneGolduckSignText:
+StandZooGolduckSignText:
 	text "#MON:"
 	line "GOLDUCK"
 	para "It swims grace-"
@@ -784,7 +773,7 @@ SafariZoneGolduckSignText:
 	line "fond."
 	done
 
-NoLitteringSignText:
+StandZooOfficeSignText:
 	text "STAND CITY ZOO"
 	line "Main Office"
 	done
@@ -812,19 +801,18 @@ StandCity_MapEvents:
 	coord_event  34, 32, SCENE_STAND_CITY_IMPOSTOR, ImposterIntro1
 	coord_event  35, 32, SCENE_STAND_CITY_IMPOSTOR, ImposterIntro2
 
-	db 12 ; bg events
+	db 11 ; bg events
 	bg_event 36, 20, BGEVENT_READ, StandCitySign
-	bg_event 32, 35, BGEVENT_READ, OldFuchsiaGymSign
-	bg_event 21,  1, BGEVENT_READ, SafariZoneOfficeSign
-	bg_event 24, 20, BGEVENT_READ, WardensHomeSign
-	bg_event  8,  8, BGEVENT_READ, SafariZoneClosedSign
-	bg_event 18, 21, BGEVENT_READ, NoLitteringSign
+	bg_event 32, 35, BGEVENT_READ, StandCityGymSign
+	bg_event 24, 20, BGEVENT_READ, ZooMedicalSign
+	bg_event  8,  8, BGEVENT_READ, StandZooKangaskhanSign
+	bg_event 18, 21, BGEVENT_READ, StandZooOfficeSign
 	bg_event 34, 20, BGEVENT_READ, StandCityPokecenterSign
 	bg_event 36, 26, BGEVENT_READ, StandCityMartSign
-	bg_event 14,  8, BGEVENT_READ, SafariZoneClefairySign
-	bg_event 20, 10, BGEVENT_READ, SafariZoneAmpharosSign
-	bg_event 16, 16, BGEVENT_READ, SafariZoneSkarmorySign
-	bg_event 10, 20, BGEVENT_READ, SafariZoneGolduckSign
+	bg_event 14,  8, BGEVENT_READ, StandZooClefairySign
+	bg_event 20, 10, BGEVENT_READ, StandZooAmpharosSign
+	bg_event 16, 16, BGEVENT_READ, StandZooSkarmorySign
+	bg_event 10, 20, BGEVENT_READ, StandZooGolduckSign
 
 	db 14 ; object events
 	object_event 28, 21, SPRITE_ROCKER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, StandCityRocker, -1
@@ -837,11 +825,8 @@ StandCity_MapEvents:
 	object_event  7,  6, SPRITE_MONSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_STAND_CITY_ZOO_MONS
 	object_event 15, 14, SPRITE_BIRD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_STAND_CITY_ZOO_MONS
 	object_event 12,  6, SPRITE_FAIRY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_STAND_CITY_ZOO_MONS
-	object_event 28, 34, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityBlockRocket1, EVENT_CLEARED_RADIO_TOWER
-;	object_event 28, 34, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, StandCityBlockRocket2, EVENT_CLEARED_RADIO_TOWER
-;	object_event 30, 35, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, StandCityBlockRocket3, EVENT_CLEARED_RADIO_TOWER
-;	object_event 31, 34, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, StandCityBlockRocket4, EVENT_CLEARED_RADIO_TOWER
-	object_event -5, -5, SPRITE_OLD_FUCHSIA_GYM_1, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
-	object_event 17, 32, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityHQBlockRocket, EVENT_BEAT_CHUCK
-	object_event  6, 18, SPRITE_BIRDON_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityNationalBlockRocket, EVENT_CLEARED_RADIO_TOWER
+	object_event 28, 34, SPRITE_STAND_ROCKET, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityBlockRocket1, EVENT_CLEARED_RADIO_TOWER
+	object_event -5, -5, SPRITE_STAND_CITY_IMPOSTOR, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1
+	object_event 17, 32, SPRITE_STAND_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityHQBlockRocket, EVENT_BEAT_OKERA
+	object_event  6, 18, SPRITE_STAND_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, StandCityNationalBlockRocket, EVENT_CLEARED_RADIO_TOWER
 

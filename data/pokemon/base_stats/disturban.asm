@@ -14,7 +14,7 @@
 	INCBIN "gfx/pokemon/disturban/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_SLOW ; growth rate
-	dn EGG_WATER_3, EGG_WATER_3 ; egg groups
+	dn EGG_WATER_3, EGG_GROUND ; egg groups
 
 	; tm/hm learnset
 	tmhm MUD_SLAP, DIG, TOXIC, HIDDEN_POWER, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, WHIRLPOOL, EARTHQUAKE

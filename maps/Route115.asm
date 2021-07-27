@@ -251,8 +251,6 @@ Route115RareCandy:
 Route115FisherScript:
 	faceplayer
 	opentext
-	;checkevent EVENT_BEAT_ERIKA
-	;iffalse .RocksStillThere
 	writetext Route115FisherReadyToBlowText
 	waitbutton
 	closetext

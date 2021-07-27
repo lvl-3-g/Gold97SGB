@@ -22,7 +22,7 @@ OaksOldLabAideScript:
 	jumptextfaceplayer OaksOldLabAideText
 	
 OaksOldLabAideText:
-	text "Hiya!"
+	text "Hi there!"
 	para "PROF.OAK is study-"
 	line "ing over in SILENT"
 	cont "TOWN!"

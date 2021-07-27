@@ -1039,7 +1039,7 @@ WednesdayLossText:
 	done
 
 WednesdayTrainerGreeting:
-	text "Hiya! I'm stopping"
+	text "Hi! I'm stopping"
 	line "by here after a"
 	para "run with my"
 	line "#MON!"

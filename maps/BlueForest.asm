@@ -181,7 +181,8 @@ BlueForestCooltrainerF2Text:
 	
 BlueForestCooltrainerF2TextNotWow:
 	text "I've never gone up"
-	line "to NORTH ISLAND."
+	line "to FROSTPOINT"
+	cont "TOWN."
 	para "Traveling through"
 	line "the DEEPWATER"
 	para "PASSAGE is too"

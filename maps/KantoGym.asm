@@ -1,5 +1,5 @@
 	object_const_def ; object_event constants
-	const KANTOGYM_ERIKA
+	const KANTOGYM_RED
 	const KANTOGYM_COOLTRAINERM1
 	const KANTOGYM_COOLTRAINERM2
 	const KANTOGYM_COOLTRAINERF1
@@ -12,7 +12,7 @@ KantoGym_MapScripts:
 
 	db 0 ; callbacks
 
-KantoGymErikaScript:
+KantoGymRedScript:
 	faceplayer
 	checkevent EVENT_REMATCH_AVAILABLE_RED
 	iftrue RematchScriptRed
@@ -22,29 +22,21 @@ KantoGymErikaScript:
 	opentext
 	checkflag ENGINE_RISINGBADGE
 	iftrue .FightDone
-	writetext ErikaBeforeBattleText
+	writetext RedBeforeBattleText
 	waitbutton
 	closetext
-	winlosstext ErikaBeatenText, 0
+	winlosstext RedBeatenText, 0
 	loadtrainer ERIKA, ERIKA1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_ERIKA
+	setevent EVENT_BEAT_ACTUALLY_RED
 	opentext
-	writetext PlayerReceivedRainbowBadgeText
+	writetext PlayerReceivedTheRisingBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_RISINGBADGE
 .FightDone:
-;	checkevent EVENT_GOT_TM19_GIGA_DRAIN
-;	iftrue .GotGigaDrain
-;	writetext ErikaExplainTMText
-;	buttonsound
-;	verbosegiveitem TM_GIGA_DRAIN
-;	iffalse .GotGigaDrain
-;	setevent EVENT_GOT_TM19_GIGA_DRAIN
-;.GotGigaDrain:
-	writetext ErikaAfterBattleText
+	writetext RedAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -155,7 +147,7 @@ RedEntersGymScene:
 	pause 20
 	applymovement KANTOGYM_RED_DUMMY, RedDummyWalksToSpotRight
 	disappear KANTOGYM_RED_DUMMY
-	appear KANTOGYM_ERIKA
+	appear KANTOGYM_RED
 	setscene SCENE_RED_IS_HERE
 	clearevent EVENT_RED_IN_KANTO_GYM
 	end
@@ -189,7 +181,7 @@ RedEntersGymScene2:
 	pause 20
 	applymovement KANTOGYM_RED_DUMMY, RedDummyWalksToSpotLeft
 	disappear KANTOGYM_RED_DUMMY
-	appear KANTOGYM_ERIKA
+	appear KANTOGYM_RED
 	setscene SCENE_RED_IS_HERE
 	clearevent EVENT_RED_IN_KANTO_GYM
 	end
@@ -199,7 +191,7 @@ KantoGymGuyScript2:
 	faceplayer
 	checkevent EVENT_RED_IN_KANTO_GYM
 	iftrue .KantoGymGuyRedNotHereScript2
-	checkevent EVENT_BEAT_ERIKA
+	checkevent EVENT_BEAT_ACTUALLY_RED
 	iftrue .KantoGymGuyWinScript2
 	opentext
 	writetext KantoGymGuyText2
@@ -355,11 +347,11 @@ CooltrainermPaulAfterBattleText:
 	cont "LEAGUE?"
 	done
 
-ErikaBeforeBattleText:
+RedBeforeBattleText:
 	text "…"
 	done
 
-ErikaBeatenText:
+RedBeatenText:
 	text "…"
 	done
 	
@@ -375,7 +367,7 @@ RedAfterRematchText:
 	text "…"
 	done
 
-PlayerReceivedRainbowBadgeText:
+PlayerReceivedTheRisingBadgeText:
 	text "<PLAYER> received"
 	line "RISINGBADGE."
 	done
@@ -384,7 +376,7 @@ ErikaExplainTMText:
 	text "…"
 	done
 
-ErikaAfterBattleText:
+RedAfterBattleText:
 	text "…"
 	done
 
@@ -405,10 +397,10 @@ KantoGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, KantoGymStatue
 
 	db 7 ; object events
-	object_event  4,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymErikaScript, EVENT_RED_IN_KANTO_GYM
+	object_event  4,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymRedScript, EVENT_RED_IN_KANTO_GYM
 	object_event  4,  1, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermPaul, -1
 	object_event  9,  6, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrainerCooltrainermMike, -1
 	object_event  5,  1, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfLola, -1
 	object_event  0,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfFran, -1
-	object_event -5, -5, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymErikaScript, -1
+	object_event -5, -5, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KantoGymRedScript, -1
 	object_event  7, 15, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KantoGymGuyScript2, -1

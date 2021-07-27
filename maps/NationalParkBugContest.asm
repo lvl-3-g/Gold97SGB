@@ -233,7 +233,7 @@ NationalParkBugContest_MapEvents:
 	db 4 ; bg events
 	bg_event  8, 48, BGEVENT_READ, NationalParkBugContestRelaxationSquareSign
 	bg_event 12, 24, BGEVENT_READ, NationalParkBugContestBattleNoticeSign
-	bg_event 24, 53, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
+	bg_event 21, 53, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal
 	bg_event 34, 38, BGEVENT_READ, NationalParkBugContestTrainerTipsSign
 
 	db 12 ; object events

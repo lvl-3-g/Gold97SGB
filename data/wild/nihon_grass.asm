@@ -971,24 +971,24 @@ NihonGrassWildMons:
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 	; day
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 	; nite
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 
 	map_id DEEPWATER_PASSAGE_B1F
@@ -998,24 +998,24 @@ NihonGrassWildMons:
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 	; day
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 	; nite
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, SLOWPOKE
-	db 21, DELIBIRD
 	db 20, QUAGSIRE
+	db 21, DELIBIRD
 	db 22, DELIBIRD
 
 	map_id DEEPWATER_PASSAGE_EAST_CAVERN 
@@ -1025,24 +1025,24 @@ NihonGrassWildMons:
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WARFURS
 	db 20, QUAGSIRE
+	db 21, WARFURS
 	db 22, WARFURS
 	; day
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WARFURS
 	db 20, QUAGSIRE
+	db 21, WARFURS
 	db 22, WARFURS
 	; nite
 	db 20, ZUBAT
 	db 21, SEEL
 	db 20, SLOWPOKE
 	db 20, DELIBIRD
-	db 21, WARFURS
 	db 20, QUAGSIRE
+	db 21, WARFURS
 	db 22, WARFURS
 
 	map_id ROUTE_112
@@ -1053,16 +1053,16 @@ NihonGrassWildMons:
 	db 21, EKANS
 	db 22, NIDORINA
 	db 24, NIDORINO
-	db 22, SNEASEL
-	db 21, SNEASEL
+	db 22, EKANS
+	db 21, EKANS
 	; day
 	db 24, RATICATE
 	db 21, RATTATA
 	db 21, EKANS
 	db 22, NIDORINA
 	db 24, NIDORINO
-	db 22, SNEASEL
-	db 21, SNEASEL
+	db 22, EKANS
+	db 21, EKANS
 	; nite
 	db 24, RATICATE
 	db 21, RATTATA
@@ -1294,12 +1294,12 @@ NihonGrassWildMons:
 	db 27, LEDIAN
 	db 28, SKIPLOOM
 	db 28, TANGELA
-	db 27, MANKEY
+	db 27, LEDIAN
 	db 30, FLAAFFY
 	db 31, GROWLITHE
 	db 31, GROWLITHE
 	; day
-	db 27, LEDIAN
+	db 27, TANGELA
 	db 28, SKIPLOOM
 	db 28, TANGELA
 	db 27, MANKEY
@@ -1307,9 +1307,9 @@ NihonGrassWildMons:
 	db 31, GROWLITHE
 	db 31, GROWLITHE
 	; nite
-	db 27, LEDIAN
+	db 27, TANGELA
 	db 28, SKIPLOOM
-	db 28, TANGELA
+	db 28, GROWLITHE
 	db 27, MANKEY
 	db 30, FLAAFFY
 	db 31, GROWLITHE
@@ -1323,8 +1323,8 @@ NihonGrassWildMons:
 	db 28, TANGELA
 	db 27, JIGGLYPUFF
 	db 30, SKARMORY
-	db 31, MR__MIME
-	db 31, MR__MIME
+	db 31, SKARMORY
+	db 31, SKARMORY
 	; day
 	db 27, PIDGEOTTO
 	db 28, RATICATE
@@ -1334,7 +1334,7 @@ NihonGrassWildMons:
 	db 31, MR__MIME
 	db 31, MR__MIME
 	; nite
-	db 27, PIDGEOTTO
+	db 27, RATICATE
 	db 28, RATICATE
 	db 28, TANGELA
 	db 27, JIGGLYPUFF

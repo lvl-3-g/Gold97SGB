@@ -4,6 +4,7 @@
 	const DEEPWATERPASSAGEEASTCAVERN_ITEMBALL_2
 	const DEEPWATERPASSAGEEASTCAVERN_ITEMBALL_3
 	const DEEPWATERPASSAGEEASTCAVERN_ITEMBALL_4
+	const DEEPWATERPASSAGEEASTCAVERN_ITEMBALL_5
  
 DeepwaterPassageEastCavern_MapScripts:
 	db 0 ; scene scripts
@@ -21,6 +22,9 @@ DeepwaterPassageEastCavernMaxEther:
 	
 DeepwaterPassageEastCavernTMSwagger:
 	itemball TM_SWAGGER
+	
+DeepwaterPassageEastCavernHpUp:
+	itemball HP_UP
 
 DeepwaterPassageEastCavernPryceScript:
 	faceplayer
@@ -125,10 +129,11 @@ DeepwaterPassageEastCavern_MapEvents:
 
 	db 0 ; bg events
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 26, 31, SPRITE_PRYCE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DeepwaterPassageEastCavernPryceScript, EVENT_PRYCE_IN_DEEPWATER
-	object_event  5, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernTMSwagger, EVENT_ALLOY_LIGHTHOUSE_5F_TM_SWAGGER
-	object_event 14, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernMaxEther, EVENT_BOARDWALK_MAX_ETHER
-	object_event 18, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernMaxRevive, EVENT_KIKAI_STRAIT_MAX_REVIVE
-	object_event 16, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernRareCandy, EVENT_ALLOY_LIGHTHOUSE_5F_RARE_CANDY
+	object_event  5, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernTMSwagger, EVENT_DEEPWATER_EAST_TM_SWAGGER
+	object_event 14, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernMaxEther, EVENT_DEEPWATER_EAST_MAX_ETHER
+	object_event 18, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernMaxRevive, EVENT_DEEPWATER_EAST_MAX_REVIVE
+	object_event 16, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernRareCandy, EVENT_DEEPWATER_EAST_RARE_CANDY
+	object_event 10, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageEastCavernHpUp, EVENT_DEEPWATER_EAST_HP_UP
 

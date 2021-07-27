@@ -247,9 +247,6 @@ DragonsMaw1FDragonFangScript:
 
 
 
-KantoRestaurantSignpost:
-	jumptext KantoRestaurantSignpostText
-
 DragonsMaw1FDragonBreath:
 	itemball TM_DRAGONBREATH
 
@@ -289,15 +286,6 @@ HeresTheOrb2:
 	text "got orb"
 	done
 
-KantoRestaurantSignpostText:
-	text "DRAGON SHRINE"
-
-	para "A shrine honoring"
-	line "the dragon #MON"
-
-	para "said to have lived"
-	line "in DRAGON'S DEN."
-	done
 
 CooltrainermDarinSeenText:
 	text "You! Do you have"
@@ -420,14 +408,12 @@ TwinsLeaandpia2AfterBattleText:
 DragonsMaw1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 1 ; warp events
 	warp_event  9, 31, KOBAN_ISLAND, 5
-	warp_event  3, 25, KANTO_RESTAURANT, 1
 
 	db 0 ; coord events
 
-	db 4 ; bg events
-	bg_event  3, 27, BGEVENT_READ, KantoRestaurantSignpost
+	db 3 ; bg events
 	bg_event 33, 29, BGEVENT_ITEM, DragonsMaw1FHiddenRevive
 	bg_event  6,  4, BGEVENT_ITEM, DragonsMaw1FHiddenMaxPotion
 	bg_event 28, 16, BGEVENT_ITEM, DragonsMaw1FHiddenMaxElixer
@@ -438,6 +424,6 @@ DragonsMaw1F_MapEvents:
 	object_event 16,  2, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_YELLOW, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfCara, -1
 	object_event  2, 12, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia1, -1
 	object_event  2, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
-	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMaw1FDragonBreath, EVENT_DRAGONS_MAW_1F_CALCIUM
+	object_event 19, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMaw1FDragonBreath, EVENT_DRAGONS_MAW_TM_24_DRAGONBREATH
 	object_event 26, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsMaw1FMaxElixer, EVENT_DRAGONS_MAW_1F_MAX_ELIXER
 	object_event 24, 25, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_TRAINER, 4, TrainerInstructorRand, -1

@@ -13,13 +13,13 @@ KobanHouse2GuruText:
 	text "It's said that"
 	line "dragon #MON"
 	para "still inhabit the"
-	line "cave just north"
-	cont "of here."
+	line "DRAGON'S MAW."
 	para "I've never found"
 	line "any by fishing."
 	para "Maybe you have to"
-	line "have a special"
-	cont "ROD…"
+	line "have something"
+	para "better than an"
+	line "OLD ROD…"
 	done
 
 KobanHouse2_MapEvents:

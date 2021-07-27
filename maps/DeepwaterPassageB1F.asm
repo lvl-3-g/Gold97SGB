@@ -1,6 +1,5 @@
 	object_const_def ; object_event constants
 	const DEEPWATERPASSAGEB1F_POKE_BALL
-	const DEEPWATERPASSAGEB1F_ROCK
 
 DeepwaterPassageB1F_MapScripts:
 	db 0 ; scene scripts
@@ -9,9 +8,6 @@ DeepwaterPassageB1F_MapScripts:
 
 DeepwaterPassageB1FNevermeltice:
 	itemball NEVERMELTICE
-
-DeepwaterPassageB1FRock:
-	jumpstd SmashRockScript
 
 DeepwaterPassageB1F_MapEvents:
 	db 0, 0 ; filler
@@ -26,6 +22,5 @@ DeepwaterPassageB1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 1 ; object events
 	object_event 17,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DeepwaterPassageB1FNevermeltice, EVENT_DEEPWATER_PASSAGE_B1F_NEVERMELTICE
-	object_event -6,  1, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, DeepwaterPassageB1FRock, -1
