@@ -22,4 +22,4 @@ WhirlIsland1F_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIsland1FMysticWater, EVENT_WHIRL_ISLAND_1F_ULTRA_BALL
+	object_event  7,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIsland1FMysticWater, EVENT_WHIRL_ISLAND_1F_MYSTIC_WATER

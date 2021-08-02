@@ -1134,8 +1134,8 @@ NihonGrassWildMons:
 	db 24, RHYHORN
 	db 25, PHANPY
 	db 30, DONPHAN
-	db 26, MAGMAR
-	db 27, MAGMAR
+	db 26, GRENMAR
+	db 27, GRENMAR
 	; day
 	db 26, KOFFING
 	db 30, GRAVELER
@@ -1145,7 +1145,7 @@ NihonGrassWildMons:
 	db 26, MAGMAR
 	db 27, MAGMAR
 	; nite
-	db 26, KOFFING
+	db 26, GRIMER
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
@@ -1156,15 +1156,15 @@ NihonGrassWildMons:
 	map_id MAGMA_SHAFT_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 26, GRIMER
+	db 26, KOFFING
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
 	db 30, DONPHAN
-	db 26, MAGMAR
-	db 27, MAGMAR
+	db 26, GRENMAR
+	db 27, GRENMAR
 	; day
-	db 26, GRIMER
+	db 26, KOFFING
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
@@ -1183,19 +1183,19 @@ NihonGrassWildMons:
 	map_id MAGMA_SHAFT_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 26, GRIMER
+	db 26, KOFFING
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, GRENMAR
-	db 26, MAGMAR
-	db 27, MAGMAR
+	db 30, DONPHAN
+	db 26, GRENMAR
+	db 27, GRENMAR
 	; day
-	db 26, GRIMER
+	db 26, KOFFING
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, GRENMAR
+	db 30, DONPHAN
 	db 26, MAGMAR
 	db 27, MAGMAR
 	; nite
@@ -1203,7 +1203,7 @@ NihonGrassWildMons:
 	db 30, GRAVELER
 	db 24, RHYHORN
 	db 25, PHANPY
-	db 30, GRENMAR
+	db 30, DONPHAN
 	db 26, MAGMAR
 	db 27, MAGMAR
 
@@ -1215,24 +1215,24 @@ NihonGrassWildMons:
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; day
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; nite
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1242,24 +1242,24 @@ NihonGrassWildMons:
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; day
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; nite
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	
 	map_id WHIRL_ISLAND_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1269,24 +1269,24 @@ NihonGrassWildMons:
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; day
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 	; nite
 	db 26, ONIX
 	db 30, GRAVELER
 	db 24, SEEL
 	db 25, GEODUDE
 	db 30, POLIWHIRL
-	db 26, STARYU
-	db 27, STARYU
+	db 26, POLIWHIRL
+	db 27, POLIWHIRL
 
 	map_id ROUTE_113
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -96,8 +96,8 @@ TrainerCooltrainermKevin:
 MeridianPathProtein:
 	itemball PROTEIN
 
-MeridianPathHiddenPotion:
-	hiddenitem HYPER_POTION, EVENT_MERIDIAN_PATH_HIDDEN_POTION
+MeridianPathHiddenHyperPotion:
+	hiddenitem HYPER_POTION, EVENT_MERIDIAN_PATH_HIDDEN_HYPER_POTION
 	
 MeridianPathSign:
 	jumptext MeridianPathSignText
@@ -249,7 +249,7 @@ MeridianPath_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  4, 14, BGEVENT_ITEM, MeridianPathHiddenPotion
+	bg_event  4, 14, BGEVENT_ITEM, MeridianPathHiddenHyperPotion
 	bg_event 11,  5, BGEVENT_READ, MeridianPathSign
 
 	db 8 ; object events

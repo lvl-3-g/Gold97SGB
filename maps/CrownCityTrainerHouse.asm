@@ -86,8 +86,8 @@ CrownCityTrainerHouseSuperNerdText:
 	text "I hear there are"
 	line "trainers in the"
 	para "LEAGUE that use"
-	line "psychic, ghost,"
-	para "water, poison, and"
+	line "psychic, poison,"
+	para "ghost, water, and"
 	line "dragon types."
 	done
 	

@@ -434,7 +434,7 @@ SWIslandsGrassWildMons:
 	db 55, PRIMEAPE
 	db 57, PARASECT
 	db 56, LICKITUNG
-	db 58, GLOOM
+	db 58, LICKITUNG
 	
 	
 	map_id RAINBOW_ISLAND
@@ -473,7 +473,7 @@ SWIslandsGrassWildMons:
 	db 50, EXEGGCUTE
 	db 47, KINGLER
 	db 48, STRAIGAR
-	db 50, PRIMEAPE
+	db 50, STRAIGAR
 	; day
 	db 46, KRABBY
 	db 46, MANKEY
@@ -481,7 +481,7 @@ SWIslandsGrassWildMons:
 	db 50, EXEGGCUTE
 	db 47, KINGLER
 	db 48, STRAIGAR
-	db 50, PRIMEAPE
+	db 50, STRAIGAR
 	; nite
 	db 46, KRABBY
 	db 47, ARBOK
@@ -489,7 +489,7 @@ SWIslandsGrassWildMons:
 	db 50, JUNGELA
 	db 46, KINGLER
 	db 48, STRAIGAR
-	db 50, JUNGELA
+	db 50, STRAIGAR
 	
 	map_id WEATHERED_TRAIL
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

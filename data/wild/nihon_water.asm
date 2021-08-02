@@ -152,13 +152,13 @@ NihonWaterWildMons:
 	map_id WHIRL_ISLAND_B1F
 	db 4 percent ; encounter rate
 	db 24, MAGIKARP
-	db 26, GYARADOS
+	db 26, STARYU
 	db 25, HORSEA
 	
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
 	db 24, MAGIKARP
-	db 26, GYARADOS
+	db 26, STARYU
 	db 25, HORSEA
 	
 	map_id ROUTE_112

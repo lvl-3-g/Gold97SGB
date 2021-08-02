@@ -29,7 +29,7 @@ SilentNorth_MapEvents:
 
 	db 2 ; warp events
 	warp_event  9,  7, CROWN_PATH_GATE, 1
-	warp_event 11,  7, STAND_POKECENTER_1F, 1
+	warp_event 11,  7, ISEN_STRAIT, 1
 
 	db 0 ; coord events
 

@@ -8,7 +8,7 @@ FastShip1F_MapScripts:
 	db 3 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
 	scene_script .EnterFastShip ; SCENE_FASTSHIP1F_ENTER_SHIP
-	scene_script .DummyScene2 ; SCENE_FASTSHIP1F_MEET_GRANDPA
+	scene_script .DummyScene2 ; SCENE_FASTSHIP1F_ROUGH_WEATHER
 
 	db 0 ; callbacks
 
@@ -33,7 +33,7 @@ FastShip1F_MapScripts:
 	clearevent EVENT_FAST_SHIP_HAS_ARRIVED
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .SkipGrandpa
-	setscene SCENE_FASTSHIP1F_MEET_GRANDPA
+	setscene SCENE_FASTSHIP1F_ROUGH_WEATHER
 	end
 
 .SkipGrandpa:
@@ -118,20 +118,7 @@ FastShip1FSailor3Script:
 	jumptextfaceplayer FastShip1FSailor3Text
 
 
-WorriedGrandpaSceneLeft:
-;	appear FASTSHIP1F_GENTLEMAN
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x7521b
-;	playsound SFX_TACKLE
-;	applymovement PLAYER, MovementData_0x7522e
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75220
-;	opentext
-;	writetext FastShip1FGrandpaText
-;	waitbutton
-;	closetext
-;	turnobject PLAYER, RIGHT
-;	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75222
-;	disappear FASTSHIP1F_GENTLEMAN
-;	setscene SCENE_DEFAULT
+RoughWeatherScene:
 	playsound SFX_TACKLE
 	earthquake 80
 	waitsfx
@@ -292,20 +279,6 @@ FastShip1FSailor3Text:
 	cont "their cabins."
 	done
 
-;FastShip1FGrandpaText:
-;	text "Whoa! Excuse me."
-;	line "I was in a hurry!"
-;
-;	para "My granddaughter"
-;	line "is missing!"
-;
-;	para "She's just a wee"
-;	line "girl. If you see"
-;
-;	para "her, please let me"
-;	line "know!"
-;	done
-
 FastShip1FSailor1Text_InAlloy:
 	text "FAST SHIP S.S.AQUA"
 	line "has arrived in"
@@ -336,11 +309,11 @@ FastShip1F_MapEvents:
 	warp_event 30, 14, FAST_SHIP_B1F, 2
 
 	db 5 ; coord events
-	coord_event 30,  9, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 25, 16, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 31, 10, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 11, 11, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
-	coord_event 10, 12, SCENE_FASTSHIP1F_MEET_GRANDPA, WorriedGrandpaSceneLeft
+	coord_event 30,  9, SCENE_FASTSHIP1F_ROUGH_WEATHER, RoughWeatherScene
+	coord_event 25, 16, SCENE_FASTSHIP1F_ROUGH_WEATHER, RoughWeatherScene
+	coord_event 31, 10, SCENE_FASTSHIP1F_ROUGH_WEATHER, RoughWeatherScene
+	coord_event 11, 11, SCENE_FASTSHIP1F_ROUGH_WEATHER, RoughWeatherScene
+	coord_event 10, 12, SCENE_FASTSHIP1F_ROUGH_WEATHER, RoughWeatherScene
 
 	db 0 ; bg events
 

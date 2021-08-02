@@ -89,7 +89,7 @@ EatathonContestPoster:
 	jumptext EatathonContestPosterText
 
 KantoCafe2Trashcan:
-	checkevent EVENT_FOUND_LEFTOVERS_IN_KANTO_CAFE
+	checkevent EVENT_FOUND_MYSTERYBERRY_IN_KANTO_CAFE
 	iftrue .TrashEmpty
 	giveitem MYSTERYBERRY
 	iffalse .PackFull
@@ -100,7 +100,7 @@ KantoCafe2Trashcan:
 	waitsfx
 	itemnotify
 	closetext
-	setevent EVENT_FOUND_LEFTOVERS_IN_KANTO_CAFE
+	setevent EVENT_FOUND_MYSTERYBERRY_IN_KANTO_CAFE
 	end
 
 .PackFull:

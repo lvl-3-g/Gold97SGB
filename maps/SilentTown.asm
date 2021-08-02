@@ -235,8 +235,8 @@ SilentTownPlayersHouseSign:
 	closetext
 	end
 
-SilentTownOakLabBackRoomSign:
-	jumptext SilentTownOakLabBackRoomSignText
+SilentTownOakLabSign:
+	jumptext SilentTownOakLabSignText
 
 SilentTownRivalsHouseSign:
 	jumptext SilentTownRivalsHouseSignText
@@ -506,7 +506,7 @@ SilentTownPlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-SilentTownOakLabBackRoomSignText:
+SilentTownOakLabSignText:
 	text "OAK #MON LAB"
 	done
 
@@ -534,7 +534,7 @@ SilentTown_MapEvents:
 	db 5 ; bg events
 	bg_event 16,  5, BGEVENT_READ, SilentTownSign
 	bg_event  8,  4, BGEVENT_READ, SilentTownPlayersHouseSign
-	bg_event 10, 11, BGEVENT_READ, SilentTownOakLabBackRoomSign
+	bg_event 10, 11, BGEVENT_READ, SilentTownOakLabSign
 	bg_event  6, 12, BGEVENT_READ, SilentTownRivalsHouseSign
 	bg_event 14,  4, BGEVENT_READ, SilentTownPokecenterSign
 

@@ -50,7 +50,7 @@ MagmaShaft1F_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event  5, 16, BGEVENT_ITEM, MagmaShaft1FHiddenBurnHeal
+	bg_event  5, 13, BGEVENT_ITEM, MagmaShaft1FHiddenBurnHeal
 
 	db 2 ; object events
 	object_event  0, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MagmaShaft1FTMRest, EVENT_MAGMA_SHAFT_1F_TM_REST

@@ -173,7 +173,7 @@ SCENE_FINISHED EQU 1
 ; wFastShip1FSceneID
 	const_def 1
 	const SCENE_FASTSHIP1F_ENTER_SHIP   ; 1
-	const SCENE_FASTSHIP1F_MEET_GRANDPA ; 2
+	const SCENE_FASTSHIP1F_ROUGH_WEATHER ; 2
 	
 ; wKurtsHouseSceneID
 	const_def 1

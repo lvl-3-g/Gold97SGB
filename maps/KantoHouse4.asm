@@ -9,18 +9,18 @@ KantoHouse4_MapScripts:
 KantoHouse4FishingGuru:
 	faceplayer
 	opentext
-	checkevent EVENT_KIKAI_VILLAGE_ELIXIR_ON_STANDBY
+	checkevent EVENT_KANTO_REGION_ELIXIR_ON_STANDBY
 	iftrue .GetReward
-	checkevent EVENT_KIKAI_VILLAGE_ASKED_FOR_MAGIKARP
+	checkevent EVENT_KANTO_REGION_ASKED_FOR_MAGIKARP
 	iftrue .AskedForMagikarp
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .ClearedRocketHideout
-	checkevent EVENT_KIKAI_VILLAGE_EXPLAINED_WEIRD_MAGIKARP
+	checkevent EVENT_KANTO_REGION_EXPLAINED_WEIRD_MAGIKARP
 	iftrue .ExplainedHistory
 	writetext MagikarpLengthRaterText_KikaiVillageHistory
 	waitbutton
 	closetext
-	setevent EVENT_KIKAI_VILLAGE_EXPLAINED_WEIRD_MAGIKARP
+	setevent EVENT_KANTO_REGION_EXPLAINED_WEIRD_MAGIKARP
 	end
 
 .ExplainedHistory:
@@ -33,7 +33,7 @@ KantoHouse4FishingGuru:
 	writetext MagikarpLengthRaterText_WorldsLargestMagikarp
 	waitbutton
 	closetext
-	setevent EVENT_KIKAI_VILLAGE_ASKED_FOR_MAGIKARP
+	setevent EVENT_KANTO_REGION_ASKED_FOR_MAGIKARP
 	end
 
 .AskedForMagikarp:
@@ -57,12 +57,12 @@ KantoHouse4FishingGuru:
 	writetext MagikarpLengthRaterText_Bonus
 	waitbutton
 	closetext
-	clearevent EVENT_KIKAI_VILLAGE_ELIXIR_ON_STANDBY
+	clearevent EVENT_KANTO_REGION_ELIXIR_ON_STANDBY
 	end
 
 .NoRoom:
 	closetext
-	setevent EVENT_KIKAI_VILLAGE_ELIXIR_ON_STANDBY
+	setevent EVENT_KANTO_REGION_ELIXIR_ON_STANDBY
 	end
 
 .TooShort:
