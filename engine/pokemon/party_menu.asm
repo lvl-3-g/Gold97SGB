@@ -119,7 +119,7 @@ PlacePartyHPBar:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 11, 2
+	hlcoord 11, 0
 .loop
 	push bc
 	push hl
@@ -226,7 +226,7 @@ PlacePartyMonLevel:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 8, 2
+	hlcoord 8, 0
 .loop
 	push bc
 	push hl

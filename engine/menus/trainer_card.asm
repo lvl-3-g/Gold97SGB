@@ -292,7 +292,7 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	lb bc, 1, 3
 	call PrintNum
 	call TrainerCard_Page1_PrintGameTime
-	hlcoord 2, 8
+	hlcoord 1, 8
 	ld de, .StatusTilemap
 	call TrainerCardSetup_PlaceTilemapString
 	ld a, [wStatusFlags]
@@ -316,7 +316,7 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	db $29, $2a, $2b, $2c, $2d, -1
 
 TrainerCard_Page2_3_InitObjectsAndStrings:
-	hlcoord 2, 8
+	hlcoord 1, 8
 	ld de, .BadgesTilemap
 	call TrainerCardSetup_PlaceTilemapString
 	hlcoord 2, 10
