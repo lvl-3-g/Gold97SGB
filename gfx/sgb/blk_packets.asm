@@ -72,12 +72,12 @@ BlkPacket_SlotMachine:
 BlkPacket_PartyMenu:
 	attr_blk 7
 	attr_blk_data %111, 0,0,1, 00,00, 02,12
-	attr_blk_data %010, 0,0,0, 12,01, 18,02
-	attr_blk_data %010, 0,0,0, 12,03, 18,04
-	attr_blk_data %010, 0,0,0, 12,05, 18,06
-	attr_blk_data %010, 0,0,0, 12,07, 18,08
-	attr_blk_data %010, 0,0,0, 12,09, 18,10
-	attr_blk_data %010, 0,0,0, 12,11, 18,12
+	attr_blk_data %010, 0,0,0, 12,01, 18,00
+	attr_blk_data %010, 0,0,0, 12,03, 18,02
+	attr_blk_data %010, 0,0,0, 12,05, 18,04
+	attr_blk_data %010, 0,0,0, 12,07, 18,06
+	attr_blk_data %010, 0,0,0, 12,09, 18,08
+	attr_blk_data %010, 0,0,0, 12,11, 18,10
 	ds 4
 
 BlkPacket_GSTitleScreen:
