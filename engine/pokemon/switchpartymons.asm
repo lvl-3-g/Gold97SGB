@@ -18,7 +18,7 @@ _SwitchPartyMons:
 
 .ClearSprite:
 	push af
-	hlcoord 0, 1
+	hlcoord 0, 0
 	ld bc, 2 * SCREEN_WIDTH
 	call AddNTimes
 	ld bc, 2 * SCREEN_WIDTH

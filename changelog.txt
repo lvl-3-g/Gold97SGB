@@ -507,3 +507,52 @@ In-progress 5.05
 6.28
 - Fixed issue with tileset in Iced Cavern again because I'm dumb
 - Fixed spelling error in Buena's dialogue in Radio Tower 2f
+
+7.00
+One major change
+
+- renamed several of the beta Pokemon to use the Nob Ogasawara names
+
+Many, many minor changes (99% of players will never notice any of these)
+
+External changes
+
+- moved a few fruit trees around so their berries made more sense for the location
+- fixed an issue where the scientist that appears outside the Honto Ruins could walk through you on his way back to the lab
+- enhanced cutscene for getting Ship Key
+- enhanced cutscene for old sailor starting Ho-Oh event
+- menu for choosing destination from Westport Docks
+- a few more Pokemon have wild held items, and all wild held items have a 25% chance of appearing now
+- minor wild Pokemon distribution changes, usually within the same route to make morning/day/night more distinct
+- fixed issue where Slowbro and Slowking's Pokedex entries still mentioned Shellder instead of Disturban
+- moved version number up slightly so it always appears even when changing the time or starting a new game
+- all days of week are capitalized in text
+- fixed typo in Psychic Rodney's dialogue
+- slight redesign to Jade Forest, added ledges
+- slight redesign to Ampare Cavern, removed unecessary water that had no encounters
+- added sign to Route 118
+- Cleaned up dialogue of Youngster in Kanto Battle Club who gives you Togepi
+- Added old lady to house in Kume City who tells of the legend of the 3 Legendary Birds, to advise you to find the Tri-Wing
+- improved cutscene for when Legendary Beasts are released after encountering Ho-Oh
+- made the upstairs of Pokemon Centers use gray palette instead of green
+- renamed Elite Four rooms to match who is actually in them
+- fixed issue where Agatha could be rebattled multiple times in the same encounter
+- fixed issue where Dodaerie was able to breed
+- Made Disturban part of the Ground Egg Group
+- Cleaned up dialogue of fisherman on Koban Island
+- Fixed issue where an item in Magma Shaft was unobtainable
+- Added an aide to Professor Oak's old lab
+- Added a new NPC to Pagota Trainer School who will tell you which Game Boy system you are playing on
+- minor interface changes - HP now displays above Pokemon name, like the demo
+- Added icon of Pokeball to show which stat screen you are viewing 
+- Font change for Trainer Status screen for "STATUS" and "BADGES"
+
+Internal changes (only changed in the code, doesn't change anything in the game)
+
+- renamed mart names to closer match where they are actually located
+- renamed fruit trees to match their locations
+- many map names are renamed internally to match what they actually are (ex > Victory Road to Mt.Fuji Interior
+- Renamed all fishgroups to Water 1-8
+- lots of renamed events to match item pickups
+- lots of renamed scripts to match what they are (dialogue, signs, etc)
+

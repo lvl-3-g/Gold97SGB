@@ -300,7 +300,7 @@ PlacePartyMonTMHMCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 0
 .loop
 	push bc
 	push hl
@@ -351,7 +351,7 @@ PlacePartyMonEvoStoneCompatibility:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 0
 .loop
 	push bc
 	push hl
@@ -430,7 +430,7 @@ PlacePartyMonGender:
 	ret z
 	ld c, a
 	ld b, 0
-	hlcoord 12, 2
+	hlcoord 12, 0
 .loop
 	push bc
 	push hl
