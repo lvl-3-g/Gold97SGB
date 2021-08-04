@@ -546,7 +546,7 @@ CGB_ApplyPartyMenuHPPals:
 	ld a, [de]
 	inc a
 	ld e, a
-	hlcoord 11, 2, wAttrmap
+	hlcoord 11, 0, wAttrmap
 	ld bc, 2 * SCREEN_WIDTH
 	ld a, [wSGBPals]
 .loop
