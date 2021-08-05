@@ -28,7 +28,6 @@ TreeMonMaps:
 	treemon_map ALLOY_CITY,                  TREEMON_SET_URBAN
 	treemon_map SANSKRIT_TOWN,               TREEMON_SET_TOWN
 	treemon_map NAGO_VILLAGE,                TREEMON_SET_TOWN
-	treemon_map KOBAN_ISLAND,                TREEMON_SET_OVERWORLD_2
 	treemon_map JADE_FOREST,                 TREEMON_SET_FOREST
 	treemon_map NANJO_FOREST,                TREEMON_SET_FOREST
 	treemon_map NATIONAL_PARK,               TREEMON_SET_OVERWORLD_1

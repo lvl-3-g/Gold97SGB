@@ -445,7 +445,7 @@
 	const EVENT_FOUGHT_ARTICUNO; articuno event
 	const EVENT_ARTICUNO_IN_ICED_CAVERN; used for making articuno appear/disappear
 	const EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE; used for wisdom orb youngster in forest
-	const EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY; used for him as well, but for after giving orb
+	const EVENT_GOT_LUCKY_EGG_FROM_NANJO_FOREST_GUY; used for him as well, but for after giving orb
 	const EVENT_GOT_SQUIRTLE_FROM_POOL; used for getting squirtle in amami town
 	const EVENT_GOT_BULBASAUR_FROM_ARBORETUM; used for getting bulbasaur in ryukyu city
 	const EVENT_SILVER_APPEARS_IN_NANJO_FOREST; used for silver in nanjo forest
@@ -653,7 +653,7 @@
 	const EVENT_ENDON_CAVE_RUINS_CONNECTION_NUGGET
 	const EVENT_ALREADY_GOT_CONGRATS_FROM_YOUNGSTER
 	const EVENT_DEEPWATER_EAST_HP_UP
-	const EVENT_3B2
+	const EVENT_TATSUGO_PATH_HIDDEN_HEART_STONE
 	const EVENT_3B3
 	const EVENT_3B4
 	const EVENT_3B5

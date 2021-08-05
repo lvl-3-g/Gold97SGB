@@ -7,7 +7,6 @@ MotobuPathIejimaGate_MapScripts:
 	db 0 ; callbacks
 
 MotobuPathIejimaGateOfficerScript:
-;	setevent EVENT_IEJIMA_TOWN_FIXED
 	faceplayer
 	opentext
 	checkevent EVENT_RETURNED_FUEL_LINE

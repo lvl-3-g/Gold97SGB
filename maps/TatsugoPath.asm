@@ -142,6 +142,8 @@ SNNortonAfterBattleText:
 TatsugoPathHiddenPPUP:
 	hiddenitem PP_UP, EVENT_TATSUGO_PATH_HIDDEN_PP_UP
 
+TatsugoPathHiddenHeartStone:
+	hiddenitem HEART_STONE, EVENT_TATSUGO_PATH_HIDDEN_HEART_STONE
 
 TPItemball:
 	itemball ULTRA_BALL
@@ -172,10 +174,11 @@ TatsugoPath_MapEvents:
 
 	db 0 ; coord events
 
-	db 3 ; bg events
+	db 4 ; bg events
 	bg_event 21,  7, BGEVENT_READ, HeartPondSign
 	bg_event 52, 10, BGEVENT_READ, KikaiStraitSign
 	bg_event  4, 15, BGEVENT_ITEM, TatsugoPathHiddenPPUP
+	bg_event 26, 12, BGEVENT_ITEM, TatsugoPathHiddenHeartStone
 
 	db 5 ; object events
 	object_event 19,  9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerTeacherHolly, -1

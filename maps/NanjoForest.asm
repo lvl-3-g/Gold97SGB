@@ -28,44 +28,44 @@ NanjoForest_MapScripts:
 	appear NANJO_FOREST_SILVER
 	return
 
-WisdomOrbYoungsterScript:
+LuckyEggYoungsterScript:
 	faceplayer
-	checkevent EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY
-	iftrue .AlreadyGaveWisdomOrb
+	checkevent EVENT_GOT_LUCKY_EGG_FROM_NANJO_FOREST_GUY
+	iftrue .AlreadyGaveLuckyEgg
 	checkevent EVENT_RETURNED_FUEL_LINE
-	iftrue .TryGivingWisdomOrb
-.NoWisdomOrbYet
+	iftrue .TryGivingLuckyEgg
+.NoLuckyEggYet
 	opentext
-	writetext NoWisdomOrbYetText
+	writetext NoLuckyEggYetText
 	waitbutton
 	closetext
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
-.TryGivingWisdomOrb
+.TryGivingLuckyEgg
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .NoWisdomOrbYet
+	iftrue .NoLuckyEggYet
 	checkevent EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE
-	iffalse .SetUpWisdomOrb
+	iffalse .SetUpLuckyEgg
 	opentext
-	writetext HeresWisdomOrbText
+	writetext HeresLuckyEggText
 	waitbutton
-	verbosegiveitem WISDOM_ORB
-	iffalse .NoOrbFull
-	writetext WhatDoesWisdomOrbDoText
+	verbosegiveitem LUCKY_EGG
+	iffalse .NoEggFull
+	writetext WhatDoesLuckyEggDoText
 	waitbutton
 	closetext
-	setevent EVENT_GOT_WISDOM_ORB_FROM_NANJO_FOREST_GUY
+	setevent EVENT_GOT_LUCKY_EGG_FROM_NANJO_FOREST_GUY
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
-.NoOrbFull
+.NoEggFull
 	closetext
 	end
 	
-.SetUpWisdomOrb
+.SetUpLuckyEgg
 	opentext
-	writetext NoWisdomOrbYetText
+	writetext NoLuckyEggYetText
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_NANJO_FOREST_GUY_ONCE
@@ -73,18 +73,18 @@ WisdomOrbYoungsterScript:
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
-.AlreadyGaveWisdomOrb
+.AlreadyGaveLuckyEgg
 	opentext
-	writetext AlreadyGaveWisdomOrbText
+	writetext AlreadyGaveLuckyEggText
 	waitbutton
 	closetext
 	turnobject NANJO_FOREST_YOUNGSTER, RIGHT
 	end
 	
-WisdomOrbBugCatcherScript:
+LuckyEggBugCatcherScript:
 	faceplayer
 	opentext
-	writetext WisdomOrbBugCatcherText
+	writetext LuckyEggBugCatcherText
 	waitbutton
 	closetext
 	turnobject NANJO_FOREST_BUG_CATCHER, RIGHT
@@ -222,30 +222,31 @@ NanjoForestSilverAfter:
 	cont "place else!"
 	done
 	
-WhatDoesWisdomOrbDoText:
+WhatDoesLuckyEggDoText:
 	text "I wonder where it"
 	line "came from."
 	para "Can #MON use"
 	line "it?"
 	done
 	
-HeresWisdomOrbText:
+HeresLuckyEggText:
 	text "Hey, check this"
 	line "out!"
+	para "I found something!"
 	para "It's some sort"
-	line "of ball?"
+	line "of EGG?"
 	para "Not sure what it"
 	line "is, but you can"
 	cont "have it!"
 	done
 	
-AlreadyGaveWisdomOrbText:
+AlreadyGaveLuckyEggText:
 	text "You never know"
 	line "what you'll find"
 	cont "here."
 	done
 	
-NoWisdomOrbYetText:
+NoLuckyEggYetText:
 	text "I'm looking for"
 	line "interesting things"
 	para "that wash up on"
@@ -265,7 +266,7 @@ NoWisdomOrbYetText:
 	cont "with you."
 	done
 	
-WisdomOrbBugCatcherText:
+LuckyEggBugCatcherText:
 	text "My brother and I"
 	line "find lots of cool"
 	para "things that wash"
@@ -292,8 +293,8 @@ NanjoForest_MapEvents:
 	bg_event 37,  7, BGEVENT_READ, NanjoForestSign2
 
 	db 9 ; object events
-	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbYoungsterScript, -1
-	object_event 23,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, WisdomOrbBugCatcherScript, -1
+	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, LuckyEggYoungsterScript, -1
+	object_event 23,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, LuckyEggBugCatcherScript, -1
 	object_event  6,  8, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, NanjoForestSilverScript, EVENT_SILVER_APPEARS_IN_NANJO_FOREST
 	object_event 32, 31, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestMaxRevive, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
 	object_event 12,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, NanjoForestUltraBall, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM

@@ -381,6 +381,33 @@ SWIslandsGrassWildMons:
 	db 50, GRENMAR
 	db 50, MAGMAR
 	db 52, MAGMAR
+
+	map_id KIKAI_CALDERA_3F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, GRENMAR
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; day
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, GRENMAR
+	db 50, MAGMAR
+	db 52, MAGMAR
+	; nite
+	db 50, MACHOKE
+	db 48, GRAVELER
+	db 48, MACHOKE
+	db 52, WEEZING
+	db 50, GRENMAR
+	db 50, MAGMAR
+	db 52, MAGMAR
 	
 	map_id TROPICAL_ISLAND_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

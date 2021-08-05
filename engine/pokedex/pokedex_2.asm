@@ -200,7 +200,7 @@ DisplayDexEntry:
 	call ByteFill
 	; page number
 	hlcoord 1, 9
-	ld [hl], $55
+	ld [hl], $31
 	inc hl
 	ld [hl], $55
 	hlcoord 1, 10
