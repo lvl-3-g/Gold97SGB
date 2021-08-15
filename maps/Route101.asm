@@ -181,11 +181,13 @@ DebugSign:
 ;	giveitem ENERGY_WALL
 ;	giveitem STEEL_SHELL
 ;	giveitem POWER_WINGS
-	givepoke PALSSIO, 5
-	givepoke CHIKORITA, 5
-	givepoke FARFETCH_D, 5
-	givepoke PIKACHU, 5
-	givepoke DIGLETT, 5
+;	givepoke TYKER, 5
+;	givepoke BIPULLA, 5
+;	givepoke REMORAID, 5
+;	givepoke STROMEN, 5
+;	givepoke SCYTHER, 5
+;	givepoke SNEASEL, 5
+	givepoke SUNFLORA, 5
 	jumptext DebugSignText
 	closetext
 	end
@@ -285,9 +287,9 @@ Route101YoungsterText:
 	done
 
 Route101TeacherText:
-	text "See those ledges?"
+	text "See that ledge?"
 	line "It's scary to jump"
-	cont "off them."
+	cont "off of it."
 
 	para "But you can jump"
 	line "down them as a"

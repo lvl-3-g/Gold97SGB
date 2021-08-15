@@ -1806,7 +1806,7 @@ HealHP_SFX_GFX:
 	hlcoord 11, 0
 	ld bc, SCREEN_WIDTH * 2
 	call AddNTimes
-	ld a, $2
+	ld a, $4
 	ld [wWhichHPBar], a
 	predef_jump AnimateHPBar
 

@@ -183,7 +183,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw MarillEggMoves
 	dw GrenmarEggMoves
-	dw BellignanEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw HoppipEggMoves
 	dw NoEggMoves
@@ -209,7 +209,7 @@ EggMovePointers::
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw QuagsireEggMoves
-	dw TriculesEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw MoibelleEggMoves
 	dw NoEggMoves

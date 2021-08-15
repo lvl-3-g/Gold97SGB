@@ -215,7 +215,8 @@ MovementData_0x198a63:
 	step_end
 	
 SilverHasItFiguredOut:
-	text "<RIVAL>:<PLAYER>!"
+	text "<RIVAL>:"
+	line "<PLAYER>!"
 	para "I think I have it"
 	line "figured out!"
 	para "TEAM ROCKET is"

@@ -361,7 +361,7 @@ UnknownText_0x18e615:
 	line "to provide"
 	cont "assistance to you."
 	para "I can build"
-	line "#BALLS. Special"
+	line "# BALLS. Unique"
 	para "custom ones that"
 	line "may prove useful."
 	para "Here, I'll give"

@@ -28,5 +28,5 @@ SWIslandsGymLeaders:
 	db JANINE
 ;	db SABRINA
 	db BLAINE
-	db BLUE
+	db RED
 	db -1

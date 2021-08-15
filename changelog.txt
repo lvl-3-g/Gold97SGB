@@ -560,3 +560,22 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - lots of renamed events to match item pickups
 - lots of renamed scripts to match what they are (dialogue, signs, etc)
 
+7.01
+- minor graphical update to Pokemon status screen, dashed lines like in the Demo
+- fixed issue where the water in Nanjo Forest didn't have any encounters
+- fixed issue where Diato Ranch had no fishing encounters
+- fixed issue where wild Igglybuf could have the Polkadot Bow instead of Jigglypuff- corrected to Jigglypuff
+- Togepi is now in Fairy Egg group instead of Flying
+- Fixed issue where Silver's dialogue would close on its own afer he says he's leaving for the lab
+- Cleaned up the dialogue for when you name your mom
+- Cleaned up Ken's dialogue
+- Grenmar can now learn TMs for Headbutt and Protect
+- Bellignan no longer has egg moves, since that doesn't make sense anyways
+- Bipulla and Girafarig are now Normal/Dark instead of Dark/Normal
+- Bipulla no longer can learn Rock Smash
+- Tricules no longer has egg moves, since that doesn't make sense anyways
+- Fixed a few minor grammar issues
+- Fixed issue where the Rocket Grunt with the Ship Key could disappear early when running away
+- Fixed issue where HP restore animation would play on incorrect HP bar
+- Ho-Oh now learns Sky Attack to take advantage of its Flying type
+- more behind-the-scenes event and script label fixes

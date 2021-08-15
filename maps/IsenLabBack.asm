@@ -1,29 +1,11 @@
 	object_const_def ; object_event constants
 	const ISEN_LAB_BACK_MEWTWO
-;	const ISEN_LAB_BACK_MEW
 
 IsenLabBack_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-;	callback MAPCALLBACK_OBJECTS, .CheckForMew
-;	
-;.CheckForMew:
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-;	iftrue .NoMew
-;	checkflag ENGINE_GOT_SHUCKIE_TODAY
-;	iftrue .NoMew
-;	checkevent EVENT_SWITCH_11
-;	iffalse .NoMew
-;	checkevent EVENT_MEW_IN_LAB_2_NOW_UNUSED
-;	iftrue .NoMew
-;	appear ISEN_LAB_BACK_MEW
-;	return
-	
-;.NoMew
-;	disappear ISEN_LAB_BACK_MEW
-;	return
-	
+
 
 MewtwoScript:
 	faceplayer
@@ -43,30 +25,10 @@ MewtwoScript:
 	end
 	
 
-
-;MewScript:
-;	faceplayer
-;	opentext
-;	writetext MewText
-;	cry MEW
-;	pause 15
-;	closetext
-;	setevent EVENT_MEW_IN_LAB_2_NOW_UNUSED
-;	writecode VAR_BATTLETYPE, BATTLETYPE_LEGENDSWISLANDS
-;	loadwildmon MEW, 5
-;	startbattle
-;	disappear ISEN_LAB_BACK_MEW
-;	reloadmapafterbattle
-;	end
-	
 MewtwoText:
 	text "Gyargh!"
 	done
 	
-;MewText:
-;	text "Meew?"
-;	done
-
 IsenLabBack_MapEvents:
 	db 0, 0 ; filler
 

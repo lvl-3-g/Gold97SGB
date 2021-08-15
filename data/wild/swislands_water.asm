@@ -117,6 +117,12 @@ SWIslandsWaterWildMons:
 	db 40, STARYU
 	db 42, MOLAMBINO
 	
+	map_id NANJO_FOREST
+	db 3 percent 
+	db 43, MOLAMBINO
+	db 43, TENTACRUEL
+	db 45, ANGORE
+	
 	map_id GREAT_EAST_STRAIT
 	db 3 percent 
 	db 43, MOLAMBINO

@@ -258,7 +258,7 @@ ElderAsksToSeeYou:
 	para "So I must thank"
 	line "you for your help!"
 	para "Please, come by my"
-	line "house to see me,"
+	line "house to see me."
 	para "I'll have a gift"
 	line "for you."
 	done

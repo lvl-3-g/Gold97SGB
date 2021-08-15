@@ -66,6 +66,7 @@ SilentTown_RivalGreets:
 	showemote EMOTE_SHOCK, SILENTTOWN_SILVER, 15
 	opentext
 	writetext SilentTownRivalText3
+	waitbutton
 	closetext
 	applymovement SILENTTOWN_SILVER, Movement_SilverPushesYouAway_NBT
 	disappear SILENTTOWN_SILVER
@@ -492,9 +493,15 @@ SilentTownRivalText3:
 	para "childish is"
 	line "hilarious!"
 	
-	para "Well, I'm off to"
-	line "OAK's!"
-	cont "See you there!"
+	para "You better be sure"
+	line "that '<MOM>'"
+	para "is okay with you"
+	line "stopping by OAK's"
+	cont "LAB!"
+	
+	para "Well, I'm off!"
+	para "See you at the"
+	line "LAB!"
 	done
 
 SilentTownSignText:

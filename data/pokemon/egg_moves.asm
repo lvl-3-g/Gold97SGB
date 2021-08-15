@@ -521,10 +521,6 @@ GrenmarEggMoves:
 	db THRASH
 	db -1 ; end
 
-BellignanEggMoves:
-	db SELFDESTRUCT
-	db -1 ; end
-
 HoppipEggMoves:
 	db CONFUSION
 	db GROWL
@@ -626,13 +622,6 @@ QuagsireEggMoves:
 	db HYDRO_PUMP
 	db DRAGON_RAGE
 	db FAINT_ATTACK
-
-TriculesEggMoves:
-	db FLAIL
-	db HAZE
-	db BUBBLEBEAM
-	db SUPERSONIC
-	db -1 ; end
 
 MoibelleEggMoves:
 	db SPITE

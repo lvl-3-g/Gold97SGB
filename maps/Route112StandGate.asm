@@ -223,7 +223,8 @@ Route102GRivalAfterText:
 	done
 	
 R36GSilverGreets:
-	text "<PLAYER>!"
+	text "<RIVAL>:"
+	line "<PLAYER>!"
 	done
 	
 R36GSilverGreets2:

@@ -40,7 +40,7 @@ PlayBattleMusic:
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
-	cp RED
+	cp BLUE
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
@@ -55,7 +55,7 @@ PlayBattleMusic:
 	jr z, .done
 	cp SCIENTIST
 	jr z, .done
-	cp SABRINA; this is imposter oak
+	cp SABRINA; this is impostor oak
 	jr z, .done
 	cp BROCK; this is giovanni
 	jr z, .done

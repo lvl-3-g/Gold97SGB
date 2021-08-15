@@ -200,13 +200,9 @@ KenGreeting1:
 	line "on your wrist…"
 	para "You finally got"
 	line "a #GEAR!"
-	para "Sweet! But since"
-	line "it's new and all,"
-	para "you can't really"
-	line "do much with it"
-	cont "yet…"
-	para "Have MOM help you"
-	line "set it up!"
+	para "It won't do very"
+	line "much right out of"
+	cont "the box, though…"
 	para "Maybe I'll get you"
 	line "the MAP CARD"
 	cont "upgrade!"
@@ -257,10 +253,9 @@ KenGreeting4:
 	line "WESTPORT CITY!"
 	para "I could be on the"
 	line "radio, bro!"
-	para "Listen for me in"
-	line "the future!"
+	para "Wish me luck!"
 	para "And good luck out"
-	line "there!"
+	line "there to you, too!"
 	done
 	
 KenGreeting5:
@@ -270,10 +265,9 @@ KenGreeting5:
 	line "WESTPORT CITY!"
 	para "I could be on the"
 	line "radio, bro!"
-	para "Listen for me in"
-	line "the future!"
+	para "Wish me luck!"
 	para "And good luck out"
-	line "there!"
+	line "there to you, too!"
 	done
 
 PlayersDollText:

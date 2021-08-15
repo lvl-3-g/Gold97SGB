@@ -114,8 +114,8 @@ NihonGrassWildMons:
 	db 3, GASTLY
 	db 4, GASTLY
 	db 5, GASTLY
-	db 3, STROMEN
-	db 7, GASTLY
+	db 3, RATTATA
+	db 7, STROMEN
 	db 5, RATTATA
 	db 5, RATTATA
 	

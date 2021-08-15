@@ -159,6 +159,7 @@ KeyGuyRunsAwayInShame2:
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
+	big_step RIGHT
 	step_end
 	
 SanskritRocketHouseShipKeyItem:
