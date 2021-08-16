@@ -1194,8 +1194,6 @@ wIntroSceneFrameCounter:: db
 UNION
 wIntroSceneTimer:: db
 NEXTU
-wTrainerCardSelected:: db ; v7.xx
-NEXTU
 wTitleScreenTimer:: dw
 ENDU
 
@@ -1285,7 +1283,8 @@ wPlayerStepDirection:: db
 wPlayerNextMovement:: db
 wPlayerMovement:: db
 
-	ds 2
+wTrainerCardSelected:: db ; v7.xx
+	db
 
 wMovementObject:: db
 wMovementDataBank:: db
