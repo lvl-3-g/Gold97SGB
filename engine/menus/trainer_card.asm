@@ -483,11 +483,19 @@ TrainerCard_Page2_3_InitObjectsAndStrings:
 	ld de, .LinePart2
 	call PlaceString
 
+	hlcoord 18, 11
+	ld de, .LinePart2
+	call PlaceString
+
 	hlcoord 0, 13
+	ld de, .LinePart4
+	call PlaceString
+
+	hlcoord 0, 15
 	ld de, .LinePart3
 	call PlaceString
 
-	hlcoord 2, $F
+	hlcoord 0, 14
 	ld de, .StatusTitle
 	call PlaceString
 
@@ -529,7 +537,7 @@ endr
 
 ; pushc and popc isn't working lol
 .StatusTitle:
-	db "ÄSTATUS@"
+	db " ÄSTATUS@"
 
 .HorizDivide:
 rept 18
@@ -549,6 +557,9 @@ endr
 	db "@"
 .LinePart3:
 	db "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖü"
+	db "@"
+.LinePart4:
+	db "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ"
 	db "@"
 
 TrainerCardSetup_PlaceTilemapString:
