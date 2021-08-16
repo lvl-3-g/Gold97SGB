@@ -7,6 +7,7 @@
 	const TRAINERCARDSTATE_PAGE3_LOADGFX ; 4
 	const TRAINERCARDSTATE_PAGE3_JOYPAD  ; 5
 	const TRAINERCARDSTATE_QUIT          ; 6
+	const TRAINERCARDSTATE_PAGEFLIP
 
 TrainerCard:
 	ld a, [wVramState]
@@ -74,6 +75,7 @@ TrainerCard:
 	ld [hli], a ; wTrainerCardBadgeFrameCounter
 	ld [hli], a ; wTrainerCardBadgeTileID
 	ld [hl], a  ; wTrainerCardBadgeAttributes
+	ld [wTrainerCardSelected], a ; v7.xx
 	ret
 
 .RunJumptable:
@@ -88,6 +90,7 @@ TrainerCard:
 	dw TrainerCard_Page3_LoadGFX
 	dw TrainerCard_Page3_Joypad
 	dw TrainerCard_Quit
+	dw TrainerCard_PageFlip
 
 TrainerCard_IncrementJumptable:
 	ld hl, wJumptableIndex
@@ -101,14 +104,32 @@ TrainerCard_Quit:
 
 TrainerCard_Page1_LoadGFX:
 	call ClearSprites
+
 	hlcoord 0, 8
 	ld d, 6
 	call TrainerCard_InitBorder
+
 	call WaitBGMap
 	ld de, CardStatusGFX
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(CardStatusGFX), 86
 	call Request2bpp
+
+	ld de, CardBorderGFX
+	ld hl, vTiles2 tile $79
+	lb bc, BANK(CardBorderGFX), 6
+	call Request2bpp
+
+	hlcoord 0, 13
+	lb bc, 1, $12
+	call TextboxBorder
+	hlcoord $13, $d
+	ld [hl], "─"
+	hlcoord $13, $e
+	ld [hl], " "
+	hlcoord $13, $f
+	ld [hl], "─"
+
 	call TrainerCard_Page1_PrintDexCaught_GameTime
 	call TrainerCard_IncrementJumptable
 	ret
@@ -116,13 +137,68 @@ TrainerCard_Page1_LoadGFX:
 TrainerCard_Page1_Joypad:
 	call TrainerCard_Page1_PrintGameTime
 	ld hl, hJoyLast
+;	ld a, [hl]
+;	and D_RIGHT | A_BUTTON
+;	jr nz, .pressed_right_a
 	ld a, [hl]
-	and D_RIGHT | A_BUTTON
-	jr nz, .pressed_right_a
+	and D_RIGHT
+	jr nz, .pressed_right
+	
+	ld a, [hl]
+	and D_LEFT
+	jr nz, .pressed_left
+	
+	ld a, [hl]
+	and A_BUTTON
+	jr nz, .selected
+
+; print arrow
+	hlcoord 4, $10
+	ld [hl], " "
+	hlcoord $b, $10
+	ld [hl], " "
+
+	ld a, [wTrainerCardSelected]
+	and a
+	jr nz, .on_badges
+; on 'EXIT'
+	hlcoord 4, $10
+	ld [hl], "▶"
 	ret
 
-.pressed_right_a
-	ld a, TRAINERCARDSTATE_PAGE2_LOADGFX
+.on_badges
+	hlcoord $b, $10
+	ld [hl], "▶"
+	ret
+	ret
+
+.pressed_left
+	ld a, [wTrainerCardSelected]
+	and a
+	ret z	; clip when wTrainerCardSelected == 0
+	dec a
+	ld [wTrainerCardSelected], a
+	ret
+
+.pressed_right
+	ld a, [wTrainerCardSelected]
+	and a
+	ret nz ; clip when wTrainerCardSelected == 1
+	inc a
+	ld [wTrainerCardSelected], a
+	ret
+
+.selected
+	ld a, [wTrainerCardSelected]
+	and a
+	jr z, .do_exit
+; switch to page 2
+	ld a, TRAINERCARDSTATE_PAGEFLIP
+	ld [wJumptableIndex], a
+	ret
+
+.do_exit
+	ld a, TRAINERCARDSTATE_QUIT
 	ld [wJumptableIndex], a
 	ret
 
@@ -134,10 +210,24 @@ TrainerCard_Page1_Joypad:
 	ld [wJumptableIndex], a
 	ret
 
+TrainerCard_PageFlip:
+; nevermind...
+	;ld a, $90
+	;ld hl, hSCY
+	;dec [hl]
+	;dec [hl]
+	;cp [hl]
+	;ret nz
+	;xor a
+	;ld [hl], a
+	ld a, TRAINERCARDSTATE_PAGE2_LOADGFX
+	ld [wJumptableIndex], a
+	ret
+
 TrainerCard_Page2_LoadGFX:
 	call ClearSprites
-	hlcoord 0, 8
-	ld d, 6
+	hlcoord 0, 0
+	ld d, 14
 	call TrainerCard_InitBorder
 	call WaitBGMap
 	ld de, LeaderGFX
@@ -148,6 +238,20 @@ TrainerCard_Page2_LoadGFX:
 	ld hl, vTiles0 tile $00
 	lb bc, BANK(BadgeGFX), 44
 	call Request2bpp
+
+; temporarily map ÄÖÜäöü to border tiles
+	ld de, CardBorderGFX
+	ld hl, vTiles0 tile $C0
+	lb bc, BANK(CardBorderGFX), 6
+	call Request2bpp
+
+; temporarily map ÄÖÜäöü to border tiles
+	ld de, CardLeftArrowGFX
+	ld hl, vTiles0 tile $C0
+	lb bc, BANK(CardLeftArrowGFX), 1
+	call Request2bpp
+
+
 	call TrainerCard_Page2_3_InitObjectsAndStrings
 	call TrainerCard_IncrementJumptable
 	ret
@@ -165,6 +269,28 @@ TrainerCard_Page2_Joypad:
 	ret
 
 .d_left
+	call ClearSprites
+
+	hlcoord 0, 0
+	ld d, 14
+	call TrainerCard_InitBorder
+
+	call DelayFrame
+	call DelayFrame
+	call DelayFrame
+
+	ld hl, ChrisCardPic
+	ld de, vTiles2
+	lb bc, BANK(ChrisCardPic), 41
+	call Request2bpp
+
+	ld hl, CardStatusGFX
+	ld de, vTiles2 tile $29
+	lb bc, BANK(CardStatusGFX), 86
+	call Request2bpp
+
+	call TrainerCard_PrintTopHalfOfCard
+
 	ld a, TRAINERCARDSTATE_PAGE1_LOADGFX
 	ld [wJumptableIndex], a
 	ret
@@ -278,12 +404,14 @@ TrainerCard_PrintTopHalfOfCard:
 	db $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $26, -1 ; ____________>
 
 TrainerCard_Page1_PrintDexCaught_GameTime:
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_POKEDEX_F, a
+	jr z, .skip_dex
+
 	hlcoord 2, 10
-	ld de, .Dex_PlayTime
+	ld de, .Dex
 	call PlaceString
-	hlcoord 12, 15
-	ld de, .Badges
-	call PlaceString
+
 	ld hl, wPokedexCaught
 	ld b, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits
@@ -291,35 +419,91 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 15, 10
 	lb bc, 1, 3
 	call PrintNum
+
+.skip_dex
+	hlcoord 2, 12
+	ld de, .PlayTime
+	call PlaceString
+
+	hlcoord 2, 14
+	ld de, .Badges
+	call PlaceString
+
+	hlcoord 2, 16
+	ld de, .Options
+	call PlaceString
+
+	ld hl, wBadges
+	ld b, wTMsHMs - wBadges
+	call CountSetBits
+	ld de, wNumSetBits
+	hlcoord $f, $e
+	lb bc, 1, 3
+	call PrintNum
+
 	call TrainerCard_Page1_PrintGameTime
 	hlcoord 1, 8
 	ld de, .StatusTilemap
 	call TrainerCardSetup_PlaceTilemapString
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_POKEDEX_F, a
-	ret nz
-	hlcoord 1, 9
-	lb bc, 2, 17
-	call ClearBox
 	ret
 
-.Dex_PlayTime:
-	db   "#DEX"
-	next "PLAY TIME@"
+.Dex:
+	db   "#DEX@"
 
-	db "@" ; unused
+.PlayTime:
+	db "PLAY TIME@"
 
 .Badges:
-	db "BADGES▶@"
+	db "BADGES@"
+
+.Options:
+	db "   EXIT   BADGES@"
 
 .StatusTilemap:
 	db $29, $2a, $2b, $2c, $2d, -1
 
 TrainerCard_Page2_3_InitObjectsAndStrings:
+	hlcoord 3, 2
+	ld de, .LeagueTitle
+	call PlaceString
+
+	hlcoord 1, 3
+	ld de, .HorizDivide
+	call TrainerCardSetup_PlaceTilemapString
+
+	hlcoord 1, 4
+	ld de, .LinePart2
+	call PlaceString
+
 	hlcoord 1, 8
+	ld de, .LinePart1
+	call PlaceString
+
+	hlcoord 18, 9
+	ld de, .LinePart2
+	call PlaceString
+
+	hlcoord 18, 11
+	ld de, .LinePart2
+	call PlaceString
+
+	hlcoord 0, 13
+	ld de, .LinePart4
+	call PlaceString
+
+	hlcoord 0, 15
+	ld de, .LinePart3
+	call PlaceString
+
+	hlcoord 0, 14
+	ld de, .StatusTitle
+	call PlaceString
+
+	hlcoord 1, 0
 	ld de, .BadgesTilemap
 	call TrainerCardSetup_PlaceTilemapString
-	hlcoord 2, 10
+
+	hlcoord 2, 4
 	ld a, $29
 	ld c, 4
 .loop
@@ -329,7 +513,7 @@ rept 4
 endr
 	dec c
 	jr nz, .loop
-	hlcoord 2, 13
+	hlcoord 2, 9
 	ld a, $51
 	ld c, 4
 .loop2
@@ -346,7 +530,37 @@ endr
 	ret
 
 .BadgesTilemap:
-	db $79, $7a, $7b, $7c, $7d, -1 ; "BADGES"
+	db $79, $7a, $7b, $7c, $7d, $7e, -1 ; "BADGES"
+
+.LeagueTitle:
+	db "#MON LEAGUE@"
+
+; pushc and popc isn't working lol
+.StatusTitle:
+	db " ÄSTATUS@"
+
+.HorizDivide:
+rept 18
+	db $25
+endr
+	db -1
+
+; pushc and popc isn't working lol
+.LinePart1:
+	db "öÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÜ"
+	db "@"
+.LinePart2:
+	db "ä<LF>"
+	db "ä<LF>"
+	db "ä<LF>"
+	db "ä<LF>"
+	db "@"
+.LinePart3:
+	db "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖü"
+	db "@"
+.LinePart4:
+	db "ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ"
+	db "@"
 
 TrainerCardSetup_PlaceTilemapString:
 .loop
@@ -425,6 +639,8 @@ TrainerCard_Page2_3_PlaceLeadersFaces:
 	push hl
 	ld [hli], a
 	inc a
+	ld de, SCREEN_WIDTH
+	add hl, de
 	ld [hli], a
 	inc a
 	ld [hli], a
@@ -579,49 +795,51 @@ TrainerCard_NihonBadgesOAM:
 	dw wNihonBadges
 
 	; Zephyrbadge
-	db $68, $18, 0
+	db $40, $18, 0
 	db $00, $20, $24, $20 | (1 << 7)
 	db $00, $20, $24, $20 | (1 << 7)
 
 	; Hivebadge
-	db $68, $38, 0
+	db $40, $38, 0
 	db $04, $20, $24, $20 | (1 << 7)
 	db $04, $20, $24, $20 | (1 << 7)
 
 	; Plainbadge
-	db $68, $58, 0
+	db $40, $58, 0
 	db $08, $20, $24, $20 | (1 << 7)
 	db $08, $20, $24, $20 | (1 << 7)
 
 	; Fogbadge
-	db $68, $78, 0
+	db $40, $78, 0
 	db $0c, $20, $24, $20 | (1 << 7)
 	db $0c, $20, $24, $20 | (1 << 7)
 
 	; Stormbadge
-	db $80, $18, 0
+	db $68, $18, 0
 	db $14, $20, $24, $20 | (1 << 7)
 	db $14, $20, $24, $20 | (1 << 7)
 
 	; Glacierbadge
-	db $80, $58, 0
+	db $68, $58, 0
 	db $18, $20, $24, $20 | (1 << 7)
 	db $18, $20, $24, $20 | (1 << 7)
 
 	; Mineralbadge
-	db $80, $38, 0
+	db $68, $38, 0
 	db $10, $20, $24, $20 | (1 << 7)
 	db $10, $20, $24, $20 | (1 << 7)
 
 	; Risingbadge
 	; X-flips on alternate cycles.
-	db $80, $78, 0
+	db $68, $78, 0
 	db $1c,            $20, $24, $20 | (1 << 7)
 	db $1c | (1 << 7), $20, $24, $20 | (1 << 7)
 
 ChrisCardPic:  INCBIN "gfx/trainer_card/chris_card.2bpp"
 CardGFX:       INCBIN "gfx/trainer_card/trainer_card.2bpp"
 CardStatusGFX: INCBIN "gfx/trainer_card/card_status.2bpp"
+CardBorderGFX: INCBIN "gfx/trainer_card/border.2bpp"
+CardLeftArrowGFX: INCBIN "gfx/trainer_card/left_arrow.2bpp"
 
 LeaderGFX:  INCBIN "gfx/trainer_card/leaders.2bpp"
 LeaderGFX2: INCBIN "gfx/trainer_card/leaders.2bpp"

@@ -1283,7 +1283,8 @@ wPlayerStepDirection:: db
 wPlayerNextMovement:: db
 wPlayerMovement:: db
 
-	ds 2
+wTrainerCardSelected:: db ; v7.xx
+	db
 
 wMovementObject:: db
 wMovementDataBank:: db
