@@ -1194,6 +1194,8 @@ wIntroSceneFrameCounter:: db
 UNION
 wIntroSceneTimer:: db
 NEXTU
+wTrainerCardSelected:: db ; v7.xx
+NEXTU
 wTitleScreenTimer:: dw
 ENDU
 
