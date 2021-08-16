@@ -404,16 +404,12 @@ TrainerCard_PrintTopHalfOfCard:
 	db $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $26, -1 ; ____________>
 
 TrainerCard_Page1_PrintDexCaught_GameTime:
+	ld a, [wStatusFlags]
+	bit STATUSFLAGS_POKEDEX_F, a
+	jr z, .skip_dex
+
 	hlcoord 2, 10
-	ld de, .Dex_PlayTime
-	call PlaceString
-
-	hlcoord 2, 14
-	ld de, .Badges
-	call PlaceString
-
-	hlcoord 2, 16
-	ld de, .Options
+	ld de, .Dex
 	call PlaceString
 
 	ld hl, wPokedexCaught
@@ -423,6 +419,19 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 15, 10
 	lb bc, 1, 3
 	call PrintNum
+
+.skip_dex
+	hlcoord 2, 12
+	ld de, .PlayTime
+	call PlaceString
+
+	hlcoord 2, 14
+	ld de, .Badges
+	call PlaceString
+
+	hlcoord 2, 16
+	ld de, .Options
+	call PlaceString
 
 	ld hl, wBadges
 	ld b, wTMsHMs - wBadges
@@ -436,17 +445,13 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 1, 8
 	ld de, .StatusTilemap
 	call TrainerCardSetup_PlaceTilemapString
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_POKEDEX_F, a
-	ret nz
-	hlcoord 1, 9
-	lb bc, 2, 17
-	call ClearBox
 	ret
 
-.Dex_PlayTime:
-	db   "#DEX"
-	next "PLAY TIME@"
+.Dex:
+	db   "#DEX@"
+
+.PlayTime:
+	db "PLAY TIME@"
 
 .Badges:
 	db "BADGES@"
