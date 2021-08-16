@@ -579,3 +579,6 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Fixed issue where HP restore animation would play on incorrect HP bar
 - Ho-Oh now learns Sky Attack to take advantage of its Flying type
 - more behind-the-scenes event and script label fixes
+
+7.02
+- New UI for trainer card and badge screen, matches demo
