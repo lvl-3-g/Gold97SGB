@@ -461,10 +461,10 @@
 	const EVENT_LEARNED_SLOWPOKETAIL
 	const EVENT_LEARNED_RATICATE_TAIL
 	const EVENT_OPENED_DOOR_TO_GIOVANNIS_OFFICE
-	const EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_1; used to make rocker appear in game corner
-	const EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_2; used to make rocker appear in n64 house
-	const EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_3; used to make lass appear in kume building
-	const EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF; used to make lass appear in n64 house
+	const EVENT_GAME_HOUSE_NPC_IN_KANTO_GAME_CORNER; used to make rocker appear in game corner
+	const EVENT_ROCKER_FROM_KANTO_IN_GAME_HOUSE; used to make rocker appear in n64 house
+	const EVENT_GAME_HOUSE_NPC_IN_KUME_SOCIAL_HOUSE; used to make lass appear in kume building
+	const EVENT_LASS_FROM_KUME_AND_FRIENDS; used to make lass appear in n64 house
 	const EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
 	const EVENT_WILLS_ROOM_ENTRANCE_CLOSED
 	const EVENT_WILLS_ROOM_EXIT_OPEN

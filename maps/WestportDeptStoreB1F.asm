@@ -25,9 +25,9 @@ WestportDeptStoreB1F_MapScripts:
 	sjump .Continue
 
 .Continue:
-	checkevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_2
+	checkevent EVENT_ROCKER_FROM_KANTO_IN_GAME_HOUSE
 	iftrue .Layout2
-	checkevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_3
+	checkevent EVENT_GAME_HOUSE_NPC_IN_KUME_SOCIAL_HOUSE
 	iftrue .Layout3
 	changeblock 10, 8, $0d ; floor
 	return
@@ -41,7 +41,7 @@ WestportDeptStoreB1F_MapScripts:
 	return
 
 .Unblock:
-	clearevent EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+	clearevent EVENT_LASS_FROM_KUME_AND_FRIENDS
 	return
 
 WestportDeptStoreB1FBlackBelt1Script:

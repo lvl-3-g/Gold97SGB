@@ -513,10 +513,10 @@ InitializeEventsScript:
 	setevent EVENT_TEKNOS_POKE_CENTER_BILL
 	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
 	setevent EVENT_KIKAI_VILLAGE_LANCE
-	setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_2; makes rocker disappear in n64 house
-	setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_1; makes rocker disappear in game corner
-	setevent EVENT_WESTPORT_DEPT_STORE_B1F_LAYOUT_3; makes lass disappear in kume house
-	setevent EVENT_WESTPORT_UNDERGROUND_WAREHOUSE_BLOCKED_OFF; makes lass disappear in n64 house
+	setevent EVENT_ROCKER_FROM_KANTO_IN_GAME_HOUSE; makes rocker disappear in n64 house
+	setevent EVENT_GAME_HOUSE_NPC_IN_KANTO_GAME_CORNER; makes rocker disappear in game corner
+	setevent EVENT_GAME_HOUSE_NPC_IN_KUME_SOCIAL_HOUSE; makes lass disappear in kume house
+	setevent EVENT_LASS_FROM_KUME_AND_FRIENDS; makes lass disappear in n64 house
 	setevent EVENT_DRAGONS_DEN_CLAIR
 	setevent EVENT_RIVAL_ALLOY_CITY
 	setevent EVENT_RIVAL_MT_FUJI_INTERIOR_LOWER
