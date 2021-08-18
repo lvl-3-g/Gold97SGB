@@ -2994,11 +2994,11 @@ MoibelleEvosAttacks:
 	db 1, GROWL
 	db 7, PURSUIT
 	db 10, BITE
-	db 12, DISABLE
+	db 12, HEAL_BELL
 	db 18, COIN_HURL
 	db 23, FURY_SWIPES
 	db 29, FAINT_ATTACK
-	db 34, CONFUSE_RAY
+	db 34, SWEET_KISS
 	db 40, SLASH
 	db 45, ATTRACT
 	db 0 ; no more level-up moves
@@ -3009,11 +3009,11 @@ BelledamEvosAttacks:
 	db 1, GROWL
 	db 7, PURSUIT
 	db 10, BITE
-	db 12, DISABLE
+	db 12, HEAL_BELL
 	db 18, COIN_HURL
 	db 23, FURY_SWIPES
 	db 31, FAINT_ATTACK
-	db 39, CONFUSE_RAY
+	db 39, SWEET_KISS
 	db 47, SLASH
 	db 56, ATTRACT
 	db 0 ; no more level-up moves

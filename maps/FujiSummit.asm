@@ -17,7 +17,8 @@ MountFujiSignText:
 	para "The Ultimate Goal"
 	line "for Trainers!"
 
-	para "NIHON LEAGUE HQ"
+	para "NIHON #MON"
+	line "LEAGUE HQ"
 	done
 
 FujiSummit_MapEvents:

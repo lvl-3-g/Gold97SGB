@@ -582,3 +582,9 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 
 7.02
 - New UI for trainer card and badge screen, matches demo
+
+7.03
+- Moibelle and Belledam now learn Heal Bell, as it was originally a signature move in the Demo
+- New in-battle graphics for Heal Bell, Safeguard, Sweet Kiss, and Curse, pulled from Demo
+- The League is referred to inconsistently in-game as either "Nihon League" or "Pokemon League" so now the sign on Mt. Fuji says "Nihon Pokemon League", so both are technically correct
+- Fixed incorrect sprite for Red in the Badge screen, now matches his in-battle sprite
