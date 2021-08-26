@@ -11,7 +11,7 @@ DecorationNames:
 	db "NINTENDO64@"
 	db "VIRTUAL BOY@"
 	db "GOLD TROPHY@"
-	db "BLUE TROPHY@"
+	db "SILVER TROPHY@"
 	db "POLIWRATH DOLL@"
 	db " BED@"
 	db " CARPET@"

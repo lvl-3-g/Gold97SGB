@@ -588,3 +588,7 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - New in-battle graphics for Heal Bell, Safeguard, Sweet Kiss, and Curse, pulled from Demo
 - The League is referred to inconsistently in-game as either "Nihon League" or "Pokemon League" so now the sign on Mt. Fuji says "Nihon Pokemon League", so both are technically correct
 - Fixed incorrect sprite for Red in the Badge screen, now matches his in-battle sprite
+
+7.04
+- Fixed inconsistency where guide referred to the trophy you get from defeating Blue as the "Silver Trophy" but the game labeled it as the "Blue Trophy". Is consistently called "Silver Trophy" now."
+- Fixed issue where the transition when starting the battle with Blue used the normal battle transition instead of the "Blinds" transition usually used by Gym Leaders and other important battles.
