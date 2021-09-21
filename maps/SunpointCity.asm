@@ -151,7 +151,7 @@ SunpointCity_MapEvents:
 	warp_event 16, 11, MAGMA_SHAFT_1F, 1
 	warp_event 31, 16, SUNPOINT_POKECENTER_1F, 1
 	warp_event 17, 22, SUNPOINT_MART, 1
-	warp_event 33, 23, SUNPOINT_PHOTO_STUDIO, 1
+	warp_event 33, 23, SUNPOINT_MAGMA_SHAFT_SPEECH_HOUSE, 1
 	warp_event 33, 11, ROUTE_118_SUNPOINT_GATE, 1
 	warp_event 22, 10, SKATEBOARDER_HOUSE, 1
 	warp_event 26,  5, SUNPOINT_DOCKS_GATE, 3

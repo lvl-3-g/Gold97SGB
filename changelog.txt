@@ -595,3 +595,6 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 
 7.05
 - Dark loses its weakness to fighting to align with type chart in guide
+
+7.06
+- Ability to print your party is restored if you have a GB Printer, scientist in the Kanto Laboratory will do it

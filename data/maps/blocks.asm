@@ -200,7 +200,7 @@ AmamiTownSuperRodHouse_Blocks:
 DaitoRanchOrchardHouse_Blocks:
 ManiasHouse_Blocks:
 CrownHouse2_Blocks:
-SunpointPhotoStudio_Blocks:
+SunpointMagmaShaftSpeechHouse_Blocks:
 CrownHouse1_Blocks:
 PokeSeersHouse_Blocks:
 ViridianNicknameSpeechHouse_Blocks:

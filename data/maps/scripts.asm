@@ -424,7 +424,7 @@ INCLUDE "maps/ManiasHouse.asm"
 INCLUDE "maps/StandGym.asm"
 INCLUDE "maps/SunpointPokecenter1F.asm"
 INCLUDE "maps/CrownHouse2.asm"
-INCLUDE "maps/SunpointPhotoStudio.asm"
+INCLUDE "maps/SunpointMagmaShaftSpeechHouse.asm"
 INCLUDE "maps/CrownHouse1.asm"
 
 

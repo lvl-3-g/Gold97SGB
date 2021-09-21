@@ -434,7 +434,7 @@ ENDM
 	map_const SUNPOINT_CITY,                               20, 18 ;  3
 	map_const MANIAS_HOUSE,                                 4,  4 ;  4
 	map_const SUNPOINT_POKECENTER_1F,                       8,  4 ;  6
-	map_const SUNPOINT_PHOTO_STUDIO,                        5,  4 ;  8
+	map_const SUNPOINT_MAGMA_SHAFT_SPEECH_HOUSE,                        5,  4 ;  8
 	map_const SUNPOINT_DOCKS,                                     10, 18 ;  1
 	map_const SUNPOINT_MART,                                  8,  4 ;  5
 	map_const SUNPOINT_DOCKS_GATE,                         5,  4 ; 14

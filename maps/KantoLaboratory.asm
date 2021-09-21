@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const KANTO_LABORATORY_FOSSIL_SCIENTIST
 	const KANTO_LABORATORY_SCIENTIST_1
+	const KANTO_LABORATORY_SCIENTIST_2
 	const KANTO_LABORATORY_GENTLEMAN
 
 KantoLaboratory_MapScripts:
@@ -279,6 +280,25 @@ KantoLaboratoryFossilScientist:
 KantoLaboratoryScientist1Script:
 	jumptextfaceplayer KantoLaboratoryScientist1Text
 	
+KantoLaboratoryScientist2Script:
+	faceplayer
+	opentext
+	writetext KantoLabPhotoStudioScientistText_Question
+	yesorno
+	iffalse .Refused
+	writetext KantoLabPhotoStudioScientistText_Yes
+	waitbutton
+	special PhotoStudio
+	waitbutton
+	closetext
+	end
+
+.Refused:
+	writetext KantoLabPhotoStudioScientistText_No
+	waitbutton
+	closetext
+	end
+
 KantoLaboratoryGentlemanScript:
 	jumptextfaceplayer KantoLaboratoryGentlemanText
 	
@@ -439,6 +459,32 @@ FossilScientistIntroText:
 	line "them back into"
 	cont "living #MON!"
 	done
+	
+
+KantoLabPhotoStudioScientistText_Question:
+	text "This device here"
+	line "can print out"
+	para "photographs of"
+	line "your #MON."
+	
+	para "Interested?"
+
+	para "How about a photo"
+	line "for a souvenir?"
+	done
+
+KantoLabPhotoStudioScientistText_Yes:
+	text "OK! Big smile now!"
+	done
+
+KantoLabPhotoStudioScientistText_No:
+	text "Oh, that's too"
+	line "bad. I thought it"
+
+	para "would be a great"
+	line "memento…"
+	done	
+
 
 KantoLaboratory_MapEvents:
 	db 0, 0 ; filler
@@ -456,16 +502,17 @@ KantoLaboratory_MapEvents:
 	db 0 ; coord events
 
 	db 8 ; bg events
-	bg_event 15,  1, BGEVENT_READ, KantoLaboratoryBookshelf
-	bg_event 14,  1, BGEVENT_READ, KantoLaboratoryBookshelf
-	bg_event 13,  1, BGEVENT_READ, KantoLaboratoryBookshelf
-	bg_event 12,  1, BGEVENT_READ, KantoLaboratoryBookshelf
+	bg_event 19,  1, BGEVENT_READ, KantoLaboratoryBookshelf
+	bg_event 18,  1, BGEVENT_READ, KantoLaboratoryBookshelf
+	bg_event 13,  0, BGEVENT_READ, KantoLaboratoryBookshelf
+	bg_event 12,  0, BGEVENT_READ, KantoLaboratoryBookshelf
 	bg_event  7, 13, BGEVENT_READ, KantoLaboratoryBookshelf
 	bg_event  6, 13, BGEVENT_READ, KantoLaboratoryBookshelf
 	bg_event  5, 13, BGEVENT_READ, KantoLaboratoryBookshelf
 	bg_event  4, 13, BGEVENT_READ, KantoLaboratoryBookshelf
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  2,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryFossilScientist, EVENT_SCIENTIST_SEQUENCE
 	object_event 17,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryScientist1Script, -1
+	object_event 12,  2, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryScientist2Script, -1
 	object_event 16, 14, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KantoLaboratoryGentlemanScript, -1

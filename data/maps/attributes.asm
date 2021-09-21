@@ -630,7 +630,7 @@ ENDM
 	map_attributes StandGym, STAND_GYM, $00, 0
 	map_attributes SunpointPokecenter1F, SUNPOINT_POKECENTER_1F, $00, 0
 	map_attributes CrownHouse2, CROWN_HOUSE_2, $00, 0
-	map_attributes SunpointPhotoStudio, SUNPOINT_PHOTO_STUDIO, $00, 0
+	map_attributes SunpointMagmaShaftSpeechHouse, SUNPOINT_MAGMA_SHAFT_SPEECH_HOUSE, $00, 0
 	map_attributes CrownHouse1, CROWN_HOUSE_1, $00, 0
 	map_attributes TeamRocketShipBase, TEAM_ROCKET_SHIP_BASE, $00, 0
 	map_attributes ViridianNicknameSpeechHouse, VIRIDIAN_NICKNAME_SPEECH_HOUSE, $00, 0
