@@ -598,3 +598,10 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 
 7.06
 - Ability to print your party is restored if you have a GB Printer, scientist in the Kanto Laboratory will do it
+
+7.08
+- Skipped 7.07 because "Super Gold 97 v7.07" has too many 7s in it
+- changed "SCIENTISTs" to "SCIENTISTS" in dialogue outside Kanto Laboratory
+- fixed Pichu design on Pokedex diploma to match design from demo, added back animated sprites to credits scene (thanks to FrenchOrange for these graphics)
+- Developer will only give you the diploma after catching all 251 Pokemon, used to be 249, a leftover from final Gold where Celebi and Mew weren't required
+

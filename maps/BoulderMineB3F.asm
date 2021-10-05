@@ -18,7 +18,7 @@ BoulderMineB3FRevive:
 	itemball REVIVE
 
 BoulderMineB3FHiddenMaxPotion:
-	hiddenitem SUPER_POTION, EVENT_BOULDER_MINE_B3F_HIDDEN_MAX_POTION
+	hiddenitem SUPER_POTION, EVENT_BOULDER_MINE_B3F_HIDDEN_SUPER_POTION
 
 BoulderMineB3F_MapEvents:
 	db 0, 0 ; filler

@@ -99,7 +99,7 @@ KantoFisher3Text:
 	done
 	
 KantoLass2Text:
-	text "The SCIENTISTs in"
+	text "The SCIENTISTS in"
 	line "this lab are"
 	cont "amazing!"
 	para "They were able to"
