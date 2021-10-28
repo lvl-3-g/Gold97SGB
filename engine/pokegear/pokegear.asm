@@ -176,10 +176,10 @@ AnimatePokegearModeIndicatorArrow:
 	ret
 
 .XCoords:
-	db $00 ; POKEGEARCARD_CLOCK
-	db $10 ; POKEGEARCARD_MAP
-	db $20 ; POKEGEARCARD_PHONE
-	db $30 ; POKEGEARCARD_RADIO
+	db $0B ; POKEGEARCARD_CLOCK
+	db $23 ; POKEGEARCARD_MAP
+	db $3B ; POKEGEARCARD_PHONE
+	db $53 ; POKEGEARCARD_RADIO
 
 TownMap_GetCurrentLandmark:
 	ld a, [wMapGroup]
@@ -308,14 +308,16 @@ InitPokegearTilemap:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
-	hlcoord 0, 2
-	lb bc, 8, 18
+	hlcoord 0, 3
+	lb bc, 7, 18
 	call Textbox
 	call Pokegear_UpdateClock
 	ret
+	
 
 .switch
-	db "SWITCH▶@"
+	db " NEXT▶@"
+
 
 .Map:
 	ld a, [wPokegearMapPlayerIconLandmark]
@@ -331,21 +333,15 @@ InitPokegearTilemap:
 	ld e, 1
 .ok
 	farcall PokegearMap
-	ld a, $07
-	ld bc, SCREEN_WIDTH - 2
-	hlcoord 1, 2
-	call ByteFill
-	hlcoord 0, 2
-	ld [hl], $06
-	hlcoord 19, 2
-	ld [hl], $17
 	ld a, [wPokegearMapCursorLandmark]
 	call PokegearMap_UpdateLandmarkName
+	call Pokegear_UpdateClock_Map
 	ret
 
 .Radio:
 	ld de, RadioTilemapRLE
 	call Pokegear_LoadTilemapRLE
+	call Pokegear_UpdateClock_Radio
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
@@ -354,38 +350,39 @@ InitPokegearTilemap:
 .Phone:
 	ld de, PhoneTilemapRLE
 	call Pokegear_LoadTilemapRLE
+	call Pokegear_UpdateClock_Phone
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
-	call .PlacePhoneBars
+;	call .PlacePhoneBars
 	call PokegearPhone_UpdateDisplayList
 	ret
 
-.PlacePhoneBars:
-	hlcoord 17, 1
-	ld a, $3c
-	ld [hli], a
-	inc a
-	ld [hl], a
-	hlcoord 17, 2
-	inc a
-	ld [hli], a
-	call GetMapPhoneService
-	and a
-	ret nz
-	hlcoord 18, 2
-	ld [hl], $3f
-	ret
+;.PlacePhoneBars:
+;	hlcoord 17, 1
+;	ld a, $3c
+;	ld [hli], a
+;	inc a
+;	ld [hl], a
+;	hlcoord 17, 2
+;	inc a
+;	ld [hli], a
+;	call GetMapPhoneService
+;	and a
+;	ret nz
+;	hlcoord 18, 2
+;	ld [hl], $3f
+;	ret
 
 Pokegear_FinishTilemap:
-	hlcoord 0, 0
-	ld bc, $8
-	ld a, $4f
-	call ByteFill
-	hlcoord 0, 1
-	ld bc, $8
-	ld a, $4f
-	call ByteFill
+;	hlcoord 0, 0
+;	ld bc, $8
+;	ld a, $4f
+;	call ByteFill
+;	hlcoord 0, 1
+;	ld bc, $8
+;	ld a, $4f
+;	call ByteFill
 	ld de, wPokegearFlags
 	ld a, [de]
 	bit POKEGEAR_MAP_CARD_F, a
@@ -396,23 +393,23 @@ Pokegear_FinishTilemap:
 	ld a, [de]
 	bit POKEGEAR_RADIO_CARD_F, a
 	call nz, .PlaceRadioIcon
-	hlcoord 0, 0
+	hlcoord 1, 0
 	ld a, $46
 	call .PlacePokegearCardIcon
 	ret
 
 .PlaceMapIcon:
-	hlcoord 2, 0
+	hlcoord 4, 0
 	ld a, $40
 	jr .PlacePokegearCardIcon
 
 .PlacePhoneIcon:
-	hlcoord 4, 0
+	hlcoord 7, 0
 	ld a, $44
 	jr .PlacePokegearCardIcon
 
 .PlaceRadioIcon:
-	hlcoord 6, 0
+	hlcoord 10, 0
 	ld a, $42
 .PlacePokegearCardIcon:
 	ld [hli], a
@@ -515,7 +512,6 @@ Pokegear_UpdateClock:
 	bccoord 6, 6
 	call PlaceHLTextAtBC
 	ret
-
 	db "ごぜん@"
 	db "ごご@"
 
@@ -562,7 +558,7 @@ PokegearMap_SWIslandsMap:
 PokegearMap_NihonMap:
 	ld d, LANDMARK_MOUNT_FUJI
 	ld e, LANDMARK_SILENT_TOWN
-PokegearMap_ContinueMap:
+PokegearMap_ContinueMap:	
 	ld hl, hJoyLast
 	ld a, [hl]
 	and B_BUTTON
@@ -574,6 +570,15 @@ PokegearMap_ContinueMap:
 	and D_LEFT
 	jr nz, .left
 	call .DPad
+	call .UpdateClock
+	ret
+	
+.UpdateClock:
+	xor a
+	ldh [hBGMapMode], a
+	call Pokegear_UpdateClock_Map
+	ld a, $1
+	ldh [hBGMapMode], a
 	ret
 
 .right
@@ -646,6 +651,18 @@ PokegearMap_ContinueMap:
 	ld a, [wPokegearMapCursorLandmark]
 	call PokegearMap_UpdateCursorPosition
 	ret
+	
+Pokegear_UpdateClock_Map:
+	hlcoord 13, 1
+	lb bc, 1, 6
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 13, 1
+	farcall PrintHoursMins2
+	ret
 
 PokegearMap_InitPlayerIcon:
 	push af
@@ -687,8 +704,8 @@ PokegearMap_InitCursor:
 
 PokegearMap_UpdateLandmarkName:
 	push af
-	hlcoord 8, 0
-	lb bc, 2, 12
+	hlcoord 0, 17
+	lb bc, 1, 19
 	call ClearBox
 	pop af
 	ld e, a
@@ -696,8 +713,8 @@ PokegearMap_UpdateLandmarkName:
 	farcall GetLandmarkName
 	pop de
 	farcall TownMap_ConvertLineBreakCharacters
-	hlcoord 8, 0
-	ld [hl], $34
+;	hlcoord 0, 16
+;	ld [hl], $34
 	ret
 
 PokegearMap_UpdateCursorPosition:
@@ -728,7 +745,7 @@ TownMap_GetSWIslandsLandmarkLimits:
 
 PokegearRadio_Init:
 	call InitPokegearTilemap
-	depixel 4, 10, 4, 4
+	depixel 7, 7, 4, 1 ; 4, 10, 4, 4 > Y Position, X Position, initial y, initial x
 	ld a, SPRITE_ANIM_INDEX_RADIO_TUNING_KNOB
 	call InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_TILE_ID
@@ -740,6 +757,7 @@ PokegearRadio_Init:
 	ret
 
 PokegearRadio_Joypad:
+	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
 	and B_BUTTON
@@ -785,6 +803,29 @@ PokegearRadio_Joypad:
 	set 7, [hl]
 	ret
 
+.UpdateClock:
+	xor a
+	ldh [hBGMapMode], a
+	call Pokegear_UpdateClock_Radio
+	ld a, $1
+	ldh [hBGMapMode], a
+	ret
+
+Pokegear_UpdateClock_Radio:
+	hlcoord 13, 1
+	lb bc, 1, 6
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 13, 1
+	farcall PrintHoursMins2
+	ret
+
+	db "ごぜん@"
+	db "ごご@"
+
 PokegearPhone_Init:
 	ld hl, wJumptableIndex
 	inc [hl]
@@ -799,6 +840,7 @@ PokegearPhone_Init:
 	ret
 
 PokegearPhone_Joypad:
+	call .UpdateClock
 	ld hl, hJoyPressed
 	ld a, [hl]
 	and B_BUTTON
@@ -873,6 +915,29 @@ PokegearPhone_Joypad:
 	ld a, POKEGEARSTATE_PHONEJOYPAD
 	ld [wJumptableIndex], a
 	ret
+
+.UpdateClock:
+	xor a
+	ldh [hBGMapMode], a
+	call Pokegear_UpdateClock_Phone
+	ld a, $1
+	ldh [hBGMapMode], a
+	ret
+
+Pokegear_UpdateClock_Phone:
+	hlcoord 13, 1
+	lb bc, 1, 6
+	call ClearBox
+	ldh a, [hHours]
+	ld b, a
+	ldh a, [hMinutes]
+	ld c, a
+	decoord 13, 1
+	farcall PrintHoursMins2
+	ret
+
+	db "ごぜん@"
+	db "ごご@"
 
 PokegearPhone_MakePhoneCall:
 	call GetMapPhoneService
@@ -1388,7 +1453,7 @@ AnimateTuningKnob:
 .up
 	ld hl, wRadioTuningKnob
 	ld a, [hl]
-	cp 80
+	cp 80 ; 80
 	ret nc
 	inc [hl]
 	inc [hl]
@@ -1682,8 +1747,8 @@ NoRadioStation:
 ; no radio name
 	xor a
 	ldh [hBGMapMode], a
-	hlcoord 1, 8
-	lb bc, 3, 18
+	hlcoord 2, 9
+	lb bc, 2, 16
 	call ClearBox
 	hlcoord 0, 12
 	lb bc, 4, 18
@@ -1852,27 +1917,11 @@ _TownMap:
 	ld e, SWISLANDS_REGION
 .okay_tilemap
 	farcall PokegearMap
-	ld a, $07
-	ld bc, 6
-	hlcoord 1, 0
-	call ByteFill
-	hlcoord 0, 0
-	ld [hl], $06
-	hlcoord 7, 0
-	ld [hl], $17
-	hlcoord 7, 1
-	ld [hl], $16
-	hlcoord 7, 2
-	ld [hl], $26
-	ld a, $07
-	ld bc, NAME_LENGTH
-	hlcoord 8, 2
-	call ByteFill
-	hlcoord 19, 2
-	ld [hl], $17
 	ld a, [wTownMapCursorLandmark]
 	call PokegearMap_UpdateLandmarkName
 	farcall TownMapPals
+	call TownMapBubble2
+
 	ret
 
 PlayRadio:
@@ -2084,33 +2133,123 @@ FlyMapScroll:
 	ldh [hBGMapMode], a
 	ret
 
-TownMapBubble:
+
+TownMapBubble2:; this has to be the worst way to clear out the new Pokegear HUD but it works
 ; Draw the bubble containing the location text in the town map HUD
+
+; Top-left corner
+	hlcoord 0, 0
+	ld a, $30
+	ld [hli], a
+; Top row
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Top-right corner
+	ld a, $30
+	ld [hli], a
+
+; Bottom-left corner
+	ld a, $30
+	ld [hli], a
+; Bottom row
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Bottom-right corner
+	ld a, $30
+	ld [hl], a
+	
+
+; Bottom-left corner
+	ld a, $30
+	ld [hli], a
+; Bottom row
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Bottom-right corner
+	ld a, $30
+	ld [hl], a
+
+
+; Print "Where?"
 
 ; Top-left corner
 	hlcoord 1, 0
 	ld a, $30
 	ld [hli], a
 ; Top row
-	ld bc, 16
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Top-right corner
+	ld a, $30
+	ld [hli], a
+
+; Bottom-left corner
+	ld a, $30
+	ld [hli], a
+; Bottom row
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Bottom-right corner
+	ld a, $30
+	ld [hl], a
+	
+
+; Bottom-left corner
+	ld a, $30
+	ld [hli], a
+; Bottom row
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Bottom-right corner
+	ld a, $30
+	ld [hl], a
+
+
+; Print "Where?"
+
+
+
+	ret
+
+
+TownMapBubble:
+; Draw the bubble containing the location text in the town map HUD
+
+; Top-left corner
+	hlcoord 0, 0
+	ld a, $30
+	ld [hli], a
+; Top row
+	ld bc, 18
 	ld a, " "
 	call ByteFill
 ; Top-right corner
 	ld a, $31
-	ld [hl], a
-	hlcoord 1, 1
-
-; Middle row
-	ld bc, SCREEN_WIDTH - 2
-	ld a, " "
-	call ByteFill
+	ld [hli], a
 
 ; Bottom-left corner
-	hlcoord 1, 2
 	ld a, $32
 	ld [hli], a
 ; Bottom row
-	ld bc, 16
+	ld bc, 18
+	ld a, " "
+	call ByteFill
+; Bottom-right corner
+	ld a, $33
+	ld [hl], a
+	
+
+; Bottom-left corner
+	ld a, $32
+	ld [hli], a
+; Bottom row
+	ld bc, 18
 	ld a, " "
 	call ByteFill
 ; Bottom-right corner
@@ -2118,14 +2257,14 @@ TownMapBubble:
 	ld [hl], a
 
 ; Print "Where?"
-	hlcoord 2, 0
+	hlcoord 1, 0
 	ld de, .Where
 	call PlaceString
 ; Print the name of the default flypoint
 	call .Name
 ; Up/down arrows
-	hlcoord 18, 1
-	ld [hl], $34
+;	hlcoord 18, 1
+;	ld [hl], $34
 	ret
 
 .Where:
@@ -2141,7 +2280,7 @@ TownMapBubble:
 	add hl, de
 	ld e, [hl]
 	farcall GetLandmarkName
-	hlcoord 2, 1
+	hlcoord 1, 2
 	ld de, wStringBuffer1
 	call PlaceString
 	ret
@@ -2252,7 +2391,7 @@ FlyMap:
 	jr z, .NoSWIslands
 ; SWIslands's map is only loaded if we've visited MountFuji Plateau
 
-; Flypoints begin at Koban Island...
+; Flypoints begin at Sugar Island...
 	ld a, FLY_KIKAI
 	ld [wStartFlypoint], a
 ; ...and end at MountFuji Plateau
@@ -2413,18 +2552,15 @@ Pokedex_GetArea:
 
 .PlaceString_MonsNest:
 	hlcoord 0, 0
+	ld bc, SCREEN_WIDTH * 3
+	ld a, $18
+	call ByteFill
+	hlcoord 0, 17
 	ld bc, SCREEN_WIDTH
 	ld a, " "
 	call ByteFill
-	hlcoord 0, 1
-	ld a, $06
-	ld [hli], a
-	ld bc, SCREEN_WIDTH - 2
-	ld a, $07
-	call ByteFill
-	ld [hl], $17
 	call GetPokemonName
-	hlcoord 2, 0
+	hlcoord 1, 17
 	call PlaceString
 	ld h, b
 	ld l, c
