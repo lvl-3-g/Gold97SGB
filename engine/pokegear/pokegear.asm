@@ -1753,6 +1753,9 @@ NoRadioStation:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
+; print instructions
+	ld hl, RadioInstructions
+	call PrintTextboxText
 ; no radio channel
 	xor a
 	ld [wPokegearRadioChannelBank], a
@@ -1771,6 +1774,11 @@ UnownStationName:     db "?????@"
 PlacesAndPeopleName:  db "Places & People@"
 LetsAllSingName:      db "Let's All Sing!@"
 PokeFluteStationName: db "# FLUTE@"
+
+RadioInstructions:
+	text "Press UP or DOWN"
+	line "to tune!"
+	done
 
 _TownMap:
 	ld hl, wOptions
