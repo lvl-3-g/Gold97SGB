@@ -1490,7 +1490,7 @@ UpdateRadioStation:
 	ret z
 	xor a
 	ldh [hBGMapMode], a
-	hlcoord 2, 9
+	hlcoord 2, 10
 	call PlaceString
 	ld a, $1
 	ldh [hBGMapMode], a
