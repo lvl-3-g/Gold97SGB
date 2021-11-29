@@ -612,3 +612,5 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 7.20
 - Redesigned Pack menu to match the demo (thanks again to Seasick for this!)
 
+7.21
+- Made PokeGear tuning selector black to fix issue where the color of the selector would change to match the color of the player sprite
