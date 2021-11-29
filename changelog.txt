@@ -606,6 +606,9 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Developer will only give you the diploma after catching all 251 Pokemon, used to be 249, a leftover from final Gold where Celebi and Mew weren't required
 
 7.10
-- Redesigned PokeGear to match the demo
+- Redesigned PokeGear to match the demo (thanks to Seasick for this!)
 - Slight redesign to Pokedex
+
+7.20
+- Redesigned Pack menu to match the demo (thanks again to Seasick for this!)
 

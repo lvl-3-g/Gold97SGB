@@ -1096,14 +1096,14 @@ TutorialPack:
 
 .ItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .ItemsMenuData
 	db 1 ; default option
 
 .ItemsMenuData:
 	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
-	db 2 ; horizontal spacing
+	db 3, 8 ; rows, columns
+	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wDudeNumItems
 	dba PlaceMenuItemName
 	dba PlaceMenuItemQuantity
@@ -1116,14 +1116,14 @@ TutorialPack:
 
 .KeyItemsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .KeyItemsMenuData
 	db 1 ; default option
 
 .KeyItemsMenuData:
 	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
-	db 1 ; horizontal spacing
+	db 3, 8 ; rows, columns
+	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wDudeNumKeyItems
 	dba PlaceMenuItemName
 	dba PlaceMenuItemQuantity
@@ -1145,14 +1145,14 @@ TutorialPack:
 
 .BallsMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .BallsMenuData
 	db 1 ; default option
 
 .BallsMenuData:
 	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
-	db 2 ; horizontal spacing
+	db 3, 8 ; rows, columns
+	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wDudeNumBalls
 	dba PlaceMenuItemName
 	dba PlaceMenuItemQuantity
@@ -1318,72 +1318,57 @@ Pack_InitGFX:
 	call ClearTilemap
 	call ClearSprites
 	call DisableLCD
+    hlcoord 3, 1
+    ld a, $20
+    ld [hli], a
+    hlcoord 15, 1
+    ld a, $1f
+    ld [hli], a 
 	ld hl, PackMenuGFX
 	ld de, vTiles2
 	ld bc, $60 tiles
 	ld a, BANK(PackMenuGFX)
 	call FarCopyBytes
-; Background
-	hlcoord 0, 1
-	ld bc, 11 * SCREEN_WIDTH
-	ld a, $24
-	call ByteFill
 ; This is where the items themselves will be listed.
-	hlcoord 5, 1
-	lb bc, 11, 15
-	call ClearBox
-; ◀▶ POCKET       ▼▲ ITEMS
-	hlcoord 0, 0
-	ld a, $28
-	ld c, SCREEN_WIDTH
+;	hlcoord 5, 1
+;	lb bc, 11, 15
+;	call ClearBox
 .loop
 	ld [hli], a
 	inc a
 	dec c
 	jr nz, .loop
 	call DrawPocketName
-	call PlacePackGFX
 ; Place the textbox for displaying the item description
 	hlcoord 0, SCREEN_HEIGHT - 4 - 2
 	lb bc, 4, SCREEN_WIDTH - 2
 	call Textbox
+    hlcoord 2, 2
+    lb bc, 8, 13
+    call Textbox
+    call LoadFontsExtra
 	call EnableLCD
 	call DrawPackGFX
-	ret
-
-PlacePackGFX:
-	hlcoord 0, 3
-	ld a, $50
-	ld de, SCREEN_WIDTH - 5
-	ld b, 3
-.row
-	ld c, 5
-.column
-	ld [hli], a
-	inc a
-	dec c
-	jr nz, .column
-	add hl, de
-	dec b
-	jr nz, .row
 	ret
 
 DrawPocketName:
 	ld a, [wCurPocket]
 	; * 15
 	ld d, a
-	swap a
-	sub d
+	add a ; *2
+	add a ; *4
+	add a ; *5
+	add d
 	ld d, 0
 	ld e, a
 	ld hl, .tilemap
 	add hl, de
 	ld d, h
 	ld e, l
-	hlcoord 0, 7
-	ld c, 3
+	hlcoord 5, 1
+	ld c, 1
 .row
-	ld b, 5
+	ld b, 9
 .col
 	ld a, [de]
 	inc de
@@ -1391,30 +1376,16 @@ DrawPocketName:
 	dec b
 	jr nz, .col
 	ld a, c
-	ld c, SCREEN_WIDTH - 5
+	ld c, SCREEN_WIDTH - 8
 	add hl, bc
 	ld c, a
 	dec c
 	jr nz, .row
 	ret
 
-.tilemap
-; ITEM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $06, $07, $08, $09, $0a ; Items
-	db $02, $05, $05, $05, $03 ; bottom border
-; BALL_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $15, $16, $17, $18, $19 ; Balls
-	db $02, $05, $05, $05, $03 ; bottom border
-; KEY_ITEM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $0b, $0c, $0d, $0e, $0f ; Key Items
-	db $02, $05, $05, $05, $03 ; bottom border
-; TM_HM_POCKET
-	db $00, $04, $04, $04, $01 ; top border
-	db $10, $11, $12, $13, $14 ; TM/HM
-	db $02, $05, $05, $05, $03 ; bottom border
+.tilemap: ; 5x12
+; the 5x3 pieces correspond to *_POCKET constants
+INCBIN "gfx/pack/pack_menu.tilemap"
 
 Pack_GetItemName:
 	ld a, [wCurItem]
@@ -1430,10 +1401,10 @@ Pack_ClearTilemap: ; unreferenced
 	call ByteFill
 	ret
 
-ClearPocketList:
-	hlcoord 5, 2
-	lb bc, 10, SCREEN_WIDTH - 5
-	call ClearBox
+ClearPocketList: ; Box Around List
+	hlcoord 2, 2
+	lb bc, 8, 13
+	call Textbox
 	ret
 
 Pack_InitColors:
@@ -1446,13 +1417,13 @@ Pack_InitColors:
 
 ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumItems
 	dba PlaceMenuItemName
@@ -1461,13 +1432,13 @@ ItemsPocketMenuHeader:
 
 PC_Mart_ItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumItems
 	dba PlaceMenuItemName
@@ -1476,13 +1447,13 @@ PC_Mart_ItemsPocketMenuHeader:
 
 KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wNumKeyItems
 	dba PlaceMenuItemName
@@ -1491,13 +1462,13 @@ KeyItemsPocketMenuHeader:
 
 PC_Mart_KeyItemsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_NORMAL ; item format
 	dbw 0, wNumKeyItems
 	dba PlaceMenuItemName
@@ -1506,13 +1477,13 @@ PC_Mart_KeyItemsPocketMenuHeader:
 
 BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
 	dba PlaceMenuItemName
@@ -1521,20 +1492,20 @@ BallsPocketMenuHeader:
 
 PC_Mart_BallsPocketMenuHeader:
 	db MENU_BACKUP_TILES ; flags
-	menu_coords 7, 1, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
+	menu_coords 3, 3, SCREEN_WIDTH - 5, TEXTBOX_Y - 2
 	dw .MenuData
 	db 1 ; default option
 
 .MenuData:
-	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP ; flags
-	db 5, 8 ; rows, columns
+	db STATICMENU_ENABLE_SELECT | STATICMENU_ENABLE_LEFT_RIGHT | STATICMENU_ENABLE_START | STATICMENU_WRAP | STATICMENU_CURSOR | SCROLLINGMENU_DISPLAY_ARROWS; flags
+	db 3, 8 ; rows, columns
 	db SCROLLINGMENU_ITEMS_QUANTITY ; item format
 	dbw 0, wNumBalls
 	dba PlaceMenuItemName
 	dba PlaceMenuItemQuantity
 	dba UpdateItemDescription
 
-PackNoItemText:
+PackNoItemText: ; unreferenced
 	text_far _PackNoItemText
 	text_end
 
@@ -1574,7 +1545,7 @@ PackEmptyText:
 	text_far _PackEmptyText
 	text_end
 
-YouCantUseItInABattleText:
+YouCantUseItInABattleText: ; unreferenced
 	text_far _YouCantUseItInABattleText
 	text_end
 

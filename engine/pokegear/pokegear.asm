@@ -745,7 +745,7 @@ TownMap_GetSWIslandsLandmarkLimits:
 
 PokegearRadio_Init:
 	call InitPokegearTilemap
-	depixel 7, 7, 4, 1 ; 4, 10, 4, 4 > Y Position, X Position, initial y, initial x
+	depixel 7, 6, 4, 3 ; 4, 10, 4, 4 > Y Position, X Position, initial y, initial x
 	ld a, SPRITE_ANIM_INDEX_RADIO_TUNING_KNOB
 	call InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_TILE_ID
@@ -1433,11 +1433,11 @@ AnimateTuningKnob:
 
 .TuningKnob:
 	ld hl, hJoyLast
+;	ld a, [hl]
+;	and D_DOWN
+;	jr nz, .down
 	ld a, [hl]
-	and D_DOWN
-	jr nz, .down
-	ld a, [hl]
-	and D_UP
+	and A_BUTTON
 	jr nz, .up
 	ret
 
@@ -1453,10 +1453,13 @@ AnimateTuningKnob:
 .up
 	ld hl, wRadioTuningKnob
 	ld a, [hl]
-	cp 80 ; 80
-	ret nc
+	cp 86 ; 80
+	jr nc, .initialPosition
 	inc [hl]
 	inc [hl]
+	jr .update
+.initialPosition
+	ld [hl], 2
 .update
 UpdateRadioStation:
 	ld hl, wRadioTuningKnob
@@ -1753,6 +1756,9 @@ NoRadioStation:
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Textbox
+; print instructions
+	ld hl, RadioInstructions
+	call PrintTextboxText
 ; no radio channel
 	xor a
 	ld [wPokegearRadioChannelBank], a
@@ -1771,6 +1777,12 @@ UnownStationName:     db "?????@"
 PlacesAndPeopleName:  db "Places & People@"
 LetsAllSingName:      db "Let's All Sing!@"
 PokeFluteStationName: db "# FLUTE@"
+
+RadioInstructions:
+	text "Hold the A button"
+	line "to tune!"
+	done
+
 
 _TownMap:
 	ld hl, wOptions
