@@ -927,10 +927,12 @@ Oak2GiveTicketText1:
 	line "S.S.TICKET."
 	done
 Oak2GiveTicketText2:
-	text "The docks in WEST"
-	line "CITY take boats"
-	para "down to NIHON's"
-	line "SOUTHWEST ISLANDS."
+	text "If you go to the"
+	line "docks over in"
+	cont "WESTPORT CITY,"
+	para "you can take a"
+	line "boat to NIHON's"
+	cont "SOUTHWEST ISLANDS."
 	para "There are lots of"
 	line "rare #MON there"
 	para "that can't be"

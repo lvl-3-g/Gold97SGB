@@ -361,7 +361,7 @@ RyukyuHotelRoomsOakAfter:
 	line "thank you enough"
 	cont "for your help!"
 	para "I've reached new"
-	line "hights in my"
+	line "heights in my"
 	para "research and love"
 	line "of #MON that I"
 	cont "never have before!"

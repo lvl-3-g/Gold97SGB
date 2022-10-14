@@ -135,8 +135,9 @@ _OakTimeOversleptText::
 
 _OakTimeYikesText::
 	text ""
-	line "is that right?"
+	line "Is that correct?"
 	done
+
 
 _OakTimeSoDarkText::
 	text "!"

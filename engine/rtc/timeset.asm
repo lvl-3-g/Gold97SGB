@@ -9,7 +9,6 @@ InitClock:
 	ldh [hInMenu], a
 
 .SkipSavingMenuState:
-	call SetDayOfWeek.OnIntro
 
 	ld a, $0
 	ld [wSpriteUpdatesEnabled], a
@@ -112,6 +111,7 @@ InitClock:
 	jr nc, .TimeConfirmed
 	jp .SkipSavingMenuState
 .TimeConfirmed:
+	call SetDayOfWeek.OnIntro
 	pop af
 	ldh [hInMenu], a
 	ret
@@ -332,7 +332,7 @@ OakTimeWhoaMinutesText:
 OakText_ResponseToSetTime:
 	text_asm
 	hlcoord 1, 14
-	call SetDayOfWeek.PlaceWeekdayString
+;	call SetDayOfWeek.PlaceWeekdayString
 	ld d, b
 	ld e, c
 	inc de

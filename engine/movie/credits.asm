@@ -291,7 +291,7 @@ ParseCredits:
 	jr .print
 
 .copyright
-	hlcoord 2, 6
+	hlcoord 0, 7
 	jr .print
 
 .staff

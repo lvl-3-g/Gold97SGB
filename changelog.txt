@@ -614,3 +614,9 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 
 7.21
 - Made PokeGear tuning selector black to fix issue where the color of the selector would change to match the color of the player sprite
+
+7.22
+- Fixed issue where day of week would always reset to Sunday after intro sequence (thanks erosunica)
+- Corrected some minor spelling/grammar issues
+- Corrected issue where player could surf on Team Rocket's boat at Sunpoint Docks
+- Adjusted position of text at end of credits

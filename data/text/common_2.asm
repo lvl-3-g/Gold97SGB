@@ -1247,8 +1247,8 @@ _OakText7a::
 	line "your journey,"
 
 	para "you'll have to"
-	line "set the date and"
-	cont "time."
+	line "set the time and"
+	cont "day of the week."
 
 	prompt
 _OakText7::

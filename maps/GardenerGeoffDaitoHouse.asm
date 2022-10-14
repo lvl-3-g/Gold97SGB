@@ -69,7 +69,6 @@ PapayaText:
 	para "throw the seeds in"
 	line "your yard and"
 	cont "watch 'em grow!"
-	done
 	
 	para "The things take"
 	line "so well that"
