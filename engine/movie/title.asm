@@ -4,7 +4,7 @@ TITLE_BGP_FINAL   equ %11011000
 TITLE_SCX_INITIAL equ 152
 
 TITLE_TILE_BORDER_UP   equ $1B
-TITLE_TILE_BORDER_DOWN equ $1C
+TITLE_TILE_BORDER_DOWN equ $1F
 
 TITLE_TILE_GAMETITLE equ $FE
 TITLE_SIZE_GAMETITLE equ 9
@@ -12,7 +12,7 @@ TITLE_SIZE_GAMETITLE equ 9
 TITLE_TILE_COPYRIGHT equ $0E
 TITLE_SIZE_COPYRIGHT equ 13
 
-TITLE_TILE_HOOH equ $1D
+TITLE_TILE_HOOH equ $23
 
 InitTitleScreen:
 	call ClearBGPalettes
@@ -293,20 +293,46 @@ TitleScreenBorder:
 	call TitleScreenRunTimer
 	ret nz
 
-; Draw border (upper)
+; Draw border (upper)	
 	hlcoord 0, 8
-	ld bc, SCREEN_WIDTH
-	ld a, TITLE_TILE_BORDER_UP
-	call ByteFill
+	call DrawUpperBorder	
+	hlcoord 4, 8
+	call DrawUpperBorder	
+	hlcoord 8, 8
+	call DrawUpperBorder	
+	hlcoord 12, 8
+	call DrawUpperBorder	
+	hlcoord 16, 8
+	call DrawUpperBorder
 
 ; Draw border (lower)
 	hlcoord 0, $10
-	ld bc, SCREEN_WIDTH
-	ld a, TITLE_TILE_BORDER_DOWN
-	call ByteFill
+	call DrawLowerBorder	
+	hlcoord 4, $10
+	call DrawLowerBorder	
+	hlcoord 8, $10
+	call DrawLowerBorder	
+	hlcoord 12, $10
+	call DrawLowerBorder	
+	hlcoord 16, $10
+	call DrawLowerBorder
 
 	ld de, 20
 	jp TitleScreenSetTimerNextScene
+
+DrawUpperBorder:
+	ld d, TITLE_TILE_BORDER_UP
+	ld b, 1
+	ld c, $04
+	call DrawTitleGraphic
+	ret
+
+DrawLowerBorder:
+	ld d, TITLE_TILE_BORDER_DOWN
+	ld b, 1
+	ld c, $04
+	call DrawTitleGraphic
+	ret
 
 TitleScreenGameTitle:
 	call TitleScreenRunTimer
@@ -369,11 +395,7 @@ TitleScreenTimer:
 
 ; Start a timer
 	ld hl, wTitleScreenTimer
-IF DEF(_GOLD)
 	ld de, 84 * 60 + 16
-ELIF DEF(_SILVER)
-	ld de 73 * 60 + 36
-ENDC
 	ld [hl], e
 	inc hl
 	ld [hl], d

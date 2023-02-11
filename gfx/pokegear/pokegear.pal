@@ -1,29 +1,29 @@
-; border
+; pink ui
+	RGB 31, 31, 31
+	RGB 30, 22, 24
+	RGB 28, 15, 21
+	RGB 00, 00, 00
+; map
 	RGB 31, 31, 31
 	RGB 21, 27, 31
 	RGB 18, 24, 10
 	RGB 00, 00, 00
-; earth
+; radio
+	RGB 31, 31, 31
+	RGB 18, 18, 18
+	RGB 26, 10, 06
+	RGB 00, 00, 00
+; now unused
 	RGB 31, 31, 31
 	RGB 21, 27, 31
 	RGB 18, 24, 10
 	RGB 00, 00, 00
-; mountain
+; now unused
 	RGB 31, 31, 31
 	RGB 21, 27, 31
 	RGB 18, 24, 10
 	RGB 00, 00, 00
-; city (boy)
-	RGB 31, 31, 31
-	RGB 21, 27, 31
-	RGB 18, 24, 10
-	RGB 00, 00, 00
-; point of interest
-	RGB 31, 31, 31
-	RGB 21, 27, 31
-	RGB 18, 24, 10
-	RGB 00, 00, 00
-; mountain point of interest
+; now unused
 	RGB 31, 31, 31
 	RGB 21, 27, 31
 	RGB 18, 24, 10

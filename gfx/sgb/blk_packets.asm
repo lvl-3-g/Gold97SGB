@@ -91,8 +91,14 @@ BlkPacket_BetaTitleScreen:
 	attr_blk_data %111, 0,0,1, 00,00, 19,05 ; logo
 	ds 8
 
-BlkPacket_MagnetTrain:
+BlkPacket_BetaPokegear:
 	attr_blk 2
-	attr_blk_data %111, 2,2,0, 00,04, 19,13 ; fence
-	attr_blk_data %011, 1,1,0, 00,06, 19,11 ; train
+	attr_blk_data %110, 1,1,0, 00,00, 19,03 ; header
+	attr_blk_data %111, 1,1,0, 00,03, 19,17 ; body
+	ds 2
+	
+BlkPacket_BetaPokegearRadio:
+	attr_blk 2
+	attr_blk_data %110, 1,1,0, 00,00, 19,03 ; header
+	attr_blk_data %111, 2,2,0, 00,03, 19,17 ; body
 	ds 2

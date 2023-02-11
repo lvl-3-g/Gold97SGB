@@ -526,10 +526,9 @@ IntroScene4:
 	ld hl, wIntroFrameCounter2
 	inc [hl]
 	ld a, [hl]
-	and $f
+	and $7
 	jr nz, .asm_e4e21
 	ld hl, hSCX
-	dec [hl]
 	dec [hl]
 
 .asm_e4e21

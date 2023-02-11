@@ -1,4 +1,4 @@
-roms := pokegold.gbc
+roms := pokemon_sg97.gbc
 
 rom_obj := \
 audio.o \
@@ -49,7 +49,7 @@ RGBLINK ?= $(RGBDS)rgblink
 .SECONDARY:
 
 all: $(roms)
-gold:   pokegold.gbc
+gold:   pokemon_sg97.gbc
 
 clean:
 	rm -f $(roms) $(gold_obj) $(silver_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
@@ -105,7 +105,7 @@ $(foreach obj, $(gold_excl_obj) $(silver_excl_obj), $(eval $(call DEP,$(obj),$(o
 endif
 
 
-pokegold.gbc: $(gold_obj) layout.link
+pokemon_sg97.gbc: $(gold_obj) layout.link
 	$(RGBLINK) -n pokegold.sym -m pokegold.map -l layout.link -o $@ $(gold_obj)
 	$(RGBFIX) -cjsv -t POKEMON_GLD -i AAUE -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 

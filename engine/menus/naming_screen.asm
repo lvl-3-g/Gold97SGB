@@ -45,7 +45,7 @@ NamingScreen:
 
 .SetUpNamingScreen:
 	call ClearBGPalettes
-	ld b, SCGB_DIPLOMA
+	ld b, SCGB_NAMING_SCREEN
 	call GetSGBLayout
 	call DisableLCD
 	call LoadNamingScreenGFX

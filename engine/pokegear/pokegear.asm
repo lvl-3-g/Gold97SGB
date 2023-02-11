@@ -101,7 +101,7 @@ PokeGear:
 	ld [wPokegearRadioChannelAddr + 1], a
 	call Pokegear_InitJumptableIndices
 	call InitPokegearTilemap
-	ld b, SCGB_POKEGEAR_PALS
+	ld b, SCGB_BETA_POKEGEAR_PALS
 	call GetSGBLayout
 	call SetPalettes
 	ldh a, [hCGB]
@@ -335,12 +335,21 @@ InitPokegearTilemap:
 	farcall PokegearMap
 	ld a, [wPokegearMapCursorLandmark]
 	call PokegearMap_UpdateLandmarkName
+	ld de, MapTilemapRLE
+	call Pokegear_LoadTilemapRLE
+	ld b, SCGB_BETA_POKEGEAR_PALS
+	call GetSGBLayout
+	call SetPalettes
 	call Pokegear_UpdateClock_Map
 	ret
 
 .Radio:
+	ldh a, [hCGB]
 	ld de, RadioTilemapRLE
 	call Pokegear_LoadTilemapRLE
+	ld b, SCGB_BETA_POKEGEAR_RADIO_PALS
+	call GetSGBLayout
+	call SetPalettes
 	call Pokegear_UpdateClock_Radio
 	hlcoord 0, 12
 	lb bc, 4, 18
@@ -348,7 +357,7 @@ InitPokegearTilemap:
 	ret
 
 .Phone:
-	ld de, PhoneTilemapRLE
+	ld de, ClockTilemapRLE
 	call Pokegear_LoadTilemapRLE
 	call Pokegear_UpdateClock_Phone
 	hlcoord 0, 12
@@ -512,8 +521,6 @@ Pokegear_UpdateClock:
 	bccoord 6, 6
 	call PlaceHLTextAtBC
 	ret
-	db "ごぜん@"
-	db "ごご@"
 
 .GearTodayText:
 	text_far _GearTodayText
@@ -823,9 +830,6 @@ Pokegear_UpdateClock_Radio:
 	farcall PrintHoursMins2
 	ret
 
-	db "ごぜん@"
-	db "ごご@"
-
 PokegearPhone_Init:
 	ld hl, wJumptableIndex
 	inc [hl]
@@ -935,9 +939,6 @@ Pokegear_UpdateClock_Phone:
 	decoord 13, 1
 	farcall PrintHoursMins2
 	ret
-
-	db "ごぜん@"
-	db "ごご@"
 
 PokegearPhone_MakePhoneCall:
 	call GetMapPhoneService
@@ -1411,8 +1412,8 @@ INCBIN "gfx/pokegear/pokegear_sprites.2bpp.lz"
 
 RadioTilemapRLE:
 INCBIN "gfx/pokegear/radio.tilemap.rle"
-PhoneTilemapRLE:
-INCBIN "gfx/pokegear/phone.tilemap.rle"
+MapTilemapRLE:
+INCBIN "gfx/pokegear/map.tilemap.rle"
 ClockTilemapRLE:
 INCBIN "gfx/pokegear/clock.tilemap.rle"
 
@@ -1782,7 +1783,6 @@ RadioInstructions:
 	text "Hold the A button"
 	line "to tune!"
 	done
-
 
 _TownMap:
 	ld hl, wOptions
@@ -2232,6 +2232,10 @@ TownMapBubble2:; this has to be the worst way to clear out the new Pokegear HUD 
 
 TownMapBubble:
 ; Draw the bubble containing the location text in the town map HUD
+	hlcoord 0, 17
+	ld bc, SCREEN_WIDTH
+	ld a, $18
+	call ByteFill
 
 ; Top-left corner
 	hlcoord 0, 0

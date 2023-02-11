@@ -328,11 +328,8 @@ TMHM_DisplayPocketItems:
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jp z, Tutorial_TMHMPocket
-	
-	
-
 	hlcoord 2, 2
-	lb bc, 8, 13
+	lb bc, 8, 14
 	ld a, " "
 	call Textbox
 	call TMHM_GetCurrentPocketPosition

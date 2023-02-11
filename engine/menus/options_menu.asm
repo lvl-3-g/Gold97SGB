@@ -68,7 +68,7 @@ _Option:
 	inc a
 	ldh [hBGMapMode], a
 	call WaitBGMap
-	ld b, SCGB_DIPLOMA
+	ld b, SCGB_OPTIONS_MENU
 	call GetSGBLayout
 	call SetPalettes
 
