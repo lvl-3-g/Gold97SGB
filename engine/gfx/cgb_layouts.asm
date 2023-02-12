@@ -159,10 +159,19 @@ _CGB_PokegearPals:
 	ld de, wBGPals1
 	ld bc, 6 palettes
 	call CopyBytes
+	ld hl, PokegearOBPalette
+	ld de, wOBPals1 palette 0
+	ld bc, 1 palettes
+	call CopyBytes
+	call ApplyAttrmap
 	call ApplyPals
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	ret
+
+PokegearOBPalette:
+INCLUDE "gfx/pokegear/chrisob.pal"
+
 
 _CGB_StatsScreenHPPals:
 	ld de, wBGPals1
@@ -236,6 +245,11 @@ _CGB_BetaPokegearRadioPals:
 	ld de, wBGPals1
 	ld bc, 6 palettes
 	call CopyBytes
+	ld hl, PokegearOBPalette
+	ld de, wOBPals1 palette 0
+	ld bc, 1 palettes
+	call CopyBytes
+	call ApplyAttrmap
 	call ApplyPals
 	ld a, $1
 	ldh [hCGBPalUpdate], a
@@ -860,6 +874,11 @@ _CGB_BetaPokegearPals:
 	ld de, wBGPals1
 	ld bc, 6 palettes
 	call CopyBytes
+	ld hl, PokegearOBPalette
+	ld de, wOBPals1 palette 0
+	ld bc, 1 palettes
+	call CopyBytes
+	call ApplyAttrmap
 	call ApplyPals
 	ld a, $1
 	ldh [hCGBPalUpdate], a

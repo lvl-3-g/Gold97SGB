@@ -2566,17 +2566,23 @@ Pokedex_GetArea:
 	call CopyBytes
 	ret
 
+
+
 .PlaceString_MonsNest:
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH * 3
 	ld a, $18
 	call ByteFill
-	hlcoord 0, 17
+	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH
 	ld a, " "
 	call ByteFill
+	hlcoord 0, 17
+	ld bc, SCREEN_WIDTH
+	ld a, $18
+	call ByteFill
 	call GetPokemonName
-	hlcoord 1, 17
+	hlcoord 1, 0
 	call PlaceString
 	ld h, b
 	ld l, c
