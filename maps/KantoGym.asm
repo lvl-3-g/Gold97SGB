@@ -274,8 +274,8 @@ KantoGymGuyText2:
 KantoGymGuyRedNotHereText2:
 	text "Hey, champ-in-the-"
 	line "making!"
-	para "You know who our"
-	line "LEADER is, right?"
+	para "Do you know who"
+	line "our GYM LEADER is?"
 	para "He's not only a"
 	line "GYM LEADER, but"
 	para "he's also beaten"

@@ -109,7 +109,20 @@ KantoSuperNerdScript:
 	jumptextfaceplayer KantoSuperNerdText
 	
 KantoYoungsterScript:
-	jumptextfaceplayer KantoYoungsterText
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_ACTUALLY_RED
+	iftrue .YoungsterAfterScript
+	writetext KantoYoungsterText
+	waitbutton
+	closetext
+	end
+	
+.YoungsterAfterScript
+	writetext KantoYoungsterTextAfter
+	waitbutton
+	closetext
+	end	
 	
 KantoFisher2Script:
 	jumptextfaceplayer KantoFisher2Text
@@ -155,14 +168,22 @@ KantoFisher2Text:
 	
 KantoYoungsterText:
 	text "One day, I want"
-	line "to be just as"
-	cont "strong as RED."
+	line "to be able to"
+	cont "win at this GYM."
 	para "I'm not sure that"
 	line "will happen,"
 	cont "though."
 	para "Very few people"
 	line "are as good as"
-	cont "him."
+	cont "the GYM LEADER."
+	done
+	
+KantoYoungsterTextAfter:
+	text "You beat RED?"
+	para "Wow! That's"
+	line "amazing!"
+	para "You must be really"
+	line "strong!"
 	done
 	
 KantoSuperNerdText:
@@ -214,11 +235,8 @@ KantoSignText:
 	done
 	
 KantoGymSignText:
-	text "KANTO #MON GYM"
-	line "LEADER: RED"
-
-	para "The Experienced"
-	line "Veteran Trainer"
+	text "KANTO REGION"
+	line "#MON GYM"
 	done
 	
 KobanIslandSignText2:
