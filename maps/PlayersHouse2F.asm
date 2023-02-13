@@ -156,6 +156,9 @@ PlayersHousePCScript:
 	opentext
 	playsound SFX_BOOT_PC
 	writetext PlayersRadioText2
+	yesorno
+	iffalse DontReadEmailNow
+	writetext PlayersRadioTextNew
 	waitbutton
 	closetext
 	setevent EVENT_READ_OAKS_EMAIL
@@ -177,6 +180,12 @@ PlayersHousePCScript:
 	iftrue .Warp
 	closetext
 	end
+	
+DontReadEmailNow:
+	writetext NoTimeToReadEmail
+	waitbutton
+	closetext
+	end
 
 PlayersDollScript:
 	opentext
@@ -188,6 +197,11 @@ PlayersDollScript:
 PlayerToReadEmailMovement:
 	step DOWN
 	step_end
+	
+NoTimeToReadEmail:
+	text "No time right"
+	line "now…"
+	done
 	
 PlayersRadioText5:
 	text "Looks like it"
@@ -329,9 +343,12 @@ PlayersRadioText2:
 	para "What's this?"
 	line "A new e-mail?"
 	
-	para "…"
+	para "Want to read it?"
 	
-	para "I hope you'll"
+	done
+	
+PlayersRadioTextNew:
+	text "I hope you'll"
 	line "excuse the sudden"
 	para "e-mail, but there"
 	line "is something that"
