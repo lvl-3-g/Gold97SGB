@@ -154,6 +154,7 @@ INCLUDE "engine/pokemon/print_move_description.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/consume_held_item.asm"
 INCLUDE "engine/battle/returntobattle_useball.asm"
+INCLUDE "data/moves/moves.asm"
 
 
 SECTION "Effect Commands", ROMX
@@ -178,7 +179,6 @@ INCLUDE "data/battle/effect_command_pointers.asm"
 SECTION "bank10", ROMX
 
 INCLUDE "engine/pokedex/pokedex.asm"
-INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
 
 

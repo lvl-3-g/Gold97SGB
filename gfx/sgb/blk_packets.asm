@@ -43,7 +43,7 @@ BlkPacket_MoveList:
 
 BlkPacket_Pokedex_PC:
 	attr_blk 1
-	attr_blk_data %111, 1,1,0, 00,01, 07,07 ; mon: pal 1
+	attr_blk_data %111, 2,2,0, 13,01, 20,07 ; mon: pal 1
 	ds 8
 
 BlkPacket_9f55:
@@ -102,3 +102,15 @@ BlkPacket_BetaPokegearRadio:
 	attr_blk_data %110, 1,1,0, 00,00, 19,03 ; header
 	attr_blk_data %111, 2,2,0, 00,03, 19,17 ; body
 	ds 2
+	
+
+BlkPacket_PokedexEntry:
+	attr_blk 1
+	attr_blk_data %111, 1,1,0, 01,01, 08,07 ; mon: pal 1
+	ds 8
+
+BlkPacket_PokedexIntoEntry:
+	attr_blk 1
+	attr_blk_data %111, 2,2,0, 13,01, 18,07 ; mon: pal 1
+	ds 8
+

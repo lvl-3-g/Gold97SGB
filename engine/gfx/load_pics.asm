@@ -52,12 +52,7 @@ GetMonFrontpic:
 	call GetFrontpic
 	jp Load2bppToSRAM
 
-UnusedFrontpicPredef:
-	call GetFrontpic
-	push hl
-	farcall StubbedGetFrontpic
-	pop hl
-	jp Load2bppToSRAM
+
 
 GetFrontpic:
 	ld a, [wCurPartySpecies]

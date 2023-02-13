@@ -54,8 +54,8 @@ LoadSGBLayout:
 	dw .SGB_MysteryGift
 	dw .SGB_OptionsMenu
 	dw .SGB_BetaPokegearRadioPals
-	dw .SGB1e
-	dw .SGB_Pokedex_5x5
+	dw .SGB_PokedexEntry
+	dw .SGB_PokedexIntoEntry
 
 .SGB_BattleGrayscale:
 	ld hl, PalPacket_BattleGrayscale
@@ -200,6 +200,11 @@ LoadSGBLayout:
 	ret
 
 .SGB_Pokedex:
+	ld hl, PalPacket_Pokedex
+	ld de, BlkPacket_Pokedex_PC
+	ret
+
+.SGB_PokedexEntry:
 	ld hl, PalPacket_a155
 	ld de, wSGBPals
 	ld bc, PALPACKET_LENGTH
@@ -223,14 +228,14 @@ LoadSGBLayout:
 	ld a, [hl]
 	ld [wSGBPals + 12], a
 	ld hl, wSGBPals
-	ld de, BlkPacket_Pokedex_PC
+	ld de, BlkPacket_PokedexEntry
 	ret
 
-.SGB_Pokedex_5x5:
-	call .SGB_Pokedex
-	ld de, BlkPacket_Pokedex_5x5
+.SGB_PokedexIntoEntry:
+	ld hl, PalPacket_Pokedex
+	ld de, BlkPacket_PokedexIntoEntry
 	ret
-	
+
 .SGB_BetaPokegearRadioPals:
 	ld hl, PalPacket_BetaPokegear
 	ld de, BlkPacket_BetaPokegearRadio
@@ -327,8 +332,6 @@ endr
 	dw BlkPacket_GSIntroJigglypuffPikachu, PalPacket_GSIntroJigglypuffPikachu
 	dw BlkPacket_9ee5, PalPacket_GSIntroStartersTransition
 
-
-	
 .SGB_PackPalsYellowred:
 	ld hl, PalPacket_PackYellowred
 	ld de, BlkPacket_9ee5
@@ -448,38 +451,6 @@ endr
 	ld [hl], a
 	ld hl, wSGBPals
 	ld de, wSGBPals + PALPACKET_LENGTH
-	ret
-
-.SGB1e:
-	ld hl, PalPacket_a155
-	ld de, wSGBPals
-	ld bc, PALPACKET_LENGTH
-	call CopyBytes
-	ld a, [wCurPartySpecies]
-	ld l, a
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	add hl, hl
-	ld de, PokemonPalettes
-	add hl, de
-	ld a, [wce65]
-	and 3
-	sla a
-	sla a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hli]
-	ld [wSGBPals + 3], a
-	ld a, [hli]
-	ld [wSGBPals + 4], a
-	ld a, [hli]
-	ld [wSGBPals + 5], a
-	ld a, [hl]
-	ld [wSGBPals + 6], a
-	ld hl, wSGBPals
-	ld de, BlkPacket_9ee5
 	ret
 
 .SGB_OptionsMenu:

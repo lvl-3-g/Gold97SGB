@@ -34,8 +34,8 @@ PalPacket_a045:
 PalPacket_GSIntroShellderLapras:
 	sgb_pal_set GS_INTRO_SHELLDER_LAPRAS, ROUTES, ROUTES, ROUTES
 
-PalPacket_BetaIntroLapras: ; unreferenced
-	sgb_pal_set BETA_INTRO_LAPRAS, ROUTES, ROUTES, ROUTES
+PalPacket_Pokedex:
+	sgb_pal_set POKEDEX, ROUTES, POKEDEX_BW, ROUTES
 
 PalPacket_GSIntroJigglypuffPikachu:
 	sgb_pal_set GS_INTRO_JIGGLYPUFF_PIKACHU_BG, GS_INTRO_JIGGLYPUFF_PIKACHU_OB, ROUTES, ROUTES
