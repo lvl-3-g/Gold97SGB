@@ -59,7 +59,6 @@ SilentTown_RivalGreets:
 	showemote EMOTE_SHOCK, SILENTTOWN_SILVER, 15
 	opentext
 	writetext SilentTownRivalText2
-	waitbutton
 	special NameMom 
 	closetext 
 	setevent EVENT_NAMED_MOM_CHECK_FOR_SAVES
@@ -478,7 +477,8 @@ SilentTownRivalText2:
 	line "Man, that's no"
 	cont "fun! Hmph!"
 	
-	para "Hmm…well…you…uh…"
+	para "Hmm… well…"
+	line "you… uh…"
 	
 	para "What do you call"
 	line "your mother again?"
