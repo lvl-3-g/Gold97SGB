@@ -67,7 +67,7 @@ PostRematchScriptRed:
 KantoGymStatue:
 	checkflag ENGINE_RISINGBADGE
 	iftrue .Beaten
-	jumpstd GymStatue1Script
+	jump HaventBeatenRedScript
 .Beaten:
 	trainertotext ERIKA, ERIKA1, MEM_BUFFER_1
 	jumpstd GymStatue2Script
@@ -213,6 +213,14 @@ KantoGymGuyScript2:
 	closetext
 	end
 	
+HaventBeatenRedScript:
+	opentext
+	writetext TextRedIsAMysteryStatue
+	waitbutton
+	closetext
+	end
+	
+	
 RedDummyDummyMovement:
 	step_end
 	
@@ -241,6 +249,14 @@ RedDummyWalksToSpotLeft:
 	step UP
 	step_end
 	
+TextRedIsAMysteryStatue:
+	text "KANTO REGION"
+	line "#MON GYM"
+	para "LEADER: ???"
+	para "WINNING TRAINERS:"
+	line "<RIVAL>"
+	done
+	
 KantoGymGuyWinText2:
 	text "What an incredible"
 	line "battle!"
@@ -258,8 +274,8 @@ KantoGymGuyText2:
 KantoGymGuyRedNotHereText2:
 	text "Hey, champ-in-the-"
 	line "making!"
-	para "You know who RED"
-	line "is, right?"
+	para "You know who our"
+	line "LEADER is, right?"
 	para "He's not only a"
 	line "GYM LEADER, but"
 	para "he's also beaten"
@@ -290,7 +306,7 @@ CooltrainerfFranBeatenText:
 CooltrainerfFranAfterBattleText:
 	text "Huh. You might"
 	line "have what it takes"
-	cont "to beat RED."
+	cont "to win here."
 	done
 
 CooltrainerfLolaSeenText:
@@ -330,8 +346,8 @@ CooltrainermMikeAfterBattleText:
 	done
 
 CooltrainermPaulSeenText:
-	text "Facing RED will"
-	line "surely be your"
+	text "Facing the LEADER"
+	line "will be your"
 	cont "toughest battle."
 	para "But I can be a"
 	line "close second!"

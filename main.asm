@@ -127,13 +127,8 @@ INCLUDE "engine/items/switch_items.asm"
 INCLUDE "engine/menus/menu_2.asm"
 INCLUDE "engine/pokemon/mon_submenu.asm"
 INCLUDE "engine/battle/menu.asm"
-INCLUDE "engine/items/buy_sell_toss.asm"
 INCLUDE "engine/menus/trainer_card.asm"
-INCLUDE "engine/events/prof_oaks_pc.asm"
 INCLUDE "engine/overworld/decorations.asm"
-INCLUDE "engine/battle/read_trainer_dvs.asm"
-INCLUDE "engine/battle/returntobattle_useball.asm"
-INCLUDE "engine/battle/consume_held_item.asm"
 INCLUDE "data/moves/effects.asm"
 
 
@@ -142,6 +137,9 @@ SECTION "bankA", ROMX
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/link/mystery_gift.asm"
 INCLUDE "engine/overworld/wildmons.asm"
+INCLUDE "engine/items/buy_sell_toss.asm"
+INCLUDE "engine/battle/read_trainer_dvs.asm"
+INCLUDE "engine/events/prof_oaks_pc.asm"
 
 
 SECTION "bankB", ROMX
@@ -154,6 +152,8 @@ INCLUDE "engine/link/mystery_gift_2.asm"
 INCLUDE "engine/items/tmhm.asm"
 INCLUDE "engine/pokemon/print_move_description.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
+INCLUDE "engine/battle/consume_held_item.asm"
+INCLUDE "engine/battle/returntobattle_useball.asm"
 
 
 SECTION "Effect Commands", ROMX

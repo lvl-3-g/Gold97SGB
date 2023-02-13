@@ -230,10 +230,24 @@ TrainerCard_Page2_LoadGFX:
 	ld d, 14
 	call TrainerCard_InitBorder
 	call WaitBGMap
+	ld hl, wBadges
+	ld b, wTMsHMs - wBadges
+	call CountSetBits
+	ld de, wNumSetBits
+	cp 8
+	jr z, .RisingBadgeObtained
+	ld de, LeaderGFXPreRed
+	ld hl, vTiles2 tile $29
+	lb bc, BANK(LeaderGFXPreRed), 86
+	call Request2bpp
+	jr .NoRisingBadge	
+.RisingBadgeObtained
+;;;
 	ld de, LeaderGFX
 	ld hl, vTiles2 tile $29
 	lb bc, BANK(LeaderGFX), 86
-	call Request2bpp
+	call Request2bpp	
+.NoRisingBadge
 	ld de, BadgeGFX
 	ld hl, vTiles0 tile $00
 	lb bc, BANK(BadgeGFX), 44
@@ -840,6 +854,8 @@ CardGFX:       INCBIN "gfx/trainer_card/trainer_card.2bpp"
 CardStatusGFX: INCBIN "gfx/trainer_card/card_status.2bpp"
 CardBorderGFX: INCBIN "gfx/trainer_card/border.2bpp"
 CardLeftArrowGFX: INCBIN "gfx/trainer_card/left_arrow.2bpp"
+
+LeaderGFXPreRed:  INCBIN "gfx/trainer_card/leaders_prered.2bpp"
 
 LeaderGFX:  INCBIN "gfx/trainer_card/leaders.2bpp"
 LeaderGFX2: INCBIN "gfx/trainer_card/leaders.2bpp"
