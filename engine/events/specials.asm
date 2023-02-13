@@ -95,6 +95,19 @@ ELIF DEF(_SILVER)
 ENDC
 
 NameMom:
+	farcall ShowMomNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	ld a, "@"
+	ld bc, NAME_LENGTH
+	ld hl, wMomsName
+	call ByteFill
+	ld hl, wMomsName
+	ld de, wStringBuffer2
+	call CopyName2
+	ret
+.NewName:
 	ld b, NAME_MOM
 	ld de, wMomsName
 	farcall _NamingScreen
@@ -104,7 +117,7 @@ NameMom:
 	call InitName
 	ret
 	
-	.default
+.default
 	db "MOMMY@"
 
 NameRater:

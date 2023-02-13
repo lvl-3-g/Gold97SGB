@@ -702,6 +702,7 @@ NamePlayer:
 
 INCLUDE "data/player_names.asm"
 INCLUDE "data/rival_names.asm"
+INCLUDE "data/mom_names.asm"
 
 NameRivalIntro:
 	call MovePlayerPicRight
@@ -742,8 +743,18 @@ NameRivalIntro:
 	call InitName
 	ret
 
-
 ShowPlayerNamingChoices:
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
+	ret
+
+
+ShowMomNamingChoices:
+	ld hl, MomNameMenuHeader
 	call LoadMenuHeader
 	call VerticalMenu
 	ld a, [wMenuCursorY]
