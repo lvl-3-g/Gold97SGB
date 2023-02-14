@@ -1,4 +1,4 @@
-	db "LITTLE BIRD@" ; species name
+	db "TINY BIRD@" ; species name
 	dw 8, 40 ; height, weight
 
 	db   "It is extremely"

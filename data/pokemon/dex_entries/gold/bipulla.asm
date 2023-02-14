@@ -1,4 +1,4 @@
-	db "TWIN GROWTH@" ; species name
+	db "DUO GROWTH@" ; species name
 	dw 108, 30 ; height, weight
 
 	db   "This #MON is"

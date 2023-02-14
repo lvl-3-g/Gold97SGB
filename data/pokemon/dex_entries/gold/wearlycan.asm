@@ -1,4 +1,4 @@
-	db "ICE MONSTER@" ; species name
+	db "ICEMONSTER@" ; species name
 	dw 504, 2230 ; height, weight
 
 	db   "Its fur isn't"

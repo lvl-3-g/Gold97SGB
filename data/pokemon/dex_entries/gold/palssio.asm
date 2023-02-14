@@ -1,4 +1,4 @@
-	db "SMOOTH SEAL@" ; species name
+	db "SOFT SEAL@" ; species name
 	dw 207, 310 ; height, weight
 
 	db   "Its body is very"

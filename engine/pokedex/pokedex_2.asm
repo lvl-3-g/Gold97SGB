@@ -115,19 +115,28 @@ DisplayDexEntry:
 	inc hl
 	ld a, b
 	push af
-	call GetFarByte
-	inc hl
-	and a
-	jr z, .skip_height
-; Print the height, with two of the four digits in front of the decimal point
 	push hl
-	push af
-	ld hl, sp+$1
+	call GetFarHalfword
+	ld d, l
+	ld e, h
+	pop hl
+	inc hl
+	inc hl
+	ld a, d
+	or e
+	jr z, .skip_height
+	push hl
+	push de
+; Print the height, with two of the four digits in front of the decimal point
+	ld hl, sp+0
 	ld d, h
 	ld e, l
-	hlcoord 13, 6
-	lb bc, 1, (2 << 4) | 3
+	hlcoord 12, 6
+	lb bc, 2, (2 << 4) | 4
 	call PrintNum
+; Replace the decimal point with a ft symbol
+	hlcoord 14, 6
+	ld [hl], $5e
 	pop af
 	pop hl
 
@@ -217,19 +226,28 @@ DisplayNewDexEntry: ; erosunica: new, needed by NewPokedexEntry
 	inc hl
 	ld a, b
 	push af
-	call GetFarByte
-	inc hl
-	and a
-	jr z, .skip_height
-; Print the height, with two of the four digits in front of the decimal point
 	push hl
-	push af
-	ld hl, sp+$1
+	call GetFarHalfword
+	ld d, l
+	ld e, h
+	pop hl
+	inc hl
+	inc hl
+	ld a, d
+	or e
+	jr z, .skip_height
+	push hl
+	push de
+; Print the height, with two of the four digits in front of the decimal point
+	ld hl, sp+0
 	ld d, h
 	ld e, l
-	hlcoord 13, 6
-	lb bc, 1, (2 << 4) | 3
+	hlcoord 12, 6
+	lb bc, 2, (2 << 4) | 4
 	call PrintNum
+; Replace the decimal point with a ft symbol
+	hlcoord 14, 6
+	ld [hl], $5e
 	pop af
 	pop hl
 
@@ -255,15 +273,15 @@ DisplayNewDexEntry: ; erosunica: new, needed by NewPokedexEntry
 	call PrintNum
 	pop de
 
-.skip_weight
+.skip_weight ; erosunica: modded to mimic sw97 pokédex
 ; Page 1
 	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 1, 11
+	hlcoord 1, 10
 	call ClearBox
 	pop de
 	inc de
 	pop af
-	hlcoord 1, 11
+	hlcoord 1, 10
 	push af
 	call FarString
 	pop bc
@@ -275,12 +293,12 @@ DisplayNewDexEntry: ; erosunica: new, needed by NewPokedexEntry
 	push bc
 	push de
 	lb bc, 5, SCREEN_WIDTH - 2
-	hlcoord 1, 11
+	hlcoord 1, 10
 	call ClearBox
 	pop de
 	inc de
 	pop af
-	hlcoord 1, 11
+	hlcoord 1, 10
 	jp FarString
 
 GetDexEntryPointer:
