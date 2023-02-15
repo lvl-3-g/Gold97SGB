@@ -35,6 +35,7 @@ Pokedex:
 	ldh [hInMenu], a
 	xor a
 	ldh [hMapAnims], a
+	ldh [hGraphicStartTile], a
 	call InitPokedex
 	call DelayFrame
 

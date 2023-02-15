@@ -74,6 +74,7 @@ SpecialsPointers::
 	add_special UpdateSprites
 	add_special UpdatePlayerSprite
 	add_special GameCornerPrizeMonCheckDex
+	add_special ShowPokedexEntry ; erosunica: used to splash the pokédex for the choose your starter segment
 	add_special UnusedSetSeenMon
 	add_special WaitSFX, 3
 	add_special PlayMapMusic

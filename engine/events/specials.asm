@@ -32,6 +32,18 @@ GameCornerPrizeMonCheckDex:
 	farcall NewPokedexEntry
 	call ExitAllMenus
 	ret
+	
+ShowPokedexEntry: ; erosunica: used to splash the pokédex from an overworld event
+	ld a, [wScriptVar]
+	dec a
+;	call SetSeenMon
+	call FadeToMenu
+	ld a, [wScriptVar]
+	ld [wNamedObjectIndexBuffer], a
+	farcall NewPokedexEntry
+	call EnableSpriteUpdates ; new
+	call ExitAllMenus
+	ret
 
 UnusedSetSeenMon:
 	ld a, [wScriptVar]

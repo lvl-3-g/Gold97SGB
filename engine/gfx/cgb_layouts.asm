@@ -549,14 +549,12 @@ _CGB_MapPals:
 	call .LoadHLBGPaletteIntoDE
 	dec b
 	jr nz, .bg_loop
-; Copy PAL_BG_TEXT and 8 OB palettes
-	ld b, 8
+; Copy PAL_BG_TEXT and 6 OB palettes
+	ld b, 9
 .ob_loop
 	call .LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
-; erosunica: OBJ 7 palette used for sprites like berry tree or headbutt tree
-	call .LoadHLOBPalette7IntoDE
 	ret
 
 .cgb_style
@@ -564,6 +562,8 @@ _CGB_MapPals:
 	ld a, SCGB_MAPPALS
 	ld [wSGBPredef], a
 	ret
+
+
 .LoadHLBGPaletteIntoDE:
 ; morn/day: shades 0, 1, 2, 3 -> 0, 1, 2, 3
 ; nite: shades 0, 1, 2, 3 -> 1, 2, 2, 3

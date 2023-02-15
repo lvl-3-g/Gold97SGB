@@ -160,10 +160,14 @@ CubburnPokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic CUBBURN
-	cry CUBBURN
-	waitbutton
-	closepokepic
+;	pokepic CUBBURN
+;	cry CUBBURN
+;	waitbutton
+;	closepokepic
+;;;
+	setval CUBBURN
+	special ShowPokedexEntry
+;;;
 	opentext
 	writetext TakeCubburnText
 	yesorno
@@ -202,10 +206,14 @@ CruisePokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic PALSSIO
-	cry PALSSIO
-	waitbutton
-	closepokepic
+;	pokepic PALSSIO
+;	cry PALSSIO
+;	waitbutton
+;	closepokepic
+;;;
+	setval PALSSIO
+	special ShowPokedexEntry
+;;;
 	opentext
 	writetext TakeCruiseText
 	yesorno
@@ -244,10 +252,14 @@ ChikoritaPokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-	pokepic CHIKORITA
-	cry CHIKORITA
-	waitbutton
-	closepokepic
+;	pokepic CHIKORITA
+;	cry CHIKORITA
+;	waitbutton
+;	closepokepic
+;;;
+	setval CHIKORITA
+	special ShowPokedexEntry
+;;;
 	opentext
 	writetext TakeChikoritaText
 	yesorno

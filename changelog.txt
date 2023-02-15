@@ -620,3 +620,19 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Corrected some minor spelling/grammar issues
 - Corrected issue where player could surf on Team Rocket's boat at Sunpoint Docks
 - Adjusted position of text at end of credits
+
+7.30
+- This probably would have been 8.00 if I hadn't promised myself to never do another big update
+- Slightly redesigned intro movie/title screen to more closely match beta
+- Minor redesigns to pack interface - added color icons
+- New pallete for Pokegear to more closely match beta
+- New pallete for options menu to more closely match beta
+- Slight redesign to Pokemon status menu to more closely match beta
+- New pallete for naming screen to more closely match beta
+- Slight redesign to PC interface pallete
+- Fixed issue where Pikachu/Jigglypuff used incorrect colors in the minigame while running on a GBC
+- Redesigned Badge menu to add names, make Red's inclusion as final Gym leader a mystery until he is battled
+- Changed some dialogue so Red being the final Gym leader wouldn't be revealed early
+- Added list of choices for naming Mom at the beginning of the game
+- Redesigned Pokedex to more closely match beta
+- Thanks to erosunica for implementing basically all of these changes while working on the Spanish translation of the game
