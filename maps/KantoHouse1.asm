@@ -19,7 +19,8 @@ KantoHouse1Teacher:
 	
 KantoHouse1TwinText:
 	text "One day, I'll be"
-	line "stronger than RED!"
+	line "stronger than a"
+	cont "GYM LEADER!"
 	done
 	
 KantoHouse1BugCatcherText:

@@ -636,3 +636,6 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Added list of choices for naming Mom at the beginning of the game
 - Redesigned Pokedex to more closely match beta
 - Thanks to erosunica for implementing basically all of these changes while working on the Spanish translation of the game
+
+7.31
+- Tweaked some dialogue so Red being the 8th gym leader isn't revealed early

@@ -25,9 +25,8 @@ Kanto2PokecenterCooltrainerMText:
 	text "There's a lot to"
 	line "see and do around"
 	cont "here."
-	para "Have you gone to"
-	line "the GYM to battle"
-	cont "RED?"
+	para "Have you been to"
+	line "the local GYM?"
 	done
 	
 Kanto2PokecenterGrannyText:
@@ -35,7 +34,11 @@ Kanto2PokecenterGrannyText:
 	line "tough trainers"
 	para "that come through"
 	line "this town looking"
-	cont "to battle RED."
+	para "to challenge our"
+	line "GYM."
+	para "The GYM LEADER"
+	line "there is a very"
+	cont "talented trainer."
 	done
 	
 Kanto2PokecenterYoungsterText:

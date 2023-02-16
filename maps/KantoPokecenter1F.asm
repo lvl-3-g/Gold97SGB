@@ -18,14 +18,14 @@ KantoPokecenter1FGentlemanScript:
 KantoPokecenter1FCooltrainerFScript:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_CLAIR
-	iftrue .KantoPokeCenter1FCooltrainerBeatClair
+	checkevent EVENT_BEAT_ACTUALLY_RED
+	iftrue .KantoPokeCenter1FCooltrainerBeatRed
 	writetext KantoPokecenter1FCooltrainerFText
 	waitbutton
 	closetext
 	end
 	
-.KantoPokeCenter1FCooltrainerBeatClair
+.KantoPokeCenter1FCooltrainerBeatRed
 	writetext KantoPokecenter1FCooltrainerFText2
 	waitbutton
 	closetext
@@ -41,11 +41,14 @@ KantoPokecenter1FCooltrainerFText2:
 	done
 
 KantoPokecenter1FCooltrainerFText:
-	text "RED is a master of"
-	line "all #MON."
-	para "You better be"
-	line "ready to challenge"
-	cont "him."
+	text "You're on your way"
+	line "to the GYM."
+	para "I can see it in"
+	line "your eyes."
+	para "A trainer like you"
+	line "would never waste"
+	para "an opportunity for"
+	line "a #MON battle."
 	done
 
 KantoPokecenter1FPharmacistText:
