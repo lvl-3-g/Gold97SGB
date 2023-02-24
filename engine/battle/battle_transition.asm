@@ -169,7 +169,7 @@ BattleTransitionJumptable:
 	dw StartTrainerBattle_WipeOutro ; 2e
 
 	; BATTLETRANSITION_FINISH
-	dw StartTrainerBattle_Finish ; 2F
+	dw StartTrainerBattle_Finish ; 2f
 
 ; transition animations
 	const_def
@@ -656,10 +656,10 @@ StartTrainerBattle_SpeckleToBlack:
 	ld [hl], BATTLETRANSITION_BLACK
 	ret
 
-StartTrainerBattle_LoadPokeBallGraphics:
-	;ld a, [wOtherTrainerClass]
-	;and a
-	;jr z, .nextscene ; don't need to be here if wild
+StartTrainerBattle_LoadPokeBallGraphics: ;erosunica: modded slightly to be closer to the SW97 behaviour
+	ld a, [wOtherTrainerClass]
+	and a
+	jr z, .nextscene ; don't need to be here if wild
 
 	xor a
 	ldh [hBGMapMode], a
@@ -702,42 +702,42 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	dec b
 	jr nz, .tile_loop
 
-	ldh a, [hCGB]
-	and a
-	jr nz, .cgb
+;	ldh a, [hCGB]
+;	and a
+;	jr nz, .cgb
 	ld a, 1
 	ldh [hBGMapMode], a
 	call DelayFrame
 	call DelayFrame
 	jr .nextscene
 
-.cgb
-	ld hl, .daypals
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	cp DARKNESS_F
-	jr nz, .daytime
-	ld hl, .nightpals
-.daytime
-;	call .copypals; Actually commenting out this whole .copypals thing fixes the issue.... some yellow sprites were still showing up as gray during the battle transition before...
-	push hl
-	ld de, wBGPals1 palette PAL_BG_TEXT
-	ld bc, 1 palettes
-	call CopyBytes
-	pop hl
-	ld de, wBGPals2 palette PAL_BG_TEXT
-	ld bc, 1 palettes
-	call CopyBytes
-
-	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_HEIGHT * SCREEN_WIDTH
-	ld a, PAL_BG_TEXT
-	call ByteFill
-
-	ld a, 1
-	ldh [hCGBPalUpdate], a
-	call DelayFrame
-	call CGBOnly_CopyTilemapAtOnce
+;.cgb
+;	ld hl, .daypals
+;	ld a, [wTimeOfDayPal]
+;	maskbits NUM_DAYTIMES
+;	cp DARKNESS_F
+;	jr nz, .daytime
+;	ld hl, .nightpals
+;.daytime
+;	;call .copypals; Actually commenting out this whole .copypals thing fixes the issue.... some yellow sprites were still showing up as gray during the battle transition before...
+;	push hl
+;	ld de, wBGPals1 palette PAL_BG_TEXT
+;	ld bc, 1 palettes
+;	call CopyBytes
+;	pop hl
+;	ld de, wBGPals2 palette PAL_BG_TEXT
+;	ld bc, 1 palettes
+;	call CopyBytes
+;
+;	hlcoord 0, 0, wAttrmap
+;	ld bc, SCREEN_HEIGHT * SCREEN_WIDTH
+;	ld a, PAL_BG_TEXT
+;	call ByteFill
+;
+;	ld a, 1
+;	ldh [hCGBPalUpdate], a
+;	call DelayFrame
+;	call CGBOnly_CopyTilemapAtOnce
 
 .nextscene
 	call StartTrainerBattle_NextScene
@@ -765,31 +765,40 @@ opt b.X ; . = 0, X = 1
 	bigdw %................
 popo
 
-.copypals; don't know why changing all of these to PAL_BG_TEXT fixed the issue, but it did.... has something to do with when I changed PAL_OW_ROCK to RED and TREE to YELLOW in p5.01
-	ld de, wBGPals1 palette PAL_BG_TEXT
-	call .copy
-	ld de, wBGPals2 palette PAL_BG_TEXT
-	call .copy
-	ld de, wOBPals1 palette PAL_BG_TEXT
-	call .copy
-	ld de, wOBPals2 palette PAL_BG_TEXT
-	call .copy
-	ld de, wOBPals1 palette PAL_BG_TEXT
-	call .copy
-	ld de, wOBPals2 palette PAL_BG_TEXT
+;.copypals; don't know why changing all of these to PAL_BG_TEXT fixed the issue, but it did.... has something to do with when I changed PAL_OW_ROCK to RED and TREE to YELLOW in p5.01
+;	ld de, wBGPals1 palette PAL_BG_TEXT
+;	call .copy
+;	ld de, wBGPals2 palette PAL_BG_TEXT
+;	call .copy
+;	ld de, wOBPals1 palette PAL_OW_RED
+;	call .copy
+;	ld de, wOBPals2 palette PAL_OW_RED
+;	call .copy
+;	ld de, wOBPals1 palette PAL_OW_YELLOW
+;	call .copy
+;	ld de, wOBPals2 palette PAL_OW_YELLOW
+;
+;.copy
+;	push hl
+;	ld bc, 1 palettes
+;	call CopyBytes
+;	pop hl
+;	ret
+;
+;.daypals
+;IF MGB
+;INCLUDE "gfx/overworld/trainer_battle_day_mgb.pal"
+;ELSE
+;INCLUDE "gfx/overworld/trainer_battle_day.pal"
+;ENDC
+;
+;.nightpals
+;IF MGB
+;INCLUDE "gfx/overworld/trainer_battle_nite_mgb.pal"
+;ELSE
+;INCLUDE "gfx/overworld/trainer_battle_nite.pal"
+;ENDC
 
-.copy
-	push hl
-	ld bc, 1 palettes
-	call CopyBytes
-	pop hl
-	ret
-
-.daypals
-INCLUDE "gfx/overworld/trainer_battle_day.pal"
-
-.nightpals
-INCLUDE "gfx/overworld/trainer_battle_nite.pal"
 
 WipeLYOverrides:
 	ld hl, wLYOverrides
@@ -869,12 +878,4 @@ ENDM
 	pop bc
 	dec b
 	jr nz, .row
-	ret
-
-Function8ca53: ; unreferenced
-	ld a, 1
-	ldh [hBGMapMode], a
-	call WaitBGMap
-	xor a
-	ldh [hBGMapMode], a
 	ret

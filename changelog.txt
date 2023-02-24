@@ -639,3 +639,8 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 
 7.31
 - Tweaked some dialogue so Red being the 8th gym leader isn't revealed early
+
+7.32
+- Minor adjustment to Town Map graphic to improve letter spacing
+- Brought over adjustment from Spanish version to make the GBC battle intro animations more accurate to the demo
+
