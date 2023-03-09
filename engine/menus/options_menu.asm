@@ -229,7 +229,7 @@ endr
 	ld e, [hl]
 	ld d, 0
 .place_arrow
-	hlcoord 1, 7
+	hlcoord 0, 7
 	add hl, de
 	ld [hl], "▷"
 
@@ -263,10 +263,10 @@ endr
 	jp .ExitAndPage
 
 .PrinterPositions:
-	db 16 ; 00
-	db 12 ; 20
-	db 8  ; 40
-	db 4  ; 60
+	db 17 ; 00
+	db 13 ; 20
+	db 9  ; 40
+	db 5  ; 60
 
 .Page1:
 	ld hl, wOptions

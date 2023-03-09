@@ -644,3 +644,8 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Minor adjustment to Town Map graphic to improve letter spacing
 - Brought over adjustment from Spanish version to make the GBC battle intro animations more accurate to the demo
 
+7.33
+- Fixed issue where loading into the Party menu to teach a TM and then backing out would change the color of the TM menu icon
+- Made the Party menu icons appear grayscale when teaching a TM, similar to other instances of this menu in SGB mode
+- Fixed issue where setting print brightness to -2 would leave an extra arrow icon in the options menu
+- Minor text changes to make forest signs more consistent

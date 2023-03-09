@@ -312,7 +312,7 @@ SilentHillsEntranceSignText:
 	text "SILENT HILLS"
 	
 	para "Entrance to the"
-	line "left."
+	line "left"
 	done
 
 Route101_MapEvents:

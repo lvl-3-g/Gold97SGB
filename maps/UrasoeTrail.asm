@@ -137,7 +137,9 @@ UrasoeTrailSignText:
 
 FishingSpotSignText:
 	text "NANJO FOREST"
-	line "ENTRANCE"
+	
+	para "Entrance to the"
+	line "right"
 	done
 
 UrasoeTrail_MapEvents:

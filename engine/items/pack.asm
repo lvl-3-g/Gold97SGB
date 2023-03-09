@@ -188,7 +188,7 @@ Pack:
 
 .Jumptable2:
 	dw .UseItem
-	dw GiveItem
+	dw GiveItemTM
 	dw QuitItemSubmenu
 
 .UseItem:
@@ -207,7 +207,7 @@ Pack:
 	xor a
 	ldh [hBGMapMode], a
 	call Pack_InitGFX
-	call Pack_InitColorsBluegreen
+	call Pack_InitColorsYellowred
 	ret
 
 .InitBallsPocket:
@@ -525,6 +525,67 @@ RegisterItem:
 	ld hl, CantRegisterText
 	call Pack_PrintTextNoScroll
 	ret
+
+GiveItemTM:
+	ld a, [wPartyCount]
+	and a
+	jp z, .NoPokemon
+	ld a, [wOptions]
+	push af
+	res NO_TEXT_SCROLL, a
+	ld [wOptions], a
+	ld a, PARTYMENUACTION_GIVE_ITEM
+	ld [wPartyMenuActionText], a
+	call ClearBGPalettes
+	farcall LoadPartyMenuGFX
+	farcall InitPartyMenuWithCancel
+	farcall InitPartyMenuGFX
+.loop
+	farcall WritePartyMenuTilemap
+	farcall PrintPartyMenuText
+	call WaitBGMap
+	call SetPalettes
+	call DelayFrame
+	farcall PartyMenuSelect
+	jr c, .finish
+	ld a, [wCurPartySpecies]
+	cp EGG
+	jr nz, .give
+	ld hl, .AnEggCantHoldAnItemText
+	call PrintText
+	jr .loop
+
+.give
+	ld a, [wJumptableIndex]
+	push af
+	ld a, [wPackJumptableIndex]
+	push af
+	call GetCurNick
+	ld hl, wStringBuffer1
+	ld de, wMonOrItemNameBuffer
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
+	call TryGiveItemToPartymon
+	pop af
+	ld [wPackJumptableIndex], a
+	pop af
+	ld [wJumptableIndex], a
+.finish
+	pop af
+	ld [wOptions], a
+	xor a
+	ldh [hBGMapMode], a
+	call Pack_InitGFX
+	call Pack_InitColorsYellowred
+	ret
+
+.NoPokemon:
+	ld hl, YouDontHaveAMonText
+	call Pack_PrintTextNoScroll
+	ret
+.AnEggCantHoldAnItemText:
+	text_far _AnEggCantHoldAnItemText
+	text_end
 
 GiveItem:
 	ld a, [wPartyCount]

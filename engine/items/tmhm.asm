@@ -85,6 +85,7 @@ ChooseMonToLearnTMHM:
 	farcall WritePartyMenuTilemap
 	farcall PrintPartyMenuText
 	call WaitBGMap
+	call TM_InitColorsBW
 	call SetPalettes
 	call DelayFrame
 	farcall PartyMenuSelect
@@ -565,4 +566,10 @@ CountTMsHMs:
 	jr nz, .loop
 	ld a, b
 	ld [wTempTMHM], a
+	ret
+
+TM_InitColorsBW:
+	ld b, SCGB_PARTY_MENU
+	call GetSGBLayout
+	call SetPalettes
 	ret
