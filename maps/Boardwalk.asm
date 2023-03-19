@@ -3,14 +3,34 @@
 	const BOARDWALK_SUPER_NERD2
 	const BOARDWALK_SUPER_NERD3
 	const BOARDWALK_FISHER
+	const BOARDWALK_FISHER2
 	const BOARDWALK_YOUNGSTER
 ;	const BOARDWALK_INSTRUCTOR
 
 Boardwalk_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
-	
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .MoveTutor
+
+
+
+.MoveTutor:
+	checkitem COIN_CASE
+	iffalse .MoveTutorDisappear
+	checkcode VAR_WEEKDAY
+	ifequal WEDNESDAY, .MoveTutorAppear
+	ifequal SATURDAY, .MoveTutorAppear
+.MoveTutorDisappear:
+	disappear BOARDWALK_FISHER2
+	return
+
+.MoveTutorAppear:
+	checkflag ENGINE_DAILY_MOVE_TUTOR
+	iftrue .MoveTutorDone
+	appear BOARDWALK_FISHER2
+.MoveTutorDone:
+	return
 	
 TrainerPokemaniacBrent:
 	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
@@ -143,6 +163,111 @@ TrainerFisherMarvin:
 	end
 
 
+MoveTutorScript:
+	faceplayer
+	opentext
+	writetext ICanTeachYourMonMovesText
+	yesorno
+	iffalse .Refused
+	special DisplayCoinCaseBalance
+	writetext ItWIllCostYouText
+	yesorno
+	iffalse .Refused2
+	checkcoins 2000
+	ifequal HAVE_LESS, .NotEnoughMoney
+	writetext YouWontRegretItText
+	loadmenu .MoveMenuHeader
+	verticalmenu
+	closewindow
+	ifequal MOVETUTOR_FLAMETHROWER, .Flamethrower
+	ifequal MOVETUTOR_THUNDERBOLT, .Thunderbolt
+	ifequal MOVETUTOR_ICE_BEAM, .IceBeam
+	jump .Incompatible
+
+.Flamethrower:
+	writebyte MOVETUTOR_FLAMETHROWER
+	writetext WeirdNotSureText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	jump .Incompatible
+
+.Thunderbolt:
+	writebyte MOVETUTOR_THUNDERBOLT
+	writetext WeirdNotSureText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	jump .Incompatible
+
+.IceBeam:
+	writebyte MOVETUTOR_ICE_BEAM
+	writetext WeirdNotSureText
+	special MoveTutor
+	ifequal FALSE, .TeachMove
+	jump .Incompatible
+
+.MoveMenuHeader:
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
+	dw .MenuData
+	db 1 ; default option
+
+.MenuData:
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "FLAMETHROWER@"
+	db "THUNDERBOLT@"
+	db "ICE BEAM@"
+	db "CANCEL@"
+
+.Refused:
+	writetext UnknownText_0x1990b4
+	waitbutton
+	closetext
+	end
+
+.Refused2:
+	writetext HmTooBadText
+	waitbutton
+	closetext
+	end
+
+.TeachMove:
+	special DisplayCoinCaseBalance; looks like putting this here fixed weird CGB glitch
+	writetext IfYouUnderstandText
+	buttonsound
+	takecoins 2000
+	waitsfx
+	playsound SFX_TRANSACTION
+	special DisplayCoinCaseBalance
+	writetext WahahahaFarewellKidText
+	waitbutton
+	closetext
+	checkcode VAR_FACING
+	ifequal RIGHT, .WalkAroundPlayer
+	applymovement BOARDWALK_FISHER2, MovementData_0x198a5f
+	jump .GoInside
+
+.WalkAroundPlayer:
+	applymovement BOARDWALK_FISHER2, MovementData_0x198a63
+.GoInside:
+	playsound SFX_ENTER_DOOR
+	disappear BOARDWALK_FISHER2
+	clearevent EVENT_BOARDWALK_GAME_CORNER_MOVE_TUTOR
+	setflag ENGINE_DAILY_MOVE_TUTOR
+	waitsfx
+	end
+
+.Incompatible:
+	writetext UnknownText_0x1991a4
+	waitbutton
+	closetext
+	end
+
+.NotEnoughMoney:
+	writetext YouDontHaveEnoughCoinsTutorText
+	waitbutton
+	closetext
+	end
 
 BoardwalkSign1:
 	jumptext BoardwalkSign1Text
@@ -155,6 +280,84 @@ BoardwalkTrainerTips:
 
 BoardwalkFruitTree:
 	fruittree FRUITTREE_TREE_ROUTE_112
+
+
+MovementData_0x198a5f:
+	step LEFT
+	step LEFT
+	step UP
+	step_end
+
+MovementData_0x198a63:
+	step DOWN
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step_end
+
+
+ICanTeachYourMonMovesText:
+	text "I can teach your"
+	line "#MON amazing"
+
+	para "moves if you'd"
+	line "like."
+
+	para "Should I teach a"
+	line "new move?"
+	done
+
+ItWIllCostYouText:
+	text "It will cost you"
+	line "2000 coins. Okay?"
+	done
+
+UnknownText_0x1990b4:
+	text "Aww… But they're"
+	line "amazing…"
+	done
+
+YouWontRegretItText:
+	text "Wahahah! You won't"
+	line "regret it!"
+
+	para "Which move should"
+	line "I teach?"
+	done
+
+HmTooBadText:
+	text "Hm, too bad. I'll"
+	line "have to get some"
+	cont "cash from home…"
+	done
+
+IfYouUnderstandText:
+	text "If you understand"
+	line "what's so amazing"
+
+	para "about this move,"
+	line "you've made it as"
+	cont "a trainer."
+	done
+
+WahahahaFarewellKidText:
+	text "Wahahah!"
+	line "Farewell, kid!"
+	done
+
+UnknownText_0x1991a4:
+	text "B-but…"
+	done
+
+YouDontHaveEnoughCoinsTutorText:
+	text "…You don't have"
+	line "enough coins here…"
+	done
+
+WeirdNotSureText:
+	text_start
+	done
 
 
 FledglingHidalgoSeenText:
@@ -347,10 +550,11 @@ Boardwalk_MapEvents:
 	bg_event  9, 22, BGEVENT_READ, BoardwalkSign2
 	bg_event 13, 38, BGEVENT_READ, BoardwalkTrainerTips
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 17, 15, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerFledglingHidalgo, -1
 	object_event  7, 35, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacBrent, -1
 	object_event  8,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerPokemaniacRon, -1
 	object_event  2, 16, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerFisherMarvin, -1
+	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 4, MoveTutorScript, EVENT_BOARDWALK_MOVE_TUTOR
 	object_event  8, 42, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperSpencer, -1
 ;	object_event 14, 21, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerInstructorCliff, -1

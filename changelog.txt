@@ -649,3 +649,8 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Made the Party menu icons appear grayscale when teaching a TM, similar to other instances of this menu in SGB mode
 - Fixed issue where setting print brightness to -2 would leave an extra arrow icon in the options menu
 - Minor text changes to make forest signs more consistent
+
+7.40
+- Brought over tileset changes from spanish version to closer match the beta tileset in the ruins
+- Move Tutor added to Boardwalk Game Corner
+- Movesets updated for Pokemon to allow them to learn from tutor

@@ -2009,7 +2009,7 @@ wBaseUnusedFrontpic:: dw
 wBaseUnusedBackpic:: dw
 wBaseGrowthRate:: db
 wBaseEggGroups:: db
-wBaseTMHM:: flag_array NUM_TM_HM
+wBaseTMHM:: flag_array NUM_TM_HM_TUTOR
 wCurBaseDataEnd::
 
 	ds 1

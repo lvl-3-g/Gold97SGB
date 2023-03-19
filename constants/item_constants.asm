@@ -276,9 +276,16 @@ ENDM
 	add_hm ROCK_SMASH        ; f7
 	add_hm WHIRLPOOL    ; f8
 	add_hm WATERFALL    ; f9
-NUM_HMS EQU const_value - HM01
+NUM_HMS = const_value - HM01
 
-NUM_TM_HM EQU __enum__ - 1
+add_mt: MACRO
+	enum \1_TMNUM
+ENDM
+
+	add_mt FLAMETHROWER
+	add_mt THUNDERBOLT
+	add_mt ICE_BEAM
+NUM_TM_HM_TUTOR = __enum__ + -1
 
 	const ITEM_FA       ; fa
 

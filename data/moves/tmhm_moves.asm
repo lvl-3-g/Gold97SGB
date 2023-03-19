@@ -59,7 +59,8 @@ TMHMMoves:
 	db ROCK_SMASH
 	db WHIRLPOOL
 	db WATERFALL
+; Move tutor
+	db FLAMETHROWER
+	db THUNDERBOLT
+	db ICE_BEAM
 	db 0 ; end
-	db 0
-	db 0
-	db 0

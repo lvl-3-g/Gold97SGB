@@ -140,6 +140,7 @@ INCLUDE "engine/overworld/wildmons.asm"
 INCLUDE "engine/items/buy_sell_toss.asm"
 INCLUDE "engine/battle/read_trainer_dvs.asm"
 INCLUDE "engine/events/prof_oaks_pc.asm"
+INCLUDE "engine/events/move_tutor.asm"
 
 
 SECTION "bankB", ROMX

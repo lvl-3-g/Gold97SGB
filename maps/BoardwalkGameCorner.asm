@@ -11,13 +11,30 @@
 	const BOARDWALKGAMECORNER_GENTLEMAN
 	const BOARDWALKGAMECORNER_POKEFAN_M2
 	const BOARDWALKGAMECORNER_RECEPTIONIST3
+	const BOARDWALKGAMECORNER_MOVETUTOR
 
 BoardwalkGameCorner_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_OBJECTS, .MoveTutor
 
+.MoveTutor:
+	checkitem COIN_CASE
+	iffalse .move_tutor_inside
+	checkcode VAR_WEEKDAY
+	ifequal WEDNESDAY, .move_tutor_outside
+	ifequal SATURDAY, .move_tutor_outside
+.move_tutor_inside
+	appear BOARDWALKGAMECORNER_MOVETUTOR
+	return
 
+.move_tutor_outside
+	checkflag ENGINE_DAILY_MOVE_TUTOR
+	iftrue .finish
+	disappear BOARDWALKGAMECORNER_MOVETUTOR
+.finish
+	return
 
 
 BoardwalkGameCornerCoinVendorScript:
@@ -524,6 +541,15 @@ BoardwalkGameCornerCardFlipMachineScript:
 	closetext
 	end
 	
+MoveTutorInsideScript:
+	faceplayer
+	opentext
+	writetext MoveTutorInsideText
+	waitbutton
+	closetext
+	turnobject BOARDWALKGAMECORNER_MOVETUTOR, RIGHT
+	end
+	
 AlreadyHaveDecorItemText:
 	text "You already have"
 	line "this item."
@@ -697,7 +723,7 @@ BoardwalkGameCorner_MapEvents:
 	bg_event 18, 11, BGEVENT_RIGHT, BoardwalkGameCornerCardFlipMachineScript
 	bg_event 13,  1, BGEVENT_LEFT, BoardwalkGameCornerLeftTheirDrinkScript
 
-	db 12 ; object events
+	db 13 ; object events
 	object_event  3,  1, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerCoinVendorScript, -1
 	object_event 16,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerTMVendorScript, -1
 	object_event 18,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPrizeMonVendorScript, -1
@@ -710,3 +736,4 @@ BoardwalkGameCorner_MapEvents:
 	object_event  5, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerGentlemanScript, -1
 	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerPokefanM2Script, -1
 	object_event 14,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_ORANGE, OBJECTTYPE_SCRIPT, 0, BoardwalkGameCornerDecorVendorScript, -1
+	object_event  5,  6, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorInsideScript, EVENT_BOARDWALK_GAME_CORNER_MOVE_TUTOR
