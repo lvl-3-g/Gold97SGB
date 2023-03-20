@@ -2,7 +2,7 @@
 
 This page is the source for Pokemon Super Gold 97, a game which intends to serve as a "completed" version of the 1997 Pokemon Gold and Silver Spaceworld Demo.
 
-ntro
+Intro
 With the release of the Spaceworld 97 demo, I was inspired to create a game that would represent what I felt like a "finished" version of that demo could look like. How would the game turned out if it continued on the path that was shown at that event? Well, that's what I set out to create, and what you can find here!
 
 Story
