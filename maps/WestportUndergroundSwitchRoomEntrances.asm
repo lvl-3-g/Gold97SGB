@@ -79,16 +79,16 @@ WestportUndergroundSwitchRoomEntrances_MapScripts:
 	iffalse .false8
 	doorstate 5, OPEN1
 .false8
-	checkevent EVENT_SWITCH_9
+	checkevent EVENT_SPOKE_WITH_LASS_WHO_HEALS
 	iffalse .false9
 	doorstate 6, OPEN1
 .false9
-	checkevent EVENT_SWITCH_10
+	checkevent EVENT_GET_SCOPE_LENS_GRANNY
 	iffalse .false10
 	doorstate 7, CLOSED1
 	doorstate 8, OPEN1
 .false10
-	checkevent EVENT_SWITCH_11
+	checkevent EVENT_FOR_MEWTWO_ENCOUNTER
 	iffalse .false11
 	doorstate 9, CLOSED1
 	doorstate 10, OPEN1
@@ -103,7 +103,7 @@ WestportUndergroundSwitchRoomEntrances_MapScripts:
 	doorstate 13, CLOSED1
 	doorstate 14, OPEN1
 .false13
-	checkevent EVENT_SWITCH_14
+	checkevent EVENT_GETTING_DRATINI
 	iffalse .false14
 	doorstate 15, CLOSED1
 	doorstate 16, OPEN1

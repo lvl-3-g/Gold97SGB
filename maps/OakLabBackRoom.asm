@@ -47,15 +47,6 @@ OakLabBackRoom_MapScripts:
 .WalkUpToOak2:
 	applymovement PLAYER, OakLabBackRoom_WalkUpToOak2Movement
 	pause 5
-
-;	writetext Lab_GetDexText
-;	playsound SFX_ITEM
-;	waitsfx
-;	setflag ENGINE_POKEDEX
-;	pause 15
-;	waitbutton
-;	closetext
-
 	opentext
 	writetext Text_OakTakeAMon
 	waitbutton
@@ -160,14 +151,8 @@ CubburnPokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-;	pokepic CUBBURN
-;	cry CUBBURN
-;	waitbutton
-;	closepokepic
-;;;
 	setval CUBBURN
 	special ShowPokedexEntry
-;;;
 	opentext
 	writetext TakeCubburnText
 	yesorno
@@ -197,8 +182,6 @@ CubburnPokeBallScript:
 	buttonsound
 	closetext
 	setevent EVENT_PALSSIO_POKEBALL_IN_OAK_LAB_BACK_ROOM
-;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
 
 CruisePokeBallScript:
@@ -206,14 +189,8 @@ CruisePokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-;	pokepic PALSSIO
-;	cry PALSSIO
-;	waitbutton
-;	closepokepic
-;;;
 	setval PALSSIO
 	special ShowPokedexEntry
-;;;
 	opentext
 	writetext TakeCruiseText
 	yesorno
@@ -243,8 +220,6 @@ CruisePokeBallScript:
 	buttonsound
 	closetext
 	setevent EVENT_CHIKORITA_POKEBALL_IN_OAK_LAB_BACK_ROOM
-;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
 
 ChikoritaPokeBallScript:
@@ -252,14 +227,8 @@ ChikoritaPokeBallScript:
 	iftrue LookAtOak2PokeBallScript
 	turnobject OAK2SLAB_OAK2, DOWN
 	refreshscreen
-;	pokepic CHIKORITA
-;	cry CHIKORITA
-;	waitbutton
-;	closepokepic
-;;;
 	setval CHIKORITA
 	special ShowPokedexEntry
-;;;
 	opentext
 	writetext TakeChikoritaText
 	yesorno
@@ -289,8 +258,6 @@ ChikoritaPokeBallScript:
 	buttonsound
 	closetext
 	setevent EVENT_CUBBURN_POKEBALL_IN_OAK_LAB_BACK_ROOM
-;	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-;	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	jump Oak2DirectionsScript
 
 DidntChooseStarterScript:
@@ -308,15 +275,6 @@ Oak2DirectionsScript:
 	writetext Oak2DirectionsTextNew
 	waitbutton
 	closetext
-;	
-;	opentext
-;	writetext Oak2DirectionsText2
-;	waitbutton
-;	closetext
-;	opentext
-;	writetext Oak2DirectionsText3
-;	waitbutton
-;	closetext
 	applymovement OAK2SLAB_OAK2, Oak2BackFromTable
 	setevent EVENT_GOT_A_POKEMON_FROM_OAK
 	setevent EVENT_RIVAL_CROWN_CITY
@@ -435,7 +393,6 @@ Oak2BackFromTable:
 	step LEFT
 	step LEFT
 	step DOWN
-;	turn_head DOWN
 	step_end
 
 MoveHeadLeft:
@@ -1098,8 +1055,6 @@ OakLabBackRoom_MapEvents:
 	db 2 ; coord events
 	coord_event  3,  7, SCENE_OAK2SLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  7, SCENE_OAK2SLAB_CANT_LEAVE, LabTryToLeaveScript
-;	coord_event  3,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion1
-;	coord_event  4,  7, SCENE_OAK2SLAB_AIDE_GIVES_POTION, AideScript_WalkPotion2
 
 	db 7 ; bg events
 	bg_event  0,  1, BGEVENT_READ, OakLabBackRoomBookshelf

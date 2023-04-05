@@ -68,9 +68,6 @@ IejimaTown_MapScripts:
 	return
 	
 IejimaTownPokecenterSign:
-;	setevent EVENT_IEJIMA_TOWN_NOT_FIXED
-;	clearevent EVENT_IEJIMA_TOWN_FIXED
-;	clearevent EVENT_DAM_IS_OPEN
 	jumpstd PokecenterSignScript
 	
 IejimaTownGrampsBefore:
@@ -105,14 +102,12 @@ IejimaTownTriWingItem:
 	closetext
 	disappear IEJIMA_TRIWING
 	opentext
-;	buttonsound
 	waitsfx
 	giveitem TRI_WING
 	writetext GotTriWingText
 	playsound SFX_ITEM
 	waitsfx
 	itemnotify
-;	waitbutton
 	closetext
 	setevent EVENT_IEJIMA_TOWN_TRI_WING
 	end
@@ -146,7 +141,6 @@ IejimaTownYoungster:
 	end
 	
 .GetTriWing
-;	opentext
 	writetext ItemWashedUpText
 	waitbutton
 	closetext
@@ -156,14 +150,12 @@ IejimaTownYoungster:
 	pause 15
 	faceplayer
 	opentext
-;	buttonsound
 	waitsfx
 	giveitem TRI_WING
 	writetext GotTriWingText
 	playsound SFX_ITEM
 	waitsfx
 	itemnotify
-;	waitbutton
 	closetext
 	setevent EVENT_IEJIMA_TOWN_TRI_WING
 	end

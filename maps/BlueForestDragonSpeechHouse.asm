@@ -18,13 +18,6 @@ BlueForestDragonSpeechHouseDratiniScript:
 	closetext
 	end
 
-; unused
-BlueForestDragonSpeechHousePictureBookshelf:
-	jumpstd PictureBookshelfScript
-
-; unused
-BlueForestDragonSpeechHouseMagazineBookshelf:
-	jumpstd MagazineBookshelfScript
 
 BlueForestDragonSpeechHouseGrannyText:
 	text "North of town, out"

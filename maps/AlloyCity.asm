@@ -33,15 +33,15 @@ AlloyCityRivalSceneTop:
 	playsound SFX_ENTER_DOOR
 	appear ALLOYCITY_ALLOY_RIVAL
 	waitsfx
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88d2
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalWalkOutOfPokecenterMovement
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext AlloyCityRivalText
 	waitbutton
 	closetext
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88db
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalLeaving1
 	turnobject PLAYER, LEFT
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88db2
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalLeaving2
 	setscene SCENE_FINISHED
 	disappear ALLOYCITY_ALLOY_RIVAL
 	special RestartMapMusic
@@ -59,15 +59,15 @@ AlloyCityRivalSceneBottom:
 	playsound SFX_ENTER_DOOR
 	appear ALLOYCITY_ALLOY_RIVAL
 	waitsfx
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88d6
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalWalkOutOfPokecenterMovement2
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext AlloyCityRivalText
 	waitbutton
 	closetext
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88e8
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalLeaving3
 	turnobject PLAYER, LEFT
-	applymovement ALLOYCITY_ALLOY_RIVAL, MovementData_0x1a88db2
+	applymovement ALLOYCITY_ALLOY_RIVAL, AlloyRivalLeaving2
 	disappear ALLOYCITY_ALLOY_RIVAL
 	setscene SCENE_FINISHED
 	special RestartMapMusic
@@ -115,7 +115,7 @@ AlloyCityPokecenterSign:
 AlloyCityMartSign:
 	jumpstd MartSignScript
 
-MovementData_0x1a88d2:
+AlloyRivalWalkOutOfPokecenterMovement:
 	step DOWN
 	step LEFT
 	step LEFT
@@ -123,7 +123,7 @@ MovementData_0x1a88d2:
 	step LEFT
 	step_end
 
-MovementData_0x1a88d6:
+AlloyRivalWalkOutOfPokecenterMovement2:
 	step DOWN
 	step DOWN
 	step LEFT
@@ -132,35 +132,26 @@ MovementData_0x1a88d6:
 	step LEFT
 	step_end
 
-MovementData_0x1a88db:
+AlloyRivalLeaving1:
 	step DOWN
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-MovementData_0x1a88db2:
+AlloyRivalLeaving2:
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-MovementData_0x1a88e8:
+AlloyRivalLeaving3:
 	step UP
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-MovementData_0x1a88f4:
-	step DOWN
-	turn_head UP
-	step_end
-
-MovementData_0x1a88f7:
-	step UP
-	turn_head DOWN
-	step_end
 
 AlloyCityGrampsText:
 	text "Ohohoho!"

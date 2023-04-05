@@ -1,5 +1,3 @@
-
-
 	object_const_def ; object_event constants
 	const BOARDWALKGATE_OFFICER
 

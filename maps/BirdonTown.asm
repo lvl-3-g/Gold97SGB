@@ -158,7 +158,6 @@ BirdonTown_MapEvents:
 	warp_event  4,  9, BIRDON_ELDER_HOUSE, 1
 	warp_event 14, 15, BIRDON_GYM, 1
 	warp_event  9,  9, SLOWPOKE_WELL_B1F, 1
-;	warp_event  9,  9, STAND_CITY_ROCKET_HOUSE, 1
 	warp_event  8,  5, ROUTE_116_BIRDON_GATE, 3
 	warp_event  9,  5, ROUTE_116_BIRDON_GATE, 4
 	warp_event 15, 15, BIRDON_GYM, 2

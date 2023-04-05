@@ -421,12 +421,12 @@
 	const EVENT_SWITCH_6; friday
 	const EVENT_SWITCH_7; saturday
 	const EVENT_SWITCH_8; determining if bouncer gave you item
-	const EVENT_SWITCH_9; used after talking to heal lass on mt fuji for the first time
-	const EVENT_SWITCH_10; scope lens from granny in prince city
-	const EVENT_SWITCH_11; used for mewtwo
+	const EVENT_SPOKE_WITH_LASS_WHO_HEALS; used after talking to heal lass on mt fuji for the first time
+	const EVENT_GET_SCOPE_LENS_GRANNY; scope lens from granny in prince city
+	const EVENT_FOR_MEWTWO_ENCOUNTER; used for mewtwo
 	const EVENT_SWITCH_12; used for getting starter 2 in kume city
 	const EVENT_SWITCH_13 ; 2e0
-	const EVENT_SWITCH_14; event set after getting dratini
+	const EVENT_GETTING_DRATINI; event set after getting dratini
 	const EVENT_UNCOVERED_STAIRCASE_IN_OLD_MAHOGANY_MART
 	const EVENT_TURNED_OFF_SECURITY_CAMERAS
 	const EVENT_SECURITY_CAMERA_1

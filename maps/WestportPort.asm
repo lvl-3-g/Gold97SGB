@@ -1,6 +1,5 @@
 	object_const_def ; object_event constants
 	const WESTPORTPORT_SAILOR1
-;	const WESTPORTPORT_SAILOR2
 	const WESTPORTPORT_SAILOR3
 	const WESTPORTPORT_FISHING_GURU1
 	const WESTPORTPORT_FISHING_GURU2
@@ -128,8 +127,6 @@ WestportPortSailorOriginalScript:
 	ifequal WEDNESDAY, .NextShipFriday
 	ifequal THURSDAY, .NextShipFriday
 .FirstTime:
-;	yesorno
-;	iffalse WestportPortNotRidingMoveAwayScript
 	writetext AskForTicketText
 	buttonsound
 	checkitem S_S_TICKET
@@ -233,55 +230,8 @@ WestportPortNotRidingMoveAwayScript:
 WestportPortSailorAfterHOFScript:
 	faceplayer
 	opentext
-;	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1; this will always be true, right? You can't talk to him normally, the background event covers the script.
 	jump WestportPortAlreadyRodeScript
-;	checkevent EVENT_FAST_SHIP_FIRST_TIME
-;	iffalse .FirstTime
-;	checkcode VAR_WEEKDAY
-;	ifequal SUNDAY, .NextShipMonday
-;	ifequal SATURDAY, .NextShipMonday
-;	ifequal TUESDAY, .NextShipFriday
-;	ifequal WEDNESDAY, .NextShipFriday
-;	ifequal THURSDAY, .NextShipFriday
-;.FirstTime:
-;	writetext NowAlsoOfferIslandsText
-;	yesorno
-;	iffalse WestportPortNotRidingScript
-;	writetext AskForTicketText
-;	buttonsound
-;	checkitem S_S_TICKET
-;	iffalse .NoTicket
-;	writetext FlashTheTicketText
-;	waitbutton
-;	closetext
-;	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-;	checkcode VAR_FACING
-;	ifequal RIGHT, .Right
-;	applymovement PLAYER, MovementData_0x74a3f
-;	jump WestportPortSailorAtGangwayScript
 
-;.Right:
-;	applymovement PLAYER, MovementData_0x74a49
-;	jump WestportPortSailorAtGangwayScript
-;
-;.NoTicket:
-;	writetext DontHaveTicketWhoopsText
-;	waitbutton
-;	closetext
-;	end
-;
-;.NextShipMonday:
-;	writetext NoTripsToIslandsTodayText
-;	waitbutton
-;	closetext
-;	end
-;
-;.NextShipFriday:
-;	writetext NoTripsToIslandsToday2Text
-;	waitbutton
-;	closetext
-;	end
-;
 WestportPortSailorBeforeHOFScript:
 
 	end
@@ -413,21 +363,6 @@ DepartureTimeText:
 	line "soon. Please get"
 	cont "on board."
 	done
-
-;	text "This ship is"
-;	line "planned to take"
-;	para "you to TEKNOS CITY,"
-;	line "but this is"
-;	para "actually the end"
-;	line "of the demo at"
-;	cont "this point."
-;	para "We're just gonna"
-;	line "warp you back to"
-;	para "the WESTPORT CITY"
-;	line "#MON CENTER."
-;	para "Thanks for"
-;	line "playing!"
-;	done
 
 SorryCantBoardText:
 	text "Sorry. You can't"

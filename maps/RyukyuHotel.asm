@@ -49,7 +49,6 @@ RyukyuHotelReceptionist:
 	iffalse HotelReceptionist_NoSale
 	checkmoney YOUR_MONEY, 10000
 	ifequal HAVE_LESS, HotelReceptionist_NoMoney
-;	giveitem MOOMOO_MILK; lolololol why was this here? Looks like the receptionist was handing out secret milk
 	takemoney YOUR_MONEY, 10000
 	special PlaceMoneyTopRight
 	waitsfx

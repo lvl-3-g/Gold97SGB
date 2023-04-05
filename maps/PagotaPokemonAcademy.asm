@@ -138,10 +138,6 @@ AcademyNotebook:
 	closetext
 	end
 
-AcademyStickerMachine:
-; unused
-	jumptext AcademyStickerMachineText
-
 AcademyBookshelf:
 	jumpstd DifficultBookshelfScript
 

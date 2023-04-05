@@ -12,10 +12,6 @@ FishingDude:
 FishingDudesHousePhoto:
 	jumptext FishingDudesHousePhotoText
 
-FishingDudesHouseBookshelf:
-; unused
-	jumpstd PictureBookshelfScript
-
 FishingDudeText:
 	text "I am the FISHING"
 	line "GURU, the elder of"

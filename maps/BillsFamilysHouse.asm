@@ -16,31 +16,7 @@ BillScript:
 	writetext BillGoGetBadge
 	waitbutton
 	closetext
-	
 	end
-	
-;BillScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_EEVEE
-;	iftrue .GotEevee
-;	writetext BillTakeThisEeveeText
-;	yesorno
-;	iffalse .Refused
-;	writetext BillImCountingOnYouText
-;	buttonsound
-;	waitsfx
-;	checkcode VAR_PARTYCOUNT
-;	ifequal PARTY_LENGTH, .NoRoom
-;	writetext ReceivedEeveeText
-;	playsound SFX_CAUGHT_MON
-;	waitsfx
-;	givepoke EEVEE, 20
-;	setevent EVENT_GOT_EEVEE
-;	writetext BillEeveeMayEvolveText
-;	waitbutton
-;	closetext
-;	end
 
 .GiveCut
 	checkevent EVENT_GOT_HM01_CUT

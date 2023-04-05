@@ -99,8 +99,6 @@ DeepwaterPassageSign:
 	jumptext DeepwaterPassageSignText
 
 BlueForestPokecenterSign:
-	;setmapscene ROUTE_112_STAND_GATE, SCENE_DEFAULT
-	;clearevent EVENT_SILVER_IN_STAND_GATE
 	jumpstd PokecenterSignScript
 
 BlueForestMartSign:

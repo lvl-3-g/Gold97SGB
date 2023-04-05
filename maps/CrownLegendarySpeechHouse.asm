@@ -1,15 +1,15 @@
 	object_const_def ; object_event constants
-	const CROWNEVOLUTIONSPEECHHOUSE_LASS
+	const CROWNLEGENDARYSPEECHHOUSE_GRANNY
 
-CrownEvolutionSpeechHouse_MapScripts:
+CrownLegendarySpeechHouse_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-CrownEvolutionSpeechHouseLassScript:
-	jumptextfaceplayer CrownEvolutionSpeechHouseLassText
+CrownLegendarySpeechHouseGrannyScript:
+	jumptextfaceplayer CrownLegendarySpeechHouseGrannyText
 
-CrownEvolutionSpeechHouseLassText:
+CrownLegendarySpeechHouseGrannyText:
 	text "Many years ago, my"
 	line "mother told me of"
 	para "a mythical #MON"
@@ -30,7 +30,7 @@ CrownEvolutionSpeechHouseLassText:
 	cont "beasts in person."
 	done
 
-CrownEvolutionSpeechHouse_MapEvents:
+CrownLegendarySpeechHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
@@ -42,4 +42,4 @@ CrownEvolutionSpeechHouse_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CrownEvolutionSpeechHouseLassScript, -1
+	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CrownLegendarySpeechHouseGrannyScript, -1

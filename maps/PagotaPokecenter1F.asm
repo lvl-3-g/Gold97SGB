@@ -28,10 +28,8 @@ PagotaPokecenter1F_Oak2sAideScript:
 	stringtotext .eggname, MEM_BUFFER_1
 	scall .AideGivesEgg
 	setevent EVENT_GOT_TOGEPI_EGG_FROM_OAKS_AIDE
-	;setevent EVENT_TOGEPI_HATCHED
 	clearevent EVENT_OAK2S_AIDE_IN_LAB
 	clearevent EVENT_TOGEPI_HATCHED
-	;setmapscene ROUTE_112, SCENE_ROUTE112_OFFER_SLOWPOKETAIL
 	writetext UnknownText_0x695c5
 	waitbutton
 	closetext

@@ -41,10 +41,6 @@ EndonCave1FRichGuyScript:
 	closetext
 	end
 
-Route116NuggetHouseBookshelf:
-; unused
-	jumpstd DifficultBookshelfScript
-	
 TrainerPokemaniacCalvin:
 	trainer POKEMANIAC, CALVIN, EVENT_BEAT_POKEMANIAC_CALVIN, PokemaniacCalvinSeenText, PokemaniacCalvinBeatenText, 0, .Script
 

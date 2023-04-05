@@ -40,9 +40,7 @@ PagotaGymFalknerScript:
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
-;	setmapscene ROUTE_102, SCENE_ROUTE102_SILVER; 
-	clearevent EVENT_ROUTE_102_SILVER; 
-;	setmapscene OAK_LAB_BACK_ROOM, SCENE_OAK2SLAB_NOTHING
+	clearevent EVENT_ROUTE_102_SILVER
 	specialphonecall SPECIALCALL_ASSISTANT
 	writetext FalknerZephyrBadgeText
 	buttonsound

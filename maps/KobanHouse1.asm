@@ -9,7 +9,7 @@ KobanHouse1_MapScripts:
 KobanHouse1ClairScript:
 	faceplayer
 	opentext
-	checkevent EVENT_SWITCH_14
+	checkevent EVENT_GETTING_DRATINI
 	iftrue .AfterDratiniGift
 	checkitem MACHINE_PART
 	iffalse .NoOrbYet
@@ -38,7 +38,7 @@ KobanHouse1ClairScript:
 	givepoke DRATINI, 15
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
-	setevent EVENT_SWITCH_14
+	setevent EVENT_GETTING_DRATINI
 	takeitem MACHINE_PART
 	writetext ClairSymbolicDragonText
 	waitbutton

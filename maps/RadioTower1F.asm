@@ -26,7 +26,6 @@ RadioTower1FLuckyNumberManScript:
 	writetext UnknownText_0x5cf3a
 	buttonsound
 	closetext
-	;applymovement RADIOTOWER1F_GENTLEMAN, MovementData_0x5ce71
 	opentext
 	writetext UnknownText_0x5cf5a
 	buttonsound
@@ -37,7 +36,6 @@ RadioTower1FLuckyNumberManScript:
 	buttonsound
 	special CheckForLuckyNumberWinners
 	closetext
-	;applymovement RADIOTOWER1F_GENTLEMAN, MovementData_0x5ce74
 	opentext
 	ifequal 1, .FirstPlace
 	ifequal 2, .SecondPlace

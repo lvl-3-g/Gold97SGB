@@ -8,7 +8,6 @@ JadeForestSnorlaxRoom_MapScripts:
 
 
 AmamiSnorlax:
-	;faceplayer
 	opentext
 	writetext SnorlaxText
 	yesorno
@@ -23,7 +22,6 @@ AmamiSnorlax:
 	pause 15
 	closetext
 	setevent EVENT_JADE_FOREST_SNORLAX
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon SNORLAX, 20
 	startbattle
 	disappear JADE_FOREST_SNORLAX_ROOM_SNORLAX

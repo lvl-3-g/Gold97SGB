@@ -175,7 +175,7 @@ BillsFamilysHouse_Blocks:
 
 
 AlloyTimsHouse_Blocks:
-AlloyPunishmentSpeechHouse_Blocks:
+AlloyKobanDifficultSpeechHouse_Blocks:
 AlloyGoodRodHouse_Blocks:
 DaitoRanchHouse_Blocks:
 SanskritGamblerManHouse_Blocks:
@@ -212,7 +212,7 @@ Route110SandstormHouse_Blocks:
 RyukyuTradeHouse_Blocks:
 SunpointDocksCleanseTagHouse_Blocks:
 SkateboarderHouse_Blocks:
-CrownEvolutionSpeechHouse_Blocks:
+CrownLegendarySpeechHouse_Blocks:
 Route104GeoffsHouse_Blocks:
 TeknosItemfinderHouse_Blocks:
 TeknosFishingHouse_Blocks:

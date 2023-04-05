@@ -84,7 +84,6 @@ TrainerExecutive6F:
 	trainer EXECUTIVEM, EXECUTIVEM_3, EVENT_BEAT_ROCKET_EXECUTIVEM_3, Executive6FSeenText, Executive6FBeatenText, 0, .Script
 
 .Script:
-;	endifjustbattled
 	opentext
 	writetext Executive6FAfterBattleText
 	waitbutton
@@ -111,10 +110,8 @@ GiovanniEncounter:
 	closetext
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
-;	disappear RADIOTOWER6F_CLEFABLE_SCARED
 	disappear RADIOTOWER6F_GIOVANNI
 	disappear RADIOTOWER6F_EXECUTIVE
-;	appear RADIOTOWER6F_CLEFABLE
 	pause 15
 	special FadeInQuickly
 	pause 30

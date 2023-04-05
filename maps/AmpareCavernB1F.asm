@@ -22,7 +22,6 @@ RaikouEvent:
 	pause 15
 	closetext
 	setevent EVENT_RAIKOU_APPEARS
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon RAIKOU, 40
 	startbattle
 	disappear AMPARECAVERNB1F_RAIKOU

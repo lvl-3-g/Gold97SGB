@@ -444,7 +444,7 @@ ENDM
 	map_attributes AlloyGym, ALLOY_GYM, $00, 0
 	map_attributes AlloyTimsHouse, ALLOY_TIMS_HOUSE, $00, 0
 	map_attributes AlloySailorHoOhHouse, ALLOY_SAILOR_HO_OH_HOUSE, $00, 0
-	map_attributes AlloyPunishmentSpeechHouse, ALLOY_PUNISHMENT_SPEECH_HOUSE, $00, 0
+	map_attributes AlloyKobanDifficultSpeechHouse, ALLOY_PUNISHMENT_SPEECH_HOUSE, $00, 0
 	map_attributes AlloyGoodRodHouse, ALLOY_GOOD_ROD_HOUSE, $00, 0
 	map_attributes AlloyCafe, ALLOY_CAFE, $00, 0
 	map_attributes AlloyMart, ALLOY_MART, $00, 0
@@ -669,7 +669,7 @@ ENDM
 	map_attributes CrownPokecenter1F, CROWN_POKECENTER_1F, $00, 0
 	map_attributes BirdonElderHouse, BIRDON_ELDER_HOUSE, $00, 0
 	map_attributes SkateboarderHouse, SKATEBOARDER_HOUSE, $00, 0
-	map_attributes CrownEvolutionSpeechHouse, CROWN_EVOLUTION_SPEECH_HOUSE, $00, 0
+	map_attributes CrownLegendarySpeechHouse, CROWN_EVOLUTION_SPEECH_HOUSE, $00, 0
 	map_attributes Route104GeoffsHouse, ROUTE_104_GEOFFS_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route101PagotaGate, ROUTE_101_PAGOTA_GATE, $00, 0

@@ -34,10 +34,10 @@ TrainerSportsmanArthur:
 HealerLassScript:
 	faceplayer
 	opentext
-	checkevent EVENT_SWITCH_9
+	checkevent EVENT_SPOKE_WITH_LASS_WHO_HEALS
 	iftrue .LassHealSequence
 	writetext LassIntroText
-	setevent EVENT_SWITCH_9
+	setevent EVENT_SPOKE_WITH_LASS_WHO_HEALS
 	waitbutton
 	jump .LassHealSequence
 	end

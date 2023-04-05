@@ -19,35 +19,6 @@ FiveFloorTower3F_MapScripts:
 	end
 
 
-;SageLiScript:
-;	faceplayer
-;	opentext
-;	checkevent EVENT_GOT_HM05_FLASH
-;	iftrue .GotFlash
-;	writetext SageLiSeenText
-;	waitbutton
-;	closetext
-;	winlosstext SageLiBeatenText, 0
-;	loadtrainer SAGE, LI
-;	startbattle
-;	reloadmapafterbattle
-;	opentext
-;	writetext SageLiTakeThisFlashText
-;	buttonsound
-;	verbosegiveitem TM_FLASH
-;	setevent EVENT_GOT_HM05_FLASH
-;	setevent EVENT_BEAT_SAGE_LI
-;	writetext SageLiFlashExplanationText
-;	waitbutton
-;	closetext
-;	end
-
-;.GotFlash:
-;	writetext SageLiAfterBattleText
-;	waitbutton
-;	closetext
-;	end
-
 FiveFloorTower3FSign:
 	setevent EVENT_READ_5F3F_SIGN
 	jumptext FiveFloorTower3FSignText

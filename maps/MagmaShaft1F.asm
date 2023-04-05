@@ -6,11 +6,6 @@ MagmaShaft1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-;	callback MAPCALLBACK_NEWMAP, .SetRocksGoneSunpoint
-	
-;.SetRocksGoneSunpoint
-;	setevent EVENT_SUNPOINT_SMASH_ROCKS
-;	return
 
 MagmaShaft1FTMRest:
 	itemball TM_REST
@@ -27,7 +22,6 @@ EnteiEvent:
 	pause 15
 	closetext
 	setevent EVENT_ENTEI_APPEARS
-;	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
 	loadwildmon ENTEI, 40
 	startbattle
 	disappear MAGMASHAFT1F_ENTEI

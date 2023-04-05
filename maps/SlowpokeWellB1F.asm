@@ -31,7 +31,6 @@ SlowpokeWellB1F_MapScripts:
 	checkevent EVENT_GOT_CHIKORITA_FROM_OAK
 	iftrue .chikorita
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
 	loadtrainer RIVAL1, RIVAL1_3_PALSSIO
 	startbattle
 	dontrestartmapmusic
@@ -40,7 +39,6 @@ SlowpokeWellB1F_MapScripts:
 
 .palssio
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
 	loadtrainer RIVAL1, RIVAL1_3_CHIKORITA
 	startbattle
 	dontrestartmapmusic
@@ -49,7 +47,6 @@ SlowpokeWellB1F_MapScripts:
 
 .chikorita
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
-	;setlasttalked SLOWPOKE_WELL_B1F_SILVER
 	loadtrainer RIVAL1, RIVAL1_3_CUBBURN
 	startbattle
 	dontrestartmapmusic
@@ -98,7 +95,6 @@ WellSilverWalksToRoom2:
 
 SlowpokeWellB1FSilverScript:
 	end
-;<……>
 BurnedTowerSilver_BeforeText:
 	text "<PLAYER>!"
 	para "PROF.OAK and BLUE"

@@ -35,10 +35,6 @@ GoodRodGuru:
 	closetext
 	end
 
-GoodRodHouseBookshelf:
-; unused
-	jumpstd PictureBookshelfScript
-
 OfferGoodRodText:
 	text "The canal that"
 	line "runs through the"

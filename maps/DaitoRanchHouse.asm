@@ -161,24 +161,23 @@ DaitoRancheroText_Milking:
 DaitoHouseWifeScript:
 	faceplayer
 	opentext
-	writetext Route26HealHouseRestAWhileText
+	writetext DaitoRanchHouseRestAWhileText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
-;	special StubbedTrainerRankings_Healings
 	playmusic MUSIC_HEAL
 	special HealParty
 	pause 60
 	special FadeInQuickly
 	special RestartMapMusic
 	opentext
-	writetext Route26HealHouseKeepAtItText
+	writetext DaitoRanchHouseKeepAtItText
 	waitbutton
 	closetext
 	end
 	
-Route26HealHouseRestAWhileText:
+DaitoRanchHouseRestAWhileText:
 	text "Your #MON look"
 	line "a little tired."
 
@@ -186,7 +185,7 @@ Route26HealHouseRestAWhileText:
 	line "them a while."
 	done
 
-Route26HealHouseKeepAtItText:
+DaitoRanchHouseKeepAtItText:
 	text "There!"
 
 	para "Your #MON are"

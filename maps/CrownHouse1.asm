@@ -9,13 +9,13 @@ CrownHouse1_MapScripts:
 CrownHouse1GrannyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_SWITCH_10
+	checkevent EVENT_GET_SCOPE_LENS_GRANNY
 	iftrue .alreadygavescopelens
 	writetext CrownHouse1GrannyText1
 	waitbutton
 	verbosegiveitem SCOPE_LENS
 	iffalse .Done
-	setevent EVENT_SWITCH_10
+	setevent EVENT_GET_SCOPE_LENS_GRANNY
 	jump .alreadygavescopelens
 	end
 	

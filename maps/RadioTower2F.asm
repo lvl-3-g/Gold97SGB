@@ -167,12 +167,6 @@ RadioTower2fRockerText:
 	cont "more frequently."
 	done
 
-MovementData_0x5d921:
-;	slow_step DOWN
-;	slow_step RIGHT
-	step_end
-
-
 RadioTowerJigglypuffText:
 	text "JIGGLYPUFF:"
 	line "Jiggly…"

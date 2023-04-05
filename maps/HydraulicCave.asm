@@ -63,31 +63,22 @@ DamControlMachine:
 	changeblock  13,  7, $02 ; dam
 	reloadmappart
 	waitsfx
-;	playsound SFX_MEGA_PUNCH
 	changeblock   1,  7, $21 ; water
 	reloadmappart
-;	playsound SFX_MEGA_PUNCH
 	changeblock   1,  9, $21 ; water
 	reloadmappart
-;	waitsfx
-;	playsound SFX_MEGA_PUNCH
 	changeblock   3,  7, $21 ; water
 	reloadmappart
 	changeblock   3,  9, $21 ; water
 	reloadmappart
-;	waitsfx
-;	playsound SFX_MEGA_PUNCH
 	changeblock   5,  7, $21 ; water
 	reloadmappart
 	changeblock   5,  9, $21 ; water
 	reloadmappart
-;	waitsfx
-;	playsound SFX_MEGA_PUNCH
 	changeblock   7,  7, $21 ; water
 	reloadmappart
 	changeblock   7,  9, $21 ; water
 	reloadmappart
-;	waitsfx
 	playsound SFX_MEGA_PUNCH
 	changeblock   9,  7, $21 ; water
 	reloadmappart
@@ -173,7 +164,6 @@ TrainerBikerSwanson:
 	trainer BIKER, SWANSON, EVENT_BEAT_BIKER_SWANSON, BikerSwansonSeenText, BikerSwansonBeatenText, 0, .Script
 
 .Script:
-;	endifjustbattled
 	opentext
 	writetext BikerSwansonAfterBattleText
 	waitbutton

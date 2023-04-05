@@ -32,10 +32,6 @@ AmamiTownSuperRodHouseFishingGuruScript:
 	closetext
 	end
 
-SuperRodHouseBookshelf:
-; unused
-	jumpstd PictureBookshelfScript
-
 OfferSuperRodText:
 	text "I can see that you"
 	line "like fishing."

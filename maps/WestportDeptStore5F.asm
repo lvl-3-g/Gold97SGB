@@ -26,13 +26,9 @@ WestportDeptStore5FClerkScript:
 	opentext
 	checkevent EVENT_GOT_TM02_HEADBUTT
 	iftrue .headbutt
-;	checkevent EVENT_GOT_TM08_ROCK_SMASH
-;	iftrue .onlyrocksmash
 	jump .neither
 
 .headbutt
-;	checkevent EVENT_GOT_TM08_ROCK_SMASH
-;	iftrue .both
 	jump .onlyheadbutt
 
 .neither

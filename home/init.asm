@@ -20,7 +20,7 @@ _Start::
 	jr .load
 
 .cgb
-	ld a, TRUE
+	ld a, TRUE; CHANGE TO FALSE FOR GB ONLY
 
 .load
 	ldh [hCGB], a

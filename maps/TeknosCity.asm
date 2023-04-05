@@ -82,9 +82,6 @@ TeknosCityFisherScript:
 
 
 TeknosCityRocket1Script:
-;	setevent EVENT_WHITNEY_1_AQUARIUM
-;	setevent EVENT_WHITNEY_2_AQUARIUM
-;	setmapscene TEKNOS_AQUARIUM_1F, SCENE_DEFAULT
 	jumptextfaceplayer TeknosCityRocket1Text
 	
 TeknosCityRocket2Script:
@@ -168,26 +165,6 @@ TeknosCityRocket2Text:
 	
 	done
 
-UnusedMissingDaughterText:
-; unused
-	text "Oh, no. Oh, no…"
-
-	para "My daughter is"
-	line "missing."
-
-	para "No… She couldn't"
-	line "have gone to the"
-	cont "BURNED TOWER."
-
-	para "I told her not to"
-	line "go near it…"
-
-	para "People seem to"
-	line "disappear there…"
-
-	para "Oh, what should I"
-	line "do…?"
-	done
 
 TeknosCityGramps1Text:
 	text "I've lived here"

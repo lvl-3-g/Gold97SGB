@@ -36,18 +36,6 @@ BirdonPokecenter1FGentlemanText:
 	line "fainted."
 	done
 
-BirdonPokecenter1FUnusedText:
-; unreferenced
-	text "This BILL guy"
-	line "created the system"
-
-	para "for storing"
-	line "#MON in a PC."
-
-	para "BILL's PC can"
-	line "store up to 20"
-	cont "#MON per BOX."
-	done
 
 BirdonPokecenter1FFishingGuruText:
 	text "BILL's PC can"

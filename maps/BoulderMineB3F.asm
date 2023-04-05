@@ -17,7 +17,7 @@ BoulderMineB3FPPUp:
 BoulderMineB3FRevive:
 	itemball REVIVE
 
-BoulderMineB3FHiddenMaxPotion:
+BoulderMineB3FHiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_BOULDER_MINE_B3F_HIDDEN_SUPER_POTION
 
 BoulderMineB3F_MapEvents:
@@ -34,7 +34,7 @@ BoulderMineB3F_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event  2,  2, BGEVENT_ITEM, BoulderMineB3FHiddenMaxPotion
+	bg_event  2,  2, BGEVENT_ITEM, BoulderMineB3FHiddenSuperPotion
 
 	db 3 ; object events
 	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BoulderMineB3FIron, EVENT_BOULDER_MINE_B3F_IRON
