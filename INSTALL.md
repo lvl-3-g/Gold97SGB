@@ -34,9 +34,8 @@ Run setup and leave the default settings. At the "**Select Packages**" step, cho
 
 Double click on the text that says "**Skip**" next to each package to select the most recent version to install.
 
-Then download [**rgbds**](https://github.com/rednex/rgbds/releases/): the latest **win64.zip** or **win32.zip** release. Extract it and put all the `exe` and `dll` files individually in **C:\cygwin64\usr\local\bin**.
+Then download [**rgbds**](https://github.com/rednex/rgbds/releases/): specifically version 0.4.0 - older versions will not work and newer versions can cause strange incompatibility issues - download **win64.zip** or **win32.zip** depending on your install. Extract it and put all the `exe` and `dll` files individually in **C:\cygwin64\usr\local\bin**.
 
-**Note: If you already have an older rgbds, you will need to update to 0.4.0.** Ignore this if you have never installed rgbds before. If a version newer than 0.4.0 does not work, try downloading 0.4.0.
 
 Now open the **Cygwin terminal** and enter the following commands.
 
