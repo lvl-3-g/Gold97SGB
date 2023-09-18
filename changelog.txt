@@ -654,3 +654,9 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Brought over tileset changes from spanish version to closer match the beta tileset in the ruins
 - Move Tutor added to Boardwalk Game Corner
 - Movesets updated for Pokemon to allow them to learn from tutor
+
+7.41
+- FIXED TRADING AND BATTLING BETWEEN TWO COPIES OF SG97
+- Fixed location of Paralyz Heal in Underground to match guidebook
+- Fixed issue where trainer would walk through trees in National Park
+

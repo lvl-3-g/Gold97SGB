@@ -60,6 +60,7 @@ Script_BattleRoomClosed:
 LinkReceptionistScript_Trade:
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_OAKS_AIDE
 	iffalse Script_TradeCenterClosed
+	special SetBitsForLinkTradeRequest
 	opentext
 	writetext Text_TradeReceptionistIntro
 	yesorno
@@ -120,6 +121,7 @@ LinkReceptionistScript_Trade:
 LinkReceptionistScript_Battle:
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_OAKS_AIDE
 	iffalse Script_BattleRoomClosed
+	special SetBitsForBattleRequest
 	opentext
 	writetext Text_BattleReceptionistIntro
 	yesorno

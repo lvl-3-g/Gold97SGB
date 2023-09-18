@@ -691,7 +691,7 @@ WestportUnderground_MapEvents:
 	bg_event 13, 14, BGEVENT_READ, WestportUndergroundSalonSign
 	bg_event  3, 20, BGEVENT_READ, WestportUndergroundBitterSign
 	bg_event 13,  6, BGEVENT_READ, WestportUndergroundGrampsSign
-	bg_event 21,  7, BGEVENT_ITEM, WestportUndergroundHiddenParlyzHeal
+	bg_event 20,  9, BGEVENT_ITEM, WestportUndergroundHiddenParlyzHeal
 	bg_event  0,  1, BGEVENT_ITEM, WestportUndergroundHiddenSuperPotion
 	bg_event  0,  9, BGEVENT_ITEM, WestportUndergroundHiddenAntidote
 
