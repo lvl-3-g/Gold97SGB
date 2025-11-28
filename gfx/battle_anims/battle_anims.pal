@@ -6,7 +6,7 @@
 ; yellow; only used for HUD balls, actually green
 	RGB 31, 31, 31
 	RGB 31, 26, 16
-	RGB 00, 24, 00
+	RGB 09, 20, 11
 	RGB 00, 00, 00
 ; red
 	RGB 31, 31, 31

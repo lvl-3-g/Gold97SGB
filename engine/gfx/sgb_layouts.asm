@@ -247,13 +247,20 @@ LoadSGBLayout:
 	ld bc, PALPACKET_LENGTH
 	call CopyBytes
 	ld hl, wSGBPals + 3
-	ld [hl], LOW(palred 31 + palgreen 20 + palblue 10)
+	ld [hl], LOW(palred 28 + palgreen 20 + palblue 15); this one 
 	inc hl
 	ld [hl], HIGH(palred 31 + palgreen 20 + palblue 10)
 	inc hl
-	ld [hl], LOW(palred 26 + palgreen 10 + palblue 6)
+	ld [hl], LOW(palred 21 + palgreen 14 + palblue 9); and this one control the PC item icon in SGB mode
 	inc hl
 	ld [hl], HIGH(palred 26 + palgreen 10 + palblue 6)
+;	ld [hl], LOW(palred 31 + palgreen 20 + palblue 10)
+;	inc hl
+;	ld [hl], HIGH(palred 31 + palgreen 20 + palblue 10)
+;	inc hl
+;	ld [hl], LOW(palred 26 + palgreen 10 + palblue 6)
+;	inc hl
+;	ld [hl], HIGH(palred 26 + palgreen 10 + palblue 6)
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer

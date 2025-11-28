@@ -660,3 +660,8 @@ Internal changes (only changed in the code, doesn't change anything in the game)
 - Fixed location of Paralyz Heal in Underground to match guidebook
 - Fixed issue where trainer would walk through trees in National Park
 
+7.42
+- Adjusted Ball icon and HP bar colors to match the demo, was originally too saturated
+- I can't believe this went unnoticed in every single battle ever until now
+- Adjusted held item icon when browsing Bill's PC, less saturated
+

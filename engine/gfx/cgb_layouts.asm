@@ -303,7 +303,7 @@ INCLUDE "gfx/pokedex/question_mark.pal"
 
 _CGB_BillsPC:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_POKEDEX
+	ld a, PREDEFPAL_RB_BROWNMON; was originally PREDEFPAL_POKEDEX, this controls PC item icon in GBC mode
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	ld a, [wCurPartySpecies]
